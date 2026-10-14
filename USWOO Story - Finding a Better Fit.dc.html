@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=2"></script>
+<script src="./i18n-zh.js?v=4"></script>
 <script src="./i18n-zh-cities.js?v=3"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
@@ -173,33 +173,58 @@
   </div>
 </header>
 
+<style>
+  /* Chinese mode shows the Chinese story body; English mode shows the English one. */
+  html[data-lang="zh"] .en-body{ display:none; }
+  html:not([data-lang="zh"]) .zh-body{ display:none; }
+</style>
 <main id="top">
   <article class="story-article">
     <div class="story-narrow">
       <a class="story-back" href="./USWOO%20Press%20%26%20Stories.dc.html#renter-stories">← Back to Renter Stories</a>
       <p class="eyebrow"><span class="idx">02</span> Renter Stories</p>
-      <h1>Finding a better fit</h1>
-      <p class="story-dek">A renter's journey from renewal decision to finding a new home that feels right.</p>
-      <div class="story-meta"><span>Apr 30, 2025</span><span class="dot"></span><span>6 min read</span></div>
+      <h1 data-zh="本来只是想换个房，没想到生活也跟着变了">I only wanted a new place. I didn’t expect my life to change too.</h1>
+      <p class="story-dek" data-zh="在纽约生活三年，Lena 第一次发现，换个住处可能带来的不只是新的生活环境。">After three years in New York, Lena discovered that a new home can bring more than a new address.</p>
+      <div class="story-meta" data-zh='<span>2025年4月30日</span><span class="dot"></span><span>约1.5分钟阅读</span>'><span>Apr 30, 2025</span><span class="dot"></span><span>1.5 min read</span></div>
     </div>
     <div class="story-hero">
       <div class="story-hero-media">
-        <image-slot id="story-hero-img" shape="rounded" radius="18" placeholder="NYC luxury apartment" src="./assets/story-nyc-luxury-living-room.jpg" style="width:100%;height:100%"></image-slot>
+        <image-slot id="story-hero-img" shape="rounded" radius="18" placeholder="NYC luxury apartment" src="./assets/story-lena-gallery.jpg" style="width:100%;height:100%"></image-slot>
       </div>
     </div>
-    <div class="story-narrow story-body">
-      <p>Lena's renewal notice arrived on a Monday. Her rent would go up, the building's elevators had been out of service twice that winter, and her lease ended in ninety days. She had two choices: sign again, or start over.</p>
-      <p>Like many renters, she had been telling herself she would deal with it later. Starting over felt like too much. Staying felt like giving up on something better.</p>
-      <h2>Putting a number on what mattered</h2>
-      <p>Her USWOO advisor suggested a simple exercise: list what she would keep, what she would change and what she was willing to trade. Lena realized she cared less about square footage than about natural light, a shorter commute and a landlord who answered messages.</p>
-      <p>With that list in hand, the search stopped being overwhelming. Instead of browsing everything, she compared three options side by side, including the renewal, so she could see what staying actually cost her.</p>
-      <blockquote>“Seeing the renewal next to the alternatives made the decision easy. I wasn't escaping something, I was choosing something.”</blockquote>
-      <h2>Timing the move</h2>
-      <p>Her advisor helped line up the new lease start with her old lease end, so she was not paying for two apartments or scrambling for a gap in between. Moving day was one weekend, not one month.</p>
-      <h2>Home, on purpose</h2>
-      <p>Lena's new apartment is smaller, but it faces east and sits two stops closer to work. She says the biggest change is how she feels walking in: that it is where she chose to be, not where she ended up.</p>
-      <p class="story-note">Renter names have been changed to protect privacy.</p>
+    <div class="story-narrow story-body en-body">
+      <p>In her third year in New York, Lena began to seriously consider moving.</p>
+      <p>Work was getting busier, and her schedule clashed more and more with her roommate’s. Her commute took nearly an hour each way, and she had to be careful not to disturb anyone when she got home.</p>
+      <p>She wanted to live on her own, but she didn’t want to give up the convenience of Manhattan.</p>
+      <p>The original plan was simple: find a studio within budget, ideally closer to the office.</p>
+      <p><strong>She didn’t expect that this move would also change her social circle in New York.</strong></p>
+      <h2>One viewing, and a conversation about more than apartments</h2>
+      <p>Through a friend, Lena connected with an agent at USWOO.</p>
+      <p>During viewings, the two talked about more than rent, layouts and commutes.</p>
+      <p>When the conversation turned to work, Lena mentioned that she had always wanted to meet more people in her field, but since graduating, her circle had grown smaller and more fixed.</p>
+      <p>Her days were a routine of office, subway and home, with the occasional weekend catch-up with a few friends. She lived in New York, yet her life felt smaller and smaller.</p>
+      <p>After listening, the agent mentioned that USWOO often works with young professionals from different industries, and that there are community events and networking opportunities.</p>
+      <p>Lena didn’t give it much thought at the time. After all, she had only come to find an apartment.</p>
+      <h2>The apartment was found, but the connection didn’t end there</h2>
+      <p>Lena moved into her new apartment.</p>
+      <p>Her commute was shorter, she could finally sleep in on weekends, and she had a living room that was truly her own.</p>
+      <p>To her surprise, her relationship with the agent didn’t end when the lease was signed.</p>
+      <p>In one conversation, the agent invited her to an industry networking event.</p>
+      <p>She went expecting only to meet a few new people, but she ended up connecting with several professionals working in related fields.</p>
+      <p>The conversation moved from work experience to industry trends, and everyone quickly exchanged contact information.</p>
+      <p>One of them later shared a career opportunity she had never considered before.</p>
+      <p><strong>She never expected that the person she met while looking for an apartment would open the door to resources beyond her existing circle.</strong></p>
+      <h2>In New York, where you live matters, and so does who you know</h2>
+      <p>A few months after moving, Lena’s life felt different.</p>
+      <p>She was still busy with work, but her weekends no longer revolved around the same few friends. Now and then she went to industry events and met new faces.</p>
+      <p>The job opportunity she heard about didn’t immediately change her career path, but it got her rethinking her future.</p>
+      <p>She had assumed the move was simply about making her life more comfortable.</p>
+      <p>In the end, what changed was not just her address, but her connection to the city.</p>
+      <p><strong>New York has never run out of opportunities. Sometimes, what’s missing is just one chance to meet someone new.</strong></p>
+      <p class="story-note">Note: This is a fictional scenario created for illustration. The characters, events and activities are invented and do not represent any real client receiving a job opportunity.</p>
     </div>
+    
+    <div class="story-narrow story-body zh-body"><p>在纽约的第三年，Lena 开始认真考虑搬家。</p><p>工作越来越忙，和室友的作息越来越合不来。每天通勤将近一小时，回到家还得小心翼翼地不打扰别人。</p><p>她想一个人住，但又舍不得 Manhattan 的便利。</p><p>最初的计划很简单：找个预算内的 Studio，最好能离公司近一点。</p><p><strong>没想到，这次搬家，后来还改变了她在纽约的社交圈。</strong></p><h2>一次看房，聊出了房子以外的事</h2><p>通过朋友介绍，Lena 认识了 USWOO 的 Agent。</p><p>看房时，两人聊的不只有租金、户型和通勤。</p><p>聊到工作，Lena 提起自己一直想认识更多同行，却发现毕业后社交圈越来越固定。</p><p>每天公司、地铁、家，周末偶尔见几个朋友。明明住在纽约，却感觉自己的生活越来越小。</p><p>Agent 听完，顺口提起 USWOO 平时也会接触不同行业的年轻职场人，还有一些社区活动和交流机会。</p><p>Lena 当时没太放在心上。毕竟，她只是来找房子的。</p><h2>房子找到了，联系却没有结束</h2><p>后来，Lena 搬进了新公寓。</p><p>通勤缩短了，周末终于能睡到自然醒，也有了真正属于自己的客厅。</p><p>但让她意外的是，和 Agent 的联系并没有在签完租约后结束。</p><p>一次聊天中，对方邀请她参加了一场行业交流活动。</p><p>原本只是抱着认识新朋友的心态过去，她却遇到了几位从事相近领域的人。</p><p>从工作经验聊到行业动态，大家很快交换了联系方式。</p><p>其中一位后来还分享了一个她之前没有关注过的职业机会。</p><p><strong>她没有想到，当初为了找房认识的人，竟然让她接触到了原本生活圈之外的资源。</strong></p><h2>在纽约，住在哪里很重要，认识谁也一样</h2><p>搬家几个月后，Lena 的生活和以前不太一样了。</p><p>她依然忙着工作，但周末不再只有固定的几个朋友，偶尔也会参加行业活动，认识一些新面孔。</p><p>那次分享的工作机会没有立刻改变她的职业方向，却让她开始重新思考未来的发展。</p><p>她原本以为，这次搬家只是想让自己住得舒服一点。</p><p>结果，改变的不只有住址，还有她与这座城市的连接。</p><p><strong>纽约从来不缺机会。有时候，差的只是一次认识新朋友的契机。</strong></p><p class="story-note">注：本文为创作的情景案例，人物、活动及具体经历均为虚构，不代表实际客户获得了相关职业机会。</p></div>
   </article>
 
   <section class="more-stories" id="more-stories">
@@ -211,22 +236,22 @@
       <div class="story-grid">
         <a class="media-card story-card" href="./USWOO%20Story%20-%20From%20Campus%20to%20First%20Apartment.dc.html">
           <div class="media-card-media">
-            <image-slot id="more-img-1" shape="rounded" radius="8" placeholder="NYU campus" src="./assets/story-nyu-campus.jpg" style="width:100%;height:100%"></image-slot>
+            <image-slot id="more-img-1" shape="rounded" radius="8" placeholder="NYU campus" src="./assets/story-nyu-street-2.webp" style="width:100%;height:100%"></image-slot>
           </div>
           <div class="media-card-body">
-            <h3>From campus to first apartment</h3>
-            <p>How one renter found the right neighborhood near NYU and settled in with ease.</p>
-            <div class="story-card-meta"><span>Jun 12, 2025</span><span class="dot"></span><span>5 min read</span></div>
+            <h3 data-zh="在纽约租房，差点把我一年的预算花光">Renting in New York nearly used up my whole year’s budget</h3>
+            <p data-zh="从坚持住在 Manhattan，到重新考虑河对岸的生活，他终于找到了更适合自己的选择。">From insisting on Manhattan to reconsidering life across the river, he finally found the choice that fit him best.</p>
+            <div class="story-card-meta" data-zh='<span>2025 年 6 月 12 日</span><span class="dot"></span><span>1.5 分钟阅读</span>'><span>Jun 12, 2025</span><span class="dot"></span><span>1.5 min read</span></div>
           </div>
         </a>
         <a class="media-card story-card" href="./USWOO%20Story%20-%20Moving%20Cities%20Made%20Easier.dc.html">
           <div class="media-card-media">
-            <image-slot id="more-img-2" shape="rounded" radius="8" placeholder="Moving boxes" src="./assets/story-moving-day-boxes.jpg" style="width:100%;height:100%"></image-slot>
+            <image-slot id="more-img-2" shape="rounded" radius="8" placeholder="Moving boxes" src="./assets/story-moving-living-room.webp" style="width:100%;height:100%"></image-slot>
           </div>
           <div class="media-card-body">
-            <h3>Moving cities made easier</h3>
-            <p>From apartment search to furniture, Wi-Fi and move-in, all in one place.</p>
-            <div class="story-card-meta"><span>May 28, 2025</span><span class="dot"></span><span>4 min read</span></div>
+            <h3 data-zh="毕业前最崩溃的，不是 Final，而是搬家">Before graduation, the most stressful part wasn’t finals. It was moving.</h3>
+            <p data-zh="纽约的租约快到期，费城的新家还没着落。没想到最后帮忙的，竟然是几年前认识的人。">His New York lease was ending, and his Philadelphia home still wasn’t set. The help he didn’t expect came from someone he’d known for years.</p>
+            <div class="story-card-meta" data-zh='<span>2025年5月28日</span><span class="dot"></span><span>1.5分钟阅读</span>'><span>May 28, 2025</span><span class="dot"></span><span>1.5 min read</span></div>
           </div>
         </a>
       </div>

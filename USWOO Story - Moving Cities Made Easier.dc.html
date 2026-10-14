@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=2"></script>
+<script src="./i18n-zh.js?v=4"></script>
 <script src="./i18n-zh-cities.js?v=3"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
@@ -173,32 +173,57 @@
   </div>
 </header>
 
+<style>
+  /* Chinese mode shows the Chinese story body; English mode shows the English one. */
+  html[data-lang="zh"] .en-body{ display:none; }
+  html:not([data-lang="zh"]) .zh-body{ display:none; }
+</style>
 <main id="top">
   <article class="story-article">
     <div class="story-narrow">
       <a class="story-back" href="./USWOO%20Press%20%26%20Stories.dc.html#renter-stories">← Back to Renter Stories</a>
       <p class="eyebrow"><span class="idx">02</span> Renter Stories</p>
-      <h1>Moving cities made easier</h1>
-      <p class="story-dek">From apartment search to furniture, Wi-Fi and move-in, all in one place.</p>
-      <div class="story-meta"><span>May 28, 2025</span><span class="dot"></span><span>4 min read</span></div>
+      <h1 data-zh="毕业前最崩溃的，不是 Final，而是搬家">Before graduation, the most stressful part wasn’t finals. It was moving.</h1>
+      <p class="story-dek" data-zh="房子快到期了，新家还没着落。Daniel 怎么也没想到，最后帮他解围的，竟然是几年前认识的租房 Agent。">His lease was ending and his new home wasn’t set. The unexpected help came from a rental agent he’d known for years.</p>
+      <div class="story-meta" data-zh='<span>2025年5月28日</span><span class="dot"></span><span>约1.5分钟阅读</span>'><span>May 28, 2025</span><span class="dot"></span><span>1.5 min read</span></div>
     </div>
     <div class="story-hero">
       <div class="story-hero-media">
-        <image-slot id="story-hero-img" shape="rounded" radius="18" placeholder="Moving boxes" src="./assets/story-moving-day-boxes.jpg" style="width:100%;height:100%"></image-slot>
+        <image-slot id="story-hero-img" shape="rounded" radius="18" placeholder="Moving boxes" src="./assets/story-moving-living-room.webp" style="width:100%;height:100%"></image-slot>
       </div>
     </div>
-    <div class="story-narrow story-body">
-      <p>Daniel's job offer in Chicago came with a start date six weeks away and a problem every relocating renter knows: he was living in Philadelphia, he had never visited his new neighborhood, and he had to find a home from a laptop.</p>
-      <p>The apartment was only one of about fifteen things on his list. There was also the lease, the internet, the furniture, the insurance, and the question of who would be home when the couch arrived.</p>
-      <h2>One conversation instead of fifteen</h2>
-      <p>Working with USWOO, Daniel described what mattered: a short walk to the L, a quiet building, a budget that left room for the city's winters. His advisor shortlisted places, arranged video tours so he could see each one in real time, and flagged the details a listing photo does not show, like street noise and natural light.</p>
-      <blockquote>“I signed my lease from my couch in Philadelphia and I didn't have a single regret when I walked in.”</blockquote>
-      <h2>Move-in, handled</h2>
-      <p>With the lease signed, the rest was scheduled around his arrival date: Wi-Fi activated for the day he got there, furniture delivered and assembled, renter's insurance in place. When he turned the key, the apartment was already a place to live rather than a place to start working on.</p>
-      <h2>What he would tell the next person</h2>
-      <p>Daniel's advice for anyone moving cities is simple: start with the people, not the platform. A good search is the one where someone who knows the city is on your side, and where nothing important is left for the last week.</p>
-      <p class="story-note">Renter names have been changed to protect privacy.</p>
+    <div class="story-narrow story-body en-body">
+      <p>Three weeks before graduation, Daniel’s life had become chaos.</p>
+      <p>Finals weren’t over, and his New York lease was about to expire. His graduate program in Philadelphia was confirmed, but his new apartment still wasn’t settled.</p>
+      <p>He finally found an apartment he liked, only to discover that the move-in date he needed didn’t line up with the building’s availability.</p>
+      <p>Meanwhile, moving company quotes came in much higher than expected. His room was full of unpacked boxes, and his phone held a long list of unanswered messages.</p>
+      <p><strong>What made it worst was that graduation, moving out and the move itself all had to happen on time. None of them could wait.</strong></p>
+      <h2>One message changed everything</h2>
+      <p>One night, Daniel was scrolling through his contacts when he suddenly thought of someone.</p>
+      <p>In his sophomore year, when he first rented in New York, he had found his agent through USWOO.</p>
+      <p>Even though that apartment search had ended long ago, the two had stayed in touch on and off.</p>
+      <p>They shared new restaurants in the city, caught up now and then, and messaged each other whenever a rental question came up. Over time, the relationship had grown from client and advisor into friendship.</p>
+      <p>Daniel had only meant to vent about the chaos of moving after graduation and maybe ask for advice.</p>
+      <p>To his surprise, his agent told him that Hi NY offered moving and settling-in support.</p>
+      <p><strong>It turned out that leaving New York was something he didn’t have to handle alone, either.</strong></p>
+      <h2>More than an apartment, there was a whole home to move</h2>
+      <p>With a direction set, Daniel began tackling the problems one by one.</p>
+      <p>Which furniture was worth bringing to Philadelphia? Which should be sold or given away? How far ahead should an intercity move be booked? When should Wi-Fi and renter’s insurance be arranged for the new place?</p>
+      <p>With Hi NY’s resources, he gradually mapped out the moving process and started lining up each task with his move-out and move-in dates.</p>
+      <p>Packing was still something he had to do himself, and plenty of small problems still popped up.</p>
+      <p>But at least he no longer had to search the internet from scratch every time something came up.</p>
+      <h2>This time, it really is goodbye to New York</h2>
+      <p>In the last week before graduation, Daniel finally had most of his room packed up.</p>
+      <p>Looking at the emptying apartment, he suddenly remembered how he had first moved in during his sophomore year.</p>
+      <p>Back then, he had just left the dorms and knew nothing about renting in New York.</p>
+      <p>Now, years later, he was about to take a house full of belongings to another city and start graduate school.</p>
+      <p>Before leaving, he sent his agent a message, talking about how much had changed over the years.</p>
+      <p><strong>He had once asked for help renting a single apartment. Years later, he could still turn to the same person when it was time to leave New York.</strong></p>
+      <p>Next stop, Philadelphia.</p>
+      <p class="story-note">Note: This is a fictional scenario based on common student experiences of moving between cities. The characters and specific events are invented.</p>
     </div>
+    
+    <div class="story-narrow story-body zh-body"><p>距离毕业还有三周，Daniel 的生活已经乱成一团。</p><p>Final 还没结束，纽约的租约就快到期了。费城的研究生项目已经确定，但新房迟迟没有着落。</p><p>好不容易看中一套公寓，询问后才发现，想要的入住日期根本对不上。</p><p>另一边，搬家公司报价比预期高出不少。房间里堆着没打包的行李，手机里还有一长串未回复的消息。</p><p><strong>最崩溃的是，毕业、退租、搬家，哪一件都没法往后拖。</strong></p><h2>一条消息，事情有了转机</h2><p>某天晚上，Daniel 翻着手机通讯录，突然想起了一个人。</p><p>大二那年，他从学校宿舍搬出来，第一次在纽约租房，就是通过 USWOO 认识了那位 Agent。</p><p>后来虽然租房的事情早已结束，两人却一直断断续续保持联系。</p><p>偶尔分享纽约的新餐厅，聊聊近况，遇到租房问题也会互相发消息。从最初的客户和顾问，慢慢成了朋友。</p><p>这次 Daniel 原本只是想吐槽一下毕业搬家的混乱，顺便问问有没有建议。</p><p>没想到，对方告诉他，USWOO 的 Hi NY 还有搬家及生活安置相关的服务资源。</p><p><strong>原来，离开纽约这件事，也可以找老朋友帮忙。</strong></p><h2>房子之外，还有一整个家要搬</h2><p>确定了方向，Daniel 终于开始一件件解决问题。</p><p>哪些家具值得带去费城？哪些不如直接处理掉？跨城搬家需要提前多久预约？新家的网络和租客保险什么时候安排？</p><p>借助 Hi NY 的相关资源，他逐渐理清了搬家流程，也开始按照退租和入住日期安排各项事项。</p><p>当然，打包还是得自己来，临时冒出来的小问题也一个没少。</p><p>但至少，不再是每遇到一件事，就从头上网搜索一次。</p><h2>这次，真的要和纽约说再见了</h2><p>毕业前最后一周，Daniel 终于把房间收拾得差不多了。</p><p>看着逐渐空下来的公寓，他突然想起大二第一次搬进来时的样子。</p><p>那时，他刚从宿舍搬出来，对纽约租房一窍不通。</p><p>几年过去，他已经要带着满屋子的东西，去另一个城市开始研究生生活。</p><p>临走前，他还给那位 Agent 发了条消息，聊起这些年的变化。</p><p><strong>当初只是找人帮忙租套房，没想到几年后，连离开纽约都还能找他商量。</strong></p><p>下一站，费城。</p><p class="story-note">注：本文为根据常见学生跨城搬家经历创作的情景案例，人物与具体经历均为虚构。</p></div>
   </article>
 
   <section class="more-stories" id="more-stories">
@@ -210,22 +235,22 @@
       <div class="story-grid">
         <a class="media-card story-card" href="./USWOO%20Story%20-%20From%20Campus%20to%20First%20Apartment.dc.html">
           <div class="media-card-media">
-            <image-slot id="more-img-1" shape="rounded" radius="8" placeholder="NYU campus" src="./assets/story-nyu-campus.jpg" style="width:100%;height:100%"></image-slot>
+            <image-slot id="more-img-1" shape="rounded" radius="8" placeholder="NYU campus" src="./assets/story-nyu-street-2.webp" style="width:100%;height:100%"></image-slot>
           </div>
           <div class="media-card-body">
-            <h3>From campus to first apartment</h3>
-            <p>How one renter found the right neighborhood near NYU and settled in with ease.</p>
-            <div class="story-card-meta"><span>Jun 12, 2025</span><span class="dot"></span><span>5 min read</span></div>
+            <h3 data-zh="在纽约租房，差点把我一年的预算花光">Renting in New York nearly used up my whole year’s budget</h3>
+            <p data-zh="从坚持住在 Manhattan，到重新考虑河对岸的生活，他终于找到了更适合自己的选择。">From insisting on Manhattan to reconsidering life across the river, he finally found the choice that fit him best.</p>
+            <div class="story-card-meta" data-zh='<span>2025 年 6 月 12 日</span><span class="dot"></span><span>1.5 分钟阅读</span>'><span>Jun 12, 2025</span><span class="dot"></span><span>1.5 min read</span></div>
           </div>
         </a>
         <a class="media-card story-card" href="./USWOO%20Story%20-%20Finding%20a%20Better%20Fit.dc.html">
           <div class="media-card-media">
-            <image-slot id="more-img-2" shape="rounded" radius="8" placeholder="NYC luxury apartment" src="./assets/story-nyc-luxury-living-room.jpg" style="width:100%;height:100%"></image-slot>
+            <image-slot id="more-img-2" shape="rounded" radius="8" placeholder="NYC luxury apartment" src="./assets/story-lena-gallery.jpg" style="width:100%;height:100%"></image-slot>
           </div>
           <div class="media-card-body">
-            <h3>Finding a better fit</h3>
-            <p>A renter's journey from renewal decision to finding a new home that feels right.</p>
-            <div class="story-card-meta"><span>Apr 30, 2025</span><span class="dot"></span><span>6 min read</span></div>
+            <h3 data-zh="在纽约待了三年，朋友圈却越来越小">After three years in New York, my social circle kept shrinking</h3>
+            <p data-zh="每天公司、地铁、家，生活仿佛陷入循环。一次原本普通的搬家，却带来了意想不到的转机。">Every day felt like a loop of office, subway and home. A routine move brought an unexpected turn.</p>
+            <div class="story-card-meta" data-zh='<span>2025年4月30日</span><span class="dot"></span><span>1.5分钟阅读</span>'><span>Apr 30, 2025</span><span class="dot"></span><span>1.5 min read</span></div>
           </div>
         </a>
       </div>

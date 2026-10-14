@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./i18n-zh.js?v=4"></script>
+<script src="./i18n-zh-cities.js?v=3"></script>
+<script src="./i18n.js?v=1" defer></script>
+<script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --paper: #FFFFFF; --paper-raised: #F6F5F3; --ink: #141414; --ink-soft: #656260; --ink-faint: #9C9894;
+    --line: #E7E4E0; --black: #0F0F0F; --pink: #FC8D94; --pink-tint: #FEDFE1; --focus: #FC8D94;
+    --hero-ink: #FFFFFF; --hero-ink-soft: #E7E3DE;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:'Inter', -apple-system, 'Segoe UI', sans-serif; font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Poppins', 'Inter', sans-serif; font-weight:600; text-wrap:balance; margin:0; line-height:1.12; }
+  a{ color:inherit; }
+  img,svg{ max-width:100%; display:block; } button{ font:inherit; }
+  .wrap{ max-width:1560px; margin:0 auto; padding:0 clamp(16px, 2.4vw, 32px); }
+  .eyebrow{ font-size:0.78rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); display:flex; align-items:baseline; gap:0.6em; }
+  .eyebrow .idx{ color:var(--pink); font-weight:700; }
+  header.nav{ position:sticky; top:0; z-index:40; background:color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  .nav-inner{ max-width:1180px; margin:0 auto; padding:18px clamp(20px, 5vw, 56px); display:flex; align-items:center; justify-content:space-between; gap:24px; }
+  .wordmark{ font-family:'Poppins', sans-serif; font-weight:700; font-size:1.3rem; letter-spacing:0.01em; color:var(--ink); text-decoration:none; white-space:nowrap; }
+  nav.links{ display:flex; gap:clamp(12px, 1.8vw, 22px); align-items:center; overflow-x:auto; scrollbar-width:none; }
+  nav.links::-webkit-scrollbar{ display:none; }
+  nav.links a{ color:var(--ink-soft); text-decoration:none; font-size:0.86rem; font-weight:500; white-space:nowrap; padding:4px 2px; border-bottom:1px solid transparent; transition:color 0.3s ease, border-color 0.15s ease; }
+  nav.links a:hover, nav.links a:focus-visible{ color:var(--ink); border-bottom-color:var(--pink); }
+  nav.links a.active{ color:var(--ink); border-bottom-color:var(--pink); }
+  .nav-cta{ background:var(--black); color:#fff !important; font-size:0.85rem; font-weight:600; padding:10px 18px; border-radius:2px; text-decoration:none !important; border-bottom:none !important; white-space:nowrap; }
+  .nav-cta:hover{ opacity:0.85; }
+  .btn{ display:inline-flex; align-items:center; gap:10px; font-size:0.9rem; font-weight:600; padding:14px 26px; border-radius:2px; text-decoration:none; cursor:pointer; border:1px solid transparent; transition:transform 0.15s ease, opacity 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease; }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--black); color:#fff; } .btn-primary:hover{ opacity:0.88; }
+  .btn-outline{ background:transparent; color:var(--ink); border-color:var(--line); }
+  .btn-outline:hover{ border-color:var(--ink-soft); }
+  .link-arrow{ display:inline-flex; align-items:center; gap:8px; font-size:0.9rem; font-weight:600; text-decoration:none; color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:2px; }
+  .link-arrow:hover{ color:var(--pink); border-color:var(--pink); }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:3px; }
+  section{ padding:clamp(56px, 9vw, 100px) 0; }
+  .band-paper{ background:var(--paper); }
+  .band-raised{ background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .section-head{ max-width:640px; }
+  .section-head h2{ font-size:clamp(1.8rem, 3.6vw, 2.6rem); margin-top:12px; }
+  .section-head p.lede{ margin-top:16px; max-width:56ch; color:var(--ink-soft); font-size:1.02rem; }
+  .section-head-row{ display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+  footer{ background:var(--black); color:#fff; padding-top:48px; }
+  .footer-top{ display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.14); }
+  .footer-col{ min-width:200px; }
+  .footer-col .ft-label{ font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:12px; }
+  .newsletter-form{ display:flex; align-items:flex-end; gap:10px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:8px; max-width:280px; }
+  .newsletter-form input{ flex:1; background:transparent; border:none; color:#fff; font-family:'Inter', sans-serif; font-size:0.92rem; padding:4px 0; }
+  .newsletter-form input::placeholder{ color:rgba(255,255,255,0.5); }
+  .newsletter-form input:focus{ outline:none; }
+  .newsletter-form button{ background:none; border:none; color:var(--pink); font-size:1.1rem; cursor:pointer; padding:0 2px 4px; }
+  .footer-links{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+  .footer-links a{ text-decoration:none; font-size:0.9rem; color:rgba(255,255,255,0.82); transition:color 0.15s ease; }
+  .footer-links a:hover{ color:var(--pink); }
+  .footer-copy{ font-size:0.86rem; color:rgba(255,255,255,0.6); line-height:1.7; }
+  .footer-legal{ text-align:left; max-width:760px; margin:0 auto; padding:24px 0 0; font-size:0.66rem; line-height:1.6; color:rgba(255,255,255,0.45); }
+  .footer-legal + .footer-legal{ padding-top:6px; }
+  .footer-word{ text-align:center; padding:28px 0 20px; overflow:hidden; }
+  .footer-word .wm{ font-family:'Poppins', sans-serif; font-weight:800; font-size:clamp(3.2rem, 14vw, 11rem); letter-spacing:-0.02em; line-height:1; color:#fff; white-space:nowrap; }
+  @media (max-width: 560px){ .footer-top{ flex-direction:column; } }
+
+  /* Featured press — big story + latest-post list */
+  .press-grid{ margin-top:36px; display:grid; grid-template-columns:1.3fr 1fr; gap:56px; align-items:start; }
+  .press-feature{ display:flex; flex-direction:column; text-decoration:none; }
+  .press-feature-media{ position:relative; aspect-ratio:16/11; border-radius:14px; overflow:hidden; }
+  .press-feature-media image-slot{ border-radius:14px; }
+  .press-feature-body{ padding-top:20px; display:flex; flex-direction:column; gap:10px; }
+  .press-feature-meta{ display:flex; align-items:center; gap:10px; font-size:0.8rem; color:var(--ink-faint); }
+  .press-feature-meta .src{ font-weight:700; color:var(--ink-soft); letter-spacing:0.03em; text-transform:uppercase; }
+  .press-feature-body h3{ font-size:clamp(1.3rem, 2vw, 1.6rem); }
+  .press-feature-body p{ color:var(--ink-soft); font-size:0.94rem; }
+  .press-latest-head{ font-family:'Poppins', sans-serif; font-weight:600; font-size:1.15rem; margin-bottom:20px; }
+  .press-side-list{ display:flex; flex-direction:column; }
+  .press-side-item{ display:flex; gap:16px; align-items:center; padding:18px 0; border-top:1px solid var(--line); text-decoration:none; }
+  .press-side-list a.press-side-item:last-child{ border-bottom:1px solid var(--line); }
+  .press-side-text{ flex:1; min-width:0; }
+  .press-side-item h4{ font-family:'Poppins', sans-serif; font-weight:600; font-size:0.96rem; line-height:1.35; }
+  .press-side-tags{ margin-top:8px; font-size:0.78rem; color:var(--ink-faint); display:flex; align-items:center; gap:8px; }
+  .press-side-tags .src{ font-weight:700; color:var(--ink-soft); letter-spacing:0.03em; text-transform:uppercase; }
+  .press-side-media{ width:64px; aspect-ratio:1/1; flex:none; border-radius:10px; overflow:hidden; }
+  .press-side-media image-slot{ border-radius:10px; }
+  /* Icon hangs in its own column, left of the text edge; the copy and the
+     link share the heading's left edge. align-self centres the glyph on
+     the heading row, so it reads as sitting on the title's line. */
+  .icon-grid{ display:grid; grid-template-columns:auto 1fr; column-gap:12px; }
+  .icon-grid > .press-icon{ grid-column:1; grid-row:1; align-self:center; }
+  .icon-grid > h4, .icon-grid > p, .icon-grid > .link-arrow{ grid-column:2; }
+  .icon-grid > .link-arrow{ justify-self:start; }
+  .press-icon{ display:flex; flex:none; color:var(--ink); }
+  .press-icon svg{ width:20px; height:20px; }
+  @media (max-width:860px){ .press-grid{ grid-template-columns:1fr; gap:40px; } }
+
+  /* Renter stories — founders-corner style carousel */
+  .carousel-arrow{ width:38px; height:38px; border-radius:50%; border:1px solid var(--line); background:var(--paper); display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--ink); transition:background 0.15s ease, border-color 0.15s ease; }
+  .carousel-arrow:hover{ background:var(--paper-raised); border-color:var(--ink-soft); }
+  .carousel-arrow svg{ width:16px; height:16px; }
+  .story-grid{ margin-top:36px; display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+
+  /* ── Media card ────────────────────────────────────────────────────────
+     One card shared by the Home "how we help" steps and the Press
+     renter-story cards. The geometry is identical in both places; only
+     --card-bg flips, so the card always contrasts with the band behind it
+     (white card on a raised band, raised card on a paper band).
+     Nested radius: inner 8 + 10 padding = outer 18. */
+  .media-card{ background:var(--card-bg, var(--paper)); border:1px solid var(--line); border-radius:18px; overflow:hidden; padding:10px; display:flex; flex-direction:column; text-align:left; text-decoration:none; }
+  .media-card-media{ position:relative; aspect-ratio:4/3; border-radius:8px; overflow:hidden; }
+  .media-card-media image-slot{ border-radius:8px; }
+  .media-card-body{ padding:16px 2px 10px; }
+  .media-card-body h3{ font-size:1.06rem; }
+  .media-card-body p{ margin-top:8px; color:var(--ink-soft); font-size:0.9rem; }
+
+  /* This band is raised, so the card takes the paper tone. */
+  .story-card{ --card-bg:var(--paper); }
+  .story-card-meta{ margin-top:14px; display:flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--ink-faint); }
+  .story-card-meta .dot{ width:3px; height:3px; border-radius:50%; background:var(--ink-faint); }
+  .carousel-dots{ margin-top:36px; display:flex; align-items:center; justify-content:center; gap:20px; }
+  .carousel-dots .dots{ display:flex; align-items:center; gap:10px; }
+  .carousel-dots .dot-btn{ width:8px; height:8px; border-radius:50%; background:var(--line); border:none; padding:0; cursor:pointer; }
+  .carousel-dots .dot-btn.active{ background:var(--ink); width:22px; border-radius:5px; }
+  @media (max-width:860px){ .story-grid{ grid-template-columns:1fr; } }
+
+  /* Brand moments */
+  .moments-row{ margin-top:36px; display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+  .moment-item h4{ font-family:'Poppins', sans-serif; font-weight:600; font-size:1.02rem; }
+  .moment-item p{ margin-top:6px; color:var(--ink-soft); font-size:0.88rem; }
+  .moment-item .link-arrow{ margin-top:10px; font-size:0.82rem; }
+  @media (max-width:860px){ .moments-row{ grid-template-columns:1fr; } }
+
+  /* Story article */
+  .story-article{ padding:clamp(40px, 6vw, 72px) 0 clamp(56px, 8vw, 96px); }
+  .story-narrow{ max-width:760px; margin:0 auto; padding:0 clamp(16px, 2.4vw, 32px); }
+  .story-back{ display:inline-flex; align-items:center; gap:8px; font-size:0.86rem; font-weight:600; color:var(--ink-soft); text-decoration:none; margin-bottom:28px; }
+  .story-back:hover{ color:var(--ink); }
+  .story-article h1{ font-size:clamp(2rem, 4.6vw, 3.1rem); margin-top:14px; text-wrap:balance; }
+  .story-dek{ margin-top:18px; font-size:1.15rem; color:var(--ink-soft); }
+  .story-meta{ margin-top:20px; display:flex; align-items:center; gap:8px; font-size:0.84rem; color:var(--ink-faint); }
+  .story-meta .dot{ width:3px; height:3px; border-radius:50%; background:var(--ink-faint); }
+  .story-hero{ max-width:1100px; margin:40px auto 0; padding:0 clamp(16px, 2.4vw, 32px); }
+  .story-hero-media{ aspect-ratio:16/9; border-radius:18px; overflow:hidden; }
+  .story-hero-media image-slot{ border-radius:18px; }
+  .story-body{ margin-top:44px; }
+  .story-body p{ font-size:1.06rem; line-height:1.75; color:#2a2826; margin:0 0 22px; }
+  .story-body h2{ font-size:1.5rem; margin:44px 0 16px; }
+  .story-body blockquote{ margin:36px 0; padding:4px 0 4px 24px; border-left:3px solid var(--pink); font-family:'Poppins', sans-serif; font-weight:500; font-size:1.3rem; line-height:1.4; color:var(--ink); }
+  .story-note{ margin-top:40px; padding-top:20px; border-top:1px solid var(--line); font-size:0.82rem; color:var(--ink-faint); }
+  .more-stories{ background:var(--paper-raised); border-top:1px solid var(--line); }
+  .more-stories .story-grid{ grid-template-columns:repeat(2, 1fr); }
+  @media (max-width:860px){ .more-stories .story-grid{ grid-template-columns:1fr; } }
+
+  .story-figs{ max-width:1100px; margin:40px auto 0; padding:0 clamp(16px, 2.4vw, 32px); display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .story-figs figure{ margin:0; }
+  .story-figs .fig-media{ aspect-ratio:3/4; border-radius:18px; overflow:hidden; }
+  .story-figs image-slot{ border-radius:18px; }
+  .story-figs figcaption{ margin-top:10px; font-size:0.82rem; color:var(--ink-faint); }
+  .sponsor-list{ list-style:none; padding:0; margin:0 0 22px; display:flex; flex-wrap:wrap; gap:8px; }
+  .sponsor-list li{ border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:0.86rem; color:var(--ink-soft); }
+  .sponsor-list li.us{ border-color:var(--pink); color:var(--ink); font-weight:600; background:var(--pink-tint); }
+  @media (max-width:640px){ .story-figs{ grid-template-columns:1fr; } }
+</style><script src="./image-slot.js?v=3"></script></helmet>
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a class="wordmark" href="./USWOO Home.dc.html">USWOO</a>
+    <nav class="links">
+      <a href="./USWOO Services.dc.html">Services</a>
+      <a href="./USWOO City Guides.dc.html">City Guides</a>
+      <a href="./USWOO Press &amp; Stories.dc.html" class="active">Press &amp; Stories</a>
+      <a href="./USWOO Partners.dc.html">Partners</a>
+      <a href="./USWOO About Us.dc.html">About Us</a>
+    </nav>
+    <a class="nav-cta" href="./USWOO Contact.dc.html">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+  <article class="story-article">
+    <div class="story-narrow">
+      <a class="story-back" href="./USWOO%20Press%20%26%20Stories.dc.html#featured-press">← Back to Press</a>
+      <p class="eyebrow"><span class="idx">01</span> USWOO Announcement</p>
+      <h1>USWOO Goes National: New Los Angeles Office and Rental Services Expanding to Chicago, D.C. and Philadelphia</h1>
+      <p class="story-dek">After years of supporting renters in New York and New Jersey, USWOO is opening a Los Angeles office and bringing its rental services to three more cities.</p>
+      <div class="story-meta"><span>USWOO</span><span class="dot"></span><span>Oct 5, 2026</span><span class="dot"></span><span>3 min read</span></div>
+    </div>
+    <div class="story-hero">
+      <div class="story-hero-media"><image-slot id="news-nat-hero" shape="rounded" radius="18" placeholder="Los Angeles skyline" src="./assets/la-closing.jpg" style="width:100%;height:100%"></image-slot></div>
+    </div>
+    <div class="story-narrow story-body">
+      <p data-zh="USWOO 今日宣布走向全美：在<strong>洛杉矶</strong>开设新办公室，并将租赁服务拓展至<strong>芝加哥</strong>、<strong>华盛顿特区</strong>和<strong>费城</strong>。">USWOO today announced its national expansion: a new office in <strong>Los Angeles</strong>, and rental services now extending to <strong>Chicago</strong>, <strong>Washington, D.C.</strong> and <strong>Philadelphia</strong>.</p>
+      <p>USWOO began as leasing support for international students and young professionals starting out in New York. As more of those renters moved on to new campuses, jobs and cities, the questions followed them: where to live, how to sign a lease from far away, and who to call once the keys are in hand.</p>
+      <h2>One rental journey, in more cities</h2>
+      <p>In each new city, renters can expect the same support USWOO is known for: home search and tours, application and lease guidance, move-in planning, and everyday help after move-in, with renewal and relocation support when it is time for what comes next.</p>
+      <p>The new Los Angeles office will be the base for the West Coast, working alongside local partners and neighborhood experts. Renters in Chicago, D.C. and Philadelphia will be supported by the USWOO team together with trusted partners in each city.</p>
+      <h2>Guides to help you choose</h2>
+      <p>To help renters get to know each city before they arrive, USWOO’s City Guides cover popular neighborhoods, nearby schools and everyday essentials across all of our cities.</p>
+      <h2>Looking ahead</h2>
+      <p>“Moving somewhere new shouldn’t mean starting over,” is the idea behind the expansion. USWOO will keep growing city by city, with the same goal everywhere: making the move from finding a home to feeling at home a little easier.</p>
+      <p><a class="link-arrow" href="./USWOO City Guides.dc.html">Explore City Guides →</a></p>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="ft-label">Stay in the Loop</div>
+        <form class="newsletter-form" onSubmit="{{ preventDefault }}">
+          <input type="email" placeholder="Email address" aria-label="Email address">
+          <button type="submit" aria-label="Subscribe">→</button>
+        </form>
+      </div>
+      <div class="footer-col">
+        <div class="ft-label">Follow</div>
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/uswoo_realty/" target="_blank" rel="noopener noreferrer">Instagram →</a></li>
+          <li><a href="https://www.linkedin.com/company/uswoo-realty-llc/home/" target="_blank" rel="noopener noreferrer">LinkedIn →</a></li>
+          <li><a href="https://www.tiktok.com/@uswoo_realty" target="_blank" rel="noopener noreferrer">TikTok →</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">Boston USWOO Realty LLC is a licensed real estate broker in Massachusetts, with its New York branch, USWOO REALTY LLC, independently licensed in New York State.</p>
+    <p class="footer-legal">All information is deemed reliable but not guaranteed and is subject to change without notice. Listings are subject to prior sale, rental, or withdrawal.</p>
+    <p class="footer-legal">Both entities and their affiliates support Fair Housing and Equal Opportunity and comply with applicable anti-discrimination laws.</p>
+    <p class="footer-legal">Copyright ©2026 Boston USWOO Realty LLC. All Rights Reserved.</p>
+    <div class="footer-word">
+      <div class="wm">USWOO</div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      preventDefault: (e) => e.preventDefault(),
+    };
+  }
+}
+</script>
+</body>
+</html>

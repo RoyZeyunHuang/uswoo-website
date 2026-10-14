@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=2"></script>
+<script src="./i18n-zh.js?v=4"></script>
 <script src="./i18n-zh-cities.js?v=3"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
@@ -194,6 +194,21 @@
   .bento-d .copy{ flex:1; display:flex; flex-direction:column; justify-content:space-between; }
   .bento-d .desc{ color:rgba(255,255,255,0.82); }
   .bento-d .photo{ flex:0 0 42%; }
+  .perf-bento .bento-d .pill{ font-size:clamp(2rem, 3.57vw, 2.835rem); font-weight:700; letter-spacing:-0.01em; line-height:1.05; }
+  .perf-bento .bento-d .photo{ position:relative; overflow:hidden; }
+  .perf-bento .bento-d .photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  @media (min-width:561px){
+    .perf-bento .bento-a{ padding:0; }
+    .perf-bento .bento-a .photo{ border-radius:0; }
+    .perf-bento .bento-a > div:last-child{ padding:0 clamp(22px, 2.4vw, 32px) clamp(22px, 2.4vw, 32px); }
+  }
+  .perf-bento .bento-d .photo::before{ content:""; position:absolute; inset:0; background:linear-gradient(90deg, var(--black) 0%, rgba(15,15,15,0) 45%); }
+  @media (min-width:561px){
+    .perf-bento .bento-d .copy{ position:relative; z-index:1; max-width:46%; }
+    .perf-bento .bento-d .photo{ position:absolute; top:0; right:0; bottom:0; width:58%; flex:none; height:auto; border-radius:0; }
+    .perf-bento .bento-d .photo img{ height:100%; }
+  }
+  .perf-bento .bento-b .desc{ font-weight:600; text-shadow:0 1px 3px rgba(0,0,0,0.6), 0 0 12px rgba(0,0,0,0.35); }
   @media (max-width:860px){
     .bento{ grid-template-columns:1fr; max-width:460px; margin-left:auto; margin-right:auto; }
     .bento-a, .bento-b, .bento-c, .bento-d{ grid-column:1; grid-row:auto; min-height:0; }
@@ -206,7 +221,8 @@
   .partners-hero-top{ padding-top:clamp(40px, 5vw, 56px); padding-bottom:clamp(40px, 5vw, 56px); text-align:center; }
   .partners-hero-grid{ display:block; margin-top:0; }
   .partners-hero-grid h1{ max-width:18ch; margin:0 auto; font-size:clamp(2.4rem, 5.6vw, 4.2rem); text-align:center; }
-  .hero-slogan{ margin:18px auto 0; max-width:44ch; color:var(--hero-ink-soft); font-size:clamp(1rem, 1.5vw, 1.2rem); line-height:1.5; text-align:center; }
+  .hero-slogan{ margin:18px auto 0; max-width:44ch; color:var(--hero-ink); font-size:clamp(1rem, 1.5vw, 1.2rem); line-height:1.5; text-align:center;
+    font-weight:500; text-shadow:0 1px 3px rgba(0,0,0,0.6), 0 0 12px rgba(0,0,0,0.35); }
   .perf-bento .bento-card{ background:var(--paper); border:1px solid var(--line); }
   .perf-bento .bento-card.bento-b{ border:0; }
   .perf-bento .bento-card.bento-c{ background:var(--pink-tint); border:0; }
@@ -307,9 +323,9 @@
         </div>
 
         <div class="editorial-copy">
-          <p class="editorial-hey">Hey there, property teams:</p>
-          <h2>Your Asset, Our Obsession</h2>
-          <p class="lede">We fill your units, protect your rents, and grow your NOI.</p>
+          <p class="editorial-hey">To our developer and property management partners:</p>
+          <h2>Your Asset, Our Shared Goal</h2>
+          <p class="lede">Higher occupancy and more stable rental income, driving long-term growth in your property’s value.</p>
         </div>
 
         <div class="editorial-right">
@@ -323,27 +339,28 @@
         <div class="offer-item open">
           <div class="offer-head" data-offer-toggle role="button" tabindex="0" aria-expanded="true">
             <span class="offer-num">01</span>
-            <h3>Reach the right audience</h3>
+            <h3>Find the right renters</h3>
             <span class="offer-toggle" aria-hidden="true"></span>
           </div>
-          <p>Connect with international and Asian renters through trusted channels, local communities, and targeted content.</p>
+          <p>Reach high-intent renters through local communities, targeted marketing and diverse promotion channels, so every impression counts.</p>
         </div>
         <div class="offer-item">
           <div class="offer-head" data-offer-toggle role="button" tabindex="0" aria-expanded="false">
             <span class="offer-num">02</span>
-            <h3>Make leasing easier</h3>
+            <h3>Turn interest into signed leases</h3>
             <span class="offer-toggle" aria-hidden="true"></span>
           </div>
-          <p>Support tours, follow-ups, applications, and the moments in between that keep renters moving forward.</p>
+          <p>From first inquiry to signed lease, we connect every step of the rental process to reduce drop-off and speed up leasing.</p>
         </div>
         <div class="offer-item">
           <div class="offer-head" data-offer-toggle role="button" tabindex="0" aria-expanded="false">
             <span class="offer-num">03</span>
-            <h3>Build lasting demand</h3>
+            <h3>Keep rental momentum going</h3>
             <span class="offer-toggle" aria-hidden="true"></span>
           </div>
-          <p>Create stronger visibility and more consistent renter interest through thoughtful, market-aware campaigns.</p>
+          <p>Beyond short-term promotion, we keep growing your property’s presence among target renters, building steady demand for future leasing.</p>
         </div>
+
       </div>
     </div>
   </section>
@@ -357,8 +374,8 @@
 
       <div class="partners-hero-top wrap">
         <div class="partners-hero-grid">
-          <h1>We help turn interest into leases.</h1>
-          <p class="hero-slogan">From the first touchpoint to the signed lease, we help properties connect with the right renters and keep the process moving.</p>
+          <h1>Fewer vacancies, more efficient leasing.</h1>
+          <p class="hero-slogan">We care not only about how many units we lease, but also how quickly each unit is leased, helping properties shorten vacancy periods and maintain stable rental income.</p>
         </div>
       </div>
     </div>
@@ -406,12 +423,12 @@
     <div class="wrap">
       <div class="section-head centered perf-head">
         <p class="eyebrow"><span class="idx">04</span> PERFORMANCE</p>
-        <h2 data-zh="实际成效，<em>一看便知</em>。">What that looks like <em>in practice</em>.</h2>
+        <h2 data-zh="好的租赁表现，有数据为证。">What that looks like <em>in practice</em>.</h2>
       </div>
 
       <div class="bento perf-bento">
         <div class="bento-card bento-a">
-          <div class="photo"><img src="./assets/help-find-move.webp" alt=""></div>
+          <div class="photo"><img src="./assets/partners-lease-agreement.webp" alt=""></div>
           <div>
             <div class="num">25%</div>
             <span class="pill">Faster Lease Conversion</span>
@@ -423,6 +440,7 @@
           <div class="inner">
             <div class="num">65&ndash;75%</div>
             <span class="pill">Organic Inbound</span>
+            <p class="desc">Over 60% of our inquiries come from organic search, social media, and word of mouth. Steady organic traffic keeps us connected to renters who are truly looking for a home.</p>
           </div>
         </div>
         <div class="bento-card bento-c">
@@ -437,6 +455,7 @@
             <span class="pill">Demand that comes to you</span>
             <p class="desc">A significant share of renter demand comes through non-paid channels, so every lead arrives already interested in your building.</p>
           </div>
+          <div class="photo"><img src="./assets/partners-renter-bedroom.webp" alt=""></div>
         </div>
       </div>
     </div>

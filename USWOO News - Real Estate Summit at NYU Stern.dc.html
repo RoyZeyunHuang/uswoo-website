@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=2"></script>
+<script src="./i18n-zh.js?v=4"></script>
 <script src="./i18n-zh-cities.js?v=3"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
@@ -183,14 +183,22 @@
   </div>
 </header>
 
+<style>
+  /* Chinese mode shows the Chinese article body; English mode shows the English one. */
+  html[data-lang="zh"] .en-body{ display:none; }
+  html:not([data-lang="zh"]) .zh-body{ display:none; }
+  .story-panel{ margin:36px 0; }
+  .story-panel img{ display:block; width:100%; height:auto; border-radius:18px; }
+  .story-panel figcaption{ margin-top:10px; font-size:0.82rem; color:var(--ink-faint); }
+</style>
 <main id="top">
   <article class="story-article">
     <div class="story-narrow">
       <a class="story-back" href="./USWOO%20Press%20%26%20Stories.dc.html#featured-press">← Back to Press</a>
-      <p class="eyebrow"><span class="idx">01</span> USWOO Announcement</p>
-      <h1>USWOO Sponsors NYU Stern Real Estate Club’s “Powering the Future” Real Estate Summit</h1>
-      <p class="story-dek">Alongside JLL, Goodwin, Corcoran Sunshine and Naftali Group, USWOO joined the sponsor lineup of the Stern Real Estate Club’s annual summit.</p>
-      <div class="story-meta"><span>USWOO</span><span class="dot"></span><span>Mar 6, 2026</span><span class="dot"></span><span>3 min read</span></div>
+      <p class="eyebrow" data-zh='<span class="idx">01</span> USWOO 公告 | 行业合作'><span class="idx">01</span> USWOO Announcement | Industry Partnership</p>
+      <h1 data-zh="USWOO 携手 NYU Stern，支持纽约房地产行业前沿峰会">USWOO Sponsors NYU Stern Real Estate Club’s “Powering the Future” Real Estate Summit</h1>
+      <p class="story-dek" data-zh="与 JLL、Corcoran Sunshine、Naftali Group 等行业知名机构共同支持 Powering the Future，连接全球商业视野与新一代行业人才。">Alongside JLL, Corcoran Sunshine and Naftali Group, USWOO supports Powering the Future, connecting global business perspectives with the next generation of industry talent.</p>
+      <div class="story-meta" data-zh='<span>USWOO · 2026 年 3 月 6 日 · 3 分钟阅读</span>'><span>USWOO</span><span class="dot"></span><span>Mar 6, 2026</span><span class="dot"></span><span>3 min read</span></div>
     </div>
     <div class="story-figs">
       <figure>
@@ -202,23 +210,29 @@
         <figcaption>The USWOO banner in the summit lobby.</figcaption>
       </figure>
     </div>
-    <div class="story-narrow story-body">
-      <p data-zh="USWOO 与姊妹品牌 Overseas Student Service 共同赞助了 3 月 6 日由 NYU Stern 房地产俱乐部举办的 <strong>Powering the Future 房地产峰会</strong>。">USWOO, together with its sister brand Overseas Student Service, was a sponsor of the <strong>Powering the Future Real Estate Summit</strong>, hosted by the Stern Real Estate Club at NYU Stern on March 6.</p>
-      <p>The summit brings together students and industry professionals around the future of real estate. This year’s sponsors included:</p>
-      <ul class="sponsor-list">
-        <li>JLL</li>
-        <li>NYU Stern Chao-Hon Chen Institute for Global Real Estate Finance</li>
-        <li>Goodwin</li>
-        <li>Corcoran Sunshine</li>
-        <li>Naftali Group</li>
-        <li class="us">USWOO · Overseas Student Service</li>
-      </ul>
-      <h2>Why we were there</h2>
-      <p>Many of NYU’s international students and young professionals start their New York journey with a housing search. Supporting the Stern Real Estate Club is one way USWOO connects with the next generation of real estate talent and with the people who will shape how the city lives and works.</p>
-      <p>At the summit, USWOO’s banner in the lobby introduced the team’s three areas of work: leasing solutions, real estate brokerage, and marketing and branding.</p>
-      <h2>Looking ahead</h2>
-      <p>USWOO is grateful to the Stern Real Estate Club for the invitation and to everyone who stopped by. We look forward to continuing to support the student and professional real estate community in New York and in the cities we are growing into.</p>
+    <div class="story-narrow story-body en-body">
+      <p>On March 6, 2026, USWOO, as a sponsor, supported <strong>Powering the Future</strong>, the annual real estate summit hosted by the NYU Stern Real Estate Club.</p>
+      <p>The summit brought together professionals from leading global companies and real estate organizations, including IBM, Microsoft, McKinsey and CBRE, to discuss artificial intelligence, digital infrastructure, energy systems and the future of cities.</p>
+      <p>USWOO appeared alongside JLL, Goodwin, Corcoran Sunshine and Naftali Group in the summit’s sponsor lineup, reflecting our close ties to New York’s real estate industry.</p>
+      <figure class="story-panel"><img src="./assets/press-stern-panel.jpg" alt="Panel discussion at the Powering the Future summit" loading="lazy"><figcaption data-zh="Powering the Future 峰会圆桌讨论现场。">Panel discussion at Powering the Future.</figcaption></figure>
+      <h2>Standing alongside industry leaders to explore the future of real estate</h2>
+      <p>Real estate is going through profound change.</p>
+      <p>From AI-driven energy systems to data center investment and the rethinking of urban space, the links between technology, capital and real estate have never been tighter.</p>
+      <p>The summit brought global companies, industry experts and the next generation of talent together, moving ideas out of reports and research and into face-to-face conversation.</p>
+      <p>For USWOO, taking part in an event like this is more than brand visibility. It is an important chance to go deeper into the industry and build professional networks.</p>
+      <h2>From rental services to industry connections</h2>
+      <p>As a brand focused on residential leasing and real estate marketing in the U.S., USWOO pays close attention to market shifts and how urban development shapes where people choose to live.</p>
+      <p>At the summit, USWOO presented our three core business areas: <strong>Rental Solutions, Real Estate Brokerage, and Marketing &amp; Branding</strong>.</p>
+      <p>From serving international students and young professionals to connecting developers, property management companies and industry partners, USWOO continues to expand its professional services and industry network.</p>
+      <p>We believe valuable service is about more than helping clients find the right home. It also depends on a deep understanding of the market, the accumulation of professional resources, and the ability to keep creating meaningful connections.</p>
+      <h2>Connecting with New York’s industry resources and future talent</h2>
+      <p>New York brings together some of the world’s leading financial institutions, real estate firms, technology companies and universities, and it continues to produce new ideas and opportunities that reshape the industry.</p>
+      <p>By supporting professional organizations such as the NYU Stern Real Estate Club, USWOO hopes to strengthen its connections with universities, industry organizations and the next generation of real estate professionals, opening the door to more exchange and collaboration.</p>
+      <p><strong>Rooted in New York, connected to the industry, and ready for more possibilities.</strong></p>
+      <p>Going forward, USWOO will keep taking part in industry events with real impact, deepen our professional partnerships, and explore more ways real estate can connect with city life.</p>
     </div>
+        <div class="story-narrow story-body zh-body"><p>2026 年 3 月 6 日，USWOO 美窝作为赞助方，支持由 NYU Stern Real Estate Club 举办的年度房地产行业峰会 <strong>Powering the Future</strong>。</p><p>本届峰会汇聚来自 IBM、Microsoft、McKinsey、CBRE 等全球知名企业及房地产行业机构的专业人士，围绕人工智能、数字基础设施、能源系统与未来城市发展展开交流。</p><p>USWOO 与 JLL、Goodwin、Corcoran Sunshine、Naftali Group 等行业机构共同出现在本届峰会的赞助阵容中，进一步展现了品牌与纽约房地产行业的紧密联系。</p><figure class="story-panel"><img src="./assets/press-stern-panel.jpg" alt="Panel discussion at the Powering the Future summit" loading="lazy"><figcaption data-zh="Powering the Future 峰会圆桌讨论现场。">Panel discussion at Powering the Future.</figcaption></figure>
+      <h2>与行业领先者同行，探索房地产的未来</h2><p>房地产行业正在经历深刻变革。</p><p>从 AI 驱动的能源系统，到数据中心投资与城市空间的重新规划，科技、资本与房地产之间的联系正变得前所未有的紧密。</p><p>本届峰会将全球企业、行业专家与新一代人才汇聚一堂，让前沿观点走出报告与研究，成为面对面的行业交流。</p><p>对 USWOO 而言，参与这样的行业盛会，不仅是一次品牌展示，更是深入行业生态、拓展专业合作网络的重要机会。</p><h2>从租赁服务到行业连接</h2><p>作为专注于美国住宅租赁与房地产营销的服务品牌，USWOO 始终关注市场变化，以及城市发展如何影响人们的居住选择。</p><p>在峰会现场，USWOO 展示了品牌的三大业务方向：<strong>Rental Solutions、Real Estate Brokerage、Marketing &amp; Branding</strong>。</p><p>从服务国际学生与年轻职场人士，到连接开发商、物业管理公司及行业合作伙伴，USWOO 正在持续拓展自身的专业服务与行业网络。</p><p>我们相信，真正有价值的服务，不仅在于帮助客户找到合适的住所，更在于对市场的理解、专业资源的积累，以及持续创造连接的能力。</p><h2>持续连接纽约的行业资源与未来人才</h2><p>纽约汇聚了全球领先的金融机构、房地产企业、科技公司与高校，也孕育着持续改变行业的新观点与新机会。</p><p>通过支持 NYU Stern Real Estate Club 等专业组织，USWOO 希望进一步加强与高校、行业机构及新一代专业人才的联系，让更多交流与合作成为可能。</p><p><strong>立足纽约，连接行业，拓展更多可能。</strong></p><p>未来，USWOO 将继续参与具有行业影响力的交流活动，深化专业合作，探索房地产与城市生活的更多可能。</p></div>
   </article>
 </main>
 
