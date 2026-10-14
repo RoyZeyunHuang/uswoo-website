@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=2"></script>
+<script src="./i18n-zh.js?v=4"></script>
 <script src="./i18n-zh-cities.js?v=3"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
@@ -319,6 +319,13 @@
     margin-right:auto;
     font-size:clamp(0.98rem, 1.4vw, 1.08rem);
     color:var(--hero-ink-soft);
+  }
+  /* Chinese mode only: looser lines for the hero headline, and a soft shadow + heavier weight on the subline so it reads over the skyline photo. */
+  html[data-lang="zh"] .hero h1{ line-height:1.5; }
+  html[data-lang="zh"] .hero .sub{
+    font-weight:500;
+    color:var(--hero-ink);
+    text-shadow:0 1px 3px rgba(0,0,0,0.6), 0 0 12px rgba(0,0,0,0.35);
   }
 
   section{ padding:clamp(56px, 9vw, 100px) 0; }
