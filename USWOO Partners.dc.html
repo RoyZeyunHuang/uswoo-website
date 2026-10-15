@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=4"></script>
-<script src="./i18n-zh-cities.js?v=3"></script>
+<script src="./i18n-zh.js?v=11"></script>
+<script src="./i18n-zh-cities.js?v=4"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
 </head>
@@ -118,6 +118,7 @@
   .editorial-copy{ text-align:center; padding:0 clamp(4px, 1.6vw, 24px); }
   .editorial-hey{ font-family:'Poppins', sans-serif; font-style:italic; font-weight:500; font-size:clamp(0.95rem, 1.5vw, 1.1rem); color:var(--ink-soft); }
   .editorial-copy h2{ margin-top:clamp(16px, 2.2vw, 26px); font-size:clamp(1.8rem, 3.6vw, 2.6rem); }
+  .m-br{ display:none; }
   .editorial-copy .lede{ margin:clamp(20px, 2.6vw, 30px) auto 0; max-width:46ch; color:var(--ink-soft); font-size:0.96rem; line-height:1.75; }
   .editorial-right{ display:flex; flex-direction:column; }
   .editorial-note{ margin:clamp(18px, 2.4vw, 30px) 0 0; align-self:flex-end; text-align:right; font-size:0.68rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--pink); line-height:2; }
@@ -272,6 +273,8 @@
     .offer-item.open .offer-toggle::after{ transform:translate(-50%,-50%) rotate(0deg); opacity:0; }
     .offer-item p{ display:none; margin-top:12px; }
     .offer-item.open p{ display:block; }
+    .m-br{ display:inline; }
+    #heroSection .partners-hero-grid h1{ text-align:left; font-size:calc(clamp(2.4rem, 5.6vw, 4.2rem) * 0.7); }
   }
   @media (max-width:480px){
     /* phone: shorter hero with a 30% stronger scrim; compact 03 cards */
@@ -282,7 +285,7 @@
     .why-card .press-icon{ width:32px; height:32px; }
     .why-card .press-icon{ grid-column:1; grid-row:1 / span 2; }
     .why-card h4{ grid-column:2; margin:0; font-size:1.05rem; line-height:1.25; align-self:end; }
-    .why-card p{ grid-column:2; margin:0; font-size:1rem; line-height:1.45; flex:none; align-self:start; }
+    .why-card p{ grid-column:2; margin:0; font-size:0.6875rem; line-height:1.45; flex:none; align-self:start; }
     /* phone: no slogan in the hero, lighter intro label, tighter top gap, 04 cards ~20% shorter */
     .hero-slogan{ display:none; }
     #what-we-do{ padding-top:20px; }
@@ -292,12 +295,50 @@
     .perf-bento .bento-c{ gap:8px; padding:12px 18px; }
     .perf-bento .bento-d .photo{ height:122px; }
   }
+  /* 02 editorial collage, desktop entrance: photos open vertically in opposite directions and settle; copy focuses in between */
+  @media (min-width:861px){
+    .rv-wipe-l image-slot{ clip-path:inset(100% 0 0 0); scale:1.3; }
+    .rv-wipe-r image-slot{ clip-path:inset(0 0 100% 0); scale:1.3; }
+    .rv-wipe-l image-slot, .rv-wipe-r image-slot{ transition:clip-path 1.3s cubic-bezier(0.77,0,0.18,1) var(--d,0s), scale 2s cubic-bezier(0.22,0.61,0.36,1) var(--d,0s), transform 0.7s ease; }
+    .rv-wipe-l.in image-slot, .rv-wipe-r.in image-slot{ clip-path:inset(0 0 0 0); scale:1; }
+    .editorial-hey.rv, .editorial-copy h2.rv, .editorial-copy .lede.rv{ translate:0 0; filter:blur(10px); scale:0.94; }
+    .editorial-hey.rv.in, .editorial-copy h2.rv.in, .editorial-copy .lede.rv.in{ filter:none; scale:1; }
+  }
+  /* desktop cover effect: each section (03, 04) scrolls up over the previous one once that one's bottom edge reaches mid-screen */
+  @media (min-width:861px){
+    #heroSection{ position:sticky; top:0; z-index:1; }
+    #why-uswoo{ position:sticky; top:0; z-index:2; border-radius:28px 28px 0 0; box-shadow:0 -24px 60px rgba(0,0,0,0.10); }
+    #performance{ position:relative; z-index:3; border-radius:28px 28px 0 0; box-shadow:0 -24px 60px rgba(0,0,0,0.10); }
+    #cta{ position:relative; z-index:4; }
+  }
   @media (prefers-reduced-motion: reduce){
     .rv{ opacity:1; translate:none; scale:1; rotate:none; filter:none; clip-path:none; transition:none; }
     .partners-hero-bg image-slot{ animation:none; }
     .why-card:hover, .bento-card:hover, .stat-block:hover{ transform:none; }
   }
-</style><script src="./image-slot.js?v=3"></script></helmet>
+  /* phone: "Demand that comes to you" card, photo fills the lower half edge to edge */
+  @media (max-width:560px){
+    .bento-d{ padding:0; gap:0; }
+    .bento-d .copy{ flex:1; padding:22px 22px 0; }
+    .bento-d .photo{ flex:1; min-height:0; border-radius:0 0 20px 20px; }
+  }
+  /* Top page title: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > h1:nth-of-type(1){font-size:23.88px}
+  }
+    /* Secondary titles (h2): phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > h2:nth-of-type(1){font-size:27.40px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:25.80px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:25.80px}
+  }
+    /* Lead paragraphs under titles: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(2){font-size:12.36px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > p:nth-of-type(1){font-size:13.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.32px}
+  }
+  </style><script src="./image-slot.js?v=3"></script></helmet>
 <header class="nav scrolled" id="siteNav" ref="{{ navRef }}">
   <div class="nav-inner">
     <a class="wordmark" href="./USWOO Home.dc.html">USWOO</a>
@@ -324,7 +365,7 @@
 
         <div class="editorial-copy">
           <p class="editorial-hey">To our developer and property management partners:</p>
-          <h2>Your Asset, Our Shared Goal</h2>
+          <h2 data-zh='您的资产价值<br class=m-br>我们的共同目标'>Your Asset, <br class="m-br">Our Shared Goal</h2>
           <p class="lede">Higher occupancy and more stable rental income, driving long-term growth in your property’s value.</p>
         </div>
 
@@ -374,7 +415,7 @@
 
       <div class="partners-hero-top wrap">
         <div class="partners-hero-grid">
-          <h1>Fewer vacancies, more efficient leasing.</h1>
+          <h1 data-zh="减少空置<br class=m-br>让出租更高效">Fewer vacancies, more efficient leasing.</h1>
           <p class="hero-slogan">We care not only about how many units we lease, but also how quickly each unit is leased, helping properties shorten vacancy periods and maintain stable rental income.</p>
         </div>
       </div>
@@ -387,10 +428,9 @@
         <div class="why-copy">
           <div class="section-head">
             <p class="eyebrow"><span class="idx">03</span> WHY USWOO</p>
-            <h2>We understand the renter behind the lead.</h2>
+            <h2 data-zh="熟悉纽约市场<br class=m-br>更了解租客的需求">We understand the renter behind the lead.</h2>
             <p class="lede">International renters often make housing decisions differently. Timing, communication, cultural context, and trust all play a role. Our team understands those details and helps turn that understanding into a smoother leasing experience for both renters and properties.</p>
           </div>
-          <a class="btn btn-outline on-paper" href="./USWOO Contact.dc.html">Talk to Our Team</a>
         </div>
 
         <div class="why-bento">
@@ -423,7 +463,7 @@
     <div class="wrap">
       <div class="section-head centered perf-head">
         <p class="eyebrow"><span class="idx">04</span> PERFORMANCE</p>
-        <h2 data-zh="好的租赁表现，有数据为证。">What that looks like <em>in practice</em>.</h2>
+        <h2 data-zh="租赁成果用数据说话">What that looks like <em>in practice</em>.</h2>
       </div>
 
       <div class="bento perf-bento">
@@ -464,10 +504,9 @@
   <section class="band-paper cta-band" id="cta">
     <div class="wrap">
       <p class="eyebrow"><span class="idx">05</span> CTA</p>
-      <h2>Let's find what works for your property.</h2>
       <p class="lede">Every building has a different renter, market, and leasing story. We'd love to learn more about yours and see where USWOO can help.</p>
       <div class="btn-row">
-        <a class="btn btn-pink" href="./USWOO Contact.dc.html">Start a Conversation</a>
+        <a class="btn btn-pink" href="./USWOO Contact.dc.html" data-zh="联系我们团队">Talk to Our Team</a>
       </div>
     </div>
   </section>
@@ -519,6 +558,15 @@ class Component extends DCLogic {
     };
     document.addEventListener('click', toggleOffer);
     document.addEventListener('keydown', toggleOffer);
+    // Desktop cover effect: keep 03 scrolling normally until its bottom edge reaches mid-screen, then pin it while 04 slides up over it.
+    const pinEls = ['heroSection', 'why-uswoo'].map((id) => document.getElementById(id)).filter(Boolean);
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (pinEls.length && !reduceMotion) {
+      const pin = () => pinEls.forEach((el) => { el.style.top = window.innerWidth > 860 ? Math.min(0, window.innerHeight / 2 - el.offsetHeight) + 'px' : ''; });
+      pin();
+      window.addEventListener('resize', pin);
+      this._pin = pin;
+    }
     // Scroll-reveal: elements fade/slide in once as they enter the viewport.
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduce || !('IntersectionObserver' in window)) return;
@@ -573,6 +621,7 @@ class Component extends DCLogic {
   }
 
   componentWillUnmount() {
+    if (this._pin) window.removeEventListener('resize', this._pin);
     if (this._io) this._io.disconnect();
     if (this._rv) this._rv.disconnect();
   }

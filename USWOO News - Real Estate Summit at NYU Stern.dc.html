@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=4"></script>
-<script src="./i18n-zh-cities.js?v=3"></script>
+<script src="./i18n-zh.js?v=11"></script>
+<script src="./i18n-zh-cities.js?v=4"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
 </head>
@@ -190,13 +190,39 @@
   .story-panel{ margin:36px 0; }
   .story-panel img{ display:block; width:100%; height:auto; border-radius:18px; }
   .story-panel figcaption{ margin-top:10px; font-size:0.82rem; color:var(--ink-faint); }
-</style>
+    /* Title line breaks: shown on phones only */
+    .m-br{display:none}
+    @media (max-width:560px){ .m-br{display:inline} }
+    /* Top page title: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h1:nth-of-type(1){font-size:29.00px}
+  }
+    /* Secondary titles (h2): phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > h2:nth-of-type(1){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > h2:nth-of-type(2){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > h2:nth-of-type(3){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > h2:nth-of-type(1){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > h2:nth-of-type(2){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > h2:nth-of-type(3){font-size:21.00px}
+  }
+    /* Lead paragraphs under titles: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:15.40px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(4){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(8){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(12){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > p:nth-of-type(4){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > p:nth-of-type(8){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > p:nth-of-type(12){font-size:13.96px}
+  }
+  </style>
 <main id="top">
   <article class="story-article">
     <div class="story-narrow">
       <a class="story-back" href="./USWOO%20Press%20%26%20Stories.dc.html#featured-press">← Back to Press</a>
       <p class="eyebrow" data-zh='<span class="idx">01</span> USWOO 公告 | 行业合作'><span class="idx">01</span> USWOO Announcement | Industry Partnership</p>
-      <h1 data-zh="USWOO 携手 NYU Stern，支持纽约房地产行业前沿峰会">USWOO Sponsors NYU Stern Real Estate Club’s “Powering the Future” Real Estate Summit</h1>
+      <h1 data-zh="USWOO 携手 NYU Stern<br class=m-br>支持纽约房地产行业前沿峰会">USWOO Sponsors NYU Stern Real Estate Club’s “Powering the Future” Real Estate Summit</h1>
       <p class="story-dek" data-zh="与 JLL、Corcoran Sunshine、Naftali Group 等行业知名机构共同支持 Powering the Future，连接全球商业视野与新一代行业人才。">Alongside JLL, Corcoran Sunshine and Naftali Group, USWOO supports Powering the Future, connecting global business perspectives with the next generation of industry talent.</p>
       <div class="story-meta" data-zh='<span>USWOO · 2026 年 3 月 6 日 · 3 分钟阅读</span>'><span>USWOO</span><span class="dot"></span><span>Mar 6, 2026</span><span class="dot"></span><span>3 min read</span></div>
     </div>

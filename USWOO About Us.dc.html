@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=4"></script>
-<script src="./i18n-zh-cities.js?v=3"></script>
+<script src="./i18n-zh.js?v=11"></script>
+<script src="./i18n-zh-cities.js?v=4"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
 </head>
@@ -160,6 +160,8 @@
   /* About Us on phones: shorter copy, compact timeline without photos. */
   @media (max-width:640px){
     .m-short{ display:block; } .m-full{ display:none; }
+    #our-story .section-head h2, #how-we-got-here .section-head h2, #grow-with-uswoo h2{ font-size:calc(clamp(1.8rem, 3.6vw, 2.6rem) - 3px); }
+    #mission{ background:var(--paper); }
     /* Mission: framed, centred, numbered list — no photos */
     .mission-grid{ gap:0; margin:28px auto 0; padding:0; max-width:340px; }
     .mission-media{ display:none; }
@@ -194,17 +196,40 @@
 
   .hero-card{ position:absolute; z-index:2; left:50%; top:58%; transform:translate(-50%,-50%); width:min(680px, calc(100% - 40px)); background:#fff; padding:clamp(32px, 4.4vw, 56px) clamp(24px, 4.4vw, 56px); box-shadow:0 24px 60px rgba(0,0,0,0.22); color:var(--ink); max-width:none; margin:0; }
   .hero-card h1{ font-size:clamp(1.8rem, 3.8vw, 2.9rem); margin-top:clamp(18px, 2.4vw, 26px); }
+  .m-br{ display:none; }
   .hero-card p{ font-size:clamp(0.96rem, 1.2vw, 1.06rem); margin-top:clamp(14px, 1.8vw, 20px); }
   @media (max-width:640px){ .hero-card{ top:54%; } }
   /* phone: hero ~60% shorter */
   @media (max-width:480px){
     .about-hero{ height:calc(100svh * 0.4); min-height:0; }
-    .hero-card{ top:54%; padding:20px 18px; }
-    .hero-card h1{ font-size:1.5rem; margin-top:12px; }
+    .hero-card{ top:54%; padding:20px 18px; transform:translate(-50%,-50%) scale(0.85); }
+    .hero-card h1{ font-size:1.5rem; margin-top:12px; line-height:1.25; }
+    .hero-card .m-br{ display:inline; }
     .hero-card p{ font-size:0.86rem; margin-top:8px; line-height:1.5; }
     .about-hero .wrap{ display:none; }
   }
-</style><script src="./image-slot.js?v=3"></script></helmet>
+    /* Title line breaks: shown on phones only */
+    .m-br{display:none}
+    @media (max-width:560px){ .m-br{display:inline} }
+    /* Top page title: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(3) > h1:nth-of-type(1){font-size:21.00px}
+  }
+    /* Secondary titles (h2): phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:25.80px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:22.80px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:22.80px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(5) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:22.80px}
+  }
+    /* Lead paragraphs under titles: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(1){font-size:10.76px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.32px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.32px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(5) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.00px}
+  }
+  </style><script src="./image-slot.js?v=3"></script></helmet>
 <header class="nav" id="siteNav" ref="{{ navRef }}">
   <div class="nav-inner">
     <a class="wordmark" href="./USWOO Home.dc.html">USWOO</a>
@@ -231,7 +256,7 @@
     <div class="about-hero-scrim" aria-hidden="true"></div>
     <div class="slogan-inner hero-card">
       <span class="slogan-rule" aria-hidden="true"></span>
-      <h1 aria-label="Find Your Place. Feel at Home." data-zh='<span class="w" style="--i:0"><span>找到属于你</span></span><span class="w" style="--i:2"><span>的地方，</span></span><span class="w" style="--i:4"><span>住出家</span></span><span class="w" style="--i:6"><span>的感觉。</span></span>'><span class="w" style="--i:0"><span>Find</span></span> <span class="w" style="--i:1"><span>Your</span></span> <span class="w" style="--i:2"><span>Place.</span></span> <span class="w" style="--i:3"><span>Feel</span></span> <span class="w" style="--i:4"><span>at</span></span> <span class="w" style="--i:5"><span>Home.</span></span></h1>
+      <h1 aria-label="Find Your Place. Feel at Home." data-zh='<span class="w" style="--i:0"><span>找到属于你</span></span><span class="w" style="--i:2"><span>的地方</span></span><br class="m-br"><span class="w" style="--i:4"><span>住出家</span></span><span class="w" style="--i:6"><span>的感觉</span></span>'><span class="w" style="--i:0"><span>Find</span></span> <span class="w" style="--i:1"><span>Your</span></span> <span class="w" style="--i:2"><span>Place.</span></span> <span class="w" style="--i:3"><span>Feel</span></span> <span class="w" style="--i:4"><span>at</span></span> <span class="w" style="--i:5"><span>Home.</span></span></h1>
       <p>USWOO helps international students and young professionals feel at home in a new city, with thoughtful support that goes beyond finding a place to live.</p>
     </div>
     <div class="wrap">
@@ -259,14 +284,14 @@
         <article class="mission-item" style="--i:1">
           <div class="mission-media"><image-slot id="mission-img-2" shape="rounded" radius="14" placeholder="Carrying boxes into a new home" src="./assets/mission-sunlit-kitchen.jpg" style="width:100%;height:100%"></image-slot></div>
           <span class="m-num">02</span>
-          <h3>We Take Care of the Details</h3>
+          <h3 data-zh="细节<br class=m-br>我们来操心🏡">We Take Care of the Details</h3>
           <p class="m-full">From finding the right apartment to getting settled into everyday life, we’re here to make things feel easier and less overwhelming. Because when you’re far from home, the little things matter.</p><p class="m-short">From finding the right apartment to settling into daily life, we make things easier. When you’re far from home, the little things matter.</p>
         </article>
 
         <article class="mission-item" style="--i:2">
           <div class="mission-media"><image-slot id="mission-img-3" shape="rounded" radius="14" placeholder="People together" src="https://images.unsplash.com/photo-1782061816846-80b827da8117?auto=format&amp;fit=crop&amp;w=900&amp;q=80" credit="knowacki" credit-href="https://unsplash.com/@knowacki" style="width:100%;height:100%"></image-slot></div>
           <span class="m-num">03</span>
-          <h3>We’re Here Beyond Move In</h3>
+          <h3 data-zh="入住之后<br class=m-br>我们依然在 🤝">We’re Here Beyond Move In</h3>
           <p class="m-full">Our support doesn’t end when you get the keys. As you settle in, meet people, and build your life here, we want USWOO to be a familiar place you can come back to.</p><p class="m-short">Our support doesn’t end at move-in. We want USWOO to be a familiar place you can come back to.</p>
         </article>
       </div>
@@ -286,17 +311,17 @@
       <div class="story-essentials">
         <div class="story-essential-item icon-grid" style="--i:0">
           <span class="press-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10.2 12 3.6l8.5 6.6V20a1 1 0 0 1-1 1h-15a1 1 0 0 1-1-1Z"/><path d="M9.5 21v-6h5v6"/></svg></span>
-          <h4>Find the right home</h4>
+          <h4 data-zh="01｜更多城市<br class=m-br>更多选择">Find the right home</h4>
           <p>Leasing support across multiple cities.</p>
         </div>
         <div class="story-essential-item icon-grid" style="--i:1">
           <span class="press-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><path d="M3 18.5v-4.5a2 2 0 0 1 4 0V16h10v-2a2 2 0 0 1 4 0v4.5"/></svg></span>
-          <h4>Move in with ease</h4>
+          <h4 data-zh="02｜生活琐事<br class=m-br>帮您搞定">Move in with ease</h4>
           <p>Furniture, Wi-Fi, and essentials.</p>
         </div>
         <div class="story-essential-item icon-grid" style="--i:2">
           <span class="press-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="m5.6 5.6 3.9 3.9"/><path d="m14.5 14.5 3.9 3.9"/><path d="m18.4 5.6-3.9 3.9"/><path d="m9.5 14.5-3.9 3.9"/></svg></span>
-          <h4>Settle in with support</h4>
+          <h4 data-zh="03｜熟悉当地<br class=m-br>更有底气">Settle in with support</h4>
           <p>Local services and community.</p>
         </div>
         <div class="story-essential-item icon-grid" style="--i:3">

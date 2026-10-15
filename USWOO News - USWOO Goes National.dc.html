@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=4"></script>
-<script src="./i18n-zh-cities.js?v=3"></script>
+<script src="./i18n-zh.js?v=11"></script>
+<script src="./i18n-zh-cities.js?v=4"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
 </head>
@@ -168,7 +168,27 @@
   .sponsor-list li{ border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:0.86rem; color:var(--ink-soft); }
   .sponsor-list li.us{ border-color:var(--pink); color:var(--ink); font-weight:600; background:var(--pink-tint); }
   @media (max-width:640px){ .story-figs{ grid-template-columns:1fr; } }
-</style><script src="./image-slot.js?v=3"></script></helmet>
+    /* Title line breaks: shown on phones only */
+    .m-br{display:none}
+    @media (max-width:560px){ .m-br{display:inline} }
+    /* Top page title: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h1:nth-of-type(1){font-size:29.00px}
+  }
+    /* Secondary titles (h2): phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > h2:nth-of-type(1){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > h2:nth-of-type(2){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > h2:nth-of-type(3){font-size:21.00px}
+  }
+    /* Lead paragraphs under titles: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:15.40px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(3){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(5){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(6){font-size:13.96px}
+  }
+  </style><script src="./image-slot.js?v=3"></script></helmet>
 <header class="nav" id="siteNav">
   <div class="nav-inner">
     <a class="wordmark" href="./USWOO Home.dc.html">USWOO</a>
@@ -198,7 +218,7 @@
     <div class="story-narrow story-body">
       <p data-zh="USWOO 今日宣布走向全美：在<strong>洛杉矶</strong>开设新办公室，并将租赁服务拓展至<strong>芝加哥</strong>、<strong>华盛顿特区</strong>和<strong>费城</strong>。">USWOO today announced its national expansion: a new office in <strong>Los Angeles</strong>, and rental services now extending to <strong>Chicago</strong>, <strong>Washington, D.C.</strong> and <strong>Philadelphia</strong>.</p>
       <p>USWOO began as leasing support for international students and young professionals starting out in New York. As more of those renters moved on to new campuses, jobs and cities, the questions followed them: where to live, how to sign a lease from far away, and who to call once the keys are in hand.</p>
-      <h2>One rental journey, in more cities</h2>
+      <h2 data-zh="同一段租房旅程<br class=m-br>覆盖更多城市">One rental journey, in more cities</h2>
       <p>In each new city, renters can expect the same support USWOO is known for: home search and tours, application and lease guidance, move-in planning, and everyday help after move-in, with renewal and relocation support when it is time for what comes next.</p>
       <p>The new Los Angeles office will be the base for the West Coast, working alongside local partners and neighborhood experts. Renters in Chicago, D.C. and Philadelphia will be supported by the USWOO team together with trusted partners in each city.</p>
       <h2>Guides to help you choose</h2>

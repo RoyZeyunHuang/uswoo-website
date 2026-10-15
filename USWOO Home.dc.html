@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=4"></script>
-<script src="./i18n-zh-cities.js?v=3"></script>
+<script src="./i18n-zh.js?v=11"></script>
+<script src="./i18n-zh-cities.js?v=4"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
 </head>
@@ -455,6 +455,20 @@
     transition:filter 1.4s ease, transform 1.4s ease;
   }
   #locations.in-view .location-card image-slot{ filter:blur(0); transform:scale(1); }
+  /* Desktop: cards wipe in left to right, no wheel-driven dimming */
+  @media (min-width:861px){
+    .location-card{ opacity:1; transform:none; clip-path:inset(0 100% 0 0 round 14px);
+      transition:clip-path 0.9s cubic-bezier(.22,.7,.2,1); }
+    #locations.in-view .location-card{ clip-path:inset(0 0 0 0 round 14px); }
+    #locations.in-view .location-card:nth-child(1){ transition-delay:0s; }
+    #locations.in-view .location-card:nth-child(2){ transition-delay:0.18s; }
+    #locations.in-view .location-card:nth-child(3){ transition-delay:0.36s; }
+    #locations.in-view .location-card:nth-child(4){ transition-delay:0.54s; }
+    #locations.in-view .location-card:nth-child(5){ transition-delay:0.72s; }
+    .location-dark-overlay{ opacity:0; }
+    .location-label, .location-code{ color:#fff; }
+    .location-card:nth-child(5) .location-dark-overlay{ background:#000; opacity:0.6; }
+  }
 
   .about-split{ margin-top:8px; display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px; align-items:center; }
   .about-copy .section-head{ max-width:100%; text-align:left; margin:0; }
@@ -536,7 +550,49 @@
   #about .stat-grid2 .stat-item:nth-child(2){ background:rgba(252,141,148,0.3); }
   #about .stat-grid2 .stat-item:nth-child(3){ background:rgba(255,255,255,0.4); }
   #about .stat-grid2 .stat-item:nth-child(4){ background:rgba(254,223,225,0.55); }
-</style><script src="./image-slot.js?v=3"></script></helmet>
+
+  /* mobile only: left-align the two intro paragraphs (blocks stay centered); the About button moves below the stats and is centered */
+  @media (max-width:560px){
+    .hero .sub{ text-align:left; }
+    #help .section-head.centered p.lede{ text-align:left; }
+    .about-split{ display:flex; flex-direction:column; align-items:stretch; gap:32px; }
+    .about-copy{ display:contents; }
+    .about-copy .section-head{ order:0; }
+    .stat-grid2{ order:1; }
+    .about-copy .btn{ order:2; align-self:center; margin-top:0; }
+  }
+    /* Title line breaks: shown on phones only */
+    .m-br{display:none}
+    @media (max-width:560px){ .m-br{display:inline} }
+    /* Top page title: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(3) > h1:nth-of-type(1){font-size:29.00px}
+  }
+    /* Home black section titles: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:25.8px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:25.8px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:25.8px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(5) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:29px}
+  }
+    /* Secondary titles (h2): phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:22.8px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:22.8px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:22.8px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(5) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:26px}
+  }
+    /* Lead paragraphs under titles: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(1){font-size:12.68px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.32px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.32px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.32px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(5) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.00px}
+  }
+    /* Hide on phones only */
+  @media (max-width:560px){ .m-hide{display:none} }
+  </style><script src="./image-slot.js?v=3"></script></helmet>
 <header class="nav" id="siteNav" ref="{{ navRef }}">
   <div class="nav-inner">
     <a class="wordmark" href="./USWOO Home.dc.html">USWOO</a>
@@ -573,7 +629,7 @@
     </div>
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="wrap">
-      <h1>Find Your Place in the City.</h1>
+      <h1 data-zh="在美国的新篇章<br class=m-br>从安心安家开始">Find Your Place in the City.</h1>
       <p class="sub">More than finding an apartment. We help you figure out where to live, how to settle in, and what comes next.</p>
     </div>
   </section>
@@ -582,7 +638,7 @@
     <div class="wrap">
       <div class="section-head centered">
         <p class="eyebrow"><span class="idx">02</span> How We Help</p>
-        <h2>A Better Way to Find Home.</h2>
+        <h2 data-zh="找家这件事<br class=m-br>原来可以更从容">A Better Way to Find Home.</h2>
         <p class="lede">Finding a place isn't just about square footage or rent. It's about the neighborhood, the commute, and the life you want to build around it.</p>
       </div>
 
@@ -670,10 +726,10 @@
         <div class="about-copy">
           <div class="section-head">
             <p class="eyebrow"><span class="idx">04</span> About USWOO</p>
-            <h2>Built on Local Experience.</h2>
+            <h2 data-zh="深耕本地，积累经验">Built on Local Experience.</h2>
             <p class="lede">Real market knowledge, local relationships, and thousands of renter journeys behind us.</p>
           </div>
-          <a class="btn btn-outline on-paper" href="./USWOO About Us.dc.html">Know More About Us</a>
+          <a class="btn btn-outline on-paper m-hide" href="./USWOO About Us.dc.html">Know More About Us</a>
         </div>
 
         <div class="stat-grid2">
@@ -705,7 +761,7 @@
   <section class="band-paper cta-band" id="cta">
     <div class="wrap">
       <p class="eyebrow"><span class="idx">05</span> CTA</p>
-      <h2>Your City Starts Here.</h2>
+      <h2 data-zh="你的城市生活<br class=m-br>从这里开始">Your City Starts Here.</h2>
       <p class="lede">Looking for a home, exploring a neighborhood, or figuring out where to start? We're here to help.</p>
       <div class="btn-row">
         <a class="btn btn-pink" href="./USWOO Contact.dc.html">Find a Home</a>
@@ -816,7 +872,8 @@ class Component extends DCLogic {
     // screen. From there the wheel drives the reveal instead of the page:
     // down lights the next city, up the previous one. The page is released
     // again only when wheeling up from the first city or down from the last.
-    if (this.locationsRowRef) {
+    if (window.innerWidth > 860) this._citiesRevealed = true;
+    if (this.locationsRowRef && window.innerWidth <= 860) {
       const cards = Array.from(this.locationsRowRef.querySelectorAll('.location-card'));
       // Wheel travel needed per city, plus a settle time so one flick of a
       // trackpad (which keeps firing during its momentum) can't run through
