@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=4"></script>
-<script src="./i18n-zh-cities.js?v=3"></script>
+<script src="./i18n-zh.js?v=11"></script>
+<script src="./i18n-zh-cities.js?v=4"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
 </head>
@@ -110,6 +110,17 @@
   .cg-lead-media img{ width:100%; height:100%; object-fit:cover; display:block; }
   @media (max-width:700px){ .cg-lead-media{ border-radius:20px; aspect-ratio:4/3; margin-top:32px; } }
   @media (max-width:700px){ section.cg-lead{ display:none; } }
+  @media (min-width:701px){ .cg-lead{ border-bottom:none; } #explore{ background:var(--paper-raised); } }
+  /* desktop: intro copy rises in, then the skyline photo opens up from the centre while it settles from a zoom */
+  @media (min-width:701px){
+    .cg-lead-motion .cg-lead .section-head > *{ opacity:0; transform:translateY(26px); transition:opacity 0.8s ease, transform 0.9s cubic-bezier(0.2,0.7,0.2,1); }
+    .cg-lead-motion .cg-lead.in .section-head > *{ opacity:1; transform:none; }
+    .cg-lead-motion .cg-lead.in .section-head > :nth-child(2){ transition-delay:0.15s; }
+    .cg-lead-motion .cg-lead-media{ clip-path:inset(0 50% 0 50% round 32px); transition:clip-path 1.5s 0.45s cubic-bezier(0.7,0,0.2,1); }
+    .cg-lead-motion .cg-lead-media img{ transform:scale(1.25); transition:transform 2.2s 0.45s cubic-bezier(0.2,0.7,0.2,1); }
+    .cg-lead-motion .cg-lead.in .cg-lead-media{ clip-path:inset(0 0 0 0 round 32px); }
+    .cg-lead-motion .cg-lead.in .cg-lead-media img{ transform:none; }
+  }
   @media (max-width:700px){ #explore{ padding-top:0; } #explore .cg-intro{ padding-top:28px; } }
   .cg-top{ display:grid; grid-template-columns:300px 1fr; border-bottom:1px solid var(--line); }
   .cg-intro{ padding:56px 40px 56px 0; border-right:1px solid var(--line); }
@@ -203,7 +214,9 @@
   }
   /* phone: rounded card map, muted tiles, black teardrop pins */
   @media (max-width:700px){
-    .cg-map{ aspect-ratio:4/5; border:none; border-radius:28px; box-shadow:0 0 0 6px var(--paper-raised), 0 0 0 7px var(--line); margin:30px 7px 0; }
+    .cg-map{ aspect-ratio:4/5; border:none; border-radius:28px; box-shadow:0 0 0 6px var(--paper-raised), 0 0 0 7px var(--line); margin:24px 7px 0; }
+    #explore .cg-intro{ padding-bottom:0; }
+    #explore .cg-mappanel{ padding-top:0; }
     .cg-leaflet .leaflet-control-attribution{ font-size:0.55rem; }
     .cg-marker{ background:#0F0F0F !important; width:30px; height:30px; border:none; border-radius:50% 50% 50% 0; transform:rotate(-45deg); margin:-14px 0 0 -2px; box-shadow:0 3px 8px rgba(0,0,0,0.3); }
     .cg-marker svg{ transform:rotate(45deg); }
@@ -211,7 +224,7 @@
   .cg-legend{ margin-top:20px; display:flex; flex-wrap:wrap; gap:24px; }
   .cg-legend-item{ display:flex; align-items:center; gap:8px; font-size:0.84rem; color:var(--ink-soft); }
   .cg-legend-item svg{ width:16px; height:16px; stroke:var(--ink-soft); }
-  @media (max-width:900px){ .cg-top{ grid-template-columns:1fr; } .cg-intro{ border-right:none; border-bottom:1px solid var(--line); padding:40px 0; } .cg-mappanel{ padding:40px 0; } }
+  @media (max-width:900px){ .cg-top{ grid-template-columns:1fr; } .cg-intro{ border-right:none; padding:40px 0; } .cg-mappanel{ padding:40px 0; } }
 
 
   .cg-areas{ padding:clamp(56px,7vw,96px) 0; background:var(--paper); border-top:1px solid var(--line); }
@@ -244,6 +257,16 @@
   .cg-motion .cg-area.in .art{ clip-path:inset(0 0 0 0 round 20px); }
   .cg-motion .cg-area .body{ opacity:0; filter:blur(8px); transition:opacity 0.9s ease, filter 0.9s ease; transition-delay:calc(var(--i,0) * 120ms + 350ms); }
   .cg-motion .cg-area.in .body{ opacity:1; filter:none; }
+  /* desktop: each card rises in as one piece (staggered); the photo settles from a zoom inside its frame */
+  @keyframes cgCardRise{ from{ opacity:0; transform:translateY(44px) scale(0.96); } to{ opacity:1; transform:none; } }
+  @keyframes cgArtSettle{ from{ transform:scale(1.25); } to{ transform:scale(1); } }
+  @media (min-width:901px){
+    .cg-motion .cg-area:not(.in){ opacity:0; }
+    .cg-motion .cg-area .art{ clip-path:none; transition:none; }
+    .cg-motion .cg-area .body{ opacity:1; filter:none; transition:none; }
+    .cg-motion .cg-area.in{ animation:cgCardRise 1s cubic-bezier(0.2,0.7,0.2,1) backwards; animation-delay:calc(var(--i,0) * 130ms); }
+    .cg-motion .cg-area.in .art img{ animation:cgArtSettle 1.8s cubic-bezier(0.2,0.7,0.2,1) backwards; animation-delay:calc(var(--i,0) * 130ms); }
+  }
   @media (prefers-reduced-motion: reduce){ .cg-motion .cg-area, .cg-motion .cg-area .art, .cg-motion .cg-area .body{ opacity:1 !important; filter:none !important; clip-path:none !important; transition:none !important; } }
   .cg-area-pills{ margin-top:28px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
   .cg-area-pill{ font:inherit; font-size:0.86rem; font-weight:600; padding:10px 18px; border-radius:999px; border:1px solid var(--line); background:var(--paper); color:var(--ink-soft); cursor:pointer; transition:background 0.15s ease, color 0.15s ease, border-color 0.15s ease; }
@@ -264,7 +287,25 @@
   .cg-switch-text{ flex:1; min-width:200px; }
   .cg-switch-text strong{ display:block; font-size:1rem; }
   .cg-switch-text span{ display:block; font-size:0.88rem; color:var(--ink-soft); margin-top:2px; }
-</style><script src="./image-slot.js?v=3"></script>
+    /* Title line breaks: shown on phones only */
+    .m-br{display:none}
+    @media (max-width:560px){ .m-br{display:inline} }
+    /* Top page title: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > h1:nth-of-type(1){font-size:29.00px}
+  }
+    /* Secondary titles (h2): phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:27.40px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:27.40px}
+  }
+    /* Lead paragraphs under titles: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1){font-size:13.32px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:13.32px}
+  }
+  </style><script src="./image-slot.js?v=3"></script>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script></helmet>
 <header class="nav scrolled" id="siteNav">
@@ -286,7 +327,7 @@
   <section class="band-raised cg-lead">
     <div class="wrap">
       <div class="section-head centered">
-        <h2>Know the city before you move in.</h2>
+        <h2 data-zh="搬进来之前<br class=m-br>先了解这座城市">Know the city before you move in.</h2>
         <p class="lede">Every neighborhood has its own rhythm — schools, business districts, transit lines and the walk to your favorite coffee shop.
         We map it all out, so you can choose a place that actually fits your life, not just an address on a lease.
         Explore by school, by commute, or just by vibe.</p>
@@ -522,7 +563,7 @@ function buildAreaGuideHtml(city) {
   const cards = g.areas.map((a) =>
     '<article class="cg-area"><div class="art"><img src="' + AREA_ART[a.name] + '" alt="' + a.name + '"></div><div class="body">' +
     '<h3><span class="em">' + a.emoji + '</span>' + a.name + '</h3><p class="cg-full">' + a.text + '</p>' + (a.short ? '<p class="cg-short">' + a.short + '</p>' : '') +
-    '<div class="tags">' + a.tags.map((t) => '<span>' + t + '</span>').join('') + '</div></div></article>').join('');
+    '<div class="tags" data-i18n-skip>' + a.tags.map((t) => '<span>' + t + '</span>').join('') + '</div></div></article>').join('');
   const wide = g.areas.length % 3 === 0 ? ' wide' : '';
   const note = '<article class="cg-area cg-area-note' + (/^New York/.test(city) ? '' : ' cg-note-mobile-hide') + wide + '"><div class="art"><img src="' + (AREA_ART[city + ':note'] || AREA_ART.note) + '" alt=""></div><div class="body"><h3><span class="em">✨</span>Found your area?</h3><p class="cg-full">' + g.closing +
     '</p><p class="cg-short">Once you know your area, we can help with the rest, from apartment search to move-in essentials.</p><a class="btn" href="./USWOO Contact.dc.html">Talk to USWOO</a></div></article>';
@@ -1066,6 +1107,16 @@ class Component extends DCLogic {
   bdData = undefined;      // business-district boundaries (assets/business-districts.geojson)
 
   componentDidMount() {
+    if ('IntersectionObserver' in window && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      const lead = document.querySelector('.cg-lead');
+      if (lead) {
+        document.documentElement.classList.add('cg-lead-motion');
+        const leadIo = new IntersectionObserver((entries) => {
+          entries.forEach((en) => { if (en.isIntersecting) { lead.classList.add('in'); leadIo.disconnect(); } });
+        }, { threshold: 0.25 });
+        leadIo.observe(lead);
+      }
+    }
     this.onSheetClick = (e) => {
       const t = e.target.closest && e.target.closest('[data-cg-open],[data-cg-close]');
       if (!t) return;

@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./i18n-zh.js?v=4"></script>
-<script src="./i18n-zh-cities.js?v=3"></script>
+<script src="./i18n-zh.js?v=11"></script>
+<script src="./i18n-zh-cities.js?v=4"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
 </head>
@@ -177,13 +177,40 @@
   /* Chinese mode shows the Chinese story body; English mode shows the English one. */
   html[data-lang="zh"] .en-body{ display:none; }
   html:not([data-lang="zh"]) .zh-body{ display:none; }
-</style>
+    /* Title line breaks: shown on phones only */
+    .m-br{display:none}
+    @media (max-width:560px){ .m-br{display:inline} }
+    /* Top page title: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h1:nth-of-type(1){font-size:29.00px}
+  }
+    /* Secondary titles (h2): phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > h2:nth-of-type(1){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > h2:nth-of-type(2){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > h2:nth-of-type(3){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > h2:nth-of-type(1){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > h2:nth-of-type(2){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > h2:nth-of-type(3){font-size:21.00px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > h2:nth-of-type(1){font-size:25.80px}
+  }
+    /* Lead paragraphs under titles: phone -3px */
+  @media (max-width:560px){
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2){font-size:15.40px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(7){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(14){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(3) > p:nth-of-type(21){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > p:nth-of-type(7){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > p:nth-of-type(16){font-size:13.96px}
+html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(4) > p:nth-of-type(23){font-size:13.96px}
+  }
+  </style>
 <main id="top">
   <article class="story-article">
     <div class="story-narrow">
       <a class="story-back" href="./USWOO%20Press%20%26%20Stories.dc.html#renter-stories">← Back to Renter Stories</a>
       <p class="eyebrow"><span class="idx">02</span> Renter Stories</p>
-      <h1 data-zh="在 NYU 读书，最后却把家租到了 New Jersey">Studying at NYU, and ending up renting in New Jersey</h1>
+      <h1 data-zh="在 NYU 读书<br class=m-br>最后却把家租到了 New Jersey">Studying at NYU, and ending up renting in New Jersey</h1>
       <p class="story-dek" data-zh="从坚持住在 Manhattan，到意外发现 Jersey City，Ethan 的第一次校外租房，彻底改变了他对纽约通勤和居住的认知。">From insisting on Manhattan to discovering Jersey City, Ethan’s first off-campus lease changed how he thought about commuting and living in New York.</p>
       <div class="story-meta" data-zh='<span>2025年6月12日</span><span class="dot"></span><span>约1.5分钟阅读</span>'><span>Jun 12, 2025</span><span class="dot"></span><span>1.5 min read</span></div>
     </div>
@@ -240,7 +267,7 @@
             <image-slot id="more-img-1" shape="rounded" radius="8" placeholder="Moving boxes" src="./assets/story-moving-living-room.webp" style="width:100%;height:100%"></image-slot>
           </div>
           <div class="media-card-body">
-            <h3 data-zh="毕业前最崩溃的，不是 Final，而是搬家">Before graduation, the most stressful part wasn’t finals. It was moving.</h3>
+            <h3 data-zh="毕业前最崩溃的<br class=m-br>不是 Final 而是搬家">Before graduation, the most stressful part wasn’t finals. It was moving.</h3>
             <p data-zh="纽约的租约快到期，费城的新家还没着落。没想到最后帮忙的，竟然是几年前认识的人。">His New York lease was ending, and his Philadelphia home still wasn’t set. The help he didn’t expect came from someone he’d known for years.</p>
             <div class="story-card-meta" data-zh='<span>2025年5月28日</span><span class="dot"></span><span>1.5分钟阅读</span>'><span>May 28, 2025</span><span class="dot"></span><span>1.5 min read</span></div>
           </div>
@@ -250,7 +277,7 @@
             <image-slot id="more-img-2" shape="rounded" radius="8" placeholder="NYC luxury apartment" src="./assets/story-lena-gallery.jpg" style="width:100%;height:100%"></image-slot>
           </div>
           <div class="media-card-body">
-            <h3 data-zh="在纽约待了三年，朋友圈却越来越小">After three years in New York, my social circle kept shrinking</h3>
+            <h3 data-zh="在纽约待了三年<br class=m-br>朋友圈却越来越小">After three years in New York, my social circle kept shrinking</h3>
             <p data-zh="每天公司、地铁、家，生活仿佛陷入循环。一次原本普通的搬家，却带来了意想不到的转机。">Every day felt like a loop of office, subway and home. A routine move brought an unexpected turn.</p>
             <div class="story-card-meta" data-zh='<span>2025年4月30日</span><span class="dot"></span><span>1.5分钟阅读</span>'><span>Apr 30, 2025</span><span class="dot"></span><span>1.5 min read</span></div>
           </div>
