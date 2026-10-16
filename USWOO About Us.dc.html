@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./mobile-type.css?v=1">
+<link rel="stylesheet" href="./mobile-type.css?v=4">
 <script src="./support.js"></script>
 <script src="./i18n-zh.js?v=11"></script>
 <script src="./i18n-zh-cities.js?v=4"></script>
@@ -211,7 +211,7 @@
   }
     /* Phone only: body text 14.4px */
     @media (max-width:560px){
-      html body #mission .mission-head p.lede{ font-size:14.4px !important; }
+      html body #mission .mission-head p.lede, html body #mission .mission-item p{ font-size:16.4px !important; }
     }
     /* Title line breaks: shown on phones only */
     .m-br{display:none}
@@ -273,7 +273,8 @@ html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-
   @keyframes hero-drift{ from{ transform:scale(1.1); } to{ transform:scale(1); } }
   @keyframes about-hero-in{ from{ opacity:0; transform:translateY(32px); } to{ opacity:1; transform:none; } }
   @media (prefers-reduced-motion: reduce){ .about-hero .wrap > *, .about-hero .hero-card, .hero-card *, .hero-slide img{ animation:none !important; } }
-  </style><script src="./image-slot.js?v=3"></script></helmet>
+  </style><script src="./image-slot.js?v=3"></script><style>@media (max-width:560px){ html body .timeline-item{ grid-template-rows:auto auto !important; align-content:center !important; padding-top:18px !important; padding-bottom:18px !important; } html body .timeline-item .timeline-media{ align-self:center !important; } html body .timeline-item h4{ align-self:start !important; margin:0 0 12px !important; } html body .timeline-item p{ align-self:start !important; margin:0 !important; } }</style>
+</helmet>
 <header class="nav" id="siteNav" ref="{{ navRef }}">
   <div class="nav-inner">
     <a class="wordmark" href="./USWOO Home.dc.html">USWOO</a>
@@ -328,14 +329,14 @@ html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-
         <article class="mission-item" style="--i:1">
           <div class="mission-media"><image-slot id="mission-img-2" shape="rounded" radius="14" placeholder="Carrying boxes into a new home" src="./assets/mission-sunlit-kitchen.jpg" style="width:100%;height:100%"></image-slot></div>
           <span class="m-num">02</span>
-          <h3 data-zh="细节<br class=m-br>我们来操心🏡">We Take Care of the Details</h3>
+          <h3 data-zh="细节我们来操心🏡">We Take Care of the Details</h3>
           <p class="m-full">From finding the right apartment to getting settled into everyday life, we’re here to make things feel easier and less overwhelming. Because when you’re far from home, the little things matter.</p><p class="m-short">From finding the right apartment to settling into daily life, we make things easier. When you’re far from home, the little things matter.</p>
         </article>
 
         <article class="mission-item" style="--i:2">
           <div class="mission-media"><image-slot id="mission-img-3" shape="rounded" radius="14" placeholder="People together" src="https://images.unsplash.com/photo-1782061816846-80b827da8117?auto=format&amp;fit=crop&amp;w=900&amp;q=80" credit="knowacki" credit-href="https://unsplash.com/@knowacki" style="width:100%;height:100%"></image-slot></div>
           <span class="m-num">03</span>
-          <h3 data-zh="入住之后<br class=m-br>我们依然在 🤝">We’re Here Beyond Move In</h3>
+          <h3 data-zh="入住之后我们依然在 🤝">We’re Here Beyond Move In</h3>
           <p class="m-full">Our support doesn’t end when you get the keys. As you settle in, meet people, and build your life here, we want USWOO to be a familiar place you can come back to.</p><p class="m-short">Our support doesn’t end at move-in. We want USWOO to be a familiar place you can come back to.</p>
         </article>
       </div>
