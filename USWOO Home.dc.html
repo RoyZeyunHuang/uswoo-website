@@ -575,6 +575,14 @@
       html body #cta p.lede{ font-size:14.4px !important; box-sizing:border-box; padding-left:14px; padding-right:14px; }
       html body #cta h2{ line-height:1.42 !important; }
     }
+    /* Phone only: hero sub, Help lede, CTA lede share 15.4px and the same side gutter */
+    @media (max-width:560px){
+      html body .hero .sub, html body #help .section-head p.lede, html body #cta p.lede{
+        font-size:15.4px !important; box-sizing:border-box; padding-left:24px !important; padding-right:24px !important;
+        max-width:100%; width:100%; margin-left:auto; margin-right:auto;
+      }
+      html body #help .section-head p.lede{ padding-left:28px !important; padding-right:28px !important; }
+    }
     /* Phone only: section ledes +1px, block centered, text left-aligned */
     @media (max-width:560px){
       #help .section-head p.lede, #locations .section-head p.lede, #about .section-head p.lede{

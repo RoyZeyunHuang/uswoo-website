@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="./mobile-type.css?v=1">
 <script src="./support.js"></script>
 <script src="./i18n-zh.js?v=11"></script>
+<script src="./mobile-services.js?v=2"></script>
 <script src="./i18n-zh-cities.js?v=4"></script>
 <script src="./i18n.js?v=1" defer></script>
 <script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
@@ -247,9 +248,13 @@
     .js-motion .split-hero-media, .js-motion .process-card-media, .js-motion .testimonial-media{ clip-path:none !important; }
     .js-motion .process-card-media{ opacity:1 !important; filter:none !important; transform:none !important; }
   }
-    /* Phone only: hero sub and Beyond-the-lease lede 14.4px */
+    /* Phone only: testimonial quote 17px */
     @media (max-width:560px){
-      html body .svc-hero-content .sub, html body .split-hero-text .sub, html body .page-hero .sub, html body #move-in-essentials p.lede{ font-size:14.4px !important; }
+      html body main .testimonial-card .quote-text, html body main p.quote-text{ font-size:17px !important; }
+    }
+    /* Phone only: hero sub and Beyond-the-lease lede 15.4px */
+    @media (max-width:560px){
+      html body .svc-hero-content .sub, html body .split-hero-text .sub, html body .page-hero .sub, html body #move-in-essentials p.lede{ font-size:15.4px !important; }
     }
     /* Title line breaks: shown on phones only */
     .m-br{display:none}
