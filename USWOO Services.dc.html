@@ -246,6 +246,10 @@
     .js-motion .split-hero-media, .js-motion .process-card-media, .js-motion .testimonial-media{ clip-path:none !important; }
     .js-motion .process-card-media{ opacity:1 !important; filter:none !important; transform:none !important; }
   }
+    /* Phone only: hero sub and Beyond-the-lease lede 14.4px */
+    @media (max-width:560px){
+      html body .svc-hero-content .sub, html body .split-hero-text .sub, html body .page-hero .sub, html body #move-in-essentials p.lede{ font-size:14.4px !important; }
+    }
     /* Title line breaks: shown on phones only */
     .m-br{display:none}
     @media (max-width:560px){ .m-br{display:inline} }
