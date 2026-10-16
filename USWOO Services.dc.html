@@ -467,7 +467,7 @@ class Component extends DCLogic {
       window.addEventListener('resize', pin);
       this._pin = pin;
     }
-    // Desktop hold: when scrolling down brings the "Our Process" section to its pinned position, stop there; two more wheel gestures are absorbed before the next section is allowed to slide over it. Scrolling back up re-arms the hold.
+    // Desktop hold: when scrolling down brings the "Our Process" section to its pinned position, stop there; no extra wheel gestures are absorbed before the next section is allowed to slide over it. Scrolling back up re-arms the hold.
     const proc = document.getElementById('our-process');
     if (proc && !reduce) {
       let gestures = 0, lastWheel = 0, released = false;
@@ -487,7 +487,7 @@ class Component extends DCLogic {
         if (remaining < -2) return;
         if (now - lastWheel > 180) gestures += 1;
         lastWheel = now;
-        if (gestures > 2) { released = true; return; }
+        if (gestures > 0) { released = true; return; }
         e.preventDefault();
       };
       window.addEventListener('wheel', this._onProcWheel, { passive: false });
