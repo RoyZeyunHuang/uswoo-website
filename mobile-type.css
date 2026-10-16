@@ -1,0 +1,28 @@
+/* Phone-only type scale (<=560px). Desktop is untouched.
+   h1 29 / h2 26 / h3-h4 17 / body 14.4 / small label 12 / footer & form label 10.6 */
+@media (max-width:560px){
+  /* h1 */
+  html body main h1, html body main h1 span{ font-size:29px !important; }
+  /* h2 (Home "Help" title stays 22.8px so it fits on one line) */
+  html body main h2{ font-size:26px !important; }
+  html body #help h2{ font-size:22.8px !important; }
+  /* h3 / h4 */
+  html body main h3, html body main h4{ font-size:17px !important; }
+  html body main h3 .em{ font-size:inherit !important; }
+  html body main p.press-latest-head{ font-size:17px !important; }
+  /* body text */
+  html body main p{ font-size:14.4px !important; }
+  html body main .stat-item p.desc{ font-size:12.8px !important; }
+  html body main .story-narrow p{ font-size:17px !important; }
+  html body main .story-narrow p.story-dek{ font-size:14.4px !important; }
+  /* small labels */
+  html body main p.eyebrow, html body main p.eyebrow .idx,
+  html body main p.cg-filters-label,
+  html body .lang-toggle span, html body .ft-label,
+  html body main .offer-num, html body main .m-num,
+  html body main .press-side-tags span, html body main .press-feature-meta span,
+  html body main .story-card-meta span, html body main .story-meta span,
+  html body main .location-label span:not(.loc-icon), html body main .tags span{ font-size:12px !important; }
+  /* form labels */
+  html body main label{ font-size:10.6px !important; }
+}
