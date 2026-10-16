@@ -567,6 +567,13 @@
   }
     .zh-m{display:none}
     @media (max-width:560px){ .zh-d{display:none} .zh-m{display:inline} }
+    /* Phone only: hero sub -0.5px, locations lede -0.5px, CTA lede +1px, CTA title line-height +0.3 */
+    @media (max-width:560px){
+      html body .hero .sub{ font-size:12.18px !important; }
+      html body #locations .section-head p.lede{ font-size:calc(1.02rem + 0.5px) !important; }
+      html body #cta p.lede{ font-size:14px !important; }
+      html body #cta h2{ line-height:1.42 !important; }
+    }
     /* Phone only: section ledes +1px, block centered, text left-aligned */
     @media (max-width:560px){
       #help .section-head p.lede, #locations .section-head p.lede, #about .section-head p.lede{
