@@ -160,7 +160,7 @@
   .testimonial-block{ display:grid; grid-template-columns:0.85fr 1.15fr; align-items:stretch; }
   .testimonial-card{ padding:clamp(42px,5.2vw,62px); display:flex; flex-direction:column; background:var(--paper); border:1px solid var(--line); border-radius:16px 0 0 16px; border-right:none; }
   .quote-mark{ font-family:'Poppins', serif; font-size:4.4rem; line-height:1; color:var(--pink); }
-  .quote-text{ margin-top:10px; font-family:'Poppins', sans-serif; font-style:italic; font-weight:500; font-size:1.2rem; line-height:1.5; color:var(--ink); }
+  .quote-text{ margin-top:10px; font-family:'Poppins', sans-serif; font-style:normal; font-weight:500; font-size:1.325rem; line-height:1.5; color:var(--ink); }
   .testimonial-dots{ margin-top:32px; display:flex; gap:8px; }
   .testimonial-dots span{ width:8px; height:8px; border-radius:50%; background:var(--line); }
   .testimonial-dots span.active{ background:var(--ink); }
@@ -222,6 +222,7 @@
   /* desktop: "Beyond the lease" slides up over the process section as you scroll */
   @media (min-width:861px){
     #heroSection{ position:sticky; top:0; z-index:1; }
+    #our-process{ min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding-top:clamp(56px,7vw,100px) !important; padding-bottom:clamp(56px,7vw,100px); }
     #our-process{ position:sticky; top:0; z-index:2; border-radius:28px 28px 0 0; box-shadow:0 -24px 60px rgba(0,0,0,0.10); }
     #move-in-essentials{ position:relative; z-index:3; border-radius:28px 28px 0 0; border-top:none; box-shadow:0 -24px 60px rgba(0,0,0,0.10); }
     #cta{ position:relative; z-index:4; }
@@ -448,13 +449,38 @@ class Component extends DCLogic {
   componentDidMount() {
     // Scroll motion: flag the page, reveal each [data-rv]/[data-io] once in view.
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    // Desktop cover effect: keep the process section scrolling normally until its bottom edge reaches mid-screen, then pin it while the next section scrolls up over it.
+    // Desktop cover effect: keep the section scrolling normally until its bottom edge reaches the bottom of the screen, then hold it still while the next section scrolls up over it.
     const pinned = ['heroSection', 'our-process'].map((id) => document.getElementById(id)).filter(Boolean);
     if (pinned.length && !reduce) {
-      const pin = () => pinned.forEach((el) => { el.style.top = window.innerWidth > 860 ? Math.min(0, window.innerHeight / 2 - el.offsetHeight) + 'px' : ''; });
+      const pin = () => pinned.forEach((el) => { el.style.top = window.innerWidth > 860 ? Math.min(0, window.innerHeight - el.offsetHeight) + 'px' : ''; });
       pin();
       window.addEventListener('resize', pin);
       this._pin = pin;
+    }
+    // Desktop hold: when scrolling down brings the "Our Process" section to its pinned position, stop there; two more wheel gestures are absorbed before the next section is allowed to slide over it. Scrolling back up re-arms the hold.
+    const proc = document.getElementById('our-process');
+    if (proc && !reduce) {
+      let gestures = 0, lastWheel = 0, released = false;
+      this._onProcWheel = (e) => {
+        if (window.innerWidth <= 860 || e.ctrlKey) return;
+        const remaining = proc.getBoundingClientRect().bottom - window.innerHeight;
+        if (remaining > 40) { released = false; gestures = 0; }
+        if (e.deltaY <= 0 || released) return;
+        const now = Date.now();
+        if (remaining > 2) {
+          if (e.deltaY < remaining) return;
+          e.preventDefault();
+          window.scrollBy(0, remaining);
+          gestures = 0; lastWheel = now;
+          return;
+        }
+        if (remaining < -2) return;
+        if (now - lastWheel > 180) gestures += 1;
+        lastWheel = now;
+        if (gestures > 2) { released = true; return; }
+        e.preventDefault();
+      };
+      window.addEventListener('wheel', this._onProcWheel, { passive: false });
     }
     if (reduce || !('IntersectionObserver' in window)) return;
     document.documentElement.classList.add('js-motion');
@@ -471,6 +497,7 @@ class Component extends DCLogic {
   componentWillUnmount() {
     if (this._rv) this._rv.disconnect();
     if (this._pin) window.removeEventListener('resize', this._pin);
+    if (this._onProcWheel) window.removeEventListener('wheel', this._onProcWheel);
   }
 
   renderVals() {

@@ -102,6 +102,7 @@ window.USWOO_ZH = {
   "Metro areas covered by our local teams.": "业务覆盖美国 10 余个城市及地区。",
   "Developers, brokerages, and vendors we work with.": "与超过 300 家开发商、物业管理公司及租赁服务商建立合作关系。",
   "CTA": "联系我们",
+  "Let's Talk About Your Building.": "让我们聊聊您的物业",
   "Your City Starts Here.": "你的城市生活从这里开始",
   "Looking for a home, exploring a neighborhood, or figuring out where to start? We're here to help.": "关于新家的每一个问题，都可以从一次简单的交流开始。",
   "Find a Home": "开始找房",
