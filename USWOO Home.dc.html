@@ -565,10 +565,12 @@
     .stat-grid2{ order:1; }
     .about-copy .btn{ order:2; align-self:center; margin-top:0; }
   }
-    /* Phone only: section ledes +2px, block centered, text left-aligned */
+    .zh-m{display:none}
+    @media (max-width:560px){ .zh-d{display:none} .zh-m{display:inline} }
+    /* Phone only: section ledes +1px, block centered, text left-aligned */
     @media (max-width:560px){
       #help .section-head p.lede, #locations .section-head p.lede, #about .section-head p.lede{
-        font-size:calc(1.02rem + 2px); width:fit-content; max-width:100%; margin-left:auto; margin-right:auto; text-align:left;
+        font-size:calc(1.02rem + 1px); width:fit-content; max-width:100%; margin-left:auto; margin-right:auto; text-align:left;
       }
     }
     /* Title line breaks: shown on phones only */
@@ -648,7 +650,7 @@ html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-
     <div class="wrap">
       <div class="section-head centered">
         <p class="eyebrow"><span class="idx">02</span> How We Help</p>
-        <h2 data-zh="找家这件事原来可以更从容">A Better Way to Find Home.</h2>
+        <h2 data-zh="<span class=zh-d>找家这件事原来可以更从容</span><span class=zh-m>落地新城市，原来可以更从容</span>">A Better Way to Find Home.</h2>
         <p class="lede">Finding a place isn't just about square footage or rent. It's about the neighborhood, the commute, and the life you want to build around it.</p>
       </div>
 
