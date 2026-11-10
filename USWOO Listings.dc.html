@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./mobile-type.css?v=4">
+<script src="./support.js"></script>
+<script src="./i18n-zh.js?v=12"></script>
+<script src="./i18n-zh-cities.js?v=4"></script>
+<script src="./i18n.js?v=1" defer></script>
+<script src="./back-to-top.js?v=3" defer></script><script src="./mobile-nav.js?v=2" defer></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --paper: #FFFFFF; --paper-raised: #F6F5F3; --ink: #141414; --ink-soft: #656260; --ink-faint: #9C9894;
+    --line: #E7E4E0; --black: #0F0F0F; --pink: #FC8D94; --pink-tint: #FEDFE1; --focus: #FC8D94;
+    --hero-ink: #FFFFFF; --hero-ink-soft: #E7E3DE;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:'Inter', -apple-system, 'Segoe UI', sans-serif; font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Poppins', 'Inter', sans-serif; font-weight:600; text-wrap:balance; margin:0; line-height:1.12; }
+  a{ color:inherit; }
+  img,svg{ max-width:100%; display:block; } button{ font:inherit; }
+  .wrap{ max-width:1560px; margin:0 auto; padding:0 clamp(16px, 2.4vw, 32px); }
+  .eyebrow{ font-size:0.78rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint); display:flex; align-items:baseline; gap:0.6em; }
+  .eyebrow .idx{ color:var(--pink); font-weight:700; }
+  .on-hero .eyebrow{ color:var(--hero-ink-soft); } .on-hero .eyebrow .idx{ color:var(--pink); }
+  header.nav{ position:sticky; top:0; z-index:40; background:transparent; border-bottom:1px solid transparent; transition:background 0.3s ease, border-color 0.3s ease; }
+  header.nav.scrolled{ background:color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  .nav-inner{ max-width:1180px; margin:0 auto; padding:18px clamp(20px, 5vw, 56px); display:flex; align-items:center; justify-content:space-between; gap:24px; }
+  .wordmark{ font-family:'Poppins', sans-serif; font-weight:700; font-size:1.3rem; letter-spacing:0.01em; color:var(--hero-ink); text-decoration:none; white-space:nowrap; transition:color 0.3s ease; }
+  .scrolled .wordmark{ color:var(--ink); }
+  nav.links{ display:flex; gap:clamp(12px, 1.8vw, 22px); align-items:center; overflow-x:auto; scrollbar-width:none; }
+  nav.links::-webkit-scrollbar{ display:none; }
+  nav.links a{ color:var(--hero-ink-soft); text-decoration:none; font-size:0.86rem; font-weight:500; white-space:nowrap; padding:4px 2px; border-bottom:1px solid transparent; transition:color 0.3s ease, border-color 0.15s ease; }
+  .scrolled nav.links a{ color:var(--ink-soft); }
+  nav.links a:hover, nav.links a:focus-visible{ color:var(--hero-ink); border-bottom-color:var(--pink); }
+  .scrolled nav.links a:hover, .scrolled nav.links a:focus-visible{ color:var(--ink); }
+  nav.links a.active{ color:var(--hero-ink); border-bottom-color:var(--pink); }
+  .scrolled nav.links a.active{ color:var(--ink); }
+  .nav-cta{ background:var(--black); color:#fff !important; font-size:0.85rem; font-weight:600; padding:10px 18px; border-radius:2px; text-decoration:none !important; border-bottom:none !important; white-space:nowrap; }
+  .nav-cta:hover{ opacity:0.85; }
+  .btn{ display:inline-flex; align-items:center; gap:10px; font-size:0.9rem; font-weight:600; padding:14px 26px; border-radius:2px; text-decoration:none; cursor:pointer; border:1px solid transparent; transition:transform 0.15s ease, opacity 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease; }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--black); color:#fff; } .btn-primary:hover{ opacity:0.88; }
+  .btn-outline{ background:transparent; color:var(--hero-ink); border-color:color-mix(in srgb, var(--hero-ink) 45%, transparent); }
+  .btn-outline:hover{ border-color:var(--hero-ink); }
+  .btn-outline.on-paper{ color:var(--ink); border-color:var(--line); }
+  .btn-outline.on-paper:hover{ border-color:var(--ink-soft); }
+  .btn-pink{ background:var(--pink); color:#fff; } .btn-pink:hover{ opacity:0.9; }
+  .btn-row{ display:flex; gap:14px; flex-wrap:wrap; }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:3px; }
+  section{ padding:clamp(56px, 9vw, 100px) 0; }
+  .band-paper{ background:var(--paper); }
+  .band-raised{ background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .section-head{ max-width:640px; }
+  .section-head h2{ font-size:clamp(1.8rem, 3.6vw, 2.6rem); margin-top:12px; }
+  .section-head p.lede{ margin-top:16px; max-width:56ch; color:var(--ink-soft); font-size:1.02rem; }
+  .section-head.centered{ max-width:640px; margin:0 auto; text-align:center; }
+  .section-head.centered .eyebrow{ justify-content:center; }
+  .section-head.centered p.lede{ margin-left:auto; margin-right:auto; }
+  .cta-band .wrap{ text-align:center; display:flex; flex-direction:column; align-items:center; }
+  .cta-band .eyebrow{ justify-content:center; }
+  .cta-band h2{ margin-top:14px; font-size:clamp(2rem, 4.2vw, 3.2rem); }
+  .cta-band .lede{ margin-top:16px; max-width:48ch; margin-left:auto; margin-right:auto; }
+  .cta-band .btn-row{ margin-top:34px; justify-content:center; }
+  footer{ background:var(--black); color:#fff; padding-top:48px; }
+  .footer-top{ display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.14); }
+  .footer-col{ min-width:200px; }
+  .footer-col .ft-label{ font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:12px; }
+  .newsletter-form{ display:flex; align-items:flex-end; gap:10px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:8px; max-width:280px; }
+  .newsletter-form input{ flex:1; background:transparent; border:none; color:#fff; font-family:'Inter', sans-serif; font-size:0.92rem; padding:4px 0; }
+  .newsletter-form input::placeholder{ color:rgba(255,255,255,0.5); }
+  .newsletter-form input:focus{ outline:none; }
+  .newsletter-form button{ background:none; border:none; color:var(--pink); font-size:1.1rem; cursor:pointer; padding:0 2px 4px; }
+  .footer-links{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+  .footer-links a{ text-decoration:none; font-size:0.9rem; color:rgba(255,255,255,0.82); transition:color 0.15s ease; }
+  .footer-links a:hover{ color:var(--pink); }
+  .footer-copy{ font-size:0.86rem; color:rgba(255,255,255,0.6); line-height:1.7; }
+  .footer-legal{ text-align:left; max-width:760px; margin:0 auto; padding:24px 0 0; font-size:0.66rem; line-height:1.6; color:rgba(255,255,255,0.45); }
+  .footer-legal + .footer-legal{ padding-top:6px; }
+  .footer-word{ text-align:center; padding:28px 0 20px; overflow:hidden; }
+  .footer-word .wm{ font-family:'Poppins', sans-serif; font-weight:800; font-size:clamp(3.2rem, 14vw, 11rem); letter-spacing:-0.02em; line-height:1; color:#fff; white-space:nowrap; }
+  @media (max-width: 560px){ .footer-top{ flex-direction:column; } }
+
+
+  /* Listings */
+  .ls-hero{ padding:clamp(48px, 7vw, 88px) 0 clamp(24px, 3vw, 40px); }
+  .ls-hero h1{ font-size:clamp(2.6rem, 6vw, 4.6rem); letter-spacing:-0.01em; margin-top:14px; }
+  .ls-hero h1 .pink{ color:var(--pink); }
+  .ls-hero p.lede{ margin-top:18px; max-width:58ch; color:var(--ink-soft); font-size:1.02rem; }
+  .ls-filters{ display:flex; flex-wrap:wrap; gap:10px; margin-top:32px; }
+  .ls-chip{ font:inherit; font-size:0.86rem; font-weight:600; padding:9px 18px; border-radius:999px; border:1px solid var(--line); background:var(--paper); color:var(--ink-soft); cursor:pointer; transition:all 0.15s ease; }
+  .ls-chip:hover{ border-color:var(--ink-soft); color:var(--ink); }
+  .ls-chip.on{ background:var(--black); border-color:var(--black); color:#fff; }
+  .ls-grid-sec{ padding-top:clamp(16px, 2vw, 24px); }
+  .ls-grid{ display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:clamp(16px, 2vw, 28px); }
+  .ls-card{ display:flex; flex-direction:column; text-decoration:none; background:var(--paper); border:1px solid var(--line); border-radius:18px; overflow:hidden; padding:10px; transition:transform 0.2s ease, box-shadow 0.2s ease; }
+  .ls-card:hover{ transform:translateY(-4px); box-shadow:0 14px 32px rgba(0,0,0,0.08); }
+  .ls-card[hidden]{ display:none; }
+  .ls-media{ position:relative; aspect-ratio:4/3; border-radius:10px; overflow:hidden; background:var(--line); }
+  .ls-media img{ width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
+  .ls-card:hover .ls-media img{ transform:scale(1.04); }
+  .ls-tag{ position:absolute; top:12px; left:12px; background:var(--pink); color:#fff; font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:5px 10px; border-radius:2px; }
+  .ls-body{ padding:16px 6px 10px; }
+  .ls-price{ font-family:'Poppins', sans-serif; font-weight:600; font-size:1.4rem; }
+  .ls-price small{ font-family:'Inter', sans-serif; font-size:0.85rem; font-weight:500; color:var(--ink-soft); margin-left:2px; }
+  .ls-meta{ margin-top:4px; font-size:0.88rem; color:var(--ink-soft); }
+  .ls-body h3{ margin-top:12px; font-size:1.02rem; font-weight:600; }
+  .ls-body p{ margin:4px 0 0; font-size:0.86rem; color:var(--ink-faint); }
+  .ls-empty{ display:none; text-align:center; color:var(--ink-soft); padding:40px 0; }
+  .ls-note{ margin-top:36px; font-size:0.78rem; color:var(--ink-faint); text-align:center; }
+  @media (max-width:980px){ .ls-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); } }
+  @media (max-width:600px){ .ls-grid{ grid-template-columns:1fr; } }
+  </style></helmet>
+<header class="nav scrolled" id="siteNav">
+  <div class="nav-inner">
+    <a class="wordmark" href="./USWOO Home.dc.html">USWOO</a>
+    <nav class="links">
+      <a href="./USWOO Services.dc.html">Services</a>
+      <a href="./USWOO City Guides.dc.html">City Guides</a>
+      <a href="./USWOO Listings.dc.html" class="active">Listings</a>
+      <a href="./USWOO Press & Stories.dc.html">Press &amp; Stories</a>
+      <a href="./USWOO Partners.dc.html">Partners</a>
+      <a href="./USWOO About Us.dc.html">About Us</a>
+    </nav>
+    <a class="nav-cta" href="./USWOO Contact.dc.html">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ls-hero">
+    <div class="wrap">
+      <p class="eyebrow"><span class="idx">01</span> Exclusive Listings</p>
+      <h1 data-zh='独家<span class="pink">房源</span>'>Exclusive <span class="pink">listings</span></h1>
+      <p class="lede">Homes you will only find with USWOO, hand-picked in our five markets and ready to tour.</p>
+      <div class="ls-filters" id="lsFilters">
+        <button class="ls-chip on" type="button" data-filter="all">All</button>
+        <button class="ls-chip" type="button" data-filter="nyc">New York &amp; NJ</button>
+        <button class="ls-chip" type="button" data-filter="chi">Chicago</button>
+        <button class="ls-chip" type="button" data-filter="la">Los Angeles</button>
+        <button class="ls-chip" type="button" data-filter="dc">Washington, D.C.</button>
+        <button class="ls-chip" type="button" data-filter="phl">Philadelphia</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="ls-grid-sec">
+    <div class="wrap">
+      <!-- PLACEHOLDER LISTINGS: replace each card (price, beds/baths/sqft, title, area, image, data-city) with real exclusive listings. -->
+      <div class="ls-grid" id="lsGrid">
+      <a class="ls-card" data-city="nyc" href="./USWOO Contact.dc.html">
+        <div class="ls-media"><img src="./assets/nynj-manhattan.jpg" alt="" loading="lazy"><span class="ls-tag">Exclusive</span></div>
+        <div class="ls-body">
+          <div class="ls-price">$3,850<small>/mo</small></div>
+          <div class="ls-meta">2 Bed · 1 Bath · 780 sqft</div>
+          <h3>Sample Listing 01</h3>
+          <p>Midtown, Manhattan</p>
+        </div>
+      </a>
+      <a class="ls-card" data-city="nyc" href="./USWOO Contact.dc.html">
+        <div class="ls-media"><img src="./assets/nynj-lic.jpg" alt="" loading="lazy"><span class="ls-tag">Exclusive</span></div>
+        <div class="ls-body">
+          <div class="ls-price">$2,900<small>/mo</small></div>
+          <div class="ls-meta">1 Bed · 1 Bath · 620 sqft</div>
+          <h3>Sample Listing 02</h3>
+          <p>Long Island City, NY</p>
+        </div>
+      </a>
+      <a class="ls-card" data-city="nyc" href="./USWOO Contact.dc.html">
+        <div class="ls-media"><img src="./assets/nynj-jersey-city.jpg" alt="" loading="lazy"><span class="ls-tag">Exclusive</span></div>
+        <div class="ls-body">
+          <div class="ls-price">$3,200<small>/mo</small></div>
+          <div class="ls-meta">Studio · 1 Bath · 480 sqft</div>
+          <h3>Sample Listing 03</h3>
+          <p>Jersey City, NJ</p>
+        </div>
+      </a>
+      <a class="ls-card" data-city="chi" href="./USWOO Contact.dc.html">
+        <div class="ls-media"><img src="./assets/chi-west-loop.jpg" alt="" loading="lazy"><span class="ls-tag">Exclusive</span></div>
+        <div class="ls-body">
+          <div class="ls-price">$2,450<small>/mo</small></div>
+          <div class="ls-meta">1 Bed · 1 Bath · 700 sqft</div>
+          <h3>Sample Listing 04</h3>
+          <p>West Loop, Chicago</p>
+        </div>
+      </a>
+      <a class="ls-card" data-city="la" href="./USWOO Contact.dc.html">
+        <div class="ls-media"><img src="./assets/la-dtla.jpg" alt="" loading="lazy"><span class="ls-tag">Exclusive</span></div>
+        <div class="ls-body">
+          <div class="ls-price">$3,100<small>/mo</small></div>
+          <div class="ls-meta">2 Bed · 2 Bath · 950 sqft</div>
+          <h3>Sample Listing 05</h3>
+          <p>Downtown LA</p>
+        </div>
+      </a>
+      <a class="ls-card" data-city="dc" href="./USWOO Contact.dc.html">
+        <div class="ls-media"><img src="./assets/dc-capitol.jpg" alt="" loading="lazy"><span class="ls-tag">Exclusive</span></div>
+        <div class="ls-body">
+          <div class="ls-price">$2,700<small>/mo</small></div>
+          <div class="ls-meta">1 Bed · 1 Bath · 640 sqft</div>
+          <h3>Sample Listing 06</h3>
+          <p>Capitol Hill, D.C.</p>
+        </div>
+      </a>
+      </div>
+      <p class="ls-empty" id="lsEmpty">New listings in this market are coming soon. Contact us to hear first.</p>
+      <p class="ls-note">Listings are subject to prior sale, rental, or withdrawal. Contact us for availability and tours.</p>
+    </div>
+  </section>
+
+  <section class="band-raised cta-band">
+    <div class="wrap">
+      <p class="eyebrow"><span class="idx">02</span> Talk to us</p>
+      <h2>Don't See Your Fit?</h2>
+      <p class="lede">Tell us your budget, neighborhood and move-in date. We will match you with the right home, including ones not yet listed.</p>
+      <div class="btn-row">
+        <a class="btn btn-pink" href="./USWOO Contact.dc.html">Talk to USWOO</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="ft-label">Stay in the Loop</div>
+        <form class="newsletter-form" onSubmit="{{ preventDefault }}">
+          <input type="email" placeholder="Email address" aria-label="Email address">
+          <button type="submit" aria-label="Subscribe">→</button>
+        </form>
+      </div>
+      <div class="footer-col">
+        <div class="ft-label">Follow</div>
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/uswoo_realty/" target="_blank" rel="noopener noreferrer">Instagram →</a></li>
+          <li><a href="https://www.linkedin.com/company/uswoo-realty-llc/home/" target="_blank" rel="noopener noreferrer">LinkedIn →</a></li>
+          <li><a href="https://www.tiktok.com/@uswoo_realty" target="_blank" rel="noopener noreferrer">TikTok →</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">Boston USWOO Realty LLC is a licensed real estate broker in Massachusetts, with its New York branch, USWOO REALTY LLC, independently licensed in New York State.</p>
+    <p class="footer-legal">All information is deemed reliable but not guaranteed and is subject to change without notice. Listings are subject to prior sale, rental, or withdrawal.</p>
+    <p class="footer-legal">Both entities and their affiliates support Fair Housing and Equal Opportunity and comply with applicable anti-discrimination laws.</p>
+    <p class="footer-legal">Copyright ©2026 Boston USWOO Realty LLC. All Rights Reserved.</p>
+    <div class="footer-word">
+      <div class="wm">USWOO</div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const chips = Array.from(document.querySelectorAll('#lsFilters .ls-chip'));
+    const cards = Array.from(document.querySelectorAll('#lsGrid .ls-card'));
+    const empty = document.getElementById('lsEmpty');
+    const apply = (f) => {
+      let n = 0;
+      cards.forEach((c) => { const show = f === 'all' || c.dataset.city === f; c.hidden = !show; if (show) n++; });
+      chips.forEach((b) => b.classList.toggle('on', b.dataset.filter === f));
+      if (empty) empty.style.display = n ? 'none' : 'block';
+    };
+    chips.forEach((b) => b.addEventListener('click', () => apply(b.dataset.filter)));
+  }
+}
+</script>
+</body>
+</html>

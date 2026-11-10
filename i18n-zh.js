@@ -43,6 +43,14 @@ window.USWOO_ZH = {
   /* ---------- nav / footer (all pages) ---------- */
   "Services": "服务",
   "City Guides": "城市指南",
+  /* ---------- listings ---------- */
+  "Listings": "房源", "Exclusive Listings": "独家房源", "All": "全部", "New York & NJ": "纽约与新泽西", "Los Angeles": "洛杉矶", "Philadelphia": "费城",
+  "Exclusive": "独家", "View All Listings": "查看全部房源", "Talk to us": "联系我们", "Don't See Your Fit?": "没有合适的？",
+  "Homes you will only find with USWOO, hand-picked in our five markets and ready to tour.": "只在 USWOO 才能找到的房源，精选自我们的五大市场，随时可以看房。",
+  "Hand-picked homes you won't find anywhere else, ready to tour in our markets.": "精选独家房源，别处找不到，随时可以预约看房。",
+  "New listings in this market are coming soon. Contact us to hear first.": "该城市的新房源即将上线，欢迎联系我们抢先获知。",
+  "Tell us your budget, neighborhood and move-in date. We will match you with the right home, including ones not yet listed.": "告诉我们你的预算、街区和入住日期，我们会为你匹配合适的房源，包括尚未公开的房源。",
+  "Listings are subject to prior sale, rental, or withdrawal. Contact us for availability and tours.": "房源可能已被售出、租出或下架。具体空置情况与看房请联系我们。",
   "Press & Stories": "媒体与故事",
   "Partners": "合作伙伴",
   "About Us": "关于我们",
