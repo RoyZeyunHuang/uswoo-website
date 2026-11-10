@@ -8,6 +8,7 @@
 
 | 部分 | 状态 |
 |---|---|
+| 测试站自动发布 | 已上线：合并到 `main` 后由 GitHub Actions 构建，测试站服务器自行拉取并试启动后切换；前端同事不需要服务器权限。说明见 `.claude/skills/deploy/SKILL.md` |
 | uswoo.com 接口反代 `/api/uswoo/public/` | 已上线 |
 | 测试站 `new.uswoo.cn`（HTTP 自动跳转 HTTPS、证书自动续期、应用容器） | 已上线 |
 | Vectra 后端：10 张内容表、公开接口、管理接口、旧内容迁移、CMS 管理权限 | 已上线（后端仓库 `6e94a6b6`、`9cd9ef0d`） |

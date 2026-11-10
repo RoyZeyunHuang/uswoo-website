@@ -35,7 +35,7 @@ pnpm typecheck
 | `server/routes/` | `sitemap.xml`、`robots.txt`、缓存刷新入口 `/_site/revalidate` |
 | `shared/types/api.ts` | 公开接口的返回类型 |
 | `seed/` | 导入 CMS 的种子数据：文章、示例房源、City Guide |
-| `tools/` | `legacy-extract.mjs` 从设计稿提取样式；`seed-guides.mjs` 生成 City Guide 种子；`deploy-staging.sh` 发布测试站 |
+| `tools/` | `legacy-extract.mjs` 从设计稿提取样式；`seed-guides.mjs` 生成 City Guide 种子 |
 | `legacy/` | 重构前的静态页面（Claude Design 导出），仅作对照 |
 | `deploy/nginx/` | 服务器上 Nginx 配置的脱敏记录 |
 
@@ -65,10 +65,26 @@ pnpm typecheck
 
 ## 发布
 
-开发在 `refactor/nuxt-cms` 分支上进行，验收时发布到测试站。发布脚本从环境变量读取目标机器，不在仓库里写地址：
+改动通过 PR 合并到 `main` 后自动发布到测试站（new.uswoo.cn / new.uswoo.com），不需要任何服务器登录或密钥：
+
+1. GitHub Actions「Deploy to staging」做类型检查与构建，把构建产物上传到仓库的 Release「staging」。
+2. 测试站的服务器每分钟检查一次，发现新版本就下载、核对校验值，在备用端口上试启动通过后才替换正在运行的版本；起不来就保留旧版本。
+3. 流程等到测试站确实切换到这次提交才算成功；失败时会打印服务器上的应用日志。
+
+查看测试站当前运行的提交：
 
 ```bash
-DEPLOY_JUMP=<跳板机> DEPLOY_HOST=<目标机器> DEPLOY_BASE=<测试站目录> tools/deploy-staging.sh
+curl -s https://new.uswoo.com/_deploy/status.json
 ```
 
-测试站整站 `noindex`；页面缓存 10 分钟，CMS 保存内容后由后端通知 `/_site/revalidate` 立即刷新（需要配置密钥，见方案文档）。
+回退到之前的版本：
+
+```bash
+gh workflow run deploy-staging.yml -f ref=<提交号>
+```
+
+完整的发布步骤（含检查、提 PR、确认上线、失败处理）见 [`.claude/skills/deploy/SKILL.md`](.claude/skills/deploy/SKILL.md)；项目约定见 [`CLAUDE.md`](CLAUDE.md)。
+服务器上的拉取脚本记录在 `deploy/staging/pull-release.sh`，它由运维手工安装，仓库里的改动不会自动生效。
+
+正式站 uswoo.com 不在这套流程里，由负责人另外手动发布。
+测试站整站 `noindex`；页面缓存 10 分钟，CMS 保存内容后由后端通知官网立即刷新。
