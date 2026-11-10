@@ -171,6 +171,7 @@ const absoluteUrl = useAbsoluteUrl();
 usePageSeo(() => ({
   title: c("seo.title"),
   description: c("seo.description"),
+  keywords: c("seo.keywords"),
   jsonLd: [
     { "@type": "Organization", name: site("brand.wordmark"), url: absoluteUrl("/"), logo: absoluteUrl(img("seo.logo")) },
     { "@type": "WebSite", name: site("brand.wordmark"), url: absoluteUrl("/") }

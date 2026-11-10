@@ -196,6 +196,7 @@ usePageSeo(() => {
   return {
     title: region.value ? c("seo.regionTitle").replace("{region}", bi(region.value.name)) : c("seo.title"),
     description: c("seo.description"),
+    keywords: c("seo.keywords"),
     image: img("hero.image"),
     // 地区没有单独配置内容时显示的是全站默认内容：canonical 指回汇总页，避免重复收录
     canonicalPath: region.value && page.value?.resolvedFrom !== "region" ? regionPath("partners") : undefined,

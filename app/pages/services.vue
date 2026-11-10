@@ -135,6 +135,7 @@ const absoluteUrl = useAbsoluteUrl();
 usePageSeo(() => ({
   title: c("seo.title"),
   description: c("seo.description"),
+  keywords: c("seo.keywords"),
   image: img("hero.image"),
   jsonLd: [
     {

@@ -89,10 +89,6 @@ export interface Listing {
   updatedAt: string | null;
 }
 
-export interface SeoPages {
-  pages: Record<string, { title: string; description: string; keywords: string; alt: string }>;
-}
-
 /** City Guide 点位。extra 里放各类点位自己的附加信息（行业分类、图标、图片署名等） */
 export interface GuidePlace {
   id: number;

@@ -203,6 +203,7 @@ usePageSeo(() => {
   return {
     title: name ? c("seo.regionTitle").replace("{region}", name) : c("seo.title"),
     description: name ? c("seo.regionDescription").replace("{region}", name) : c("seo.description"),
+    keywords: c("seo.keywords"),
     image: lead.value?.cover?.url,
     // 还没有任何内容的页面先不收录
     noindex: isEmpty.value,

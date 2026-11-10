@@ -135,6 +135,7 @@ usePageSeo(() => {
   return {
     title: region.value ? c("seo.regionTitle").replace("{region}", name) : c("seo.title"),
     description: region.value ? c("seo.regionDescription").replace("{region}", name) : c("seo.description"),
+    keywords: c("seo.keywords"),
     // 还没有房源的地区页只有一句占位说明，不让搜索引擎收录
     noindex: Boolean(region.value) && !listings.value.length,
     jsonLd

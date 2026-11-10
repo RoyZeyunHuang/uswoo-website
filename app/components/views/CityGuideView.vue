@@ -289,6 +289,7 @@ usePageSeo(() => {
   return {
     title: bi(payload.value.seo?.title) || withCity("seo.title"),
     description: bi(payload.value.seo?.description) || bi(payload.value.intro) || c("seo.description"),
+    keywords: c("seo.keywords"),
     image: areas.value[0]?.image?.url || img("lead.image"),
     noindex: guide.value?.isPlaceholder ?? false,
     canonicalPath: props.region ? undefined : regionPath("city-guide", "new-york"),

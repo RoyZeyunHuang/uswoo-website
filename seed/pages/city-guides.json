@@ -2,120 +2,303 @@
   "key": "city-guides",
   "payload": {
     "seo": {
-      "title": { "en": "{city} City Guide | USWOO", "zh": "{city}城市指南 | USWOO" },
+      "title": {
+        "en": "{city} City Guide | USWOO",
+        "zh": "{city}城市指南 | USWOO"
+      },
       "description": {
         "en": "Choose a city, then explore the areas, schools, business districts and lifestyles that matter to you.",
         "zh": "先选一座城市，再探索你在意的区域、学校、商务区和生活方式。"
       },
-      "breadcrumb": { "en": "City Guides", "zh": "城市指南" },
-      "areasListName": { "en": "{city} neighborhoods", "zh": "{city}社区指南" },
-      "brandImage": { "url": "/assets/uswoo-hero-poster.jpg" }
+      "breadcrumb": {
+        "en": "City Guides",
+        "zh": "城市指南"
+      },
+      "areasListName": {
+        "en": "{city} neighborhoods",
+        "zh": "{city}社区指南"
+      },
+      "brandImage": {
+        "url": "/assets/uswoo-hero-poster.jpg"
+      },
+      "keywords": {
+        "en": "",
+        "zh": ""
+      }
     },
     "lead": {
-      "title": { "en": "Know the city before you move in.", "zh": "搬进来之前<br class=m-br>先了解这座城市" },
+      "title": {
+        "en": "Know the city before you move in.",
+        "zh": "搬进来之前<br class=m-br>先了解这座城市"
+      },
       "lede": {
         "en": "Every neighborhood has its own rhythm — schools, business districts, transit lines and the walk to your favorite coffee shop. We map it all out, so you can choose a place that actually fits your life, not just an address on a lease. Explore by school, by commute, or just by vibe.",
         "zh": "每个社区都有独特的生活节奏。从学校、通勤到周边的咖啡馆和日常配套，我们帮你了解不同社区的特点，找到真正适合自己的生活圈。无论是围绕学校、工作地点，还是喜欢的生活方式，都可以从这里开始探索。"
       },
       "image": {
         "url": "/assets/cg-lead-skyline.jpg",
-        "alt": { "en": "Manhattan skyline at dusk over the East River", "zh": "黄昏时分东河对岸的曼哈顿天际线" }
+        "alt": {
+          "en": "Manhattan skyline at dusk over the East River",
+          "zh": "黄昏时分东河对岸的曼哈顿天际线"
+        }
       }
     },
     "intro": {
-      "index": { "en": "01", "zh": "01" },
-      "title": { "en": "City Guides", "zh": "城市指南" },
-      "sub": { "en": "Explore the city your way.", "zh": "用你的方式探索城市" },
+      "index": {
+        "en": "01",
+        "zh": "01"
+      },
+      "title": {
+        "en": "City Guides",
+        "zh": "城市指南"
+      },
+      "sub": {
+        "en": "Explore the city your way.",
+        "zh": "用你的方式探索城市"
+      },
       "desc": {
         "en": "Choose a city, then explore the areas, schools, business districts and lifestyles that matter to you.",
         "zh": "先选一座城市，再探索你在意的区域、学校、商务区和生活方式。"
       },
-      "openSheet": { "en": "Choose City & Explore", "zh": "选择城市与探索方式" }
+      "openSheet": {
+        "en": "Choose City & Explore",
+        "zh": "选择城市与探索方式"
+      }
     },
     "sheet": {
-      "title": { "en": "Explore Your Way", "zh": "按你的方式探索" },
-      "close": { "en": "Close", "zh": "关闭" },
-      "cityLabel": { "en": "City", "zh": "城市" },
-      "filtersLabel": { "en": "Explore by", "zh": "探索方式" },
-      "clear": { "en": "Clear all", "zh": "清除全部" },
-      "done": { "en": "Show results", "zh": "查看结果" }
+      "title": {
+        "en": "Explore Your Way",
+        "zh": "按你的方式探索"
+      },
+      "close": {
+        "en": "Close",
+        "zh": "关闭"
+      },
+      "cityLabel": {
+        "en": "City",
+        "zh": "城市"
+      },
+      "filtersLabel": {
+        "en": "Explore by",
+        "zh": "探索方式"
+      },
+      "clear": {
+        "en": "Clear all",
+        "zh": "清除全部"
+      },
+      "done": {
+        "en": "Show results",
+        "zh": "查看结果"
+      }
     },
     "filters": {
       "neighborhood": {
-        "title": { "en": "Neighborhood", "zh": "社区" },
-        "desc": { "en": "Explore popular areas", "zh": "探索热门区域" }
+        "title": {
+          "en": "Neighborhood",
+          "zh": "社区"
+        },
+        "desc": {
+          "en": "Explore popular areas",
+          "zh": "探索热门区域"
+        }
       },
       "school": {
-        "title": { "en": "School", "zh": "学校" },
-        "desc": { "en": "Universities & campuses", "zh": "大学与校区" }
+        "title": {
+          "en": "School",
+          "zh": "学校"
+        },
+        "desc": {
+          "en": "Universities & campuses",
+          "zh": "大学与校区"
+        }
       },
       "business": {
-        "title": { "en": "Business District", "zh": "商务区" },
-        "desc": { "en": "Work hubs & commercial areas", "zh": "办公聚集地与商业区" }
+        "title": {
+          "en": "Business District",
+          "zh": "商务区"
+        },
+        "desc": {
+          "en": "Work hubs & commercial areas",
+          "zh": "办公聚集地与商业区"
+        }
       },
       "commute": {
-        "title": { "en": "Commute", "zh": "通勤" },
-        "desc": { "en": "Transit & commute time", "zh": "交通与通勤时间" }
+        "title": {
+          "en": "Commute",
+          "zh": "通勤"
+        },
+        "desc": {
+          "en": "Transit & commute time",
+          "zh": "交通与通勤时间"
+        }
       }
     },
     "legend": {
-      "neighborhood": { "en": "Neighborhood", "zh": "社区" },
-      "school": { "en": "School", "zh": "学校" },
-      "business": { "en": "Business District", "zh": "商务区" },
-      "transit": { "en": "Transit", "zh": "交通" },
-      "landmark": { "en": "Landmark", "zh": "地标" }
+      "neighborhood": {
+        "en": "Neighborhood",
+        "zh": "社区"
+      },
+      "school": {
+        "en": "School",
+        "zh": "学校"
+      },
+      "business": {
+        "en": "Business District",
+        "zh": "商务区"
+      },
+      "transit": {
+        "en": "Transit",
+        "zh": "交通"
+      },
+      "landmark": {
+        "en": "Landmark",
+        "zh": "地标"
+      }
     },
     "places": {
-      "title": { "en": "Places on the {city} map", "zh": "{city}地图上的地点" },
+      "title": {
+        "en": "Places on the {city} map",
+        "zh": "{city}地图上的地点"
+      },
       "groups": {
-        "neighborhood": { "en": "Neighborhood", "zh": "社区" },
-        "school": { "en": "School", "zh": "学校" },
-        "business": { "en": "Business District", "zh": "商务区" },
-        "commute": { "en": "Commute", "zh": "通勤" },
-        "landmark": { "en": "Landmark", "zh": "地标" },
-        "company": { "en": "Major Employer", "zh": "知名企业" }
+        "neighborhood": {
+          "en": "Neighborhood",
+          "zh": "社区"
+        },
+        "school": {
+          "en": "School",
+          "zh": "学校"
+        },
+        "business": {
+          "en": "Business District",
+          "zh": "商务区"
+        },
+        "commute": {
+          "en": "Commute",
+          "zh": "通勤"
+        },
+        "landmark": {
+          "en": "Landmark",
+          "zh": "地标"
+        },
+        "company": {
+          "en": "Major Employer",
+          "zh": "知名企业"
+        }
       }
     },
     "map": {
       "kinds": {
-        "neighborhood": { "en": "Neighborhood", "zh": "社区" },
-        "business": { "en": "Business District", "zh": "商务区" },
-        "school": { "en": "School", "zh": "学校" },
-        "landmark": { "en": "Landmark", "zh": "地标" },
-        "company": { "en": "Major Employer", "zh": "知名企业" },
-        "station": { "en": "Station", "zh": "站点" },
-        "line": { "en": "Transit Line", "zh": "交通线路" }
+        "neighborhood": {
+          "en": "Neighborhood",
+          "zh": "社区"
+        },
+        "business": {
+          "en": "Business District",
+          "zh": "商务区"
+        },
+        "school": {
+          "en": "School",
+          "zh": "学校"
+        },
+        "landmark": {
+          "en": "Landmark",
+          "zh": "地标"
+        },
+        "company": {
+          "en": "Major Employer",
+          "zh": "知名企业"
+        },
+        "station": {
+          "en": "Station",
+          "zh": "站点"
+        },
+        "line": {
+          "en": "Transit Line",
+          "zh": "交通线路"
+        }
       },
       "sectors": {
-        "finance": { "en": "Finance", "zh": "金融" },
-        "tech": { "en": "Tech", "zh": "科技" },
-        "media": { "en": "Media", "zh": "媒体" },
-        "consulting": { "en": "Consulting", "zh": "咨询" },
-        "health": { "en": "Healthcare", "zh": "医疗" },
-        "consumer": { "en": "Consumer", "zh": "消费品" }
+        "finance": {
+          "en": "Finance",
+          "zh": "金融"
+        },
+        "tech": {
+          "en": "Tech",
+          "zh": "科技"
+        },
+        "media": {
+          "en": "Media",
+          "zh": "媒体"
+        },
+        "consulting": {
+          "en": "Consulting",
+          "zh": "咨询"
+        },
+        "health": {
+          "en": "Healthcare",
+          "zh": "医疗"
+        },
+        "consumer": {
+          "en": "Consumer",
+          "zh": "消费品"
+        }
       },
-      "popularAreas": { "en": "Popular areas: {areas}", "zh": "热门社区：{areas}" },
-      "photoCredit": { "en": "Photos: {authors} · Wikimedia Commons", "zh": "Photos: {authors} · Wikimedia Commons" }
+      "popularAreas": {
+        "en": "Popular areas: {areas}",
+        "zh": "热门社区：{areas}"
+      },
+      "photoCredit": {
+        "en": "Photos: {authors} · Wikimedia Commons",
+        "zh": "Photos: {authors} · Wikimedia Commons"
+      }
     },
     "areas": {
-      "index": { "en": "02", "zh": "02" },
-      "eyebrow": { "en": "NEIGHBORHOODS", "zh": "社区" },
-      "empty": { "en": "Neighborhood guide coming soon.", "zh": "社区指南即将上线。" },
-      "pickCity": { "en": "Pick Another City", "zh": "切换城市" }
+      "index": {
+        "en": "02",
+        "zh": "02"
+      },
+      "eyebrow": {
+        "en": "NEIGHBORHOODS",
+        "zh": "社区"
+      },
+      "empty": {
+        "en": "Neighborhood guide coming soon.",
+        "zh": "社区指南即将上线。"
+      },
+      "pickCity": {
+        "en": "Pick Another City",
+        "zh": "切换城市"
+      }
     },
     "closing": {
       "emoji": "✨",
-      "title": { "en": "Found your area?", "zh": "选好区域了吗？" },
+      "title": {
+        "en": "Found your area?",
+        "zh": "选好区域了吗？"
+      },
       "short": {
         "en": "Once you know your area, we can help with the rest, from apartment search to move-in essentials.",
         "zh": "选好区域后，其余的交给我们，从找房到入住所需的一切。"
       },
-      "cta": { "en": "Talk to USWOO", "zh": "联系 USWOO" }
+      "cta": {
+        "en": "Talk to USWOO",
+        "zh": "联系 USWOO"
+      }
     },
     "switch": {
-      "title": { "en": "Moving to a different city?", "zh": "要搬去另一座城市？" },
-      "text": { "en": "Switch cities above to explore more areas and find your place.", "zh": "在上方切换城市，探索更多区域，找到属于你的地方。" },
-      "cta": { "en": "Explore Other Cities", "zh": "探索其他城市" }
+      "title": {
+        "en": "Moving to a different city?",
+        "zh": "要搬去另一座城市？"
+      },
+      "text": {
+        "en": "Switch cities above to explore more areas and find your place.",
+        "zh": "在上方切换城市，探索更多区域，找到属于你的地方。"
+      },
+      "cta": {
+        "en": "Explore Other Cities",
+        "zh": "探索其他城市"
+      }
     }
   }
 }

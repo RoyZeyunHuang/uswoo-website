@@ -1,9 +1,11 @@
-import type { PageContent, SeoPages } from "~~/shared/types/api";
+import type { PageContent } from "~~/shared/types/api";
 
 interface PageSeo {
   /** 页面标题（不含站名时自己拼好再传） */
   title: string;
   description?: string;
+  /** 关键词，逗号分隔；留空则不输出 */
+  keywords?: string;
   /** 分享图，绝对地址或站内路径 */
   image?: string | null;
   /** 不希望被收录的页面：占位内容、示例房源、中文缺失的中文页等 */
@@ -15,18 +17,6 @@ interface PageSeo {
   jsonLd?: Record<string, unknown>[];
 }
 
-/** 路由名（去掉语言后缀）→ CMS「SEO 设置」里的页面键 */
-const SEO_KEYS: Record<string, string> = {
-  index: "home",
-  services: "services",
-  contact: "contact",
-  about: "about",
-  partners: "partners",
-  press: "press",
-  listings: "listings",
-  "city-guides": "city-guides"
-};
-
 /** 站内路径 → 正式域名下的绝对地址（canonical、结构化数据都以 uswoo.com 为准，测试站也一样） */
 export function useAbsoluteUrl() {
   const config = useRuntimeConfig();
@@ -35,7 +25,8 @@ export function useAbsoluteUrl() {
 }
 
 /**
- * 每个页面调用一次，输出 title、description、Open Graph、Twitter 卡片、canonical、robots 和结构化数据。
+ * 标题、描述、关键词都由页面从 CMS「新官网页面」里自己那一页的 seo 字段取出后传进来（文章、房源用各自的 SEO 字段）。
+ * 每个页面调用一次，输出 title、description、keywords、Open Graph、Twitter 卡片、canonical、robots 和结构化数据。
  * 入参可以是 getter，内容随语言或数据变化时自动更新。
  */
 export function usePageSeo(input: PageSeo | (() => PageSeo)) {
@@ -46,18 +37,9 @@ export function usePageSeo(input: PageSeo | (() => PageSeo)) {
   const absolute = useAbsoluteUrl();
   const production = config.public.deployEnv === "production";
 
-  // CMS「SEO 设置」是沿用现有官网的那一份：每个页面一行、只有中文。
-  // 所以只在中文页、且是全站一份的页面（首页、Services、Contact 和各汇总页）上用它覆盖标题与描述；
-  // 英文页、地区页、文章和房源详情用页面自己的标题。
-  const cmsSeo = useNuxtData<SeoPages>("seo");
   const { locale } = useI18n();
-  const cms = computed(() => {
-    if (locale.value !== "zh") return null;
-    const key = SEO_KEYS[String(route.name ?? "").replace(/___[a-z]+$/, "")];
-    return key ? (cmsSeo.data.value?.pages?.[key] ?? null) : null;
-  });
-  const title = computed(() => cms.value?.title || seo.value.title);
-  const description = computed(() => cms.value?.description || seo.value.description || undefined);
+  const title = computed(() => seo.value.title);
+  const description = computed(() => seo.value.description || undefined);
 
   // 站点名称与默认分享图来自 CMS「全站通用」（app.vue 已经取好）
   const site = useNuxtData<PageContent>("page:site:");
@@ -93,7 +75,7 @@ export function usePageSeo(input: PageSeo | (() => PageSeo)) {
     // 测试站在 app.vue 里整站 noindex，这里只处理正式站上个别不收录的页面
     meta: () => [
       ...(production && seo.value.noindex ? [{ name: "robots", content: "noindex, follow", key: "robots" }] : []),
-      ...(cms.value?.keywords ? [{ name: "keywords", content: cms.value.keywords, key: "keywords" }] : [])
+      ...(seo.value.keywords ? [{ name: "keywords", content: seo.value.keywords, key: "keywords" }] : [])
     ],
     script: () => (seo.value.jsonLd ?? []).map((item, index) => ({ type: "application/ld+json", key: `ld-${index}`, innerHTML: JSON.stringify({ "@context": "https://schema.org", ...item }) }))
   });

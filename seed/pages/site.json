@@ -96,7 +96,164 @@
           "en": "Copyright ©2026 Boston USWOO Realty LLC. All Rights Reserved.",
           "zh": "版权所有 ©2026 Boston USWOO Realty LLC。保留所有权利。"
         }
-      ]
+      ],
+      "platforms": {
+        "show": true,
+        "title": {
+          "en": "Our Platforms",
+          "zh": "旗下平台"
+        },
+        "items": [
+          {
+            "name": {
+              "en": "LUMINARY Education Consulting",
+              "zh": "LUMINARY留明·留学"
+            },
+            "url": "https://www.phemiaedu.com",
+            "show": false
+          },
+          {
+            "name": {
+              "en": "LUMINARY Career Planning",
+              "zh": "LUMINARY留明·求职"
+            },
+            "url": "https://www.mingtucareer.com/",
+            "show": false
+          },
+          {
+            "name": {
+              "en": "OSSCINS Insurance",
+              "zh": "OSSCINS途美保险"
+            },
+            "url": "https://www.osscinsurance.com",
+            "show": false
+          },
+          {
+            "name": {
+              "en": "TSI Dental Clinic",
+              "zh": "TSI牙科诊所"
+            },
+            "url": "https://thesmileinstitute.com",
+            "show": false
+          },
+          {
+            "name": {
+              "en": "Wukong Media",
+              "zh": "WUKONG悟空传媒"
+            },
+            "url": "https://www.wukongmedia.us",
+            "show": false
+          },
+          {
+            "name": {
+              "en": "USWOO Realty",
+              "zh": "USWOO美窝房产"
+            },
+            "url": "https://uswoo.com",
+            "show": false
+          }
+        ]
+      },
+      "network": {
+        "show": true,
+        "title": {
+          "en": "Overseas Student Network",
+          "zh": "留学生网"
+        },
+        "items": [
+          {
+            "name": {
+              "en": "Overseas Student Service Corp",
+              "zh": "OSSC留学生网总站"
+            },
+            "url": "https://www.overseasstudent.com/",
+            "show": false
+          },
+          {
+            "name": {
+              "en": "New York Students Network",
+              "zh": "纽约留学生网"
+            },
+            "url": "https://www.nystudents.net/",
+            "show": false
+          },
+          {
+            "name": {
+              "en": "Boston Students Network",
+              "zh": "波士顿留学生网"
+            },
+            "url": "https://www.bostonstudents.org/",
+            "show": false
+          },
+          {
+            "name": {
+              "en": "California Students Network",
+              "zh": "加州留学生网"
+            },
+            "url": "https://www.castudents.org",
+            "show": false
+          },
+          {
+            "name": {
+              "en": "United Kingdom Students Network",
+              "zh": "英国留学生网"
+            },
+            "url": "https://www.ukstudents.net",
+            "show": false
+          }
+        ]
+      },
+      "offices": {
+        "show": true,
+        "title": {
+          "en": "Offices",
+          "zh": "办公室"
+        },
+        "items": [
+          {
+            "name": {
+              "en": "Boston Office",
+              "zh": "波士顿办公室"
+            },
+            "address": {
+              "en": "99 Sumner St, East Boston, MA 02128",
+              "zh": "99 Sumner St, East Boston, MA 02128"
+            },
+            "phone": "+1 857-891-4725",
+            "email": "info@uswoo.com",
+            "show": true
+          },
+          {
+            "name": {
+              "en": "New York Office",
+              "zh": "纽约办公室"
+            },
+            "address": {
+              "en": "5 West 37 St., Suite 201, New York, NY 10018",
+              "zh": "5 West 37 St., Suite 201, New York, NY 10018"
+            },
+            "phone": "+1 917-470-6510",
+            "email": "",
+            "show": true
+          }
+        ]
+      },
+      "qrcode": {
+        "show": false,
+        "title": {
+          "en": "Scan to Connect",
+          "zh": "扫码联系我们"
+        },
+        "image": {
+          "url": "https://uswoo-app-oss.uswoo.cn/student-app/c93dc32c8051405dad1610a74c1e26f9.png"
+        }
+      },
+      "newsletter": {
+        "show": true
+      },
+      "follow": {
+        "show": true
+      }
     },
     "seo": {
       "defaultImage": {
