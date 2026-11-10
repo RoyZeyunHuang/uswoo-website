@@ -1,0 +1,2035 @@
+{
+ "region": "boston",
+ "payload": {
+  "cityName": {
+   "en": "Boston",
+   "zh": "波士顿"
+  },
+  "emoji": "🦞",
+  "intro": {
+   "en": "In Boston, choosing where to live often comes down to school, work, and commute. With universities, teaching hospitals, biotech labs, financial firms, and tech offices spread across Boston, Cambridge, Somerville, and Brookline, the right neighborhood can make everyday life much easier.",
+   "zh": "在波士顿，选住哪里通常取决于学校、工作和通勤。大学、教学医院、生物科技实验室、金融机构和科技公司分布在波士顿、剑桥、萨默维尔和布鲁克莱恩，选对社区能让日常生活轻松许多。"
+  },
+  "areas": [
+   {
+    "emoji": "🏙️",
+    "name": {
+     "en": "Back Bay, Fenway & Kenmore",
+     "zh": "Back Bay, Fenway & Kenmore"
+    },
+    "tags": [
+     {
+      "en": "BU",
+      "zh": "BU"
+     },
+     {
+      "en": "Northeastern",
+      "zh": "Northeastern"
+     },
+     {
+      "en": "Berklee",
+      "zh": "Berklee"
+     }
+    ],
+    "text": {
+     "en": "A strong option for students at Boston University, Northeastern, and Berklee, as well as professionals working in finance, insurance, consulting, and tech offices around Copley Square and the Prudential Center. Back Bay offers classic brownstones and newer high rises, while Fenway and Kenmore bring a large supply of student friendly rentals with Green and Orange Line access.",
+     "zh": "适合 Boston University、Northeastern University 和 Berklee College of Music 的学生，以及在 Copley Square、Prudential Center 一带从事金融、保险、咨询和科技工作的职场人士。Back Bay 以褐石老楼和新式高层公寓著称，Fenway 和 Kenmore 则有大量适合学生的房源，搭乘 Green Line 和 Orange Line 出行方便。"
+    },
+    "short": {
+     "en": "A strong option for BU, Northeastern, and Berklee students and Back Bay professionals. Brownstones, newer high rises, and easy Green and Orange Line access.",
+     "zh": "适合 BU、Northeastern 和 Berklee 的学生，以及在 Back Bay 上班的职场人士。褐石老楼与新式高层公寓并存，Green Line 和 Orange Line 出行方便。"
+    },
+    "image": {
+     "url": "/assets/bos-back-bay.jpg"
+    }
+   },
+   {
+    "emoji": "🎓",
+    "name": {
+     "en": "Cambridge: Harvard, Central & Kendall Square",
+     "zh": "Cambridge: Harvard, Central & Kendall Square"
+    },
+    "tags": [
+     {
+      "en": "Harvard",
+      "zh": "Harvard"
+     },
+     {
+      "en": "MIT",
+      "zh": "MIT"
+     },
+     {
+      "en": "Red Line",
+      "zh": "Red Line"
+     }
+    ],
+    "text": {
+     "en": "The natural choice for Harvard and MIT students, as well as professionals in biotech, pharma, tech, and research. Harvard Square is closest to Harvard’s main campus, Central Square offers more dining and slightly better value, and Kendall Square sits next to MIT and one of the country’s leading life sciences clusters, all linked by the Red Line.",
+     "zh": "适合 Harvard University 和 MIT 的学生，以及在生物科技、制药、科技和科研行业工作的职场人士。Harvard Square 离哈佛主校区最近，Central Square 餐饮选择多、性价比稍高，Kendall Square 紧邻 MIT 和全美领先的生命科学产业聚集区，三地由 Red Line 串联。"
+    },
+    "short": {
+     "en": "The natural choice for Harvard and MIT students and for biotech and tech professionals. Three squares on the Red Line, each with its own pace and price.",
+     "zh": "适合 Harvard、MIT 的学生，以及生物科技和科技行业的职场人士。三个广场由 Red Line 串联，氛围和租金各不相同。"
+    },
+    "image": {
+     "url": "/assets/bos-cambridge.jpg"
+    }
+   },
+   {
+    "emoji": "🚋",
+    "name": {
+     "en": "Allston & Brighton",
+     "zh": "Allston & Brighton"
+    },
+    "tags": [
+     {
+      "en": "BU",
+      "zh": "BU"
+     },
+     {
+      "en": "BC",
+      "zh": "BC"
+     },
+     {
+      "en": "HBS",
+      "zh": "HBS"
+     }
+    ],
+    "text": {
+     "en": "One of Boston’s largest student rental markets, popular with students at Boston University, Boston College, and Harvard Business School. Allston is lively and budget friendly, with plenty of Asian restaurants and groceries, while Brighton is quieter and more residential. The Green Line B branch and several bus routes connect both to campus and Downtown.",
+     "zh": "波士顿最主要的学生租房区之一，适合 Boston University、Boston College 和 Harvard Business School 的学生。Allston 热闹、租金相对友好，亚洲餐厅和超市集中；Brighton 更安静，居住氛围更浓。Green Line B 线和多条公交线路连接校园与 Downtown Boston。"
+    },
+    "short": {
+     "en": "One of Boston’s largest student rental markets for BU, BC, and HBS. Allston is lively and budget friendly, while Brighton is quieter and more residential.",
+     "zh": "波士顿最主要的学生租房区之一，适合 BU、BC 和 HBS 的学生。Allston 热闹、租金相对友好，Brighton 更安静、居住氛围更浓。"
+    },
+    "image": {
+     "url": "/assets/bos-allston.jpg"
+    }
+   },
+   {
+    "emoji": "🌊",
+    "name": {
+     "en": "Downtown, Seaport & South End",
+     "zh": "Downtown, Seaport & South End"
+    },
+    "tags": [
+     {
+      "en": "Suffolk",
+      "zh": "Suffolk"
+     },
+     {
+      "en": "Emerson",
+      "zh": "Emerson"
+     },
+     {
+      "en": "Finance & Biotech",
+      "zh": "Finance & Biotech"
+     }
+    ],
+    "text": {
+     "en": "A good fit for students at Suffolk, Emerson, and Tufts’ health sciences campus, as well as professionals working in finance, law, consulting, tech, and biotech. Downtown and the Financial District put every subway line within reach, the Seaport offers new waterfront high rises close to major employers, and the South End is known for brick rowhouses and dining.",
+     "zh": "适合 Suffolk University、Emerson College 和 Tufts 医学院校区的学生，以及从事金融、法律、咨询、科技和生物医药工作的职场人士。Downtown 和 Financial District 地铁线路齐全，Seaport 有靠近大型雇主的新建滨水高层公寓，South End 则以红砖排屋和丰富的餐饮闻名。"
+    },
+    "short": {
+     "en": "A good fit for Suffolk, Emerson, and Tufts health sciences students and Downtown professionals. Every subway line, new Seaport high rises, and South End rowhouses.",
+     "zh": "适合 Suffolk、Emerson 和 Tufts 医学院校区的学生，以及在 Downtown 上班的职场人士。地铁线路齐全，既有 Seaport 的新建高层，也有 South End 的红砖排屋。"
+    },
+    "image": {
+     "url": "/assets/bos-downtown.jpg"
+    }
+   },
+   {
+    "emoji": "🐘",
+    "name": {
+     "en": "Somerville & Medford",
+     "zh": "Somerville & Medford"
+    },
+    "tags": [
+     {
+      "en": "Tufts",
+      "zh": "Tufts"
+     },
+     {
+      "en": "Davis Square",
+      "zh": "Davis Square"
+     },
+     {
+      "en": "Red & Green Line",
+      "zh": "Red & Green Line"
+     }
+    ],
+    "text": {
+     "en": "The main housing area for Tufts University students, and a popular choice for Harvard and MIT students and young professionals looking for more space. Davis Square offers Red Line access and a lively local scene, Union Square and Medford are served by the Green Line Extension, and most rentals are apartments in multi family houses at more moderate prices than Cambridge.",
+     "zh": "Tufts University 学生的主要居住区，也受到希望住得更宽敞的 Harvard、MIT 学生和年轻职场人士欢迎。Davis Square 有 Red Line 和热闹的街区生活，Union Square 和 Medford 可搭乘 Green Line 延伸线，房源多为多户住宅里的公寓，租金比 Cambridge 更温和。"
+    },
+    "short": {
+     "en": "The main housing area for Tufts students, also popular with Harvard and MIT renters. Red and Green Line access and more space for the money than Cambridge.",
+     "zh": "Tufts 学生的主要居住区，也受 Harvard、MIT 租客欢迎。有 Red Line 和 Green Line，同样的预算能住得比 Cambridge 更宽敞。"
+    },
+    "image": {
+     "url": "/assets/bos-somerville.jpg"
+    }
+   },
+   {
+    "emoji": "🏥",
+    "name": {
+     "en": "Brookline & Longwood",
+     "zh": "Brookline & Longwood"
+    },
+    "tags": [
+     {
+      "en": "Longwood",
+      "zh": "Longwood"
+     },
+     {
+      "en": "Harvard Medical",
+      "zh": "Harvard Medical"
+     },
+     {
+      "en": "Green Line",
+      "zh": "Green Line"
+     }
+    ],
+    "text": {
+     "en": "A practical choice for students and staff at Harvard Medical School and the Longwood hospitals, as well as BU and BC students who prefer a quieter setting. Coolidge Corner and Brookline Village offer a safe, residential feel with good restaurants and Green Line C and D service, while Mission Hill and Fenway provide closer, more budget friendly options beside the medical area.",
+     "zh": "适合 Harvard Medical School 和 Longwood 各大医院的学生与员工，以及偏好安静环境的 BU、BC 学生。Coolidge Corner 和 Brookline Village 安全、居住氛围浓，餐饮方便，有 Green Line C 线和 D 线；Mission Hill 和 Fenway 则离医学区更近，价格也更友好。"
+    },
+    "short": {
+     "en": "A practical choice for Harvard Medical and Longwood staff and for BU and BC students. Safe, residential Brookline on the Green Line, with budget options in Mission Hill.",
+     "zh": "适合 Harvard Medical School 和 Longwood 医院的学生与员工，以及 BU、BC 学生。Brookline 安全安静、有 Green Line，Mission Hill 价格更友好。"
+    },
+    "image": {
+     "url": "/assets/bos-brookline.jpg"
+    }
+   }
+  ],
+  "closing": {
+   "emoji": "✨",
+   "title": {
+    "en": "Found your area?",
+    "zh": "选好区域了吗？"
+   },
+   "text": {
+    "en": "Once you know which area fits your school, office, and daily routine, we can help with apartment search, leasing, moving, furniture, room dividers, Wi Fi, electricity, renters insurance, and other move in essentials.",
+    "zh": "选好适合你的学校、公司和日常作息的区域后，我们可以帮你搞定找房、签约、搬家、家具、房间隔断、Wi-Fi、水电、租客保险等入住必备事项。"
+   },
+   "short": {
+    "en": "Once you know your area, we can help with the rest, from apartment search to move-in essentials.",
+    "zh": "选好区域后，其余的交给我们，从找房到入住所需的一切。"
+   },
+   "image": {
+    "url": "/assets/bos-closing.jpg"
+   },
+   "hideOnMobile": true
+  },
+  "map": {
+   "center": {
+    "lat": 42.355,
+    "lng": -71.09
+   },
+   "zoom": 12,
+   "minZoom": 10,
+   "bounds": [
+    [
+     42.19,
+     -71.32
+    ],
+    [
+     42.47,
+     -70.95
+    ]
+   ],
+   "neighborhoods": {
+    "url": "/assets/guides/boston/neighborhoods.geojson"
+   },
+   "businessDistricts": {
+    "url": "/assets/guides/boston/business-districts.geojson"
+   },
+   "transit": {
+    "url": "/assets/transit/BOS.geojson"
+   }
+  }
+ },
+ "places": [
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Back Bay",
+    "zh": "后湾"
+   },
+   "desc": {
+    "en": "Victorian brownstones along Commonwealth Ave, Newbury Street shopping and the towers around Copley Square. Central for Berklee, BU and Northeastern on the Green and Orange lines; among Boston's priciest rents.",
+    "zh": "联邦大道两侧是维多利亚式褐石楼，有Newbury街购物区和科普利广场周边的高楼；绿线、橙线经过，去伯克利音乐学院、BU和东北大学都方便，租金属波士顿最高之列。"
+   },
+   "lat": 42.3503,
+   "lng": -71.081,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 1
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Fenway / Kenmore",
+    "zh": "芬威 / 肯莫尔"
+   },
+   "desc": {
+    "en": "Home of Fenway Park and the Citgo sign, packed with BU, Northeastern and Berklee students. New towers sit beside older brick walk-ups; Green Line B/C/D at Kenmore, extra lively on game days.",
+    "zh": "芬威球场和Citgo招牌所在地，BU、东北大学和伯克利的学生聚居；新建高层与老式红砖公寓并存，Kenmore站有绿线B/C/D，比赛日格外热闹。"
+   },
+   "lat": 42.3454,
+   "lng": -71.0975,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 2
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Allston",
+    "zh": "奥斯顿"
+   },
+   "desc": {
+    "en": "Boston's classic student neighborhood, with Korean and Chinese restaurants, music venues and older triple-deckers around Harvard and Brighton Aves. Green Line B to BU; cheaper than downtown, and most leases start September 1.",
+    "zh": "波士顿最典型的学生区，Harvard Ave和Brighton Ave一带韩餐、中餐馆和live house密集，多为老式三层木屋公寓；绿线B可到BU，租金低于市中心，租约多从9月1日起租。"
+   },
+   "lat": 42.3539,
+   "lng": -71.1337,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 3
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Brighton",
+    "zh": "布莱顿"
+   },
+   "desc": {
+    "en": "Quieter and more residential than Allston, with apartment blocks along Commonwealth Ave and around Cleveland Circle. Popular with BC and BU students and young professionals; Green Line B/C/D, moderate rents.",
+    "zh": "比奥斯顿更安静、居住氛围更浓，联邦大道沿线和Cleveland Circle一带公寓楼集中；BC、BU学生和年轻上班族都爱住，有绿线B/C/D，租金适中。"
+   },
+   "lat": 42.3489,
+   "lng": -71.153,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 4
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "South End",
+    "zh": "南端"
+   },
+   "desc": {
+    "en": "Victorian brick rowhouses, pocket parks, galleries and one of Boston's best restaurant scenes. Close to Back Bay and Northeastern; Orange Line and Silver Line buses, rents on the high side.",
+    "zh": "维多利亚式红砖排屋、街心小公园和画廊集中，餐饮在波士顿数一数二；靠近后湾和东北大学，有橙线和银线快速公交，租金偏高。"
+   },
+   "lat": 42.341,
+   "lng": -71.0733,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 5
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Seaport District",
+    "zh": "海港区"
+   },
+   "desc": {
+    "en": "Boston's newest neighborhood: glass apartment towers, waterfront paths and offices for tech, biotech and consulting firms. Silver Line to South Station; modern amenities, rents among the city's highest.",
+    "zh": "波士顿最新的街区，玻璃幕墙公寓楼、滨水步道与科技、生物医药和咨询公司的办公楼相邻；乘银线可到南站，配套新，租金属全市最高之列。"
+   },
+   "lat": 42.349,
+   "lng": -71.044,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 6
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Beacon Hill",
+    "zh": "比肯山"
+   },
+   "desc": {
+    "en": "Gas-lit lanes, brick sidewalks and Federal-style rowhouses beside the State House and Boston Common. Walkable to Suffolk, Mass General and downtown offices; small, pricey apartments. Red Line at Charles/MGH.",
+    "zh": "煤气路灯、红砖人行道和联邦式排屋，紧邻州议会大厦和波士顿公园；步行可到萨福克大学、麻省总医院和市中心写字楼，户型偏小、租金高，Charles/MGH站有红线。"
+   },
+   "lat": 42.3588,
+   "lng": -71.0678,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 7
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "North End",
+    "zh": "北端"
+   },
+   "desc": {
+    "en": "Boston's Little Italy, a maze of narrow streets full of trattorias, bakeries and old brick walk-ups near the waterfront. Walk to downtown and North Station; charming but compact units, mid-to-high rents.",
+    "zh": "波士顿的“小意大利”，窄街里挤满意大利餐馆、面包房和老式红砖公寓，靠近海滨；步行可到市中心和北站，有味道但户型紧凑，租金中等偏高。"
+   },
+   "lat": 42.3647,
+   "lng": -71.0542,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 8
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Downtown Boston",
+    "zh": "波士顿市中心"
+   },
+   "desc": {
+    "en": "The city's core around Downtown Crossing and the Theater District, with high-rise rentals near Emerson, Suffolk and Financial District offices. The Red, Orange, Green and Blue lines all meet here; convenient, quieter at night.",
+    "zh": "以Downtown Crossing和剧院区为中心的城市核心，高层出租公寓靠近爱默生学院、萨福克大学和金融区写字楼；红、橙、绿、蓝四条线在此交汇，生活便利，晚上较安静。"
+   },
+   "lat": 42.3555,
+   "lng": -71.0602,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 9
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Chinatown",
+    "zh": "唐人街"
+   },
+   "desc": {
+    "en": "Compact, busy Chinatown with Asian groceries, bakeries and late-night restaurants beside Tufts Medical Center. Orange Line at Chinatown and Tufts Medical Center stations; older walk-ups plus newer towers nearby.",
+    "zh": "紧凑热闹的唐人街，亚洲超市、面包房和深夜餐馆集中，紧邻塔夫茨医学中心；橙线Chinatown站和Tufts Medical Center站都在这里，老式公寓与周边新建高层并存。"
+   },
+   "lat": 42.3505,
+   "lng": -71.061,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 10
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Mission Hill",
+    "zh": "Mission Hill"
+   },
+   "desc": {
+    "en": "Hilly streets of triple-deckers and brick rowhouses between Northeastern and the Longwood hospitals. A favorite of students and medical staff, with lower rents than Fenway; Green Line E and Orange Line at Roxbury Crossing.",
+    "zh": "位于东北大学和长木医学区之间的坡地社区，以三层木屋和红砖排屋为主；学生和医护人员聚居，租金低于芬威，有绿线E和橙线Roxbury Crossing站。"
+   },
+   "lat": 42.332,
+   "lng": -71.102,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 11
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Jamaica Plain",
+    "zh": "牙买加平原"
+   },
+   "desc": {
+    "en": "Leafy and laid-back, with Jamaica Pond, the Arnold Arboretum and indie cafés on Centre Street. Orange Line to Back Bay and downtown; popular with grad students and Longwood staff, moderate rents.",
+    "zh": "绿树成荫、节奏悠闲，有牙买加湖、阿诺德植物园和Centre街的独立咖啡馆；橙线可到后湾和市中心，研究生和长木医学区的上班族多，租金适中。"
+   },
+   "lat": 42.312,
+   "lng": -71.114,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 12
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Harvard Square",
+    "zh": "哈佛广场"
+   },
+   "desc": {
+    "en": "Bookstores, cafés and street performers at Harvard's front gate. Red Line to Kendall and downtown; housing is mostly older apartments and shared houses, in high demand and priced accordingly.",
+    "zh": "哈佛大学正门口的广场，书店、咖啡馆和街头艺人云集；红线可到肯德尔和市中心，房源以老公寓和合租独栋为主，需求旺、租金高。"
+   },
+   "lat": 42.3735,
+   "lng": -71.1189,
+   "address": "",
+   "area": {
+    "en": "Cambridge, MA",
+    "zh": "马萨诸塞州剑桥"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 13
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Central Square",
+    "zh": "中央广场"
+   },
+   "desc": {
+    "en": "Between Harvard and MIT on Mass Ave, with global food, live music and a mix of old apartments and new buildings. Red Line at Central; livelier and a little cheaper than Harvard or Kendall.",
+    "zh": "位于哈佛和MIT之间的Mass Ave上，各国餐馆、现场音乐和新旧公寓混合；有红线Central站，比哈佛广场和肯德尔更热闹，租金也略低。"
+   },
+   "lat": 42.3655,
+   "lng": -71.104,
+   "address": "",
+   "area": {
+    "en": "Cambridge, MA",
+    "zh": "马萨诸塞州剑桥"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 14
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Kendall Square",
+    "zh": "肯德尔广场"
+   },
+   "desc": {
+    "en": "MIT's doorstep and the heart of the region's biotech and tech scene, lined with labs, offices and new luxury apartments. Red Line at Kendall/MIT; walk-to-work convenience at premium rents.",
+    "zh": "紧邻MIT，是大波士顿生物科技和科技产业的核心，实验室、写字楼和新建高端公寓林立；红线Kendall/MIT站，可步行上班，租金高。"
+   },
+   "lat": 42.3626,
+   "lng": -71.0876,
+   "address": "",
+   "area": {
+    "en": "Cambridge, MA",
+    "zh": "马萨诸塞州剑桥"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 15
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Davis Square",
+    "zh": "戴维斯广场"
+   },
+   "desc": {
+    "en": "Somerville's liveliest square, with the Somerville Theatre, bars and cafés, a short ride from Tufts. Red Line to Harvard, MIT and downtown; apartments in triple-deckers, mid-range rents.",
+    "zh": "萨默维尔最热闹的广场，有Somerville Theatre老影院、酒吧和咖啡馆，离塔夫茨大学很近；红线可到哈佛、MIT和市中心，多为三层木屋里的公寓，租金中等。"
+   },
+   "lat": 42.3967,
+   "lng": -71.1223,
+   "address": "",
+   "area": {
+    "en": "Somerville, MA",
+    "zh": "马萨诸塞州萨默维尔"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 16
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Coolidge Corner",
+    "zh": "Coolidge Corner"
+   },
+   "desc": {
+    "en": "Brookline's main hub at Beacon and Harvard Streets, with the Coolidge Corner Theatre, bookshops and cafés. Green Line C to Kenmore and downtown; safe and quiet, popular with BU students and Longwood staff, rents fairly high.",
+    "zh": "布鲁克莱恩的中心，Beacon街和Harvard街交汇处有Coolidge Corner Theatre影院、书店和咖啡馆；绿线C可到Kenmore和市中心，安全安静，BU学生和长木医学区上班族多，租金偏高。"
+   },
+   "lat": 42.3421,
+   "lng": -71.1213,
+   "address": "",
+   "area": {
+    "en": "Brookline, MA",
+    "zh": "马萨诸塞州布鲁克莱恩"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 17
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Financial District",
+    "zh": "金融区"
+   },
+   "desc": {
+    "en": "Banks, asset managers, law firms and consulting offices around Post Office Square and South Station; near Downtown Crossing and the Seaport.",
+    "zh": "银行、资产管理公司、律所和咨询机构集中在邮局广场和南站一带，靠近Downtown Crossing和海港区。"
+   },
+   "lat": 42.3564,
+   "lng": -71.0557,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 18
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Seaport / Innovation District",
+    "zh": "海港区 / 创新区"
+   },
+   "desc": {
+    "en": "Tech, biotech, consulting and law firms in new waterfront towers; near South Station and Fort Point.",
+    "zh": "科技、生物医药、咨询公司和律所集中在滨水新建写字楼，靠近南站和Fort Point。"
+   },
+   "lat": 42.349,
+   "lng": -71.044,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 19
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Kendall Square",
+    "zh": "肯德尔广场"
+   },
+   "desc": {
+    "en": "Biotech, pharma and big tech beside MIT; near Central Square and East Cambridge.",
+    "zh": "生物科技、制药和大型科技公司集中，紧邻MIT，靠近中央广场和East Cambridge。"
+   },
+   "lat": 42.3626,
+   "lng": -71.0876,
+   "address": "",
+   "area": {
+    "en": "Cambridge, MA",
+    "zh": "马萨诸塞州剑桥"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 20
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Back Bay",
+    "zh": "后湾"
+   },
+   "desc": {
+    "en": "Insurance, finance, consulting and retail around Copley Square and the Prudential Center; near the South End and Fenway.",
+    "zh": "保险、金融、咨询和零售业集中在科普利广场和保诚中心一带，靠近南端和芬威。"
+   },
+   "lat": 42.3503,
+   "lng": -71.081,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 21
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Longwood Medical Area",
+    "zh": "长木医学区"
+   },
+   "desc": {
+    "en": "Hospitals, Harvard Medical School and research institutes; near Mission Hill, Fenway and Brookline.",
+    "zh": "医院、哈佛医学院和科研机构集中，靠近Mission Hill、芬威和布鲁克莱恩。"
+   },
+   "lat": 42.3378,
+   "lng": -71.105,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 22
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "North Station / West End",
+    "zh": "北站 / 西端"
+   },
+   "desc": {
+    "en": "Healthcare, government and tech offices around Mass General and TD Garden; near Beacon Hill and the North End.",
+    "zh": "医疗、政府机构和科技公司集中在麻省总医院和TD Garden一带，靠近比肯山和北端。"
+   },
+   "lat": 42.365,
+   "lng": -71.064,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 23
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Boston Landing",
+    "zh": "Boston Landing"
+   },
+   "desc": {
+    "en": "Sportswear, sports and life-science offices anchored by New Balance's headquarters; near Allston and Brighton, with its own Commuter Rail stop.",
+    "zh": "以New Balance总部为核心，运动品牌、体育和生命科学办公集中，靠近奥斯顿和布莱顿，设有通勤铁路车站。"
+   },
+   "lat": 42.357,
+   "lng": -71.142,
+   "address": "",
+   "area": {
+    "en": "Boston, MA",
+    "zh": "马萨诸塞州波士顿"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 24
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Assembly Square",
+    "zh": "Assembly Square"
+   },
+   "desc": {
+    "en": "Healthcare administration, retail and corporate offices led by Mass General Brigham; on the Orange Line in Somerville.",
+    "zh": "以Mass General Brigham为代表的医疗管理、零售和企业办公集中，位于萨默维尔，有橙线Assembly站。"
+   },
+   "lat": 42.3935,
+   "lng": -71.0795,
+   "address": "",
+   "area": {
+    "en": "Somerville, MA",
+    "zh": "马萨诸塞州萨默维尔"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 25
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Alewife",
+    "zh": "Alewife"
+   },
+   "desc": {
+    "en": "Life-science labs and tech offices at the end of the Red Line; near North Cambridge and Davis Square.",
+    "zh": "红线终点站旁的生命科学实验室和科技办公区，靠近North Cambridge和戴维斯广场。"
+   },
+   "lat": 42.393,
+   "lng": -71.144,
+   "address": "",
+   "area": {
+    "en": "Cambridge, MA",
+    "zh": "马萨诸塞州剑桥"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 26
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Harvard University",
+    "zh": "哈佛大学"
+   },
+   "desc": {
+    "en": "The oldest university in the U.S. and an Ivy League icon, centered on Harvard Yard. Harvard Square is walkable and busy, with the Red Line to MIT and downtown; many students also rent in Somerville and Allston.",
+    "zh": "全美历史最悠久的大学、常春藤名校，以哈佛园为中心。哈佛广场步行便利、人气旺，红线可到MIT和市中心，不少学生也在萨默维尔和奥斯顿租房。"
+   },
+   "lat": 42.3744,
+   "lng": -71.1169,
+   "address": "Massachusetts Hall, Cambridge, MA 02138",
+   "area": {
+    "en": "Harvard Square, Cambridge",
+    "zh": "剑桥哈佛广场"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Harvard Square",
+     "zh": "哈佛广场"
+    },
+    "communities": [
+     "Harvard Square",
+     "Porter Square",
+     "Central Square",
+     "Somerville",
+     "Allston"
+    ]
+   },
+   "sort": 27
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Massachusetts Institute of Technology (MIT)",
+    "zh": "麻省理工学院（MIT）"
+   },
+   "desc": {
+    "en": "World-leading science and engineering university along the Charles River, known for its Great Dome. Kendall Square next door is full of labs and new apartments; the Red Line stops at Kendall/MIT and Central.",
+    "zh": "世界顶尖的理工大学，坐落在查尔斯河畔，以大穹顶为地标。隔壁的肯德尔广场实验室和新公寓林立，红线Kendall/MIT站和Central站都在附近。"
+   },
+   "lat": 42.3592,
+   "lng": -71.0934,
+   "address": "77 Massachusetts Avenue, Cambridge, MA 02139",
+   "area": {
+    "en": "Kendall Square, Cambridge",
+    "zh": "剑桥肯德尔广场"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Kendall Square",
+     "zh": "肯德尔广场"
+    },
+    "communities": [
+     "Kendall Square",
+     "Central Square",
+     "Cambridgeport",
+     "East Cambridge",
+     "Back Bay"
+    ]
+   },
+   "sort": 28
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Boston University (BU)",
+    "zh": "波士顿大学（BU）"
+   },
+   "desc": {
+    "en": "Large private research university whose campus stretches along Commonwealth Ave beside the Charles River. The Green Line B runs through campus; students spread across Allston, Fenway, Kenmore and Brookline.",
+    "zh": "大型私立研究型大学，校园沿联邦大道在查尔斯河畔一字排开。绿线B贯穿校园，学生分散住在奥斯顿、芬威、Kenmore和布鲁克莱恩。"
+   },
+   "lat": 42.3505,
+   "lng": -71.1054,
+   "address": "One Silber Way, Boston, MA 02215",
+   "area": {
+    "en": "Fenway–Kenmore, Boston",
+    "zh": "波士顿芬威–肯莫尔"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Fenway / Kenmore",
+     "zh": "芬威 / 肯莫尔"
+    },
+    "communities": [
+     "Allston",
+     "Fenway",
+     "Kenmore",
+     "Brookline",
+     "Back Bay"
+    ]
+   },
+   "sort": 29
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Northeastern University",
+    "zh": "东北大学"
+   },
+   "desc": {
+    "en": "Known for its co-op program that alternates classes with full-time work. The Huntington Ave campus sits between Fenway and Roxbury, with the Green Line E and the Orange Line at Ruggles on either side.",
+    "zh": "以带薪实习（co-op）项目闻名，学生在上课与全职工作之间轮换。校园位于Huntington大道，介于芬威和Roxbury之间，两侧分别有绿线E和橙线Ruggles站。"
+   },
+   "lat": 42.3398,
+   "lng": -71.0892,
+   "address": "360 Huntington Avenue, Boston, MA 02115",
+   "area": {
+    "en": "Fenway, Boston",
+    "zh": "波士顿芬威"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Fenway / Huntington Ave",
+     "zh": "芬威 / Huntington Ave"
+    },
+    "communities": [
+     "Fenway",
+     "Mission Hill",
+     "Back Bay",
+     "South End",
+     "Roxbury"
+    ]
+   },
+   "sort": 30
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Boston College (BC)",
+    "zh": "波士顿学院（BC）"
+   },
+   "desc": {
+    "en": "Jesuit research university with a Gothic hilltop campus crowned by Gasson Hall. It sits at the end of the Green Line B in leafy Chestnut Hill; students rent in Brighton and around Cleveland Circle.",
+    "zh": "耶稣会研究型大学，山顶校园为哥特式风格，以Gasson Hall为地标。位于绿线B终点、绿树成荫的Chestnut Hill，学生多在布莱顿和Cleveland Circle一带租房。"
+   },
+   "lat": 42.3355,
+   "lng": -71.1685,
+   "address": "140 Commonwealth Avenue, Chestnut Hill, MA 02467",
+   "area": {
+    "en": "Chestnut Hill, Newton",
+    "zh": "牛顿市Chestnut Hill"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Chestnut Hill",
+     "zh": "Chestnut Hill"
+    },
+    "communities": [
+     "Brighton",
+     "Cleveland Circle",
+     "Chestnut Hill",
+     "Newton Centre",
+     "Brookline"
+    ]
+   },
+   "sort": 31
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Tufts University",
+    "zh": "塔夫茨大学"
+   },
+   "desc": {
+    "en": "Research university on a hill straddling Medford and Somerville, home to the Fletcher School. The Green Line E ends at Medford/Tufts and Davis Square on the Red Line is nearby; rents are gentler than in Cambridge.",
+    "zh": "坐落在梅德福与萨默维尔交界山坡上的研究型大学，设有弗莱彻学院。绿线E终点Medford/Tufts站就在校旁，红线戴维斯广场也不远，租金比剑桥温和。"
+   },
+   "lat": 42.4075,
+   "lng": -71.119,
+   "address": "419 Boston Avenue, Medford, MA 02155",
+   "area": {
+    "en": "Medford / Somerville",
+    "zh": "梅德福 / 萨默维尔"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Medford / Somerville",
+     "zh": "梅德福 / 萨默维尔"
+    },
+    "communities": [
+     "Davis Square",
+     "Medford",
+     "Ball Square",
+     "Teele Square",
+     "Porter Square"
+    ]
+   },
+   "sort": 32
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Berklee College of Music",
+    "zh": "伯克利音乐学院"
+   },
+   "desc": {
+    "en": "The world's best-known college for contemporary music, at Massachusetts Ave and Boylston St. Hynes Convention Center and Symphony stations are steps away; students live in Fenway, Back Bay and Allston.",
+    "zh": "全球最知名的现代音乐学院，位于Massachusetts大道与Boylston街交汇处。Hynes Convention Center站和Symphony站近在咫尺，学生多住在芬威、后湾和奥斯顿。"
+   },
+   "lat": 42.3466,
+   "lng": -71.0895,
+   "address": "1140 Boylston Street, Boston, MA 02215",
+   "area": {
+    "en": "Back Bay / Fenway, Boston",
+    "zh": "波士顿后湾 / 芬威"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Back Bay / Fenway",
+     "zh": "后湾 / 芬威"
+    },
+    "communities": [
+     "Fenway",
+     "Back Bay",
+     "Symphony",
+     "Mission Hill",
+     "Allston"
+    ]
+   },
+   "sort": 33
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Emerson College",
+    "zh": "爱默生学院"
+   },
+   "desc": {
+    "en": "Communication and arts college known for film, journalism and theater, facing Boston Common in the Theater District. Boylston (Green) and Chinatown (Orange) stations are next door, with downtown high-rises all around.",
+    "zh": "以电影、新闻和戏剧见长的传媒艺术学院，位于剧院区，正对波士顿公园。绿线Boylston站和橙线Chinatown站就在旁边，周边是市中心的高层公寓。"
+   },
+   "lat": 42.3523,
+   "lng": -71.0657,
+   "address": "120 Boylston Street, Boston, MA 02116",
+   "area": {
+    "en": "Theater District, Downtown Boston",
+    "zh": "波士顿市中心剧院区"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Downtown Boston",
+     "zh": "波士顿市中心"
+    },
+    "communities": [
+     "Downtown Boston",
+     "Chinatown",
+     "Beacon Hill",
+     "South End",
+     "Back Bay"
+    ]
+   },
+   "sort": 34
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Suffolk University",
+    "zh": "萨福克大学"
+   },
+   "desc": {
+    "en": "Downtown university known for law and business, steps from the State House and Boston Common. Park Street and Government Center stations are close, so students commute easily from across the city.",
+    "zh": "以法学和商科见长的市中心大学，与州议会大厦和波士顿公园仅几步之遥。靠近Park Street站和Government Center站，从全城各处通勤都方便。"
+   },
+   "lat": 42.3578,
+   "lng": -71.0611,
+   "address": "73 Tremont Street, Boston, MA 02108",
+   "area": {
+    "en": "Downtown Boston",
+    "zh": "波士顿市中心"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Downtown Boston",
+     "zh": "波士顿市中心"
+    },
+    "communities": [
+     "Beacon Hill",
+     "Downtown Boston",
+     "North End",
+     "West End",
+     "East Boston"
+    ]
+   },
+   "sort": 35
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "University of Massachusetts Boston (UMass Boston)",
+    "zh": "马萨诸塞大学波士顿分校（UMass Boston）"
+   },
+   "desc": {
+    "en": "Boston's public research university, on the harbor at Columbia Point. A shuttle links campus to JFK/UMass on the Red Line; students find lower rents in Dorchester, South Boston and Quincy.",
+    "zh": "波士顿的公立研究型大学，位于海港边的Columbia Point。校车接驳红线JFK/UMass站，学生多在租金较低的多切斯特、南波士顿和昆西租房。"
+   },
+   "lat": 42.3134,
+   "lng": -71.0385,
+   "address": "100 William T. Morrissey Boulevard, Boston, MA 02125",
+   "area": {
+    "en": "Columbia Point, Dorchester",
+    "zh": "多切斯特Columbia Point"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Dorchester",
+     "zh": "多切斯特"
+    },
+    "communities": [
+     "Dorchester",
+     "Savin Hill",
+     "South Boston",
+     "North Quincy",
+     "Quincy"
+    ]
+   },
+   "sort": 36
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Brandeis University",
+    "zh": "布兰迪斯大学"
+   },
+   "desc": {
+    "en": "Private research university in suburban Waltham, strong in the sciences and its International Business School. The Commuter Rail stops at Brandeis/Roberts for Cambridge and North Station; most students rent in Waltham.",
+    "zh": "位于近郊沃尔瑟姆的私立研究型大学，理科和国际商学院实力强。通勤铁路Brandeis/Roberts站可到剑桥和北站，多数学生在沃尔瑟姆租房。"
+   },
+   "lat": 42.3657,
+   "lng": -71.2586,
+   "address": "415 South Street, Waltham, MA 02453",
+   "area": {
+    "en": "Waltham, Massachusetts",
+    "zh": "马萨诸塞州沃尔瑟姆"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Waltham",
+     "zh": "沃尔瑟姆"
+    },
+    "communities": [
+     "Waltham",
+     "Newton",
+     "Watertown",
+     "Cambridge"
+    ]
+   },
+   "sort": 37
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Bentley University",
+    "zh": "本特利大学"
+   },
+   "desc": {
+    "en": "Business-focused university known for accounting, finance and analytics, on a hilltop campus in Waltham. The setting is suburban; a campus shuttle runs to Harvard Square and many students keep a car.",
+    "zh": "以会计、金融和数据分析见长的商科大学，校园坐落在沃尔瑟姆的山坡上。环境偏郊区，有校车往返哈佛广场，不少学生自己开车。"
+   },
+   "lat": 42.3876,
+   "lng": -71.2206,
+   "address": "175 Forest Street, Waltham, MA 02452",
+   "area": {
+    "en": "Waltham, Massachusetts",
+    "zh": "马萨诸塞州沃尔瑟姆"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Waltham",
+     "zh": "沃尔瑟姆"
+    },
+    "communities": [
+     "Waltham",
+     "Belmont",
+     "Watertown",
+     "Cambridge"
+    ]
+   },
+   "sort": 38
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Babson College",
+    "zh": "巴布森学院"
+   },
+   "desc": {
+    "en": "Business school famous for entrepreneurship, on a wooded campus in Wellesley. The area is quiet and car-oriented, with Commuter Rail service from Wellesley to Back Bay and South Station.",
+    "zh": "以创业教育闻名的商学院，校园位于韦尔斯利，林木环绕。周边安静、以开车出行为主，可从韦尔斯利乘通勤铁路到Back Bay站和南站。"
+   },
+   "lat": 42.2975,
+   "lng": -71.264,
+   "address": "231 Forest Street, Babson Park, MA 02457",
+   "area": {
+    "en": "Wellesley, Massachusetts",
+    "zh": "马萨诸塞州韦尔斯利"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "hub": {
+     "en": "Wellesley",
+     "zh": "韦尔斯利"
+    },
+    "communities": [
+     "Wellesley",
+     "Needham",
+     "Newton",
+     "Brookline"
+    ]
+   },
+   "sort": 39
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Fenway Park",
+    "zh": "Fenway Park"
+   },
+   "desc": {
+    "en": "Home of the Red Sox since 1912 and the oldest ballpark in Major League Baseball, famous for the Green Monster wall; Kenmore station is a short walk.",
+    "zh": "红袜队自1912年起的主场，美国职棒大联盟最古老的球场，以“绿怪物”外野墙闻名，从Kenmore站步行即到。"
+   },
+   "lat": 42.34646,
+   "lng": -71.0971,
+   "address": "4 Jersey St, Boston, MA 02215",
+   "area": {
+    "en": "Fenway / Kenmore",
+    "zh": "芬威 / 肯莫尔"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "venue"
+   },
+   "sort": 40
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Boston Common",
+    "zh": "Boston Common"
+   },
+   "desc": {
+    "en": "America's oldest public park, dating to 1634, with the Frog Pond rink in winter and the Public Garden's swan boats next door; Park Street station sits at its corner.",
+    "zh": "美国最古老的城市公园，始于1634年，冬季有Frog Pond溜冰场，隔壁是有天鹅船的波士顿公共花园，Park Street站就在公园一角。"
+   },
+   "lat": 42.355,
+   "lng": -71.0656,
+   "address": "139 Tremont St, Boston, MA 02111",
+   "area": {
+    "en": "Downtown / Beacon Hill",
+    "zh": "市中心 / 比肯山"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "park"
+   },
+   "sort": 41
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Faneuil Hall Marketplace",
+    "zh": "Faneuil Hall Marketplace"
+   },
+   "desc": {
+    "en": "Historic 1742 meeting hall and the Quincy Market food hall, surrounded by shops and street performers, between Government Center and the waterfront.",
+    "zh": "建于1742年的历史会议厅和昆西市场美食大厅，周围商店和街头艺人云集，位于政府中心和海滨之间。"
+   },
+   "lat": 42.36003,
+   "lng": -71.0556,
+   "address": "4 S Market St, Boston, MA 02109",
+   "area": {
+    "en": "Downtown Boston",
+    "zh": "波士顿市中心"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "square"
+   },
+   "sort": 42
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Museum of Fine Arts",
+    "zh": "Museum of Fine Arts"
+   },
+   "desc": {
+    "en": "One of the largest art museums in the US, on Huntington Avenue beside Northeastern, with its own Green Line E stop; students at many local colleges get in free.",
+    "zh": "全美规模最大的艺术博物馆之一，位于Huntington大道、东北大学旁，绿线E设有同名车站，本地多所高校的学生可免费入场。"
+   },
+   "lat": 42.33946,
+   "lng": -71.0939,
+   "address": "465 Huntington Ave, Boston, MA 02115",
+   "area": {
+    "en": "Fenway",
+    "zh": "芬威"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "museum"
+   },
+   "sort": 43
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Prudential Center",
+    "zh": "Prudential Center"
+   },
+   "desc": {
+    "en": "Back Bay's 52-story Prudential Tower with the View Boston observation deck on top and a shopping arcade below, linked to the Green Line E at Prudential.",
+    "zh": "后湾52层的保诚大厦，顶部是View Boston观景台，楼下是购物中心，与绿线E的Prudential站相连。"
+   },
+   "lat": 42.34717,
+   "lng": -71.08251,
+   "address": "800 Boylston St, Boston, MA 02199",
+   "area": {
+    "en": "Back Bay",
+    "zh": "后湾"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "tower"
+   },
+   "sort": 44
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Copley Square",
+    "zh": "Copley Square"
+   },
+   "desc": {
+    "en": "Back Bay's central plaza, framed by Trinity Church, the Boston Public Library and the glass John Hancock tower, next to the Boston Marathon finish line.",
+    "zh": "后湾的中心广场，被三一教堂、波士顿公共图书馆和玻璃幕墙的约翰·汉考克大厦环绕，波士顿马拉松终点线就在旁边。"
+   },
+   "lat": 42.34998,
+   "lng": -71.07654,
+   "address": "560 Boylston St, Boston, MA 02116",
+   "area": {
+    "en": "Back Bay",
+    "zh": "后湾"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "square"
+   },
+   "sort": 45
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "TD Garden",
+    "zh": "TD Garden"
+   },
+   "desc": {
+    "en": "Arena of the Celtics and Bruins and a major concert venue, built directly above North Station with Orange and Green Line and Commuter Rail service.",
+    "zh": "凯尔特人队和棕熊队的主场，也是大型演唱会场馆，就建在北站上方，有橙线、绿线和通勤铁路。"
+   },
+   "lat": 42.3663,
+   "lng": -71.06216,
+   "address": "100 Legends Way, Boston, MA 02114",
+   "area": {
+    "en": "North Station / West End",
+    "zh": "北站 / 西端"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "venue"
+   },
+   "sort": 46
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Charles River Esplanade",
+    "zh": "Charles River Esplanade"
+   },
+   "desc": {
+    "en": "Riverside park along the Charles with running and cycling paths, sailing docks and the Hatch Shell, stage of the July 4th concert; steps from Back Bay and Beacon Hill.",
+    "zh": "查尔斯河畔的带状公园，有跑步和骑行道、帆船码头，以及举办7月4日国庆音乐会的Hatch Shell露天舞台，从后湾和比肯山步行即到。"
+   },
+   "lat": 42.3573,
+   "lng": -71.0737,
+   "address": "Charles River Esplanade (David G Mugar Way), Boston, MA 02114",
+   "area": {
+    "en": "Back Bay / Beacon Hill",
+    "zh": "后湾 / 比肯山"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "park"
+   },
+   "sort": 47
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "South Station",
+    "zh": "South Station"
+   },
+   "desc": {
+    "en": "Boston's main rail and bus terminal for Amtrak, Commuter Rail and intercity buses, with the Red Line and Silver Line below, at the edge of the Financial District.",
+    "zh": "波士顿最主要的铁路和巴士枢纽，美铁、通勤铁路和长途巴士在此发车，地下有红线和银线，位于金融区边缘。"
+   },
+   "lat": 42.3519,
+   "lng": -71.0552,
+   "address": "700 Atlantic Ave, Boston, MA 02110",
+   "area": {
+    "en": "Financial District",
+    "zh": "金融区"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "train"
+   },
+   "sort": 48
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Zakim Bridge",
+    "zh": "Zakim Bridge"
+   },
+   "desc": {
+    "en": "The cable-stayed Leonard P. Zakim Bunker Hill Memorial Bridge carries I-93 over the Charles River beside TD Garden and is lit blue at night.",
+    "zh": "斜拉式的Leonard P. Zakim邦克山纪念大桥，承载I-93州际公路跨越查尔斯河，紧邻TD Garden，夜间亮起蓝色灯光。"
+   },
+   "lat": 42.3686,
+   "lng": -71.06296,
+   "address": "I-93 over the Charles River, Boston, MA 02114",
+   "area": {
+    "en": "North Station / West End",
+    "zh": "北站 / 西端"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "bridge"
+   },
+   "sort": 49
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Fidelity Investments (245 Summer Street)",
+    "zh": "Fidelity Investments (245 Summer Street)"
+   },
+   "desc": {
+    "en": "Headquarters of Fidelity Investments, one of the world's largest asset managers, across the street from South Station.",
+    "zh": "全球最大资产管理公司之一富达投资的总部，就在南站对面。"
+   },
+   "lat": 42.35127,
+   "lng": -71.05374,
+   "address": "245 Summer St, Boston, MA 02210",
+   "area": {
+    "en": "Financial District",
+    "zh": "金融区"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "finance"
+   },
+   "sort": 50
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "State Street (One Congress)",
+    "zh": "State Street (One Congress)"
+   },
+   "desc": {
+    "en": "Global headquarters of custody bank State Street, in the glass One Congress tower next to Haymarket station.",
+    "zh": "托管银行道富集团的全球总部，位于Haymarket站旁的玻璃幕墙大楼One Congress。"
+   },
+   "lat": 42.36266,
+   "lng": -71.06002,
+   "address": "1 Congress St, Boston, MA 02114",
+   "area": {
+    "en": "Government Center",
+    "zh": "政府中心"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "finance"
+   },
+   "sort": 51
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Boston Consulting Group (200 Pier 4)",
+    "zh": "Boston Consulting Group (200 Pier 4)"
+   },
+   "desc": {
+    "en": "Headquarters office of Boston Consulting Group, on the Seaport waterfront at Pier 4.",
+    "zh": "波士顿咨询公司（BCG）的总部办公室，位于海港区Pier 4滨水地段。"
+   },
+   "lat": 42.3528,
+   "lng": -71.044,
+   "address": "200 Pier 4 Blvd, Boston, MA 02210",
+   "area": {
+    "en": "Seaport District",
+    "zh": "海港区"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "consulting"
+   },
+   "sort": 52
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Bain & Company (131 Dartmouth Street)",
+    "zh": "Bain & Company (131 Dartmouth Street)"
+   },
+   "desc": {
+    "en": "Global headquarters of consulting firm Bain & Company, next to Back Bay Station and Copley Place.",
+    "zh": "咨询公司贝恩的全球总部，紧邻Back Bay站和Copley Place。"
+   },
+   "lat": 42.34699,
+   "lng": -71.07513,
+   "address": "131 Dartmouth St, Boston, MA 02116",
+   "area": {
+    "en": "Back Bay",
+    "zh": "后湾"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "consulting"
+   },
+   "sort": 53
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Google Cambridge (325 Main Street)",
+    "zh": "Google Cambridge (325 Main Street)"
+   },
+   "desc": {
+    "en": "Google's main New England engineering office, in a tower directly above the Kendall/MIT Red Line station.",
+    "zh": "谷歌在新英格兰地区的主要工程办公室，大楼就在红线Kendall/MIT站正上方。"
+   },
+   "lat": 42.3628,
+   "lng": -71.08675,
+   "address": "325 Main St, Cambridge, MA 02142",
+   "area": {
+    "en": "Kendall Square",
+    "zh": "肯德尔广场"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "tech"
+   },
+   "sort": 54
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Amazon (111 Harbor Way)",
+    "zh": "Amazon (111 Harbor Way)"
+   },
+   "desc": {
+    "en": "Amazon's Boston tech hub, an office tower in Seaport Square a short walk from the Silver Line.",
+    "zh": "亚马逊在波士顿的科技中心，位于Seaport Square的办公大楼，步行可到银线车站。"
+   },
+   "lat": 42.3499,
+   "lng": -71.0457,
+   "address": "111 Harbor Way, Boston, MA 02210",
+   "area": {
+    "en": "Seaport District",
+    "zh": "海港区"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "tech"
+   },
+   "sort": 55
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Vertex Pharmaceuticals (50 Northern Avenue)",
+    "zh": "Vertex Pharmaceuticals (50 Northern Avenue)"
+   },
+   "desc": {
+    "en": "Global headquarters of biotech company Vertex Pharmaceuticals, in twin buildings at Fan Pier on the Seaport waterfront.",
+    "zh": "生物科技公司福泰制药的全球总部，位于海港区Fan Pier滨水地段的两栋大楼。"
+   },
+   "lat": 42.35359,
+   "lng": -71.04618,
+   "address": "50 Northern Ave, Boston, MA 02210",
+   "area": {
+    "en": "Seaport District",
+    "zh": "海港区"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "health"
+   },
+   "sort": 56
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Moderna (325 Binney Street)",
+    "zh": "Moderna (325 Binney Street)"
+   },
+   "desc": {
+    "en": "Headquarters and science center of mRNA company Moderna, among the labs of Kendall Square.",
+    "zh": "mRNA公司莫德纳的总部和科研中心，位于实验室云集的肯德尔广场。"
+   },
+   "lat": 42.36747,
+   "lng": -71.08857,
+   "address": "325 Binney St, Cambridge, MA 02142",
+   "area": {
+    "en": "Kendall Square",
+    "zh": "肯德尔广场"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "health"
+   },
+   "sort": 57
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Massachusetts General Hospital",
+    "zh": "Massachusetts General Hospital"
+   },
+   "desc": {
+    "en": "Mass General, Harvard Medical School's largest teaching hospital and one of the city's biggest employers, by the Charles/MGH Red Line station.",
+    "zh": "麻省总医院，哈佛医学院规模最大的教学医院，也是全市最大的雇主之一，紧邻红线Charles/MGH站。"
+   },
+   "lat": 42.36286,
+   "lng": -71.06875,
+   "address": "55 Fruit St, Boston, MA 02114",
+   "area": {
+    "en": "West End",
+    "zh": "西端"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "health"
+   },
+   "sort": 58
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Boston Children's Hospital",
+    "zh": "Boston Children's Hospital"
+   },
+   "desc": {
+    "en": "Boston Children's Hospital, a leading pediatric hospital and Harvard teaching affiliate at the center of the Longwood Medical Area.",
+    "zh": "波士顿儿童医院，全美领先的儿科医院、哈佛医学院教学医院，位于长木医学区中心。"
+   },
+   "lat": 42.3374,
+   "lng": -71.1053,
+   "address": "300 Longwood Ave, Boston, MA 02115",
+   "area": {
+    "en": "Longwood Medical Area",
+    "zh": "长木医学区"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "health"
+   },
+   "sort": 59
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Wayfair (4 Copley Place)",
+    "zh": "Wayfair (4 Copley Place)"
+   },
+   "desc": {
+    "en": "Headquarters of online home-goods retailer Wayfair, in the Copley Place complex beside Back Bay Station.",
+    "zh": "家居电商Wayfair的总部，位于Back Bay站旁的Copley Place综合体。"
+   },
+   "lat": 42.3473,
+   "lng": -71.0779,
+   "address": "4 Copley Pl, Boston, MA 02116",
+   "area": {
+    "en": "Back Bay",
+    "zh": "后湾"
+   },
+   "logo": null,
+   "images": [],
+   "extra": {
+    "icon": "consumer"
+   },
+   "sort": 60
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "South Station (Red Line+Commuter Rail+Amtrak)",
+    "zh": "South Station (Red Line+Commuter Rail+Amtrak)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3523,
+   "lng": -71.0552,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 61
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "North Station (Orange/Green+Commuter Rail)",
+    "zh": "North Station (Orange/Green+Commuter Rail)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3656,
+   "lng": -71.0613,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 62
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Back Bay Station (Orange Line+Commuter Rail+Amtrak)",
+    "zh": "Back Bay Station (Orange Line+Commuter Rail+Amtrak)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3474,
+   "lng": -71.0757,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 63
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Park Street (Red/Green)",
+    "zh": "Park Street (Red/Green)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3564,
+   "lng": -71.0624,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 64
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Downtown Crossing (Red/Orange)",
+    "zh": "Downtown Crossing (Red/Orange)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3555,
+   "lng": -71.0602,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 65
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Government Center (Blue/Green)",
+    "zh": "Government Center (Blue/Green)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3597,
+   "lng": -71.0592,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 66
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "State (Orange/Blue)",
+    "zh": "State (Orange/Blue)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.359,
+   "lng": -71.0576,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 67
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Kenmore (Green B/C/D)",
+    "zh": "Kenmore (Green B/C/D)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.349,
+   "lng": -71.0952,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 68
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Harvard (Red Line)",
+    "zh": "Harvard (Red Line)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3734,
+   "lng": -71.119,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 69
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Kendall/MIT (Red Line)",
+    "zh": "Kendall/MIT (Red Line)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3625,
+   "lng": -71.0862,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 70
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Ruggles (Orange Line+Commuter Rail)",
+    "zh": "Ruggles (Orange Line+Commuter Rail)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3364,
+   "lng": -71.089,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 71
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Logan International Airport (BOS)",
+    "zh": "Logan International Airport (BOS)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 42.3656,
+   "lng": -71.0175,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 72
+  }
+ ]
+}

@@ -1,0 +1,217 @@
+{
+  "key": "home",
+  "payload": {
+    "about": {
+      "cta": {
+        "en": "Know More About Us",
+        "zh": "关于我们"
+      },
+      "eyebrow": {
+        "en": "About USWOO",
+        "zh": "关于 USWOO"
+      },
+      "index": "05",
+      "lede": {
+        "en": "Real market knowledge, local relationships, and thousands of renter journeys behind us.",
+        "zh": "扎实的市场认知、深厚的本地资源，以及数以千计的租客服务经验，是我们的底气。"
+      },
+      "stats": [
+        {
+          "desc": {
+            "en": "Renters we've helped find the right place.",
+            "zh": "累计帮助超过 20 万名租客找到理想住所。"
+          },
+          "label": {
+            "en": "Clients Served",
+            "zh": "服务客户"
+          },
+          "value": 200000
+        },
+        {
+          "desc": {
+            "en": "Leases signed across our markets annually.",
+            "zh": "每年促成超过 2 万笔租赁交易。"
+          },
+          "label": {
+            "en": "Leases Per Year",
+            "zh": "年度签约"
+          },
+          "value": 20000
+        },
+        {
+          "desc": {
+            "en": "Metro areas covered by our local teams.",
+            "zh": "业务覆盖美国 10 余个城市及地区。"
+          },
+          "label": {
+            "en": "Cities & Markets",
+            "zh": "覆盖市场"
+          },
+          "value": 10
+        },
+        {
+          "desc": {
+            "en": "Developers, brokerages, and vendors we work with.",
+            "zh": "与超过 300 家开发商、物业管理公司及租赁服务商建立合作关系。"
+          },
+          "label": {
+            "en": "Partners",
+            "zh": "合作伙伴"
+          },
+          "value": 300
+        }
+      ],
+      "title": {
+        "en": "Built on Local Experience.",
+        "zh": "深耕本地，积累经验"
+      }
+    },
+    "cta": {
+      "eyebrow": {
+        "en": "CTA",
+        "zh": "CTA"
+      },
+      "index": "06",
+      "lede": {
+        "en": "Looking for a home, exploring a neighborhood, or figuring out where to start? We're here to help.",
+        "zh": "关于新家的每一个问题，都可以从一次简单的交流开始。"
+      },
+      "primary": {
+        "en": "Find a Home",
+        "zh": "开始找房"
+      },
+      "secondary": {
+        "en": "Talk to USWOO",
+        "zh": "联系 USWOO"
+      },
+      "title": {
+        "en": "Your City Starts Here.",
+        "zh": "你的城市生活<br class=m-br>从这里开始"
+      }
+    },
+    "help": {
+      "cards": [
+        {
+          "image": {
+            "url": "/assets/help-know-where.webp"
+          },
+          "text": {
+            "en": "Neighborhoods, commute, schools and lifestyle.",
+            "zh": "从社区氛围到通勤距离，结合学校和生活习惯，找到更适合你的选择。"
+          },
+          "title": {
+            "en": "Know Where to Live",
+            "zh": "先找到适合自己的生活圈"
+          }
+        },
+        {
+          "image": {
+            "url": "/assets/help-find-move.webp"
+          },
+          "text": {
+            "en": "The right home, with support from touring to move-in.",
+            "zh": "看房、申请、签约到搬家，每一步都有专人协助。"
+          },
+          "title": {
+            "en": "Find & Move",
+            "zh": "从看房到安心入住"
+          }
+        },
+        {
+          "image": {
+            "url": "/assets/slots/help-img-3.jpg"
+          },
+          "text": {
+            "en": "Local resources, community and connections after you move.",
+            "zh": "连接本地资源、校友社群与生活圈，让新城市慢慢变成熟悉的地方。"
+          },
+          "title": {
+            "en": "Settle In & Connect",
+            "zh": "从安家到融入当地"
+          }
+        }
+      ],
+      "eyebrow": {
+        "en": "How We Help",
+        "zh": "我们如何帮你"
+      },
+      "index": "02",
+      "lede": {
+        "en": "Finding a place isn't just about square footage or rent. It's about the neighborhood, the commute, and the life you want to build around it.",
+        "zh": "找到合适的家，不只是比较面积和租金。社区氛围、通勤便利，以及你期待的生活方式，同样重要。"
+      },
+      "title": {
+        "en": "A Better Way to Find Home.",
+        "zh": "<span class=zh-d>找家这件事原来可以更从容</span><span class=zh-m>落地新城市，原来可以更从容</span>"
+      }
+    },
+    "hero": {
+      "cityLayer": {
+        "url": "/assets/uswoo-hero-city.webp"
+      },
+      "poster": {
+        "url": "/assets/uswoo-hero-poster.jpg"
+      },
+      "sub": {
+        "en": "More than finding an apartment. We help you figure out where to live, how to settle in, and what comes next.",
+        "zh": "从选区域到安顿下来，之后的每一步我们都陪你理清。"
+      },
+      "title": {
+        "en": "Find Your Place in the City.",
+        "zh": "在美国的新篇章<br class=m-br>从安心安家开始"
+      },
+      "video": "/assets/uswoo-hero-video.mp4"
+    },
+    "listings": {
+      "cta": {
+        "en": "View All Listings",
+        "zh": "查看全部房源"
+      },
+      "eyebrow": {
+        "en": "Exclusive Listings",
+        "zh": "独家房源"
+      },
+      "index": "04",
+      "lede": {
+        "en": "Hand-picked homes you won't find anywhere else, ready to tour in our markets.",
+        "zh": "精选独家房源，别处找不到，随时可以预约看房。"
+      },
+      "title": {
+        "en": "Only Found at USWOO.",
+        "zh": "独家房源，只在 USWOO"
+      }
+    },
+    "locations": {
+      "eyebrow": {
+        "en": "Our Locations",
+        "zh": "服务城市"
+      },
+      "index": "03",
+      "lede": {
+        "en": "USWOO helps renters find home across six major U.S. markets.",
+        "zh": "USWOO 已在美国六大核心市场，帮助租客找到属于自己的家。"
+      },
+      "title": {
+        "en": "Where We Operate.",
+        "zh": "我们在这些城市"
+      }
+    },
+    "seo": {
+      "description": {
+        "en": "More than finding an apartment. We help you figure out where to live, how to settle in, and what comes next.",
+        "zh": "从选区域到安顿下来，之后的每一步我们都陪你理清。"
+      },
+      "logo": {
+        "url": "/assets/uswoo-hero-poster.jpg"
+      },
+      "title": {
+        "en": "USWOO | Find Your Place in the City",
+        "zh": "USWOO | Find Your Place in the City"
+      },
+      "keywords": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  }
+}

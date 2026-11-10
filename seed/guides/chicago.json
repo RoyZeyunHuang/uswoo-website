@@ -1,0 +1,2782 @@
+{
+ "region": "chicago",
+ "payload": {
+  "cityName": {
+   "en": "Chicago",
+   "zh": "芝加哥"
+  },
+  "emoji": "🌆",
+  "intro": {
+   "en": "In Chicago, choosing where to live often comes down to school, work, and commute. With universities, hospitals, trading firms, consulting offices, and corporate employers spread across the city, the right neighborhood can make everyday life much easier.",
+   "zh": "在芝加哥，选住哪里通常取决于学校、工作和通勤。大学、医院、交易公司、咨询机构和企业雇主遍布全城，选对社区能让日常生活轻松许多。"
+  },
+  "areas": [
+   {
+    "emoji": "🚋",
+    "name": {
+     "en": "The Loop & South Loop",
+     "zh": "The Loop & South Loop"
+    },
+    "tags": [
+     {
+      "en": "SAIC",
+      "zh": "SAIC"
+     },
+     {
+      "en": "DePaul Loop",
+      "zh": "DePaul Loop"
+     },
+     {
+      "en": "Columbia",
+      "zh": "Columbia"
+     }
+    ],
+    "text": {
+     "en": "A strong option for students at SAIC, DePaul’s Loop Campus, Columbia College Chicago, and Roosevelt University, as well as professionals working in finance, consulting, law, and corporate offices Downtown. The area offers broad CTA access, a large rental inventory, and easy connections to both campus and work.",
+     "zh": "适合 SAIC、Roosevelt University 和 Columbia College Chicago 的学生，以及在 Downtown Chicago 从事金融、咨询、法律和企业服务的职场人士。周边 CTA 线路密集，公寓选择丰富，学校、办公区和生活配套相对集中，适合希望享受便利都市生活的人。"
+    },
+    "short": {
+     "en": "A strong option for SAIC, DePaul Loop, Columbia College, and Roosevelt students and Downtown professionals. Broad CTA access and plenty of rentals.",
+     "zh": "适合 SAIC、Roosevelt University 和 Columbia College Chicago 的学生，以及在 Downtown Chicago 从事金融、咨询、法律和企业服务的职场人士。周边 CTA 线路密集，公寓选择丰富，学校、办公区和生活配套相对集中，适合希望享受便利都市生活的人。"
+    },
+    "image": {
+     "url": "/assets/chi-loop.jpg"
+    }
+   },
+   {
+    "emoji": "🌊",
+    "name": {
+     "en": "Streeterville, River North & Lakeshore East",
+     "zh": "Streeterville, River North & Lakeshore East"
+    },
+    "tags": [
+     {
+      "en": "Northwestern",
+      "zh": "Northwestern"
+     },
+     {
+      "en": "Healthcare",
+      "zh": "Healthcare"
+     },
+     {
+      "en": "High-rise",
+      "zh": "High-rise"
+     }
+    ],
+    "text": {
+     "en": "Popular with students at Northwestern’s Chicago campus and UChicago programs based Downtown, as well as professionals working in healthcare, law, consulting, tech, and corporate roles. Streeterville is especially convenient for Northwestern Medicine and nearby hospitals, while River North and Lakeshore East offer strong access to Downtown offices and premium high rise living.",
+     "zh": "适合 Northwestern University Chicago Campus 的学生，以及从事医疗、法律、咨询、科技和企业服务的职场人士。Streeterville 靠近 Northwestern Memorial Hospital 及相关院校，River North 聚集了不少办公楼和餐饮娱乐场所，Lakeshore East 则拥有现代化高层公寓和临近湖畔的生活环境。"
+    },
+    "short": {
+     "en": "Popular with Northwestern Chicago-campus students and Downtown professionals. Close to Northwestern Medicine, with strong office access and premium high-rise living.",
+     "zh": "适合 Northwestern University Chicago Campus 的学生，以及从事医疗、法律、咨询、科技和企业服务的职场人士。Streeterville 靠近 Northwestern Memorial Hospital 及相关院校，River North 聚集了不少办公楼和餐饮娱乐场所，Lakeshore East 则拥有现代化高层公寓和临近湖畔的生活环境。"
+    },
+    "image": {
+     "url": "/assets/chi-streeterville.jpg"
+    }
+   },
+   {
+    "emoji": "🍽️",
+    "name": {
+     "en": "West Loop, Fulton Market & Near West Side",
+     "zh": "West Loop, Fulton Market & Near West Side"
+    },
+    "tags": [
+     {
+      "en": "UIC",
+      "zh": "UIC"
+     },
+     {
+      "en": "Rush",
+      "zh": "Rush"
+     },
+     {
+      "en": "Trading",
+      "zh": "Trading"
+     }
+    ],
+    "text": {
+     "en": "A natural fit for UIC students and professionals in trading, finance, consulting, tech, and corporate offices. The area is close to UIC and Rush while also being one of Chicago’s strongest employment and dining hubs, making it popular with both graduates and young professionals.",
+     "zh": "适合 UIC、Rush University 的学生，以及在金融、咨询、科技和企业工作的职场人士。West Loop 和 Fulton Market 聚集了众多餐厅、创意办公空间与新兴企业，Near West Side 则靠近 UIC 和 Illinois Medical District。这里兼具便利的城市生活与多样的住宅选择，受到学生和年轻职场人士的欢迎。"
+    },
+    "short": {
+     "en": "A natural fit for UIC students and professionals in finance, tech, and consulting. Close to UIC and Rush, and one of Chicago’s top dining and job hubs.",
+     "zh": "适合 UIC、Rush University 的学生，以及在金融、咨询、科技和企业工作的职场人士。West Loop 和 Fulton Market 聚集了众多餐厅、创意办公空间与新兴企业，Near West Side 则靠近 UIC 和 Illinois Medical District。这里兼具便利的城市生活与多样的住宅选择，受到学生和年轻职场人士的欢迎。"
+    },
+    "image": {
+     "url": "/assets/chi-west-loop.jpg"
+    }
+   },
+   {
+    "emoji": "🎓",
+    "name": {
+     "en": "Hyde Park, Bronzeville & Chinatown",
+     "zh": "Hyde Park, Bronzeville & Chinatown"
+    },
+    "tags": [
+     {
+      "en": "UChicago",
+      "zh": "UChicago"
+     },
+     {
+      "en": "IIT",
+      "zh": "IIT"
+     },
+     {
+      "en": "Red & Green Line",
+      "zh": "Red & Green Line"
+     }
+    ],
+    "text": {
+     "en": "The main housing area for University of Chicago and IIT students, especially for those who want to stay closer to campus. Hyde Park offers direct access to UChicago, while Bronzeville and Chinatown provide more budget friendly options, Red and Green Line access, and convenient access to Asian groceries and dining.",
+     "zh": "适合 University of Chicago 和 Illinois Tech (IIT) 的学生，以及希望住在学校周边的租客。Hyde Park 拥有浓厚的学术氛围，Bronzeville 靠近 IIT 校区，Chinatown 则以丰富的餐饮与生活配套受到欢迎。各社区可通过 CTA 及公交线路往返城市其他区域，适合希望兼顾学习与日常生活的人。"
+    },
+    "short": {
+     "en": "The main housing area for UChicago and IIT students. Hyde Park is closest to campus, while Bronzeville and Chinatown offer budget-friendly options and Asian groceries.",
+     "zh": "适合 University of Chicago 和 Illinois Tech (IIT) 的学生，以及希望住在学校周边的租客。Hyde Park 拥有浓厚的学术氛围，Bronzeville 靠近 IIT 校区，Chinatown 则以丰富的餐饮与生活配套受到欢迎。各社区可通过 CTA 及公交线路往返城市其他区域，适合希望兼顾学习与日常生活的人。"
+    },
+    "image": {
+     "url": "/assets/chi-hyde-park.jpg"
+    }
+   },
+   {
+    "emoji": "🌳",
+    "name": {
+     "en": "Lincoln Park, Evanston & North Side",
+     "zh": "Lincoln Park, Evanston & North Side"
+    },
+    "tags": [
+     {
+      "en": "DePaul LP",
+      "zh": "DePaul LP"
+     },
+     {
+      "en": "Evanston",
+      "zh": "Evanston"
+     },
+     {
+      "en": "CTA",
+      "zh": "CTA"
+     }
+    ],
+    "text": {
+     "en": "A practical choice for DePaul Lincoln Park students and Northwestern students based in Evanston. Lincoln Park offers a more residential neighborhood feel with easy CTA access Downtown, while Evanston functions as its own college town and is best suited for students and professionals tied directly to Northwestern’s main campus.",
+     "zh": "适合 DePaul University Lincoln Park Campus 和 Northwestern University Evanston Campus 的学生，以及希望住在 Chicago 北部的职场人士。Lincoln Park 拥有丰富的餐饮、购物与休闲选择，Evanston 则以大学城氛围和湖畔生活受到欢迎。部分社区可搭乘 CTA 或 Metra 往返 Downtown Chicago，适合希望兼顾校园生活与城市便利的人。"
+    },
+    "short": {
+     "en": "A practical choice for DePaul Lincoln Park and Northwestern students. Lincoln Park is residential with easy CTA access, while Evanston is its own college town.",
+     "zh": "适合 DePaul University Lincoln Park Campus 和 Northwestern University Evanston Campus 的学生，以及希望住在 Chicago 北部的职场人士。Lincoln Park 拥有丰富的餐饮、购物与休闲选择，Evanston 则以大学城氛围和湖畔生活受到欢迎。部分社区可搭乘 CTA 或 Metra 往返 Downtown Chicago，适合希望兼顾校园生活与城市便利的人。"
+    },
+    "image": {
+     "url": "/assets/chi-lincoln-park.jpg"
+    }
+   }
+  ],
+  "closing": {
+   "emoji": "✨",
+   "title": {
+    "en": "Found your area?",
+    "zh": "选好区域了吗？"
+   },
+   "text": {
+    "en": "Once you know which area fits your school, office, and daily routine, we can help with apartment search, leasing, moving, furniture, room dividers, Wi Fi, electricity, renters insurance, and other move in essentials.",
+    "zh": "选好适合你的学校、公司和日常作息的区域后，我们可以帮你搞定找房、签约、搬家、家具、房间隔断、Wi-Fi、水电、租客保险等入住必备事项。"
+   },
+   "short": {
+    "en": "Once you know your area, we can help with the rest, from apartment search to move-in essentials.",
+    "zh": "选好区域后，其余的交给我们，从找房到入住所需的一切。"
+   },
+   "image": {
+    "url": "/assets/chi-closing.jpg"
+   },
+   "hideOnMobile": true
+  },
+  "map": {
+   "center": {
+    "lat": 41.89,
+    "lng": -87.66
+   },
+   "zoom": 11,
+   "minZoom": 9,
+   "bounds": [
+    [
+     41.65,
+     -87.95
+    ],
+    [
+     42.08,
+     -87.55
+    ]
+   ],
+   "neighborhoods": {
+    "url": "/assets/guides/chicago/neighborhoods.geojson"
+   },
+   "businessDistricts": {
+    "url": "/assets/guides/chicago/business-districts.geojson"
+   },
+   "transit": {
+    "url": "/assets/transit/CHI.geojson"
+   }
+  }
+ },
+ "places": [
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "The Loop",
+    "zh": "卢普区"
+   },
+   "desc": {
+    "en": "Downtown Chicago under the 'L': high-rise apartments, theaters, Millennium Park and every train line. Ultra-convenient for SAIC and Columbia students; quieter at night.",
+    "zh": "芝加哥市中心，高架轨道环绕，高层公寓、剧院、千禧公园和所有地铁线汇聚；SAIC和哥伦比亚学院学生通勤极便利，晚上较安静。"
+   },
+   "lat": 41.8827,
+   "lng": -87.6298,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-the-loop-1.jpg",
+    "/assets/places/area-chi-the-loop-2.jpg",
+    "/assets/places/area-chi-the-loop-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_River.jpg",
+      "author": "Michael Lazarev (Asmadeus)",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:@sawyerbengtson_(Unsplash_ExRwUKMHZ6w).jpg",
+      "author": "Sawyer Bengtson sawyerbengtson",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_Skyline_(Unsplash).jpg",
+      "author": "Fineas Anton fineas_anton",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 1
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "West Loop",
+    "zh": "West Loop"
+   },
+   "desc": {
+    "en": "Former warehouse district turned dining hotspot, with Randolph's Restaurant Row, lofts and new towers. Near UIC; trendy and pricey, Green/Pink lines.",
+    "zh": "由仓库区转型的美食热点，Randolph街餐厅一条街、loft和新高楼林立；靠近UIC，时髦且租金偏高，有绿/粉线。"
+   },
+   "lat": 41.8859,
+   "lng": -87.6499,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-west-loop-1.jpg",
+    "/assets/places/area-chi-west-loop-2.jpg",
+    "/assets/places/area-chi-west-loop-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fulton_Market_District_(51627543540).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_20110913_01_Randolph_St._near_Green_Street_(6963117053).jpg",
+      "author": "David Wilson from Oak Park, Illinois, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Jackson_Boulevard,_West_Loop,_Chicago,_Illinois_(11004373093).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 2
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "River North",
+    "zh": "河北区"
+   },
+   "desc": {
+    "en": "Galleries, restaurants and nightlife just north of the river, full of high-rise rentals. Central and lively on the Red/Brown lines; popular with young professionals, rents high.",
+    "zh": "芝加哥河北岸，画廊、餐厅和夜生活集中，高层出租公寓多；位置居中、热闹，有红/棕线，年轻上班族多，租金较高。"
+   },
+   "lat": 41.8919,
+   "lng": -87.6342,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-river-north-1.jpg",
+    "/assets/places/area-chi-river-north-2.jpg",
+    "/assets/places/area-chi-river-north-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_River_toward_Michigan_Avenue_at_blue_hour.jpg",
+      "author": "NorbertNagel",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_(6573480895).jpg",
+      "author": "Jaysin Trevino from Evanston, IL, US",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:333_West_Wacker_18_(6573448093).jpg",
+      "author": "Jaysin Trevino from Evanston, IL, US",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 3
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Lincoln Park",
+    "zh": "林肯公园"
+   },
+   "desc": {
+    "en": "Leafy streets of brownstones near DePaul, the zoo and the lakefront park. Safe, social and student-friendly; Red/Brown/Purple lines at Fullerton.",
+    "zh": "褐石建筑与林荫街道，靠近德保罗大学、动物园和湖滨公园；安全、社交氛围好、适合学生，Fullerton站有红/棕/紫线。"
+   },
+   "lat": 41.9249,
+   "lng": -87.6564,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-lincoln-park-1.jpg",
+    "/assets/places/area-chi-lincoln-park-2.jpg",
+    "/assets/places/area-chi-lincoln-park-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Arlington_and_Roslyn_Place_District_7.JPG",
+      "author": "Thshriver",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Arlington_and_Roslyn_Place_District_3.JPG",
+      "author": "Thshriver",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:20150704_07_North_Ave._Beach_(27127678422).jpg",
+      "author": "David Wilson from Oak Park, Illinois, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 4
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Lakeview",
+    "zh": "湖景区"
+   },
+   "desc": {
+    "en": "Big, lively North Side area including Wrigleyville and Boystown, with bars, lakefront paths and plenty of apartments. Red/Brown lines; good value for young renters.",
+    "zh": "北区大型热闹社区，包括Wrigleyville和Boystown，酒吧多、有湖滨步道，公寓选择丰富；红/棕线，年轻租客性价比高。"
+   },
+   "lat": 41.9436,
+   "lng": -87.6553,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-lakeview-1.jpg",
+    "/assets/places/area-chi-lakeview-2.jpg",
+    "/assets/places/area-chi-lakeview-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:From_the_Addison_red_line_stop_-_Wildcat_Way_-_a_street_festival_set_up_on_Sheffield_(5196842256).jpg",
+      "author": "subbu arumugam from chicago, united states",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Brewster_Apartments_3.JPG",
+      "author": "Thshriver",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Approaching_Wrigley_Field,_Chicago,_Illinois_(42488212895).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 5
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Wicker Park / Bucktown",
+    "zh": "威克公园 / 巴克镇"
+   },
+   "desc": {
+    "en": "Indie shops, music venues and coffee bars around Six Corners, plus The 606 trail. Hip and walkable on the Blue Line; mid-to-high rents in two-flats and lofts.",
+    "zh": "六岔路口周边独立小店、音乐场所和咖啡馆，还有606高架步道；时髦好逛，蓝线直达，双层小楼和loft租金中高。"
+   },
+   "lat": 41.9088,
+   "lng": -87.6773,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-wicker-park-bucktown-1.jpg",
+    "/assets/places/area-chi-wicker-park-bucktown-2.jpg",
+    "/assets/places/area-chi-wicker-park-bucktown-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_North_Ave.jpg",
+      "author": "Daniel Schwen",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:20011225_08_Wicker_Park_(8048650147).jpg",
+      "author": "David Wilson from Oak Park, Illinois, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Bucktown_skyline_(3638079311).jpg",
+      "author": "Payton Chung from DCA, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 6
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Hyde Park",
+    "zh": "海德公园"
+   },
+   "desc": {
+    "en": "UChicago's lakeside neighborhood with stately buildings, bookstores and the Museum of Science and Industry. Quiet and academic; Metra to downtown, moderate rents.",
+    "zh": "芝加哥大学所在的湖滨社区，建筑典雅、书店多，有科学与工业博物馆；安静、学术氛围浓，Metra通勤市中心，租金适中。"
+   },
+   "lat": 41.7886,
+   "lng": -87.5987,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-hyde-park-1.jpg",
+    "/assets/places/area-chi-hyde-park-2.jpg",
+    "/assets/places/area-chi-hyde-park-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rockefeller_Memorial_Chapel,_University_of_Chicago,_59th_Street_and_Woodlawn_Avenue,_Hyde_Park,_Chicago,_IL_-_54213552646.jpg",
+      "author": "w_lemay",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:20160316_26_Ellis_Ave._near_Hyde_Park_Blvd._(30803040235).jpg",
+      "author": "David Wilson from Oak Park, Illinois, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_skyline_from_Promontory_Point.jpg",
+      "author": "John Picken",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 7
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "South Loop",
+    "zh": "南卢普"
+   },
+   "desc": {
+    "en": "High-rises near Grant Park, Museum Campus and Columbia College, plus Printer's Row lofts. Easy Red/Green/Orange access; good value compared with the Loop.",
+    "zh": "格兰特公园、博物馆园区和哥伦比亚学院附近的高层公寓区，还有Printer's Row的loft；红/绿/橙线方便，性价比高于Loop。"
+   },
+   "lat": 41.8664,
+   "lng": -87.6248,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-south-loop-1.jpg",
+    "/assets/places/area-chi-south-loop-2.jpg",
+    "/assets/places/area-chi-south-loop-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:South_Loop_Chicago_June_2015_002.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Printer%27s_Row.jpg",
+      "author": "Flickr user: puroticorico Chicago https://www.flickr.com/photos/puroticorico/",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:20120515_04_Financial_Place_@_Congress_Pkwy._(8214999018).jpg",
+      "author": "David Wilson from Oak Park, Illinois, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 8
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Streeterville",
+    "zh": "Streeterville"
+   },
+   "desc": {
+    "en": "Lakefront high-rises between the Magnificent Mile and Navy Pier, home to Northwestern's medical campus. Upscale and convenient; rents among Chicago's highest.",
+    "zh": "华丽一英里与海军码头之间的湖滨高楼区，西北大学医学院所在地；高档便利，租金属芝加哥最高之列。"
+   },
+   "lat": 41.8931,
+   "lng": -87.6222,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-streeterville-1.jpg",
+    "/assets/places/area-chi-streeterville-2.jpg",
+    "/assets/places/area-chi-streeterville-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_132_(3857713364).jpg",
+      "author": "DGriebeling",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago-View_from_John_Hancock_Center.jpg",
+      "author": "Viplav Valluri",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago-_Magnificent_Mile_(9694622524).jpg",
+      "author": "Roman Boed from The Netherlands",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 9
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Old Town",
+    "zh": "老城"
+   },
+   "desc": {
+    "en": "Historic streets with Second City comedy, Wells Street bars and brick rowhouses near Lincoln Park. Charming and safe on the Brown/Purple lines; moderately pricey.",
+    "zh": "历史街区，有Second City喜剧剧场、Wells街酒吧和红砖排屋，靠近林肯公园；迷人安全，棕/紫线，租金中等偏高。"
+   },
+   "lat": 41.9098,
+   "lng": -87.6362,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-old-town-1.jpg",
+    "/assets/places/area-chi-old-town-2.jpg",
+    "/assets/places/area-chi-old-town-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Buildings_in_Old_Town,_Chicago_2015-18.jpg",
+      "author": "Victor Grigas",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Carl_Street_Studios,_Chicago_2015-15.jpg",
+      "author": "Victor Grigas",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Old_town_art_fair_2014_Chicago_.jpg",
+      "author": "victorgrigas",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 10
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Logan Square",
+    "zh": "洛根广场"
+   },
+   "desc": {
+    "en": "Wide boulevards, a weekly farmers market and a strong bar and café scene. Young and creative, on the Blue Line to O'Hare and downtown; still reasonably priced.",
+    "zh": "宽阔林荫大道、每周农夫市集，酒吧咖啡文化浓厚；年轻有创意，蓝线可到奥黑尔机场和市中心，租金仍较合理。"
+   },
+   "lat": 41.9294,
+   "lng": -87.7073,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-logan-square-1.jpg",
+    "/assets/places/area-chi-logan-square-2.jpg",
+    "/assets/places/area-chi-logan-square-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Illinois_Centennial_Memorial_Column.jpg",
+      "author": "Loganresident at en.wikipedia",
+      "license": "CC BY 2.5"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Farmers%27_market_at_Logan_Square_(47879913851).jpg",
+      "author": "Bex Walton from London, England",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:20151110_10_Palmer_St._@_Sawyer_Ave._(33118174315).jpg",
+      "author": "David Wilson from Oak Park, Illinois, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 11
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Rogers Park / Edgewater",
+    "zh": "罗杰斯公园 / 埃奇沃特"
+   },
+   "desc": {
+    "en": "Diverse lakefront neighborhoods around Loyola with beaches, vintage courtyard buildings and the Red Line. Among the most affordable North Side options for students.",
+    "zh": "罗耀拉大学周边的多元湖滨社区，有海滩、老式庭院公寓和红线地铁；北区对学生最实惠的选择之一。"
+   },
+   "lat": 42.0008,
+   "lng": -87.6614,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-rogers-park-edgewater-1.jpg",
+    "/assets/places/area-chi-rogers-park-edgewater-2.jpg",
+    "/assets/places/area-chi-rogers-park-edgewater-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Berger_Park_Beach_Edgewater_Chicago.JPG",
+      "author": "Alanscottwalker",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Edgewater_Glen_Historic_Streetscape_Hood_Avenue.jpg",
+      "author": "Historywiki80",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Cudahy_Library,_Loyola_University,_Neil_Hartigan_Parkway,_Rogers_Park,_Chicago,_IL.jpg",
+      "author": "w_lemay",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 12
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Andersonville",
+    "zh": "安德森维尔"
+   },
+   "desc": {
+    "en": "Swedish-rooted, LGBTQ+-friendly strip of indie shops and restaurants on Clark Street. Calm, friendly and walkable near the Red Line; moderate rents.",
+    "zh": "源自瑞典移民的街区，Clark街独立小店和餐厅林立，对LGBTQ+友好；安静友善、适合步行，近红线，租金适中。"
+   },
+   "lat": 41.9779,
+   "lng": -87.6693,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-andersonville-1.jpg",
+    "/assets/places/area-chi-andersonville-2.jpg",
+    "/assets/places/area-chi-andersonville-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Andersonville_2022-10-14.jpg",
+      "author": "Boivie",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Andersonville,_Chicago.JPG",
+      "author": "Zagalejo",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Swedish_American_Museum.JPG",
+      "author": "Zagalejo",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 13
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Bronzeville",
+    "zh": "布朗兹维尔"
+   },
+   "desc": {
+    "en": "Historic heart of Black Chicago with greystone mansions, near IIT and the lakefront. Green Line access; affordable, with ongoing revitalization.",
+    "zh": "芝加哥非裔历史文化中心，灰石大宅林立，靠近伊利诺伊理工和湖滨；绿线直达，租金实惠，正在复兴中。"
+   },
+   "lat": 41.8206,
+   "lng": -87.6156,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-bronzeville-1.jpg",
+    "/assets/places/area-chi-bronzeville-2.jpg",
+    "/assets/places/area-chi-bronzeville-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:IIT_Machinery_Hall.jpg",
+      "author": "Joe Ravi",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_Forum_(Chicago,_IL).jpg",
+      "author": "Jim Roberts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:IIT_Engineering_1_Building.jpg",
+      "author": "Joe Ravi",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 14
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Woodlawn",
+    "zh": "伍德劳恩"
+   },
+   "desc": {
+    "en": "South of the Midway, next to UChicago and Jackson Park, home of the Obama Presidential Center. Affordable rents and new development; check blocks carefully for safety.",
+    "zh": "Midway以南，紧邻芝加哥大学和杰克逊公园（奥巴马总统中心所在地）；租金实惠、新开发多，选房时需仔细了解街区治安。"
+   },
+   "lat": 41.78,
+   "lng": -87.596,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-woodlawn-1.jpg",
+    "/assets/places/area-chi-woodlawn-2.jpg",
+    "/assets/places/area-chi-woodlawn-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago,_Illinois_(2026)_-_467.jpg",
+      "author": "Another Believer",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Harper_Library_from_the_Midway_Plaisance.JPG",
+      "author": "IceUnshattered",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago,_Illinois_(2026)_-_465.jpg",
+      "author": "Another Believer",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 15
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "The Loop",
+    "zh": "卢普区"
+   },
+   "desc": {
+    "en": "Finance, law, government and consulting; near the South Loop and River North.",
+    "zh": "金融、法律、政府和咨询机构集中，靠近South Loop和River North。"
+   },
+   "lat": 41.8827,
+   "lng": -87.6298,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-the-loop-1.jpg",
+    "/assets/places/area-chi-the-loop-2.jpg",
+    "/assets/places/area-chi-the-loop-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_River.jpg",
+      "author": "Michael Lazarev (Asmadeus)",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:@sawyerbengtson_(Unsplash_ExRwUKMHZ6w).jpg",
+      "author": "Sawyer Bengtson sawyerbengtson",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_Skyline_(Unsplash).jpg",
+      "author": "Fineas Anton fineas_anton",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 16
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "West Loop / Fulton Market",
+    "zh": "西卢普 / 富尔顿市场"
+   },
+   "desc": {
+    "en": "Tech, consulting, corporate HQs and food businesses; near Fulton Market and River West.",
+    "zh": "科技、咨询、企业总部和餐饮业集中，靠近Fulton Market和River West。"
+   },
+   "lat": 41.8859,
+   "lng": -87.6499,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-west-loop-fulton-market-1.jpg",
+    "/assets/places/area-chi-west-loop-fulton-market-2.jpg",
+    "/assets/places/area-chi-west-loop-fulton-market-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fulton_Market,_West_Loop_(47090474824).jpg",
+      "author": "Bex Walton from London, England",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:811_Fulton.jpg",
+      "author": "Tokidoki232",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Looking_up_on_West_Randolph_Street_-_Chicago,_Illinois,_USA_-_October_8,_2023.jpg",
+      "author": "Giorgio Galeotti",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 17
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "River North",
+    "zh": "河北区"
+   },
+   "desc": {
+    "en": "Tech, media, design and hospitality; near Streeterville.",
+    "zh": "科技、传媒、设计和酒店业集中，靠近Streeterville。"
+   },
+   "lat": 41.8919,
+   "lng": -87.6342,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-river-north-1.jpg",
+    "/assets/places/area-chi-river-north-2.jpg",
+    "/assets/places/area-chi-river-north-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_River_toward_Michigan_Avenue_at_blue_hour.jpg",
+      "author": "NorbertNagel",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_(6573480895).jpg",
+      "author": "Jaysin Trevino from Evanston, IL, US",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:333_West_Wacker_18_(6573448093).jpg",
+      "author": "Jaysin Trevino from Evanston, IL, US",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 18
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Streeterville / Magnificent Mile",
+    "zh": "斯特里特维尔 / 壮丽一英里"
+   },
+   "desc": {
+    "en": "Healthcare, retail and hospitality; near the Gold Coast.",
+    "zh": "医疗、零售和酒店业集中，靠近黄金海岸。"
+   },
+   "lat": 41.8931,
+   "lng": -87.6222,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-streeterville-magnificent-mile-1.jpg",
+    "/assets/places/area-chi-streeterville-magnificent-mile-2.jpg",
+    "/assets/places/area-chi-streeterville-magnificent-mile-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Michigan_Avenue_Magnificent_Mile_from_Wacker_Drive,_Streeterville,_Chicago,_IL_(52862376397).jpg",
+      "author": "Warren LeMay from Covington, KY, United States",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_-_North_Michigan_Avenue_(4279059586).jpg",
+      "author": "Roger W from Sarasota, Florida, U.S.A.",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_Avenue_Pumping_Station,_Michigan_Avenue,_Streeterville,_Chicago,_IL.jpg",
+      "author": "w_lemay",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 19
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "LaSalle Street Corridor",
+    "zh": "拉萨尔街金融走廊"
+   },
+   "desc": {
+    "en": "Finance, banking and law, anchored by the Board of Trade; near the Loop and River North.",
+    "zh": "金融、银行和法律机构集中，以芝加哥期货交易所大楼为地标，靠近Loop和River North。"
+   },
+   "lat": 41.8788,
+   "lng": -87.6323,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-lasalle-street-corridor-1.jpg",
+    "/assets/places/area-chi-lasalle-street-corridor-2.jpg",
+    "/assets/places/area-chi-lasalle-street-corridor-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_Board_of_Trade_Building,_Chicago,_Illinois_(11004312754).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:LaSalle_and_Adams_Street,_Chicago_Loop,_Chicago,_Illinois_(11045657606).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:La_Salle_Street,_Chicago_Loop,_Chicago,_Illin_(9181645256).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 20
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Fulton Market",
+    "zh": "富尔顿市场"
+   },
+   "desc": {
+    "en": "Tech, startups and corporate offices in converted warehouses; near the West Loop.",
+    "zh": "仓库改造的办公区，科技、初创和企业办公集中，靠近West Loop。"
+   },
+   "lat": 41.8864,
+   "lng": -87.6534,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-fulton-market-1.jpg",
+    "/assets/places/area-chi-fulton-market-2.jpg",
+    "/assets/places/area-chi-fulton-market-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Archer_Daniels_Midland_Fulton_Market_wheat_mill.jpg",
+      "author": "Tdl1060",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fulton_Market_Construction.jpg",
+      "author": "Robert Haugland",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_in_2022_Seating_outside_Time_Out_Market_Chicago_(52061941368).jpg",
+      "author": "Chris Rycroft from Madison, Wisconsin, United States",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 21
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Medical District",
+    "zh": "医疗区"
+   },
+   "desc": {
+    "en": "Healthcare, biotech and research; near Little Italy and UIC.",
+    "zh": "医疗、生物科技和科研机构集中，靠近小意大利和UIC。"
+   },
+   "lat": 41.8742,
+   "lng": -87.6733,
+   "address": "",
+   "area": {
+    "en": "Chicago, IL",
+    "zh": "伊利诺伊州芝加哥"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-medical-district-1.jpg",
+    "/assets/places/area-chi-medical-district-2.jpg",
+    "/assets/places/area-chi-medical-district-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:RUMC_-_new_tower.jpg",
+      "author": "Nathan Hicks",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Harrison_St_west_through_Rush_Medical_Center_-_Chicago,_IL_-_May_2023.jpg",
+      "author": "AlphaBeta135",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Harrison_St_east_through_Rush_Medical_Center_-_Chicago,_IL_-_May_2023.jpg",
+      "author": "AlphaBeta135",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 22
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "O'Hare / Rosemont",
+    "zh": "奥黑尔 / 罗斯蒙特"
+   },
+   "desc": {
+    "en": "Corporate offices, logistics and aviation beside O'Hare; near the northwest suburbs.",
+    "zh": "奥黑尔机场旁，企业办公、物流和航空业集中，靠近西北郊区。"
+   },
+   "lat": 41.9803,
+   "lng": -87.8722,
+   "address": "",
+   "area": {
+    "en": "Rosemont, IL",
+    "zh": "伊利诺伊州罗斯蒙特"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-o-hare-rosemont-1.jpg",
+    "/assets/places/area-chi-o-hare-rosemont-2.jpg",
+    "/assets/places/area-chi-o-hare-rosemont-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rosemont_Theatre_20230821.jpg",
+      "author": "Nkon21",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Doubletree_By_Hilton_Hotel_Chicago_O%27Hare_Airport-Rosemont.jpg",
+      "author": "SimLibrarian",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Walkable_Rosemont_from_the_air_(13942408124).jpg",
+      "author": "Payton Chung from DCA, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 23
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Evanston",
+    "zh": "埃文斯顿"
+   },
+   "desc": {
+    "en": "Education, healthcare and professional services, anchored by Northwestern University.",
+    "zh": "教育、医疗和专业服务集中，以西北大学为核心。"
+   },
+   "lat": 42.0451,
+   "lng": -87.6877,
+   "address": "",
+   "area": {
+    "en": "Evanston, IL",
+    "zh": "伊利诺伊州埃文斯顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-chi-evanston-1.jpg",
+    "/assets/places/area-chi-evanston-2.jpg",
+    "/assets/places/area-chi-evanston-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fountain_Square_Evanston.jpg",
+      "author": "Madcoverboy (talk)",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Northwestern_Lakeshore_with_athletics_facilities_and_Kellog_Global_Hub,_photographed_from_above_on_May_7,_2021.jpg",
+      "author": "Lectrician2",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Evanston,_IL_(14131267425).jpg",
+      "author": "Eric Fredericks from Rancho Cordova, CA, United States",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 24
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "University of Chicago",
+    "zh": "芝加哥大学"
+   },
+   "desc": {
+    "en": "Elite research university known for economics and its Gothic quadrangles. Hyde Park is a self-contained lakeside neighborhood with affordable vintage apartments and Metra trains downtown.",
+    "zh": "以经济学和哥特式方院闻名的顶尖研究型大学。海德公园是自成一体的湖滨社区，老式公寓租金实惠，乘Metra可直达市中心。"
+   },
+   "lat": 41.7886,
+   "lng": -87.5987,
+   "address": "5801 South Ellis Avenue, Chicago, IL 60637",
+   "area": {
+    "en": "Hyde Park, Chicago",
+    "zh": "芝加哥海德公园"
+   },
+   "logo": "/assets/school-logos/uchicago.png",
+   "images": [
+    "/assets/places/school-uchicago-1.jpg",
+    "/assets/places/school-uchicago-2.jpg",
+    "/assets/places/school-uchicago-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Hyde Park",
+     "zh": "海德公园"
+    },
+    "communities": [
+     "Hyde Park",
+     "Kenwood",
+     "Woodlawn",
+     "South Loop"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Harper_Memorial_Library,_University_of_Chicago,_59th_Street,_Hyde_Park,_Chicago,_IL_(54514976407).jpg",
+      "author": "Warren LeMay",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:University_of_Chicago_July_2013_19_(Main_Quadrangles).jpg",
+      "author": "Michael Barera",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:University_of_Chicago_July_2013_18_(Main_Quadrangles).jpg",
+      "author": "Michael Barera",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 25
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Northwestern University",
+    "zh": "西北大学"
+   },
+   "desc": {
+    "en": "Top private university on Lake Michigan, known for journalism, engineering and business. Evanston is a safe, walkable suburb with its own downtown and Purple Line and Metra to Chicago.",
+    "zh": "坐落于密歇根湖畔的顶尖私立大学，新闻、工程和商科享有盛名。埃文斯顿是安全宜步行的近郊城市，有自己的市中心，可乘紫线地铁和Metra进芝加哥。"
+   },
+   "lat": 42.0565,
+   "lng": -87.6753,
+   "address": "633 Clark Street, Evanston, IL 60208",
+   "area": {
+    "en": "Evanston, Illinois",
+    "zh": "伊利诺伊州埃文斯顿"
+   },
+   "logo": "/assets/school-logos/northwestern.png",
+   "images": [
+    "/assets/places/school-northwestern-1.jpg",
+    "/assets/places/school-northwestern-2.jpg",
+    "/assets/places/school-northwestern-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Evanston",
+     "zh": "埃文斯顿"
+    },
+    "communities": [
+     "Evanston",
+     "Rogers Park",
+     "Edgewater"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Northwestern_University_Campus_(14128334512).jpg",
+      "author": "Eric Fredericks",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Northwestern_University_Library,_Evanston,_IL.JPG",
+      "author": "Daderot",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Northwestern_University_Campus_(13944692268).jpg",
+      "author": "Eric Fredericks",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 26
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "DePaul University",
+    "zh": "德保罗大学"
+   },
+   "desc": {
+    "en": "The largest Catholic university in the U.S., with a leafy Lincoln Park campus. The area is lively and young, full of bars and brownstones, with the Fullerton L stop at the campus edge.",
+    "zh": "全美规模最大的天主教大学，林肯公园校区绿意盎然。周边年轻热闹，酒吧与褐石楼林立，校园边就是Fullerton高架站。"
+   },
+   "lat": 41.9249,
+   "lng": -87.6564,
+   "address": "2320 North Kenmore Avenue, Chicago, IL 60614",
+   "area": {
+    "en": "Lincoln Park, Chicago",
+    "zh": "芝加哥林肯公园"
+   },
+   "logo": "/assets/school-logos/depaul.png",
+   "images": [
+    "/assets/places/school-depaul-1.jpg",
+    "/assets/places/school-depaul-2.jpg",
+    "/assets/places/school-depaul-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Lincoln Park",
+     "zh": "林肯公园"
+    },
+    "communities": [
+     "Lincoln Park",
+     "Lakeview",
+     "Old Town",
+     "Wrigleyville"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:On_the_Lincoln_Park_Campus_of_DePaul_University_in_Chicago.JPG",
+      "author": "Just",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:McCormick_Houses_on_DePaul_Campus.jpg",
+      "author": "Richie D.",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Depaul_lincoln_park.jpg",
+      "author": "User:Kmf164, taken on March 12, 2006.",
+      "license": "CC BY-SA 2.5"
+     }
+    ]
+   },
+   "sort": 27
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "University of Illinois Chicago (UIC)",
+    "zh": "伊利诺伊大学芝加哥分校（UIC）"
+   },
+   "desc": {
+    "en": "Chicago's largest university, strong in medicine, engineering and computer science. Next to Little Italy and Greektown, with Blue Line stops and quick access to the Loop.",
+    "zh": "芝加哥规模最大的大学，医学、工程和计算机专业实力强。紧邻小意大利和希腊城，有蓝线地铁站，前往Loop十分便捷。"
+   },
+   "lat": 41.8708,
+   "lng": -87.6505,
+   "address": "1200 West Harrison Street, Chicago, IL 60607",
+   "area": {
+    "en": "Near West Side, Chicago",
+    "zh": "芝加哥近西区"
+   },
+   "logo": "/assets/school-logos/uic.png",
+   "images": [
+    "/assets/places/school-uic-1.jpg",
+    "/assets/places/school-uic-2.jpg",
+    "/assets/places/school-uic-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Near West Side",
+     "zh": "近西区"
+    },
+    "communities": [
+     "West Loop",
+     "Greektown",
+     "Little Italy",
+     "South Loop"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Uic_east_campus_spring.JPG",
+      "author": "Hied5",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:University_of_Illinois_at_Chicago_-1.jpg",
+      "author": "artistmac",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Campus_of_the_University_of_Illionis_at_Chicago_(UIC),_Chicago,_IL_(14944125278).jpg",
+      "author": "Teresa Grau Ros from Barcelona",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 28
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Loyola University Chicago",
+    "zh": "芝加哥洛约拉大学"
+   },
+   "desc": {
+    "en": "Jesuit university with a lakefront campus crowned by the Madonna della Strada Chapel. Rogers Park is diverse and affordable with beaches and the Red Line at Loyola station.",
+    "zh": "耶稣会大学，湖滨校区以Madonna della Strada礼拜堂为地标。罗杰斯公园多元且租金实惠，有沙滩，红线Loyola站就在校旁。"
+   },
+   "lat": 42.0008,
+   "lng": -87.6614,
+   "address": "1032 West Sheridan Road, Chicago, IL 60660",
+   "area": {
+    "en": "Rogers Park, Chicago",
+    "zh": "芝加哥罗杰斯公园"
+   },
+   "logo": "/assets/school-logos/luc.png",
+   "images": [
+    "/assets/places/school-loyola-chicago-1.jpg",
+    "/assets/places/school-loyola-chicago-2.jpg",
+    "/assets/places/school-loyola-chicago-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Rogers Park / Edgewater",
+     "zh": "罗杰斯公园 / 埃奇沃特"
+    },
+    "communities": [
+     "Rogers Park",
+     "Edgewater",
+     "Andersonville"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Lakeside_Loyola_University_-_panoramio.jpg",
+      "author": "Bohao Zhao",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Dumbach_Hall,_Loyola_University,_Neil_Hartigan_Parkway,_Rogers_Park,_Chicago,_IL.jpg",
+      "author": "w_lemay",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Cuneo_Hall,_Loyola_University,_Neil_Hartigan_Parkway,_Rogers_Park,_Chicago,_IL.jpg",
+      "author": "w_lemay",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 29
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "School of the Art Institute of Chicago (SAIC)",
+    "zh": "芝加哥艺术学院（SAIC）"
+   },
+   "desc": {
+    "en": "One of the top art schools in the U.S., linked to the Art Institute museum. Its buildings span the Loop by Millennium Park; students live in downtown high-rises or ride the L in.",
+    "zh": "全美顶尖艺术学院之一，与芝加哥艺术博物馆一体。校舍分布在千禧公园旁的Loop区，学生多住市中心高楼公寓或乘高架通勤。"
+   },
+   "lat": 41.8796,
+   "lng": -87.6237,
+   "address": "36 South Wabash Avenue, Chicago, IL 60603",
+   "area": {
+    "en": "The Loop, Chicago",
+    "zh": "芝加哥卢普区"
+   },
+   "logo": "/assets/school-logos/saic.png",
+   "images": [
+    "/assets/places/school-saic-1.jpg",
+    "/assets/places/school-saic-2.jpg",
+    "/assets/places/school-saic-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "The Loop",
+     "zh": "卢普区"
+    },
+    "communities": [
+     "Loop",
+     "South Loop",
+     "River North",
+     "Streeterville"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Art_Institute_of_Chicago_(7415244162).jpg",
+      "author": "Teemu008 from Palatine, Illinois",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:280_South_Columbus_School_Building_03.JPG",
+      "author": "Dazani355",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Carson,_Pirie,_Scott_and_Company_Building_(7364438406).jpg",
+      "author": "Teemu008 from Palatine, Illinois",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 30
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Columbia College Chicago",
+    "zh": "芝加哥哥伦比亚学院"
+   },
+   "desc": {
+    "en": "Arts and media college known for film, music and design, spread across South Loop buildings on Michigan Ave. The area has modern rentals, Grant Park and several L lines.",
+    "zh": "以电影、音乐和设计见长的艺术传媒学院，教学楼分布在密歇根大道沿线的南卢普区。周边新式公寓多，紧邻格兰特公园，有多条高架线路。"
+   },
+   "lat": 41.8721,
+   "lng": -87.6254,
+   "address": "600 South Michigan Avenue, Chicago, IL 60605",
+   "area": {
+    "en": "South Loop, Chicago",
+    "zh": "芝加哥南卢普"
+   },
+   "logo": "/assets/school-logos/colum.png",
+   "images": [
+    "/assets/places/school-columbia-college-chicago-1.jpg",
+    "/assets/places/school-columbia-college-chicago-2.jpg",
+    "/assets/places/school-columbia-college-chicago-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "South Loop",
+     "zh": "南卢普"
+    },
+    "communities": [
+     "South Loop",
+     "Loop",
+     "Printers Row"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Columbia_College_Dance_Center_1306_South_Michigan_Avenue.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Columbia_College_Ludington_Building_1104_South_Wabash_Avenue.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Columbia_College_Music_Center_1014_South_Michigan_Avenue_from_south.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 31
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Illinois Institute of Technology (IIT)",
+    "zh": "伊利诺伊理工学院（IIT）"
+   },
+   "desc": {
+    "en": "Tech university famous for Mies van der Rohe's modernist campus, incl. Crown Hall. Bronzeville offers low rents, with Green and Red Line stops; many students also live in Chinatown.",
+    "zh": "以密斯·凡·德·罗设计的现代主义校园（包括皇冠楼）闻名的理工大学。布朗兹维尔租金较低，有绿线和红线车站，不少学生也住在附近的唐人街。"
+   },
+   "lat": 41.8346,
+   "lng": -87.6273,
+   "address": "10 West 35th Street, Chicago, IL 60616",
+   "area": {
+    "en": "Bronzeville, Chicago",
+    "zh": "芝加哥布朗兹维尔"
+   },
+   "logo": "/assets/school-logos/iit.png",
+   "images": [
+    "/assets/places/school-iit-1.jpg",
+    "/assets/places/school-iit-2.jpg",
+    "/assets/places/school-iit-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Bronzeville",
+     "zh": "布朗兹维尔"
+    },
+    "communities": [
+     "Bronzeville",
+     "South Loop",
+     "Bridgeport"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:IIT_SR_Crown_Building.jpg",
+      "author": "puroticorico",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:IIT_Main_Building_013a.jpg",
+      "author": "Thomas Knapp",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Iit_Tube_(41774392).jpeg",
+      "author": "Rex Babiera",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 32
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Willis Tower",
+    "zh": "Willis Tower"
+   },
+   "desc": {
+    "en": "Chicago's tallest building, with the glass-floored Skydeck ledges on the 103rd floor and United Airlines' HQ inside.",
+    "zh": "芝加哥最高建筑，103层有玻璃地板的Skydeck观景台，美国联合航空总部也在楼内。"
+   },
+   "lat": 41.87874,
+   "lng": -87.63596,
+   "address": "233 S Wacker Dr, Chicago, IL 60606",
+   "area": {
+    "en": "The Loop",
+    "zh": "卢普区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-willis-tower-1.jpg",
+    "/assets/poi/chi-willis-tower-2.jpg",
+    "/assets/poi/chi-willis-tower-3.jpg"
+   ],
+   "extra": {
+    "icon": "tower",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Blue_Water_and_Chicago_skyline,_November_2020.jpg",
+      "author": "Joseph Gage",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_(24045769482).jpg",
+      "author": "erikccooper",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Sun_in_skyscraper_windows_(Unsplash).jpg",
+      "author": "Jack Young jackyoung",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 33
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Navy Pier",
+    "zh": "Navy Pier"
+   },
+   "desc": {
+    "en": "Lakefront pier with the Centennial Wheel, boat tours and summer fireworks, at the edge of Streeterville.",
+    "zh": "湖滨码头，有百年摩天轮、游船和夏季烟花，位于斯特里特维尔街区边缘。"
+   },
+   "lat": 41.8918,
+   "lng": -87.60414,
+   "address": "600 E Grand Ave, Chicago, IL 60611",
+   "area": {
+    "en": "Streeterville",
+    "zh": "斯特里特维尔"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-navy-pier-1.jpg",
+    "/assets/poi/chi-navy-pier-2.jpg",
+    "/assets/poi/chi-navy-pier-3.jpg"
+   ],
+   "extra": {
+    "icon": "venue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Navy_Pier_in_Chicago_from_Park_Drive.jpeg",
+      "author": "Dough4872",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Navy_Pier_from_360_Chicago_Observation_Deck_(49687064233).jpg",
+      "author": "Matt Kieffer from London, United Kingdom",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_(28468889681).jpg",
+      "author": "Roman Boed from The Netherlands",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 34
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Wrigley Field",
+    "zh": "Wrigley Field"
+   },
+   "desc": {
+    "en": "The Cubs' ivy-walled ballpark from 1914, surrounded by Wrigleyville's bars and rooftop seats; the Red Line stops at Addison.",
+    "zh": "建于1914年、外野爬满常春藤的小熊队主场，周边是瑞格利村的酒吧和屋顶看台，红线地铁Addison站直达。"
+   },
+   "lat": 41.94818,
+   "lng": -87.65556,
+   "address": "1060 W Addison St, Chicago, IL 60613",
+   "area": {
+    "en": "Wrigleyville (Lakeview)",
+    "zh": "瑞格利村（湖景区）"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-wrigley-field-1.jpg",
+    "/assets/poi/chi-wrigley-field-2.jpg",
+    "/assets/poi/chi-wrigley-field-3.jpg"
+   ],
+   "extra": {
+    "icon": "venue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Backside_of_Wrigley_Field_centerfield_scoreboard_ahead_of_Cincinnati_Reds_at_Chicago_Cubs_game_on_September_28,_2024_(54288655959).jpg",
+      "author": "Nairn McWilliams",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Wrigley_Field_S.jpg",
+      "author": "Sea Cow",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:20170915_27_Wrigley_Field_(48932988561).jpg",
+      "author": "David Wilson from Oak Park, Illinois, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 35
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Art Institute of Chicago",
+    "zh": "Art Institute of Chicago"
+   },
+   "desc": {
+    "en": "One of the top art museums in the US, guarded by bronze lions on Michigan Avenue; Illinois students get discounted admission.",
+    "zh": "全美顶级艺术博物馆之一，密歇根大道门口有两座铜狮守护，伊利诺伊州学生可享门票优惠。"
+   },
+   "lat": 41.8796,
+   "lng": -87.62307,
+   "address": "111 S Michigan Ave, Chicago, IL 60603",
+   "area": {
+    "en": "The Loop",
+    "zh": "卢普区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-art-institute-1.jpg",
+    "/assets/poi/chi-art-institute-2.jpg",
+    "/assets/poi/chi-art-institute-3.jpg"
+   ],
+   "extra": {
+    "icon": "museum",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Art_Institute_of_Chicago_Building,_Chicago,_Illinois_(11004251406).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2014_Chicago_Art_Institute_02.jpg",
+      "author": "Nicholas Hartmann",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Art_Institute_of_Chicago_(49692750156).jpg",
+      "author": "Raed Mansour from Chicago, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 36
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Millennium Park",
+    "zh": "Millennium Park"
+   },
+   "desc": {
+    "en": "Downtown's front yard, with Frank Gehry's Pritzker Pavilion hosting free summer concerts, plus Cloud Gate and Crown Fountain.",
+    "zh": "市中心的“前院”，弗兰克·盖里设计的普利兹克音乐亭夏季有免费音乐会，还有云门和皇冠喷泉。"
+   },
+   "lat": 41.88353,
+   "lng": -87.62189,
+   "address": "201 E Randolph St, Chicago, IL 60602",
+   "area": {
+    "en": "The Loop",
+    "zh": "卢普区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-millennium-park-1.jpg",
+    "/assets/poi/chi-millennium-park-2.jpg",
+    "/assets/poi/chi-millennium-park-3.jpg"
+   ],
+   "extra": {
+    "icon": "park",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:DSC2296_(27373805626).jpg",
+      "author": "Boris Kasimov from Toronto, Canada",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Grant_Park_%26_Chicago_Skyline_(51575572775).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_2019-03-07_(27)_(47270259772).jpg",
+      "author": "Carlos Felipe Pardo from Washington, United States",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 37
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Chicago Riverwalk",
+    "zh": "Chicago Riverwalk"
+   },
+   "desc": {
+    "en": "A walkway along the main branch of the Chicago River lined with cafés, kayak rentals and architecture boat tour docks.",
+    "zh": "沿芝加哥河主干道的步道，咖啡馆、皮划艇租赁和建筑游船码头沿岸分布。"
+   },
+   "lat": 41.88723,
+   "lng": -87.62723,
+   "address": "E Riverwalk S (Wacker Dr & State St), Chicago, IL 60601",
+   "area": {
+    "en": "The Loop",
+    "zh": "卢普区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-riverwalk-1.jpg",
+    "/assets/poi/chi-riverwalk-2.jpg",
+    "/assets/poi/chi-riverwalk-3.jpg"
+   ],
+   "extra": {
+    "icon": "bridge",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_Waterfront_(35071790643).jpg",
+      "author": "Mack Male from Edmonton, AB, Canada",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_(35976878990).jpg",
+      "author": "Cole Camplese from Hinsdale, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Filming_of_Chicago_Fire_by_the_Chicago_River.jpg",
+      "author": "James Larrison",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 38
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Lincoln Park Zoo",
+    "zh": "Lincoln Park Zoo"
+   },
+   "desc": {
+    "en": "One of the oldest zoos in the country and still free, set in lakefront Lincoln Park near popular rental blocks.",
+    "zh": "全美历史最悠久的动物园之一，至今免费开放，位于湖畔林肯公园，周边是热门租房街区。"
+   },
+   "lat": 41.92126,
+   "lng": -87.63377,
+   "address": "2001 N Clark St, Chicago, IL 60614",
+   "area": {
+    "en": "Lincoln Park",
+    "zh": "林肯公园"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-lincoln-park-zoo-1.jpg",
+    "/assets/poi/chi-lincoln-park-zoo-2.jpg",
+    "/assets/poi/chi-lincoln-park-zoo-3.jpg"
+   ],
+   "extra": {
+    "icon": "park",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Lincoln_Park_Zoo_Zebras.jpg",
+      "author": "Fabian.aichwald",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_(22591243404).jpg",
+      "author": "erikccooper",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Lincoln_Park_Zoo_Bubble_Pavillion.jpg",
+      "author": "Sea Cow",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 39
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Buckingham Fountain",
+    "zh": "Buckingham Fountain"
+   },
+   "desc": {
+    "en": "Grant Park's grand 1927 fountain, with hourly water shows from spring to fall and views of the Loop skyline.",
+    "zh": "格兰特公园内建于1927年的大型喷泉，春季至秋季每小时有水景表演，可远眺卢普区天际线。"
+   },
+   "lat": 41.8758,
+   "lng": -87.61897,
+   "address": "301 S Columbus Dr, Chicago, IL 60605",
+   "area": {
+    "en": "Grant Park",
+    "zh": "格兰特公园"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-buckingham-fountain-1.jpg",
+    "/assets/poi/chi-buckingham-fountain-2.jpg",
+    "/assets/poi/chi-buckingham-fountain-3.jpg"
+   ],
+   "extra": {
+    "icon": "statue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_36905627032.jpg",
+      "author": "chasepeeler",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_21453509498.jpg",
+      "author": "Alan Light",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago,_Illinois,_U.S._(2023)_-_518.jpg",
+      "author": "Another Believer",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 40
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Chicago Union Station",
+    "zh": "Chicago Union Station"
+   },
+   "desc": {
+    "en": "Chicago's main intercity rail station for Amtrak and Metra, famous for its Great Hall, on the river in the West Loop.",
+    "zh": "芝加哥美铁和Metra通勤铁路的主要车站，以宏伟的大厅闻名，坐落在西卢普河畔。"
+   },
+   "lat": 41.8787,
+   "lng": -87.64041,
+   "address": "225 S Canal St, Chicago, IL 60606",
+   "area": {
+    "en": "West Loop",
+    "zh": "西卢普"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-union-station-1.jpg",
+    "/assets/poi/chi-union-station-2.jpg",
+    "/assets/poi/chi-union-station-3.jpg"
+   ],
+   "extra": {
+    "icon": "train",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Vista_desde_la_esquina_de_la_estaci%C3%B3n_Union_Station.jpg",
+      "author": "Joan Deutscharq",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_Union_Station_exterior,_July_2019.jpg",
+      "author": "Cards84664",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:ChicagoUnionStationAdamsStreetEntrance.jpg",
+      "author": "Raysonho @ Open Grid Scheduler / Scalable Grid Engine",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 41
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "The Magnificent Mile",
+    "zh": "The Magnificent Mile"
+   },
+   "desc": {
+    "en": "Chicago's main shopping stretch of North Michigan Avenue, running from the river past the historic Water Tower to Oak Street, next to Streeterville.",
+    "zh": "芝加哥最主要的购物街——北密歇根大道，从芝加哥河延伸经历史水塔至橡树街，毗邻斯特里特维尔。"
+   },
+   "lat": 41.89452,
+   "lng": -87.62423,
+   "address": "N Michigan Ave (Chicago River to Oak St), Chicago, IL 60611",
+   "area": {
+    "en": "Streeterville / Magnificent Mile",
+    "zh": "斯特里特维尔 / 华丽一英里"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chi-magnificent-mile-1.jpg",
+    "/assets/poi/chi-magnificent-mile-2.jpg",
+    "/assets/poi/chi-magnificent-mile-3.jpg"
+   ],
+   "extra": {
+    "icon": "square",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Michigan_Avenue_Magnificent_Mile_from_Wacker_Drive,_Streeterville,_Chicago,_IL_(52862376362).jpg",
+      "author": "Warren LeMay from Covington, KY, United States",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Michigan_Avenue_Magnificent_Mile_from_Wacker_Drive,_Streeterville,_Chicago,_IL_(52862376397).jpg",
+      "author": "Warren LeMay from Covington, KY, United States",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_River_toward_Michigan_Avenue_at_blue_hour.jpg",
+      "author": "NorbertNagel",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 42
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "CME Group (Chicago Mercantile Exchange Center)",
+    "zh": "CME Group (Chicago Mercantile Exchange Center)"
+   },
+   "desc": {
+    "en": "Headquarters of CME Group, the world's largest derivatives exchange operator, in twin towers on Wacker Drive along the river.",
+    "zh": "全球最大衍生品交易所运营商芝商所（CME集团）总部，位于瓦克大道河畔的双子塔。"
+   },
+   "lat": 41.88126,
+   "lng": -87.63753,
+   "address": "20 S Wacker Dr, Chicago, IL 60606",
+   "area": {
+    "en": "The Loop (West Loop edge)",
+    "zh": "卢普区（西卢普边缘）"
+   },
+   "logo": "/assets/company-logos/cme-group.png",
+   "images": [
+    "/assets/poi/chi-cme-group-1.jpg",
+    "/assets/poi/chi-cme-group-2.jpg",
+    "/assets/poi/chi-cme-group-3.jpg"
+   ],
+   "extra": {
+    "icon": "finance",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_(ILL)_downtown,_S.Wacker_Dr._(4826255550).jpg",
+      "author": "(vincent desjardins) from Paris, France",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:200_South_Wacker_Drive_from_Willis_Tower,_Chicago,_Illinois_(9179392553).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_architecture_tour_-_bridges_opening_up_(46963767595).jpg",
+      "author": "Bex Walton from London, England",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 43
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Kraft Heinz (Aon Center)",
+    "zh": "Kraft Heinz (Aon Center)"
+   },
+   "desc": {
+    "en": "The Aon Center, Chicago's third-tallest tower, houses the Chicago co-headquarters of food giant Kraft Heinz.",
+    "zh": "芝加哥第三高楼怡安中心，食品巨头卡夫亨氏的芝加哥联合总部设在这里。"
+   },
+   "lat": 41.88529,
+   "lng": -87.62155,
+   "address": "200 E Randolph St, Chicago, IL 60601",
+   "area": {
+    "en": "The Loop (Lakeshore East)",
+    "zh": "卢普区（东湖岸）"
+   },
+   "logo": "/assets/company-logos/kraft-heinz.png",
+   "images": [
+    "/assets/poi/chi-kraft-heinz-1.jpg",
+    "/assets/poi/chi-kraft-heinz-2.jpg",
+    "/assets/poi/chi-kraft-heinz-3.jpg"
+   ],
+   "extra": {
+    "icon": "consumer",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Aon_Center,_Chicago,_Illinois,_US_(PPL3-Altered)_julesvernex2.jpg",
+      "author": "Jules Verne Times Two",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Ame05025_10.jpg",
+      "author": "Gorup de Besanez",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Aon_Center,_Chicago,_Illinois_(42514222645).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 44
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Cboe Global Markets (Old Post Office)",
+    "zh": "Cboe Global Markets (Old Post Office)"
+   },
+   "desc": {
+    "en": "The restored Old Post Office straddling the Eisenhower Expressway is now headquarters to exchange operator Cboe, alongside Walgreens and Uber offices.",
+    "zh": "横跨艾森豪威尔高速公路的老邮政总局经翻修后，成为交易所运营商Cboe的总部，沃尔格林和Uber也在此办公。"
+   },
+   "lat": 41.87599,
+   "lng": -87.63876,
+   "address": "433 W Van Buren St, Chicago, IL 60607",
+   "area": {
+    "en": "West Loop",
+    "zh": "西卢普"
+   },
+   "logo": "/assets/company-logos/cboe.png",
+   "images": [
+    "/assets/poi/chi-cboe-1.jpg",
+    "/assets/poi/chi-cboe-2.jpg",
+    "/assets/poi/chi-cboe-3.jpg"
+   ],
+   "extra": {
+    "icon": "finance",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Old_Post_Office_Chicago_2022.jpg",
+      "author": "Sea Cow",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago,_June_2015_-_180.jpg",
+      "author": "Another Believer",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago-20240927-094_(54286466171).jpg",
+      "author": "Nairn McWilliams",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 45
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Conagra Brands (Merchandise Mart)",
+    "zh": "Conagra Brands (Merchandise Mart)"
+   },
+   "desc": {
+    "en": "The massive Art Deco Merchandise Mart houses Conagra Brands' headquarters plus tech offices and showrooms, with its own Brown/Purple Line stop.",
+    "zh": "巨型装饰艺术风格建筑商品市场大楼，康尼格拉品牌总部及多家科技公司和展厅在此，设有棕线/紫线专属地铁站。"
+   },
+   "lat": 41.88854,
+   "lng": -87.63538,
+   "address": "222 W Merchandise Mart Plaza, Chicago, IL 60654",
+   "area": {
+    "en": "River North",
+    "zh": "河北区"
+   },
+   "logo": "/assets/company-logos/conagra.png",
+   "images": [
+    "/assets/poi/chi-conagra-merchandise-mart-1.jpg",
+    "/assets/poi/chi-conagra-merchandise-mart-2.jpg",
+    "/assets/poi/chi-conagra-merchandise-mart-3.jpg"
+   ],
+   "extra": {
+    "icon": "consumer",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_Waterfront_(35071795993).jpg",
+      "author": "Mack Male from Edmonton, AB, Canada",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_(22591161554).jpg",
+      "author": "erikccooper",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago_in_2022_Top_of_the_Merchandise_Mart_(52048904106).jpg",
+      "author": "Chris Rycroft from Madison, Wisconsin, United States",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 46
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Accenture Tower",
+    "zh": "Accenture Tower"
+   },
+   "desc": {
+    "en": "Glass tower above Ogilvie Transportation Center that hosts Accenture's Chicago offices—Metra trains run right underneath.",
+    "zh": "位于奥格尔维交通中心上方的玻璃大楼，埃森哲芝加哥办公室所在地，Metra通勤火车就从楼下驶过。"
+   },
+   "lat": 41.88234,
+   "lng": -87.64049,
+   "address": "500 W Madison St, Chicago, IL 60661",
+   "area": {
+    "en": "West Loop",
+    "zh": "西卢普"
+   },
+   "logo": "/assets/company-logos/accenture.png",
+   "images": [
+    "/assets/poi/chi-accenture-tower-1.jpg",
+    "/assets/poi/chi-accenture-tower-2.jpg",
+    "/assets/poi/chi-accenture-tower-3.jpg"
+   ],
+   "extra": {
+    "icon": "consulting",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Citigroup_Center_and_540_West_Madison,_Chicago_(14396815947).jpg",
+      "author": "Tony Webster from Portland, Oregon, United States",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Citigroup_Center_(14396680218).jpg",
+      "author": "Tony Webster from Portland, Oregon, United States",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Citigroup_Center,_Chicago_(14396644410).jpg",
+      "author": "Tony Webster from Portland, Oregon, United States",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 47
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Rush University Medical Center",
+    "zh": "Rush University Medical Center"
+   },
+   "desc": {
+    "en": "Rush University Medical Center, a major academic hospital in the Illinois Medical District, known for its butterfly-shaped tower.",
+    "zh": "拉什大学医学中心，伊利诺伊医疗区内的大型学术医院，以蝴蝶形大楼著称。"
+   },
+   "lat": 41.87464,
+   "lng": -87.66913,
+   "address": "1620 W Harrison St, Chicago, IL 60612",
+   "area": {
+    "en": "Illinois Medical District",
+    "zh": "伊利诺伊医疗区"
+   },
+   "logo": "/assets/company-logos/rush.png",
+   "images": [
+    "/assets/poi/chi-rush-1.jpg",
+    "/assets/poi/chi-rush-2.jpg",
+    "/assets/poi/chi-rush-3.jpg"
+   ],
+   "extra": {
+    "icon": "health",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:RUMC-Tower-01042012.jpg",
+      "author": "Srobak",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:RUMC_-_new_tower.jpg",
+      "author": "Nathan Hicks",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rush_University_Medical_Center_(5983862024).jpg",
+      "author": "Paul Sableman",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 48
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Federal Reserve Bank of Chicago",
+    "zh": "Federal Reserve Bank of Chicago"
+   },
+   "desc": {
+    "en": "One of the 12 regional Federal Reserve Banks, in a classical tower on LaSalle Street; its lobby hosts a free Money Museum.",
+    "zh": "美国12家地区联邦储备银行之一，位于拉萨尔街的古典风格大楼内，大厅设有免费参观的货币博物馆。"
+   },
+   "lat": 41.87843,
+   "lng": -87.63303,
+   "address": "230 S LaSalle St, Chicago, IL 60604",
+   "area": {
+    "en": "LaSalle Street Corridor",
+    "zh": "拉萨尔街金融走廊"
+   },
+   "logo": "/assets/company-logos/federal-reserve.png",
+   "images": [
+    "/assets/poi/chi-fed-reserve-1.jpg",
+    "/assets/poi/chi-fed-reserve-2.jpg",
+    "/assets/poi/chi-fed-reserve-3.jpg"
+   ],
+   "extra": {
+    "icon": "finance",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Federal_Reserve_Bank_of_Chicago_(51574643886).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Federal_Reserve_Bank_Chicago_165_West_Quincy_Street.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chicago,_USA_(12507951635).jpg",
+      "author": "Francisco Antunes from Manchester, United Kingdom",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 49
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "United Airlines HQ (Willis Tower)",
+    "zh": "United Airlines HQ (Willis Tower)"
+   },
+   "desc": {
+    "en": "United Airlines' global headquarters fills many floors of Willis Tower, a short walk from Union Station and the West Loop.",
+    "zh": "美国联合航空全球总部占据威利斯大厦的多个楼层，步行即可到达联合车站和西卢普。"
+   },
+   "lat": 41.87874,
+   "lng": -87.63596,
+   "address": "233 S Wacker Dr, Chicago, IL 60606",
+   "area": {
+    "en": "The Loop",
+    "zh": "卢普区"
+   },
+   "logo": "/assets/company-logos/united-airlines.png",
+   "images": [
+    "/assets/poi/chi-united-1.jpg",
+    "/assets/poi/chi-united-2.jpg",
+    "/assets/poi/chi-united-3.jpg"
+   ],
+   "extra": {
+    "icon": "consumer",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Willis_Tower_and_311_South_Wacker_-_Architecture_River_Cruise_(35510789322).jpg",
+      "author": "piet theisohn from Leverkusen, Germany",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Willis_Tower,_Chicago,_Illinois_(9179399743).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Willis_Tower_(48056796163).jpg",
+      "author": "Laurent de Walick from The Hague, The Netherlands",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 50
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Clark/Lake (multiple CTA lines, Loop core)",
+    "zh": "Clark/Lake (multiple CTA lines, Loop core)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.8858,
+   "lng": -87.6307,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 51
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "State/Lake",
+    "zh": "State/Lake"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.8847,
+   "lng": -87.6278,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 52
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Washington/Wells",
+    "zh": "Washington/Wells"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.8829,
+   "lng": -87.6339,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 53
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Roosevelt (Red/Green/Orange)",
+    "zh": "Roosevelt (Red/Green/Orange)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.8674,
+   "lng": -87.6266,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 54
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Fullerton (Red/Brown/Purple)",
+    "zh": "Fullerton (Red/Brown/Purple)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.9253,
+   "lng": -87.6529,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 55
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Belmont (Red/Brown/Purple)",
+    "zh": "Belmont (Red/Brown/Purple)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.9397,
+   "lng": -87.6538,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 56
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Jackson",
+    "zh": "Jackson"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.8781,
+   "lng": -87.6298,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 57
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Chicago (Red Line)",
+    "zh": "Chicago (Red Line)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.8964,
+   "lng": -87.6285,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 58
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Ogilvie Transportation Center",
+    "zh": "Ogilvie Transportation Center"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.8827,
+   "lng": -87.6404,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 59
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Union Station",
+    "zh": "Union Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.8789,
+   "lng": -87.6394,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 60
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "O'Hare International Airport (ORD)",
+    "zh": "O'Hare International Airport (ORD)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.9742,
+   "lng": -87.9073,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 61
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Midway International Airport (MDW)",
+    "zh": "Midway International Airport (MDW)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 41.7868,
+   "lng": -87.7522,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 62
+  }
+ ]
+}

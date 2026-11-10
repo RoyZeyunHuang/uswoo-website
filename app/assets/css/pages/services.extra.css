@@ -1,0 +1,8 @@
+/* Services 页在设计稿之外补充的样式（手工维护；services.css 由提取脚本生成，会被覆盖）。 */
+
+/* 手机上「Beyond the Lease」八张卡片的中文说明不带句末句号（原站 mobile-services.js 的效果） */
+@media (max-width: 560px) {
+  .pg-services .essential-card-dark p .zh-stop {
+    display: none;
+  }
+}

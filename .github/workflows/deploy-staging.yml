@@ -1,0 +1,100 @@
+# 发布到测试站（new.uswoo.cn / new.uswoo.com）。
+#
+# 推到 main 就会发布。流程里没有任何服务器地址或密钥：
+#   1. 这里做类型检查和构建，把构建产物上传到仓库的 Release「staging」（附带校验值）；
+#   2. 测试站所在的服务器每分钟来看一次，发现新版本就自己下载、校验、试启动，没问题才切换过去；
+#   3. 这里等服务器给出结果：切换成功就通过；新版本起不来就失败，并把服务器上的报错打印出来（旧版本继续运行）。
+#
+# 回退：在 Actions 页面手动运行本流程，「ref」填要回到的提交或分支。
+name: Deploy to staging
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 要发布的提交、分支或标签（留空 = main 的最新提交）。用于回退到之前的版本。
+        required: false
+
+concurrency:
+  group: deploy-staging
+  cancel-in-progress: false
+
+permissions:
+  contents: write # 上传构建产物到 Release
+
+env:
+  RELEASE_TAG: staging
+  STATUS_URL: https://new.uswoo.com/_deploy/status.json
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm build
+
+      - name: 打包
+        id: pack
+        run: |
+          sha=$(git rev-parse HEAD)
+          # 产物文件名带提交号：Release 里同名文件被替换后，下载地址会有一段时间仍返回旧内容
+          file="output-$sha.tgz"
+          tar czf "$file" -C .output .
+          sum=$(sha256sum "$file" | cut -d' ' -f1)
+          printf '{"sha": "%s", "file": "%s", "sha256": "%s", "builtAt": "%s"}\n' "$sha" "$file" "$sum" "$(date -u +%FT%TZ)" > manifest.json
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          echo "file=$file" >> "$GITHUB_OUTPUT"
+          cat manifest.json
+
+      - name: 上传到 Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FILE: ${{ steps.pack.outputs.file }}
+        run: |
+          gh release view "$RELEASE_TAG" >/dev/null 2>&1 || gh release create "$RELEASE_TAG" --prerelease \
+            --title "测试站构建产物" --notes "由 Deploy to staging 流程自动更新，测试站服务器从这里取最新版本。请不要手动修改。"
+          # 先传产物、再传清单：服务器以清单为准，看到清单时产物一定已经就绪
+          gh release upload "$RELEASE_TAG" "$FILE" --clobber
+          gh release upload "$RELEASE_TAG" manifest.json --clobber
+          # 只保留最近 5 个产物
+          gh release view "$RELEASE_TAG" --json assets --jq '.assets | map(select(.name | startswith("output-"))) | sort_by(.createdAt) | reverse | .[5:] | .[].name' \
+            | while read -r old; do gh release delete-asset "$RELEASE_TAG" "$old" --yes; done
+
+      - name: 等测试站切换到新版本
+        env:
+          SHA: ${{ steps.pack.outputs.sha }}
+        run: |
+          for i in $(seq 1 90); do
+            status=$(curl -fsS -m 10 "$STATUS_URL?t=$i" || echo '{}')
+            current=$(echo "$status" | jq -r '.current // ""')
+            attempt=$(echo "$status" | jq -r '.lastAttempt.sha // ""')
+            ok=$(echo "$status" | jq -r '.lastAttempt.ok // ""')
+            if [ "$current" = "$SHA" ]; then
+              echo "测试站已切换到 $SHA"
+              exit 0
+            fi
+            if [ "$attempt" = "$SHA" ] && [ "$ok" = "false" ]; then
+              echo "::error::新版本在测试站上没能启动，测试站仍在运行之前的版本。服务器上的报错如下："
+              echo "$status" | jq -r '.lastAttempt.error // ""'
+              echo "------ 应用日志 ------"
+              echo "$status" | jq -r '.lastAttempt.log // ""'
+              exit 1
+            fi
+            sleep 10
+          done
+          echo "::error::等了 15 分钟，测试站还没有切换到新版本。服务器的拉取任务可能没有运行，请联系负责服务器的同事。"
+          exit 1

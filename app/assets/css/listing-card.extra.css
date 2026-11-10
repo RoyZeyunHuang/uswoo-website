@@ -1,0 +1,26 @@
+/* 房源卡片在设计稿之外补充的样式（手工维护）。卡片本体的样式在 home.css 与 listings.css 里各有一份，
+   这里的规则不带页面前缀，首页和房源页都生效。 */
+
+/* 已租出：右上角深色角标（与左上角粉色标签同形），图片降饱和 */
+.ls-card .ls-leased {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--black, #0f0f0f);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.ls-card.is-leased .ls-media img {
+  filter: grayscale(0.7);
+  opacity: 0.85;
+}
+
+.ls-card.is-leased .ls-price {
+  color: var(--ink-soft, #656260);
+}

@@ -1,0 +1,315 @@
+{
+  "key": "about",
+  "payload": {
+    "careers": {
+      "sub": {
+        "en": "We're building a team for people who understand cities, renters and what great service actually feels like.",
+        "zh": "我们正在组建一支团队，欢迎懂城市、懂租客、也懂什么才是好服务的你。"
+      },
+      "title": {
+        "en": "Grow with USWOO.",
+        "zh": "与 USWOO 一起成长"
+      },
+      "eyebrow": {
+        "en": "Careers",
+        "zh": "加入我们"
+      },
+      "rolesCta": {
+        "label": {
+          "en": "View Open Roles →",
+          "zh": "查看在招职位 →"
+        },
+        "labelShort": {
+          "en": "View Open Roles",
+          "zh": "查看在招职位"
+        },
+        "href": "/contact"
+      },
+      "joinCta": {
+        "label": {
+          "en": "Join Our Team →",
+          "zh": "加入我们的团队 →"
+        },
+        "labelShort": {
+          "en": "Join Our Team",
+          "zh": "加入我们的团队"
+        },
+        "href": "/contact"
+      }
+    },
+    "hero": {
+      "images": [
+        {
+          "url": "/assets/about-hero-bedroom.webp"
+        },
+        {
+          "url": "/assets/about-hero-kitchen-dance.jpg"
+        }
+      ],
+      "sub": {
+        "en": "USWOO helps international students and young professionals feel at home in a new city, with thoughtful support that goes beyond finding a place to live.",
+        "zh": "USWOO 帮助留学生和年轻职场人在新城市找到“家”的感觉，我们的用心不止于帮你找到住处。"
+      },
+      "title": {
+        "en": "Find Your Place. Feel at Home.",
+        "zh": "找到属于你 的地方<br class=m-br>住出家 的感觉"
+      },
+      "eyebrow": {
+        "en": "About USWOO",
+        "zh": "关于 USWOO"
+      },
+      "scrollLabel": {
+        "en": "Scroll",
+        "zh": "向下滚动"
+      }
+    },
+    "mission": {
+      "items": [
+        {
+          "image": {
+            "url": "/assets/mission-sofa-book.jpg"
+          },
+          "text": {
+            "en": "Moving to a new country comes with a lot of unknowns. Finding a home is only one part of it. We understand the questions, the small worries, and all the details that come with starting over somewhere new.",
+            "zh": "来到一个新的国家，有太多未知。找房子只是其中一环。我们理解你的疑问、你的小小担忧，以及在陌生地方重新开始的种种细节。"
+          },
+          "textShort": {
+            "en": "Moving abroad comes with a lot of unknowns. We understand the questions and small worries of starting over somewhere new.",
+            "zh": "出国生活有太多未知，我们懂重新开始时的那些疑问和小小的担忧。"
+          },
+          "title": {
+            "en": "We Know What It’s Like",
+            "zh": "我们懂你的感受 🫶"
+          },
+          "imageAlt": {
+            "en": "We Know What It’s Like",
+            "zh": "我们懂你的感受 🫶"
+          }
+        },
+        {
+          "image": {
+            "url": "/assets/mission-sunlit-kitchen.jpg"
+          },
+          "text": {
+            "en": "From finding the right apartment to getting settled into everyday life, we’re here to make things feel easier and less overwhelming. Because when you’re far from home, the little things matter.",
+            "zh": "从找到合适的公寓，到融入日常生活，我们希望让一切更轻松、更不焦虑。因为身在异乡，每一件小事都很重要。"
+          },
+          "textShort": {
+            "en": "From finding the right apartment to settling into daily life, we make things easier. When you’re far from home, the little things matter.",
+            "zh": "从找到合适的公寓到适应日常生活，我们让一切更轻松。远离家乡时，小事也很重要。"
+          },
+          "title": {
+            "en": "We Take Care of the Details",
+            "zh": "细节我们来操心🏡"
+          },
+          "imageAlt": {
+            "en": "We Take Care of the Details",
+            "zh": "细节我们来操心🏡"
+          }
+        },
+        {
+          "image": {
+            "url": "https://images.unsplash.com/photo-1782061816846-80b827da8117?auto=format&fit=crop&w=900&q=80"
+          },
+          "text": {
+            "en": "Our support doesn’t end when you get the keys. As you settle in, meet people, and build your life here, we want USWOO to be a familiar place you can come back to.",
+            "zh": "拿到钥匙，我们的支持并不会结束。当你安顿下来、认识新朋友、在这里建立自己的生活，我们希望 USWOO 始终是你可以回来的熟悉角落。"
+          },
+          "textShort": {
+            "en": "Our support doesn’t end at move-in. We want USWOO to be a familiar place you can come back to.",
+            "zh": "我们的支持不止于拿到钥匙。希望 USWOO 成为你可以随时回来的熟悉之地。"
+          },
+          "title": {
+            "en": "We’re Here Beyond Move In",
+            "zh": "入住之后我们依然在 🤝"
+          },
+          "imageAlt": {
+            "en": "We’re Here Beyond Move In",
+            "zh": "入住之后我们依然在 🤝"
+          }
+        }
+      ],
+      "lede": {
+        "en": "Whether it's your first apartment tour or your third year in the city, this is what USWOO shows up for.",
+        "zh": "无论是第一次看房，还是在这座城市生活的第三年，这些都是 USWOO 一直在意的事。"
+      },
+      "title": {
+        "en": "What we care about most.",
+        "zh": "我们最在意的事"
+      },
+      "eyebrow": {
+        "en": "Our Mission",
+        "zh": "我们的使命"
+      }
+    },
+    "story": {
+      "image": {
+        "url": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1600&q=80"
+      },
+      "items": [
+        {
+          "text": {
+            "en": "Leasing support across multiple cities.",
+            "zh": "从纽约到其他热门城市，丰富的房源选择，让您不必局限于一个区域。"
+          },
+          "title": {
+            "en": "Find the right home",
+            "zh": "01｜更多城市<br class=m-br>更多选择"
+          }
+        },
+        {
+          "text": {
+            "en": "Furniture, Wi-Fi, and essentials.",
+            "zh": "家具、网络、搬家及生活用品，入住前后的琐事，都有合适的解决方案。"
+          },
+          "title": {
+            "en": "Move in with ease",
+            "zh": "02｜生活琐事<br class=m-br>帮您搞定"
+          }
+        },
+        {
+          "text": {
+            "en": "Local services and community.",
+            "zh": "无论是租房规则还是社区生活，都能获得实用的本地信息与建议。"
+          },
+          "title": {
+            "en": "Settle in with support",
+            "zh": "03｜熟悉当地<br class=m-br>更有底气"
+          }
+        },
+        {
+          "text": {
+            "en": "Resources that make city life easier.",
+            "zh": "发现周边的生活资源、认识新的朋友，让城市生活多一些可能。"
+          },
+          "title": {
+            "en": "Stay connected",
+            "zh": "04｜生活不止于公寓"
+          }
+        }
+      ],
+      "lede": {
+        "en": "What began as leasing support has grown into a broader rental experience — connecting renters with homes, services and local partners before, during and after move-in.",
+        "zh": "最初只是租赁协助，如今已发展成更完整的租住体验——在入住前、入住时和入住后，把租客与房源、服务和本地伙伴连接起来。"
+      },
+      "ledeShort": {
+        "en": "What began as leasing support now connects renters with homes, services and local partners, before and after move-in.",
+        "zh": "从租赁支持起步，如今我们在入住前后，为租客对接房源、服务和本地合作伙伴。"
+      },
+      "title": {
+        "en": "We started with renters. Then built around everything they needed.",
+        "zh": "我们从租客出发再围绕他们的一切需求不断成长"
+      },
+      "eyebrow": {
+        "en": "Our Story",
+        "zh": "我们的故事"
+      },
+      "imageAlt": {
+        "en": "Our Story",
+        "zh": "我们的故事"
+      }
+    },
+    "timeline": {
+      "items": [
+        {
+          "image": {
+            "url": "https://images.unsplash.com/photo-1643297698131-8d4c7f15ddd6?auto=format&fit=crop&w=500&q=80"
+          },
+          "text": {
+            "en": "Started by helping international renters navigate the New York rental market.",
+            "zh": "USWOO 从纽约租赁市场起步，专注于帮助国际租客找到合适的住所，也逐步建立起对本地市场和租客需求的深入理解。"
+          },
+          "title": {
+            "en": "Founded",
+            "zh": "从纽约起步"
+          },
+          "imageAlt": {
+            "en": "Founded",
+            "zh": "从纽约起步"
+          }
+        },
+        {
+          "image": {
+            "url": "https://images.unsplash.com/photo-1543286386-2e659306cd6c?auto=format&fit=crop&w=500&q=80"
+          },
+          "text": {
+            "en": "Expanded our renter network and leasing partnerships.",
+            "zh": "随着租客的信任与合作伙伴的支持，我们不断积累租赁经验，至今已促成超过 6,000 份租约。"
+          },
+          "title": {
+            "en": "6,000+ Leases",
+            "zh": "6,000+ 份租约"
+          },
+          "imageAlt": {
+            "en": "6,000+ Leases",
+            "zh": "6,000+ 份租约"
+          }
+        },
+        {
+          "image": {
+            "url": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=500&q=80"
+          },
+          "text": {
+            "en": "Grew into New Jersey and additional U.S. cities.",
+            "zh": "从纽约到新泽西，再到美国更多城市，我们逐步拓展服务范围，让更多租客能够享受到熟悉、可靠的租赁服务。"
+          },
+          "title": {
+            "en": "Beyond New York",
+            "zh": "走出纽约"
+          },
+          "imageAlt": {
+            "en": "Beyond New York",
+            "zh": "走出纽约"
+          }
+        },
+        {
+          "image": {
+            "url": "https://images.unsplash.com/photo-1624204386084-dd8c05e32226?auto=format&fit=crop&w=500&q=80"
+          },
+          "text": {
+            "en": "Built a broader city-based rental and lifestyle service network.",
+            "zh": "如今，我们已建立起覆盖多个城市的租赁与生活服务网络，持续连接租客、物业与本地资源，让更多人在新城市找到属于自己的生活方式。"
+          },
+          "title": {
+            "en": "USWOO Today",
+            "zh": "今天的 USWOO"
+          },
+          "imageAlt": {
+            "en": "USWOO Today",
+            "zh": "今天的 USWOO"
+          }
+        }
+      ],
+      "title": {
+        "en": "How we got here.",
+        "zh": "从纽约出发走向更多城市"
+      },
+      "eyebrow": {
+        "en": "How We Got Here",
+        "zh": "发展历程"
+      }
+    },
+    "seo": {
+      "title": {
+        "en": "About Us | USWOO",
+        "zh": "关于我们 | USWOO"
+      },
+      "regionTitle": {
+        "en": "About Us — {region} | USWOO",
+        "zh": "关于我们 — {region} | USWOO"
+      },
+      "description": {
+        "en": "USWOO helps international students and young professionals feel at home in a new city, with thoughtful support that goes beyond finding a place to live.",
+        "zh": "USWOO 帮助留学生和年轻职场人在新城市找到“家”的感觉，我们的用心不止于帮你找到住处。"
+      },
+      "breadcrumb": {
+        "en": "About Us",
+        "zh": "关于我们"
+      },
+      "keywords": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  }
+}

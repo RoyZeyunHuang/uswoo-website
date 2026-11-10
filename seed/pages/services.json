@@ -1,0 +1,259 @@
+{
+  "key": "services",
+  "payload": {
+    "beyond": {
+      "cards": [
+        {
+          "icon": {
+            "url": "/assets/slots/essential-img-1.webp"
+          },
+          "text": {
+            "en": "Local moves and luggage shipping, handled.",
+            "zh": "同城搬家、行李托运，统统搞定。"
+          },
+          "title": {
+            "en": "Moving & Luggage",
+            "zh": "搬家与行李"
+          }
+        },
+        {
+          "icon": {
+            "url": "/assets/slots/essential-img-2.webp"
+          },
+          "text": {
+            "en": "Smarter partitions for shared space.",
+            "zh": "合租空间的聪明隔断方案。"
+          },
+          "title": {
+            "en": "Room Dividers",
+            "zh": "房间隔断"
+          }
+        },
+        {
+          "icon": {
+            "url": "/assets/slots/essential-img-3.webp"
+          },
+          "text": {
+            "en": "Rental and setup, no starting from scratch.",
+            "zh": "家具租赁与安装，不用从零开始。"
+          },
+          "title": {
+            "en": "Furniture",
+            "zh": "家具"
+          }
+        },
+        {
+          "icon": {
+            "url": "/assets/slots/essential-img-4.webp"
+          },
+          "text": {
+            "en": "Internet, power and the essentials online.",
+            "zh": "网络、电力等生活必需，一并开通。"
+          },
+          "title": {
+            "en": "Wi-Fi & Utilities",
+            "zh": "网络与水电"
+          }
+        },
+        {
+          "icon": {
+            "url": "/assets/slots/essential-img-5.webp"
+          },
+          "text": {
+            "en": "A U.S. number and a plan that fits.",
+            "zh": "办一个美国号码，选一个合适的套餐。"
+          },
+          "title": {
+            "en": "Mobile Plans",
+            "zh": "手机套餐"
+          }
+        },
+        {
+          "icon": {
+            "url": "/assets/slots/essential-img-6.webp"
+          },
+          "text": {
+            "en": "Coverage that meets building requirements.",
+            "zh": "符合楼宇要求的保障方案。"
+          },
+          "title": {
+            "en": "Renter's Insurance",
+            "zh": "租客保险"
+          }
+        },
+        {
+          "icon": {
+            "url": "/assets/slots/essential-img-7.webp"
+          },
+          "text": {
+            "en": "The small details, before and after.",
+            "zh": "入住前后的每个小细节。"
+          },
+          "title": {
+            "en": "Move-in Checklist",
+            "zh": "入住清单"
+          }
+        },
+        {
+          "icon": {
+            "url": "/assets/slots/essential-img-8.webp"
+          },
+          "text": {
+            "en": "Events, networking and local community.",
+            "zh": "活动、社交与本地社群。"
+          },
+          "title": {
+            "en": "Community & Connections",
+            "zh": "社群与人脉"
+          }
+        }
+      ],
+      "eyebrow": {
+        "en": "BEYOND THE LEASE",
+        "zh": "租约之外"
+      },
+      "index": "03",
+      "lede": {
+        "en": "Through Hi NY, USWOO takes care of the details that make settling into a new city feel easier, from move in essentials to the small everyday needs that are easy to overlook. Our support is personal, practical, and designed to make life feel a little more effortless.",
+        "zh": "通过 Hi NY，我们将本地资源与实用服务融入日常，让你更轻松地适应新城市的生活。"
+      },
+      "ledeShort": {
+        "en": "Through Hi NY, USWOO handles the details that make a new city feel easier, from move-in essentials to everyday needs. Personal, practical, and a little more effortless.",
+        "zh": "通过 Hi NY，我们将本地资源与实用服务融入日常，让你更轻松地适应新城市的生活。"
+      },
+      "title": {
+        "en": "Thoughtful support for everyday life.",
+        "zh": "贴心照顾你的日常生活"
+      }
+    },
+    "hero": {
+      "cta": {
+        "en": "Find a Home",
+        "zh": "开始找房"
+      },
+      "eyebrow": {
+        "en": "SERVICES",
+        "zh": "服务"
+      },
+      "image": {
+        "url": "/assets/slots/services-hero.webp"
+      },
+      "imageAlt": {
+        "en": "From finding a home to feeling at home.",
+        "zh": "从租房的第一步到安家的每一步"
+      },
+      "index": "01",
+      "sub": {
+        "en": "Finding the right apartment is only the beginning. USWOO supports renters through the full rental journey — from home search and lease signing to move-in, renewal and what comes next.",
+        "zh": "USWOO 陪伴租客走完整个租房旅程——从找房、签约，到入住、续租，以及之后的每一步。"
+      },
+      "title": {
+        "en": "From finding a home to feeling at home.",
+        "zh": "从租房的第一步到安家的每一步"
+      }
+    },
+    "process": {
+      "cards": [
+        {
+          "desc": {
+            "en": "Home Search · Tours · Applications · Lease Support",
+            "zh": "房源推荐 · 预约看房 · 租赁申请 · 签约协助"
+          },
+          "image": {
+            "url": "/assets/slots/process-img-1.jpg"
+          },
+          "title": {
+            "en": "Find & Lease",
+            "zh": "找房与签约"
+          }
+        },
+        {
+          "desc": {
+            "en": "Move-in Planning · Building Guidance · Pre-move Support",
+            "zh": "搬家安排 · 家具配置 · 网络及水电开通"
+          },
+          "image": {
+            "url": "/assets/slots/process-img-2.jpg"
+          },
+          "title": {
+            "en": "Prepare & Set Up",
+            "zh": "入住前准备"
+          }
+        },
+        {
+          "desc": {
+            "en": "Move-in Coordination · Local Guidance · Everyday Support",
+            "zh": "社区资源 · 手机套餐 · 社群与人脉"
+          },
+          "image": {
+            "url": "/assets/slots/process-img-3.webp"
+          },
+          "title": {
+            "en": "Move In & Settle",
+            "zh": "融入当地生活"
+          }
+        },
+        {
+          "desc": {
+            "en": "Renewal Support · Next-home Search",
+            "zh": "续租咨询 · 换房规划 · 新居推荐"
+          },
+          "image": {
+            "url": "/assets/slots/process-img-4.webp"
+          },
+          "title": {
+            "en": "Renew or Relocate",
+            "zh": "续租与换房"
+          }
+        }
+      ],
+      "eyebrow": {
+        "en": "OUR PROCESS",
+        "zh": "服务流程"
+      },
+      "index": "02",
+      "title": {
+        "en": "One rental journey, supported from start to finish.",
+        "zh": "从找房到安家<br class=m-br>每一步都为你考虑"
+      }
+    },
+    "quote": {
+      "image": {
+        "url": "/assets/slots/testimonial-media.jpg"
+      },
+      "qr": {
+        "url": "/assets/wechat-qr.png"
+      },
+      "qrAlt": {
+        "en": "WeChat QR code",
+        "zh": "微信二维码"
+      },
+      "text": {
+        "en": "A new city feels different when you don’t have to figure it all out alone. We’re here for the details that make settling in feel a little more like home.",
+        "zh": "初来一座城市，不必所有事情都自己摸索。那些关于生活的大小事，我们陪你慢慢理顺。"
+      },
+      "wechat": {
+        "en": "Connect with us on WeChat.",
+        "zh": "联系我们"
+      }
+    },
+    "seo": {
+      "breadcrumb": {
+        "en": "Services",
+        "zh": "服务"
+      },
+      "description": {
+        "en": "Finding the right apartment is only the beginning. USWOO supports renters through the full rental journey — from home search and lease signing to move-in, renewal and what comes next.",
+        "zh": "USWOO 陪伴租客走完整个租房旅程——从找房、签约，到入住、续租，以及之后的每一步。"
+      },
+      "title": {
+        "en": "USWOO | Services",
+        "zh": "USWOO | 服务"
+      },
+      "keywords": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  }
+}

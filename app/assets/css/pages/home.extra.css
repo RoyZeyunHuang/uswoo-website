@@ -1,0 +1,16 @@
+/* 首页在设计稿之外补充的样式（手工维护；home.css 由提取脚本生成，会被覆盖）。 */
+
+/* 「Where We Operate」从五张卡片增加到六张：给第六张补上与前五张同节奏的出场延迟 */
+.pg-home #locations.in-view .location-card:nth-child(6) {
+  transition-delay: 0.55s;
+}
+
+@media (min-width: 861px) {
+  .pg-home #locations.in-view .location-card:nth-child(6) {
+    transition-delay: 0.9s;
+  }
+}
+
+html.m-reveal .pg-home #locations .location-card.m-in:nth-child(6) {
+  transition-delay: 0.6s;
+}

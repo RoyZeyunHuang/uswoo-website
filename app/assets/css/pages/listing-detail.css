@@ -1,0 +1,282 @@
+/* 房源详情页（手工维护）。原站没有这个页面：颜色、字体变量来自 listings.css（根元素同时带 .pg-listings），
+   圆角与间距沿用房源卡片的取值。 */
+
+.pg-listing-detail .ld-main {
+  padding-top: clamp(28px, 4vw, 48px);
+}
+
+.pg-listing-detail .ld-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.pg-listing-detail .ld-back:hover {
+  color: var(--ink);
+}
+
+.pg-listing-detail .ld-layout {
+  margin-top: clamp(20px, 2.4vw, 32px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: start;
+}
+
+/* ---- 图片 ---- */
+
+.pg-listing-detail .ld-gallery {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 10px;
+  background: var(--paper);
+}
+
+.pg-listing-detail .ld-stage {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.pg-listing-detail .ld-stage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pg-listing-detail .ld-leased {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--black);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.pg-listing-detail .ld-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  color: var(--ink);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 3px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.pg-listing-detail .ld-arrow:hover {
+  background: var(--paper);
+  border-color: var(--ink-soft);
+}
+
+.pg-listing-detail .ld-arrow.prev {
+  left: 12px;
+}
+
+.pg-listing-detail .ld-arrow.next {
+  right: 12px;
+}
+
+.pg-listing-detail .ld-count {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(15, 15, 15, 0.72);
+  color: #fff;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.pg-listing-detail .ld-thumbs {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 10px;
+}
+
+.pg-listing-detail .ld-thumb {
+  aspect-ratio: 4/3;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--line);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+.pg-listing-detail .ld-thumb:hover,
+.pg-listing-detail .ld-thumb.on {
+  opacity: 1;
+}
+
+.pg-listing-detail .ld-thumb.on {
+  border-color: var(--pink);
+}
+
+.pg-listing-detail .ld-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- 信息 ---- */
+
+.pg-listing-detail .ld-info {
+  position: sticky;
+  top: 96px;
+}
+
+.pg-listing-detail .ld-info h1 {
+  margin-top: 14px;
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  letter-spacing: -0.01em;
+}
+
+.pg-listing-detail .ld-loc {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.pg-listing-detail .ld-price-row {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.pg-listing-detail .ld-price {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  line-height: 1.1;
+}
+
+.pg-listing-detail .ld-price.ask {
+  font-size: 1.4rem;
+}
+
+.pg-listing-detail .ld-price small {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-left: 3px;
+}
+
+.pg-listing-detail .ld-facts {
+  margin: 28px 0 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 18px 20px;
+}
+
+.pg-listing-detail .ld-facts dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.pg-listing-detail .ld-facts dd {
+  margin: 4px 0 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.pg-listing-detail .ld-cta {
+  margin-top: 28px;
+}
+
+.pg-listing-detail .ld-cta .btn {
+  justify-content: center;
+}
+
+.pg-listing-detail .ld-cta-note {
+  margin: 12px 0 0;
+  font-size: 0.86rem;
+  color: var(--ink-faint);
+  max-width: 44ch;
+}
+
+/* ---- 介绍 ---- */
+
+.pg-listing-detail .ld-desc {
+  margin-top: clamp(40px, 6vw, 72px);
+  max-width: 760px;
+}
+
+.pg-listing-detail .ld-desc h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+}
+
+.pg-listing-detail .ld-desc p {
+  margin: 16px 0 0;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  /* 后台录入的是纯文字，保留其中的换行 */
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.pg-listing-detail .ls-note {
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .pg-listing-detail .ld-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pg-listing-detail .ld-info {
+    position: static;
+  }
+
+  .pg-listing-detail .ld-cta .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .pg-listing-detail .ld-thumbs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .pg-listing-detail .ld-arrow {
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -1,0 +1,20 @@
+/* 房源页在设计稿之外补充的样式（手工维护；listings.css 由提取脚本生成，会被覆盖）。 */
+
+/* 城市筛选从按钮改成了真实链接：去掉链接自带的下划线 */
+.pg-listings a.ls-chip {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* 「加载更多」 */
+.pg-listings .ls-more {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.pg-listings .ls-more .btn[disabled] {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}

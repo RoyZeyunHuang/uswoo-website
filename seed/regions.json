@@ -1,0 +1,8 @@
+[
+  { "slug": "new-york", "sort": 10, "cover": "https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?auto=format&fit=crop&w=900&q=80" },
+  { "slug": "chicago", "sort": 20, "cover": "/assets/loc-chicago.jpg" },
+  { "slug": "los-angeles", "sort": 30, "cover": "/assets/loc-la.jpg" },
+  { "slug": "washington-dc", "sort": 40, "cover": "/assets/loc-dc.jpg" },
+  { "slug": "philadelphia", "sort": 50, "cover": "https://images.unsplash.com/photo-1543372993-5fc1fc83caac?auto=format&fit=crop&w=900&q=80" },
+  { "slug": "boston", "sort": 60, "cover": "/assets/loc-boston.jpg" }
+]
