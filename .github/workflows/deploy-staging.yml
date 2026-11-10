@@ -52,27 +52,34 @@ jobs:
         id: pack
         run: |
           sha=$(git rev-parse HEAD)
-          tar czf output.tgz -C .output .
-          sum=$(sha256sum output.tgz | cut -d' ' -f1)
-          printf '{"sha": "%s", "sha256": "%s", "builtAt": "%s"}\n' "$sha" "$sum" "$(date -u +%FT%TZ)" > manifest.json
+          # 产物文件名带提交号：Release 里同名文件被替换后，下载地址会有一段时间仍返回旧内容
+          file="output-$sha.tgz"
+          tar czf "$file" -C .output .
+          sum=$(sha256sum "$file" | cut -d' ' -f1)
+          printf '{"sha": "%s", "file": "%s", "sha256": "%s", "builtAt": "%s"}\n' "$sha" "$file" "$sum" "$(date -u +%FT%TZ)" > manifest.json
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          echo "file=$file" >> "$GITHUB_OUTPUT"
           cat manifest.json
 
       - name: 上传到 Release
         env:
           GH_TOKEN: ${{ github.token }}
+          FILE: ${{ steps.pack.outputs.file }}
         run: |
           gh release view "$RELEASE_TAG" >/dev/null 2>&1 || gh release create "$RELEASE_TAG" --prerelease \
             --title "测试站构建产物" --notes "由 Deploy to staging 流程自动更新，测试站服务器从这里取最新版本。请不要手动修改。"
           # 先传产物、再传清单：服务器以清单为准，看到清单时产物一定已经就绪
-          gh release upload "$RELEASE_TAG" output.tgz --clobber
+          gh release upload "$RELEASE_TAG" "$FILE" --clobber
           gh release upload "$RELEASE_TAG" manifest.json --clobber
+          # 只保留最近 5 个产物
+          gh release view "$RELEASE_TAG" --json assets --jq '.assets | map(select(.name | startswith("output-"))) | sort_by(.createdAt) | reverse | .[5:] | .[].name' \
+            | while read -r old; do gh release delete-asset "$RELEASE_TAG" "$old" --yes; done
 
       - name: 等测试站切换到新版本
         env:
           SHA: ${{ steps.pack.outputs.sha }}
         run: |
-          for i in $(seq 1 60); do
+          for i in $(seq 1 90); do
             status=$(curl -fsS -m 10 "$STATUS_URL?t=$i" || echo '{}')
             current=$(echo "$status" | jq -r '.current // ""')
             attempt=$(echo "$status" | jq -r '.lastAttempt.sha // ""')
@@ -90,5 +97,5 @@ jobs:
             fi
             sleep 10
           done
-          echo "::error::等了 10 分钟，测试站还没有切换到新版本。服务器的拉取任务可能没有运行，请联系负责服务器的同事。"
+          echo "::error::等了 15 分钟，测试站还没有切换到新版本。服务器的拉取任务可能没有运行，请联系负责服务器的同事。"
           exit 1

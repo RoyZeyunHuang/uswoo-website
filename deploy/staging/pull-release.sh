@@ -55,7 +55,9 @@ healthy() { # $1 端口：首页与中文首页都要返回 200
 manifest=$(curl -fsSL --max-time 20 "$URL/manifest.json" 2>/dev/null) || exit 0
 sha=$(printf '%s' "$manifest" | sed -n 's/.*"sha": *"\([0-9a-f]\{40\}\)".*/\1/p')
 sum=$(printf '%s' "$manifest" | sed -n 's/.*"sha256": *"\([0-9a-f]\{64\}\)".*/\1/p')
-[ -n "$sha" ] && [ -n "$sum" ] || exit 0
+# 产物文件名带提交号（同名文件被替换后下载地址会短暂返回旧内容）；只接受这一种格式的文件名
+file=$(printf '%s' "$manifest" | sed -n 's/.*"file": *"\(output-[0-9a-f]\{40\}\.tgz\)".*/\1/p')
+[ -n "$sha" ] && [ -n "$sum" ] && [ "$file" = "output-$sha.tgz" ] || exit 0
 
 current=$(cat current/.release-sha 2>/dev/null || true)
 [ "$sha" = "$current" ] && exit 0
@@ -74,8 +76,16 @@ fail() { # $1 说明 $2 日志
   exit 1
 }
 
-curl -fsSL --max-time 180 -o "$tmp" "$URL/output.tgz" || fail "下载构建产物失败"
-[ "$(sha256sum "$tmp" | cut -d' ' -f1)" = "$sum" ] || fail "构建产物的校验值不一致"
+# 下载失败或校验不一致多半是暂时的（网络、缓存）：前几次只记日志、下一分钟再试，连续多次才算失败
+retry() { # $1 说明
+  local n; n=$(( $(cat "status/.retry-$sha" 2>/dev/null || echo 0) + 1 ))
+  rm -f status/.retry-*; echo "$n" > "status/.retry-$sha"
+  if [ "$n" -lt 5 ]; then log "$1（第 $n 次，稍后重试）"; rm -f "$tmp"; exit 0; fi
+  fail "$1（连续 $n 次）"
+}
+curl -fsSL --max-time 180 -o "$tmp" "$URL/$file" || retry "下载构建产物失败"
+[ "$(sha256sum "$tmp" | cut -d' ' -f1)" = "$sum" ] || retry "构建产物的校验值不一致"
+rm -f status/.retry-*
 mkdir -p "$dir" && tar xzf "$tmp" -C "$dir" || fail "解压构建产物失败"
 [ -f "$dir/server/index.mjs" ] || fail "构建产物里没有 server/index.mjs"
 echo "$sha" > "$dir/.release-sha"
