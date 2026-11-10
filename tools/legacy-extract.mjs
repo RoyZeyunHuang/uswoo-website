@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 /**
- * 从 legacy/ 里的 Claude Design 导出页提取重构要用的原料。可重复执行，产物可随时重新生成。
+ * 从 legacy/ 里的 Claude Design 导出页提取页面样式与图片。页面文案不在这里提取：内容全部在 CMS 里。可重复执行，产物可随时重新生成。
  *
  *   node tools/legacy-extract.mjs
  *
  * 产物：
- *   app/generated/zh.json                 中文字典（英文原文 → 中文），来自 i18n-zh.js 与 i18n-zh-cities.js
  *   app/assets/css/pages/<slug>.css       每个页面的样式，全部限定在 .pg-<slug> 之下，页面之间互不干扰
  *   app/assets/css/chrome.css             语言切换、移动端菜单、返回顶部的样式（原先由脚本运行时注入）
  *   public/assets/slots/<id>.<ext>        设计工具里拖进图片槽位的图片（原先是 base64）
@@ -42,25 +41,6 @@ const PAGES = {
 };
 
 // ---------------------------------------------------------------------------
-// 1. 中文字典
-// ---------------------------------------------------------------------------
-function extractDictionary() {
-  const sandbox = { window: {}, matchMedia: () => ({ matches: false }) };
-  sandbox.window.matchMedia = sandbox.matchMedia;
-  vm.createContext(sandbox);
-  for (const file of ["i18n-zh.js", "i18n-zh-cities.js"]) {
-    vm.runInContext(fs.readFileSync(path.join(legacy, file), "utf8"), sandbox, { filename: file });
-  }
-  const norm = text => text.replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/\s+/g, " ").trim();
-  const dict = {};
-  for (const [key, value] of Object.entries(sandbox.window.USWOO_ZH ?? {})) {
-    if (typeof value === "string") dict[norm(key)] = value;
-  }
-  fs.writeFileSync(out("app/generated/zh.json"), JSON.stringify(dict, null, 1) + "\n");
-  return Object.keys(dict).length;
-}
-
-// ---------------------------------------------------------------------------
 // 2. 图片槽位
 // ---------------------------------------------------------------------------
 function extractSlots() {
@@ -74,7 +54,6 @@ function extractSlots() {
     fs.writeFileSync(out("public/assets/slots", `${id}.${ext}`), Buffer.from(match[2], "base64"));
     manifest[id] = `/assets/slots/${id}.${ext}`;
   }
-  fs.writeFileSync(out("app/generated/slots.json"), JSON.stringify(manifest, null, 1) + "\n");
   return Object.keys(manifest).length;
 }
 
@@ -253,7 +232,6 @@ function extractChromeCss() {
   fs.copyFileSync(path.join(legacy, "mobile-type.css"), out("app/assets/css/mobile-type.css"));
 }
 
-console.log(`字典：${extractDictionary()} 条`);
 console.log(`图片槽位：${extractSlots()} 张`);
 for (const line of extractPages()) console.log(line);
 extractChromeCss();

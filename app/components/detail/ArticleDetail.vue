@@ -6,7 +6,7 @@
       <article class="story-article">
         <div class="story-narrow">
           <NuxtLink class="story-back" :to="{ path: localePath('/press'), hash: isStory ? '#renter-stories' : '#featured-press' }">
-            {{ tx(isStory ? "← Back to Renter Stories" : "← Back to Press") }}
+            {{ c(isStory ? "detail.backToStories" : "detail.backToPress") }}
           </NuxtLink>
           <p class="eyebrow"><span class="idx">{{ isStory ? "02" : "01" }}</span> {{ typeLabel }}</p>
           <h1>{{ bi(post.title) }}</h1>
@@ -32,8 +32,8 @@
       <section v-if="related.length" id="more-stories" class="more-stories">
         <div class="wrap">
           <div class="section-head">
-            <p class="eyebrow">{{ tx("Keep reading") }}</p>
-            <h2>{{ isStory ? tx("More renter stories.") : isZh ? "更多媒体报道" : "More press." }}</h2>
+            <p class="eyebrow">{{ c("detail.related.eyebrow") }}</p>
+            <h2>{{ c(isStory ? "detail.related.storiesTitle" : "detail.related.pressTitle") }}</h2>
           </div>
           <div class="story-grid" :class="`cols-${Math.min(related.length, 3)}`">
             <component :is="item.externalUrl ? 'a' : NuxtLink" v-for="item in related" :key="item.id" class="media-card story-card" v-bind="linkAttrs(item)">
@@ -67,6 +67,8 @@ import type { PostDetail, PostSummary } from "~~/shared/types/api";
 
 const { tx, bi, isZh } = useTx();
 const localePath = useLocalePath();
+const { c } = await usePageContent("press");
+const site = await useSite();
 const props = defineProps<{ post: PostDetail; /** 草稿预览：不收录、不输出 canonical 以外的收录信息 */ preview?: boolean }>();
 const post = computed(() => props.post);
 const isStory = computed(() => post.value.type === "story");
@@ -74,7 +76,7 @@ const body = computed(() => bi(post.value.body));
 const related = computed(() => post.value.related ?? []);
 
 /** 栏目名：故事是「Renter Stories」；报道显示来源，没填来源就是自家公告 */
-const typeLabel = computed(() => (isStory.value ? tx("Renter Stories") : post.value.sourceName || tx("USWOO Announcement")));
+const typeLabel = computed(() => (isStory.value ? c("detail.storyLabel") : post.value.sourceName || c("detail.ownSource")));
 
 /** 正文以图片开头的文章自带题图（例如开头并排的两张现场照片），不再重复显示封面 */
 const showCover = computed(() => Boolean(post.value.cover) && !/^\s*<figure[\s>]/i.test(body.value));
@@ -85,10 +87,14 @@ function formatDate(value: string): string {
   const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(value);
   if (!match) return "";
   const [year, month, day] = [Number(match[1]), Number(match[2]), Number(match[3])];
-  return isZh.value ? `${year}年${month}月${day}日` : `${MONTHS[month - 1]} ${day}, ${year}`;
+  return tx("{month} {day}, {year}")
+    .replace("{monthNumber}", String(month))
+    .replace("{month}", MONTHS[month - 1] ?? "")
+    .replace("{day}", String(day))
+    .replace("{year}", String(year));
 }
 function readTime(minutes: number): string {
-  return isZh.value ? `${minutes} 分钟阅读` : `${minutes} min read`;
+  return tx("{n} min read").replace("{n}", String(minutes));
 }
 
 /** 标题下的一行：作者 · 日期 · 阅读时长（有什么显示什么） */
@@ -109,9 +115,10 @@ usePageSeo(() => {
   const description = bi(item.seo?.description) || bi(item.summary);
   const image = item.seo?.image?.url || item.cover?.url || null;
   const url = absoluteUrl(localePath(`/press/${item.slug}`));
-  const organization = { "@type": "Organization", name: "USWOO", url: absoluteUrl("/") };
+  const brand = site.c("brand.wordmark");
+  const organization = { "@type": "Organization", name: brand, url: absoluteUrl("/") };
   return {
-    title: `${title} | USWOO`,
+    title: `${title} | ${brand}`,
     description,
     image,
     ogType: "article",
@@ -134,8 +141,8 @@ usePageSeo(() => {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: isZh.value ? "首页" : "Home", item: absoluteUrl(localePath("/")) },
-          { "@type": "ListItem", position: 2, name: tx("Press & Stories"), item: absoluteUrl(localePath("/press")) },
+          { "@type": "ListItem", position: 1, name: tx("Home"), item: absoluteUrl(localePath("/")) },
+          { "@type": "ListItem", position: 2, name: c("name"), item: absoluteUrl(localePath("/press")) },
           { "@type": "ListItem", position: 3, name: bi(item.title), item: url }
         ]
       }

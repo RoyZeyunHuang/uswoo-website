@@ -12,63 +12,50 @@ function dig(source: unknown, path: string): unknown {
 }
 
 /**
- * 【仅本地开发】记下页面渲染时用到的每个字段和它的默认值，tools/seed-pages.mjs 据此生成导入 CMS 的初始内容
- * （server/routes/_dev/page-defaults.get.ts 读取）。正式构建里 import.meta.dev 为 false，这段不存在。
- */
-type DefaultsStore = Record<string, Record<string, unknown>>;
-function recordDefault(pageKey: string, path: string, value: unknown) {
-  if (!import.meta.dev || !import.meta.server) return;
-  const holder = globalThis as { __uswooPageDefaults?: DefaultsStore };
-  const store = (holder.__uswooPageDefaults ??= {});
-  (store[pageKey] ??= {})[path] = value;
-}
-
-/**
- * 页面内容：CMS 里配置了就用 CMS 的，没配置的字段用代码里的默认文案。
+ * 页面内容，全部来自 CMS「新官网页面」，代码里不保留任何默认文案或图片。
  *
- *   const { c, ch } = await usePageContent("home");
- *   c("hero.sub", "More than finding an apartment…")          // 纯文字
- *   ch("hero.title", "Find Your Place in the City.", "在美国的新篇章<br class=m-br>从安心安家开始")  // 允许少量内联标记
+ *   const { c, ch, img, raw, list } = await usePageContent("home");
+ *   c("hero.sub")                       // 纯文字，按当前语言取；缺了回退另一种语言
+ *   ch("hero.title")                    // 给 v-html 用，只保留白名单里的少量内联标记
+ *   img("hero.poster")                  // 图片地址
+ *   raw<number>("about.stats.0.value")  // 数字、链接等原始值
+ *   list("help.cards")                  // 列表的下标，配合 v-for 使用
  *
- * 默认中文：第三个参数给了就用它，否则按英文原文查字典。
- * 这样页面在 CMS 还没录入内容时就能完整显示；CMS 里改了哪个字段，哪个字段就以 CMS 为准。
+ * 字段在 CMS 里没有填时返回空字符串（列表为空数组），页面上对应位置留空。
+ * About、Partners 可以按地区单独配置：传入地区后，该地区没有单独内容时接口返回全站默认（page.resolvedFrom = "global"）。
  */
 export async function usePageContent(pageKey: string, region?: string) {
   const api = useApi();
   const { isZh } = useTx();
-  // 页面内容还没在 CMS 里发布时接口返回 404：用一个空内容顶上（返回 null 的话浏览器端会重新请求一次）
-  const empty: PageContent = { key: pageKey, region: region ?? null, resolvedFrom: "global", payload: {}, updatedAt: null };
-  const { data } = await useAsyncData(`page:${pageKey}:${region ?? ""}`, () =>
-    orNull(api<PageContent>(`/pages/${pageKey}`, { query: region ? { region } : {} }))
-      .then(page => page ?? empty)
-      .catch(() => empty)
-  );
+  const { data, error } = await useAsyncData(`page:${pageKey}:${region ?? ""}`, () => api<PageContent>(`/pages/${pageKey}`, { query: region ? { region } : {} }));
+  // 内容取不到（接口故障，或这个页面还没在 CMS 里发布）时不渲染空壳页面
+  if (error.value || !data.value) throw createError({ statusCode: 503, statusMessage: "Content unavailable", fatal: true });
   const payload = computed<Record<string, unknown>>(() => data.value?.payload ?? {});
 
-  function text(path: string, english: string, chinese?: string): string {
-    const leaf = dig(payload.value, path) as Leaf | undefined;
-    recordDefault(pageKey, path, { en: english, zh: chinese || lookupZh(english) || "" });
-    const custom = typeof leaf === "string" ? { en: leaf, zh: "" } : leaf && typeof leaf === "object" ? leaf : null;
-    if (isZh.value) return custom?.zh || chinese || lookupZh(english) || custom?.en || english;
-    return custom?.en || english;
-  }
-
   /** 纯文字 */
-  const c = (path: string, english: string, chinese?: string) => text(path, english, chinese);
-  /** 给 v-html 用：已转义，只保留白名单里的内联标记 */
-  const ch = (path: string, english: string, chinese?: string) => richHtml(text(path, english, chinese));
-  /** 图片：CMS 里用 {"mediaId": n} 配置后接口会带出 url；没配置就用默认图 */
-  function img(path: string, fallback: string): string {
-    const leaf = dig(payload.value, path) as { url?: string | null } | undefined;
-    recordDefault(pageKey, path, { url: fallback });
-    return leaf?.url || fallback;
+  function c(path: string): string {
+    const leaf = dig(payload.value, path) as Leaf | undefined;
+    if (typeof leaf === "string") return leaf;
+    if (!leaf || typeof leaf !== "object") return "";
+    return (isZh.value ? leaf.zh || leaf.en : leaf.en || leaf.zh) || "";
   }
-  /** 数字等原始值 */
-  function raw<T>(path: string, fallback: T): T {
+  /** 给 v-html 用：已转义，只保留白名单里的内联标记 */
+  const ch = (path: string) => richHtml(c(path));
+  /** 图片地址：CMS 里用媒体库图片（{"mediaId": n}）或直接写地址（{"url": "…"}） */
+  function img(path: string): string {
+    const leaf = dig(payload.value, path) as { url?: string | null } | undefined;
+    return leaf?.url || "";
+  }
+  /** 数字、链接等原始值；没有填时是 undefined */
+  function raw<T>(path: string): T | undefined {
     const leaf = dig(payload.value, path);
-    recordDefault(pageKey, path, fallback);
-    return leaf === undefined || leaf === null || leaf === "" ? fallback : (leaf as T);
+    return leaf === undefined || leaf === null || leaf === "" ? undefined : (leaf as T);
+  }
+  /** 列表字段的下标：`v-for="i in list('help.cards')"`，再用 c(`help.cards.${i}.title`) 取每一项的内容 */
+  function list(path: string): number[] {
+    const leaf = dig(payload.value, path);
+    return Array.isArray(leaf) ? leaf.map((_, index) => index) : [];
   }
 
-  return { c, ch, img, raw, page: data };
+  return { c, ch, img, raw, list, page: data as Ref<PageContent> };
 }

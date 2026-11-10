@@ -9,6 +9,32 @@
       "title": {
         "en": "Grow with USWOO.",
         "zh": "与 USWOO 一起成长"
+      },
+      "eyebrow": {
+        "en": "Careers",
+        "zh": "加入我们"
+      },
+      "rolesCta": {
+        "label": {
+          "en": "View Open Roles →",
+          "zh": "查看在招职位 →"
+        },
+        "labelShort": {
+          "en": "View Open Roles",
+          "zh": "查看在招职位"
+        },
+        "href": "/contact"
+      },
+      "joinCta": {
+        "label": {
+          "en": "Join Our Team →",
+          "zh": "加入我们的团队 →"
+        },
+        "labelShort": {
+          "en": "Join Our Team",
+          "zh": "加入我们的团队"
+        },
+        "href": "/contact"
       }
     },
     "hero": {
@@ -27,6 +53,14 @@
       "title": {
         "en": "Find Your Place. Feel at Home.",
         "zh": "找到属于你 的地方<br class=m-br>住出家 的感觉"
+      },
+      "eyebrow": {
+        "en": "About USWOO",
+        "zh": "关于 USWOO"
+      },
+      "scrollLabel": {
+        "en": "Scroll",
+        "zh": "向下滚动"
       }
     },
     "mission": {
@@ -46,6 +80,10 @@
           "title": {
             "en": "We Know What It’s Like",
             "zh": "我们懂你的感受 🫶"
+          },
+          "imageAlt": {
+            "en": "We Know What It’s Like",
+            "zh": "我们懂你的感受 🫶"
           }
         },
         {
@@ -61,6 +99,10 @@
             "zh": "从找到合适的公寓到适应日常生活，我们让一切更轻松。远离家乡时，小事也很重要。"
           },
           "title": {
+            "en": "We Take Care of the Details",
+            "zh": "细节我们来操心🏡"
+          },
+          "imageAlt": {
             "en": "We Take Care of the Details",
             "zh": "细节我们来操心🏡"
           }
@@ -80,6 +122,10 @@
           "title": {
             "en": "We’re Here Beyond Move In",
             "zh": "入住之后我们依然在 🤝"
+          },
+          "imageAlt": {
+            "en": "We’re Here Beyond Move In",
+            "zh": "入住之后我们依然在 🤝"
           }
         }
       ],
@@ -90,6 +136,10 @@
       "title": {
         "en": "What we care about most.",
         "zh": "我们最在意的事"
+      },
+      "eyebrow": {
+        "en": "Our Mission",
+        "zh": "我们的使命"
       }
     },
     "story": {
@@ -149,6 +199,14 @@
       "title": {
         "en": "We started with renters. Then built around everything they needed.",
         "zh": "我们从租客出发再围绕他们的一切需求不断成长"
+      },
+      "eyebrow": {
+        "en": "Our Story",
+        "zh": "我们的故事"
+      },
+      "imageAlt": {
+        "en": "Our Story",
+        "zh": "我们的故事"
       }
     },
     "timeline": {
@@ -164,6 +222,10 @@
           "title": {
             "en": "Founded",
             "zh": "从纽约起步"
+          },
+          "imageAlt": {
+            "en": "Founded",
+            "zh": "从纽约起步"
           }
         },
         {
@@ -175,6 +237,10 @@
             "zh": "随着租客的信任与合作伙伴的支持，我们不断积累租赁经验，至今已促成超过 6,000 份租约。"
           },
           "title": {
+            "en": "6,000+ Leases",
+            "zh": "6,000+ 份租约"
+          },
+          "imageAlt": {
             "en": "6,000+ Leases",
             "zh": "6,000+ 份租约"
           }
@@ -190,6 +256,10 @@
           "title": {
             "en": "Beyond New York",
             "zh": "走出纽约"
+          },
+          "imageAlt": {
+            "en": "Beyond New York",
+            "zh": "走出纽约"
           }
         },
         {
@@ -203,12 +273,38 @@
           "title": {
             "en": "USWOO Today",
             "zh": "今天的 USWOO"
+          },
+          "imageAlt": {
+            "en": "USWOO Today",
+            "zh": "今天的 USWOO"
           }
         }
       ],
       "title": {
         "en": "How we got here.",
         "zh": "从纽约出发走向更多城市"
+      },
+      "eyebrow": {
+        "en": "How We Got Here",
+        "zh": "发展历程"
+      }
+    },
+    "seo": {
+      "title": {
+        "en": "About Us | USWOO",
+        "zh": "关于我们 | USWOO"
+      },
+      "regionTitle": {
+        "en": "About Us — {region} | USWOO",
+        "zh": "关于我们 — {region} | USWOO"
+      },
+      "description": {
+        "en": "USWOO helps international students and young professionals feel at home in a new city, with thoughtful support that goes beyond finding a place to live.",
+        "zh": "USWOO 帮助留学生和年轻职场人在新城市找到“家”的感觉，我们的用心不止于帮你找到住处。"
+      },
+      "breadcrumb": {
+        "en": "About Us",
+        "zh": "关于我们"
       }
     }
   }

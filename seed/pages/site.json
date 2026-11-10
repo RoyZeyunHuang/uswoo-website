@@ -1,0 +1,107 @@
+{
+  "key": "site",
+  "payload": {
+    "brand": {
+      "siteName": {
+        "en": "USWOO",
+        "zh": "USWOO"
+      },
+      "wordmark": {
+        "en": "USWOO",
+        "zh": "USWOO"
+      },
+      "logo": {
+        "url": ""
+      },
+      "favicon": {
+        "url": "/assets/brand/favicon.png"
+      }
+    },
+    "nav": {
+      "services": {
+        "en": "Services",
+        "zh": "服务"
+      },
+      "cityGuides": {
+        "en": "City Guides",
+        "zh": "城市指南"
+      },
+      "listings": {
+        "en": "Listings",
+        "zh": "房源"
+      },
+      "press": {
+        "en": "Press & Stories",
+        "zh": "媒体与故事"
+      },
+      "partners": {
+        "en": "Partners",
+        "zh": "合作伙伴"
+      },
+      "about": {
+        "en": "About Us",
+        "zh": "关于我们"
+      },
+      "contact": {
+        "en": "Contact",
+        "zh": "联系我们"
+      }
+    },
+    "footer": {
+      "newsletterLabel": {
+        "en": "Stay in the Loop",
+        "zh": "订阅最新动态"
+      },
+      "followLabel": {
+        "en": "Follow",
+        "zh": "关注我们"
+      },
+      "social": [
+        {
+          "label": {
+            "en": "Instagram",
+            "zh": "Instagram"
+          },
+          "url": "https://www.instagram.com/uswoo_realty/"
+        },
+        {
+          "label": {
+            "en": "LinkedIn",
+            "zh": "LinkedIn"
+          },
+          "url": "https://www.linkedin.com/company/uswoo-realty-llc/home/"
+        },
+        {
+          "label": {
+            "en": "TikTok",
+            "zh": "TikTok"
+          },
+          "url": "https://www.tiktok.com/@uswoo_realty"
+        }
+      ],
+      "legal": [
+        {
+          "en": "Boston USWOO Realty LLC is a licensed real estate broker in Massachusetts, with its New York branch, USWOO REALTY LLC, independently licensed in New York State.",
+          "zh": "Boston USWOO Realty LLC 是在马萨诸塞州持牌的房地产经纪公司，其纽约分支机构 USWOO REALTY LLC 在纽约州独立持有经纪牌照。"
+        },
+        {
+          "en": "All information is deemed reliable but not guaranteed and is subject to change without notice. Listings are subject to prior sale, rental, or withdrawal.",
+          "zh": "所有信息均被认为可靠，但不作保证，且可能随时变更，恕不另行通知。房源可能已被预先出售、出租或撤出市场。"
+        },
+        {
+          "en": "Both entities and their affiliates support Fair Housing and Equal Opportunity and comply with applicable anti-discrimination laws.",
+          "zh": "两家公司及其关联公司均支持公平住房与平等机会，并遵守适用的反歧视法律。"
+        },
+        {
+          "en": "Copyright ©2026 Boston USWOO Realty LLC. All Rights Reserved.",
+          "zh": "版权所有 ©2026 Boston USWOO Realty LLC。保留所有权利。"
+        }
+      ]
+    },
+    "seo": {
+      "defaultImage": {
+        "url": "/assets/uswoo-hero-poster.jpg"
+      }
+    }
+  }
+}

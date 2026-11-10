@@ -13,7 +13,7 @@
                 class="ld-stage"
                 :tabindex="photos.length > 1 ? 0 : undefined"
                 role="group"
-                :aria-label="t('Photos', '房源照片')"
+                :aria-label="c('detail.photos')"
                 @keydown.left.prevent="step(-1)"
                 @keydown.right.prevent="step(1)"
               >
@@ -31,10 +31,10 @@
                   decoding="async"
                 />
                 <span v-if="listing.tag" class="ls-tag">{{ tx(listing.tag) }}</span>
-                <span v-if="leased" class="ld-leased">{{ t("Leased", "已租出") }}</span>
+                <span v-if="leased" class="ld-leased">{{ tx("Leased") }}</span>
                 <template v-if="photos.length > 1">
-                  <button type="button" class="ld-arrow prev" :aria-label="t('Previous photo', '上一张')" @click="step(-1)">‹</button>
-                  <button type="button" class="ld-arrow next" :aria-label="t('Next photo', '下一张')" @click="step(1)">›</button>
+                  <button type="button" class="ld-arrow prev" :aria-label="tx('Previous photo')" @click="step(-1)">‹</button>
+                  <button type="button" class="ld-arrow next" :aria-label="tx('Next photo')" @click="step(1)">›</button>
                   <span class="ld-count" aria-live="polite">{{ active + 1 }} / {{ photos.length }}</span>
                 </template>
               </div>
@@ -45,7 +45,7 @@
                   type="button"
                   class="ld-thumb"
                   :class="{ on: index === active }"
-                  :aria-label="t(`Show photo ${index + 1}`, `查看第 ${index + 1} 张照片`)"
+                  :aria-label="tx('Show photo {n}').replace('{n}', String(index + 1))"
                   :aria-current="index === active ? 'true' : undefined"
                   @click="active = index"
                 >
@@ -56,15 +56,15 @@
 
             <div class="ld-info">
               <p class="eyebrow">
-                <span class="idx">{{ regionName || tx("Exclusive Listings") }}</span>
-                {{ listing.kind === "sale" ? t("For Sale", "出售") : t("For Rent", "出租") }}
+                <span class="idx">{{ regionName || c("hero.eyebrow") }}</span>
+                {{ c(listing.kind === "sale" ? "detail.forSale" : "detail.forRent") }}
               </p>
               <h1>{{ title }}</h1>
               <p v-if="location" class="ld-loc">{{ location }}</p>
 
               <div class="ld-price-row">
-                <div v-if="listing.price !== null" class="ld-price">${{ listing.price.toLocaleString("en-US") }}<small v-if="listing.priceUnit === 'month'">{{ t("/mo", "/月") }}</small></div>
-                <div v-else class="ld-price ask">{{ t("Price on request", "价格面议") }}</div>
+                <div v-if="listing.price !== null" class="ld-price">${{ listing.price.toLocaleString("en-US") }}<small v-if="listing.priceUnit === 'month'">{{ c("detail.perMonth") }}</small></div>
+                <div v-else class="ld-price ask">{{ c("detail.priceOnRequest") }}</div>
               </div>
 
               <dl v-if="facts.length" class="ld-facts">
@@ -76,26 +76,22 @@
 
               <div class="ld-cta">
                 <NuxtLink class="btn btn-pink" :to="enquiryLink">
-                  {{ leased ? t("Ask About Similar Homes", "咨询类似房源") : t("Enquire About This Home", "咨询这套房源") }}
+                  {{ c(leased ? "detail.cta.leased" : "detail.cta.enquire") }}
                 </NuxtLink>
                 <p class="ld-cta-note">
-                  {{
-                    leased
-                      ? t("This home has been leased. Tell us what you are looking for and we will find a similar one.", "这套房源已租出。告诉我们你的需求，我们为你匹配类似的房源。")
-                      : t("Ask about availability or book a tour. We usually reply within one business day.", "了解空置情况或预约看房，我们通常会在一个工作日内回复。")
-                  }}
+                  {{ c(leased ? "detail.cta.leasedNote" : "detail.cta.enquireNote") }}
                 </p>
               </div>
             </div>
           </div>
 
           <div v-if="description" class="ld-desc">
-            <h2>{{ t("About This Home", "房源介绍") }}</h2>
+            <h2>{{ c("detail.aboutTitle") }}</h2>
             <!-- 纯文字输出，换行靠样式保留 -->
             <p>{{ description }}</p>
           </div>
 
-          <p class="ls-note">{{ tx("Listings are subject to prior sale, rental, or withdrawal. Contact us for availability and tours.") }}</p>
+          <p class="ls-note">{{ c("disclaimer") }}</p>
         </div>
       </section>
     </main>
@@ -114,9 +110,8 @@ const { tx, bi, isZh } = useTx();
 const localePath = useLocalePath();
 const absoluteUrl = useAbsoluteUrl();
 const regions = await useRegions();
-
-/** 字典里没有的界面文案 */
-const t = (en: string, zh: string) => (isZh.value ? zh : en);
+const { c } = await usePageContent("listings");
+const site = await useSite();
 
 const props = defineProps<{ listing: Listing; /** 草稿预览：不收录 */ preview?: boolean }>();
 const listing = computed(() => props.listing);
@@ -132,7 +127,7 @@ const region = computed(() => regions.value.find(item => item.slug === listing.v
 const regionName = computed(() => (region.value ? bi(region.value.name) : ""));
 const listPath = computed(() => regionPath("listings", region.value?.slug));
 const backPath = computed(() => localePath(listPath.value));
-const backLabel = computed(() => (region.value ? t(`Listings in ${regionName.value}`, `${regionName.value}房源`) : t("All Listings", "全部房源")));
+const backLabel = computed(() => (region.value ? c("detail.backRegion").replace("{region}", regionName.value) : c("detail.backAll")));
 
 const enquiryLink = computed(() => ({ path: localePath("/contact"), query: { listing: id.value, region: listing.value.region } }));
 
@@ -156,17 +151,21 @@ function formatDate(value: string): string {
   const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(value);
   if (!match) return value;
   const [year, month, day] = [Number(match[1]), Number(match[2]), Number(match[3])];
-  return isZh.value ? `${year}年${month}月${day}日` : `${MONTHS[month - 1] ?? ""} ${day}, ${year}`;
+  return tx("{month} {day}, {year}")
+    .replace("{monthNumber}", String(month))
+    .replace("{month}", MONTHS[month - 1] ?? "")
+    .replace("{day}", String(day))
+    .replace("{year}", String(year));
 }
 
 const facts = computed(() => {
   const { bedrooms, bathrooms, sqft, availableFrom, kind } = listing.value;
   const rows: { label: string; value: string }[] = [];
-  if (bedrooms !== null) rows.push({ label: t("Bedrooms", "卧室"), value: bedrooms === 0 ? t("Studio", "开间") : String(bedrooms) });
-  if (bathrooms !== null) rows.push({ label: t("Bathrooms", "卫生间"), value: String(bathrooms) });
-  if (sqft !== null) rows.push({ label: t("Size", "面积"), value: t(`${sqft.toLocaleString("en-US")} sqft`, `${sqft.toLocaleString("en-US")} 平方英尺`) });
-  if (availableFrom) rows.push({ label: t("Available From", "可入住日期"), value: formatDate(availableFrom) });
-  rows.push({ label: t("Type", "类型"), value: kind === "sale" ? t("For Sale", "出售") : t("Rental", "出租") });
+  if (bedrooms !== null) rows.push({ label: c("detail.facts.bedrooms"), value: bedrooms === 0 ? tx("Studio") : String(bedrooms) });
+  if (bathrooms !== null) rows.push({ label: c("detail.facts.bathrooms"), value: String(bathrooms) });
+  if (sqft !== null) rows.push({ label: c("detail.facts.size"), value: tx("{n} sqft").replace("{n}", sqft.toLocaleString("en-US")) });
+  if (availableFrom) rows.push({ label: c("detail.facts.availableFrom"), value: formatDate(availableFrom) });
+  rows.push({ label: c("detail.facts.type"), value: c(kind === "sale" ? "detail.forSale" : "detail.facts.rental") });
   return rows;
 });
 
@@ -176,22 +175,22 @@ usePageSeo(() => {
   const item = listing.value;
   const url = absoluteUrl(localePath(`/listings/${item.id}`));
   const images = photos.value.map(photo => absoluteUrl(photo.url));
-  const price = item.price !== null ? `$${item.price.toLocaleString("en-US")}${item.priceUnit === "month" ? t("/mo", "/月") : ""}` : "";
-  const summary = [price, ...facts.value.slice(0, 3).map(fact => (fact.value === t("Studio", "开间") ? fact.value : `${fact.label} ${fact.value}`)), location.value]
+  const price = item.price !== null ? `$${item.price.toLocaleString("en-US")}${item.priceUnit === "month" ? c("detail.perMonth") : ""}` : "";
+  const summary = [price, ...facts.value.slice(0, 3).map(fact => (fact.value === tx("Studio") ? fact.value : `${fact.label} ${fact.value}`)), location.value]
     .filter(Boolean)
     .join(" · ");
   const flat = description.value.replace(/\s+/g, " ");
   const text = flat ? (flat.length > 160 ? `${flat.slice(0, 157).trimEnd()}…` : flat) : summary;
 
   const crumbs = [
-    { name: t("Home", "首页"), path: "/" },
-    { name: tx("Listings"), path: "/listings" },
+    { name: tx("Home"), path: "/" },
+    { name: c("name"), path: "/listings" },
     ...(region.value ? [{ name: regionName.value, path: listPath.value }] : []),
     { name: title.value, path: `/listings/${item.id}` }
   ];
 
   return {
-    title: `${[title.value, neighborhood.value].filter(Boolean).join(" — ")} | USWOO`,
+    title: `${[title.value, neighborhood.value].filter(Boolean).join(" — ")} | ${site.c("brand.wordmark")}`,
     description: text,
     image: item.cover?.url,
     // 示例房源、以及没有中文标题的中文页不收录

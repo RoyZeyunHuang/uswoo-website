@@ -7,22 +7,15 @@
       <section id="heroSection" ref="hero" class="split-hero band-paper">
         <div class="split-hero-grid">
           <div class="split-hero-text">
-            <p class="eyebrow"><span class="idx">01</span>{{ tx("SERVICES") }}</p>
-            <h1 v-html="ch('hero.title', 'From finding a home to feeling at home.', '从租房的第一步<br class=m-br>到安家的每一步')" />
-            <p class="sub">
-              {{
-                c(
-                  "hero.sub",
-                  "Finding the right apartment is only the beginning. USWOO supports renters through the full rental journey — from home search and lease signing to move-in, renewal and what comes next."
-                )
-              }}
-            </p>
+            <p class="eyebrow"><span class="idx">{{ c("hero.index") }}</span>{{ c("hero.eyebrow") }}</p>
+            <h1 v-html="ch('hero.title')" />
+            <p class="sub">{{ c("hero.sub") }}</p>
             <div class="btn-row">
-              <NuxtLink class="btn btn-primary" :to="localePath('/contact')">{{ tx("Find a Home") }}</NuxtLink>
+              <NuxtLink class="btn btn-primary" :to="localePath('/contact')">{{ c("hero.cta") }}</NuxtLink>
             </div>
           </div>
           <div class="split-hero-media">
-            <SlotImage :src="img('hero.image', '/assets/slots/services-hero.webp')" :alt="c('hero.title', 'From finding a home to feeling at home.')" eager />
+            <SlotImage :src="img('hero.image')" :alt="c('hero.imageAlt')" eager />
           </div>
         </div>
       </section>
@@ -30,20 +23,20 @@
       <section id="our-process" ref="processSection" class="band-paper" style="padding-top: clamp(101px, 16.2vw, 180px)">
         <div class="wrap">
           <div class="section-head centered" data-rv>
-            <p class="eyebrow"><span class="idx">02</span>{{ tx("OUR PROCESS") }}</p>
-            <h2 v-html="ch('process.title', 'One rental journey, supported from start to finish.', '从找房到安家<br class=m-br>每一步都为你考虑')" />
+            <p class="eyebrow"><span class="idx">{{ c("process.index") }}</span>{{ c("process.eyebrow") }}</p>
+            <h2 v-html="ch('process.title')" />
           </div>
 
           <div class="process-cards" data-io>
-            <div v-for="(card, index) in processCards" :key="index" class="process-card" :style="{ '--i': index }">
+            <div v-for="index in list('process.cards')" :key="index" class="process-card" :style="{ '--i': index }">
               <!-- eslint-disable-next-line vue/no-v-html -- 图标是写在代码里的固定 SVG -->
-              <div class="process-card-icon" aria-hidden="true" v-html="card.icon" />
+              <div class="process-card-icon" aria-hidden="true" v-html="processIcons[index] ?? ''" />
               <div class="process-card-media">
-                <SlotImage :src="img(`process.cards.${index}.image`, card.image)" :alt="c(`process.cards.${index}.title`, card.title)" />
+                <SlotImage :src="img(`process.cards.${index}.image`)" :alt="c(`process.cards.${index}.title`)" />
               </div>
               <div class="process-card-text">
-                <h3>{{ c(`process.cards.${index}.title`, card.title) }}</h3>
-                <p class="process-card-desc">{{ c(`process.cards.${index}.desc`, card.desc) }}</p>
+                <h3>{{ c(`process.cards.${index}.title`) }}</h3>
+                <p class="process-card-desc">{{ c(`process.cards.${index}.desc`) }}</p>
               </div>
             </div>
           </div>
@@ -53,30 +46,20 @@
       <section id="move-in-essentials" class="band-raised">
         <div class="wrap">
           <div class="section-head centered beyond-head" data-rv>
-            <p class="eyebrow"><span class="idx">03</span> {{ tx("BEYOND THE LEASE") }}</p>
-            <h2>{{ c("beyond.title", "Thoughtful support for everyday life.") }}</h2>
+            <p class="eyebrow"><span class="idx">{{ c("beyond.index") }}</span> {{ c("beyond.eyebrow") }}</p>
+            <h2>{{ c("beyond.title") }}</h2>
             <p class="lede m-full" style="margin-top: 16px">
-              {{
-                c(
-                  "beyond.lede",
-                  "Through Hi NY, USWOO takes care of the details that make settling into a new city feel easier, from move in essentials to the small everyday needs that are easy to overlook. Our support is personal, practical, and designed to make life feel a little more effortless."
-                )
-              }}
+              {{ c("beyond.lede") }}
             </p>
             <p class="lede m-short" style="margin-top: 16px">
-              {{
-                c(
-                  "beyond.ledeShort",
-                  "Through Hi NY, USWOO handles the details that make a new city feel easier, from move-in essentials to everyday needs. Personal, practical, and a little more effortless."
-                )
-              }}
+              {{ c("beyond.ledeShort") }}
             </p>
           </div>
 
           <div class="essentials-grid-dark" data-io>
-            <div v-for="(card, index) in essentials" :key="index" class="essential-card-dark" :style="{ '--i': card.delay }">
-              <div class="essential-icon-upload"><SlotImage :src="img(`beyond.cards.${index}.icon`, `/assets/slots/essential-img-${index + 1}.webp`)" alt="" /></div>
-              <h3>{{ c(`beyond.cards.${index}.title`, card.title) }}</h3>
+            <div v-for="index in list('beyond.cards')" :key="index" class="essential-card-dark" :style="{ '--i': essentialDelays[index] ?? 0 }">
+              <div class="essential-icon-upload"><SlotImage :src="img(`beyond.cards.${index}.icon`)" alt="" /></div>
+              <h3>{{ c(`beyond.cards.${index}.title`) }}</h3>
               <p>
                 {{ essentialText(index).body }}<span v-if="essentialText(index).stop" class="zh-stop">{{ essentialText(index).stop }}</span>
               </p>
@@ -91,28 +74,23 @@
             <div class="testimonial-card">
               <div class="quote-mark">&ldquo;</div>
               <p class="quote-text">
-                {{
-                  c(
-                    "quote.text",
-                    "A new city feels different when you don’t have to figure it all out alone. We’re here for the details that make settling in feel a little more like home."
-                  )
-                }}
+                {{ c("quote.text") }}
               </p>
               <div class="wechat-cta">
                 <div class="wechat-qr">
                   <img
-                    :src="img('quote.qr', '/assets/wechat-qr.png')"
-                    :alt="isZh ? '微信二维码' : 'WeChat QR code'"
+                    :src="img('quote.qr')"
+                    :alt="c('quote.qrAlt')"
                     style="width: 100%; height: 100%; display: block; object-fit: contain"
                   />
                 </div>
                 <div>
-                  <strong>{{ c("quote.wechat", "Connect with us on WeChat.") }}</strong>
+                  <strong>{{ c("quote.wechat") }}</strong>
                 </div>
               </div>
             </div>
             <div class="testimonial-media">
-              <SlotImage :src="img('quote.image', '/assets/slots/testimonial-media.jpg')" alt="" />
+              <SlotImage :src="img('quote.image')" alt="" />
             </div>
           </div>
         </div>
@@ -129,72 +107,41 @@ import "~/assets/css/pages/services.extra.css";
 
 const { tx, isZh } = useTx();
 const localePath = useLocalePath();
-const { c, ch, img } = await usePageContent("services");
+const { c, ch, img, list } = await usePageContent("services");
 
 // ---- 内容 ----
 
 const svg = (paths: string) =>
   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
 
-const processCards = [
-  {
-    title: "Find & Lease",
-    desc: "Home Search · Tours · Applications · Lease Support",
-    image: "/assets/slots/process-img-1.jpg",
-    icon: svg('<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><circle cx="12" cy="13.5" r="2"/><path d="m13.5 15 2 2"/>')
-  },
-  {
-    title: "Prepare & Set Up",
-    desc: "Move-in Planning · Building Guidance · Pre-move Support",
-    image: "/assets/slots/process-img-2.jpg",
-    icon: svg('<rect x="5" y="4.5" width="14" height="16" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="m8.5 13 2.5 2.5 4.5-5"/>')
-  },
-  {
-    title: "Move In & Settle",
-    desc: "Move-in Coordination · Local Guidance · Everyday Support",
-    image: "/assets/slots/process-img-3.webp",
-    icon: svg('<path d="M3.5 8 12 3.5 20.5 8v8L12 20.5 3.5 16z"/><path d="m3.5 8 8.5 4.5L20.5 8"/><path d="M12 12.5v8"/>')
-  },
-  {
-    title: "Renew or Relocate",
-    desc: "Renewal Support · Next-home Search",
-    image: "/assets/slots/process-img-4.webp",
-    icon: svg('<path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><path d="M20 4v4.5h-4.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><path d="M4 20v-4.5h4.5"/>')
-  }
+/** 流程卡片的图标：固定的 SVG，按卡片位置对应（卡片的标题、说明、图片在 CMS 里） */
+const processIcons = [
+  svg('<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><circle cx="12" cy="13.5" r="2"/><path d="m13.5 15 2 2"/>'),
+  svg('<rect x="5" y="4.5" width="14" height="16" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="m8.5 13 2.5 2.5 4.5-5"/>'),
+  svg('<path d="M3.5 8 12 3.5 20.5 8v8L12 20.5 3.5 16z"/><path d="m3.5 8 8.5 4.5L20.5 8"/><path d="M12 12.5v8"/>'),
+  svg('<path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><path d="M20 4v4.5h-4.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><path d="M4 20v-4.5h4.5"/>')
 ];
 
-/** delay 是出场动画的错开序号，沿用设计稿里每张卡片的 --i */
-const essentials = [
-  { title: "Moving & Luggage", text: "Local moves and luggage shipping, handled.", delay: 0 },
-  { title: "Room Dividers", text: "Smarter partitions for shared space.", delay: 1 },
-  { title: "Furniture", text: "Rental and setup, no starting from scratch.", delay: 2 },
-  { title: "Wi-Fi & Utilities", text: "Internet, power and the essentials online.", delay: 3 },
-  { title: "Mobile Plans", text: "A U.S. number and a plan that fits.", delay: 1 },
-  { title: "Renter's Insurance", text: "Coverage that meets building requirements.", delay: 2 },
-  { title: "Move-in Checklist", text: "The small details, before and after.", delay: 3 },
-  { title: "Community & Connections", text: "Events, networking and local community.", delay: 4 }
-];
+/** 出场动画的错开序号，沿用设计稿里每张卡片的 --i，按卡片位置对应 */
+const essentialDelays = [0, 1, 2, 3, 1, 2, 3, 4];
 
 /** 中文说明在手机上不带句末的句号（原站 mobile-services.js 的做法）：把句号单独拆出来，由样式在窄屏隐藏 */
 function essentialText(index: number): { body: string; stop: string } {
-  const text = c(`beyond.cards.${index}.text`, essentials[index]!.text);
+  const text = c(`beyond.cards.${index}.text`);
   return isZh.value && text.endsWith("。") ? { body: text.slice(0, -1), stop: "。" } : { body: text, stop: "" };
 }
 
 const absoluteUrl = useAbsoluteUrl();
 usePageSeo(() => ({
-  title: isZh.value ? "USWOO | 服务" : "USWOO | Services",
-  description: c(
-    "hero.sub",
-    "Finding the right apartment is only the beginning. USWOO supports renters through the full rental journey — from home search and lease signing to move-in, renewal and what comes next."
-  ),
-  image: img("hero.image", "/assets/slots/services-hero.webp"),
+  title: c("seo.title"),
+  description: c("seo.description"),
+  image: img("hero.image"),
   jsonLd: [
     {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: isZh.value ? "首页" : "Home", item: absoluteUrl(localePath("/")) },
-        { "@type": "ListItem", position: 2, name: tx("Services"), item: absoluteUrl(localePath("/services")) }
+        { "@type": "ListItem", position: 1, name: tx("Home"), item: absoluteUrl(localePath("/")) },
+        { "@type": "ListItem", position: 2, name: c("seo.breadcrumb"), item: absoluteUrl(localePath("/services")) }
       ]
     }
   ]

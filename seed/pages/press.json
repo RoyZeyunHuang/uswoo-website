@@ -1,0 +1,41 @@
+{
+  "key": "press",
+  "payload": {
+    "name": { "en": "Press & Stories", "zh": "媒体与故事" },
+    "seo": {
+      "title": { "en": "Press & Stories | USWOO", "zh": "媒体与故事 | USWOO" },
+      "regionTitle": { "en": "Press & Stories in {region} | USWOO", "zh": "{region}媒体与故事 | USWOO" },
+      "description": { "en": "News, media coverage and renter stories from USWOO.", "zh": "USWOO 的最新动态、媒体报道与租客故事。" },
+      "regionDescription": { "en": "News, media coverage and renter stories from USWOO in {region}.", "zh": "USWOO 在{region}的最新动态、媒体报道与租客故事。" }
+    },
+    "featured": {
+      "eyebrow": { "en": "Featured Press", "zh": "重点报道" },
+      "title": { "en": "In the news.", "zh": "媒体聚焦" },
+      "latestHeading": { "en": "Latest Press", "zh": "最新报道" }
+    },
+    "stories": {
+      "eyebrow": { "en": "Renter Stories", "zh": "租客故事" },
+      "title": { "en": "The real side of renting.", "zh": "关于租房的那些事" },
+      "cardLink": { "en": "Learn more →", "zh": "了解更多 →" }
+    },
+    "moments": {
+      "eyebrow": { "en": "Brand Moments", "zh": "品牌时刻" }
+    },
+    "ownSource": { "en": "USWOO Announcement", "zh": "USWOO 公告" },
+    "empty": {
+      "eyebrow": { "en": "Press & Stories", "zh": "媒体与故事" },
+      "text": { "en": "New stories are on the way. Check back soon.", "zh": "内容正在准备中，敬请期待。" }
+    },
+    "detail": {
+      "storyLabel": { "en": "Renter Stories", "zh": "租客故事" },
+      "ownSource": { "en": "USWOO Announcement", "zh": "USWOO 公告" },
+      "backToStories": { "en": "← Back to Renter Stories", "zh": "← 返回租客故事" },
+      "backToPress": { "en": "← Back to Press", "zh": "← 返回媒体报道" },
+      "related": {
+        "eyebrow": { "en": "Keep reading", "zh": "继续阅读" },
+        "storiesTitle": { "en": "More renter stories.", "zh": "更多租客故事" },
+        "pressTitle": { "en": "More press.", "zh": "更多媒体报道" }
+      }
+    }
+  }
+}

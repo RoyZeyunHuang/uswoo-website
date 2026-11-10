@@ -13,7 +13,12 @@
       "title": {
         "en": "Let's Talk About Your Building.",
         "zh": "让我们聊聊您的物业"
-      }
+      },
+      "eyebrow": {
+        "en": "CTA",
+        "zh": "联系我们"
+      },
+      "href": "/contact"
     },
     "editorial": {
       "hey": {
@@ -138,6 +143,10 @@
       "title": {
         "en": "What that looks like <em>in practice</em>.",
         "zh": "租赁成果用数据说话"
+      },
+      "eyebrow": {
+        "en": "PERFORMANCE",
+        "zh": "成效"
       }
     },
     "why": {
@@ -190,6 +199,28 @@
       "title": {
         "en": "We understand the renter behind the lead.",
         "zh": "熟悉纽约市场<br class=m-br>更了解租客的需求"
+      },
+      "eyebrow": {
+        "en": "WHY USWOO",
+        "zh": "为什么选择 USWOO"
+      }
+    },
+    "seo": {
+      "title": {
+        "en": "Partners | USWOO",
+        "zh": "合作伙伴 | USWOO"
+      },
+      "regionTitle": {
+        "en": "Partners — {region} | USWOO",
+        "zh": "合作伙伴 — {region} | USWOO"
+      },
+      "description": {
+        "en": "We care not only about how many units we lease, but also how quickly each unit is leased, helping properties shorten vacancy periods and maintain stable rental income.",
+        "zh": "我们不仅关注出租数量，也重视每套房源的出租速度，帮助物业缩短空置时间，保持稳定的租金收入。"
+      },
+      "breadcrumb": {
+        "en": "Partners",
+        "zh": "合作伙伴"
       }
     }
   }

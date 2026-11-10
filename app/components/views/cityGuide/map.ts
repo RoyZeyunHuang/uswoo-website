@@ -129,15 +129,16 @@ const CATEGORY_ICON_SVG: Record<MarkerKind, string> = {
 };
 
 type AreaKind = "neighborhood" | "business";
-const AREA_KINDS: Record<AreaKind, { id: string; title: string; color: string; ink: string; dash?: number[] }> = {
-  neighborhood: { id: "nb", title: "Neighborhood", color: "#C9536B", ink: "#9E3A50" },
-  business: { id: "bd", title: "Business District", color: "#C98A14", ink: "#8A5A00", dash: [3, 1.6] }
+const AREA_KINDS: Record<AreaKind, { id: string; color: string; ink: string; dash?: number[] }> = {
+  neighborhood: { id: "nb", color: "#C9536B", ink: "#9E3A50" },
+  business: { id: "bd", color: "#C98A14", ink: "#8A5A00", dash: [3, 1.6] }
 };
 const AREA_KIND_LIST: AreaKind[] = ["neighborhood", "business"];
 
 type PoiCat = "landmark" | "company";
 const POI_COLOR: Record<PoiCat, string> = { landmark: "#2F8F83", company: "#4A5FC1" };
-const POI_SECTOR: Record<string, string> = { finance: "Finance", tech: "Tech", media: "Media", consulting: "Consulting", health: "Healthcare", consumer: "Consumer" };
+/** 企业的行业（extra.icon）；名称在 CMS 的 map.sectors.<行业> 里 */
+const POI_SECTORS = ["finance", "tech", "media", "consulting", "health", "consumer"];
 /** 24×24 的线条图形（在类别底色上画成白色） */
 const POI_GLYPH: Record<string, string> = {
   statue: '<path d="M12 2.5v3.5M10.2 4.2l1.8 1.8 1.8-1.8M9.5 22h5M10 22l.8-10.5h2.4L14 22M10.8 11.5 9 8.5M13.2 11.5 12 7"/><path d="M8 22h8"/>',
@@ -367,6 +368,8 @@ interface Card {
   desc?: string;
   images?: string[];
   credits?: string[];
+  /** 图片署名那一行的文案，其中 {authors} 换成作者名单 */
+  creditLabel?: string;
   rows?: CardRow[];
   extraHtml?: string;
 }
@@ -385,7 +388,7 @@ function placeCardHtml(card: Card): string {
     (card.desc ? `<p class="pc-desc">${escHtml(card.desc)}</p>` : "") +
     (card.extraHtml ?? "") +
     (rows.length ? `<div class="pc-meta">${rows.map(row => `<div class="pc-row"><svg viewBox="0 0 24 24">${ROW_ICON[row.icon]}</svg><span>${escHtml(row.text)}</span></div>`).join("")}</div>` : "") +
-    (credit.length ? `<div class="pc-credit">Photos: ${escHtml(credit.join(", "))} · Wikimedia Commons</div>` : "") +
+    (credit.length ? `<div class="pc-credit">${escHtml((card.creditLabel ?? "").replace("{authors}", credit.join(", ")))}</div>` : "") +
     "</div></div>"
   );
 }
@@ -401,7 +404,8 @@ export interface GuideMapOptions {
   places: GuidePlace[];
   /** 当前打开的筛选项；一个都没选时按原站的做法仍显示社区 */
   filters: () => GuideFilter[];
-  tx: (english: string) => string;
+  /** 取 CMS 页面内容 city-guides 里的文案（当前语言），如 label("map.kinds.school") */
+  label: (path: string) => string;
   bi: (value: Bi | null | undefined) => string;
   isZh: () => boolean;
 }
@@ -421,7 +425,8 @@ interface Located {
 }
 
 export function createGuideMap(options: GuideMapOptions): GuideMapHandle {
-  const { container, tipHost, config, places, tx, bi } = options;
+  const { container, tipHost, config, places, label, bi } = options;
+  const creditLabel = () => label("map.photoCredit");
 
   let destroyed = false;
   let lib: MapLibre | null = null;
@@ -494,10 +499,11 @@ export function createGuideMap(options: GuideMapOptions): GuideMapHandle {
     const place = ofKind(kind).find(item => item.name === name)?.place;
     return placeCardHtml({
       color: K.color,
-      tags: [tx(K.title)],
+      tags: [label(`map.kinds.${kind}`)],
       name: place ? bi(place.name) : name,
       images: place ? imagesOf(place) : [],
       credits: place ? creditsOf(place) : [],
+      creditLabel: creditLabel(),
       desc: place ? bi(place.desc) : "",
       rows: [{ icon: "pin", text: place ? bi(place.area) : "" }]
     });
@@ -508,15 +514,16 @@ export function createGuideMap(options: GuideMapOptions): GuideMapHandle {
     const communities = Array.isArray(extra.communities) ? extra.communities : [];
     return placeCardHtml({
       color: MARKER_COLOR.school,
-      tags: [tx("School")],
+      tags: [label("map.kinds.school")],
       name: bi(place.name),
       images: imagesOf(place),
       credits: creditsOf(place),
+      creditLabel: creditLabel(),
       desc: bi(place.desc),
       rows: [
         { icon: "pin", text: bi(place.area) || bi(extra.hub) },
         { icon: "home", text: place.address },
-        { icon: "people", text: communities.length ? (options.isZh() ? "热门社区：" + communities.join("、") : "Popular areas: " + communities.join(", ")) : "" }
+        { icon: "people", text: communities.length ? label("map.popularAreas").replace("{areas}", communities.join(options.isZh() ? "、" : ", ")) : "" }
       ]
     });
   }
@@ -524,14 +531,16 @@ export function createGuideMap(options: GuideMapOptions): GuideMapHandle {
   /** 地标 / 知名企业 */
   function poiCardHtml(place: GuidePlace): string {
     const cat: PoiCat = place.kind === "company" ? "company" : "landmark";
-    const sector = POI_SECTOR[String(extraOf(place).icon ?? "")];
+    const icon = String(extraOf(place).icon ?? "");
+    const sector = POI_SECTORS.includes(icon) ? label(`map.sectors.${icon}`) : "";
     return placeCardHtml({
       color: POI_COLOR[cat],
-      tags: [tx(cat === "landmark" ? "Landmark" : "Major Employer"), ...(sector ? [tx(sector)] : [])],
+      tags: [label(`map.kinds.${cat}`), ...(sector ? [sector] : [])],
       name: bi(place.name),
       desc: bi(place.desc),
       images: imagesOf(place),
       credits: creditsOf(place),
+      creditLabel: creditLabel(),
       rows: [
         { icon: "pin", text: bi(place.area) },
         { icon: "home", text: place.address }
@@ -557,7 +566,7 @@ export function createGuideMap(options: GuideMapOptions): GuideMapHandle {
       "</div>";
     return placeCardHtml({
       color: MARKER_COLOR.commute,
-      tags: [tx(isStation ? "Station" : "Transit Line"), system],
+      tags: [label(isStation ? "map.kinds.station" : "map.kinds.line"), system],
       name: String(isStation ? (props.name ?? "") : props.name || props.ref || ""),
       extraHtml: badges
     });

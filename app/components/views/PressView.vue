@@ -6,8 +6,8 @@
       <section v-if="lead" id="featured-press" class="band-paper">
         <div class="wrap">
           <div class="section-head">
-            <p class="eyebrow"><span class="idx">{{ sectionIndex("press") }}</span> {{ tx("Featured Press") }}</p>
-            <h2>{{ tx("In the news.") }}</h2>
+            <p class="eyebrow"><span class="idx">{{ sectionIndex("press") }}</span> {{ c("featured.eyebrow") }}</p>
+            <h2>{{ c("featured.title") }}</h2>
           </div>
 
           <div class="press-grid" :class="{ solo: !latest.length }">
@@ -25,7 +25,7 @@
             </component>
 
             <div v-if="latest.length">
-              <p class="press-latest-head">{{ tx("Latest Press") }}</p>
+              <p class="press-latest-head">{{ c("featured.latestHeading") }}</p>
               <div class="press-side-list">
                 <component :is="linkTag(post)" v-for="post in latest" :key="post.id" class="press-side-item" v-bind="linkAttrs(post)">
                   <div class="press-side-text">
@@ -47,8 +47,8 @@
         <div class="wrap">
           <div class="section-head-row">
             <div class="section-head">
-              <p class="eyebrow"><span class="idx">{{ sectionIndex("story") }}</span> {{ tx("Renter Stories") }}</p>
-              <h2>{{ tx("The real side of renting.") }}</h2>
+              <p class="eyebrow"><span class="idx">{{ sectionIndex("story") }}</span> {{ c("stories.eyebrow") }}</p>
+              <h2>{{ c("stories.title") }}</h2>
             </div>
           </div>
 
@@ -65,7 +65,7 @@
                   <span v-if="post.publishedAt && post.readMinutes" class="dot" />
                   <span v-if="post.readMinutes">{{ readTime(post.readMinutes) }}</span>
                 </div>
-                <span class="story-more">{{ tx("Learn more →") }}</span>
+                <span class="story-more">{{ c("stories.cardLink") }}</span>
               </div>
             </component>
           </div>
@@ -75,7 +75,7 @@
       <section v-if="moments.length" id="brand-moments" class="band-paper">
         <div class="wrap">
           <div class="section-head">
-            <p class="eyebrow"><span class="idx">{{ sectionIndex("moment") }}</span> {{ tx("Brand Moments") }}</p>
+            <p class="eyebrow"><span class="idx">{{ sectionIndex("moment") }}</span> {{ c("moments.eyebrow") }}</p>
           </div>
 
           <div class="moments-row">
@@ -98,8 +98,8 @@
 
       <section v-if="isEmpty" class="band-paper press-empty">
         <div class="wrap">
-          <p class="eyebrow">{{ tx("Press & Stories") }}</p>
-          <p class="lede">{{ isZh ? "内容正在准备中，敬请期待。" : "New stories are on the way. Check back soon." }}</p>
+          <p class="eyebrow">{{ c("empty.eyebrow") }}</p>
+          <p class="lede">{{ c("empty.text") }}</p>
         </div>
       </section>
     </main>
@@ -116,9 +116,10 @@ import type { Paged, PostSummary, PostType } from "~~/shared/types/api";
 
 const props = defineProps<{ region?: string }>();
 
-const { tx, bi, isZh } = useTx();
+const { tx, bi } = useTx();
 const localePath = useLocalePath();
 const api = useApi();
+const { c } = await usePageContent("press");
 // 先校验地区：不存在的地区是真实的 404
 const { region } = await useRegion(props.region);
 
@@ -160,7 +161,7 @@ function linkAttrs(post: PostSummary): Record<string, string> {
 
 /** 来源：外部报道显示媒体名，自家发布的显示「USWOO Announcement」 */
 function sourceLabel(post: PostSummary): string {
-  return post.sourceName || tx("USWOO Announcement");
+  return post.sourceName || c("ownSource");
 }
 function coverAlt(post: PostSummary): string {
   return bi(post.cover?.alt) || bi(post.title);
@@ -172,10 +173,14 @@ function formatDate(value: string): string {
   const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(value);
   if (!match) return "";
   const [year, month, day] = [Number(match[1]), Number(match[2]), Number(match[3])];
-  return isZh.value ? `${year}年${month}月${day}日` : `${MONTHS[month - 1]} ${day}, ${year}`;
+  return tx("{month} {day}, {year}")
+    .replace("{monthNumber}", String(month))
+    .replace("{month}", MONTHS[month - 1] ?? "")
+    .replace("{day}", String(day))
+    .replace("{year}", String(year));
 }
 function readTime(minutes: number): string {
-  return isZh.value ? `${minutes} 分钟阅读` : `${minutes} min read`;
+  return tx("{n} min read").replace("{n}", String(minutes));
 }
 
 /** Brand Moments 的图标沿用设计稿的三个（定位、链接、奖章），按顺序循环使用 */
@@ -190,19 +195,14 @@ const momentIcons = [
 const absoluteUrl = useAbsoluteUrl();
 usePageSeo(() => {
   const name = region.value ? bi(region.value.name) : "";
-  const heading = tx("Press & Stories");
-  const title = name ? (isZh.value ? `${name}${heading}` : `${heading} in ${name}`) : heading;
-  const description = isZh.value
-    ? `USWOO ${name ? `在${name}的` : "的"}最新动态、媒体报道与租客故事。`
-    : `News, media coverage and renter stories from USWOO${name ? ` in ${name}` : ""}.`;
   const crumbs = [
-    { "@type": "ListItem", position: 1, name: isZh.value ? "首页" : "Home", item: absoluteUrl(localePath("/")) },
-    { "@type": "ListItem", position: 2, name: heading, item: absoluteUrl(localePath("/press")) }
+    { "@type": "ListItem", position: 1, name: tx("Home"), item: absoluteUrl(localePath("/")) },
+    { "@type": "ListItem", position: 2, name: c("name"), item: absoluteUrl(localePath("/press")) }
   ];
   if (region.value) crumbs.push({ "@type": "ListItem", position: 3, name, item: absoluteUrl(localePath(regionPath("press", region.value.slug))) });
   return {
-    title: `${title} | USWOO`,
-    description,
+    title: name ? c("seo.regionTitle").replace("{region}", name) : c("seo.title"),
+    description: name ? c("seo.regionDescription").replace("{region}", name) : c("seo.description"),
     image: lead.value?.cover?.url,
     // 还没有任何内容的页面先不收录
     noindex: isEmpty.value,

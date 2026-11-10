@@ -1,6 +1,37 @@
 {
   "key": "contact",
   "payload": {
+    "email": "info@uswoo.com",
+    "form": {
+      "emailLabel": {
+        "en": "Email",
+        "zh": "邮箱"
+      },
+      "emailPlaceholder": {
+        "en": "Your email",
+        "zh": "您的邮箱"
+      },
+      "messageLabel": {
+        "en": "Message",
+        "zh": "留言内容"
+      },
+      "messagePlaceholder": {
+        "en": "How can we help?",
+        "zh": "有什么可以帮您？"
+      },
+      "nameLabel": {
+        "en": "Full Name",
+        "zh": "姓名"
+      },
+      "namePlaceholder": {
+        "en": "Your name",
+        "zh": "您的姓名"
+      },
+      "submit": {
+        "en": "Send Message",
+        "zh": "发送"
+      }
+    },
     "hero": {
       "image": {
         "url": "/assets/contact-nyc-street.jpg"
@@ -16,6 +47,20 @@
       "titleLead": {
         "en": "Contact",
         "zh": "联系"
+      }
+    },
+    "seo": {
+      "breadcrumb": {
+        "en": "Contact",
+        "zh": "联系我们"
+      },
+      "description": {
+        "en": "Questions about renting, partnering with USWOO, or press? Send us a note and our team will get back to you within two business days.",
+        "zh": "无论是寻找理想的家、了解合作机会，还是媒体采访咨询，都欢迎与我们联系。"
+      },
+      "title": {
+        "en": "USWOO | Contact",
+        "zh": "USWOO | 联系我们"
       }
     }
   }

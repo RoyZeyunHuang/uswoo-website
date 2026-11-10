@@ -108,6 +108,11 @@
           }
         }
       ],
+      "eyebrow": {
+        "en": "BEYOND THE LEASE",
+        "zh": "租约之外"
+      },
+      "index": "03",
       "lede": {
         "en": "Through Hi NY, USWOO takes care of the details that make settling into a new city feel easier, from move in essentials to the small everyday needs that are easy to overlook. Our support is personal, practical, and designed to make life feel a little more effortless.",
         "zh": "通过 Hi NY，我们将本地资源与实用服务融入日常，让你更轻松地适应新城市的生活。"
@@ -122,9 +127,22 @@
       }
     },
     "hero": {
+      "cta": {
+        "en": "Find a Home",
+        "zh": "开始找房"
+      },
+      "eyebrow": {
+        "en": "SERVICES",
+        "zh": "服务"
+      },
       "image": {
         "url": "/assets/slots/services-hero.webp"
       },
+      "imageAlt": {
+        "en": "From finding a home to feeling at home.",
+        "zh": "从租房的第一步到安家的每一步"
+      },
+      "index": "01",
       "sub": {
         "en": "Finding the right apartment is only the beginning. USWOO supports renters through the full rental journey — from home search and lease signing to move-in, renewal and what comes next.",
         "zh": "USWOO 陪伴租客走完整个租房旅程——从找房、签约，到入住、续租，以及之后的每一步。"
@@ -189,6 +207,11 @@
           }
         }
       ],
+      "eyebrow": {
+        "en": "OUR PROCESS",
+        "zh": "服务流程"
+      },
+      "index": "02",
       "title": {
         "en": "One rental journey, supported from start to finish.",
         "zh": "从找房到安家<br class=m-br>每一步都为你考虑"
@@ -201,6 +224,10 @@
       "qr": {
         "url": "/assets/wechat-qr.png"
       },
+      "qrAlt": {
+        "en": "WeChat QR code",
+        "zh": "微信二维码"
+      },
       "text": {
         "en": "A new city feels different when you don’t have to figure it all out alone. We’re here for the details that make settling in feel a little more like home.",
         "zh": "初来一座城市，不必所有事情都自己摸索。那些关于生活的大小事，我们陪你慢慢理顺。"
@@ -208,6 +235,20 @@
       "wechat": {
         "en": "Connect with us on WeChat.",
         "zh": "联系我们"
+      }
+    },
+    "seo": {
+      "breadcrumb": {
+        "en": "Services",
+        "zh": "服务"
+      },
+      "description": {
+        "en": "Finding the right apartment is only the beginning. USWOO supports renters through the full rental journey — from home search and lease signing to move-in, renewal and what comes next.",
+        "zh": "USWOO 陪伴租客走完整个租房旅程——从找房、签约，到入住、续租，以及之后的每一步。"
+      },
+      "title": {
+        "en": "USWOO | Services",
+        "zh": "USWOO | 服务"
       }
     }
   }

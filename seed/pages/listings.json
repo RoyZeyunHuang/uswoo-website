@@ -1,0 +1,85 @@
+{
+  "key": "listings",
+  "payload": {
+    "name": { "en": "Listings", "zh": "房源" },
+    "seo": {
+      "title": { "en": "Exclusive Listings | USWOO", "zh": "独家房源 | USWOO" },
+      "regionTitle": { "en": "Exclusive Listings in {region} | USWOO", "zh": "{region}独家房源 | USWOO" },
+      "description": {
+        "en": "Homes you will only find with USWOO, hand-picked in our six markets and ready to tour.",
+        "zh": "只在 USWOO 才能找到的房源，精选自我们的六大市场，随时可以看房。"
+      },
+      "regionDescription": {
+        "en": "Exclusive USWOO listings in {region}. Homes you will only find with USWOO, hand-picked in our six markets and ready to tour.",
+        "zh": "USWOO 在{region}的独家房源。只在 USWOO 才能找到的房源，精选自我们的六大市场，随时可以看房。"
+      },
+      "regionListName": { "en": "Exclusive Listings in {region}", "zh": "{region}独家房源" }
+    },
+    "hero": {
+      "eyebrow": { "en": "Exclusive Listings", "zh": "独家房源" },
+      "titleLead": { "en": "Exclusive", "zh": "独家" },
+      "titleAccent": { "en": "listings", "zh": "房源" },
+      "lede": {
+        "en": "Homes you will only find with USWOO, hand-picked in our six markets and ready to tour.",
+        "zh": "只在 USWOO 才能找到的房源，精选自我们的六大市场，随时可以看房。"
+      }
+    },
+    "filters": {
+      "all": { "en": "All", "zh": "全部" }
+    },
+    "empty": {
+      "en": "New listings in this market are coming soon. Contact us to hear first.",
+      "zh": "该城市的新房源即将上线，欢迎联系我们抢先获知。"
+    },
+    "disclaimer": {
+      "en": "Listings are subject to prior sale, rental, or withdrawal. Contact us for availability and tours.",
+      "zh": "房源可能已被售出、租出或下架。具体空置情况与看房请联系我们。"
+    },
+    "cta": {
+      "eyebrow": { "en": "Talk to us", "zh": "联系我们" },
+      "title": { "en": "Don't See Your Fit?", "zh": "没有合适的？" },
+      "lede": {
+        "en": "Tell us your budget, neighborhood and move-in date. We will match you with the right home, including ones not yet listed.",
+        "zh": "告诉我们你的预算、街区和入住日期，我们会为你匹配合适的房源，包括尚未公开的房源。"
+      },
+      "button": { "en": "Talk to USWOO", "zh": "联系 USWOO" }
+    },
+    "card": {
+      "perMonth": { "en": "/mo", "zh": "/mo" },
+      "studio": { "en": "Studio", "zh": "Studio" },
+      "bed": { "en": "{n} Bed", "zh": "{n} Bed" },
+      "bath": { "en": "{n} Bath", "zh": "{n} Bath" },
+      "sqft": { "en": "{n} sqft", "zh": "{n} sqft" }
+    },
+    "detail": {
+      "backRegion": { "en": "Listings in {region}", "zh": "{region}房源" },
+      "backAll": { "en": "All Listings", "zh": "全部房源" },
+      "photos": { "en": "Photos", "zh": "房源照片" },
+      "forRent": { "en": "For Rent", "zh": "出租" },
+      "forSale": { "en": "For Sale", "zh": "出售" },
+      "perMonth": { "en": "/mo", "zh": "/月" },
+      "priceOnRequest": { "en": "Price on request", "zh": "价格面议" },
+      "facts": {
+        "bedrooms": { "en": "Bedrooms", "zh": "卧室" },
+        "bathrooms": { "en": "Bathrooms", "zh": "卫生间" },
+        "size": { "en": "Size", "zh": "面积" },
+        "availableFrom": { "en": "Available From", "zh": "可入住日期" },
+        "type": { "en": "Type", "zh": "类型" },
+        "rental": { "en": "Rental", "zh": "出租" }
+      },
+      "cta": {
+        "enquire": { "en": "Enquire About This Home", "zh": "咨询这套房源" },
+        "enquireNote": {
+          "en": "Ask about availability or book a tour. We usually reply within one business day.",
+          "zh": "了解空置情况或预约看房，我们通常会在一个工作日内回复。"
+        },
+        "leased": { "en": "Ask About Similar Homes", "zh": "咨询类似房源" },
+        "leasedNote": {
+          "en": "This home has been leased. Tell us what you are looking for and we will find a similar one.",
+          "zh": "这套房源已租出。告诉我们你的需求，我们为你匹配类似的房源。"
+        }
+      },
+      "aboutTitle": { "en": "About This Home", "zh": "房源介绍" }
+    }
+  }
+}

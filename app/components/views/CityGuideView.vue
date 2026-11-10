@@ -7,18 +7,11 @@
       <section ref="lead" class="band-raised cg-lead" :class="{ in: leadIn }">
         <div class="wrap">
           <div class="section-head centered">
-            <h2 v-html="ch('lead.title', 'Know the city before you move in.', '搬进来之前<br class=m-br>先了解这座城市')" />
-            <p class="lede">
-              {{
-                c(
-                  "lead.lede",
-                  "Every neighborhood has its own rhythm — schools, business districts, transit lines and the walk to your favorite coffee shop. We map it all out, so you can choose a place that actually fits your life, not just an address on a lease. Explore by school, by commute, or just by vibe."
-                )
-              }}
-            </p>
+            <h2 v-html="ch('lead.title')" />
+            <p class="lede">{{ c("lead.lede") }}</p>
           </div>
           <div class="cg-lead-media">
-            <img :src="img('lead.image', '/assets/cg-lead-skyline.jpg')" :alt="tx('Manhattan skyline at dusk over the East River')" loading="lazy" />
+            <img :src="img('lead.image')" :alt="c('lead.image.alt')" loading="lazy" />
           </div>
         </div>
       </section>
@@ -27,10 +20,10 @@
         <div class="wrap">
           <div class="cg-top">
             <div class="cg-intro">
-              <p class="eyebrow"><span class="idx">01</span></p>
-              <h1>{{ c("intro.title", "City Guides") }}</h1>
-              <p class="sub">{{ c("intro.sub", "Explore the city your way.") }}</p>
-              <p class="desc">{{ c("intro.desc", "Choose a city, then explore the areas, schools, business districts and lifestyles that matter to you.") }}</p>
+              <p class="eyebrow"><span class="idx">{{ c("intro.index") }}</span></p>
+              <h1>{{ c("intro.title") }}</h1>
+              <p class="sub">{{ c("intro.sub") }}</p>
+              <p class="desc">{{ c("intro.desc") }}</p>
 
               <button type="button" class="cg-filter-open" @click="openSheet(false)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
@@ -38,19 +31,19 @@
                   <circle cx="16" cy="7" r="2" />
                   <circle cx="8" cy="17" r="2" />
                 </svg>
-                {{ tx("Choose City & Explore") }}
+                {{ c("intro.openSheet") }}
               </button>
               <div class="cg-sheet-backdrop" @click="closeSheet" />
-              <div class="cg-sheet" role="dialog" :aria-label="tx('Explore Your Way')">
+              <div class="cg-sheet" role="dialog" :aria-label="c('sheet.title')">
                 <div class="cg-sheet-head">
-                  <button type="button" class="cg-sheet-x" :aria-label="both('Close', '关闭')" @click="closeSheet">
+                  <button type="button" class="cg-sheet-x" :aria-label="c('sheet.close')" @click="closeSheet">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
                   </button>
-                  <span>{{ tx("Explore Your Way") }}</span>
+                  <span>{{ c("sheet.title") }}</span>
                 </div>
                 <div class="cg-sheet-body">
                   <div class="cg-sheet-cities">
-                    <p class="cg-filters-label">{{ both("City", "城市") }}</p>
+                    <p class="cg-filters-label">{{ c("sheet.cityLabel") }}</p>
                     <div class="cg-tabs">
                       <NuxtLink
                         v-for="city in cities"
@@ -64,22 +57,22 @@
                       </NuxtLink>
                     </div>
                   </div>
-                  <p class="cg-filters-label">{{ tx("Explore by") }}</p>
+                  <p class="cg-filters-label">{{ c("sheet.filtersLabel") }}</p>
                   <div class="cg-filters">
-                    <button v-for="filter in FILTERS" :key="filter.id" type="button" class="cg-filter" :class="{ active: activeFilters.includes(filter.id) }" @click="toggleFilter(filter.id)">
+                    <button v-for="id in FILTERS" :key="id" type="button" class="cg-filter" :class="{ active: activeFilters.includes(id) }" @click="toggleFilter(id)">
                       <!-- eslint-disable-next-line vue/no-v-html -->
-                      <span v-html="FILTER_ICONS[filter.id]" />
+                      <span v-html="FILTER_ICONS[id]" />
                       <span class="ftext"
-                        ><strong>{{ tx(filter.title) }}</strong
-                        ><span>{{ tx(filter.desc) }}</span></span
+                        ><strong>{{ c(`filters.${id}.title`) }}</strong
+                        ><span>{{ c(`filters.${id}.desc`) }}</span></span
                       >
                       <span class="radio" />
                     </button>
                   </div>
-                  <button type="button" class="cg-clear" @click="clearFilters">{{ tx("Clear all") }}</button>
+                  <button type="button" class="cg-clear" @click="clearFilters">{{ c("sheet.clear") }}</button>
                 </div>
                 <div class="cg-sheet-foot">
-                  <button type="button" class="cg-sheet-done" @click="closeSheet">{{ both("Show results", "查看结果") }}</button>
+                  <button type="button" class="cg-sheet-done" @click="closeSheet">{{ c("sheet.done") }}</button>
                 </div>
               </div>
             </div>
@@ -98,36 +91,36 @@
               </div>
               <div class="cg-legend">
                 <div class="cg-legend-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2" /></svg>{{ tx("Neighborhood") }}
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2" /></svg>{{ c("legend.neighborhood") }}
                 </div>
                 <div class="cg-legend-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
                     <path d="M22 10 12 4 2 10l10 6 10-6z" />
                     <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5" /></svg
-                  >{{ tx("School") }}
+                  >{{ c("legend.school") }}
                 </div>
                 <div class="cg-legend-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
                     <rect x="3" y="7" width="18" height="13" rx="2" />
                     <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg
-                  >{{ tx("Business District") }}
+                  >{{ c("legend.business") }}
                 </div>
                 <div class="cg-legend-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6">
                     <circle cx="12" cy="12" r="9" />
                     <text x="12" y="16" font-size="10" text-anchor="middle" fill="currentColor" stroke="none">M</text></svg
-                  >{{ tx("Transit") }}
+                  >{{ c("legend.transit") }}
                 </div>
                 <div class="cg-legend-item">
-                  <svg viewBox="0 0 24 24" style="stroke: none"><circle cx="12" cy="12" r="8" fill="#2F8F83" /></svg>{{ tx("Landmark") }}
+                  <svg viewBox="0 0 24 24" style="stroke: none"><circle cx="12" cy="12" r="8" fill="#2F8F83" /></svg>{{ c("legend.landmark") }}
                 </div>
               </div>
 
               <!-- 地图的文字版：画布里的内容读屏软件和搜索引擎都读不到，这里按类别列出同样的点位（视觉上隐藏） -->
               <div v-if="placeGroups.length" class="cg-places-text">
-                <h2>{{ both(`Places on the ${cityName} map`, `${cityName}地图上的地点`) }}</h2>
+                <h2>{{ withCity("places.title") }}</h2>
                 <section v-for="group in placeGroups" :key="group.kind">
-                  <h3>{{ tx(group.title) }}</h3>
+                  <h3>{{ c(`places.groups.${group.kind}`) }}</h3>
                   <ul>
                     <li v-for="place in group.places" :key="place.id">
                       <strong>{{ bi(place.name) }}</strong>
@@ -147,10 +140,10 @@
         <section id="areas" class="cg-areas">
           <div class="wrap">
             <div class="cg-areas-head">
-              <p class="eyebrow"><span class="idx">02</span>{{ tx("NEIGHBORHOODS") }}</p>
+              <p class="eyebrow"><span class="idx">{{ c("areas.index") }}</span>{{ c("areas.eyebrow") }}</p>
               <h2>{{ cityEmoji }} {{ cityName }}</h2>
               <p v-if="areas.length">{{ bi(payload.intro) }}</p>
-              <p v-else style="text-align: center">{{ tx("Neighborhood guide coming soon.") }}</p>
+              <p v-else style="text-align: center">{{ c("areas.empty") }}</p>
             </div>
             <div class="cg-area-pills">
               <NuxtLink v-for="city in cities" :key="city.slug" class="cg-area-pill" :class="{ active: city.active }" :to="{ path: city.path, hash: '#areas' }">
@@ -162,7 +155,7 @@
                 <path d="M4 7h10M18 7h2M4 17h2M10 17h10" />
                 <circle cx="16" cy="7" r="2" />
                 <circle cx="8" cy="17" r="2" /></svg
-              >{{ tx("Pick Another City") }}
+              >{{ c("areas.pickCity") }}
             </button>
 
             <div v-if="areas.length" ref="areaGrid" class="cg-area-grid">
@@ -190,12 +183,12 @@
                 <div class="art"><img :src="closing.image?.url" alt="" /></div>
                 <div class="body">
                   <h3>
-                    <span class="em">{{ closing.emoji || "✨" }}</span
-                    >{{ bi(closing.title) || tx("Found your area?") }}
+                    <span class="em">{{ closing.emoji || raw("closing.emoji") }}</span
+                    >{{ bi(closing.title) || c("closing.title") }}
                   </h3>
                   <p class="cg-full">{{ bi(closing.text) }}</p>
-                  <p class="cg-short">{{ bi(closing.short) || tx("Once you know your area, we can help with the rest, from apartment search to move-in essentials.") }}</p>
-                  <NuxtLink class="btn" :to="localePath('/contact')">{{ tx("Talk to USWOO") }}</NuxtLink>
+                  <p class="cg-short">{{ bi(closing.short) || c("closing.short") }}</p>
+                  <NuxtLink class="btn" :to="localePath('/contact')">{{ c("closing.cta") }}</NuxtLink>
                 </div>
               </article>
             </div>
@@ -213,10 +206,10 @@
               </svg>
             </div>
             <div class="cg-switch-text">
-              <strong>{{ c("switch.title", "Moving to a different city?") }}</strong>
-              <span>{{ c("switch.text", "Switch cities above to explore more areas and find your place.") }}</span>
+              <strong>{{ c("switch.title") }}</strong>
+              <span>{{ c("switch.text") }}</span>
             </div>
-            <a class="btn btn-outline on-paper" href="#explore">{{ tx("Explore Other Cities") }}</a>
+            <a class="btn btn-outline on-paper" href="#explore">{{ c("switch.cta") }}</a>
           </div>
         </div>
       </section>
@@ -241,20 +234,13 @@ const localePath = useLocalePath();
 const api = useApi();
 const { region, regions } = await useRegion(props.region);
 const slug = props.region ?? "new-york";
-const { c, ch, img } = await usePageContent("city-guides", props.region);
-
-/** 字典里没有的界面文案：直接给出两种语言 */
-const both = (english: string, chinese: string) => (isZh.value ? chinese : english);
+// 各城市通用的文案（标题、筛选项、图例、按钮等）：CMS 页面内容 city-guides，不分地区
+const { c, ch, img, raw } = await usePageContent("city-guides");
+const { c: site } = await useSite();
 
 // ---- 数据 ----
 
-const { data: guide, error } = await useAsyncData(`guide:${slug}`, async () => {
-  const published = await orNull(api<Guide>(`/guides/${slug}`));
-  if (published || !import.meta.dev) return published;
-  // 【仅本地开发】CMS 里还没导入这个地区的 City Guide 时，用 seed/guides/<region>.json 顶上（见 server/routes/_dev/guide/[region].get.ts）。
-  // 正式构建里 import.meta.dev 为 false，这一段会被整体去掉。
-  return await $fetch<Guide>(`/_dev/guide/${slug}`).catch(() => null);
-});
+const { data: guide, error } = await useAsyncData(`guide:${slug}`, () => orNull(api<Guide>(`/guides/${slug}`)));
 // 没发布就是真实的 404；接口本身出错则如实报错，不伪装成“页面不存在”
 if (!guide.value) throw createError(error.value ? { statusCode: 502, statusMessage: "Bad Gateway", fatal: true } : { statusCode: 404, statusMessage: "Page Not Found", fatal: true });
 
@@ -266,6 +252,8 @@ const places = computed<GuidePlace[]>(() => guide.value?.places ?? []);
 /** 标题里的城市：地区页用地区自己的名称（占位地区显示的是别处复制来的内容，名称仍是它自己的） */
 const cityName = computed(() => (region.value ? bi(region.value.name) : bi(payload.value.cityName)));
 const cityEmoji = computed(() => (region.value ? region.value.emoji : (payload.value.emoji ?? "")));
+/** CMS 文案里的 {city} 换成当前城市名 */
+const withCity = (path: string) => c(path).replace("{city}", cityName.value);
 
 /** 城市切换沿用原站的顺序；每个城市现在是独立的网址 */
 const CITY_ORDER = ["new-york", "los-angeles", "washington-dc", "chicago", "philadelphia", "boston"];
@@ -285,23 +273,12 @@ const FILTER_ICONS: Record<GuideFilter, string> = {
   commute:
     '<svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="1.6" style="width:20px;height:20px"><rect x="5" y="3" width="14" height="14" rx="3"/><circle cx="8.5" cy="21" r="1.2"/><circle cx="15.5" cy="21" r="1.2"/><line x1="5" y1="12" x2="19" y2="12"/></svg>'
 };
-const FILTERS: { id: GuideFilter; title: string; desc: string }[] = [
-  { id: "neighborhood", title: "Neighborhood", desc: "Explore popular areas" },
-  { id: "school", title: "School", desc: "Universities & campuses" },
-  { id: "business", title: "Business District", desc: "Work hubs & commercial areas" },
-  { id: "commute", title: "Commute", desc: "Transit & commute time" }
-];
+/** 筛选项的顺序；标题与说明在 CMS 的 filters.<id> 里 */
+const FILTERS: GuideFilter[] = ["neighborhood", "school", "business", "commute"];
 
-/** 地图文字版的分组，顺序与图例一致 */
-const PLACE_GROUPS: { kind: GuidePlace["kind"]; title: string }[] = [
-  { kind: "neighborhood", title: "Neighborhood" },
-  { kind: "school", title: "School" },
-  { kind: "business", title: "Business District" },
-  { kind: "commute", title: "Commute" },
-  { kind: "landmark", title: "Landmark" },
-  { kind: "company", title: "Major Employer" }
-];
-const placeGroups = computed(() => PLACE_GROUPS.map(group => ({ ...group, places: places.value.filter(place => place.kind === group.kind) })).filter(group => group.places.length));
+/** 地图文字版的分组，顺序与图例一致；分组标题在 CMS 的 places.groups.<kind> 里 */
+const PLACE_KINDS: GuidePlace["kind"][] = ["neighborhood", "school", "business", "commute", "landmark", "company"];
+const placeGroups = computed(() => PLACE_KINDS.map(kind => ({ kind, places: places.value.filter(place => place.kind === kind) })).filter(group => group.places.length));
 
 // ---- SEO ----
 
@@ -310,30 +287,30 @@ usePageSeo(() => {
   const name = cityName.value;
   const pageUrl = absoluteUrl(localePath(regionPath("city-guide", slug)));
   return {
-    title: bi(payload.value.seo?.title) || both(`${name} City Guide | USWOO`, `${name}城市指南 | USWOO`),
-    description: bi(payload.value.seo?.description) || bi(payload.value.intro) || c("intro.desc", "Choose a city, then explore the areas, schools, business districts and lifestyles that matter to you."),
-    image: areas.value[0]?.image?.url || "/assets/cg-lead-skyline.jpg",
+    title: bi(payload.value.seo?.title) || withCity("seo.title"),
+    description: bi(payload.value.seo?.description) || bi(payload.value.intro) || c("seo.description"),
+    image: areas.value[0]?.image?.url || img("lead.image"),
     noindex: guide.value?.isPlaceholder ?? false,
     canonicalPath: props.region ? undefined : regionPath("city-guide", "new-york"),
     jsonLd: [
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: both("Home", "首页"), item: absoluteUrl(localePath("/")) },
-          { "@type": "ListItem", position: 2, name: tx("City Guides"), item: absoluteUrl(localePath("/city-guides")) },
+          { "@type": "ListItem", position: 1, name: tx("Home"), item: absoluteUrl(localePath("/")) },
+          { "@type": "ListItem", position: 2, name: c("seo.breadcrumb"), item: absoluteUrl(localePath("/city-guides")) },
           { "@type": "ListItem", position: 3, name, item: pageUrl }
         ]
       },
       {
         "@type": "RealEstateAgent",
-        name: "USWOO",
+        name: site("brand.wordmark"),
         url: absoluteUrl(localePath("/")),
-        image: absoluteUrl("/assets/uswoo-hero-poster.jpg"),
+        image: absoluteUrl(img("seo.brandImage")),
         areaServed: { "@type": "City", name }
       },
       {
         "@type": "ItemList",
-        name: both(`${name} neighborhoods`, `${name}社区指南`),
+        name: withCity("seo.areasListName"),
         itemListElement: areas.value.map((area, index) => ({
           "@type": "ListItem",
           position: index + 1,
@@ -444,7 +421,7 @@ onMounted(() => {
       config,
       places: places.value,
       filters: () => activeFilters.value,
-      tx,
+      label: c,
       bi,
       isZh: () => isZh.value
     });

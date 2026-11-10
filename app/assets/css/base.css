@@ -37,3 +37,10 @@ body {
 .pg {
   overflow-x: clip;
 }
+
+/* 导航里的 logo 图片（CMS「全站通用」里配置了才出现）：高度跟随文字标识的字号 */
+.wordmark-logo {
+  display: block;
+  height: 1.3em;
+  width: auto;
+}

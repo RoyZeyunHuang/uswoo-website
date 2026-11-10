@@ -8,31 +8,31 @@
         <div class="wrap">
           <div class="editorial">
             <div class="editorial-media editorial-media-l">
-              <SlotImage :src="img('editorial.imageLeft', 'https://images.unsplash.com/photo-1772797583328-f83bc3f94f80?auto=format&fit=crop&w=900&q=80')" alt="" eager />
+              <SlotImage :src="img('editorial.imageLeft')" alt="" eager />
             </div>
 
             <div class="editorial-copy">
-              <p class="editorial-hey">{{ c("editorial.hey", "To our developer and property management partners:") }}</p>
-              <h2 v-html="ch('editorial.title', 'Your Asset, <br class=m-br>Our Shared Goal', '您的资产价值<br class=m-br>我们的共同目标')" />
-              <p class="lede">{{ c("editorial.lede", "Higher occupancy and more stable rental income, driving long-term growth in your property’s value.") }}</p>
+              <p class="editorial-hey">{{ c("editorial.hey") }}</p>
+              <h2 v-html="ch('editorial.title')" />
+              <p class="lede">{{ c("editorial.lede") }}</p>
             </div>
 
             <div class="editorial-right">
               <div class="editorial-media editorial-media-r">
-                <SlotImage :src="img('editorial.imageRight', '/assets/partners-editorial-right.jpg?v=2')" alt="" eager />
+                <SlotImage :src="img('editorial.imageRight')" alt="" eager />
               </div>
             </div>
           </div>
 
           <!-- 展开/收起直接改 DOM 上的 class（与原页面一致）：这些元素还会被滚动动效加 class，用响应式 class 会互相覆盖 -->
           <div class="offer-row">
-            <div v-for="(offer, index) in offers" :key="index" class="offer-item" :class="index === 0 ? 'open' : undefined">
+            <div v-for="index in list('offers')" :key="index" class="offer-item" :class="index === 0 ? 'open' : undefined">
               <div class="offer-head" data-offer-toggle role="button" tabindex="0" :aria-expanded="index === 0 ? 'true' : 'false'">
                 <span class="offer-num">{{ pad(index) }}</span>
-                <h3>{{ c(`offers.${index}.title`, offer.title) }}</h3>
+                <h3>{{ c(`offers.${index}.title`) }}</h3>
                 <span class="offer-toggle" aria-hidden="true" />
               </div>
-              <p>{{ c(`offers.${index}.text`, offer.text) }}</p>
+              <p>{{ c(`offers.${index}.text`) }}</p>
             </div>
           </div>
         </div>
@@ -41,20 +41,15 @@
       <section id="heroSection" class="partners-hero">
         <div class="partners-hero-photo">
           <div class="partners-hero-bg" aria-hidden="true">
-            <SlotImage :src="img('hero.image', '/assets/partners-hero.jpg')" alt="" />
+            <SlotImage :src="img('hero.image')" alt="" />
           </div>
           <div class="partners-hero-scrim" aria-hidden="true" />
 
           <div class="partners-hero-top wrap">
             <div class="partners-hero-grid">
-              <h1 v-html="ch('hero.title', 'Fewer vacancies, more efficient leasing.', '减少空置<br class=m-br>让出租更高效')" />
+              <h1 v-html="ch('hero.title')" />
               <p class="hero-slogan">
-                {{
-                  c(
-                    "hero.slogan",
-                    "We care not only about how many units we lease, but also how quickly each unit is leased, helping properties shorten vacancy periods and maintain stable rental income."
-                  )
-                }}
+                {{ c("hero.slogan") }}
               </p>
             </div>
           </div>
@@ -66,26 +61,21 @@
           <div class="why-bento-wrap">
             <div class="why-copy">
               <div class="section-head">
-                <p class="eyebrow"><span class="idx">03</span> {{ tx("WHY USWOO") }}</p>
-                <h2 v-html="ch('why.title', 'We understand the renter behind the lead.', '熟悉纽约市场<br class=m-br>更了解租客的需求')" />
+                <p class="eyebrow"><span class="idx">03</span> {{ c("why.eyebrow") }}</p>
+                <h2 v-html="ch('why.title')" />
                 <p class="lede">
-                  {{
-                    c(
-                      "why.lede",
-                      "International renters often make housing decisions differently. Timing, communication, cultural context, and trust all play a role. Our team understands those details and helps turn that understanding into a smoother leasing experience for both renters and properties."
-                    )
-                  }}
+                  {{ c("why.lede") }}
                 </p>
               </div>
             </div>
 
             <div class="why-bento">
-              <div v-for="(card, index) in whyCards" :key="index" class="why-card" :class="index === 0 ? 'featured' : undefined">
+              <div v-for="index in list('why.cards')" :key="index" class="why-card" :class="index === 0 ? 'featured' : undefined">
                 <span class="press-icon"
-                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" v-html="card.icon"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" v-html="whyIcons[index]"
                 /></span>
-                <h4>{{ c(`why.cards.${index}.title`, card.title) }}</h4>
-                <p>{{ c(`why.cards.${index}.text`, card.text) }}</p>
+                <h4>{{ c(`why.cards.${index}.title`) }}</h4>
+                <p>{{ c(`why.cards.${index}.text`) }}</p>
               </div>
             </div>
           </div>
@@ -95,54 +85,43 @@
       <section id="performance" class="band-raised">
         <div class="wrap">
           <div class="section-head centered perf-head">
-            <p class="eyebrow"><span class="idx">04</span> {{ tx("PERFORMANCE") }}</p>
-            <h2 v-html="ch('performance.title', 'What that looks like <em>in practice</em>.', '租赁成果用数据说话')" />
+            <p class="eyebrow"><span class="idx">04</span> {{ c("performance.eyebrow") }}</p>
+            <h2 v-html="ch('performance.title')" />
           </div>
 
+          <!-- 四张卡片各占一种版式（按顺序 a/b/c/d）；内容逐项取自 CMS 的 performance.cards -->
           <div class="bento perf-bento">
-            <div class="bento-card bento-a">
-              <div class="photo"><img :src="img('performance.cards.0.image', '/assets/partners-lease-agreement.webp')" alt="" loading="lazy" /></div>
-              <div>
-                <div class="num" data-num="0">{{ shown[0] }}</div>
-                <span class="pill">{{ c("performance.cards.0.label", "Faster Lease Conversion") }}</span>
-                <p class="desc">{{ c("performance.cards.0.desc", "Higher-intent traffic helps shorten the path from interest to lease.") }}</p>
-              </div>
-            </div>
-            <div class="bento-card bento-b">
-              <img :src="img('performance.cards.1.image', '/assets/loc-chicago.jpg')" alt="" loading="lazy" />
-              <div class="inner">
-                <div class="num" data-num="1">{{ shown[1] }}</div>
-                <span class="pill">{{ c("performance.cards.1.label", "Organic Inbound") }}</span>
-                <p class="desc">
-                  {{
-                    c(
-                      "performance.cards.1.desc",
-                      "Over 60% of our inquiries come from organic search, social media, and word of mouth. Steady organic traffic keeps us connected to renters who are truly looking for a home."
-                    )
-                  }}
-                </p>
-              </div>
-            </div>
-            <div class="bento-card bento-c">
-              <div class="num" data-num="2">{{ shown[2] }}</div>
-              <div>
-                <span class="pill">{{ c("performance.cards.2.label", "Social Accounts") }}</span>
-                <p class="desc">{{ c("performance.cards.2.desc", "A broad distribution network across renter communities and platforms.") }}</p>
-              </div>
-            </div>
-            <div class="bento-card bento-d">
-              <div class="copy">
-                <span class="pill">{{ c("performance.cards.3.label", "Demand that comes to you") }}</span>
-                <p class="desc">
-                  {{
-                    c(
-                      "performance.cards.3.desc",
-                      "A significant share of renter demand comes through non-paid channels, so every lead arrives already interested in your building."
-                    )
-                  }}
-                </p>
-              </div>
-              <div class="photo"><img :src="img('performance.cards.3.image', '/assets/partners-renter-bedroom.webp')" alt="" loading="lazy" /></div>
+            <div v-for="index in list('performance.cards')" :key="index" :class="['bento-card', `bento-${perfLayout(index)}`]">
+              <template v-if="perfLayout(index) === 'a'">
+                <div class="photo"><img :src="img(`performance.cards.${index}.image`)" alt="" loading="lazy" /></div>
+                <div>
+                  <div class="num" :data-num="index">{{ shown[index] }}</div>
+                  <span class="pill">{{ c(`performance.cards.${index}.label`) }}</span>
+                  <p class="desc">{{ c(`performance.cards.${index}.desc`) }}</p>
+                </div>
+              </template>
+              <template v-else-if="perfLayout(index) === 'b'">
+                <img :src="img(`performance.cards.${index}.image`)" alt="" loading="lazy" />
+                <div class="inner">
+                  <div class="num" :data-num="index">{{ shown[index] }}</div>
+                  <span class="pill">{{ c(`performance.cards.${index}.label`) }}</span>
+                  <p class="desc">{{ c(`performance.cards.${index}.desc`) }}</p>
+                </div>
+              </template>
+              <template v-else-if="perfLayout(index) === 'c'">
+                <div class="num" :data-num="index">{{ shown[index] }}</div>
+                <div>
+                  <span class="pill">{{ c(`performance.cards.${index}.label`) }}</span>
+                  <p class="desc">{{ c(`performance.cards.${index}.desc`) }}</p>
+                </div>
+              </template>
+              <template v-else>
+                <div class="copy">
+                  <span class="pill">{{ c(`performance.cards.${index}.label`) }}</span>
+                  <p class="desc">{{ c(`performance.cards.${index}.desc`) }}</p>
+                </div>
+                <div class="photo"><img :src="img(`performance.cards.${index}.image`)" alt="" loading="lazy" /></div>
+              </template>
             </div>
           </div>
         </div>
@@ -150,13 +129,13 @@
 
       <section id="cta" class="band-paper cta-band">
         <div class="wrap">
-          <p class="eyebrow"><span class="idx">05</span> {{ tx("CTA") }}</p>
-          <h2 v-html="ch('cta.title', 'Let\'s Talk About Your Building.')" />
+          <p class="eyebrow"><span class="idx">05</span> {{ c("cta.eyebrow") }}</p>
+          <h2 v-html="ch('cta.title')" />
           <p class="lede">
-            {{ c("cta.lede", "Every building has a different renter, market, and leasing story. We'd love to learn more about yours and see where USWOO can help.") }}
+            {{ c("cta.lede") }}
           </p>
           <div class="btn-row">
-            <NuxtLink class="btn btn-pink" :to="localePath('/contact')">{{ c("cta.button", "Talk to Our Team", "联系我们团队") }}</NuxtLink>
+            <NuxtLink class="btn btn-pink" :to="link('cta.href')">{{ c("cta.button") }}</NuxtLink>
           </div>
         </div>
       </section>
@@ -173,55 +152,34 @@ const props = defineProps<{ region?: string }>();
 
 // 先校验地区：网址里的地区不存在时直接 404
 const { region } = await useRegion(props.region);
-const { tx, bi, isZh } = useTx();
+const { tx, bi } = useTx();
 const localePath = useLocalePath();
-const { c, ch, img, raw, page } = await usePageContent("partners", props.region);
+const { c, ch, img, raw, list, page } = await usePageContent("partners", props.region);
+const { c: site } = await useSite();
 
 // ---- 内容 ----
 
 const pad = (index: number) => String(index + 1).padStart(2, "0");
 
-const offers = [
-  {
-    title: "Find the right renters",
-    text: "Reach high-intent renters through local communities, targeted marketing and diverse promotion channels, so every impression counts."
-  },
-  {
-    title: "Turn interest into signed leases",
-    text: "From first inquiry to signed lease, we connect every step of the rental process to reduce drop-off and speed up leasing."
-  },
-  {
-    title: "Keep rental momentum going",
-    text: "Beyond short-term promotion, we keep growing your property’s presence among target renters, building steady demand for future leasing."
-  }
+/** CMS 里配置的链接：站内路径按当前语言加前缀，外部地址原样使用 */
+const link = (path: string) => {
+  const href = raw<string>(path);
+  return href?.startsWith("/") ? localePath(href) : href;
+};
+
+/** 「为什么选择 USWOO」四张卡片的图标（按顺序对应 CMS 里的 why.cards；属于版式，不是内容） */
+const whyIcons = [
+  '<path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/>',
+  '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13.5 13.5 0 0 1 0 18a13.5 13.5 0 0 1 0-18Z"/>',
+  '<path d="M15.5 20v-1.5a4 4 0 0 0-4-4h-5a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M21.5 20v-1.5a4 4 0 0 0-3-3.87"/><path d="M16 4.13a4 4 0 0 1 0 7.75"/>',
+  '<path d="M19.1 5.8a4.6 4.6 0 0 0-6.5 0l-.6.6-.6-.6a4.6 4.6 0 1 0-6.5 6.5l7.1 7.1 7.1-7.1a4.6 4.6 0 0 0 0-6.5Z"/>'
 ];
 
-const whyCards = [
-  {
-    title: "Local teams",
-    text: "On-the-ground knowledge of the markets and buildings we work with.",
-    icon: '<path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/>'
-  },
-  {
-    title: "Cultural understanding",
-    text: "A closer understanding of how international renters search, compare, and decide.",
-    icon: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13.5 13.5 0 0 1 0 18a13.5 13.5 0 0 1 0-18Z"/>'
-  },
-  {
-    title: "Hands-on support",
-    text: "Real people supporting the leasing journey, not just sending traffic.",
-    icon: '<path d="M15.5 20v-1.5a4 4 0 0 0-4-4h-5a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M21.5 20v-1.5a4 4 0 0 0-3-3.87"/><path d="M16 4.13a4 4 0 0 1 0 7.75"/>'
-  },
-  {
-    title: "Long-term relationships",
-    text: "We value lasting partnerships over one-off campaigns.",
-    icon: '<path d="M19.1 5.8a4.6 4.6 0 0 0-6.5 0l-.6.6-.6-.6a4.6 4.6 0 1 0-6.5 6.5l7.1 7.1 7.1-7.1a4.6 4.6 0 0 0 0-6.5Z"/>'
-  }
-];
+/** 成效卡片的版式：前四张依次是 a/b/c/d，多出来的沿用 c（只有数字和文字） */
+const perfLayout = (index: number) => ["a", "b", "c", "d"][index] ?? "c";
 
 /** 成效数字（带单位的文字，例如 "65–75%"）；服务端直接输出最终值，卡片滚入时再从 0 数上来 */
-const numDefaults = ["25%", "65–75%", "1,000+"];
-const nums = computed(() => numDefaults.map((value, index) => String(raw(`performance.cards.${index}.num`, value))));
+const nums = computed(() => list("performance.cards").map(index => String(raw<string | number>(`performance.cards.${index}.num`) ?? "")));
 const counting = ref<Record<number, string>>({});
 const shown = computed(() => nums.value.map((value, index) => counting.value[index] ?? value));
 
@@ -231,21 +189,18 @@ const absoluteUrl = useAbsoluteUrl();
 usePageSeo(() => {
   const here = absoluteUrl(localePath(regionPath("partners", props.region)));
   const crumbs = [
-    { name: isZh.value ? "首页" : "Home", url: absoluteUrl(localePath("/")) },
-    { name: tx("Partners"), url: absoluteUrl(localePath(regionPath("partners"))) },
+    { name: tx("Home"), url: absoluteUrl(localePath("/")) },
+    { name: c("seo.breadcrumb"), url: absoluteUrl(localePath(regionPath("partners"))) },
     ...(region.value ? [{ name: bi(region.value.name), url: here }] : [])
   ];
   return {
-    title: `${tx("Partners")}${region.value ? ` — ${bi(region.value.name)}` : ""} | USWOO`,
-    description: c(
-      "hero.slogan",
-      "We care not only about how many units we lease, but also how quickly each unit is leased, helping properties shorten vacancy periods and maintain stable rental income."
-    ),
-    image: img("hero.image", "/assets/partners-hero.jpg"),
+    title: region.value ? c("seo.regionTitle").replace("{region}", bi(region.value.name)) : c("seo.title"),
+    description: c("seo.description"),
+    image: img("hero.image"),
     // 地区没有单独配置内容时显示的是全站默认内容：canonical 指回汇总页，避免重复收录
     canonicalPath: region.value && page.value?.resolvedFrom !== "region" ? regionPath("partners") : undefined,
     jsonLd: [
-      ...(region.value ? [{ "@type": "RealEstateAgent", name: "USWOO", areaServed: region.value.name.en, url: here }] : []),
+      ...(region.value ? [{ "@type": "RealEstateAgent", name: site("brand.wordmark"), areaServed: region.value.name.en, url: here }] : []),
       {
         "@type": "BreadcrumbList",
         itemListElement: crumbs.map((crumb, index) => ({ "@type": "ListItem", position: index + 1, name: crumb.name, item: crumb.url }))

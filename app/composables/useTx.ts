@@ -1,6 +1,6 @@
-import dictionary from "~/generated/zh.json";
-
-const dict = dictionary as Record<string, string>;
+// 界面功能性文案的中文在 app/locales/ui/*.zh.ts（每个文件负责一组页面，这里合并）
+const uiModules = import.meta.glob<{ default: Record<string, string> }>("~/locales/ui/*.zh.ts", { eager: true });
+const dict: Record<string, string> = Object.assign({}, ...Object.values(uiModules).map(module => module.default));
 const MONTHS: Record<string, number> = { Jan: 1, Feb: 2, Mar: 3, Apr: 4, May: 5, Jun: 6, Jul: 7, Aug: 8, Sep: 9, Oct: 10, Nov: 11, Dec: 12 };
 
 function norm(text: string): string {
@@ -21,8 +21,8 @@ export function lookupZh(english: string): string | null {
 }
 
 /**
- * 界面固定文案：模板里写英文原文，中文从字典取（字典来自原站的 i18n-zh.js）。
- * 没有译文的句子保持英文。CMS 管理的内容不走这里，见 usePageContent。
+ * 界面功能性文案（表单校验与提交状态、加载状态、无障碍标签、单位与日期格式）：模板里写英文原文，
+ * 中文从 app/locales/ui/*.zh.ts 取，没有译文的保持英文。页面内容不走这里，全部来自 CMS，见 usePageContent。
  */
 export function useTx() {
   const { locale } = useI18n();

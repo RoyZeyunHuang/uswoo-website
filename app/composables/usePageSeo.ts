@@ -1,4 +1,4 @@
-import type { SeoPages } from "~~/shared/types/api";
+import type { PageContent, SeoPages } from "~~/shared/types/api";
 
 interface PageSeo {
   /** 页面标题（不含站名时自己拼好再传） */
@@ -59,8 +59,19 @@ export function usePageSeo(input: PageSeo | (() => PageSeo)) {
   const title = computed(() => cms.value?.title || seo.value.title);
   const description = computed(() => cms.value?.description || seo.value.description || undefined);
 
+  // 站点名称与默认分享图来自 CMS「全站通用」（app.vue 已经取好）
+  const site = useNuxtData<PageContent>("page:site:");
+  const brand = computed(() => (site.data.value?.payload ?? {}) as { brand?: { siteName?: { en?: string; zh?: string } }; seo?: { defaultImage?: { url?: string | null } } });
+  const siteName = computed(() => {
+    const name = brand.value.brand?.siteName;
+    return (locale.value === "zh" ? name?.zh || name?.en : name?.en || name?.zh) || undefined;
+  });
+
   const canonical = computed(() => absolute(seo.value.canonicalPath ? localePath(seo.value.canonicalPath) : route.path));
-  const image = computed(() => absolute(seo.value.image || "/assets/uswoo-hero-poster.jpg"));
+  const image = computed(() => {
+    const url = seo.value.image || brand.value.seo?.defaultImage?.url;
+    return url ? absolute(url) : undefined;
+  });
 
   useSeoMeta({
     title: () => title.value,
@@ -70,7 +81,7 @@ export function usePageSeo(input: PageSeo | (() => PageSeo)) {
     ogType: () => seo.value.ogType ?? "website",
     ogUrl: () => canonical.value,
     ogImage: () => image.value,
-    ogSiteName: "USWOO",
+    ogSiteName: () => siteName.value,
     twitterCard: "summary_large_image",
     twitterTitle: () => title.value,
     twitterDescription: () => description.value,

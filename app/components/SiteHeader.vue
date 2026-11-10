@@ -1,11 +1,15 @@
 <template>
   <header id="siteNav" ref="el" class="nav" :class="{ scrolled, 'menu-open': open, 'uswoo-solid': solid }">
     <div class="nav-inner">
-      <NuxtLink class="wordmark" :to="localePath('/')">USWOO</NuxtLink>
+      <NuxtLink class="wordmark" :to="localePath('/')">
+        <!-- CMS 里配置了 logo 图片就显示图片，否则显示文字标识 -->
+        <img v-if="img('brand.logo')" class="wordmark-logo" :src="img('brand.logo')" :alt="c('brand.siteName')" />
+        <template v-else>{{ c("brand.wordmark") }}</template>
+      </NuxtLink>
       <nav class="links">
-        <NuxtLink v-for="item in items" :key="item.key" :to="localePath(item.path)" :class="{ active: active === item.key }">{{ tx(item.label) }}</NuxtLink>
+        <NuxtLink v-for="item in items" :key="item.key" :to="localePath(item.path)" :class="{ active: active === item.key }">{{ c(item.label) }}</NuxtLink>
       </nav>
-      <NuxtLink class="nav-cta" :to="localePath('/contact')">{{ tx("Contact") }}</NuxtLink>
+      <NuxtLink class="nav-cta" :to="localePath('/contact')">{{ c("nav.contact") }}</NuxtLink>
       <NuxtLink
         ref="toggle"
         class="lang-toggle"
@@ -19,9 +23,9 @@
     </div>
     <div class="uswoo-menu">
       <NuxtLink v-for="item in items" :key="item.key" :to="localePath(item.path)" :class="{ active: active === item.key }" @click="open = false">
-        {{ tx(item.label) }}
+        {{ c(item.label) }}
       </NuxtLink>
-      <NuxtLink class="uswoo-menu-cta" :to="localePath('/contact')" @click="open = false">{{ tx("Contact") }}</NuxtLink>
+      <NuxtLink class="uswoo-menu-cta" :to="localePath('/contact')" @click="open = false">{{ c("nav.contact") }}</NuxtLink>
     </div>
   </header>
 </template>
@@ -34,6 +38,8 @@
 const props = defineProps<{ active?: string; scrolled?: boolean }>();
 
 const { tx, isZh } = useTx();
+// 导航文字来自 CMS「新官网页面 → 全站通用」
+const { c, img } = await useSite();
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
 const route = useRoute();
@@ -46,12 +52,12 @@ const REGION_KEY = "uswoo_region";
 const lastRegion = ref<string | null>(null);
 
 const items = computed(() => [
-  { key: "services", label: "Services", path: "/services" },
-  { key: "city-guides", label: "City Guides", path: regionPath("city-guide", lastRegion.value) },
-  { key: "listings", label: "Listings", path: regionPath("listings", lastRegion.value) },
-  { key: "press", label: "Press & Stories", path: regionPath("press", lastRegion.value) },
-  { key: "partners", label: "Partners", path: regionPath("partners", lastRegion.value) },
-  { key: "about", label: "About Us", path: regionPath("about", lastRegion.value) }
+  { key: "services", label: "nav.services", path: "/services" },
+  { key: "city-guides", label: "nav.cityGuides", path: regionPath("city-guide", lastRegion.value) },
+  { key: "listings", label: "nav.listings", path: regionPath("listings", lastRegion.value) },
+  { key: "press", label: "nav.press", path: regionPath("press", lastRegion.value) },
+  { key: "partners", label: "nav.partners", path: regionPath("partners", lastRegion.value) },
+  { key: "about", label: "nav.about", path: regionPath("about", lastRegion.value) }
 ]);
 
 onMounted(() => {

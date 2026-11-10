@@ -2,6 +2,15 @@
   "key": "home",
   "payload": {
     "about": {
+      "cta": {
+        "en": "Know More About Us",
+        "zh": "关于我们"
+      },
+      "eyebrow": {
+        "en": "About USWOO",
+        "zh": "关于 USWOO"
+      },
+      "index": "05",
       "lede": {
         "en": "Real market knowledge, local relationships, and thousands of renter journeys behind us.",
         "zh": "扎实的市场认知、深厚的本地资源，以及数以千计的租客服务经验，是我们的底气。"
@@ -58,9 +67,22 @@
       }
     },
     "cta": {
+      "eyebrow": {
+        "en": "CTA",
+        "zh": "CTA"
+      },
+      "index": "06",
       "lede": {
         "en": "Looking for a home, exploring a neighborhood, or figuring out where to start? We're here to help.",
         "zh": "关于新家的每一个问题，都可以从一次简单的交流开始。"
+      },
+      "primary": {
+        "en": "Find a Home",
+        "zh": "开始找房"
+      },
+      "secondary": {
+        "en": "Talk to USWOO",
+        "zh": "联系 USWOO"
       },
       "title": {
         "en": "Your City Starts Here.",
@@ -109,6 +131,11 @@
           }
         }
       ],
+      "eyebrow": {
+        "en": "How We Help",
+        "zh": "我们如何帮你"
+      },
+      "index": "02",
       "lede": {
         "en": "Finding a place isn't just about square footage or rent. It's about the neighborhood, the commute, and the life you want to build around it.",
         "zh": "找到合适的家，不只是比较面积和租金。社区氛围、通勤便利，以及你期待的生活方式，同样重要。"
@@ -119,6 +146,9 @@
       }
     },
     "hero": {
+      "cityLayer": {
+        "url": "/assets/uswoo-hero-city.webp"
+      },
       "poster": {
         "url": "/assets/uswoo-hero-poster.jpg"
       },
@@ -129,9 +159,19 @@
       "title": {
         "en": "Find Your Place in the City.",
         "zh": "在美国的新篇章<br class=m-br>从安心安家开始"
-      }
+      },
+      "video": "/assets/uswoo-hero-video.mp4"
     },
     "listings": {
+      "cta": {
+        "en": "View All Listings",
+        "zh": "查看全部房源"
+      },
+      "eyebrow": {
+        "en": "Exclusive Listings",
+        "zh": "独家房源"
+      },
+      "index": "04",
       "lede": {
         "en": "Hand-picked homes you won't find anywhere else, ready to tour in our markets.",
         "zh": "精选独家房源，别处找不到，随时可以预约看房。"
@@ -142,6 +182,11 @@
       }
     },
     "locations": {
+      "eyebrow": {
+        "en": "Our Locations",
+        "zh": "服务城市"
+      },
+      "index": "03",
       "lede": {
         "en": "USWOO helps renters find home across six major U.S. markets.",
         "zh": "USWOO 已在美国六大核心市场，帮助租客找到属于自己的家。"
@@ -149,6 +194,19 @@
       "title": {
         "en": "Where We Operate.",
         "zh": "我们在这些城市"
+      }
+    },
+    "seo": {
+      "description": {
+        "en": "More than finding an apartment. We help you figure out where to live, how to settle in, and what comes next.",
+        "zh": "从选区域到安顿下来，之后的每一步我们都陪你理清。"
+      },
+      "logo": {
+        "url": "/assets/uswoo-hero-poster.jpg"
+      },
+      "title": {
+        "en": "USWOO | Find Your Place in the City",
+        "zh": "USWOO | Find Your Place in the City"
       }
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="preview-bar">{{ isZh ? "草稿预览：这个页面还没有发布，链接 30 分钟内有效" : "Draft preview — not published yet. This link expires in 30 minutes." }}</div>
+    <div class="preview-bar">{{ tx("Draft preview — not published yet. This link expires in 30 minutes.") }}</div>
     <DetailArticleDetail v-if="preview.entity === 'post'" :post="preview.data" preview />
     <DetailListingDetail v-else :listing="preview.data" preview />
   </div>
@@ -17,7 +17,7 @@ type Preview = { entity: "post"; data: PostDetail } | { entity: "listing"; data:
 
 const route = useRoute();
 const api = useApi();
-const { isZh } = useTx();
+const { tx } = useTx();
 const entity = String(route.params.entity);
 const id = String(route.params.id);
 const token = String(route.query.token ?? "");
