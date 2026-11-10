@@ -10,8 +10,7 @@ name: Deploy to staging
 
 on:
   push:
-    # refactor/nuxt-cms 只在合并到 main 之前用来验证本流程，合并后删掉这一项
-    branches: [main, refactor/nuxt-cms]
+    branches: [main]
   workflow_dispatch:
     inputs:
       ref:
