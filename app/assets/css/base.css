@@ -1,0 +1,39 @@
+/* 全站基础样式。页面自己的样式在 assets/css/pages/<页面>.css，全部限定在 .pg-<页面> 之下。 */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+/* 页面根元素承接原先写在 body 上的规则（背景、字体、文字颜色） */
+.pg {
+  min-height: 100vh;
+}
+
+/* 原页面的 <image-slot> 自定义元素：一个按容器裁切铺满的图片框 */
+.image-slot {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.image-slot > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 出场动画里元素会先平移到视口外侧，裁掉横向溢出，避免页面出现横向滚动条。
+   用 clip 而不是 hidden：不产生滚动容器，不影响 position: sticky。 */
+.pg {
+  overflow-x: clip;
+}

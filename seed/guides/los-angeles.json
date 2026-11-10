@@ -1,0 +1,3207 @@
+{
+ "region": "los-angeles",
+ "payload": {
+  "cityName": {
+   "en": "Los Angeles",
+   "zh": "洛杉矶"
+  },
+  "emoji": "🌴",
+  "intro": {
+   "en": "In Los Angeles, choosing where to live is often about balancing school, work, and commute. With campuses, offices, studios, and creative hubs spread across the region, living in the right area can make everyday life much easier.",
+   "zh": "在洛杉矶，选住哪里往往是在学校、工作和通勤之间找平衡。校园、办公室、片场和创意聚集地分布在整个地区，住对了地方，日常生活会轻松很多。"
+  },
+  "areas": [
+   {
+    "emoji": "🎓",
+    "name": {
+     "en": "Westwood & West LA",
+     "zh": "Westwood & West LA"
+    },
+    "tags": [
+     {
+      "en": "UCLA",
+      "zh": "UCLA"
+     },
+     {
+      "en": "Century City",
+      "zh": "Century City"
+     },
+     {
+      "en": "Brentwood",
+      "zh": "Brentwood"
+     }
+    ],
+    "text": {
+     "en": "A natural choice for UCLA students and professionals working around Century City, Westwood, Brentwood, and the Westside. It is especially convenient for people in healthcare, finance, law, consulting, and other corporate roles based nearby.",
+     "zh": "适合 UCLA 的学生，以及在 Century City、Westwood、Brentwood 和 West LA 工作的职场人士。周边聚集了医疗、金融、法律及咨询等行业，学校、办公区与生活配套相对集中，适合希望兼顾通勤与日常便利的人。"
+    },
+    "short": {
+     "en": "A natural choice for UCLA students and professionals around Century City and the Westside. Especially convenient for healthcare, finance, and law.",
+     "zh": "适合 UCLA 的学生，以及在 Century City、Westwood、Brentwood 和 West LA 工作的职场人士。周边聚集了医疗、金融、法律及咨询等行业，学校、办公区与生活配套相对集中，适合希望兼顾通勤与日常便利的人。"
+    },
+    "image": {
+     "url": "/assets/la-westwood.jpg"
+    }
+   },
+   {
+    "emoji": "🏖️",
+    "name": {
+     "en": "Santa Monica, Culver City & Palms",
+     "zh": "Santa Monica, Culver City & Palms"
+    },
+    "tags": [
+     {
+      "en": "SMC",
+      "zh": "SMC"
+     },
+     {
+      "en": "WLAC",
+      "zh": "WLAC"
+     },
+     {
+      "en": "Culver City",
+      "zh": "Culver City"
+     }
+    ],
+    "text": {
+     "en": "A strong option for SMC and WLAC students, as well as professionals in tech, media, advertising, entertainment, and production. This area keeps you close to Santa Monica, Culver City studios, and major Westside employers while offering a wider mix of apartments and neighborhood styles.",
+     "zh": "适合 SMC、WLAC 的学生，以及从事科技、媒体、广告和影视制作行业的职场人士。Santa Monica 以海滨生活和科技企业闻名，Culver City 则聚集了不少创意公司和影视产业资源。周边公寓类型丰富，可根据学校或工作地点选择适合自己的社区。"
+    },
+    "short": {
+     "en": "A strong option for SMC and WLAC students and for professionals in tech, media, and entertainment. Close to Westside employers with a wide range of apartments.",
+     "zh": "适合 SMC、WLAC 的学生，以及从事科技、媒体、广告和影视制作行业的职场人士。Santa Monica 以海滨生活和科技企业闻名，Culver City 则聚集了不少创意公司和影视产业资源。周边公寓类型丰富，可根据学校或工作地点选择适合自己的社区。"
+    },
+    "image": {
+     "url": "/assets/la-santa-monica.jpg"
+    }
+   },
+   {
+    "emoji": "🏙️",
+    "name": {
+     "en": "USC, Downtown LA & Koreatown",
+     "zh": "USC, Downtown LA & Koreatown"
+    },
+    "tags": [
+     {
+      "en": "USC",
+      "zh": "USC"
+     },
+     {
+      "en": "DTLA",
+      "zh": "DTLA"
+     },
+     {
+      "en": "Koreatown",
+      "zh": "Koreatown"
+     }
+    ],
+    "text": {
+     "en": "For USC students and professionals working in Downtown LA, these areas offer convenient access to campus, offices, hospitals, law firms, finance, hospitality, and public transit. Koreatown also provides more housing and dining options while staying relatively central.",
+     "zh": "适合 USC 的学生，以及在 Downtown LA 工作的职场人士。这里聚集了教育、医疗、法律、金融及酒店等行业，部分区域公共交通便利。Koreatown 则以丰富的餐饮选择、生活配套和多样的住宅类型受到欢迎。"
+    },
+    "short": {
+     "en": "For USC students and Downtown LA professionals, with easy access to campus, offices, and transit. Koreatown adds more housing and dining options.",
+     "zh": "适合 USC 的学生，以及在 Downtown LA 工作的职场人士。这里聚集了教育、医疗、法律、金融及酒店等行业，部分区域公共交通便利。Koreatown 则以丰富的餐饮选择、生活配套和多样的住宅类型受到欢迎。"
+    },
+    "image": {
+     "url": "/assets/la-dtla.jpg"
+    }
+   },
+   {
+    "emoji": "🌹",
+    "name": {
+     "en": "Pasadena & San Gabriel Valley",
+     "zh": "Pasadena & San Gabriel Valley"
+    },
+    "tags": [
+     {
+      "en": "Caltech",
+      "zh": "Caltech"
+     },
+     {
+      "en": "ArtCenter",
+      "zh": "ArtCenter"
+     },
+     {
+      "en": "PCC",
+      "zh": "PCC"
+     }
+    ],
+    "text": {
+     "en": "A practical choice for students at Caltech, ArtCenter, PCC, and Cal State LA, depending on campus and commute. The area also works well for professionals in research, engineering, healthcare, education, and design, with Pasadena and the San Gabriel Valley offering a more residential alternative to central LA.",
+     "zh": "适合 Caltech、ArtCenter、PCC 和 Cal State LA 的学生，以及从事科研、工程、医疗、教育和设计行业的职场人士。Pasadena 拥有丰富的文化与生活资源，San Gabriel Valley 则提供更多不同风格的居住社区，适合希望兼顾学习、工作与生活品质的人。"
+    },
+    "short": {
+     "en": "A practical choice for Caltech, ArtCenter, PCC, and Cal State LA students. A more residential alternative to central LA for research, engineering, and design professionals.",
+     "zh": "适合 Caltech、ArtCenter、PCC 和 Cal State LA 的学生，以及从事科研、工程、医疗、教育和设计行业的职场人士。Pasadena 拥有丰富的文化与生活资源，San Gabriel Valley 则提供更多不同风格的居住社区，适合希望兼顾学习、工作与生活品质的人。"
+    },
+    "image": {
+     "url": "/assets/la-pasadena.jpg"
+    }
+   },
+   {
+    "emoji": "🎬",
+    "name": {
+     "en": "Hollywood & Central LA",
+     "zh": "Hollywood & Central LA"
+    },
+    "tags": [
+     {
+      "en": "Film & TV",
+      "zh": "Film & TV"
+     },
+     {
+      "en": "Music",
+      "zh": "Music"
+     },
+     {
+      "en": "WeHo",
+      "zh": "WeHo"
+     }
+    ],
+    "text": {
+     "en": "Well suited for students at The Los Angeles Film School and professionals working in film, television, music, design, and entertainment. Living here can also provide easier access to West Hollywood, Burbank, and other major creative and production hubs.",
+     "zh": "适合 Los Angeles Film School 的学生，以及从事影视、音乐、设计和娱乐行业的职场人士。Hollywood 靠近影视与娱乐产业聚集区，Mid-City 则位于 Los Angeles 中部，方便前往多个工作及生活区域。周边餐饮、购物与文化娱乐选择丰富。"
+    },
+    "short": {
+     "en": "Well suited for Los Angeles Film School students and professionals in film, TV, music, and design. Easy access to West Hollywood and Burbank.",
+     "zh": "适合 Los Angeles Film School 的学生，以及从事影视、音乐、设计和娱乐行业的职场人士。Hollywood 靠近影视与娱乐产业聚集区，Mid-City 则位于 Los Angeles 中部，方便前往多个工作及生活区域。周边餐饮、购物与文化娱乐选择丰富。"
+    },
+    "image": {
+     "url": "/assets/la-hollywood.jpg"
+    }
+   },
+   {
+    "emoji": "🌇",
+    "name": {
+     "en": "Irvine & Orange County",
+     "zh": "Irvine & Orange County"
+    },
+    "tags": [
+     {
+      "en": "UCI",
+      "zh": "UCI"
+     },
+     {
+      "en": "Tech",
+      "zh": "Tech"
+     },
+     {
+      "en": "Biotech",
+      "zh": "Biotech"
+     }
+    ],
+    "text": {
+     "en": "For UCI students and professionals working across Orange County, living in Irvine or nearby areas usually makes the most sense. The region is especially convenient for jobs in tech, healthcare, biotech, finance, and corporate offices, while avoiding a long daily commute from Los Angeles.",
+     "zh": "适合 UCI 的学生，以及在 Irvine 和 Orange County 工作的职场人士。Irvine 聚集了科技、医疗、生物科技及金融企业，拥有规划完善的住宅社区和丰富的生活配套。对于主要在 Orange County 学习或工作的人来说，在当地居住也能减少往返 Los Angeles 的通勤负担。"
+    },
+    "short": {
+     "en": "For UCI students and professionals working across Orange County. Great for tech, healthcare, and biotech jobs, without a long commute from Los Angeles.",
+     "zh": "适合 UCI 的学生，以及在 Irvine 和 Orange County 工作的职场人士。Irvine 聚集了科技、医疗、生物科技及金融企业，拥有规划完善的住宅社区和丰富的生活配套。对于主要在 Orange County 学习或工作的人来说，在当地居住也能减少往返 Los Angeles 的通勤负担。"
+    },
+    "image": {
+     "url": "/assets/la-irvine.jpg"
+    }
+   }
+  ],
+  "closing": {
+   "emoji": "✨",
+   "title": {
+    "en": "Found your area?",
+    "zh": "选好区域了吗？"
+   },
+   "text": {
+    "en": "Once you know which area fits your school, office, and daily routine, we can help with apartment search, leasing, moving, furniture, room dividers, Wi Fi, electricity, renters insurance, and other move in essentials.",
+    "zh": "选好适合你的学校、公司和日常作息的区域后，我们可以帮你搞定找房、签约、搬家、家具、房间隔断、Wi-Fi、水电、租客保险等入住必备事项。"
+   },
+   "short": {
+    "en": "Once you know your area, we can help with the rest, from apartment search to move-in essentials.",
+    "zh": "选好区域后，其余的交给我们，从找房到入住所需的一切。"
+   },
+   "image": {
+    "url": "/assets/la-closing.jpg"
+   },
+   "hideOnMobile": true
+  },
+  "map": {
+   "center": {
+    "lat": 34.03,
+    "lng": -118.34
+   },
+   "zoom": 10,
+   "minZoom": 9,
+   "bounds": [
+    [
+     33.85,
+     -118.55
+    ],
+    [
+     34.25,
+     -118.1
+    ]
+   ],
+   "neighborhoods": {
+    "url": "/assets/guides/los-angeles/neighborhoods.geojson"
+   },
+   "businessDistricts": {
+    "url": "/assets/guides/los-angeles/business-districts.geojson"
+   },
+   "transit": {
+    "url": "/assets/transit/LA.geojson"
+   }
+  }
+ },
+ "places": [
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Santa Monica",
+    "zh": "圣莫尼卡"
+   },
+   "desc": {
+    "en": "Beach city with the Pier, Third Street Promenade and the E Line to DTLA. Walkable, sunny and safe-feeling, popular with SMC/UCLA students and tech workers; rents are high.",
+    "zh": "海滨城市，有圣莫尼卡码头和第三街步行街，E线轻轨直达市中心；步行友好、阳光充足，SMC/UCLA学生和科技从业者多，租金偏高。"
+   },
+   "lat": 34.0195,
+   "lng": -118.4912,
+   "address": "",
+   "area": {
+    "en": "Santa Monica, CA",
+    "zh": "加州圣莫尼卡"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-santa-monica-1.jpg",
+    "/assets/places/area-la-santa-monica-2.jpg",
+    "/assets/places/area-la-santa-monica-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Santa_Monica_%E2%80%93_Third_Street_Promenade_(a)_06_Sept_2017.jpg",
+      "author": "Cayambe",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Santa_Monica_-_Downtown_-_Beach.jpg",
+      "author": "Cayambe",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Santa_Monica_Third_Street_Promenade_%E2%80%93_Market_Pavilion.jpg",
+      "author": "Cayambe",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 1
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Venice",
+    "zh": "威尼斯海滩"
+   },
+   "desc": {
+    "en": "Boardwalk, canals and Abbot Kinney's boutiques give Venice a creative, beachy vibe. Bikeable to Santa Monica and Silicon Beach offices; small bungalows rent at a premium.",
+    "zh": "海滨木栈道、运河和Abbot Kinney街小店，氛围文艺随性；骑车可到圣莫尼卡和“硅滩”办公区，小平房租金不便宜。"
+   },
+   "lat": 33.985,
+   "lng": -118.4695,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-venice-1.jpg",
+    "/assets/places/area-la-venice-2.jpg",
+    "/assets/places/area-la-venice-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Angeles_-_Venice_Canal_Historic_District_08.jpg",
+      "author": "Américo Toledano",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Houses_on_Grand_Canal,_Venice_Canal_Historic_District,_Venice,_California.JPG",
+      "author": "Los Angeles",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Venice_Beach,_Los_Angeles,_CA_01.jpg",
+      "author": "Blake Everett",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 2
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Marina del Rey",
+    "zh": "玛丽娜德雷"
+   },
+   "desc": {
+    "en": "Harbor-front apartment complexes with pools, bike paths and sunsets over the boats. Calm and resort-like, close to LMU and Playa Vista; you'll want a car.",
+    "zh": "港湾旁的公寓社区，带泳池、自行车道和游艇夕阳，环境安静、度假感强，靠近LMU和Playa Vista；基本需要开车。"
+   },
+   "lat": 33.9803,
+   "lng": -118.4517,
+   "address": "",
+   "area": {
+    "en": "Marina del Rey, CA",
+    "zh": "加州玛丽娜德尔雷"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-marina-del-rey-1.jpg",
+    "/assets/places/area-la-marina-del-rey-2.jpg",
+    "/assets/places/area-la-marina-del-rey-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Marina_del_Rey_P4070297.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Admiralty_Way_in_Marina_del_Rey,_CA,_USA.jpg",
+      "author": "Tubbydammer",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Boat_Rental_-_panoramio_(1).jpg",
+      "author": "Clotee Pridgen Alloc…",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 3
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Playa Vista",
+    "zh": "普拉亚维斯塔"
+   },
+   "desc": {
+    "en": "A newer master-planned community of modern apartments, parks and tech offices. Clean and quiet near LMU and the beach; getting around is mostly by car.",
+    "zh": "新规划社区，现代公寓、公园和科技公司办公室集中；干净安静，靠近LMU和海滩，出行以开车为主。"
+   },
+   "lat": 33.9737,
+   "lng": -118.4287,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-playa-vista-1.jpg",
+    "/assets/places/area-la-playa-vista-2.jpg",
+    "/assets/places/area-la-playa-vista-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Playa_Vista_corner_Jefferson_and_Lincoln.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Institute_for_Creative_Technologies.jpg",
+      "author": "DocFreeman24",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Bluff_Creek_and_Playa_Vista.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 4
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Westwood",
+    "zh": "韦斯特伍德"
+   },
+   "desc": {
+    "en": "UCLA's college town: Westwood Village shops, cinemas and dense apartments within walking distance of campus. Practical for students; rents are high for the size.",
+    "zh": "UCLA所在的大学城，Westwood Village商店、影院和公寓密集，步行即可到校；对学生很方便，但按面积算租金偏高。"
+   },
+   "lat": 34.0633,
+   "lng": -118.4455,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-westwood-1.jpg",
+    "/assets/places/area-la-westwood-2.jpg",
+    "/assets/places/area-la-westwood-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Westwood_Village,_Los_Angeles,_California_(3124966155).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2019_UCLA_Royce_Hall_2.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Janss_Dome,_Westwood_Village,_Los_Angeles,_California_(3125795150).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 5
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Brentwood",
+    "zh": "布伦特伍德"
+   },
+   "desc": {
+    "en": "Leafy, upscale residential area west of UCLA with San Vicente's cafés and quiet streets. Safe and calm, mostly pricier apartments; a car or bike helps.",
+    "zh": "UCLA以西的高档住宅区，绿树成荫，San Vicente大道咖啡店多、街道安静；安全宁静，公寓租金偏高，最好有车或自行车。"
+   },
+   "lat": 34.0525,
+   "lng": -118.4759,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-brentwood-1.jpg",
+    "/assets/places/area-la-brentwood-2.jpg",
+    "/assets/places/area-la-brentwood-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Brentwood_Country_Mart_4.jpg",
+      "author": "Mx. Granger",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Brentwood_School,_Brentwood,_Los_Angeles,_California_-_2024_December_01.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Angeles_-_from_Luxe_Hotel,_Brentwood_02.JPG",
+      "author": "Remi Mathis",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 6
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Culver City",
+    "zh": "卡尔弗城"
+   },
+   "desc": {
+    "en": "Compact, walkable downtown with restaurants, studios and the E Line. Popular with creatives and tech workers; mid-to-high rents, between the Westside and DTLA.",
+    "zh": "市中心紧凑好逛，餐厅、影视公司林立，有E线轻轨；创意和科技从业者喜爱，租金中高，位于西区与市中心之间。"
+   },
+   "lat": 34.0211,
+   "lng": -118.3965,
+   "address": "",
+   "area": {
+    "en": "Culver City, CA",
+    "zh": "加州卡尔弗城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-culver-city-1.jpg",
+    "/assets/places/area-la-culver-city-2.jpg",
+    "/assets/places/area-la-culver-city-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Culver_City_2026_August_02.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Culver_City_2026_August_03.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Culver_City_buildings_and_structures_2023_March_18_batch_03.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 7
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Century City",
+    "zh": "世纪城"
+   },
+   "desc": {
+    "en": "High-rise condos and offices around the Westfield mall, minutes from Beverly Hills and UCLA. Polished and convenient but car-oriented; rents are premium.",
+    "zh": "Westfield商场周边的高层公寓和写字楼，几分钟到比佛利山和UCLA；精致便利但以车为主，租金高端。"
+   },
+   "lat": 34.0586,
+   "lng": -118.4176,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-century-city-1.jpg",
+    "/assets/places/area-la-century-city-2.jpg",
+    "/assets/places/area-la-century-city-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Century_City_buildings_(June_2026).jpg",
+      "author": "Busition",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Olympic_Boulevard_in_Century_City_(April_2026).jpg",
+      "author": "Busition",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Century_City_van_Santa_Monica_Blvd.jpg",
+      "author": "nl:User:DreCube",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 8
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Beverly Hills",
+    "zh": "比弗利山庄"
+   },
+   "desc": {
+    "en": "Palm-lined streets, Rodeo Drive and excellent safety. Apartments south of Wilshire are the attainable option; pricey overall but central to the Westside.",
+    "zh": "棕榈大道、罗迪欧大道，治安极好；Wilshire以南的公寓相对可负担，整体价格偏高，但位于西区中心。"
+   },
+   "lat": 34.0736,
+   "lng": -118.4004,
+   "address": "",
+   "area": {
+    "en": "Beverly Hills, CA",
+    "zh": "加州比佛利山"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-beverly-hills-1.jpg",
+    "/assets/places/area-la-beverly-hills-2.jpg",
+    "/assets/places/area-la-beverly-hills-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Buildings_at_North_Rodeo_Drive,_Beverly_Hills,_West_view_20110806_1.jpg",
+      "author": "DXR",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rodeo_Drive_(9641264818).jpg",
+      "author": "William Warby from London, England",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Beverly_Hills,_CA,_USA_-_panoramio_(2).jpg",
+      "author": "Mickey Løgitmark",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 9
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "West Hollywood",
+    "zh": "西好莱坞"
+   },
+   "desc": {
+    "en": "Walkable, lively city known for the Sunset Strip, nightlife and a strong LGBTQ+ community. Lots of apartments and cafés; rents are high but car-light living is possible.",
+    "zh": "以日落大道夜生活和LGBTQ+社区闻名，步行友好、热闹；公寓和咖啡店多，租金较高，但少开车也能生活。"
+   },
+   "lat": 34.09,
+   "lng": -118.3617,
+   "address": "",
+   "area": {
+    "en": "West Hollywood, CA",
+    "zh": "加州西好莱坞"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-west-hollywood-1.jpg",
+    "/assets/places/area-la-west-hollywood-2.jpg",
+    "/assets/places/area-la-west-hollywood-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pacific_Design_Center-(West_Hollywood)_July_2023.jpg",
+      "author": "Benoît Prieur",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Crossroad_North_La_Brea_Avenue_%26_Romaine_Street_(West_Hollywood)_July_2023.jpg",
+      "author": "Benoît Prieur",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:WeHoCityHall.jpg",
+      "author": "No machine-readable author provided. Greenmnm69 assumed (based on copyright claims).",
+      "license": "CC BY 2.5"
+     }
+    ]
+   },
+   "sort": 10
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Koreatown",
+    "zh": "韩国城"
+   },
+   "desc": {
+    "en": "One of LA's densest, liveliest areas: late-night Korean food, karaoke and big older apartment buildings. B/D Metro lines, close to USC and DTLA; relatively affordable.",
+    "zh": "洛杉矶最密集热闹的街区之一，深夜韩餐、KTV和老式公寓楼林立；有B/D线地铁，靠近USC和市中心，租金相对实惠。"
+   },
+   "lat": 34.0619,
+   "lng": -118.3,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-koreatown-1.jpg",
+    "/assets/places/area-la-koreatown-2.jpg",
+    "/assets/places/area-la-koreatown-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Wilshire_Boulevard_at_Normandie,_Los_Angeles.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:3825_Wilshire_Professional_Building.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Corner_of_Wilshire_and_Western,_Los_Angeles.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 11
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Silver Lake",
+    "zh": "银湖"
+   },
+   "desc": {
+    "en": "Hilly, artsy east-side neighborhood with indie cafés, the reservoir loop and a young creative crowd. Mostly small complexes and duplexes; mid-to-high rents, car helpful.",
+    "zh": "东区丘陵上的文艺街区，独立咖啡馆、水库环线步道，年轻创意人群多；多为小型公寓和双拼屋，租金中高，最好有车。"
+   },
+   "lat": 34.0869,
+   "lng": -118.2702,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-silver-lake-1.jpg",
+    "/assets/places/area-la-silver-lake-2.jpg",
+    "/assets/places/area-la-silver-lake-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Silver_Lake_Reservoir_looking_west_2015-10-11.jpg",
+      "author": "Junkyardsparkle",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:View_of_the_Verdugo_Mountains_from_Silverlake.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Silver_Lake_%E2%80%94_Moreno_Highlands.jpg",
+      "author": "Pickaxe of Cortez",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 12
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Los Feliz",
+    "zh": "洛斯费利兹"
+   },
+   "desc": {
+    "en": "Charming area below Griffith Park and the Observatory, with Vermont Ave's cafés and bookstores. Classic apartment buildings near the B Line; moderately pricey.",
+    "zh": "位于格里菲斯公园和天文台脚下，Vermont大道咖啡店、书店云集；经典老公寓多，靠近B线地铁，租金中等偏高。"
+   },
+   "lat": 34.1064,
+   "lng": -118.2903,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-los-feliz-1.jpg",
+    "/assets/places/area-la-los-feliz-2.jpg",
+    "/assets/places/area-la-los-feliz-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:View_of_Griffith_Park_from_Sunset_Boulevard_(cropped2).jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Feliz_Boulevard_(Los_Angeles)_July_2024.JPG",
+      "author": "Alexis Doine",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Feliz,_Los_Angeles,_CA,_USA_-_panoramio_(1).jpg",
+      "author": "kajikawa",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 13
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Highland Park",
+    "zh": "高地公园"
+   },
+   "desc": {
+    "en": "Northeast LA's revived Figueroa corridor of vintage shops, bars and taco spots. Near Occidental College with A Line light rail; still cheaper than the Westside.",
+    "zh": "东北洛杉矶复兴的Figueroa商业街，古着店、酒吧和塔可店多；靠近西方学院，有A线轻轨，租金仍比西区便宜。"
+   },
+   "lat": 34.1141,
+   "lng": -118.1936,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-highland-park-1.jpg",
+    "/assets/places/area-la-highland-park-2.jpg",
+    "/assets/places/area-la-highland-park-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Highland_Park_030721_20_(51023491096).jpg",
+      "author": "guydeborg",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Arroyo_Seco_Bank_building.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Ebell_Building,_Highland_Park.jpg",
+      "author": "Dreamyshade",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 14
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Eagle Rock",
+    "zh": "鹰岩"
+   },
+   "desc": {
+    "en": "Laid-back hillside area around Occidental College with Colorado Blvd's cafés. Quieter, greener and family-friendly; moderate rents, a car is useful.",
+    "zh": "西方学院周边的悠闲山坡社区，Colorado大道咖啡店多；安静绿化好，适合家庭，租金适中，建议有车。"
+   },
+   "lat": 34.1381,
+   "lng": -118.2131,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-eagle-rock-1.jpg",
+    "/assets/places/area-la-eagle-rock-2.jpg",
+    "/assets/places/area-la-eagle-rock-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Johnson_Student_Center_and_Freeman_College_Union_(cropped).jpg",
+      "author": "The original uploader was Geographer at English Wikipedia.",
+      "license": "CC BY 1.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Angeles_Public_Library_-_Eagle_Rock_Branch.jpg",
+      "author": "ButterNoodle",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Women%27s_20th_Century_Club.jpg",
+      "author": "Dreamyshade",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 15
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Pasadena",
+    "zh": "帕萨迪纳"
+   },
+   "desc": {
+    "en": "Historic small city with walkable Old Pasadena, Caltech and ArtCenter. Clean, safe and cultured, with the A Line to DTLA; rents moderate to high.",
+    "zh": "历史小城，老帕萨迪纳街区适合步行，有加州理工和艺术中心设计学院；干净安全、文化氛围好，A线直达市中心，租金中高。"
+   },
+   "lat": 34.1478,
+   "lng": -118.1445,
+   "address": "",
+   "area": {
+    "en": "Pasadena, CA",
+    "zh": "加州帕萨迪纳"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-pasadena-1.jpg",
+    "/assets/places/area-la-pasadena-2.jpg",
+    "/assets/places/area-la-pasadena-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Colorado_Boulevard,_Old_Pasadena,_Pasadena,_California_(14514406151).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pasadena_City_Hall,_Pasadena,_California_(14516407734).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pasadena_Colorado_Street_Bridge_2005.jpg",
+      "author": "Mike Dillon",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 16
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "DTLA",
+    "zh": "洛杉矶市中心"
+   },
+   "desc": {
+    "en": "Skyscrapers, converted lofts and the Arts District at the hub of the Metro network, near USC. Urban with many new amenity buildings; some blocks feel rough at night.",
+    "zh": "摩天楼、loft改造公寓和艺术区汇聚，是地铁网络枢纽，靠近USC；城市感强、新楼设施多，部分街区夜间治安一般。"
+   },
+   "lat": 34.0407,
+   "lng": -118.2468,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-dtla-1.jpg",
+    "/assets/places/area-la-dtla-2.jpg",
+    "/assets/places/area-la-dtla-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Grand_Avenue_from_Walt_Disney_Concert_Hall_(Los_Angeles)_in_July_2022.JPG",
+      "author": "Benoît Prieur",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Downtown_Los_Angeles-Bunker_Hill.jpg",
+      "author": "User:Lan56",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rialto_Theater_(Los_Angeles)_01.jpg",
+      "author": "Visitor7",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 17
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "DTLA",
+    "zh": "洛杉矶市中心"
+   },
+   "desc": {
+    "en": "Financial District, South Park, Arts District and Historic Core: entertainment, finance, law, tech and startups.",
+    "zh": "包括金融区、South Park、艺术区和历史核心区，娱乐、金融、法律、科技和初创企业集中。"
+   },
+   "lat": 34.0407,
+   "lng": -118.2468,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-dtla-1.jpg",
+    "/assets/places/area-la-dtla-2.jpg",
+    "/assets/places/area-la-dtla-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Grand_Avenue_from_Walt_Disney_Concert_Hall_(Los_Angeles)_in_July_2022.JPG",
+      "author": "Benoît Prieur",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Downtown_Los_Angeles-Bunker_Hill.jpg",
+      "author": "User:Lan56",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rialto_Theater_(Los_Angeles)_01.jpg",
+      "author": "Visitor7",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 18
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Century City",
+    "zh": "世纪城"
+   },
+   "desc": {
+    "en": "Office towers beside the Westfield mall: an entertainment, law and finance hub with heavy daytime employment.",
+    "zh": "Westfield商场旁的写字楼群，娱乐、法律和金融中心，白天就业人口密集。"
+   },
+   "lat": 34.0586,
+   "lng": -118.4176,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-century-city-1.jpg",
+    "/assets/places/area-la-century-city-2.jpg",
+    "/assets/places/area-la-century-city-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Century_City_buildings_(June_2026).jpg",
+      "author": "Busition",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Olympic_Boulevard_in_Century_City_(April_2026).jpg",
+      "author": "Busition",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Century_City_van_Santa_Monica_Blvd.jpg",
+      "author": "nl:User:DreCube",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 19
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Culver City",
+    "zh": "卡尔弗城"
+   },
+   "desc": {
+    "en": "Entertainment, tech and creative offices mixed with restaurants and apartments; Downtown and the Arts District are distinct hubs.",
+    "zh": "娱乐、科技和创意办公与餐厅、公寓混合；市中心和艺术区是两个独立的商务片区。"
+   },
+   "lat": 34.0211,
+   "lng": -118.3965,
+   "address": "",
+   "area": {
+    "en": "Culver City, CA",
+    "zh": "加州卡尔弗城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-culver-city-1.jpg",
+    "/assets/places/area-la-culver-city-2.jpg",
+    "/assets/places/area-la-culver-city-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Culver_City_2026_August_02.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Culver_City_2026_August_03.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Culver_City_buildings_and_structures_2023_March_18_batch_03.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 20
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Santa Monica",
+    "zh": "圣莫尼卡"
+   },
+   "desc": {
+    "en": "Beachside and walkable, with tech offices and retail: the core of LA's \"Silicon Beach\".",
+    "zh": "海滨、步行友好，科技办公和零售集中，是洛杉矶“硅滩”的核心。"
+   },
+   "lat": 34.0195,
+   "lng": -118.4912,
+   "address": "",
+   "area": {
+    "en": "Santa Monica, CA",
+    "zh": "加州圣莫尼卡"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-santa-monica-1.jpg",
+    "/assets/places/area-la-santa-monica-2.jpg",
+    "/assets/places/area-la-santa-monica-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Santa_Monica_%E2%80%93_Third_Street_Promenade_(a)_06_Sept_2017.jpg",
+      "author": "Cayambe",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Santa_Monica_-_Downtown_-_Beach.jpg",
+      "author": "Cayambe",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Santa_Monica_Third_Street_Promenade_%E2%80%93_Market_Pavilion.jpg",
+      "author": "Cayambe",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 21
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Playa Vista",
+    "zh": "普拉亚维斯塔"
+   },
+   "desc": {
+    "en": "Master-planned community with a dense cluster of tech companies and new apartments.",
+    "zh": "规划型社区，科技公司密集，新建公寓众多。"
+   },
+   "lat": 33.9737,
+   "lng": -118.4287,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-playa-vista-1.jpg",
+    "/assets/places/area-la-playa-vista-2.jpg",
+    "/assets/places/area-la-playa-vista-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Playa_Vista_corner_Jefferson_and_Lincoln.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Institute_for_Creative_Technologies.jpg",
+      "author": "DocFreeman24",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Bluff_Creek_and_Playa_Vista.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 22
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Burbank",
+    "zh": "伯班克"
+   },
+   "desc": {
+    "en": "Media and entertainment hub, home to major studios and production company offices.",
+    "zh": "传媒与娱乐中心，多家大型制片厂和制作公司办公室所在地。"
+   },
+   "lat": 34.1808,
+   "lng": -118.3089,
+   "address": "",
+   "area": {
+    "en": "Burbank, CA",
+    "zh": "加州伯班克"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-burbank-1.jpg",
+    "/assets/places/area-la-burbank-2.jpg",
+    "/assets/places/area-la-burbank-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Burbank_widok.JPG",
+      "author": "Mateusz Kudła",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Burbank_media_district_along_SR_134_2015-01-11.jpg",
+      "author": "Junkyardsparkle",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Film_sets,_Warner_Bros._Studios_(Burbank)_July_2022_(27).jpg",
+      "author": "Benoît Prieur",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 23
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Hollywood",
+    "zh": "好莱坞"
+   },
+   "desc": {
+    "en": "Core of the entertainment industry: studios, production, talent agencies and tourism.",
+    "zh": "娱乐产业核心，制片厂、制作公司、经纪公司和旅游业集中。"
+   },
+   "lat": 34.0928,
+   "lng": -118.3287,
+   "address": "",
+   "area": {
+    "en": "Los Angeles, CA",
+    "zh": "加州洛杉矶"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-hollywood-1.jpg",
+    "/assets/places/area-la-hollywood-2.jpg",
+    "/assets/places/area-la-hollywood-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Cahuenga_Blvd_Hollywood_2012.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Capitol_Records_Building_LA_-_panoramio.jpg",
+      "author": "Gfox228",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hollywood_Sign.jpg",
+      "author": "Thomas Wolf, www.foto-tw.de",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 24
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Beverly Hills",
+    "zh": "比弗利山庄"
+   },
+   "desc": {
+    "en": "Luxury retail, hospitality and professional services in a brand- and lifestyle-driven district.",
+    "zh": "奢侈品零售、酒店和专业服务集中，以品牌和生活方式为导向的商务区。"
+   },
+   "lat": 34.0736,
+   "lng": -118.4004,
+   "address": "",
+   "area": {
+    "en": "Beverly Hills, CA",
+    "zh": "加州比佛利山"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-beverly-hills-1.jpg",
+    "/assets/places/area-la-beverly-hills-2.jpg",
+    "/assets/places/area-la-beverly-hills-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Buildings_at_North_Rodeo_Drive,_Beverly_Hills,_West_view_20110806_1.jpg",
+      "author": "DXR",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rodeo_Drive_(9641264818).jpg",
+      "author": "William Warby from London, England",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Beverly_Hills,_CA,_USA_-_panoramio_(2).jpg",
+      "author": "Mickey Løgitmark",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 25
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Pasadena",
+    "zh": "帕萨迪纳"
+   },
+   "desc": {
+    "en": "Independent small-city business district: schools, offices and Old Pasadena retail.",
+    "zh": "独立小城的商务区，学校、写字楼和老帕萨迪纳零售并存。"
+   },
+   "lat": 34.1478,
+   "lng": -118.1445,
+   "address": "",
+   "area": {
+    "en": "Pasadena, CA",
+    "zh": "加州帕萨迪纳"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-pasadena-1.jpg",
+    "/assets/places/area-la-pasadena-2.jpg",
+    "/assets/places/area-la-pasadena-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Colorado_Boulevard,_Old_Pasadena,_Pasadena,_California_(14514406151).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pasadena_City_Hall,_Pasadena,_California_(14516407734).jpg",
+      "author": "Ken Lund from Reno, Nevada, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pasadena_Colorado_Street_Bridge_2005.jpg",
+      "author": "Mike Dillon",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 26
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "El Segundo",
+    "zh": "埃尔塞贡多"
+   },
+   "desc": {
+    "en": "Aerospace, tech and corporate offices next to LAX.",
+    "zh": "毗邻洛杉矶国际机场，航空航天、科技和企业办公集中。"
+   },
+   "lat": 33.9192,
+   "lng": -118.4165,
+   "address": "",
+   "area": {
+    "en": "El Segundo, CA",
+    "zh": "加州埃尔塞贡多"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-la-el-segundo-1.jpg",
+    "/assets/places/area-la-el-segundo-2.jpg",
+    "/assets/places/area-la-el-segundo-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_Pacific_Coast_Towers.jpg",
+      "author": "Busition",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Angeles_Times_building_El_Segundo_California_2023-04.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_Point_-_El_Segundo,_California_-_20180514_121733.jpg",
+      "author": "Daderot",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 27
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "USC",
+    "zh": "USC"
+   },
+   "desc": {
+    "en": "Private research university known for film, business and engineering, with red-brick Romanesque halls. Most students rent in University Park and near the Expo Line; DTLA is minutes away.",
+    "zh": "以电影、商科和工程著称的私立研究型大学，红砖罗马式建筑是标志。学生多在大学公园区及Expo地铁线沿线租房，距洛杉矶市中心仅数分钟车程。"
+   },
+   "lat": 34.0224,
+   "lng": -118.2851,
+   "address": "3551 Trousdale Parkway, Los Angeles, CA 90089",
+   "area": {
+    "en": "University Park, South Los Angeles",
+    "zh": "南洛杉矶大学公园区"
+   },
+   "logo": "/assets/school-logos/usc.png",
+   "images": [
+    "/assets/places/school-usc-1.jpg",
+    "/assets/places/school-usc-2.jpg",
+    "/assets/places/school-usc-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "University Park, DTLA-adjacent",
+     "zh": "大学公园，毗邻洛杉矶市中心"
+    },
+    "communities": [
+     "University Park",
+     "DTLA",
+     "Koreatown"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Doheny.jpg",
+      "author": "Padsquad19 at English Wikipedia",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:University_of_Southern_California_2_2019-05-05.jpg",
+      "author": "FASTILY",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Harris_Hall,_University_of_Southern_California.jpg",
+      "author": "EEJCC",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 28
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "UCLA",
+    "zh": "UCLA"
+   },
+   "desc": {
+    "en": "Top public university famous for Royce Hall and a sprawling, green campus. Westwood Village next door is walkable with student apartments, though rents are high for LA.",
+    "zh": "顶尖公立大学，以罗伊斯厅和宽阔的绿色校园闻名。紧邻的韦斯特伍德村步行友好、学生公寓集中，但租金在洛杉矶属于较高水平。"
+   },
+   "lat": 34.0689,
+   "lng": -118.4452,
+   "address": "405 Hilgard Avenue, Los Angeles, CA 90095",
+   "area": {
+    "en": "Westwood, Los Angeles",
+    "zh": "洛杉矶韦斯特伍德"
+   },
+   "logo": "/assets/school-logos/ucla.png",
+   "images": [
+    "/assets/places/school-ucla-1.jpg",
+    "/assets/places/school-ucla-2.jpg",
+    "/assets/places/school-ucla-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Westwood",
+     "zh": "韦斯特伍德"
+    },
+    "communities": [
+     "Westwood",
+     "Sawtelle",
+     "Palms"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Royce_Hall_post_rain.jpg",
+      "author": "Alton",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Janss_Steps,_Royce_Hall_in_background,_UCLA.jpg",
+      "author": "b r e n t",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2019_UCLA_Haines_Hall_1.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 29
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Loyola Marymount University",
+    "zh": "洛约拉玛丽蒙特大学"
+   },
+   "desc": {
+    "en": "Jesuit university on a bluff overlooking Playa Vista and the Pacific. Westchester is a quiet, suburban area near LAX and the beach; most students drive or rent close to campus.",
+    "zh": "坐落在可俯瞰Playa Vista与太平洋的山崖上的耶稣会大学。韦斯特切斯特安静、偏郊区，靠近洛杉矶机场和海滩，学生多开车或在校园附近租房。"
+   },
+   "lat": 33.9701,
+   "lng": -118.4166,
+   "address": "1 LMU Drive, Los Angeles, CA 90045",
+   "area": {
+    "en": "Westchester, Los Angeles",
+    "zh": "洛杉矶韦斯特切斯特"
+   },
+   "logo": "/assets/school-logos/lmu.png",
+   "images": [
+    "/assets/places/school-lmu-1.jpg",
+    "/assets/places/school-lmu-2.jpg",
+    "/assets/places/school-lmu-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Westchester / Playa Vista",
+     "zh": "韦斯切斯特 / 普拉亚维斯塔"
+    },
+    "communities": [
+     "Westchester",
+     "Playa Vista",
+     "Marina del Rey",
+     "Culver City"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Loyola_Marymount_SunkenGardens_SacredHeartChapel.jpg",
+      "author": "Mishigaki at English Wikipedia",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:William_H._Hannon_Library.jpg",
+      "author": "Johnxlibris",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:LMU_Fire_Road,_Playa_Vista_Riparian_Corridor.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 30
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Occidental College",
+    "zh": "西方学院"
+   },
+   "desc": {
+    "en": "Small liberal arts college with a Mediterranean-style hillside campus. Eagle Rock is a relaxed neighborhood with indie cafés on Colorado Blvd and cheaper rents than the Westside.",
+    "zh": "小型文理学院，校园依山而建，呈地中海风格。鹰岩街区氛围悠闲，Colorado大道上独立咖啡馆林立，租金低于洛杉矶西区。"
+   },
+   "lat": 34.1264,
+   "lng": -118.2115,
+   "address": "1600 Campus Road, Los Angeles, CA 90041",
+   "area": {
+    "en": "Eagle Rock, Los Angeles",
+    "zh": "洛杉矶鹰岩"
+   },
+   "logo": "/assets/school-logos/oxy.png",
+   "images": [
+    "/assets/places/school-occidental-1.jpg",
+    "/assets/places/school-occidental-2.jpg",
+    "/assets/places/school-occidental-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Eagle Rock",
+     "zh": "鹰岩"
+    },
+    "communities": [
+     "Eagle Rock",
+     "Highland Park",
+     "Los Feliz",
+     "Pasadena"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:OxyThorne_cropped.jpg",
+      "author": "User:Crewfan94",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Johnson_Student_Center_and_Freeman_College_Union.jpg",
+      "author": "Geographer",
+      "license": "CC BY 1.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Johnson_hall.jpg",
+      "author": "Geographer",
+      "license": "CC BY 1.0"
+     }
+    ]
+   },
+   "sort": 31
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "UC Irvine (UCI)",
+    "zh": "加州大学尔湾分校（UCI）"
+   },
+   "desc": {
+    "en": "UC campus known for engineering, biology and computer science, built in rings around Aldrich Park. Irvine is safe, planned and car-oriented, with large student apartment complexes nearby.",
+    "zh": "加州大学分校，以工程、生物和计算机见长，校园环绕奥尔德里奇公园呈环形布局。尔湾规划完善、治安良好，出行以开车为主，周边有大型学生公寓社区。"
+   },
+   "lat": 33.6405,
+   "lng": -117.8443,
+   "address": "311 West Peltason Drive, Irvine, CA 92697",
+   "area": {
+    "en": "University Park, Irvine",
+    "zh": "尔湾大学公园区"
+   },
+   "logo": "/assets/school-logos/uci.png",
+   "images": [
+    "/assets/places/school-uci-1.jpg",
+    "/assets/places/school-uci-2.jpg",
+    "/assets/places/school-uci-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Irvine",
+     "zh": "尔湾"
+    },
+    "communities": [
+     "UTC",
+     "Spectrum",
+     "Park Place"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:UC_Irvine,_Main_Circle_-_University_Center_View.JPG",
+      "author": "Mikejuinwind123",
+      "license": "CC BY-SA 2.5"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:UC_Irvine,_Engineering_Gateway.JPG",
+      "author": "Mikejuinwind123",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:UC_Irvine,_School_of_Engineering.JPG",
+      "author": "Mikejuinwind123",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 32
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Cal State LA",
+    "zh": "加州州立大学洛杉矶分校"
+   },
+   "desc": {
+    "en": "Public CSU campus known for engineering, criminal justice and affordability. It sits on a hill by the I-10 with its own Metrolink and busway stop; nearby Alhambra offers cheaper rents.",
+    "zh": "加州州立大学洛杉矶分校，以工程、刑事司法专业和学费亲民著称。校园位于10号高速旁的山丘上，自带Metrolink和快速公交站，附近的阿罕布拉租金较低。"
+   },
+   "lat": 34.0664,
+   "lng": -118.1706,
+   "address": "5151 State University Drive, Los Angeles, CA 90032",
+   "area": {
+    "en": "University Hills, East Los Angeles",
+    "zh": "东洛杉矶大学山"
+   },
+   "logo": "/assets/school-logos/calstatela.png",
+   "images": [
+    "/assets/places/school-cal-state-la-1.jpg",
+    "/assets/places/school-cal-state-la-2.jpg",
+    "/assets/places/school-cal-state-la-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "El Sereno",
+     "zh": "埃尔塞雷诺"
+    },
+    "communities": [
+     "El Sereno",
+     "Alhambra",
+     "Monterey Park"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Cal_State_University,_Los_Angeles.jpg",
+      "author": "Justefrain",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:CSULAStudentUnionBLDG.jpg",
+      "author": "Justefrain",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:BiologicalSciences.jpg",
+      "author": "AJL2030",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 33
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Caltech",
+    "zh": "加州理工"
+   },
+   "desc": {
+    "en": "World-class science and engineering institute with Spanish-style arcades and a small, intimate campus. Surrounding Pasadena is quiet and residential; Old Pasadena is a short drive.",
+    "zh": "世界顶级理工学院，校园小巧精致，西班牙风格拱廊别具特色。周边帕萨迪纳住宅区安静宜居，开车不久即可到老城区。"
+   },
+   "lat": 34.1377,
+   "lng": -118.1253,
+   "address": "1200 East California Boulevard, Pasadena, CA 91125",
+   "area": {
+    "en": "Southeast Pasadena",
+    "zh": "帕萨迪纳东南部"
+   },
+   "logo": "/assets/school-logos/caltech.png",
+   "images": [
+    "/assets/places/school-caltech-1.jpg",
+    "/assets/places/school-caltech-2.jpg",
+    "/assets/places/school-caltech-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Pasadena",
+     "zh": "帕萨迪纳"
+    },
+    "communities": [
+     "Pasadena",
+     "South Pasadena"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fountain_at_Caltech.jpg",
+      "author": "Claire from Arlington, TN, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Robert_A._Millikan_Memorial_Library_at_Caltech.jpg",
+      "author": "Canon.vs.nikon",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Parsons-Gates_Hall_Caltech_2017b.jpg",
+      "author": "Antony-22",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 34
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "ArtCenter College of Design",
+    "zh": "ArtCenter 设计学院"
+   },
+   "desc": {
+    "en": "Elite design school known for transportation and product design. The hillside campus is a Craig Ellwood bridge over a ravine; the South Campus is near the Metro A Line in Pasadena.",
+    "zh": "以交通工具设计和产品设计闻名的顶尖设计学院。山坡校区是横跨峡谷的Craig Ellwood桥式建筑，南校区位于帕萨迪纳、靠近地铁A线。"
+   },
+   "lat": 34.1711,
+   "lng": -118.1198,
+   "address": "1700 Lida Street, Pasadena, CA 91103",
+   "area": {
+    "en": "Linda Vista / South Campus, Pasadena",
+    "zh": "帕萨迪纳琳达维斯塔 / 南校区"
+   },
+   "logo": "/assets/school-logos/artcenter.png",
+   "images": [
+    "/assets/places/school-artcenter-1.jpg",
+    "/assets/places/school-artcenter-2.jpg",
+    "/assets/places/school-artcenter-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Pasadena",
+     "zh": "帕萨迪纳"
+    },
+    "communities": [
+     "Pasadena",
+     "Eagle Rock",
+     "Highland Park"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:ArtCenter_College_of_Design,_South_Campus_building_1.jpg",
+      "author": "Jchobanana",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:ArtCenter_College_of_Design,_South_Campus_in_January_2017.jpg",
+      "author": "Jchobanana",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Craig_ellwood,_art_center_college_of_design,_pasadena,_california,_1970-1976._(5099590766).jpg",
+      "author": "seier+seier",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 35
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "LA Film School",
+    "zh": "洛杉矶电影学院"
+   },
+   "desc": {
+    "en": "Career-focused school for film, audio and animation on Sunset Blvd. Central Hollywood is busy and nightlife-heavy, with Metro B Line access and many apartment buildings.",
+    "zh": "位于日落大道、以就业为导向的电影、音频与动画学校。好莱坞中心区热闹、夜生活丰富，可乘地铁B线，周边公寓楼众多。"
+   },
+   "lat": 34.1017,
+   "lng": -118.3255,
+   "address": "6363 Sunset Boulevard, Los Angeles, CA 90028",
+   "area": {
+    "en": "Hollywood, Los Angeles",
+    "zh": "洛杉矶好莱坞"
+   },
+   "logo": "/assets/school-logos/lafilmschool.png",
+   "images": [
+    "/assets/places/school-la-film-school-1.jpg",
+    "/assets/places/school-la-film-school-2.jpg",
+    "/assets/places/school-la-film-school-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Hollywood",
+     "zh": "好莱坞"
+    },
+    "communities": [
+     "Hollywood",
+     "Koreatown"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:LAFilmSchool02.jpg",
+      "author": "Minnaert",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Angeles_Film_School,_Los_Angeles,_California,_US.jpg",
+      "author": "Clyde Charles Brown",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:La_Filmschool_(84226057).jpeg",
+      "author": "Oliver Propst",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 36
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Santa Monica College (SMC)",
+    "zh": "圣莫尼卡学院（SMC）"
+   },
+   "desc": {
+    "en": "California's top transfer college to UCLA and the UCs, popular with international students. Santa Monica is beachside, bikeable and safe, though rents are steep; many share apartments.",
+    "zh": "加州转学至UCLA及各UC分校成绩最好的社区学院，深受国际生欢迎。圣莫尼卡临海、适合骑行且治安好，但租金较高，学生多合租。"
+   },
+   "lat": 34.0158,
+   "lng": -118.4513,
+   "address": "1900 Pico Boulevard, Santa Monica, CA 90405",
+   "area": {
+    "en": "Santa Monica",
+    "zh": "圣莫尼卡"
+   },
+   "logo": "/assets/school-logos/smc.png",
+   "images": [
+    "/assets/places/school-smc-1.jpg",
+    "/assets/places/school-smc-2.jpg",
+    "/assets/places/school-smc-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Santa Monica",
+     "zh": "圣莫尼卡"
+    },
+    "communities": [
+     "Santa Monica",
+     "Palms",
+     "Mar Vista"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Santa_MonicaCollege_Boardwalk2.jpg",
+      "author": "Michael Oh",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Smcboardwalkandhss.jpg",
+      "author": "Mrgates",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Smctheaterartsbuilding.JPG",
+      "author": "Mrgates",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 37
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Pasadena City College (PCC)",
+    "zh": "帕萨迪纳城市学院（PCC）"
+   },
+   "desc": {
+    "en": "Large community college with strong transfer rates and a reflecting-pool quad. It sits on Colorado Blvd near the Metro A Line; Pasadena is safe with moderate rents for LA.",
+    "zh": "大型社区学院，转学率高，校园倒影池广场颇具特色。位于Colorado大道、靠近地铁A线；帕萨迪纳治安良好，租金在洛杉矶属中等。"
+   },
+   "lat": 34.1428,
+   "lng": -118.1246,
+   "address": "1570 East Colorado Boulevard, Pasadena, CA 91106",
+   "area": {
+    "en": "East Pasadena, Pasadena",
+    "zh": "帕萨迪纳东部"
+   },
+   "logo": "/assets/school-logos/pcc.png",
+   "images": [
+    "/assets/places/school-pcc-1.jpg",
+    "/assets/places/school-pcc-2.jpg",
+    "/assets/places/school-pcc-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Pasadena",
+     "zh": "帕萨迪纳"
+    },
+    "communities": [
+     "Pasadena",
+     "Alhambra",
+     "Arcadia"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pasadena_City_College_(_PCC_)_(3973627505).jpg",
+      "author": "Prayitno",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pasadena_City_College_(3926883130).jpg",
+      "author": "Prayitno",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pasadena_City_College_building.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 38
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "West LA College (WLAC)",
+    "zh": "西洛杉矶学院（WLAC）"
+   },
+   "desc": {
+    "en": "Hilltop community college with modern buildings and views across the Westside. Nearby Culver City offers a lively downtown, tech jobs and the Metro E Line, with rents below Santa Monica.",
+    "zh": "位于山顶的社区学院，现代建筑可眺望洛杉矶西区。邻近的卡尔弗城市中心热闹，科技公司聚集，可乘地铁E线，租金低于圣莫尼卡。"
+   },
+   "lat": 34.0136,
+   "lng": -118.4066,
+   "address": "9000 Overland Avenue, Culver City, CA 90230",
+   "area": {
+    "en": "Culver City / Ladera Heights",
+    "zh": "卡尔弗城 / 拉德拉高地"
+   },
+   "logo": "/assets/school-logos/wlac.png",
+   "images": [
+    "/assets/places/school-wlac-1.jpg",
+    "/assets/places/school-wlac-2.jpg",
+    "/assets/places/school-wlac-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Culver City",
+     "zh": "卡尔弗城"
+    },
+    "communities": [
+     "Culver City",
+     "Palms"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:WestLACollege_DSC_0024_(15816299555).jpg",
+      "author": "Tracie Hall from Orange County, us",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:WestLACollege_DSC_0015_(15814394811).jpg",
+      "author": "Tracie Hall from Orange County, us",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:WestLACollege_DSC_0017_(15630477419).jpg",
+      "author": "Tracie Hall from Orange County, us",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 39
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Otis College of Art and Design",
+    "zh": "奥蒂斯艺术设计学院"
+   },
+   "desc": {
+    "en": "LA's oldest art school, known for fashion, toy and product design, housed in a former IBM tower. Westchester is quiet and close to LAX and the beach; a car helps for getting around.",
+    "zh": "洛杉矶历史最悠久的艺术学院，以时装、玩具和产品设计见长，主楼由原IBM大楼改建。韦斯特切斯特安静，靠近机场和海滩，出行最好有车。"
+   },
+   "lat": 33.9633,
+   "lng": -118.4149,
+   "address": "9045 Lincoln Boulevard, Los Angeles, CA 90045",
+   "area": {
+    "en": "Westchester, Los Angeles",
+    "zh": "洛杉矶韦斯特切斯特"
+   },
+   "logo": "/assets/school-logos/otis.png",
+   "images": [
+    "/assets/places/school-otis-1.jpg",
+    "/assets/places/school-otis-2.jpg",
+    "/assets/places/school-otis-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Westchester / Playa Vista",
+     "zh": "韦斯切斯特 / 普拉亚维斯塔"
+    },
+    "communities": [
+     "Westchester",
+     "Playa Vista",
+     "Marina del Rey"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Otiscollege.jpg",
+      "author": "Marc Meredith",
+      "license": "CC BY-SA 2.5"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Ben_Maltz_Gallery.jpg",
+      "author": "DocFreeman24",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Westchester,_Los_Angeles,_CA,_USA_-_panoramio.jpg",
+      "author": "Eric Friedebach",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 40
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Hollywood Sign",
+    "zh": "Hollywood Sign"
+   },
+   "desc": {
+    "en": "The 45-foot letters on Mount Lee are LA's most famous view. Hiking trails in Griffith Park and Lake Hollywood Park offer the best photo spots.",
+    "zh": "矗立在李山上的巨型字母是洛杉矶最具代表性的景观，格里菲斯公园步道和好莱坞湖公园是最佳拍照点。"
+   },
+   "lat": 34.1341,
+   "lng": -118.32165,
+   "address": "Mt Lee Dr, Los Angeles, CA 90068",
+   "area": {
+    "en": "Hollywood Hills",
+    "zh": "好莱坞山"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-hollywood-sign-1.jpg",
+    "/assets/poi/la-hollywood-sign-2.jpg",
+    "/assets/poi/la-hollywood-sign-3.jpg"
+   ],
+   "extra": {
+    "icon": "statue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hollywood_Sign_(Zuschnitt).jpg",
+      "author": "Thomas Wolf, www.foto-tw.de",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hollywood_Sign.jpg",
+      "author": "Thomas Wolf, www.foto-tw.de",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hollywood_Sign,_Santa_Monica_Mountains2.jpg",
+      "author": "dconvertini",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 41
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Griffith Observatory",
+    "zh": "Griffith Observatory"
+   },
+   "desc": {
+    "en": "Free-admission Art Deco observatory with public telescopes and sweeping views of the basin and the Hollywood Sign—a go-to sunset spot.",
+    "zh": "免费参观的装饰艺术风格天文台，可用公共望远镜观星，俯瞰整个洛杉矶盆地和好莱坞标志，是看日落的热门地点。"
+   },
+   "lat": 34.11822,
+   "lng": -118.30029,
+   "address": "2800 E Observatory Rd, Los Angeles, CA 90027",
+   "area": {
+    "en": "Griffith Park",
+    "zh": "格里菲斯公园"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-griffith-observatory-1.jpg",
+    "/assets/poi/la-griffith-observatory-2.jpg",
+    "/assets/poi/la-griffith-observatory-3.jpg"
+   ],
+   "extra": {
+    "icon": "museum",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2022-5.jpg",
+      "author": "dconvertini",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Griffith_Observatory_in_July_2022.JPG",
+      "author": "Benoît Prieur",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2022.jpg",
+      "author": "dconvertini",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 42
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Santa Monica Pier",
+    "zh": "Santa Monica Pier"
+   },
+   "desc": {
+    "en": "Century-old pier with Pacific Park's solar Ferris wheel, arcades and the symbolic end of Route 66, steps from Third Street Promenade.",
+    "zh": "拥有百年历史的码头，有太平洋公园的太阳能摩天轮、游戏厅和66号公路终点标志，步行即达第三街步行街。"
+   },
+   "lat": 34.0089,
+   "lng": -118.4974,
+   "address": "200 Santa Monica Pier, Santa Monica, CA 90401",
+   "area": {
+    "en": "Santa Monica",
+    "zh": "圣莫尼卡"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-santa-monica-pier-1.jpg",
+    "/assets/poi/la-santa-monica-pier-2.jpg",
+    "/assets/poi/la-santa-monica-pier-3.jpg"
+   ],
+   "extra": {
+    "icon": "venue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:DJI_20250315131503_0166_D.jpg",
+      "author": "Jav72",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Angeles_(California,_USA),_Santa_Monica_Beach_--_2012_--_5301.jpg",
+      "author": "Dietmar Rabich",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Santa_Monica_Beach_P1000521.jpg",
+      "author": "NewtonCourt",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 43
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Getty Center",
+    "zh": "Getty Center"
+   },
+   "desc": {
+    "en": "Hilltop art museum in Brentwood with free admission, Richard Meier architecture, gardens and views from downtown to the ocean.",
+    "zh": "位于布伦特伍德山顶的免费艺术博物馆，理查德·迈耶设计的建筑、花园和从市中心到海边的全景视野都很出名。"
+   },
+   "lat": 34.07702,
+   "lng": -118.47401,
+   "address": "1200 Getty Center Dr, Los Angeles, CA 90049",
+   "area": {
+    "en": "Brentwood",
+    "zh": "布伦特伍德"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-getty-center-1.jpg",
+    "/assets/poi/la-getty-center-2.jpg",
+    "/assets/poi/la-getty-center-3.jpg"
+   ],
+   "extra": {
+    "icon": "museum",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pictures_of_the_Getty_Museum_in_Los_Angeles,_California_09.jpg",
+      "author": "Felipe Ignacio Carvajal Brown",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pictures_of_the_Getty_Museum_in_Los_Angeles,_California_05.jpg",
+      "author": "Felipe Ignacio Carvajal Brown",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:J._Paul_Getty_Trust_building,_Los_Angeles,_California,_US.jpg",
+      "author": "Clyde Charles Brown",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 44
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Walt Disney Concert Hall",
+    "zh": "Walt Disney Concert Hall"
+   },
+   "desc": {
+    "en": "Frank Gehry's stainless-steel landmark and home of the LA Philharmonic, anchoring the Grand Avenue arts corridor on Bunker Hill.",
+    "zh": "弗兰克·盖里设计的不锈钢地标，洛杉矶爱乐乐团的主场，是邦克山大道艺术走廊的核心。"
+   },
+   "lat": 34.05543,
+   "lng": -118.24991,
+   "address": "111 S Grand Ave, Los Angeles, CA 90012",
+   "area": {
+    "en": "Downtown LA (Bunker Hill)",
+    "zh": "洛杉矶市中心（邦克山）"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-walt-disney-concert-hall-1.jpg",
+    "/assets/poi/la-walt-disney-concert-hall-2.jpg",
+    "/assets/poi/la-walt-disney-concert-hall-3.jpg"
+   ],
+   "extra": {
+    "icon": "venue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Disney_Concert_Hall_by_Carol_Highsmith.jpg",
+      "author": "Carol M. Highsmith",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Grand_Avenue_from_Walt_Disney_Concert_Hall_(Los_Angeles)_in_July_2022.JPG",
+      "author": "Benoît Prieur",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Disney_Concert_Hall_(Unsplash).jpg",
+      "author": "Brandon Smith brndnsmth",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 45
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "The Broad",
+    "zh": "The Broad"
+   },
+   "desc": {
+    "en": "Free contemporary art museum known for its honeycomb facade and Infinity Mirror Rooms, right next to Disney Concert Hall.",
+    "zh": "以蜂窝状外立面和草间弥生“无限镜屋”闻名的免费当代艺术馆，紧邻迪士尼音乐厅。"
+   },
+   "lat": 34.05446,
+   "lng": -118.25059,
+   "address": "221 S Grand Ave, Los Angeles, CA 90012",
+   "area": {
+    "en": "Downtown LA (Bunker Hill)",
+    "zh": "洛杉矶市中心（邦克山）"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-the-broad-1.jpg",
+    "/assets/poi/la-the-broad-2.jpg",
+    "/assets/poi/la-the-broad-3.jpg"
+   ],
+   "extra": {
+    "icon": "museum",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Angeles,_United_States_(Unsplash_j5K6ambkGNk).jpg",
+      "author": "Tu Tram Pham tutrampham",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_Broad,_Los_Angeles_in_July_2023.JPG",
+      "author": "Benoît Prieur",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Steve_driscoll_2016-06-28_(Unsplash).jpg",
+      "author": "Steve driscoll ssdriscoll",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 46
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Venice Beach Boardwalk",
+    "zh": "Venice Beach Boardwalk"
+   },
+   "desc": {
+    "en": "Ocean Front Walk's street performers, Muscle Beach and skate park define Venice's laid-back vibe, with Abbot Kinney a short walk inland.",
+    "zh": "海滨步道上的街头艺人、肌肉海滩和滑板公园构成了威尼斯海滩的悠闲氛围，往内陆走几分钟就是Abbot Kinney大道。"
+   },
+   "lat": 33.98948,
+   "lng": -118.47592,
+   "address": "1800 Ocean Front Walk, Venice, CA 90291",
+   "area": {
+    "en": "Venice",
+    "zh": "威尼斯海滩"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-venice-beach-boardwalk-1.jpg",
+    "/assets/poi/la-venice-beach-boardwalk-2.jpg",
+    "/assets/poi/la-venice-beach-boardwalk-3.jpg"
+   ],
+   "extra": {
+    "icon": "park",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Ocean_Front_Walk,_Venice_LA.jpg",
+      "author": "DanielMichaelPerry",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Ocean_Front_Walk_Venice_Beach.jpg",
+      "author": "DanielMichaelPerry",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Ocean_Front_Walk_Venice_April_2020_1.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 47
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Rodeo Drive",
+    "zh": "Rodeo Drive"
+   },
+   "desc": {
+    "en": "Beverly Hills' luxury shopping street, lined with flagship boutiques between Wilshire and Santa Monica Boulevards.",
+    "zh": "比佛利山庄的奢侈品购物街，威尔希尔大道与圣莫尼卡大道之间汇集各大品牌旗舰店。"
+   },
+   "lat": 34.0675,
+   "lng": -118.40095,
+   "address": "Rodeo Dr & Wilshire Blvd, Beverly Hills, CA 90210",
+   "area": {
+    "en": "Beverly Hills",
+    "zh": "比佛利山庄"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-rodeo-drive-1.jpg",
+    "/assets/poi/la-rodeo-drive-2.jpg",
+    "/assets/poi/la-rodeo-drive-3.jpg"
+   ],
+   "extra": {
+    "icon": "square",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Vista_de_rodeo_drive.JPG",
+      "author": "Adrián Cerón",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rodeo_Drive_July_2022.jpg",
+      "author": "Andrek02",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rodeo_Drive_3.jpg",
+      "author": "Misaochan",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 48
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Los Angeles Union Station",
+    "zh": "Los Angeles Union Station"
+   },
+   "desc": {
+    "en": "LA's 1939 Mission Revival rail hub, connecting Metro rail, Amtrak and the FlyAway bus to LAX—handy for car-free commuting.",
+    "zh": "建于1939年的西班牙传教风格火车总站，连接地铁、美铁和直达LAX的FlyAway巴士，无车通勤很方便。"
+   },
+   "lat": 34.05586,
+   "lng": -118.23429,
+   "address": "800 N Alameda St, Los Angeles, CA 90012",
+   "area": {
+    "en": "Downtown LA",
+    "zh": "洛杉矶市中心"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-union-station-1.jpg",
+    "/assets/poi/la-union-station-2.jpg",
+    "/assets/poi/la-union-station-3.jpg"
+   ],
+   "extra": {
+    "icon": "train",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Union_Station_Los_Angeles,_California.jpg",
+      "author": "Codera23",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Los_Angeles_Union_Station_06.jpg",
+      "author": "Visitor7",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Union_Station_in_Los_Angeles_3.jpg",
+      "author": "Johnnydeezwax",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 49
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "LACMA & Urban Light",
+    "zh": "LACMA & Urban Light"
+   },
+   "desc": {
+    "en": "The largest art museum in the western US; Chris Burden's Urban Light lamp posts out front on Wilshire are a favorite photo stop.",
+    "zh": "美国西部最大的艺术博物馆，门前威尔希尔大道上克里斯·伯顿的《城市之光》路灯装置是热门打卡点。"
+   },
+   "lat": 34.06305,
+   "lng": -118.35921,
+   "address": "5905 Wilshire Blvd, Los Angeles, CA 90036",
+   "area": {
+    "en": "Miracle Mile",
+    "zh": "奇迹一英里"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/la-lacma-1.jpg",
+    "/assets/poi/la-lacma-2.jpg",
+    "/assets/poi/la-lacma-3.jpg"
+   ],
+   "extra": {
+    "icon": "museum",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Giant_white_pillars_(Unsplash).jpg",
+      "author": "Chris Brignola cjbrignola",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:LACMA-Exterior-View-ROLM-ArchEyes-5.jpg",
+      "author": "ArchEyes Magazine",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:LACMA-Exterior-View-ROLM-ArchEyes-4_-_55107514064.jpg",
+      "author": "ArchEyes Magazine",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 50
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "The Walt Disney Company (Burbank HQ)",
+    "zh": "The Walt Disney Company (Burbank HQ)"
+   },
+   "desc": {
+    "en": "The Walt Disney Company's global headquarters on its historic Burbank studio lot, including the Team Disney building held up by the Seven Dwarfs.",
+    "zh": "华特迪士尼公司全球总部所在的伯班克历史制片厂，园区内有以“七个小矮人”作立柱的Team Disney大楼。"
+   },
+   "lat": 34.15779,
+   "lng": -118.32758,
+   "address": "500 S Buena Vista St, Burbank, CA 91521",
+   "area": {
+    "en": "Burbank",
+    "zh": "伯班克"
+   },
+   "logo": "/assets/company-logos/disney.png",
+   "images": [
+    "/assets/poi/la-disney-burbank-1.jpg",
+    "/assets/poi/la-disney-burbank-2.jpg",
+    "/assets/poi/la-disney-burbank-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Walt_Disney_Studios_Alameda_Entrance.jpg",
+      "author": "Coolcaesar",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Disney_studios_burbank_entrance_gate_buena_vista.jpg",
+      "author": "Junkyardsparkle",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Disney_100_celebration.jpg",
+      "author": "Trey Madara",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 51
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Warner Bros. Studios Burbank",
+    "zh": "Warner Bros. Studios Burbank"
+   },
+   "desc": {
+    "en": "Warner Bros.' main studio lot, where many films and TV shows are made; offices, sound stages and the public Studio Tour Hollywood.",
+    "zh": "华纳兄弟的主制片厂，大量电影和剧集在此拍摄，园区内有办公楼、摄影棚和对外开放的片场之旅。"
+   },
+   "lat": 34.14887,
+   "lng": -118.33763,
+   "address": "4000 Warner Blvd, Burbank, CA 91522",
+   "area": {
+    "en": "Burbank",
+    "zh": "伯班克"
+   },
+   "logo": "/assets/company-logos/warner-bros.png",
+   "images": [
+    "/assets/poi/la-warner-bros-1.jpg",
+    "/assets/poi/la-warner-bros-2.jpg",
+    "/assets/poi/la-warner-bros-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Warner_Bros_Burbank_(51080102911).jpg",
+      "author": "Tony Mariotti from Los Angeles, United States",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Warner_Bros._Studios_Water_Tower_2020.jpg",
+      "author": "Chris Yarzab",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Warner_Bros._Studios_(50769803496).jpg",
+      "author": "Chris Yarzab",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 52
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Paramount Pictures Studios",
+    "zh": "Paramount Pictures Studios"
+   },
+   "desc": {
+    "en": "Paramount's historic lot on Melrose Avenue, the last major studio still operating in Hollywood itself, with offices and sound stages.",
+    "zh": "派拉蒙位于梅尔罗斯大道的历史片场，是唯一仍在好莱坞本地运营的大型制片厂，内有办公区和摄影棚。"
+   },
+   "lat": 34.08365,
+   "lng": -118.3208,
+   "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+   "area": {
+    "en": "Hollywood",
+    "zh": "好莱坞"
+   },
+   "logo": "/assets/company-logos/paramount.png",
+   "images": [
+    "/assets/poi/la-paramount-1.jpg",
+    "/assets/poi/la-paramount-2.jpg",
+    "/assets/poi/la-paramount-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Paramount_Studios,_Los_Angeles,_United_States_(Unsplash).jpg",
+      "author": "Christian Joudrey cjoudrey",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Roddenberry_Building_2016.jpg",
+      "author": "Antony-22",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Paramount_Studios,_now_known_as_Kaufman-Astoria_Studios._Corner_shot_from_35_the_Ave..JPG",
+      "author": "MrShah2012",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 53
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Sony Pictures Studios",
+    "zh": "Sony Pictures Studios"
+   },
+   "desc": {
+    "en": "Sony Pictures Entertainment's headquarters on the former MGM lot in Culver City, with studios, offices and a walking tour.",
+    "zh": "索尼影视娱乐总部，位于卡尔弗城原米高梅片场，包括摄影棚、办公楼和片场导览。"
+   },
+   "lat": 34.01736,
+   "lng": -118.40215,
+   "address": "10202 W Washington Blvd, Culver City, CA 90232",
+   "area": {
+    "en": "Culver City",
+    "zh": "卡尔弗城"
+   },
+   "logo": "/assets/company-logos/sony-pictures.png",
+   "images": [
+    "/assets/poi/la-sony-pictures-1.jpg",
+    "/assets/poi/la-sony-pictures-2.jpg",
+    "/assets/poi/la-sony-pictures-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Sony_Pictures_Studios_Motor_Gate.jpg",
+      "author": "Coolcaesar",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Sonypicturesentertainmentoffices.jpg",
+      "author": "Coolcaesar at en.wikipedia",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Columbia_Pictures_Sign.jpg",
+      "author": "Busition",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 54
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Amazon MGM Studios (The Culver Studios)",
+    "zh": "Amazon MGM Studios (The Culver Studios)"
+   },
+   "desc": {
+    "en": "Amazon MGM Studios' production campus at the historic Culver Studios, known for its colonial-style mansion facing Washington Blvd.",
+    "zh": "亚马逊MGM影业的制作园区，位于历史悠久的卡尔弗制片厂，临华盛顿大道的殖民风格白色大宅是其标志。"
+   },
+   "lat": 34.02297,
+   "lng": -118.39096,
+   "address": "9336 W Washington Blvd, Culver City, CA 90232",
+   "area": {
+    "en": "Culver City",
+    "zh": "卡尔弗城"
+   },
+   "logo": "/assets/company-logos/amazon.png",
+   "images": [
+    "/assets/poi/la-amazon-culver-1.jpg",
+    "/assets/poi/la-amazon-culver-2.jpg",
+    "/assets/poi/la-amazon-culver-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Culver_City_buildings_and_structures_2023_March_18_batch_04.jpg",
+      "author": "Jengod",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:CulverStudios.jpg",
+      "author": "Termer",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Commercial.on.set.jpg",
+      "author": "Rclick-wiki",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 55
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "SpaceX Headquarters",
+    "zh": "SpaceX Headquarters"
+   },
+   "desc": {
+    "en": "SpaceX's Hawthorne rocket factory and longtime headquarters, where Falcon engines and Dragon capsules are built; a few minutes from LAX and El Segundo.",
+    "zh": "SpaceX位于霍桑的火箭工厂和长期总部，猎鹰发动机和龙飞船在此制造，距LAX和埃尔塞贡多仅几分钟车程。"
+   },
+   "lat": 33.92036,
+   "lng": -118.32803,
+   "address": "1 Rocket Rd, Hawthorne, CA 90250",
+   "area": {
+    "en": "Hawthorne (near El Segundo)",
+    "zh": "霍桑（近埃尔塞贡多）"
+   },
+   "logo": "/assets/company-logos/spacex.png",
+   "images": [
+    "/assets/poi/la-spacex-1.jpg",
+    "/assets/poi/la-spacex-2.jpg",
+    "/assets/poi/la-spacex-3.jpg"
+   ],
+   "extra": {
+    "icon": "tech",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_SpaceX_Factory.jpg",
+      "author": "Steve Jurvetson",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Falcon_9_booster_B1019_and_SpaceX_HQ_(35943121656).jpg",
+      "author": "Juan Kulichevsky from Argentina",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Falcon_9_booster_B1019_(35943121786).jpg",
+      "author": "Juan Kulichevsky from Argentina",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 56
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Capitol Records Building (Capitol Music Group)",
+    "zh": "Capitol Records Building (Capitol Music Group)"
+   },
+   "desc": {
+    "en": "The round tower near Hollywood & Vine houses Capitol Music Group, part of Universal Music Group, with its famous recording studios.",
+    "zh": "好莱坞与藤街口附近的圆形大楼，是环球音乐集团旗下国会音乐集团的办公地，并拥有著名的录音室。"
+   },
+   "lat": 34.10311,
+   "lng": -118.32635,
+   "address": "1750 N Vine St, Los Angeles, CA 90028",
+   "area": {
+    "en": "Hollywood",
+    "zh": "好莱坞"
+   },
+   "logo": "/assets/company-logos/capitol-records.png",
+   "images": [
+    "/assets/poi/la-capitol-records-1.jpg",
+    "/assets/poi/la-capitol-records-2.jpg",
+    "/assets/poi/la-capitol-records-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Capitol_Records_Building_LA_-_panoramio.jpg",
+      "author": "Gfox228",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%BE%D1%81-%D0%90%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81_-_panoramio_(11).jpg",
+      "author": "Андрей Бобровский",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hollywood_Boulevard_near_Vine.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 57
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Cedars-Sinai Medical Center",
+    "zh": "Cedars-Sinai Medical Center"
+   },
+   "desc": {
+    "en": "Major nonprofit academic medical center and one of LA's largest employers, on the edge of Beverly Hills and West Hollywood.",
+    "zh": "大型非营利学术医疗中心，洛杉矶最大的雇主之一，位于比佛利山庄与西好莱坞交界处。"
+   },
+   "lat": 34.07516,
+   "lng": -118.38109,
+   "address": "8700 Beverly Blvd, Los Angeles, CA 90048",
+   "area": {
+    "en": "Beverly Grove (by Beverly Hills)",
+    "zh": "比佛利格罗夫（毗邻比佛利山庄）"
+   },
+   "logo": "/assets/company-logos/cedars-sinai.png",
+   "images": [
+    "/assets/poi/la-cedars-sinai-1.jpg",
+    "/assets/poi/la-cedars-sinai-2.jpg",
+    "/assets/poi/la-cedars-sinai-3.jpg"
+   ],
+   "extra": {
+    "icon": "health",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Scientology_building_east_hollywood_los_angeles.jpg",
+      "author": "Mfield, Matthew Field, http://www.photography.mattfield.com",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fountain_Avenue_and_Scientology_building.jpg",
+      "author": "Downtowngal",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Max_Factor_family_tower.jpg",
+      "author": "NativeForeigner",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 58
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Fox Studio Lot (Fox Corporation)",
+    "zh": "Fox Studio Lot (Fox Corporation)"
+   },
+   "desc": {
+    "en": "Fox Corporation's historic studio lot in Century City, home to Fox offices and Disney's 20th Century Studios productions.",
+    "zh": "福克斯公司位于世纪城的历史片场，福克斯办公室及迪士尼旗下20世纪影业的制作团队都在这里。"
+   },
+   "lat": 34.05201,
+   "lng": -118.41251,
+   "address": "10201 W Pico Blvd, Los Angeles, CA 90064",
+   "area": {
+    "en": "Century City",
+    "zh": "世纪城"
+   },
+   "logo": "/assets/company-logos/fox.png",
+   "images": [
+    "/assets/poi/la-fox-1.jpg",
+    "/assets/poi/la-fox-2.jpg",
+    "/assets/poi/la-fox-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Foxstudiosentrance.jpg",
+      "author": "Coolcaesar",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fox_Studios_(15238969174).jpg",
+      "author": "Tony Hisgett from Birmingham, UK",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Foxgives_2013_-_panoramio_(2).jpg",
+      "author": "Clotee Pridgen Alloc…",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 59
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Union Station",
+    "zh": "Union Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 34.0561,
+   "lng": -118.2365,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 60
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "7th St / Metro Center",
+    "zh": "7th St / Metro Center"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 34.0486,
+   "lng": -118.2588,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 61
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Wilshire / Vermont",
+    "zh": "Wilshire / Vermont"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 34.0618,
+   "lng": -118.2915,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 62
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Hollywood / Vine",
+    "zh": "Hollywood / Vine"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 34.1016,
+   "lng": -118.3264,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 63
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "North Hollywood",
+    "zh": "North Hollywood"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 34.1683,
+   "lng": -118.3769,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 64
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Culver City Station",
+    "zh": "Culver City Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 34.0163,
+   "lng": -118.3963,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 65
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Expo / Sepulveda",
+    "zh": "Expo / Sepulveda"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 34.0294,
+   "lng": -118.4297,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 66
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Downtown Santa Monica",
+    "zh": "Downtown Santa Monica"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 34.0157,
+   "lng": -118.4962,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 67
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "LAX Airport",
+    "zh": "LAX Airport"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 33.9416,
+   "lng": -118.4085,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 68
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Bob Hope / Hollywood Burbank Airport",
+    "zh": "Bob Hope / Hollywood Burbank Airport"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 34.2007,
+   "lng": -118.3587,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 69
+  }
+ ]
+}

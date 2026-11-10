@@ -1,0 +1,4255 @@
+{
+ "region": "new-york",
+ "payload": {
+  "cityName": {
+   "en": "New York & New Jersey",
+   "zh": "纽约与新泽西"
+  },
+  "emoji": "🗽",
+  "intro": {
+   "en": "In New York, the best neighborhood often depends on where you need to be every day. Whether you are heading to campus, Midtown, Downtown, or across the Hudson, commute time can make a big difference in where you choose to live.",
+   "zh": "在纽约，最适合你的社区，往往取决于你每天要去哪里。无论是去学校、中城、下城，还是过河去新泽西，通勤时间都会很大程度上影响你住哪里。"
+  },
+  "areas": [
+   {
+    "emoji": "🏙️",
+    "name": {
+     "en": "Manhattan",
+     "zh": "Manhattan"
+    },
+    "tags": [
+     {
+      "en": "NYU",
+      "zh": "NYU"
+     },
+     {
+      "en": "SVA",
+      "zh": "SVA"
+     },
+     {
+      "en": "Parsons",
+      "zh": "Parsons"
+     },
+     {
+      "en": "FiDi",
+      "zh": "FiDi"
+     }
+    ],
+    "text": {
+     "en": "Best for students and professionals who want to stay close to school or work. Areas around Downtown are convenient for NYU, SVA, and offices in FiDi, while Midtown works well for Parsons, Fordham Lincoln Center, and many corporate offices. The tradeoff is usually higher rent and less space.",
+     "zh": "适合希望住在学校或公司附近的学生和职场人士。前往 NYU、SVA 和金融区都很方便。中城则更适合 Parsons、Fordham 的学生，以及在周边办公的上班族。这里交通便利、生活配套丰富，但租金相对较高，居住空间通常也更紧凑。"
+    },
+    "short": {
+     "en": "Best for students and professionals who want to be close to school or work, from NYU to FiDi and Midtown. The tradeoff is higher rent.",
+     "zh": "适合希望住在学校或公司附近的学生和职场人士。前往 NYU、SVA 和金融区都很方便。中城则更适合 Parsons、Fordham 的学生，以及在周边办公的上班族。这里交通便利、生活配套丰富，但租金相对较高，居住空间通常也更紧凑。"
+    },
+    "image": {
+     "url": "/assets/nynj-manhattan.jpg"
+    }
+   },
+   {
+    "emoji": "🚇",
+    "name": {
+     "en": "Long Island City",
+     "zh": "Long Island City"
+    },
+    "tags": [
+     {
+      "en": "New builds",
+      "zh": "New builds"
+     },
+     {
+      "en": "Subway",
+      "zh": "Subway"
+     },
+     {
+      "en": "Near Midtown",
+      "zh": "Near Midtown"
+     }
+    ],
+    "text": {
+     "en": "Popular with students at Parsons, NYU, and SVA, as well as professionals working in Midtown Manhattan. LIC is known for newer apartment buildings, skyline views, and quick subway access into Manhattan, making it a convenient choice for people who want modern living without being right in the middle of the city.",
+     "zh": "深受 Parsons、NYU、SVA 学生，以及在中城工作的上班族欢迎。长岛市（LIC）拥有不少现代化公寓，既能欣赏曼哈顿天际线，又能享受便捷的通勤。适合希望住得舒适，同时又不想远离市中心的人。"
+    },
+    "short": {
+     "en": "Popular with Parsons, NYU, and SVA students and Midtown professionals. Newer buildings, skyline views, and quick subway access into Manhattan.",
+     "zh": "深受 Parsons、NYU、SVA 学生，以及在中城工作的上班族欢迎。长岛市（LIC）拥有不少现代化公寓，既能欣赏曼哈顿天际线，又能享受便捷的通勤。适合希望住得舒适，同时又不想远离市中心的人。"
+    },
+    "image": {
+     "url": "/assets/nynj-lic.jpg"
+    }
+   },
+   {
+    "emoji": "🌉",
+    "name": {
+     "en": "Brooklyn",
+     "zh": "Brooklyn"
+    },
+    "tags": [
+     {
+      "en": "Downtown BK",
+      "zh": "Downtown BK"
+     },
+     {
+      "en": "Williamsburg",
+      "zh": "Williamsburg"
+     },
+     {
+      "en": "Pratt",
+      "zh": "Pratt"
+     }
+    ],
+    "text": {
+     "en": "A strong option for students at Pratt, NYU, NYU Stern, and Parsons, especially if you live around Downtown Brooklyn, Williamsburg, or nearby neighborhoods with easy subway access. Brooklyn offers a more residential feel, more neighborhood variety, and a good balance between campus access and everyday lifestyle.",
+     "zh": "适合 Pratt、NYU、NYU Stern 和 Parsons 的学生，尤其适合希望住在布鲁克林下城、威廉斯堡或地铁沿线的人。这里的居住选择更加多样，社区氛围也各具特色，既有安静的住宅街区，也有充满活力的生活圈，适合在学习与日常生活之间找到自己的节奏。"
+    },
+    "short": {
+     "en": "A strong option for Pratt, NYU, and Parsons students around Downtown Brooklyn and Williamsburg. A more residential feel.",
+     "zh": "适合 Pratt、NYU、NYU Stern 和 Parsons 的学生，尤其适合希望住在布鲁克林下城、威廉斯堡或地铁沿线的人。这里的居住选择更加多样，社区氛围也各具特色，既有安静的住宅街区，也有充满活力的生活圈，适合在学习与日常生活之间找到自己的节奏。"
+    },
+    "image": {
+     "url": "/assets/nynj-brooklyn.jpg"
+    }
+   },
+   {
+    "emoji": "🎓",
+    "name": {
+     "en": "Upper Manhattan",
+     "zh": "Upper Manhattan"
+    },
+    "tags": [
+     {
+      "en": "Columbia",
+      "zh": "Columbia"
+     },
+     {
+      "en": "Morningside",
+      "zh": "Morningside"
+     },
+     {
+      "en": "UWS",
+      "zh": "UWS"
+     }
+    ],
+    "text": {
+     "en": "A natural fit for students at Columbia and anyone who spends most of their time around Morningside Heights, the Upper West Side, or northern Manhattan. Living closer to campus can significantly reduce commute time and often gives you more space compared with Downtown.",
+     "zh": "特别适合哥伦比亚大学的学生，以及经常在晨边高地、上西区或曼哈顿北部活动的人。住得离学校更近，可以节省日常通勤时间。相比中城，这里的住宅通常也有更宽敞的居住空间。"
+    },
+    "short": {
+     "en": "A natural fit for Columbia students and anyone around Morningside Heights or the Upper West Side. Shorter commutes and more space.",
+     "zh": "特别适合哥伦比亚大学的学生，以及经常在晨边高地、上西区或曼哈顿北部活动的人。住得离学校更近，可以节省日常通勤时间。相比中城，这里的住宅通常也有更宽敞的居住空间。"
+    },
+    "image": {
+     "url": "/assets/nynj-upper-manhattan.jpg"
+    }
+   },
+   {
+    "emoji": "🚆",
+    "name": {
+     "en": "Jersey City & Hoboken",
+     "zh": "Jersey City & Hoboken"
+    },
+    "tags": [
+     {
+      "en": "PATH",
+      "zh": "PATH"
+     },
+     {
+      "en": "Pace",
+      "zh": "Pace"
+     },
+     {
+      "en": "Wall Street",
+      "zh": "Wall Street"
+     }
+    ],
+    "text": {
+     "en": "A popular choice for students at NYU, NYU Stern, and Pace, as well as professionals working around Wall Street and Downtown Manhattan. PATH access makes commuting into Manhattan relatively easy, while many buildings offer newer amenities, larger layouts, and more space for the price.",
+     "zh": "适合 NYU、NYU Stern 和 Pace 的学生，以及在华尔街和曼哈顿下城工作的上班族。乘坐 PATH 可以便捷地往返曼哈顿。这里有不少较新的公寓楼，户型通常更加宽敞，相同预算下也有机会享受更舒适的居住空间。"
+    },
+    "short": {
+     "en": "Popular with NYU, Stern, and Pace students and Wall Street professionals. Easy PATH commute and more space for the price.",
+     "zh": "适合 NYU、NYU Stern 和 Pace 的学生，以及在华尔街和曼哈顿下城工作的上班族。乘坐 PATH 可以便捷地往返曼哈顿。这里有不少较新的公寓楼，户型通常更加宽敞，相同预算下也有机会享受更舒适的居住空间。"
+    },
+    "image": {
+     "url": "/assets/nynj-jersey-city.jpg"
+    }
+   }
+  ],
+  "closing": {
+   "emoji": "✨",
+   "title": {
+    "en": "Found your area?",
+    "zh": "选好区域了吗？"
+   },
+   "text": {
+    "en": "Once you know which area fits your routine, we can help with the rest—from apartment search and leasing to moving, furniture, room dividers, Wi Fi, electricity, renters insurance, and move in setup.",
+    "zh": "选好适合你生活节奏的区域后，其余的交给我们——从找房、签约，到搬家、家具、房间隔断、Wi-Fi、水电、租客保险和入住布置。"
+   },
+   "short": {
+    "en": "Once you know your area, we can help with the rest, from apartment search to move-in essentials.",
+    "zh": "选好区域后，其余的交给我们，从找房到入住所需的一切。"
+   },
+   "image": {
+    "url": "/assets/nynj-closing.jpg"
+   },
+   "hideOnMobile": false
+  },
+  "map": {
+   "center": {
+    "lat": 40.759,
+    "lng": -73.955
+   },
+   "zoom": 12,
+   "minZoom": 10,
+   "bounds": [
+    [
+     40.63,
+     -74.11
+    ],
+    [
+     40.89,
+     -73.83
+    ]
+   ],
+   "neighborhoods": {
+    "url": "/assets/guides/new-york/neighborhoods.geojson"
+   },
+   "businessDistricts": {
+    "url": "/assets/guides/new-york/business-districts.geojson"
+   },
+   "transit": {
+    "url": "/assets/transit/NY.geojson"
+   }
+  }
+ },
+ "places": [
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Midtown Manhattan",
+    "zh": "曼哈顿中城"
+   },
+   "desc": {
+    "en": "The city's busiest core around Times Square, Fifth Ave and Rockefeller Center. Endless subway lines and short commutes, but mostly high-rise rentals with premium prices.",
+    "zh": "围绕时代广场、第五大道和洛克菲勒中心的城市核心区，地铁线路极多、通勤最短；以高层出租公寓为主，租金高、比较喧闹。"
+   },
+   "lat": 40.7549,
+   "lng": -73.984,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-midtown-manhattan-1.jpg",
+    "/assets/places/area-ny-midtown-manhattan-2.jpg",
+    "/assets/places/area-ny-midtown-manhattan-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg",
+      "author": "Dllu",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Aerial_photograph_of_Midtown_Manhattan,_New_York--Unsplash.com--2016.jpg",
+      "author": "Theo Tsongidis theodoret",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:432_Park_Avenue_from_base.jpg",
+      "author": "Sir MemeGod",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 1
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Midtown East",
+    "zh": "中城东区"
+   },
+   "desc": {
+    "en": "Around Grand Central and Turtle Bay: doorman high-rises, a calmer after-work feel and fast subway/Metro-North access. Popular with finance and consulting staff; rents are high.",
+    "zh": "中央车站与龟湾一带，多为门卫高层公寓，下班后相对安静，地铁和Metro-North通勤便利；金融、咨询从业者多，租金偏高。"
+   },
+   "lat": 40.7549,
+   "lng": -73.9707,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-midtown-east-1.jpg",
+    "/assets/places/area-ny-midtown-east-2.jpg",
+    "/assets/places/area-ny-midtown-east-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Park_Avenue_towards_Grand_Central_Terminal,_New_York_City,_NY.jpg",
+      "author": "Warren LeMay",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:42nd_Street_%5E_Park_Avenue,_New_York_City_-_Tourists_Approaching_Grand_Central_Terminal,_2007_-_panoramio.jpg",
+      "author": "Chris English",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_2005_4.jpg",
+      "author": "Misterweiss at English Wikipedia",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 2
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Midtown West",
+    "zh": "中城西区"
+   },
+   "desc": {
+    "en": "Hell's Kitchen and the Theater District: lively restaurant rows, new towers near the Hudson and quick trains from Times Square and Port Authority. Busy, young and pricey.",
+    "zh": "地狱厨房和剧院区，餐厅林立、夜生活丰富，哈德逊河边新楼多，时代广场和巴士总站交通方便；氛围年轻热闹，租金不低。"
+   },
+   "lat": 40.758,
+   "lng": -73.9855,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-midtown-west-1.jpg",
+    "/assets/places/area-ny-midtown-west-2.jpg",
+    "/assets/places/area-ny-midtown-west-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Times_Square_during_daytime.jpg",
+      "author": "Jerry Steinfield",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Ninth-north.jpg",
+      "author": "Roger Rowlett",
+      "license": "CC BY-SA 2.5"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:34th_Street_10th_Avenue_03.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 3
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Financial District (FiDi)",
+    "zh": "金融区（FiDi）"
+   },
+   "desc": {
+    "en": "Wall Street's canyons turned residential: converted towers with gyms and doormen, nearly every subway line plus PATH and ferries. Quiet on weekends, better value than Midtown.",
+    "zh": "华尔街一带，许多写字楼改建为带健身房和门卫的公寓，几乎所有地铁线加PATH和轮渡汇集；周末偏安静，性价比好于中城。"
+   },
+   "lat": 40.7075,
+   "lng": -74.0113,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-financial-district-fidi-1.jpg",
+    "/assets/places/area-ny-financial-district-fidi-2.jpg",
+    "/assets/places/area-ny-financial-district-fidi-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_York_City_(New_York,_USA),_Wall_Street_--_2012_--_6614.jpg",
+      "author": "Dietmar Rabich",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange_August_2017_02.jpg",
+      "author": "Arild Vågen",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:40_Wall_Street_April_2022.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 4
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Hudson Yards",
+    "zh": "哈德逊广场"
+   },
+   "desc": {
+    "en": "Manhattan's newest district: glassy luxury towers, the Vessel, the High Line and a big mall, served by the 7 train. Polished and convenient, with some of the city's highest rents.",
+    "zh": "曼哈顿最新开发区，玻璃幕墙豪华高楼、Vessel、高线公园和大型商场，乘7号线可达；环境精致便利，租金属全市最高之列。"
+   },
+   "lat": 40.7566,
+   "lng": -74.0007,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-hudson-yards-1.jpg",
+    "/assets/places/area-ny-hudson-yards-2.jpg",
+    "/assets/places/area-ny-hudson-yards-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Midtown_Manhattan_from_Weehawken_September_2021_HDR.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:10%26_30_Hudson_Yards.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:HudsonYards_05-06-19-1_(47003439824).jpg",
+      "author": "Ajay Suresh from New York, NY, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 5
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Flatiron / NoMad",
+    "zh": "熨斗区 / NoMad"
+   },
+   "desc": {
+    "en": "Around the Flatiron Building and Madison Square Park: prewar lofts, great restaurants and many subway lines. Central and stylish, loved by tech and creative workers; rents are high.",
+    "zh": "熨斗大厦与麦迪逊广场公园周边，战前loft建筑漂亮、餐厅出色、地铁线多；位置居中、很有格调，深受科技和创意从业者喜爱，租金较高。"
+   },
+   "lat": 40.742,
+   "lng": -73.989,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-flatiron-nomad-1.jpg",
+    "/assets/places/area-ny-flatiron-nomad-2.jpg",
+    "/assets/places/area-ny-flatiron-nomad-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Broadway_26th-27th_Streets.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:At_New_York,_USA_2017_298.jpg",
+      "author": "Photograph by Mike Peel (www.mikepeel.net).",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pecora_Bianca_on_Broadway_(50041624187).jpg",
+      "author": "Eden, Janine and Jim from New York City",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 6
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Chelsea",
+    "zh": "切尔西"
+   },
+   "desc": {
+    "en": "Brownstones, art galleries, the High Line and Chelsea Market on Manhattan's west side. Walkable and social, with A/C/E and 1 trains; rents run high.",
+    "zh": "曼哈顿西侧，褐石排屋、画廊、高线公园和切尔西市场汇聚，步行友好、社交氛围浓，A/C/E和1号线通达；租金偏高。"
+   },
+   "lat": 40.7465,
+   "lng": -74.0014,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-chelsea-1.jpg",
+    "/assets/places/area-ny-chelsea-2.jpg",
+    "/assets/places/area-ny-chelsea-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:At_New_York_City_2023_045_-_10th_Avenue_and_14th_Street,_Manhattan.jpg",
+      "author": "Photograph by Mike Peel (www.mikepeel.net).",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:High_Line_New_York_August_2013.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:High_Line_at_Chelsea_Market_from_street_level,_September_2025.jpg",
+      "author": "Pi.1415926535",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 7
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Union Square",
+    "zh": "联合广场"
+   },
+   "desc": {
+    "en": "A lively hub around the park and Greenmarket, steps from NYU and The New School. Many subway lines meet here, making it a top student pick; expect small, pricey units.",
+    "zh": "以联合广场公园和农夫市集为中心，紧邻NYU和新学院；多条地铁线交汇，是学生热门选择，但房型偏小、租金较贵。"
+   },
+   "lat": 40.7359,
+   "lng": -73.9911,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-union-square-1.jpg",
+    "/assets/places/area-ny-union-square-2.jpg",
+    "/assets/places/area-ny-union-square-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Union_Square_New_York_by_David_Shankbone.jpg",
+      "author": "David Shankbone",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Union_Square_Farmers_Market.jpg",
+      "author": "Postdlf",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:14th_St_Bway_td_(2018-03-22)_06_-_1,_5,_15_Union_Square_West.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 8
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "SoHo",
+    "zh": "苏豪区"
+   },
+   "desc": {
+    "en": "Cobblestone streets, cast-iron lofts and flagship stores. Stylish and central, but apartments are scarce, often walk-ups, and among Manhattan's most expensive.",
+    "zh": "鹅卵石街道、铸铁loft建筑和品牌旗舰店聚集，时尚且位置居中；但房源稀少、多为无电梯楼，租金在曼哈顿属顶级。"
+   },
+   "lat": 40.7233,
+   "lng": -74.003,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-soho-1.jpg",
+    "/assets/places/area-ny-soho-2.jpg",
+    "/assets/places/area-ny-soho-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Burton_69-Greene-Street-NY_2021-06-25_10-31_G90T8429.jpg",
+      "author": "Axel Tschentscher",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Cast_Iron_Buildings_-_SoHo_Historic_District.jpg",
+      "author": "50greenestreet",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Greene_from_W_Houston.jpg",
+      "author": "CucombreLibre",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 9
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Downtown Brooklyn",
+    "zh": "布鲁克林下城"
+   },
+   "desc": {
+    "en": "A fast-growing cluster of new high-rises near MetroTech, NYU Tandon and Barclays Center. A dozen subway lines reach Manhattan in minutes, with more space for the money.",
+    "zh": "MetroTech、NYU Tandon和巴克莱中心附近新建高楼密集，十余条地铁线几分钟到曼哈顿；同样预算比曼哈顿空间更大。"
+   },
+   "lat": 40.6935,
+   "lng": -73.9866,
+   "address": "",
+   "area": {
+    "en": "Brooklyn, New York",
+    "zh": "纽约布鲁克林"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-downtown-brooklyn-1.jpg",
+    "/assets/places/area-ny-downtown-brooklyn-2.jpg",
+    "/assets/places/area-ny-downtown-brooklyn-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Downtown_Brooklyn_Skyline_2023.jpg",
+      "author": "FluffballsM&Ms",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Brooklyn_Borough_Hall_01.jpg",
+      "author": "Ad Meskens",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fulton_Mall,_Brooklyn_New_York.jpg",
+      "author": "TheTTGuy",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 10
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Long Island City (LIC)",
+    "zh": "长岛市（LIC）"
+   },
+   "desc": {
+    "en": "Queens waterfront towers facing the Midtown skyline, one stop from Manhattan on the 7, E/M and N/W. Newer amenity buildings at slightly lower rents than Manhattan.",
+    "zh": "皇后区滨水高楼，正对中城天际线，乘7、E/M、N/W一站到曼哈顿；楼新、设施全，租金略低于曼哈顿。"
+   },
+   "lat": 40.7447,
+   "lng": -73.9485,
+   "address": "",
+   "area": {
+    "en": "Queens, New York",
+    "zh": "纽约皇后区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-long-island-city-lic-1.jpg",
+    "/assets/places/area-ny-long-island-city-lic-2.jpg",
+    "/assets/places/area-ny-long-island-city-lic-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Long_Island_City_New_York_October_2016.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Long_Island_City_New_York_May_2015_panorama_3.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hunter%27s_Pt_Community_Pk_td_(2019-04-11)_11_-_Zipper_Building_(533_48th_Avenue).jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 11
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Hoboken, NJ",
+    "zh": "霍博肯，新泽西"
+   },
+   "desc": {
+    "en": "A compact, walkable mile-square city of brownstones and bars on the Hudson. A young-professional favorite; PATH and ferries reach Manhattan in 10–15 min, rents a bit lower.",
+    "zh": "哈德逊河畔一平方英里的小城，褐石建筑和酒吧林立，年轻上班族最爱；PATH和轮渡10–15分钟到曼哈顿，租金略低。"
+   },
+   "lat": 40.7439,
+   "lng": -74.0323,
+   "address": "",
+   "area": {
+    "en": "Hoboken, NJ",
+    "zh": "新泽西州霍博肯"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-hoboken-nj-1.jpg",
+    "/assets/places/area-ny-hoboken-nj-2.jpg",
+    "/assets/places/area-ny-hoboken-nj-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pier_A_Park_Hoboken_June_2015_panorama_3.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:77_Park_Avenue_Hoboken_November_2021.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hoboken_November_2021_009.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 12
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Newport, NJ",
+    "zh": "Newport, NJ"
+   },
+   "desc": {
+    "en": "A planned waterfront community of high-rise rentals with a mall, riverside walkway and its own PATH stop. Quiet and safe-feeling, with easy commutes to Midtown or Downtown.",
+    "zh": "规划型滨水社区，以高层出租公寓为主，配有商场和河滨步道，自带PATH站；安静、安全感强，通勤中城或下城都方便。"
+   },
+   "lat": 40.7267,
+   "lng": -74.0339,
+   "address": "",
+   "area": {
+    "en": "Jersey City, NJ",
+    "zh": "新泽西州泽西市"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-newport-nj-1.jpg",
+    "/assets/places/area-ny-newport-nj-2.jpg",
+    "/assets/places/area-ny-newport-nj-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Newport_Jersey_City_May_2015.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Newport_Jersey_City_November_2021_005.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Newport_Jersey_City_November_2021_006.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 13
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Exchange Place, NJ",
+    "zh": "Exchange Place, NJ"
+   },
+   "desc": {
+    "en": "Jersey City's financial waterfront of glass towers with Lower Manhattan views. One PATH stop to WTC; new luxury rentals, quiet after office hours.",
+    "zh": "泽西市的金融滨水区，玻璃高楼林立，正对下曼哈顿景观；PATH一站到世贸中心，新建豪华公寓多，下班后较安静。"
+   },
+   "lat": 40.7164,
+   "lng": -74.0333,
+   "address": "",
+   "area": {
+    "en": "Jersey City, NJ",
+    "zh": "新泽西州泽西市"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-exchange-place-nj-1.jpg",
+    "/assets/places/area-ny-exchange-place-nj-2.jpg",
+    "/assets/places/area-ny-exchange-place-nj-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Jersey_City_skyline_with_the_Colgate_Clock,_Jersey_City,_New_Jersey.jpg",
+      "author": "Christian David",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Harborside_Financial_Center_Harborside_Plaza_5_and_Trump_Plaza.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Jersey_City_July_2014_002.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 14
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Grove St, NJ",
+    "zh": "Grove St, NJ"
+   },
+   "desc": {
+    "en": "Downtown Jersey City's social heart: brownstones, a pedestrian plaza, bars and restaurants. PATH to WTC or 33rd St; popular with young renters and good value vs. Manhattan.",
+    "zh": "泽西市下城的社交中心，褐石排屋、步行广场、酒吧餐厅聚集；PATH可到世贸或33街，年轻租客多，比曼哈顿划算。"
+   },
+   "lat": 40.7196,
+   "lng": -74.0431,
+   "address": "",
+   "area": {
+    "en": "Jersey City, NJ",
+    "zh": "新泽西州泽西市"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-grove-st-nj-1.jpg",
+    "/assets/places/area-ny-grove-st-nj-2.jpg",
+    "/assets/places/area-ny-grove-st-nj-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:JC_Hall_SE_sunny_morning_jeh.JPG",
+      "author": "Jim.henderson",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Downtown_Jersey_City_November_2021_003.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Van_Vorst_Park_Jersey_City_August_2020.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 15
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Journal Square (JSQ), NJ",
+    "zh": "期刊广场（JSQ），新泽西"
+   },
+   "desc": {
+    "en": "Jersey City's transit hub, booming with new high-rise rentals around the PATH station. More affordable than the waterfront, about 20 min to Manhattan, with diverse food.",
+    "zh": "泽西市交通枢纽，PATH站周边新建高层公寓不断；租金比滨水区更亲民，约20分钟到曼哈顿，各国美食丰富。"
+   },
+   "lat": 40.7326,
+   "lng": -74.0629,
+   "address": "",
+   "area": {
+    "en": "Jersey City, NJ",
+    "zh": "新泽西州泽西市"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-journal-square-jsq-nj-1.jpg",
+    "/assets/places/area-ny-journal-square-jsq-nj-2.jpg",
+    "/assets/places/area-ny-journal-square-jsq-nj-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Journal_Square_Jersey_City_November_2021_002.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pavonia_Avenue,_Jersey_City.jpg",
+      "author": "Alfred Twu",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Journal_Square_-_Jersey_City,_NJ_(55191652498).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 16
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Midtown Manhattan",
+    "zh": "曼哈顿中城"
+   },
+   "desc": {
+    "en": "34th–59th St: one of NYC's largest core business districts, home to finance, media, consulting, tech and corporate HQs.",
+    "zh": "34至59街一带，纽约最大的核心商务区之一，汇聚金融、传媒、咨询、科技和企业总部。"
+   },
+   "lat": 40.7549,
+   "lng": -73.984,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-midtown-manhattan-1.jpg",
+    "/assets/places/area-ny-midtown-manhattan-2.jpg",
+    "/assets/places/area-ny-midtown-manhattan-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg",
+      "author": "Dllu",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Aerial_photograph_of_Midtown_Manhattan,_New_York--Unsplash.com--2016.jpg",
+      "author": "Theo Tsongidis theodoret",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:432_Park_Avenue_from_base.jpg",
+      "author": "Sir MemeGod",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 17
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Midtown East",
+    "zh": "中城东区"
+   },
+   "desc": {
+    "en": "Grand Central, Park Ave and Lexington Ave: the traditional corporate core of banks, law firms, consulting and finance.",
+    "zh": "中央车站、公园大道和列克星敦大道一带，传统企业办公核心，银行、律所、咨询和金融机构集中。"
+   },
+   "lat": 40.7549,
+   "lng": -73.9707,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-midtown-east-1.jpg",
+    "/assets/places/area-ny-midtown-east-2.jpg",
+    "/assets/places/area-ny-midtown-east-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Park_Avenue_towards_Grand_Central_Terminal,_New_York_City,_NY.jpg",
+      "author": "Warren LeMay",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:42nd_Street_%5E_Park_Avenue,_New_York_City_-_Tourists_Approaching_Grand_Central_Terminal,_2007_-_panoramio.jpg",
+      "author": "Chris English",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_2005_4.jpg",
+      "author": "Misterweiss at English Wikipedia",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 18
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Midtown West",
+    "zh": "中城西区"
+   },
+   "desc": {
+    "en": "Times Square, Hudson Yards and Hell's Kitchen: media, entertainment, tech and new-generation office towers and HQs.",
+    "zh": "时代广场、哈德逊园区和地狱厨房一带，传媒、娱乐、科技公司与新一代写字楼和总部集中。"
+   },
+   "lat": 40.758,
+   "lng": -73.9855,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-midtown-west-1.jpg",
+    "/assets/places/area-ny-midtown-west-2.jpg",
+    "/assets/places/area-ny-midtown-west-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Times_Square_during_daytime.jpg",
+      "author": "Jerry Steinfield",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Ninth-north.jpg",
+      "author": "Roger Rowlett",
+      "license": "CC BY-SA 2.5"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:34th_Street_10th_Avenue_03.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 19
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Financial District (FiDi)",
+    "zh": "金融区（FiDi）"
+   },
+   "desc": {
+    "en": "Wall Street and the World Trade Center: the traditional financial center for banks, insurance, financial services and government.",
+    "zh": "华尔街与世贸中心一带，传统金融中心，银行、保险、金融服务和政府机构集中。"
+   },
+   "lat": 40.7075,
+   "lng": -74.0113,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-financial-district-fidi-1.jpg",
+    "/assets/places/area-ny-financial-district-fidi-2.jpg",
+    "/assets/places/area-ny-financial-district-fidi-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_York_City_(New_York,_USA),_Wall_Street_--_2012_--_6614.jpg",
+      "author": "Dietmar Rabich",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange_August_2017_02.jpg",
+      "author": "Arild Vågen",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:40_Wall_Street_April_2022.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 20
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Hudson Yards",
+    "zh": "哈德逊广场"
+   },
+   "desc": {
+    "en": "West 30s: an emerging high-end district of major corporate HQs, finance, tech and luxury retail.",
+    "zh": "西30街一带的新兴高端商务区，大型企业总部、金融、科技和高端零售集中。"
+   },
+   "lat": 40.7566,
+   "lng": -74.0007,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-hudson-yards-1.jpg",
+    "/assets/places/area-ny-hudson-yards-2.jpg",
+    "/assets/places/area-ny-hudson-yards-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Midtown_Manhattan_from_Weehawken_September_2021_HDR.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:10%26_30_Hudson_Yards.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:HudsonYards_05-06-19-1_(47003439824).jpg",
+      "author": "Ajay Suresh from New York, NY, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 21
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Flatiron / NoMad",
+    "zh": "熨斗区 / NoMad"
+   },
+   "desc": {
+    "en": "Broadway and Fifth Ave in the 20s–30s: a hub for tech, creative, design, advertising and startups.",
+    "zh": "百老汇与第五大道20至30街段，科技、创意、设计、广告和初创公司聚集地。"
+   },
+   "lat": 40.742,
+   "lng": -73.989,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-flatiron-nomad-1.jpg",
+    "/assets/places/area-ny-flatiron-nomad-2.jpg",
+    "/assets/places/area-ny-flatiron-nomad-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Broadway_26th-27th_Streets.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:At_New_York,_USA_2017_298.jpg",
+      "author": "Photograph by Mike Peel (www.mikepeel.net).",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pecora_Bianca_on_Broadway_(50041624187).jpg",
+      "author": "Eden, Janine and Jim from New York City",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 22
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Chelsea",
+    "zh": "切尔西"
+   },
+   "desc": {
+    "en": "West 14th–30th St: strong in tech, media, advertising and art, anchored partly by Google's large presence.",
+    "zh": "西14至30街，科技、传媒、广告和艺术产业发达，谷歌大型办公室是重要支柱。"
+   },
+   "lat": 40.7465,
+   "lng": -74.0014,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-chelsea-1.jpg",
+    "/assets/places/area-ny-chelsea-2.jpg",
+    "/assets/places/area-ny-chelsea-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:At_New_York_City_2023_045_-_10th_Avenue_and_14th_Street,_Manhattan.jpg",
+      "author": "Photograph by Mike Peel (www.mikepeel.net).",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:High_Line_New_York_August_2013.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:High_Line_at_Chelsea_Market_from_street_level,_September_2025.jpg",
+      "author": "Pi.1415926535",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 23
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Union Square",
+    "zh": "联合广场"
+   },
+   "desc": {
+    "en": "Around 14th St: tech, startups, retail and creative firms, with many young companies.",
+    "zh": "14街一带，科技、初创、零售和创意公司集中，年轻企业众多。"
+   },
+   "lat": 40.7359,
+   "lng": -73.9911,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-union-square-1.jpg",
+    "/assets/places/area-ny-union-square-2.jpg",
+    "/assets/places/area-ny-union-square-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Union_Square_New_York_by_David_Shankbone.jpg",
+      "author": "David Shankbone",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Union_Square_Farmers_Market.jpg",
+      "author": "Postdlf",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:14th_St_Bway_td_(2018-03-22)_06_-_1,_5,_15_Union_Square_West.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 24
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "SoHo",
+    "zh": "苏豪区"
+   },
+   "desc": {
+    "en": "Houston to Canal St: fashion, luxury retail, creative agencies and brand headquarters.",
+    "zh": "Houston街至Canal街之间，时尚、奢侈品零售、创意机构和品牌总部集中。"
+   },
+   "lat": 40.7233,
+   "lng": -74.003,
+   "address": "",
+   "area": {
+    "en": "Manhattan, New York",
+    "zh": "纽约曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-soho-1.jpg",
+    "/assets/places/area-ny-soho-2.jpg",
+    "/assets/places/area-ny-soho-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Burton_69-Greene-Street-NY_2021-06-25_10-31_G90T8429.jpg",
+      "author": "Axel Tschentscher",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Cast_Iron_Buildings_-_SoHo_Historic_District.jpg",
+      "author": "50greenestreet",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Greene_from_W_Houston.jpg",
+      "author": "CucombreLibre",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 25
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Downtown Brooklyn",
+    "zh": "布鲁克林下城"
+   },
+   "desc": {
+    "en": "Civic Center and MetroTech: Brooklyn's largest business center for finance, tech, government and education.",
+    "zh": "布鲁克林市政中心和MetroTech一带，布鲁克林最大的商务中心，涵盖金融、科技、政府和教育。"
+   },
+   "lat": 40.6935,
+   "lng": -73.9866,
+   "address": "",
+   "area": {
+    "en": "Brooklyn, New York",
+    "zh": "纽约布鲁克林"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-downtown-brooklyn-1.jpg",
+    "/assets/places/area-ny-downtown-brooklyn-2.jpg",
+    "/assets/places/area-ny-downtown-brooklyn-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Downtown_Brooklyn_Skyline_2023.jpg",
+      "author": "FluffballsM&Ms",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Brooklyn_Borough_Hall_01.jpg",
+      "author": "Ad Meskens",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fulton_Mall,_Brooklyn_New_York.jpg",
+      "author": "TheTTGuy",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 26
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Long Island City (LIC)",
+    "zh": "长岛市（LIC）"
+   },
+   "desc": {
+    "en": "Queens Plaza and Court Square: a main Queens office hub for tech, media, converted industrial space and corporate offices.",
+    "zh": "皇后广场和Court Square一带，皇后区主要办公枢纽，科技、传媒、工业改造空间和企业办公集中。"
+   },
+   "lat": 40.7447,
+   "lng": -73.9485,
+   "address": "",
+   "area": {
+    "en": "Queens, New York",
+    "zh": "纽约皇后区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-ny-long-island-city-lic-1.jpg",
+    "/assets/places/area-ny-long-island-city-lic-2.jpg",
+    "/assets/places/area-ny-long-island-city-lic-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Long_Island_City_New_York_October_2016.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Long_Island_City_New_York_May_2015_panorama_3.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hunter%27s_Pt_Community_Pk_td_(2019-04-11)_11_-_Zipper_Building_(533_48th_Avenue).jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 27
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Parsons School of Design",
+    "zh": "帕森斯设计学院"
+   },
+   "desc": {
+    "en": "Top-ranked design school of The New School, famous for fashion. Its Fifth Ave campus sits in lively Greenwich Village near Union Square; rents are high but transit is superb.",
+    "zh": "新学院旗下的顶尖设计学院，以时装设计闻名。校区位于第五大道、紧邻联合广场的格林威治村，街区热闹，租金偏高但交通极为便利。"
+   },
+   "lat": 40.7336,
+   "lng": -73.9903,
+   "address": "66 Fifth Avenue, New York, NY 10011",
+   "area": {
+    "en": "Greenwich Village, Manhattan",
+    "zh": "曼哈顿格林威治村"
+   },
+   "logo": "/assets/school-logos/parsons.png",
+   "images": [
+    "/assets/places/school-parsons-1.jpg",
+    "/assets/places/school-parsons-2.jpg",
+    "/assets/places/school-parsons-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Union Square / Greenwich Village",
+     "zh": "联合广场 / 格林威治村"
+    },
+    "communities": [
+     "Greenwich Village",
+     "Union Square",
+     "East Village",
+     "NoHo",
+     "SoHo",
+     "Chelsea",
+     "Flatiron"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_School_University_Center.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_New_School_-_University_Center_Roof.jpg",
+      "author": "Nylandmarks",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Parsons_David_Schwartz_Fashion_Education_Center_560_Seventh_Avenue.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 28
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Pratt Institute",
+    "zh": "普拉特学院"
+   },
+   "desc": {
+    "en": "Renowned for architecture, industrial and interior design. Its gated, tree-lined campus sits amid Clinton Hill's brownstones, with cafés and the G train nearby.",
+    "zh": "以建筑、工业设计和室内设计著称。校园绿树成荫、自带围墙，周边是克林顿山的褐石公寓区，咖啡馆众多，步行可达G线地铁。"
+   },
+   "lat": 40.6912,
+   "lng": -73.9636,
+   "address": "200 Willoughby Avenue, Brooklyn, NY 11205",
+   "area": {
+    "en": "Clinton Hill, Brooklyn",
+    "zh": "布鲁克林克林顿山"
+   },
+   "logo": "/assets/school-logos/pratt.png",
+   "images": [
+    "/assets/places/school-pratt-1.jpg",
+    "/assets/places/school-pratt-2.jpg",
+    "/assets/places/school-pratt-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Clinton Hill, Brooklyn",
+     "zh": "布鲁克林克林顿山"
+    },
+    "communities": [
+     "Clinton Hill",
+     "Fort Greene",
+     "Downtown Brooklyn",
+     "Prospect Heights",
+     "Bed-Stuy",
+     "Williamsburg"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Prattdekalbjeh.JPG",
+      "author": "Jim.henderson",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pratt_Institute_main_building.JPG",
+      "author": "Jonathan Bowen",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Higgins_Institute_Pratt_jeh.jpg",
+      "author": "Jim.henderson",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 29
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "SVA",
+    "zh": "SVA"
+   },
+   "desc": {
+    "en": "School of Visual Arts, known for illustration, film and animation. Its buildings line East 23rd St near Gramercy Park, a walkable, central area with many studios and walk-ups.",
+    "zh": "纽约视觉艺术学院，以插画、电影和动画专业见长。教学楼分布在东23街一带，靠近格拉梅西公园，地段居中、适合步行，周边多为小户型和无电梯公寓。"
+   },
+   "lat": 40.741,
+   "lng": -73.9897,
+   "address": "209 East 23rd Street, New York, NY 10010",
+   "area": {
+    "en": "Gramercy / Kips Bay, Manhattan",
+    "zh": "曼哈顿格拉梅西 / 基普斯湾"
+   },
+   "logo": "/assets/school-logos/sva.png",
+   "images": [
+    "/assets/places/school-sva-1.jpg",
+    "/assets/places/school-sva-2.jpg",
+    "/assets/places/school-sva-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Gramercy / Flatiron / Chelsea",
+     "zh": "格拉梅西 / 熨斗区 / 切尔西"
+    },
+    "communities": [
+     "Gramercy",
+     "Flatiron",
+     "Kips Bay",
+     "Chelsea",
+     "NoMad",
+     "East Village"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:SVA-23rdStreet.jpg",
+      "author": "Veeayepeeessveeaye",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:SVA_East_23rd.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:SVA_214_East_21st.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 30
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "FIT",
+    "zh": "纽约时装学院（FIT）"
+   },
+   "desc": {
+    "en": "SUNY's Fashion Institute of Technology, a launchpad for fashion and merchandising careers. The campus on W 27th St is steps from Penn Station, Chelsea galleries and the High Line.",
+    "zh": "纽约州立大学时装技术学院，时尚与零售管理人才的摇篮。校区位于西27街，步行可到宾州车站、切尔西画廊区和高线公园。"
+   },
+   "lat": 40.7466,
+   "lng": -73.9943,
+   "address": "227 West 27th Street, New York, NY 10001",
+   "area": {
+    "en": "Chelsea, Manhattan",
+    "zh": "曼哈顿切尔西"
+   },
+   "logo": "/assets/school-logos/fit.png",
+   "images": [
+    "/assets/places/school-fit-1.jpg",
+    "/assets/places/school-fit-2.jpg",
+    "/assets/places/school-fit-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Chelsea, W 27th St",
+     "zh": "切尔西，西 27 街"
+    },
+    "communities": [
+     "Chelsea",
+     "NoMad",
+     "Midtown South",
+     "Flatiron",
+     "Hudson Yards",
+     "Hell's Kitchen"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:FIT_Marvin_Feldman_Center_from_east.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:FIT_Pomerantz_and_Goodman_Centers.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:FIT_27th_Street_campus.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 31
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Columbia University",
+    "zh": "哥伦比亚大学"
+   },
+   "desc": {
+    "en": "Ivy League university with the iconic Low Library and College Walk. Morningside Heights is a leafy, student-heavy area on the 1 train, with prewar apartments and Riverside Park nearby.",
+    "zh": "常春藤名校，标志性的洛氏图书馆和College Walk广为人知。晨边高地绿树成荫、学生集中，乘1号线进出方便，多战前公寓，紧邻河滨公园。"
+   },
+   "lat": 40.8075,
+   "lng": -73.9626,
+   "address": "2960 Broadway, New York, NY 10027",
+   "area": {
+    "en": "Morningside Heights, Manhattan",
+    "zh": "曼哈顿晨边高地"
+   },
+   "logo": "/assets/school-logos/columbia.png",
+   "images": [
+    "/assets/places/school-columbia-1.jpg",
+    "/assets/places/school-columbia-2.jpg",
+    "/assets/places/school-columbia-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Morningside Heights",
+     "zh": "晨边高地"
+    },
+    "communities": [
+     "Morningside Heights",
+     "West Harlem",
+     "Manhattanville",
+     "Upper West Side",
+     "Hamilton Heights"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Columbia_University_New_York_November_2016_002.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Outside_Columbia_University_Library_(5892425145).jpg",
+      "author": "Alex Proimos from Sydney, Australia",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Columbia_University_-_Low_Library.jpg",
+      "author": "Bitterteayen",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 32
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "NYU",
+    "zh": "NYU"
+   },
+   "desc": {
+    "en": "A global research university woven into the streets around Washington Square Park. The Village is vibrant and walkable with endless food options, though rents are among NYC's highest.",
+    "zh": "全球知名的研究型大学，校舍融入华盛顿广场公园周边的街巷。格林威治村热闹宜步行、美食众多，但租金在纽约名列前茅。"
+   },
+   "lat": 40.7295,
+   "lng": -73.9965,
+   "address": "70 Washington Square South, New York, NY 10012",
+   "area": {
+    "en": "Greenwich Village, Manhattan",
+    "zh": "曼哈顿格林威治村"
+   },
+   "logo": "/assets/school-logos/nyu.png",
+   "images": [
+    "/assets/places/school-nyu-1.jpg",
+    "/assets/places/school-nyu-2.jpg",
+    "/assets/places/school-nyu-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Washington Square / Greenwich Village",
+     "zh": "华盛顿广场 / 格林威治村"
+    },
+    "communities": [
+     "Greenwich Village",
+     "East Village",
+     "NoHo",
+     "SoHo",
+     "Union Square",
+     "Lower East Side",
+     "Chelsea"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:NYC_-_Washington_Square_Park_-_Arch.jpg",
+      "author": "Jean-Christophe BENOIST",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Bobst,_Kimmel.jpg",
+      "author": "EgyetemInfó at Hungarian Wikipedia",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:NYU_(2011)_02.JPG",
+      "author": "Nandaro",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 33
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Fordham — Lincoln Center",
+    "zh": "福特汉姆大学 — 林肯中心校区"
+   },
+   "desc": {
+    "en": "Fordham's Manhattan campus, home to its law, business and arts programs. Next to Lincoln Center and Central Park, the area is polished and safe, with easy access via Columbus Circle.",
+    "zh": "福特汉姆大学的曼哈顿校区，设有法学院、商学院及文理项目。毗邻林肯中心和中央公园，环境精致安全，经哥伦布圆环出行便利。"
+   },
+   "lat": 40.7739,
+   "lng": -73.9846,
+   "address": "113 West 60th Street, New York, NY 10023",
+   "area": {
+    "en": "Lincoln Square, Upper West Side, Manhattan",
+    "zh": "曼哈顿上西区林肯广场"
+   },
+   "logo": "/assets/school-logos/fordham.png",
+   "images": [
+    "/assets/places/school-fordham-lincoln-center-1.jpg",
+    "/assets/places/school-fordham-lincoln-center-2.jpg",
+    "/assets/places/school-fordham-lincoln-center-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Lincoln Square / Upper West Side",
+     "zh": "林肯广场 / 上西区"
+    },
+    "communities": [
+     "Lincoln Square",
+     "Columbus Circle",
+     "Upper West Side",
+     "Hell's Kitchen",
+     "Midtown West"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fordham_University_Lincoln_Center.JPG",
+      "author": "Jonathan71",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Lowenstein.jpg",
+      "author": "David Shankbone",
+      "license": "CC BY 2.5"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fordham_LC_06_-_Robert_Moses_Plaza.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 34
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Fordham — Rose Hill",
+    "zh": "福特汉姆大学 — 玫瑰山校区"
+   },
+   "desc": {
+    "en": "Fordham's historic Jesuit main campus with Gothic halls and broad lawns. Beside the Bronx Zoo and Arthur Avenue's Little Italy; rents are far lower than Manhattan, with Metro-North nearby.",
+    "zh": "福特汉姆大学历史悠久的耶稣会主校区，哥特式建筑与大草坪相映。紧邻布朗克斯动物园和亚瑟大道小意大利，租金远低于曼哈顿，附近有Metro-North车站。"
+   },
+   "lat": 40.8623,
+   "lng": -73.8857,
+   "address": "441 East Fordham Road, Bronx, NY 10458",
+   "area": {
+    "en": "Belmont / Fordham, The Bronx",
+    "zh": "布朗克斯贝尔蒙特 / 福特汉姆"
+   },
+   "logo": "/assets/school-logos/fordham.png",
+   "images": [
+    "/assets/places/school-fordham-rose-hill-1.jpg",
+    "/assets/places/school-fordham-rose-hill-2.jpg",
+    "/assets/places/school-fordham-rose-hill-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Fordham / Belmont, Bronx",
+     "zh": "布朗克斯福特汉姆 / 贝尔蒙特"
+    },
+    "communities": [
+     "Fordham",
+     "Belmont",
+     "Arthur Avenue",
+     "Little Italy of the Bronx",
+     "Bedford Park",
+     "Botanical Garden area"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fordham_University_Keating_Hall.JPG",
+      "author": "Chriscobar",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Keating_Hall_with_Cunniffe_Fountain,_Fordham.jpg",
+      "author": "Indefatigable2",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Queen%27s_Court_and_University_Church_at_Fordham.jpg",
+      "author": "Indefatigable2",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 35
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Statue of Liberty",
+    "zh": "Statue of Liberty"
+   },
+   "desc": {
+    "en": "Copper icon of freedom on Liberty Island, reached by ferry from Battery Park. Climb to the pedestal or crown for harbor views; book tickets ahead on weekends.",
+    "zh": "矗立在自由岛上的铜铸自由象征，从炮台公园乘渡轮即可抵达。可登上基座或皇冠俯瞰港口，周末建议提前订票。"
+   },
+   "lat": 40.68925,
+   "lng": -74.0445,
+   "address": "Liberty Island, New York, NY 10004",
+   "area": {
+    "en": "Liberty Island",
+    "zh": "自由岛"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/statue-of-liberty-1.jpg",
+    "/assets/poi/statue-of-liberty-2.jpg",
+    "/assets/poi/statue-of-liberty-3.jpg"
+   ],
+   "extra": {
+    "icon": "statue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Liberty_Island_photo_Don_Ramey_Logan.jpg",
+      "author": "Don Ramey Logan",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Front_view_of_Statue_of_Liberty_(cropped).jpg",
+      "author": "AskALotl",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Statue_of_Liberty_with_One_World_Trade_Center.jpg",
+      "author": "Steve",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 36
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "One World Trade Center",
+    "zh": "One World Trade Center"
+   },
+   "desc": {
+    "en": "The Western Hemisphere's tallest tower anchors the rebuilt WTC campus. Its One World Observatory, the 9/11 Memorial and the Oculus transit hub are all steps away.",
+    "zh": "西半球最高的大楼，是重建后世贸中心园区的核心。顶层观景台、9/11纪念馆和Oculus交通枢纽都近在咫尺。"
+   },
+   "lat": 40.713,
+   "lng": -74.01319,
+   "address": "285 Fulton St, New York, NY 10007",
+   "area": {
+    "en": "Financial District",
+    "zh": "金融区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/one-world-trade-center-1.jpg",
+    "/assets/poi/one-world-trade-center-2.jpg",
+    "/assets/poi/one-world-trade-center-3.jpg"
+   ],
+   "extra": {
+    "icon": "tower",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:One_World_Trade_Center_Building_(2021).jpg",
+      "author": "Praneeth Thalla",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Jersey_City_September_2020_HDR_panorama_(cropped2).jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:One_World_Trade_Center,_Financial_District,_Manhattan,_New_York.jpg",
+      "author": "Christian David",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 37
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Brooklyn Bridge",
+    "zh": "Brooklyn Bridge"
+   },
+   "desc": {
+    "en": "The 1883 stone-towered suspension bridge linking Lower Manhattan and DUMBO. Walk or bike its elevated promenade at sunrise to beat the crowds.",
+    "zh": "建于1883年的石塔悬索桥，连接下曼哈顿与DUMBO。清晨沿高架步道步行或骑行，能避开人潮、欣赏日出。"
+   },
+   "lat": 40.70575,
+   "lng": -73.99628,
+   "address": "Brooklyn Bridge Promenade, Park Row & Centre St, New York, NY 10038",
+   "area": {
+    "en": "DUMBO / Two Bridges",
+    "zh": "DUMBO / 两桥区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/brooklyn-bridge-1.jpg",
+    "/assets/poi/brooklyn-bridge-2.jpg",
+    "/assets/poi/brooklyn-bridge-3.jpg"
+   ],
+   "extra": {
+    "icon": "bridge",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_-_New_York_City.jpg",
+      "author": "Simone Roda from Italia",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach,_New_York.jpg",
+      "author": "Christian David",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_seen_from_One_World_Trade_Center_Skypod.jpg",
+      "author": "Rickmouser45",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 38
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Washington Square Park",
+    "zh": "Washington Square Park"
+   },
+   "desc": {
+    "en": "Greenwich Village's lively heart, framed by its marble arch and NYU buildings. Expect street musicians, chess players and students sprawled by the fountain.",
+    "zh": "格林威治村的活力中心，以大理石拱门和纽约大学建筑为背景。街头音乐人、下棋的人和在喷泉边闲坐的学生随处可见。"
+   },
+   "lat": 40.7309,
+   "lng": -73.9976,
+   "address": "Washington Square, New York, NY 10012",
+   "area": {
+    "en": "Greenwich Village",
+    "zh": "格林威治村"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/washington-square-park-1.jpg",
+    "/assets/poi/washington-square-park-2.jpg",
+    "/assets/poi/washington-square-park-3.jpg"
+   ],
+   "extra": {
+    "icon": "park",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Washington_Square_Arch-Isabella.jpg",
+      "author": "Isabella Ruffalo-Burgat",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:NYC_-_Washington_Square_Park_-_Arch.jpg",
+      "author": "Jean-Christophe BENOIST",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Washington_Square_Park_Grand_Reopening.jpg",
+      "author": "Ludovic Bertron from New York City, Usa",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 39
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Flatiron Building",
+    "zh": "Flatiron Building"
+   },
+   "desc": {
+    "en": "The triangular 1902 skyscraper where Fifth Avenue meets Broadway. The surrounding Flatiron district is packed with tech offices, cafes and Madison Square Park.",
+    "zh": "位于第五大道与百老汇交汇处的1902年三角形摩天楼。周边熨斗区聚集了科技公司、咖啡馆和麦迪逊广场公园。"
+   },
+   "lat": 40.74106,
+   "lng": -73.98964,
+   "address": "175 Fifth Ave, New York, NY 10010",
+   "area": {
+    "en": "Flatiron District",
+    "zh": "熨斗区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/flatiron-building-1.jpg",
+    "/assets/poi/flatiron-building-2.jpg",
+    "/assets/poi/flatiron-building-3.jpg"
+   ],
+   "extra": {
+    "icon": "tower",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Flatiron-Building-NYC-September-2014.jpg",
+      "author": "Acediscovery",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Flatiron_Building_2010.JPG",
+      "author": "Dorff",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Flatiron_Building_in_Detail.jpg",
+      "author": "LMBrauer",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 40
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "The High Line",
+    "zh": "The High Line"
+   },
+   "desc": {
+    "en": "A 1.45-mile park built on an old elevated rail line, running from the Meatpacking District to Hudson Yards. Great for a car-free walk through Chelsea.",
+    "zh": "由废弃高架铁路改造的约2.3公里空中公园，从肉库区一直延伸到哈德逊城市广场，是穿越切尔西的绝佳步行路线。"
+   },
+   "lat": 40.74233,
+   "lng": -74.00768,
+   "address": "820 Washington St (Gansevoort St entrance), New York, NY 10014",
+   "area": {
+    "en": "Chelsea",
+    "zh": "切尔西"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/the-high-line-1.jpg",
+    "/assets/poi/the-high-line-2.jpg",
+    "/assets/poi/the-high-line-3.jpg"
+   ],
+   "extra": {
+    "icon": "park",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:High_Line_Park,_Section_1a.jpg",
+      "author": "Dansnguyen",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_High_Line,_New_York_(17643199203).jpg",
+      "author": "Bryan Ledgard",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Highline_NYC_4546199798_2fb244ec8b.jpg",
+      "author": "La Citta Vita",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 41
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Empire State Building",
+    "zh": "Empire State Building"
+   },
+   "desc": {
+    "en": "The 1931 Art Deco tower that defines the Midtown skyline. Its 86th-floor open-air deck is a classic first-week-in-NYC outing; the lights change color for events.",
+    "zh": "1931年落成的装饰艺术风格大楼，曼哈顿中城天际线的标志。86层露天观景台是初到纽约必去之处，塔顶灯光会随节日变色。"
+   },
+   "lat": 40.74844,
+   "lng": -73.98566,
+   "address": "20 W 34th St, New York, NY 10001",
+   "area": {
+    "en": "Midtown",
+    "zh": "中城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/empire-state-building-1.jpg",
+    "/assets/poi/empire-state-building-2.jpg",
+    "/assets/poi/empire-state-building-3.jpg"
+   ],
+   "extra": {
+    "icon": "tower",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:ESBandDowntown2015.jpg",
+      "author": "Anthony Quintano",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Looking_Up_at_Empire_State_Building.JPG",
+      "author": "BigMac",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:EmpireStateBuilding20205thAvenueEntrance.jpg",
+      "author": "DanielPenfield",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 42
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Madison Square Garden",
+    "zh": "Madison Square Garden"
+   },
+   "desc": {
+    "en": "The arena above Penn Station, home of the Knicks and Rangers and a stop on nearly every big concert tour. Easy to reach on almost any subway or commuter train.",
+    "zh": "位于宾州车站上方的综合体育馆，尼克斯和游骑兵队主场，也是大型巡演的必经之地。几乎所有地铁和通勤火车都能直达。"
+   },
+   "lat": 40.75051,
+   "lng": -73.99352,
+   "address": "4 Pennsylvania Plaza, New York, NY 10001",
+   "area": {
+    "en": "Midtown / Penn District",
+    "zh": "中城 / 宾州车站区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/madison-square-garden-1.jpg",
+    "/assets/poi/madison-square-garden-2.jpg",
+    "/assets/poi/madison-square-garden-3.jpg"
+   ],
+   "extra": {
+    "icon": "venue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Madison_Square_Garden_(MSG)_-_Full_(48124330357).jpg",
+      "author": "Ajay Suresh from New York, NY, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:MadisonSquareGarden2024.jpg",
+      "author": "SebastianJFromTheBurg",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:MSG_(4051531795).jpg",
+      "author": "Ludovic Bertron from New York City, Usa",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 43
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "The Vessel",
+    "zh": "The Vessel"
+   },
+   "desc": {
+    "en": "Thomas Heatherwick's honeycomb of 154 linked staircases at the center of Hudson Yards' public square, surrounded by shops, the Shed and the High Line's north end.",
+    "zh": "托马斯·赫斯维克设计的蜂巢状建筑，由154段相连的楼梯组成，位于哈德逊城市广场中心，周围有购物中心、The Shed和高线公园北端。"
+   },
+   "lat": 40.75378,
+   "lng": -74.00218,
+   "address": "20 Hudson Yards, New York, NY 10001",
+   "area": {
+    "en": "Hudson Yards",
+    "zh": "哈德逊城市广场"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/the-vessel-1.jpg",
+    "/assets/poi/the-vessel-2.jpg",
+    "/assets/poi/the-vessel-3.jpg"
+   ],
+   "extra": {
+    "icon": "tower",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:HudsonYards_05-06-19-1_(47003439824).jpg",
+      "author": "Ajay Suresh from New York, NY, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hudson_Yards_Plaza_March_2019_53.jpg",
+      "author": "Epicgenius",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_Vessel_(top-down_view),_Hudson_Yards,_New_York_City,_July_2019.jpg",
+      "author": "28bytes",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 44
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Grand Central Terminal",
+    "zh": "Grand Central Terminal"
+   },
+   "desc": {
+    "en": "Beaux-Arts rail terminal famous for its celestial ceiling and main concourse. Metro-North trains and several subway lines meet here, plus a busy food hall.",
+    "zh": "以星空穹顶和主大厅闻名的布杂艺术风格火车总站。大都会北方铁路和多条地铁线在此交汇，还有热闹的美食广场。"
+   },
+   "lat": 40.75269,
+   "lng": -73.97725,
+   "address": "89 E 42nd St, New York, NY 10017",
+   "area": {
+    "en": "Midtown East",
+    "zh": "中城东"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/grand-central-terminal-1.jpg",
+    "/assets/poi/grand-central-terminal-2.jpg",
+    "/assets/poi/grand-central-terminal-3.jpg"
+   ],
+   "extra": {
+    "icon": "train",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Grand_Central_Terminal_Main_Concourse_2019-10-03_20-02.jpg",
+      "author": "Axel Tschentscher",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Image-Grand_central_Station_Outside_Night_2.jpg",
+      "author": "Fcb981 ; Eric Baetscher (attribution required)",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:GCT_OB_2.jpg",
+      "author": "Ɱ",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 45
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Chrysler Building",
+    "zh": "Chrysler Building"
+   },
+   "desc": {
+    "en": "The 1930 Art Deco skyscraper with a stainless-steel crown and eagle gargoyles, a block from Grand Central. Its lobby murals are a hidden Midtown gem.",
+    "zh": "1930年建成的装饰艺术摩天楼，以不锈钢尖顶和鹰形滴水兽闻名，距中央车站仅一个街区。大堂壁画是中城的隐藏宝藏。"
+   },
+   "lat": 40.75191,
+   "lng": -73.97553,
+   "address": "405 Lexington Ave, New York, NY 10174",
+   "area": {
+    "en": "Midtown East",
+    "zh": "中城东"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/chrysler-building-1.jpg",
+    "/assets/poi/chrysler-building-2.jpg",
+    "/assets/poi/chrysler-building-3.jpg"
+   ],
+   "extra": {
+    "icon": "tower",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_Nov_2021.jpg",
+      "author": "Rolf obermaier",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_spire,_Manhattan,_by_Carol_Highsmith_(LOC_highsm.04444).jpg",
+      "author": "Carol M. Highsmith",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_Lobby_2.jpg",
+      "author": "Tony Hisgett from Birmingham, UK",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 46
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Times Square",
+    "zh": "Times Square"
+   },
+   "desc": {
+    "en": "The neon-lit crossroads of Broadway and Seventh Avenue, the center of the Theater District. Crowded day and night, with direct access to a dozen subway lines.",
+    "zh": "百老汇与第七大道交汇的霓虹十字路口，剧院区的中心。昼夜人流不息，可直达十多条地铁线路。"
+   },
+   "lat": 40.75701,
+   "lng": -73.98597,
+   "address": "Broadway & Seventh Ave (W 42nd–47th St), New York, NY 10036",
+   "area": {
+    "en": "Midtown / Theater District",
+    "zh": "中城 / 剧院区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/times-square-1.jpg",
+    "/assets/poi/times-square-2.jpg",
+    "/assets/poi/times-square-3.jpg"
+   ],
+   "extra": {
+    "icon": "square",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_york_times_square-terabass.jpg",
+      "author": "Terabass",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:1_times_square_night_2013.jpg",
+      "author": "chensiyuan",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Times_Square_-_49874280633.jpg",
+      "author": "TheTurducken",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 47
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Rockefeller Center",
+    "zh": "Rockefeller Center"
+   },
+   "desc": {
+    "en": "A 1930s Art Deco complex of 19 buildings with the Top of the Rock deck, NBC studios, the winter ice rink and the famous Christmas tree.",
+    "zh": "由19栋建筑组成的20世纪30年代装饰艺术建筑群，有巨石之顶观景台、NBC演播室、冬季溜冰场和著名的圣诞树。"
+   },
+   "lat": 40.75912,
+   "lng": -73.97956,
+   "address": "45 Rockefeller Plaza, New York, NY 10111",
+   "area": {
+    "en": "Midtown",
+    "zh": "中城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/rockefeller-center-1.jpg",
+    "/assets/poi/rockefeller-center-2.jpg",
+    "/assets/poi/rockefeller-center-3.jpg"
+   ],
+   "extra": {
+    "icon": "square",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:ROCKFELLER_CENTER_NEW_YORK_(14606671466).jpg",
+      "author": "Eric Salard",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rockefeller_Center_2_(New_York)_(44331718505).jpg",
+      "author": "VillageHero from Ulm, Germany",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_York_Christmas_tree_and_skating-rink.jpg",
+      "author": "Gabriel Rodríguez from Sevilla, Spain",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 48
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "MoMA",
+    "zh": "MoMA"
+   },
+   "desc": {
+    "en": "The Museum of Modern Art holds Van Gogh, Picasso, Warhol and much more, plus a calm sculpture garden. Students with ID get discounted admission.",
+    "zh": "现代艺术博物馆收藏梵高、毕加索、沃霍尔等大量名作，还有宁静的雕塑花园。学生凭证件可享优惠门票。"
+   },
+   "lat": 40.76161,
+   "lng": -73.9775,
+   "address": "11 W 53rd St, New York, NY 10019",
+   "area": {
+    "en": "Midtown",
+    "zh": "中城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/moma-1.jpg",
+    "/assets/poi/moma-2.jpg",
+    "/assets/poi/moma-3.jpg"
+   ],
+   "extra": {
+    "icon": "museum",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Museum_of_Modern_Art_(MoMA)_(51395759113).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:MoMa_NY_USA_1.jpg",
+      "author": "hibino",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:USA-The_Museum_of_Modern_Art.jpg",
+      "author": "Ingfbruno",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 49
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Lincoln Center",
+    "zh": "Lincoln Center"
+   },
+   "desc": {
+    "en": "The Upper West Side campus for the Met Opera, New York Philharmonic, City Ballet and Juilliard. Look for discounted rush tickets and free summer events on the plaza.",
+    "zh": "上西区的表演艺术中心，汇集大都会歌剧院、纽约爱乐、纽约城市芭蕾舞团和茱莉亚学院。可留意折扣当日票和夏季广场免费活动。"
+   },
+   "lat": 40.77252,
+   "lng": -73.98422,
+   "address": "10 Lincoln Center Plaza, New York, NY 10023",
+   "area": {
+    "en": "Upper West Side",
+    "zh": "上西区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/lincoln-center-1.jpg",
+    "/assets/poi/lincoln-center-2.jpg",
+    "/assets/poi/lincoln-center-3.jpg"
+   ],
+   "extra": {
+    "icon": "venue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Lincoln_Center_Overview_(48047495362).jpg",
+      "author": "Ajay Suresh from New York, NY, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:David_Geffen_Hall_(48047408511).jpg",
+      "author": "Ajay Suresh from New York, NY, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Metropolitan_Opera_auditorium.jpg",
+      "author": "Photo: Andreas Praefcke",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 50
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "The Met",
+    "zh": "The Met"
+   },
+   "desc": {
+    "en": "America's largest art museum, spanning 5,000 years from the Temple of Dendur to modern art. New York State residents and NY/NJ/CT students can pay what they wish.",
+    "zh": "美国最大的艺术博物馆，藏品跨越五千年，从丹铎神庙到现代艺术应有尽有。纽约州居民及纽约、新泽西、康州学生可自愿付费入场。"
+   },
+   "lat": 40.77944,
+   "lng": -73.96338,
+   "address": "1000 Fifth Ave, New York, NY 10028",
+   "area": {
+    "en": "Upper East Side",
+    "zh": "上东区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/the-met-1.jpg",
+    "/assets/poi/the-met-2.jpg",
+    "/assets/poi/the-met-3.jpg"
+   ],
+   "extra": {
+    "icon": "museum",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_(The_Met)_-_Central_Park,_NYC.jpg",
+      "author": "Hugo Schneider",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_Temple_of_Dendur_MET_DP240337.jpg",
+      "author": "The Metropolitan Museum of Art (Open Access)",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:MET_-_The_Great_Hall_-_Metropolitan_Museum_of_Art,_New_York,_NY,_USA_-_2012.JPG",
+      "author": "WestportWiki",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 51
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Central Park",
+    "zh": "Central Park"
+   },
+   "desc": {
+    "en": "843 acres of lawns, lakes and trails between 59th and 110th Streets. Sheep Meadow, Bethesda Fountain and the reservoir loop are favorite spots to unwind or run.",
+    "zh": "位于59街至110街之间、占地843英亩的城市绿肺，有草坪、湖泊和步道。绵羊草原、贝塞斯达喷泉和水库环线是放松和跑步的热门去处。"
+   },
+   "lat": 40.78277,
+   "lng": -73.96536,
+   "address": "Central Park (59th–110th St, Fifth Ave to Central Park West), New York, NY 10024",
+   "area": {
+    "en": "Central Park / Upper Manhattan",
+    "zh": "中央公园 / 上曼哈顿"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/central-park-1.jpg",
+    "/assets/poi/central-park-2.jpg",
+    "/assets/poi/central-park-3.jpg"
+   ],
+   "extra": {
+    "icon": "park",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Global_Citizen_Festival_Central_Park_New_York_City_from_NYonAir_(15351915006).jpg",
+      "author": "Anthony Quintano from Hillsborough, NJ, United States",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Angel_of_the_Waters_Fountain_and_Bethesda_Terrace,_Central_Park,_NYC.jpg",
+      "author": "Ahodges7",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:3015-Central_Park-Sheep_Meadow.JPG",
+      "author": "Ingfbruno",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 52
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "New York Stock Exchange",
+    "zh": "New York Stock Exchange"
+   },
+   "desc": {
+    "en": "The world's largest stock exchange by market value. Its 1903 Wall Street building with a temple-like columned facade is the symbol of the Financial District.",
+    "zh": "按市值计算全球最大的证券交易所。其1903年落成、带神殿式柱廊立面的华尔街大楼是金融区的象征。"
+   },
+   "lat": 40.70714,
+   "lng": -74.01086,
+   "address": "11 Wall St, New York, NY 10005",
+   "area": {
+    "en": "Financial District",
+    "zh": "金融区"
+   },
+   "logo": "/assets/company-logos/nyse.png",
+   "images": [
+    "/assets/poi/new-york-stock-exchange-1.jpg",
+    "/assets/poi/new-york-stock-exchange-2.jpg",
+    "/assets/poi/new-york-stock-exchange-3.jpg"
+   ],
+   "extra": {
+    "icon": "finance",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange_-_panoramio_(2).jpg",
+      "author": "TomasEE",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Wall_Street_-_New_York_Stock_Exchange.jpg",
+      "author": "Carlos Delgado",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:NYSE_facade.jpg",
+      "author": "Ryan Schwark",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 53
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Spotify",
+    "zh": "Spotify"
+   },
+   "desc": {
+    "en": "Spotify, the music and podcast streaming giant, runs its US headquarters in 4 World Trade Center, a sleek Fumihiko Maki glass tower beside the 9/11 Memorial.",
+    "zh": "音乐与播客流媒体巨头Spotify的美国总部位于世贸中心四号楼，这是一座由槙文彦设计、紧邻9/11纪念馆的简洁玻璃塔楼。"
+   },
+   "lat": 40.71029,
+   "lng": -74.01198,
+   "address": "150 Greenwich St (4 World Trade Center), New York, NY 10007",
+   "area": {
+    "en": "Financial District",
+    "zh": "金融区"
+   },
+   "logo": "/assets/company-logos/spotify.png",
+   "images": [
+    "/assets/poi/spotify-1.jpg",
+    "/assets/poi/spotify-2.jpg",
+    "/assets/poi/spotify-3.jpg"
+   ],
+   "extra": {
+    "icon": "tech",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:NYC_-_Four_World_Trade_Center_-_panoramio_(1).jpg",
+      "author": "giggel",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:4WTC-March_12,_2012.JPG",
+      "author": "Craigboy",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Church_St_WTC_02_-_4_World_Trade_Center.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 54
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Goldman Sachs",
+    "zh": "Goldman Sachs"
+   },
+   "desc": {
+    "en": "Global investment bank Goldman Sachs is headquartered at 200 West Street, a 44-story glass tower in Battery Park City overlooking the Hudson River.",
+    "zh": "全球投资银行高盛的总部位于西街200号，这是一座俯瞰哈德逊河、位于炮台公园城的44层玻璃大楼。"
+   },
+   "lat": 40.71472,
+   "lng": -74.01443,
+   "address": "200 West St, New York, NY 10282",
+   "area": {
+    "en": "Battery Park City",
+    "zh": "炮台公园城"
+   },
+   "logo": "/assets/company-logos/goldman-sachs.png",
+   "images": [
+    "/assets/poi/goldman-sachs-1.jpg",
+    "/assets/poi/goldman-sachs-2.jpg",
+    "/assets/poi/goldman-sachs-3.jpg"
+   ],
+   "extra": {
+    "icon": "finance",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Goldman_Sachs_Tower_200_West_Street_Battery_Park_City.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:GoldmanSachsHeadquarters.JPG",
+      "author": "Quantumquark",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:200_West_Street_(24258p).jpg",
+      "author": "Rhododendrites",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 55
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Citigroup",
+    "zh": "Citigroup"
+   },
+   "desc": {
+    "en": "Citigroup, one of the largest US banks, is headquartered at 388 Greenwich Street in Tribeca, a 1980s tower recently refreshed with a new glass base.",
+    "zh": "美国最大银行之一花旗集团的总部位于翠贝卡格林威治街388号，这座20世纪80年代的大楼近年加建了全新玻璃裙楼。"
+   },
+   "lat": 40.72065,
+   "lng": -74.01117,
+   "address": "388 Greenwich St, New York, NY 10013",
+   "area": {
+    "en": "Tribeca",
+    "zh": "翠贝卡"
+   },
+   "logo": "/assets/company-logos/citi.png",
+   "images": [
+    "/assets/poi/citigroup-1.jpg",
+    "/assets/poi/citigroup-2.jpg",
+    "/assets/poi/citigroup-3.jpg"
+   ],
+   "extra": {
+    "icon": "finance",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hudson_River_Park_td_(2019-02-05)_005_-_388_Greenwich_Street.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hudson_River_Park_td_(2021-11-24)_053_-_Pier_26_Woodland_Forest,_388_Greenwich_Street.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Hudson_River_Park_td_(2021-11-24)_047_-_Pier_26_Woodland_Forest,_388_Greenwich_Street.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 56
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Meta",
+    "zh": "Meta"
+   },
+   "desc": {
+    "en": "Meta, parent of Facebook, Instagram and WhatsApp, has a major NYC office at 770 Broadway, a historic former Wanamaker department store building near Astor Place.",
+    "zh": "Facebook、Instagram和WhatsApp的母公司Meta在百老汇770号设有大型纽约办公室，该楼原为历史悠久的沃纳梅克百货大楼，靠近阿斯特广场。"
+   },
+   "lat": 40.73088,
+   "lng": -73.99164,
+   "address": "770 Broadway, New York, NY 10003",
+   "area": {
+    "en": "Greenwich Village / NoHo",
+    "zh": "格林威治村 / NoHo"
+   },
+   "logo": "/assets/company-logos/meta.png",
+   "images": [
+    "/assets/poi/meta-1.jpg",
+    "/assets/poi/meta-2.jpg",
+    "/assets/poi/meta-3.jpg"
+   ],
+   "extra": {
+    "icon": "tech",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:770_Broadway_August_2021.jpg",
+      "author": "Loominosity Z",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:AOL_770.jpg",
+      "author": "Gino DePinto",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:770_Broadway_(16389865568).jpg",
+      "author": "Billie Grace Ward from New York, USA",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 57
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Google",
+    "zh": "Google"
+   },
+   "desc": {
+    "en": "Google's main NYC hub fills 111 Eighth Avenue, a full-block former Port Authority freight terminal in Chelsea, steps from Chelsea Market, which Google also owns.",
+    "zh": "谷歌纽约的主要办公地位于第八大道111号，这座占据整个街区的建筑原为港务局货运站，紧邻同属谷歌的切尔西市场。"
+   },
+   "lat": 40.74172,
+   "lng": -74.00416,
+   "address": "111 Eighth Ave, New York, NY 10011",
+   "area": {
+    "en": "Chelsea",
+    "zh": "切尔西"
+   },
+   "logo": "/assets/company-logos/google.png",
+   "images": [
+    "/assets/poi/google-1.jpg",
+    "/assets/poi/google-2.jpg",
+    "/assets/poi/google-3.jpg"
+   ],
+   "extra": {
+    "icon": "tech",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:111_Eighth_Avenue.jpg",
+      "author": "Scott Roy Atwood",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:111_8th_Avenue.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:15th_St_9th_Av_td_(2022-02-09)_15_-_Google_Store_Chelsea_(111_Eighth_Avenue).jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 58
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "EY",
+    "zh": "EY"
+   },
+   "desc": {
+    "en": "Big Four accounting firm EY (Ernst & Young) is headquartered in One Manhattan West, a 67-story glass tower in the Manhattan West complex next to Penn Station.",
+    "zh": "四大会计师事务所之一安永的总部位于One Manhattan West，这是一座位于宾州车站旁Manhattan West综合体内的67层玻璃大楼。"
+   },
+   "lat": 40.75272,
+   "lng": -73.99769,
+   "address": "One Manhattan West, New York, NY 10001",
+   "area": {
+    "en": "Hudson Yards / Manhattan West",
+    "zh": "哈德逊城市广场 / 曼哈顿西"
+   },
+   "logo": "/assets/company-logos/ey.png",
+   "images": [
+    "/assets/poi/ey-1.jpg",
+    "/assets/poi/ey-2.jpg",
+    "/assets/poi/ey-3.jpg"
+   ],
+   "extra": {
+    "icon": "consulting",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:One_Manhattan_West_Completed.jpg",
+      "author": "Gpetrov",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:One_Manhattan_West.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Plaza_between_1_Manhattan_West_and_2_Manhattan_West.jpg",
+      "author": "Kenneth C. Zirkel",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 59
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "KPMG",
+    "zh": "KPMG"
+   },
+   "desc": {
+    "en": "Big Four accounting firm KPMG moved its US headquarters to Two Manhattan West, a curved glass office tower beside the Manhattan West plaza near Penn Station.",
+    "zh": "四大会计师事务所之一毕马威将美国总部迁至Two Manhattan West，一座位于宾州车站附近、毗邻曼哈顿西广场的弧形玻璃办公楼。"
+   },
+   "lat": 40.75204,
+   "lng": -73.9981,
+   "address": "Two Manhattan West, New York, NY 10001",
+   "area": {
+    "en": "Hudson Yards / Manhattan West",
+    "zh": "哈德逊城市广场 / 曼哈顿西"
+   },
+   "logo": "/assets/company-logos/kpmg.png",
+   "images": [
+    "/assets/poi/kpmg-1.jpg",
+    "/assets/poi/kpmg-2.jpg",
+    "/assets/poi/kpmg-3.jpg"
+   ],
+   "extra": {
+    "icon": "consulting",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:High_Line_td_(2025-02-14)_049_-_26th_Street_Viewing_Spur,_Manhattan_West.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2_Manhattan_West.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Manhattan_West_2024.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 60
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "L'Oréal USA",
+    "zh": "L'Oréal USA"
+   },
+   "desc": {
+    "en": "L'Oréal USA, the beauty giant's American arm, is based in 10 Hudson Yards, the first tower finished at Hudson Yards, which straddles the High Line.",
+    "zh": "美妆巨头欧莱雅的美国公司总部位于哈德逊城市广场10号，这是该区首座落成的大楼，横跨在高线公园之上。"
+   },
+   "lat": 40.75269,
+   "lng": -74.00155,
+   "address": "10 Hudson Yards, New York, NY 10001",
+   "area": {
+    "en": "Hudson Yards",
+    "zh": "哈德逊城市广场"
+   },
+   "logo": "/assets/company-logos/loreal.png",
+   "images": [
+    "/assets/poi/loreal-usa-1.jpg",
+    "/assets/poi/loreal-usa-2.jpg",
+    "/assets/poi/loreal-usa-3.jpg"
+   ],
+   "extra": {
+    "icon": "consumer",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:10_Hudson_Yard_from_9_Av_&_30_St_2016_Dec_jeh.jpg",
+      "author": "Jim.henderson",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:10_Hudson_Yards_Completed.jpg",
+      "author": "Greaper37",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:At_New_York,_USA_2017_228.jpg",
+      "author": "Photograph by Mike Peel (www.mikepeel.net).",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 61
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Amazon",
+    "zh": "Amazon"
+   },
+   "desc": {
+    "en": "Amazon leases offices at 410 Tenth Avenue, the restored 1920s Master Printers Building near Hudson Yards, once a hub of New York's printing trade.",
+    "zh": "亚马逊在第十大道410号租用办公空间，这座经修复的1920年代Master Printers大楼靠近哈德逊城市广场，曾是纽约印刷业的中心。"
+   },
+   "lat": 40.75399,
+   "lng": -73.99933,
+   "address": "410 Tenth Ave, New York, NY 10001",
+   "area": {
+    "en": "Hudson Yards",
+    "zh": "哈德逊城市广场"
+   },
+   "logo": "/assets/company-logos/amazon.png",
+   "images": [
+    "/assets/poi/amazon-1.jpg",
+    "/assets/poi/amazon-2.jpg",
+    "/assets/poi/amazon-3.jpg"
+   ],
+   "extra": {
+    "icon": "tech",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:410_10th_Av_Master_Printers_building_2025_jeh.jpg",
+      "author": "Jim.henderson",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:410_tenth_Av_historic_sign_jeh.jpg",
+      "author": "Jim.henderson",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:34th_St_10th_Av_td_(2018-08-16)_01.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 62
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "BlackRock",
+    "zh": "BlackRock"
+   },
+   "desc": {
+    "en": "BlackRock, the world's largest asset manager, is headquartered at 50 Hudson Yards, a 58-story Foster + Partners tower filling a full block.",
+    "zh": "全球最大资产管理公司贝莱德的总部位于哈德逊城市广场50号，这座由福斯特建筑事务所设计的58层大楼占据整个街区。"
+   },
+   "lat": 40.75452,
+   "lng": -74.00012,
+   "address": "50 Hudson Yards, New York, NY 10001",
+   "area": {
+    "en": "Hudson Yards",
+    "zh": "哈德逊城市广场"
+   },
+   "logo": "/assets/company-logos/blackrock.png",
+   "images": [
+    "/assets/poi/blackrock-1.jpg",
+    "/assets/poi/blackrock-2.jpg",
+    "/assets/poi/blackrock-3.jpg"
+   ],
+   "extra": {
+    "icon": "finance",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:50_Hudson_Yards_(55379880087).jpg",
+      "author": "Ajay Suresh",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:50_Hudson_Yards_003.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:50_Hudson_Yards_002.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 63
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Pfizer",
+    "zh": "Pfizer"
+   },
+   "desc": {
+    "en": "Pharmaceutical leader Pfizer is headquartered in The Spiral, a BIG-designed tower whose stepped terraces wind up its glass facade along Hudson Boulevard.",
+    "zh": "制药巨头辉瑞的总部位于The Spiral，这座由BIG设计的大楼外立面上，阶梯状绿化露台沿玻璃幕墙螺旋而上，坐落于哈德逊大道旁。"
+   },
+   "lat": 40.75525,
+   "lng": -73.99958,
+   "address": "66 Hudson Blvd E, New York, NY 10001",
+   "area": {
+    "en": "Hudson Yards",
+    "zh": "哈德逊城市广场"
+   },
+   "logo": "/assets/company-logos/pfizer.png",
+   "images": [
+    "/assets/poi/pfizer-1.jpg",
+    "/assets/poi/pfizer-2.jpg",
+    "/assets/poi/pfizer-3.jpg"
+   ],
+   "extra": {
+    "icon": "health",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_Spiral_20210204_213344125.jpg",
+      "author": "CaptJayRuffins",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Midtown_Manhattan_2024_058.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_Spiral_005.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 64
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "The New York Times",
+    "zh": "The New York Times"
+   },
+   "desc": {
+    "en": "The New York Times newspaper is headquartered in its Renzo Piano-designed tower on Eighth Avenue, wrapped in ceramic rods, across from Port Authority.",
+    "zh": "《纽约时报》总部位于第八大道一座由伦佐·皮亚诺设计、外覆陶瓷杆的大楼内，正对港务局巴士总站。"
+   },
+   "lat": 40.75589,
+   "lng": -73.98967,
+   "address": "620 Eighth Ave, New York, NY 10018",
+   "area": {
+    "en": "Midtown / Times Square",
+    "zh": "中城 / 时代广场"
+   },
+   "logo": "/assets/company-logos/nyt.png",
+   "images": [
+    "/assets/poi/the-new-york-times-1.jpg",
+    "/assets/poi/the-new-york-times-2.jpg",
+    "/assets/poi/the-new-york-times-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_York_Times_Building_-_Bottom_Portion_(48193462432).jpg",
+      "author": "Ajay Suresh from New York, NY, USA",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:New_york_times_building.jpg",
+      "author": "Defears",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_New_York_Times-2023.jpg",
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 65
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Microsoft",
+    "zh": "Microsoft"
+   },
+   "desc": {
+    "en": "Microsoft runs a large Manhattan office at 11 Times Square, a 40-story glass tower at 42nd Street and Eighth Avenue on the west edge of Times Square.",
+    "zh": "微软在时代广场11号设有大型曼哈顿办公室，这座40层玻璃大楼位于42街与第八大道交汇处，处在时代广场西侧。"
+   },
+   "lat": 40.7566,
+   "lng": -73.98966,
+   "address": "11 Times Square, New York, NY 10036",
+   "area": {
+    "en": "Midtown / Times Square",
+    "zh": "中城 / 时代广场"
+   },
+   "logo": "/assets/company-logos/microsoft.png",
+   "images": [
+    "/assets/poi/microsoft-1.jpg",
+    "/assets/poi/microsoft-2.jpg",
+    "/assets/poi/microsoft-3.jpg"
+   ],
+   "extra": {
+    "icon": "tech",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:11_Times_Square_New_York_NY_2014_09_02_01.jpg",
+      "author": "Quercus montana",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:11_Times_Square_(51985985604).jpg",
+      "author": "Eden, Janine and Jim from New York City",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:42nd_St_8th_Av_td_(2018-05-18)_02_-_11_Times_Square.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 66
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Morgan Stanley",
+    "zh": "Morgan Stanley"
+   },
+   "desc": {
+    "en": "Investment bank Morgan Stanley is headquartered at 1585 Broadway in Times Square, recognizable by the bands of stock tickers wrapping its base.",
+    "zh": "投资银行摩根士丹利的总部位于时代广场百老汇1585号，底部环绕的股票行情显示屏让它一眼可辨。"
+   },
+   "lat": 40.75998,
+   "lng": -73.98552,
+   "address": "1585 Broadway, New York, NY 10036",
+   "area": {
+    "en": "Midtown / Times Square",
+    "zh": "中城 / 时代广场"
+   },
+   "logo": "/assets/company-logos/morgan-stanley.png",
+   "images": [
+    "/assets/poi/morgan-stanley-1.jpg",
+    "/assets/poi/morgan-stanley-2.jpg",
+    "/assets/poi/morgan-stanley-3.jpg"
+   ],
+   "extra": {
+    "icon": "finance",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Morgan_Stanley_Times_Square.jpg",
+      "author": "PLBechly",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Times_Sq_Nov_2021_186.jpg",
+      "author": "Epicgenius",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Times_Sq_Nov_2021_162.jpg",
+      "author": "Epicgenius",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 67
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Verizon",
+    "zh": "Verizon"
+   },
+   "desc": {
+    "en": "Telecom giant Verizon is headquartered at 1095 Avenue of the Americas, a glass-clad tower overlooking Bryant Park and the New York Public Library.",
+    "zh": "电信巨头威瑞森的总部位于美洲大道1095号，这座玻璃幕墙大楼俯瞰布莱恩特公园和纽约公共图书馆。"
+   },
+   "lat": 40.75465,
+   "lng": -73.98481,
+   "address": "1095 Avenue of the Americas, New York, NY 10036",
+   "area": {
+    "en": "Midtown / Bryant Park",
+    "zh": "中城 / 布莱恩特公园"
+   },
+   "logo": "/assets/company-logos/verizon.png",
+   "images": [
+    "/assets/poi/verizon-1.jpg",
+    "/assets/poi/verizon-2.jpg",
+    "/assets/poi/verizon-3.jpg"
+   ],
+   "extra": {
+    "icon": "tech",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:1095_Avenue_of_the_Americas_(54816369413).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:1095_Avenue_of_the_Americas_and_Bank_of_America_Tower.jpg",
+      "author": "Americasroof (talk)",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:42nd_St_6th_Av_td_16_-_3_Bryant_Park.jpg",
+      "author": "Tdorante10",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 68
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "PwC",
+    "zh": "PwC"
+   },
+   "desc": {
+    "en": "Big Four firm PwC (PricewaterhouseCoopers) is headquartered at 300 Madison Avenue, a glass office tower at 42nd Street two blocks from Grand Central.",
+    "zh": "四大会计师事务所之一普华永道的总部位于麦迪逊大道300号，这座玻璃办公楼位于42街，距中央车站两个街区。"
+   },
+   "lat": 40.75268,
+   "lng": -73.98008,
+   "address": "300 Madison Ave, New York, NY 10017",
+   "area": {
+    "en": "Midtown East",
+    "zh": "中城东"
+   },
+   "logo": "/assets/company-logos/pwc.png",
+   "images": [
+    "/assets/poi/pwc-1.jpg",
+    "/assets/poi/pwc-2.jpg",
+    "/assets/poi/pwc-3.jpg"
+   ],
+   "extra": {
+    "icon": "consulting",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:300_Madison_Avenue_(8156031978).jpg",
+      "author": "Eden, Janine and Jim from New York City",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:NYC_-_300_Madison_Avenue_-_panoramio.jpg",
+      "author": "giggel",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:300_Madison_Avenue_by_Matthew_Bisanz.jpg",
+      "author": "MBisanz",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 69
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "JPMorgan Chase",
+    "zh": "JPMorgan Chase"
+   },
+   "desc": {
+    "en": "JPMorgan Chase, the largest US bank, opened its new 1,388-foot, Foster + Partners-designed headquarters at 270 Park Avenue in 2025, lifted on angled columns.",
+    "zh": "美国最大银行摩根大通于2025年启用位于公园大道270号的新总部，这座由福斯特建筑事务所设计、高约423米的大楼由斜向巨柱托起。"
+   },
+   "lat": 40.75598,
+   "lng": -73.97597,
+   "address": "270 Park Ave, New York, NY 10017",
+   "area": {
+    "en": "Midtown East",
+    "zh": "中城东"
+   },
+   "logo": "/assets/company-logos/jpmorgan-chase.png",
+   "images": [
+    "/assets/poi/jpmorgan-chase-1.jpg",
+    "/assets/poi/jpmorgan-chase-2.jpg",
+    "/assets/poi/jpmorgan-chase-3.jpg"
+   ],
+   "extra": {
+    "icon": "finance",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:270_Park_Avenue_2025_002.jpg",
+      "author": "Kidfly182",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:270_Park_Avenue_8_may_2024.jpg",
+      "author": "MemeGod27",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:270_Park_Avenue_-_Entrance_on_Park_Avenue_(55283843584).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 70
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Bloomberg",
+    "zh": "Bloomberg"
+   },
+   "desc": {
+    "en": "Bloomberg L.P., the financial data and media company, is headquartered in Bloomberg Tower at 731 Lexington Avenue, with a curved glass courtyard off 59th Street.",
+    "zh": "金融数据与媒体公司彭博的总部位于列克星敦大道731号的彭博大厦，从59街可进入其弧形玻璃庭院。"
+   },
+   "lat": 40.76187,
+   "lng": -73.96826,
+   "address": "731 Lexington Ave, New York, NY 10022",
+   "area": {
+    "en": "Midtown East / Upper East Side",
+    "zh": "中城东 / 上东区"
+   },
+   "logo": "/assets/company-logos/bloomberg.png",
+   "images": [
+    "/assets/poi/bloomberg-1.jpg",
+    "/assets/poi/bloomberg-2.jpg",
+    "/assets/poi/bloomberg-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Bloomberg_Tower_(55273671683).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:731_Lexington_Avenue_(55272623112).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Building_lights_in_New_York_City.jpg",
+      "author": "Henrique Pinto",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 71
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Apple Fifth Avenue",
+    "zh": "Apple Fifth Avenue"
+   },
+   "desc": {
+    "en": "Apple's flagship store sits beneath a 32-foot glass cube on the plaza of the GM Building, across from Central Park and the Plaza Hotel. Open 24 hours.",
+    "zh": "苹果旗舰店位于通用汽车大楼广场上一座约10米高的玻璃立方体之下，对面就是中央公园和广场酒店，24小时营业。"
+   },
+   "lat": 40.76354,
+   "lng": -73.97225,
+   "address": "767 Fifth Ave, New York, NY 10153",
+   "area": {
+    "en": "Midtown / Fifth Avenue",
+    "zh": "中城 / 第五大道"
+   },
+   "logo": "/assets/company-logos/apple.png",
+   "images": [
+    "/assets/poi/apple-fifth-avenue-1.jpg",
+    "/assets/poi/apple-fifth-avenue-2.jpg",
+    "/assets/poi/apple-fifth-avenue-3.jpg"
+   ],
+   "extra": {
+    "icon": "tech",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Apple_Fifth_Avenue_(51396585920).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Glass_Apple_Store_Cube_(2550125608).jpg",
+      "author": "Marcus Quigmire from Florida, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Apple_Store_Fifth_Avenue,_showing_the_patented_glass-staircase_(7181853588).jpg",
+      "author": "Jorge Láscar from Australia",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 72
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Grand Central Terminal",
+    "zh": "Grand Central Terminal"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7527,
+   "lng": -73.9772,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 73
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Penn Station",
+    "zh": "Penn Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7506,
+   "lng": -73.9935,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 74
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Port Authority Bus Terminal",
+    "zh": "Port Authority Bus Terminal"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7568,
+   "lng": -73.9903,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 75
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Atlantic Terminal (Brooklyn)",
+    "zh": "Atlantic Terminal (Brooklyn)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.6845,
+   "lng": -73.9776,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 76
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "JFK Airport",
+    "zh": "JFK Airport"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.6413,
+   "lng": -73.7781,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 77
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "LaGuardia Airport",
+    "zh": "LaGuardia Airport"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7769,
+   "lng": -73.874,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 78
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Newark Liberty Airport",
+    "zh": "Newark Liberty Airport"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.6895,
+   "lng": -74.1745,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 79
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "WTC PATH Station",
+    "zh": "WTC PATH Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7126,
+   "lng": -74.0122,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 80
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "14 St PATH Station",
+    "zh": "14 St PATH Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7377,
+   "lng": -74.0002,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 81
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "23 St PATH Station",
+    "zh": "23 St PATH Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7423,
+   "lng": -73.9932,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 82
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "33 St PATH Station",
+    "zh": "33 St PATH Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7484,
+   "lng": -73.9885,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 83
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "5 Ave Subway Station",
+    "zh": "5 Ave Subway Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7539,
+   "lng": -73.9807,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 84
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Hoboken PATH Station",
+    "zh": "Hoboken PATH Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7357,
+   "lng": -74.0294,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 85
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Newport PATH Station",
+    "zh": "Newport PATH Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7267,
+   "lng": -74.0339,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 86
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Exchange Place PATH Station",
+    "zh": "Exchange Place PATH Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7164,
+   "lng": -74.0333,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 87
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Grove St PATH Station",
+    "zh": "Grove St PATH Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7196,
+   "lng": -74.0431,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 88
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Journal Square PATH Station",
+    "zh": "Journal Square PATH Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7326,
+   "lng": -74.0629,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 89
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Times Sq–42 St / 42 St–Port Authority (1,2,3,7,N,Q,R,W,A,C,E,S)",
+    "zh": "Times Sq–42 St / 42 St–Port Authority (1,2,3,7,N,Q,R,W,A,C,E,S)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7554,
+   "lng": -73.9868,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 90
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Grand Central–42 St (4,5,6,7,S)",
+    "zh": "Grand Central–42 St (4,5,6,7,S)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7527,
+   "lng": -73.9772,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 91
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "34 St–Herald Sq (B,D,F,M,N,Q,R,W)",
+    "zh": "34 St–Herald Sq (B,D,F,M,N,Q,R,W)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7497,
+   "lng": -73.9878,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 92
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "14 St–Union Sq (4,5,6,L,N,Q,R,W)",
+    "zh": "14 St–Union Sq (4,5,6,L,N,Q,R,W)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7359,
+   "lng": -73.9906,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 93
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Fulton St (2,3,4,5,A,C,J,Z)",
+    "zh": "Fulton St (2,3,4,5,A,C,J,Z)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7101,
+   "lng": -74.0087,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 94
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Atlantic Av–Barclays Ctr (2,3,4,5,B,D,N,Q,R)",
+    "zh": "Atlantic Av–Barclays Ctr (2,3,4,5,B,D,N,Q,R)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.6845,
+   "lng": -73.9776,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 95
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "59 St–Columbus Circle (1,A,B,C,D)",
+    "zh": "59 St–Columbus Circle (1,A,B,C,D)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.768,
+   "lng": -73.9819,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 96
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "West 4 St–Washington Sq (A,B,C,D,E,F,M)",
+    "zh": "West 4 St–Washington Sq (A,B,C,D,E,F,M)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7323,
+   "lng": -74.0004,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 97
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Jay St–MetroTech (A,C,F,R)",
+    "zh": "Jay St–MetroTech (A,C,F,R)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.6924,
+   "lng": -73.9866,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 98
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Court Sq (7,E,F,G)",
+    "zh": "Court Sq (7,E,F,G)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7473,
+   "lng": -73.9454,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 99
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Queensboro Plaza (7,N,W)",
+    "zh": "Queensboro Plaza (7,N,W)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7508,
+   "lng": -73.9403,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 100
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Jackson Hts–Roosevelt Av / 74 St (7,E,F,M,R)",
+    "zh": "Jackson Hts–Roosevelt Av / 74 St (7,E,F,M,R)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7465,
+   "lng": -73.8913,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 101
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Lexington Av–53 St / 51 St (4,6,E,M)",
+    "zh": "Lexington Av–53 St / 51 St (4,6,E,M)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7573,
+   "lng": -73.9707,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 102
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Lexington Av–59 St (4,5,6,N,R,W)",
+    "zh": "Lexington Av–59 St (4,5,6,N,R,W)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7627,
+   "lng": -73.9679,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 103
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Canal St (6,J,N,Q,R,W,Z)",
+    "zh": "Canal St (6,J,N,Q,R,W,Z)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.7188,
+   "lng": -74.0007,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 104
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Broadway Junction (A,C,J,L,Z)",
+    "zh": "Broadway Junction (A,C,J,L,Z)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 40.6785,
+   "lng": -73.9037,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 105
+  }
+ ]
+}

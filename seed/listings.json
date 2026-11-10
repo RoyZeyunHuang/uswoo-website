@@ -1,0 +1,170 @@
+[
+  {
+    "region": "new-york",
+    "kind": "rental",
+    "title": {
+      "en": "Sample Listing 01",
+      "zh": "示例房源 01"
+    },
+    "neighborhood": {
+      "en": "Midtown, Manhattan",
+      "zh": "曼哈顿中城"
+    },
+    "address": "",
+    "price": 3850,
+    "priceUnit": "month",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "sqft": 780,
+    "availableFrom": null,
+    "description": {
+      "en": "A bright two-bedroom in the heart of Midtown, a short walk from several subway lines. The layout keeps both bedrooms separate, which works well for roommates. Sample listing shown for illustration.",
+      "zh": "位于曼哈顿中城核心地段的明亮两居室，步行即可到达多条地铁线路。两间卧室相互独立，适合合租。此为示例房源，仅供展示。"
+    },
+    "cover": "/assets/nynj-manhattan.jpg",
+    "images": [],
+    "tag": "Exclusive",
+    "isFeatured": true,
+    "isSample": true
+  },
+  {
+    "region": "new-york",
+    "kind": "rental",
+    "title": {
+      "en": "Sample Listing 02",
+      "zh": "示例房源 02"
+    },
+    "neighborhood": {
+      "en": "Long Island City, NY",
+      "zh": "纽约长岛市"
+    },
+    "address": "",
+    "price": 2900,
+    "priceUnit": "month",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": 620,
+    "availableFrom": null,
+    "description": {
+      "en": "A one-bedroom in Long Island City, one subway stop from Midtown Manhattan. Large windows bring in plenty of daylight, and the neighborhood has grocery stores and cafes within walking distance. Sample listing shown for illustration.",
+      "zh": "位于长岛市的一居室，乘地铁一站即到曼哈顿中城。大面积窗户采光充足，步行范围内有超市和咖啡店。此为示例房源，仅供展示。"
+    },
+    "cover": "/assets/nynj-lic.jpg",
+    "images": [],
+    "tag": "Exclusive",
+    "isFeatured": true,
+    "isSample": true
+  },
+  {
+    "region": "new-york",
+    "kind": "rental",
+    "title": {
+      "en": "Sample Listing 03",
+      "zh": "示例房源 03"
+    },
+    "neighborhood": {
+      "en": "Jersey City, NJ",
+      "zh": "新泽西泽西市"
+    },
+    "address": "",
+    "price": 3200,
+    "priceUnit": "month",
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "sqft": 480,
+    "availableFrom": null,
+    "description": {
+      "en": "An efficient studio in Jersey City with a quick PATH ride to Manhattan. The open layout leaves room for a sleeping area and a small work corner. Sample listing shown for illustration.",
+      "zh": "位于泽西市的紧凑型开间，乘 PATH 列车可快速到达曼哈顿。开放式布局可同时容纳睡眠区和小型办公角。此为示例房源，仅供展示。"
+    },
+    "cover": "/assets/nynj-jersey-city.jpg",
+    "images": [],
+    "tag": "Exclusive",
+    "isFeatured": true,
+    "isSample": true
+  },
+  {
+    "region": "chicago",
+    "kind": "rental",
+    "title": {
+      "en": "Sample Listing 04",
+      "zh": "示例房源 04"
+    },
+    "neighborhood": {
+      "en": "West Loop, Chicago",
+      "zh": "芝加哥西环区"
+    },
+    "address": "",
+    "price": 2450,
+    "priceUnit": "month",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": 700,
+    "availableFrom": null,
+    "description": {
+      "en": "A one-bedroom in Chicago's West Loop, close to restaurants and the L. The living area is generously sized, with space for a dining table. Sample listing shown for illustration.",
+      "zh": "位于芝加哥西环区的一居室，周边餐厅众多，临近 L 线轻轨。客厅宽敞，可放下餐桌。此为示例房源，仅供展示。"
+    },
+    "cover": "/assets/chi-west-loop.jpg",
+    "images": [],
+    "tag": "Exclusive",
+    "isFeatured": false,
+    "isSample": true
+  },
+  {
+    "region": "los-angeles",
+    "kind": "rental",
+    "title": {
+      "en": "Sample Listing 05",
+      "zh": "示例房源 05"
+    },
+    "neighborhood": {
+      "en": "Downtown LA",
+      "zh": "洛杉矶市中心"
+    },
+    "address": "",
+    "price": 3100,
+    "priceUnit": "month",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqft": 950,
+    "availableFrom": null,
+    "description": {
+      "en": "A two-bedroom, two-bath home in Downtown Los Angeles. Each bedroom has its own bathroom, a practical setup for sharing. Sample listing shown for illustration.",
+      "zh": "位于洛杉矶市中心的两室两卫公寓。每间卧室各配独立卫生间，合租十分方便。此为示例房源，仅供展示。"
+    },
+    "cover": "/assets/la-dtla.jpg",
+    "images": [],
+    "tag": "Exclusive",
+    "isFeatured": false,
+    "isSample": true
+  },
+  {
+    "region": "washington-dc",
+    "kind": "rental",
+    "title": {
+      "en": "Sample Listing 06",
+      "zh": "示例房源 06"
+    },
+    "neighborhood": {
+      "en": "Capitol Hill, D.C.",
+      "zh": "华盛顿特区国会山"
+    },
+    "address": "",
+    "price": 2700,
+    "priceUnit": "month",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": 640,
+    "availableFrom": null,
+    "description": {
+      "en": "A one-bedroom on Capitol Hill, within walking distance of the Metro. The quiet residential streets nearby have local shops and parks. Sample listing shown for illustration.",
+      "zh": "位于国会山的一居室，步行可达地铁站。周边街区安静，有社区小店和公园。此为示例房源，仅供展示。"
+    },
+    "cover": "/assets/dc-capitol.jpg",
+    "images": [],
+    "tag": "Exclusive",
+    "isFeatured": false,
+    "isSample": true
+  }
+]

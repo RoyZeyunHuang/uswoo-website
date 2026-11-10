@@ -1,0 +1,46 @@
+/* City Guides 在设计稿之外补充的样式（手工维护；city-guides.css 由提取脚本生成，会被覆盖）。 */
+
+/* 城市切换从按钮改成了链接（每个城市一个网址）：去掉链接自带的下划线 */
+.pg-city-guides a.cg-tab,
+.pg-city-guides a.cg-area-pill {
+  text-decoration: none;
+}
+
+/* 地图的文字版：给读屏软件和搜索引擎，视觉上不占位置 */
+.pg-city-guides .cg-places-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 原站设计工具里对个别元素做的手机字号微调。提取出来的选择器依赖原页面的 DOM 层级（body > div > …），
+   在新页面里匹配不上，这里按元素重写。用 id 保证优先级和原来一样压过其他规则。 */
+@media (max-width: 560px) {
+  .pg-city-guides #top #explore .cg-intro h1 {
+    font-size: 29px;
+  }
+  .pg-city-guides #top .cg-lead .section-head h2,
+  .pg-city-guides #top #areas .cg-areas-head h2 {
+    font-size: 27.4px;
+  }
+  .pg-city-guides #top .cg-lead .section-head p.lede,
+  .pg-city-guides #top #areas .cg-areas-head p:nth-of-type(2) {
+    font-size: 13.32px;
+  }
+  .pg-city-guides #top #explore .cg-intro p.sub {
+    font-size: 13px;
+  }
+}
+
+/* 手机筛选面板打开时锁住页面滚动。原样式写在 body 上，提取时被限定到页面根元素之内而失效，这里补回来 */
+@media (max-width: 700px) {
+  body.cg-sheet-open {
+    overflow: hidden;
+  }
+}

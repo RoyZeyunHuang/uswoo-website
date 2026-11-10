@@ -1,0 +1,47 @@
+/* 由 tools/legacy-extract.mjs 生成：原先由 i18n.js、mobile-nav.js、back-to-top.js 在运行时注入的样式。 */
+.lang-toggle{display:inline-flex;align-items:center;gap:6px;flex:none;margin-left:-8px;padding:7px 12px;border:1px solid currentColor;border-radius:2px;background:transparent;color:var(--ink-soft,#656260);font:600 0.78rem/1 "Inter",-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:0.02em;cursor:pointer;white-space:nowrap;opacity:0.92;transition:color 0.3s ease,opacity 0.15s ease;}
+.lang-toggle:hover{opacity:1}
+.lang-toggle span{opacity:0.5;transition:opacity 0.15s ease}
+.lang-toggle .sep{opacity:0.35}
+html[data-lang="en"] .lang-toggle [data-l="en"],html[data-lang="zh"] .lang-toggle [data-l="zh"]{opacity:1}
+.lang-toggle:focus-visible{outline:2px solid var(--focus,#FC8D94);outline-offset:3px}
+@media (max-width:640px){.lang-toggle{margin-left:0;padding:6px 9px;font-size:0.72rem}
+}
+html[lang="zh-CN"] body{font-family:"Inter","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif}
+html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] h3{font-family:"Poppins","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;letter-spacing:0}
+html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] h3{word-break:keep-all;overflow-wrap:anywhere}
+html[lang="zh-CN"] .eyebrow,html[lang="zh-CN"] .ft-label{letter-spacing:0.04em}
+
+.uswoo-burger,.uswoo-menu{display:none}
+@media (max-width:760px){header.nav nav.links,header.nav .nav-cta{display:none !important}
+.uswoo-burger{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-10px;padding:0;border:0;background:none;cursor:pointer;color:var(--hero-ink,#fff);transition:color .3s ease}
+header.nav.scrolled .uswoo-burger,header.nav.menu-open .uswoo-burger,header.nav.uswoo-solid .uswoo-burger{color:var(--ink,#0F0F0F)}
+.uswoo-burger span{position:relative;display:block;width:22px;height:2px;background:currentColor;border-radius:2px;transition:background .2s ease}
+.uswoo-burger span::before,.uswoo-burger span::after{content:"";position:absolute;left:0;width:22px;height:2px;background:currentColor;border-radius:2px;transition:transform .25s ease,top .25s ease}
+.uswoo-burger span::before{top:-7px}
+.uswoo-burger span::after{top:7px}
+.menu-open .uswoo-burger span{background:transparent}
+.menu-open .uswoo-burger span::before{top:0;transform:rotate(45deg)}
+.menu-open .uswoo-burger span::after{top:0;transform:rotate(-45deg)}
+header.nav.menu-open{background:var(--paper,#fff) !important;border-bottom:1px solid var(--line,#e5e5e5) !important}
+header.nav.menu-open .lang-toggle{color:var(--ink,#0F0F0F) !important}
+header.nav.menu-open .wordmark{color:var(--ink,#0F0F0F) !important}
+.uswoo-menu{position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--paper,#fff);border-bottom:1px solid var(--line,#e5e5e5);box-shadow:0 14px 30px rgba(0,0,0,.12);padding:6px clamp(20px,5vw,56px) 20px}
+.menu-open .uswoo-menu{display:flex}
+.uswoo-menu a{color:var(--ink,#0F0F0F);text-decoration:none;font-size:1.02rem;font-weight:500;padding:15px 0;border-bottom:1px solid var(--line,#e5e5e5)}
+.uswoo-menu a.active{color:#FC8D94}
+.uswoo-menu a.uswoo-menu-cta{margin-top:16px;border:0;background:#0F0F0F;color:#fff;text-align:center;font-weight:600;padding:14px 18px;border-radius:2px}
+}
+
+.uswoo-btt{position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:60;width:48px;height:48px;border-radius:50%;border:0;padding:0;cursor:pointer;background:#0F0F0F;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.22);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .25s ease,transform .25s ease,visibility .25s,background .2s ease}
+.uswoo-btt.show{opacity:1;visibility:visible;transform:none}
+.uswoo-btt:hover{background:#FC8D94}
+.uswoo-btt:focus-visible{outline:2px solid #FC8D94;outline-offset:3px}
+.uswoo-btt svg{width:20px;height:20px;display:block}
+@media (max-width:560px){.uswoo-btt{background:transparent;color:#0F0F0F;box-shadow:none;width:44px;height:44px}
+.uswoo-btt:hover{background:transparent;color:#FC8D94}
+.uswoo-btt svg{width:26px;height:26px}
+}
+@media (prefers-reduced-motion:reduce){.uswoo-btt{transition:none}
+}
+

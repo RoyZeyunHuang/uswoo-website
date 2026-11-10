@@ -1,0 +1,2182 @@
+{
+ "region": "philadelphia",
+ "payload": {
+  "cityName": {
+   "en": "Philadelphia",
+   "zh": "费城"
+  },
+  "emoji": "🔔",
+  "intro": {
+   "en": "In Philadelphia, choosing where to live often comes down to school, work, and commute. With major universities, hospitals, life sciences companies, law firms, and corporate offices concentrated across a few key areas, the right neighborhood can make everyday life much easier.",
+   "zh": "在费城，选住哪里通常取决于学校、工作和通勤。主要大学、医院、生命科学公司、律所和企业办公室集中在几个关键区域，选对社区能让日常生活轻松许多。"
+  },
+  "areas": [
+   {
+    "emoji": "🎓",
+    "name": {
+     "en": "University City & West Philadelphia",
+     "zh": "University City & West Philadelphia"
+    },
+    "tags": [
+     {
+      "en": "UPenn",
+      "zh": "UPenn"
+     },
+     {
+      "en": "Drexel",
+      "zh": "Drexel"
+     },
+     {
+      "en": "Life sciences",
+      "zh": "Life sciences"
+     }
+    ],
+    "text": {
+     "en": "A natural choice for students at UPenn and Drexel, as well as professionals working in healthcare, research, life sciences, and university related roles. University City brings together major campuses, hospitals, labs, and newer apartment developments, making it one of Philadelphia’s strongest student and professional rental markets.",
+     "zh": "适合 UPenn、Drexel University 的学生，以及在医疗、科研、生物科技和高校工作的职场人士。University City 聚集了多所大学、医院和研究机构，周边学生公寓与住宅选择丰富，适合希望住在校园附近、兼顾学习与日常生活的人。"
+    },
+    "short": {
+     "en": "A natural choice for UPenn and Drexel students and for healthcare and research professionals. Campuses, hospitals, and newer apartments sit side by side.",
+     "zh": "适合 UPenn、Drexel University 的学生，以及在医疗、科研、生物科技和高校工作的职场人士。University City 聚集了多所大学、医院和研究机构，周边学生公寓与住宅选择丰富，适合希望住在校园附近、兼顾学习与日常生活的人。"
+    },
+    "image": {
+     "url": "/assets/phl-university-city.jpg"
+    }
+   },
+   {
+    "emoji": "🏙️",
+    "name": {
+     "en": "Center City, Rittenhouse & Logan Square",
+     "zh": "Center City, Rittenhouse & Logan Square"
+    },
+    "tags": [
+     {
+      "en": "Finance",
+      "zh": "Finance"
+     },
+     {
+      "en": "Law",
+      "zh": "Law"
+     },
+     {
+      "en": "Hospitality",
+      "zh": "Hospitality"
+     }
+    ],
+    "text": {
+     "en": "A strong option for professionals working in finance, law, consulting, healthcare, corporate offices, and hospitality. It also works well for students and young professionals who want a more central lifestyle with easy access to offices, restaurants, public transit, and both University City and other parts of Downtown.",
+     "zh": "适合在金融、法律、咨询、医疗和企业服务行业工作的职场人士，也受到希望享受市中心生活的学生和年轻租客欢迎。这里聚集了办公楼、餐厅、购物中心和文化设施，公共交通便利，适合喜欢都市生活、希望缩短日常通勤时间的人。"
+    },
+    "short": {
+     "en": "A strong option for professionals in finance, law, consulting, and healthcare. Central living with offices, restaurants, and transit close by.",
+     "zh": "适合在金融、法律、咨询、医疗和企业服务行业工作的职场人士，也受到希望享受市中心生活的学生和年轻租客欢迎。这里聚集了办公楼、餐厅、购物中心和文化设施，公共交通便利，适合喜欢都市生活、希望缩短日常通勤时间的人。"
+    },
+    "image": {
+     "url": "/assets/phl-center-city.jpg"
+    }
+   },
+   {
+    "emoji": "🦉",
+    "name": {
+     "en": "North Philadelphia & Temple Area",
+     "zh": "North Philadelphia & Temple Area"
+    },
+    "tags": [
+     {
+      "en": "Temple",
+      "zh": "Temple"
+     },
+     {
+      "en": "Student housing",
+      "zh": "Student housing"
+     },
+     {
+      "en": "Center City",
+      "zh": "Center City"
+     }
+    ],
+    "text": {
+     "en": "The main housing market for Temple University students, with a mix of student housing and residential options around campus. The area also offers convenient access to Center City for internships, healthcare, education, and other downtown jobs.",
+     "zh": "适合 Temple University 的学生，尤其是希望住在主校区附近的人。校园周边有学生公寓、合租住宅和其他租房选择，可搭乘 SEPTA 前往 Center City，适合希望兼顾上学便利与租房预算的学生。"
+    },
+    "short": {
+     "en": "The main housing market for Temple University students. Student housing around campus, with easy access to Center City jobs and internships.",
+     "zh": "适合 Temple University 的学生，尤其是希望住在主校区附近的人。校园周边有学生公寓、合租住宅和其他租房选择，可搭乘 SEPTA 前往 Center City，适合希望兼顾上学便利与租房预算的学生。"
+    },
+    "image": {
+     "url": "/assets/phl-temple.jpg"
+    }
+   },
+   {
+    "emoji": "🏡",
+    "name": {
+     "en": "Graduate Hospital & Fitler Square",
+     "zh": "Graduate Hospital & Fitler Square"
+    },
+    "tags": [
+     {
+      "en": "Penn Medicine",
+      "zh": "Penn Medicine"
+     },
+     {
+      "en": "Grad students",
+      "zh": "Grad students"
+     },
+     {
+      "en": "Residential",
+      "zh": "Residential"
+     }
+    ],
+    "text": {
+     "en": "Popular with graduate students, medical professionals, and young professionals who want to stay between University City and Center City. These neighborhoods offer a more residential feel while keeping UPenn, Drexel, Penn Medicine, and Downtown offices within relatively easy reach.",
+     "zh": "适合在 University City 和 Center City 工作的医疗、科研及其他行业人士，也适合希望住在相对安静社区的年轻职场人士。这里以住宅街区为主，生活氛围舒适，前往 UPenn、Drexel University 及市中心的部分办公区也较方便。"
+    },
+    "short": {
+     "en": "Popular with graduate students and young professionals who want to stay between University City and Center City, with a more residential feel.",
+     "zh": "适合在 University City 和 Center City 工作的医疗、科研及其他行业人士，也适合希望住在相对安静社区的年轻职场人士。这里以住宅街区为主，生活氛围舒适，前往 UPenn、Drexel University 及市中心的部分办公区也较方便。"
+    },
+    "image": {
+     "url": "/assets/phl-fitler.jpg"
+    }
+   },
+   {
+    "emoji": "⚓",
+    "name": {
+     "en": "South Philadelphia & Navy Yard",
+     "zh": "South Philadelphia & Navy Yard"
+    },
+    "tags": [
+     {
+      "en": "Navy Yard",
+      "zh": "Navy Yard"
+     },
+     {
+      "en": "Life sciences",
+      "zh": "Life sciences"
+     },
+     {
+      "en": "Research",
+      "zh": "Research"
+     }
+    ],
+    "text": {
+     "en": "A practical choice for professionals working around the Navy Yard, life sciences, healthcare, research, advanced manufacturing, and corporate offices. South Philadelphia also offers more residential neighborhood options while staying connected to Center City and major employment areas.",
+     "zh": "适合在 Navy Yard 从事生命科学、医疗、科研、先进制造和企业服务工作的职场人士。South Philadelphia 拥有多样的住宅社区，Navy Yard 则聚集了不少企业与办公设施。区域内有公交及接驳车服务，适合希望靠近工作地点、兼顾城市生活的人。"
+    },
+    "short": {
+     "en": "A practical choice for professionals working around the Navy Yard in life sciences, healthcare, and research. More residential, and still connected to Center City.",
+     "zh": "适合在 Navy Yard 从事生命科学、医疗、科研、先进制造和企业服务工作的职场人士。South Philadelphia 拥有多样的住宅社区，Navy Yard 则聚集了不少企业与办公设施。区域内有公交及接驳车服务，适合希望靠近工作地点、兼顾城市生活的人。"
+    },
+    "image": {
+     "url": "/assets/phl-south-philly.jpg"
+    }
+   }
+  ],
+  "closing": {
+   "emoji": "✨",
+   "title": {
+    "en": "Found your area?",
+    "zh": "选好区域了吗？"
+   },
+   "text": {
+    "en": "Once you know which area fits your school, office, and daily routine, we can help with apartment search, leasing, moving, furniture, room dividers, Wi Fi, electricity, renters insurance, and other move in essentials.",
+    "zh": "选好适合你的学校、公司和日常作息的区域后，我们可以帮你搞定找房、签约、搬家、家具、房间隔断、Wi-Fi、水电、租客保险等入住必备事项。"
+   },
+   "short": {
+    "en": "Once you know your area, we can help with the rest, from apartment search to move-in essentials.",
+    "zh": "选好区域后，其余的交给我们，从找房到入住所需的一切。"
+   },
+   "image": {
+    "url": "/assets/phl-closing.jpg"
+   },
+   "hideOnMobile": true
+  },
+  "map": {
+   "center": {
+    "lat": 39.965,
+    "lng": -75.19
+   },
+   "zoom": 12,
+   "minZoom": 10,
+   "bounds": [
+    [
+     39.83,
+     -75.45
+    ],
+    [
+     40.12,
+     -75
+    ]
+   ],
+   "neighborhoods": {
+    "url": "/assets/guides/philadelphia/neighborhoods.geojson"
+   },
+   "businessDistricts": {
+    "url": "/assets/guides/philadelphia/business-districts.geojson"
+   },
+   "transit": {
+    "url": "/assets/transit/PHL.geojson"
+   }
+  }
+ },
+ "places": [
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Rittenhouse Square",
+    "zh": "里滕豪斯广场"
+   },
+   "desc": {
+    "en": "Philadelphia's most elegant address: a leafy square ringed by cafés, shops and high-rises. Walkable to Center City offices and Penn; rents are the city's highest.",
+    "zh": "费城最优雅的地段，绿树广场四周咖啡馆、商店和高楼环绕；步行可到市中心办公区和宾大，租金全市最高。"
+   },
+   "lat": 39.9491,
+   "lng": -75.1719,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-rittenhouse-square-1.jpg",
+    "/assets/places/area-phl-rittenhouse-square-2.jpg",
+    "/assets/places/area-phl-rittenhouse-square-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Walnut_Street_Rittenhouse_Square.jpg",
+      "author": "Ii2nmd",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_Rittenhouse_Claridge,_Walnut_St_looking_east.jpg",
+      "author": "Mihai Bojin",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:253-255_South_20th_Street.JPG",
+      "author": "Андрей Романенко",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 1
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "University City",
+    "zh": "大学城"
+   },
+   "desc": {
+    "en": "Home to Penn and Drexel: student housing, Victorian twins and new towers near 30th Street Station. Very convenient for students; prices vary block by block.",
+    "zh": "宾大和德雷塞尔大学所在地，学生公寓、维多利亚式双拼屋和新高楼并存，靠近30街车站；学生生活很方便，租金因街区而异。"
+   },
+   "lat": 39.9539,
+   "lng": -75.1932,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-university-city-1.jpg",
+    "/assets/places/area-phl-university-city-2.jpg",
+    "/assets/places/area-phl-university-city-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:View_of_the_University_of_Pennsylvania%E2%80%99s_Campus_and_West_Philadelphia.jpg",
+      "author": "AnonymousPenguin23",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:University_of_Pennsylvania_Walnut_Street.jpg",
+      "author": "In Sappho We Trust",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Campus_view_-_Drexel_University_-_IMG_7303.JPG",
+      "author": "Daderot",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 2
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Fitler Square",
+    "zh": "菲特勒广场"
+   },
+   "desc": {
+    "en": "Quiet, leafy pocket of brick rowhouses by the Schuylkill River Trail. Walk or bike to Penn and Rittenhouse; peaceful and upscale, with limited inventory.",
+    "zh": "斯古吉尔河步道旁宁静的红砖排屋小区，绿树成荫；步行或骑车可到宾大和Rittenhouse，安静高档，房源较少。"
+   },
+   "lat": 39.9483,
+   "lng": -75.1775,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-fitler-square-1.jpg",
+    "/assets/places/area-phl-fitler-square-2.jpg",
+    "/assets/places/area-phl-fitler-square-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Schuylkill_River_Trail_from_the_South_St._bridge.jpg",
+      "author": "SidewalkMD",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Schuykill-river-trail-philadelphia-pa.jpg",
+      "author": "Eagriego",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Schuylkill_River_Trail_2018.jpg",
+      "author": "Ii2nmd",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 3
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Logan Square",
+    "zh": "洛根广场"
+   },
+   "desc": {
+    "en": "Grand boulevard area along the Benjamin Franklin Parkway with museums, Swann Fountain and high-rises. Calm and central; mid-to-high rents.",
+    "zh": "本杰明·富兰克林大道沿线，博物馆、斯旺喷泉和高层公寓汇聚；安静又居中，租金中高。"
+   },
+   "lat": 39.9583,
+   "lng": -75.1719,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-logan-square-1.jpg",
+    "/assets/places/area-phl-logan-square-2.jpg",
+    "/assets/places/area-phl-logan-square-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Swann_Fountain-27527.jpg",
+      "author": "Ken Thomas",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Benjamin_Franklin_Parkway.jpg",
+      "author": "Ii2nmd",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Logan_Square_-_Philadelphia_(53574397753).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     }
+    ]
+   },
+   "sort": 4
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Old City",
+    "zh": "老城区"
+   },
+   "desc": {
+    "en": "Cobblestone lanes by Independence Hall with converted lofts, galleries and bars. Historic and lively on the Market-Frankford Line; lofts at mid-range prices.",
+    "zh": "独立厅旁的鹅卵石街巷，loft改造公寓、画廊和酒吧林立；历史感与活力兼具，有Market-Frankford线，loft价格中等。"
+   },
+   "lat": 39.9506,
+   "lng": -75.1444,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-old-city-1.jpg",
+    "/assets/places/area-phl-old-city-2.jpg",
+    "/assets/places/area-phl-old-city-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley,_Philadelphia.jpg",
+      "author": "Céline Harrand",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Old_City,_Philadelphia,_PA,_USA_-_panoramio_(2).jpg",
+      "author": "Андрей Бобровский",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley-2023_03.jpg",
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 5
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Society Hill",
+    "zh": "社会山"
+   },
+   "desc": {
+    "en": "Colonial brick rowhouses, gas lamps and I.M. Pei's towers near the Delaware River. Quiet, safe and refined, walkable to Jefferson and Center City; rents on the higher side.",
+    "zh": "殖民时期红砖排屋、煤气灯和贝聿铭设计的高楼，靠近特拉华河；安静安全、格调高，步行可到杰斐逊大学和市中心，租金偏高。"
+   },
+   "lat": 39.9445,
+   "lng": -75.1477,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-society-hill-1.jpg",
+    "/assets/places/area-phl-society-hill-2.jpg",
+    "/assets/places/area-phl-society-hill-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Society_Hill_Towers_PA1.jpg",
+      "author": "Acroterion",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:226_228_Washington_Square,_Philly.JPG",
+      "author": "Smallbones",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:201-213_Delancey_Street_Society_Hill.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 6
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Washington Square West / Midtown Village",
+    "zh": "Washington Square West / Midtown Village"
+   },
+   "desc": {
+    "en": "Lively, LGBTQ+-friendly 'Gayborhood' of restaurants and bars near Jefferson and its hospitals. Walkable and central; rowhouse units and mid-rises at moderate rents.",
+    "zh": "热闹且LGBTQ+友好的“Gayborhood”，餐厅酒吧多，靠近杰斐逊大学及其医院；步行便利、位置居中，排屋和中层公寓租金适中。"
+   },
+   "lat": 39.9469,
+   "lng": -75.1596,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-washington-square-west-midtown-village-1.jpg",
+    "/assets/places/area-phl-washington-square-west-midtown-village-2.jpg",
+    "/assets/places/area-phl-washington-square-west-midtown-village-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:224-228_West_Washington_Square_from_north.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Washington_Square_northeast_entrance.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Clinton_St_Historic_District_Philly.JPG",
+      "author": "Smallbones",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 7
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Fishtown",
+    "zh": "鱼镇"
+   },
+   "desc": {
+    "en": "Former industrial area now known for breweries, music venues and new construction along Frankford Ave. Young and buzzing on the El; good value for newer units.",
+    "zh": "昔日工业区，如今以精酿酒厂、音乐场所和Frankford大道新建公寓闻名；年轻热闹，有El高架线，新房性价比高。"
+   },
+   "lat": 39.9709,
+   "lng": -75.1291,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-fishtown-1.jpg",
+    "/assets/places/area-phl-fishtown-2.jpg",
+    "/assets/places/area-phl-fishtown-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fishtown_Philadelphia.jpg",
+      "author": "Tim Kiser (w:User:Malepheasant)",
+      "license": "CC BY-SA 2.5"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Sundown_on_Girard_Ave.jpg",
+      "author": "Peetlesnumber1",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Green_Tree_Tavern.jpg",
+      "author": "Eli Pousson",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 8
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Northern Liberties",
+    "zh": "北自由区"
+   },
+   "desc": {
+    "en": "Converted warehouses, new apartments and Liberties Walk just north of Old City. Social and walkable with bars and parks; El access, mid-range rents.",
+    "zh": "Old City以北，仓库改造和新公寓林立，有Liberties Walk步行街；酒吧公园多、社交氛围好，El线可达，租金中等。"
+   },
+   "lat": 39.9636,
+   "lng": -75.1421,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-northern-liberties-1.jpg",
+    "/assets/places/area-phl-northern-liberties-2.jpg",
+    "/assets/places/area-phl-northern-liberties-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:622-630_N._4th_Street.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Integrity_Title_Insurance.JPG",
+      "author": "Smallbones",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Northern_Liberties_Philadelphia.jpg",
+      "author": "Ii2nmd",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 9
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Fairmount",
+    "zh": "费尔蒙特"
+   },
+   "desc": {
+    "en": "Rowhouse neighborhood by the Art Museum, Eastern State Penitentiary and Fairmount Park. Friendly and residential with good bars, close to the river trails; mid-range rents.",
+    "zh": "费城艺术博物馆、东州监狱和费尔芒特公园旁的排屋社区；友好宜居、小酒吧不错，靠近河滨步道，租金中等。"
+   },
+   "lat": 39.9686,
+   "lng": -75.1729,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-fairmount-1.jpg",
+    "/assets/places/area-phl-fairmount-2.jpg",
+    "/assets/places/area-phl-fairmount-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Eastern_State_Penitentiary_(53574639765).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Philadelphia_Skyline_from_Girard_Bridge_-_panoramio.jpg",
+      "author": "Bohao Zhao",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Art_Museum_area.jpg",
+      "author": "GooseGoddessS from Philadelphia",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 10
+  },
+  {
+   "kind": "neighborhood",
+   "name": {
+    "en": "Manayunk",
+    "zh": "马纳云克"
+   },
+   "desc": {
+    "en": "Hilly river town with Main Street's bars and boutiques and a canal towpath. Popular with young grads, Regional Rail to Center City; rents below downtown.",
+    "zh": "依山傍河的小镇，Main Street酒吧和小店林立，有运河步道；深受毕业生欢迎，区域铁路到市中心，租金低于市中心。"
+   },
+   "lat": 40.0265,
+   "lng": -75.2244,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-manayunk-1.jpg",
+    "/assets/places/area-phl-manayunk-2.jpg",
+    "/assets/places/area-phl-manayunk-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Main_Street_NB_at_Cotton_Street_Philadelphia.jpeg",
+      "author": "Dough4872",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Main_St.,_Manayunk,_Philadelphia,_Aug_2022.jpg",
+      "author": "Mr. Matté (if there is an issue with this image, contact me using this image's Commons talk page, my Commons user tal...",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Manayunk,_Philadelphia.jpg",
+      "author": "Ii2nmd",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 11
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Center City",
+    "zh": "市中心"
+   },
+   "desc": {
+    "en": "Finance, law, consulting and corporate offices; near Rittenhouse, Logan Square and Midtown Village.",
+    "zh": "金融、法律、咨询和企业办公集中，靠近Rittenhouse、Logan Square和Midtown Village。"
+   },
+   "lat": 39.9526,
+   "lng": -75.1652,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-center-city-1.jpg",
+    "/assets/places/area-phl-center-city-2.jpg",
+    "/assets/places/area-phl-center-city-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2022-10-28_13_50_48_View_north_along_Pennsylvania_State_Route_611_(South_Broad_Street)_just_south_of_Walnut_Street_in_Philadelphia,_Pennsylvania.jpg",
+      "author": "Famartin",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2022-10-29_15_58_45_View_south_along_Pennsylvania_State_Route_611_(North_Broad_Street)_at_Race_Street_in_Philadelphia,_Pennsylvania.jpg",
+      "author": "Famartin",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2025-08-04_12_46_39_View_southeast_from_the_Jean-Georges_SkyHigh_Restaurant_at_Comcast_Technology_Center_in_Philadelphia,_Pennsylvania.jpg",
+      "author": "Famartin",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 12
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Market Street West",
+    "zh": "市场街西段"
+   },
+   "desc": {
+    "en": "Corporate, finance, law and professional services under the city's tallest towers; near Rittenhouse and Logan Square.",
+    "zh": "费城最高楼群所在地，企业、金融、法律和专业服务集中，靠近Rittenhouse和Logan Square。"
+   },
+   "lat": 39.9522,
+   "lng": -75.1682,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-market-street-west-1.jpg",
+    "/assets/places/area-phl-market-street-west-2.jpg",
+    "/assets/places/area-phl-market-street-west-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Philadelphia_downtown.JPG",
+      "author": "Gccwang",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Comcast_Tower_Philadelphia.jpg",
+      "author": "Seth Goldstein",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Market_Street_West_2.jpg",
+      "author": "Ii2nmd",
+      "license": "CC0"
+     }
+    ]
+   },
+   "sort": 13
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "University City",
+    "zh": "大学城"
+   },
+   "desc": {
+    "en": "Healthcare, biotech, life sciences, education and research; near Fitler Square.",
+    "zh": "医疗、生物科技、生命科学、教育和科研集中，靠近Fitler Square。"
+   },
+   "lat": 39.9539,
+   "lng": -75.1932,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-university-city-1.jpg",
+    "/assets/places/area-phl-university-city-2.jpg",
+    "/assets/places/area-phl-university-city-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:View_of_the_University_of_Pennsylvania%E2%80%99s_Campus_and_West_Philadelphia.jpg",
+      "author": "AnonymousPenguin23",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:University_of_Pennsylvania_Walnut_Street.jpg",
+      "author": "In Sappho We Trust",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Campus_view_-_Drexel_University_-_IMG_7303.JPG",
+      "author": "Daderot",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 14
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Market East",
+    "zh": "市场街东段"
+   },
+   "desc": {
+    "en": "Retail, hospitality, government and entertainment; near Old City and Washington Square West.",
+    "zh": "零售、酒店、政府和娱乐业集中，靠近Old City和Washington Square West。"
+   },
+   "lat": 39.9524,
+   "lng": -75.1555,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-market-east-1.jpg",
+    "/assets/places/area-phl-market-east-2.jpg",
+    "/assets/places/area-phl-market-east-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fashion_District_Philadelphia_entrance_at_9th_Street_and_Market_Street.jpeg",
+      "author": "Dough4872",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Fashion_District_Philadelphia_-_2_(53590614280).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Market_Street,_Philadelphia_14.jpeg",
+      "author": "Katherine Anderson",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 15
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Navy Yard",
+    "zh": "海军造船厂区"
+   },
+   "desc": {
+    "en": "Life sciences, corporate, engineering and logistics campus; near South Philly.",
+    "zh": "生命科学、企业、工程和物流园区，靠近南费城。"
+   },
+   "lat": 39.8965,
+   "lng": -75.1745,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-navy-yard-1.jpg",
+    "/assets/places/area-phl-navy-yard-2.jpg",
+    "/assets/places/area-phl-navy-yard-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Philadelphia_Shipyard_with_National_Security_Multi-Mission_Vessel_(NSMV)_under_construction.jpg",
+      "author": "MastersHall",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:USS_Charles_F_Adams_PISMF.jpg",
+      "author": "Chuck Homler, Focus On Wildlife",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Aker_Shipyard_at_Naval_Yard.jpg",
+      "author": "Bestbudbrian",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 16
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Old City",
+    "zh": "老城区"
+   },
+   "desc": {
+    "en": "Creative, design, startups and hospitality; near Society Hill.",
+    "zh": "创意、设计、初创企业和酒店业集中，靠近Society Hill。"
+   },
+   "lat": 39.9506,
+   "lng": -75.1444,
+   "address": "",
+   "area": {
+    "en": "Philadelphia, PA",
+    "zh": "宾夕法尼亚州费城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-old-city-1.jpg",
+    "/assets/places/area-phl-old-city-2.jpg",
+    "/assets/places/area-phl-old-city-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley,_Philadelphia.jpg",
+      "author": "Céline Harrand",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Old_City,_Philadelphia,_PA,_USA_-_panoramio_(2).jpg",
+      "author": "Андрей Бобровский",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley-2023_03.jpg",
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 17
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "King of Prussia",
+    "zh": "普鲁士王"
+   },
+   "desc": {
+    "en": "Corporate offices, retail (one of the largest US malls) and healthcare; near the Main Line suburbs.",
+    "zh": "企业办公、零售（全美最大商场之一）和医疗集中，靠近Main Line郊区。"
+   },
+   "lat": 40.0893,
+   "lng": -75.3902,
+   "address": "",
+   "area": {
+    "en": "King of Prussia, PA",
+    "zh": "宾夕法尼亚州普鲁士王"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-king-of-prussia-1.jpg",
+    "/assets/places/area-phl-king-of-prussia-2.jpg",
+    "/assets/places/area-phl-king-of-prussia-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:King_Of_Prussia_mall.jpg",
+      "author": "Ii2nmd",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:King_of_Prussia_Mall_(51709659288).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:King_of_Prussia_Mall_I-276_I-76_US422_US202_Aerial_(51156478182).jpg",
+      "author": "formulanone",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 18
+  },
+  {
+   "kind": "business",
+   "name": {
+    "en": "Conshohocken",
+    "zh": "康肖霍肯"
+   },
+   "desc": {
+    "en": "Finance, corporate, healthcare and professional services on the Schuylkill; near Manayunk.",
+    "zh": "斯古吉尔河畔，金融、企业、医疗和专业服务集中，靠近Manayunk。"
+   },
+   "lat": 40.0776,
+   "lng": -75.3013,
+   "address": "",
+   "area": {
+    "en": "Conshohocken, PA",
+    "zh": "宾夕法尼亚州康舍霍肯"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/area-phl-conshohocken-1.jpg",
+    "/assets/places/area-phl-conshohocken-2.jpg",
+    "/assets/places/area-phl-conshohocken-3.jpg"
+   ],
+   "extra": {
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Marriot_Hotel_Conshohocken.jpg",
+      "author": "Montgomery County Planning Commission",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Conshohocken_Riverfront.jpg",
+      "author": "Montgomery County Planning Commission",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Conshohocken_River_Front.jpg",
+      "author": "Montgomery County Planning Commission",
+      "license": "CC BY-SA 2.0"
+     }
+    ]
+   },
+   "sort": 19
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "University of Pennsylvania (UPenn)",
+    "zh": "宾夕法尼亚大学（宾大）"
+   },
+   "desc": {
+    "en": "Ivy League university known for Wharton and its Locust Walk spine. University City is walkable and student-packed, with trolleys and the Market-Frankford Line to Center City.",
+    "zh": "常春藤名校，以沃顿商学院和贯穿校园的Locust Walk著称。大学城步行便利、学生聚集，有电车和市场-法兰克福线直达市中心。"
+   },
+   "lat": 39.9522,
+   "lng": -75.1932,
+   "address": "3451 Walnut Street, Philadelphia, PA 19104",
+   "area": {
+    "en": "University City, West Philadelphia",
+    "zh": "西费城大学城"
+   },
+   "logo": "/assets/school-logos/upenn.png",
+   "images": [
+    "/assets/places/school-upenn-1.jpg",
+    "/assets/places/school-upenn-2.jpg",
+    "/assets/places/school-upenn-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "University City",
+     "zh": "大学城"
+    },
+    "communities": [
+     "University City",
+     "Spruce Hill",
+     "Powelton Village",
+     "Fitler Square"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:College_Hall_(University_of_Pennsylvania)_-_IMG_6599.JPG",
+      "author": "Daderot",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:University_of_Pennsylvania,_36th_Street_on_campus.jpg",
+      "author": "Unknown",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Benjamin_Franklin_statue_in_front_of_College_Hall.JPG",
+      "author": "MatthewMarcucci",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 20
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Drexel University",
+    "zh": "德雷塞尔大学"
+   },
+   "desc": {
+    "en": "Known for its co-op program and engineering, beside Penn in University City. Students rent row houses in Powelton Village and Mantua; 30th Street Station is next door.",
+    "zh": "以带薪实习（co-op）项目和工程专业闻名，与宾大同处大学城。学生多在Powelton Village和Mantua租排屋，紧邻30街火车站。"
+   },
+   "lat": 39.9566,
+   "lng": -75.1899,
+   "address": "3141 Chestnut Street, Philadelphia, PA 19104",
+   "area": {
+    "en": "University City, West Philadelphia",
+    "zh": "西费城大学城"
+   },
+   "logo": "/assets/school-logos/drexel.png",
+   "images": [
+    "/assets/places/school-drexel-1.jpg",
+    "/assets/places/school-drexel-2.jpg",
+    "/assets/places/school-drexel-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "University City",
+     "zh": "大学城"
+    },
+    "communities": [
+     "University City",
+     "Powelton Village",
+     "Logan Square",
+     "Center City"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Drexel_Main_Building.jpg",
+      "author": "User TexasDex on en.wikipedia",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rush_Building_-_Drexel_University_-_IMG_7301.JPG",
+      "author": "Daderot",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Campus_view_-_Drexel_University_-_IMG_7326.JPG",
+      "author": "Daderot",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 21
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Temple University",
+    "zh": "天普大学"
+   },
+   "desc": {
+    "en": "Large public research university with the striking Charles Library. North Philly around campus has cheap rowhouse rentals; the Broad Street Line runs straight to Center City.",
+    "zh": "大型公立研究型大学，查尔斯图书馆造型醒目。校园周边的北费城有大量平价排屋出租，宽街地铁线可直达市中心。"
+   },
+   "lat": 39.9812,
+   "lng": -75.1554,
+   "address": "1801 North Broad Street, Philadelphia, PA 19122",
+   "area": {
+    "en": "North Philadelphia",
+    "zh": "北费城"
+   },
+   "logo": "/assets/school-logos/temple.png",
+   "images": [
+    "/assets/places/school-temple-1.jpg",
+    "/assets/places/school-temple-2.jpg",
+    "/assets/places/school-temple-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "North Philadelphia",
+     "zh": "北费城"
+    },
+    "communities": [
+     "North Central Philly",
+     "Fairmount",
+     "Francisville",
+     "Fishtown"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Charles_Library_winter_jeh.jpg",
+      "author": "Jim.henderson",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Howard_Gittis_Student_Center.jpg",
+      "author": "ImagineerJC",
+      "license": "CC0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Paley_Library.jpg",
+      "author": "Megan Miller",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 22
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Thomas Jefferson University",
+    "zh": "托马斯杰斐逊大学"
+   },
+   "desc": {
+    "en": "Health-sciences university home to Sidney Kimmel Medical College. Its Center City campus is near Washington Square and the Gayborhood, with historic rowhouses and great food.",
+    "zh": "以健康科学见长的大学，设有西德尼·金梅尔医学院。市中心校区靠近华盛顿广场和Gayborhood，周边多历史排屋，餐饮丰富。"
+   },
+   "lat": 39.9489,
+   "lng": -75.157,
+   "address": "1020 Walnut Street, Philadelphia, PA 19107",
+   "area": {
+    "en": "Washington Square West, Center City",
+    "zh": "费城市中心华盛顿广场西"
+   },
+   "logo": "/assets/school-logos/jefferson.png",
+   "images": [
+    "/assets/places/school-jefferson-1.jpg",
+    "/assets/places/school-jefferson-2.jpg",
+    "/assets/places/school-jefferson-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "Center City",
+     "zh": "市中心"
+    },
+    "communities": [
+     "Washington Square West",
+     "Midtown Village",
+     "Society Hill",
+     "Old City"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Scott_Memorial_Library_-_Thomas_Jefferson_University_(53590170911).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Sidney_Kimmel_Medical_College_-_Thomas_Jefferson_University_(53590615375).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Thomas_Jefferson_University_Hospital_in_Philadelphia.jpg",
+      "author": "Tom Crane",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 23
+  },
+  {
+   "kind": "school",
+   "name": {
+    "en": "Saint Joseph's University",
+    "zh": "圣约瑟夫大学"
+   },
+   "desc": {
+    "en": "Jesuit university on Hawk Hill, known for business and its Gothic Barbelin Tower. It straddles City Ave at the edge of the Main Line; quieter, suburban, with regional rail nearby.",
+    "zh": "坐落于鹰山的耶稣会大学，以商科和哥特式Barbelin塔闻名。校园横跨City大道，位于Main Line边缘，环境安静偏郊区，附近有区域铁路。"
+   },
+   "lat": 39.9938,
+   "lng": -75.2385,
+   "address": "5600 City Avenue, Philadelphia, PA 19131",
+   "area": {
+    "en": "Overbrook / Wynnefield, Philadelphia",
+    "zh": "费城奥弗布鲁克 / 温尼菲尔德"
+   },
+   "logo": null,
+   "images": [
+    "/assets/places/school-saint-josephs-1.jpg",
+    "/assets/places/school-saint-josephs-2.jpg",
+    "/assets/places/school-saint-josephs-3.jpg"
+   ],
+   "extra": {
+    "hub": {
+     "en": "City Ave / Wynnefield",
+     "zh": "City Ave / 温尼菲尔德"
+    },
+    "communities": [
+     "Wynnefield",
+     "Bala Cynwyd",
+     "Manayunk",
+     "East Falls"
+    ],
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Barbelin_tower.JPG",
+      "author": "Brian O'Neill",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Mandeville_Hall,_Saint_Joseph%27s_University_(03-05-2007).jpg",
+      "author": "ChicagoMayne at English Wikipedia",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:McNeil_Science_And_Technology_Center.jpg",
+      "author": "SidewalkMD",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 24
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Independence Hall",
+    "zh": "Independence Hall"
+   },
+   "desc": {
+    "en": "Where the Declaration of Independence and the Constitution were debated and signed; free timed tours from the Independence Visitor Center.",
+    "zh": "《独立宣言》和《美国宪法》的辩论与签署地，可在独立游客中心领取免费限时导览票。"
+   },
+   "lat": 39.94889,
+   "lng": -75.15003,
+   "address": "520 Chestnut St, Philadelphia, PA 19106",
+   "area": {
+    "en": "Old City (Independence Mall)",
+    "zh": "老城区（独立广场）"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-independence-hall-1.jpg",
+    "/assets/poi/phl-independence-hall-2.jpg",
+    "/assets/poi/phl-independence-hall-3.jpg"
+   ],
+   "extra": {
+    "icon": "statue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Exterior_of_the_Independence_Hall,_Aug_2019.jpg",
+      "author": "Mys 721tx",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2019.04.27-Independance_Hall_Philadelphia_Reference_no_66000683.jpg",
+      "author": "Lyla0724",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Independence_Hall_(55259521048).jpg",
+      "author": "Gage Skidmore from Surprise, AZ, United States of America",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 25
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Liberty Bell",
+    "zh": "Liberty Bell"
+   },
+   "desc": {
+    "en": "The cracked bell, an icon of American liberty, displayed for free in a glass pavilion facing Independence Hall.",
+    "zh": "带裂痕的自由钟是美国自由的象征，免费陈列在正对独立厅的玻璃展馆中。"
+   },
+   "lat": 39.94995,
+   "lng": -75.15021,
+   "address": "526 Market St, Philadelphia, PA 19106",
+   "area": {
+    "en": "Old City (Independence Mall)",
+    "zh": "老城区（独立广场）"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-liberty-bell-1.jpg",
+    "/assets/poi/phl-liberty-bell-2.jpg",
+    "/assets/poi/phl-liberty-bell-3.jpg"
+   ],
+   "extra": {
+    "icon": "statue",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Liberty_Bell_(55259781330).jpg",
+      "author": "Gage Skidmore from Surprise, AZ, United States of America",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Liberty_Bell_(55259613199).jpg",
+      "author": "Gage Skidmore from Surprise, AZ, United States of America",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Liberty_Bell_(55259613094).jpg",
+      "author": "Gage Skidmore from Surprise, AZ, United States of America",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 26
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Philadelphia Museum of Art (Rocky Steps)",
+    "zh": "Philadelphia Museum of Art (Rocky Steps)"
+   },
+   "desc": {
+    "en": "Major art museum atop the steps Rocky ran up, at the end of the Benjamin Franklin Parkway beside the Schuylkill River.",
+    "zh": "坐落在《洛奇》主角奔上的台阶顶端的大型艺术博物馆，位于富兰克林大道尽头、斯库基尔河畔。"
+   },
+   "lat": 39.96557,
+   "lng": -75.18152,
+   "address": "2600 Benjamin Franklin Pkwy, Philadelphia, PA 19130",
+   "area": {
+    "en": "Fairmount / Art Museum",
+    "zh": "费尔芒特 / 艺术博物馆区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-museum-of-art-1.jpg",
+    "/assets/poi/phl-museum-of-art-2.jpg",
+    "/assets/poi/phl-museum-of-art-3.jpg"
+   ],
+   "extra": {
+    "icon": "museum",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Philadelphia_Museum_of_Art_(55259611529).jpg",
+      "author": "Gage Skidmore from Surprise, AZ, United States of America",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Philadelphia_Museum_of_Art_(55258481707).jpg",
+      "author": "Gage Skidmore from Surprise, AZ, United States of America",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Philadelphia_Museum_of_Art_(55259378176).jpg",
+      "author": "Gage Skidmore from Surprise, AZ, United States of America",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 27
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Reading Terminal Market",
+    "zh": "Reading Terminal Market"
+   },
+   "desc": {
+    "en": "A historic indoor food market from 1893 with dozens of vendors—cheesesteaks, Amish baked goods and fresh produce—beside the Convention Center.",
+    "zh": "始于1893年的室内美食市场，数十家摊位售卖芝士牛肉三明治、阿米什烘焙和新鲜农产品，紧邻会展中心。"
+   },
+   "lat": 39.95314,
+   "lng": -75.15905,
+   "address": "1136 Arch St, Philadelphia, PA 19107",
+   "area": {
+    "en": "Market East",
+    "zh": "东市场街"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-reading-terminal-market-1.jpg",
+    "/assets/poi/phl-reading-terminal-market-2.jpg",
+    "/assets/poi/phl-reading-terminal-market-3.jpg"
+   ],
+   "extra": {
+    "icon": "square",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Reading_Terminal_Market_entrance_on_12th_Street_north_of_Filbert_Street.jpeg",
+      "author": "Dough4872",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Reading_Terminal_Market_-_Sign_(53586791708).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:150th_Anniversary_of_U_S_Department_of_Agriculture-Historical_imagery_(20120106-OC-AMW-0586).jpg",
+      "author": "USDAgov",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 28
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Philadelphia City Hall",
+    "zh": "Philadelphia City Hall"
+   },
+   "desc": {
+    "en": "The largest municipal building in the US, topped by a William Penn statue; its tower observation deck is open to visitors.",
+    "zh": "全美最大的市政建筑，塔顶矗立威廉·佩恩雕像，塔楼观景台对游客开放。"
+   },
+   "lat": 39.9524,
+   "lng": -75.16299,
+   "address": "1400 John F Kennedy Blvd, Philadelphia, PA 19107",
+   "area": {
+    "en": "Center City",
+    "zh": "中城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-city-hall-1.jpg",
+    "/assets/poi/phl-city-hall-2.jpg",
+    "/assets/poi/phl-city-hall-3.jpg"
+   ],
+   "extra": {
+    "icon": "tower",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:City_Hall_and_Masonic_Temple,_Philadelphia.jpg",
+      "author": "Peetlesnumber1",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:City_Hall_Tower_0007.jpg",
+      "author": "Foolish Productions Photography",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:City_Hall_from_North_Broad_Street_0002.jpg",
+      "author": "Foolish Productions Photography",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 29
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Rittenhouse Square",
+    "zh": "里滕豪斯广场"
+   },
+   "desc": {
+    "en": "Leafy square at the heart of Center City's most sought-after neighborhood, ringed by cafés, shops and high-rise apartments.",
+    "zh": "中城最抢手街区中心的绿荫广场，周围环绕咖啡馆、商店和高层公寓。"
+   },
+   "lat": 39.94947,
+   "lng": -75.17189,
+   "address": "W Rittenhouse Sq & Walnut St, Philadelphia, PA 19103",
+   "area": {
+    "en": "Rittenhouse",
+    "zh": "里滕豪斯"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-rittenhouse-square-1.jpg",
+    "/assets/poi/phl-rittenhouse-square-2.jpg",
+    "/assets/poi/phl-rittenhouse-square-3.jpg"
+   ],
+   "extra": {
+    "icon": "park",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_-_Lion_with_a_Snake_(53585709357).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_looking_northwest_from_southeast_corner.jpeg",
+      "author": "Dough4872",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_looking_north_from_South_Rittenhouse_Square.jpeg",
+      "author": "Dough4872",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 30
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Elfreth's Alley",
+    "zh": "Elfreth's Alley"
+   },
+   "desc": {
+    "en": "Often called the oldest continuously inhabited residential street in the US, a cobbled lane of 18th-century rowhouses in Old City.",
+    "zh": "被誉为美国历史最悠久且一直有人居住的街道，老城区内铺满鹅卵石、两旁是18世纪联排房屋。"
+   },
+   "lat": 39.95277,
+   "lng": -75.14238,
+   "address": "Elfreth's Alley, Philadelphia, PA 19106",
+   "area": {
+    "en": "Old City",
+    "zh": "老城区"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-elfreths-alley-1.jpg",
+    "/assets/poi/phl-elfreths-alley-2.jpg",
+    "/assets/poi/phl-elfreths-alley-3.jpg"
+   ],
+   "extra": {
+    "icon": "square",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley-2023_03.jpg",
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley_-_Facade_(53572702213).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley,_Philadelphia.jpg",
+      "author": "Céline Harrand",
+      "license": "Public domain"
+     }
+    ]
+   },
+   "sort": 31
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "Boathouse Row",
+    "zh": "Boathouse Row"
+   },
+   "desc": {
+    "en": "Historic rowing clubhouses on the Schuylkill River, outlined in lights at night; a popular jogging and biking stretch.",
+    "zh": "斯库基尔河畔的历史赛艇俱乐部建筑群，夜晚轮廓灯亮起，是慢跑和骑行的热门路线。"
+   },
+   "lat": 39.96941,
+   "lng": -75.18711,
+   "address": "1 Boathouse Row, Philadelphia, PA 19130",
+   "area": {
+    "en": "Fairmount Park",
+    "zh": "费尔芒特公园"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-boathouse-row-1.jpg",
+    "/assets/poi/phl-boathouse-row-2.jpg",
+    "/assets/poi/phl-boathouse-row-3.jpg"
+   ],
+   "extra": {
+    "icon": "bridge",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Boathouse_Row_(DSC03844).jpg",
+      "author": "Polibil",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Behind_Philly%27s_art_museum_(6685417909).jpg",
+      "author": "joiseyshowaa from Freehold, NJ, USA",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Boathouse_Row_-_panoramio.jpg",
+      "author": "michaelwm25",
+      "license": "CC BY 3.0"
+     }
+    ]
+   },
+   "sort": 32
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "30th Street Station",
+    "zh": "30th Street Station"
+   },
+   "desc": {
+    "en": "Philadelphia's main Amtrak and SEPTA Regional Rail hub, a 1930s landmark at the edge of University City.",
+    "zh": "费城美铁和SEPTA区域铁路的主要枢纽，20世纪30年代的地标建筑，位于大学城边缘。"
+   },
+   "lat": 39.95528,
+   "lng": -75.18214,
+   "address": "2955 Market St, Philadelphia, PA 19104",
+   "area": {
+    "en": "University City",
+    "zh": "大学城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-30th-street-station-1.jpg",
+    "/assets/poi/phl-30th-street-station-2.jpg",
+    "/assets/poi/phl-30th-street-station-3.jpg"
+   ],
+   "extra": {
+    "icon": "train",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:The_west_entrance_of_the_30th_Street_Station_serving_Amtrak,_SEPTA,_and_NJ_Transit_trains_in_Philadelphia,_Pennsylvania,_viewed_from_John_F._Kennedy_Boulevard_01.jpg",
+      "author": "Harrison Keely",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:William_H._Gray_III_30th_Street_Station_(53585709922).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:30th_Street_Station_east_entrance_from_PA_3_WB_2.jpeg",
+      "author": "Dough4872",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 33
+  },
+  {
+   "kind": "landmark",
+   "name": {
+    "en": "LOVE Park",
+    "zh": "LOVE Park"
+   },
+   "desc": {
+    "en": "JFK Plaza, home of Robert Indiana's LOVE sculpture, framed by City Hall and the Parkway; holiday markets set up nearby.",
+    "zh": "肯尼迪广场，罗伯特·印第安纳的LOVE雕塑所在地，正对市政厅和富兰克林大道，节日期间周边有集市。"
+   },
+   "lat": 39.95415,
+   "lng": -75.16574,
+   "address": "1599 John F Kennedy Blvd, Philadelphia, PA 19102",
+   "area": {
+    "en": "Center City",
+    "zh": "中城"
+   },
+   "logo": null,
+   "images": [
+    "/assets/poi/phl-love-park-1.jpg",
+    "/assets/poi/phl-love-park-2.jpg",
+    "/assets/poi/phl-love-park-3.jpg"
+   ],
+   "extra": {
+    "icon": "park",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Escultura_Love-2023_01.jpg",
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Love_sculpture_in_LOVE_Park_in_Philadelphia_looking_northwest.jpeg",
+      "author": "Dough4872",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Philadelphia_City_Hall_from_LOVE_Park.jpg",
+      "author": "AbhiramJuvvadi",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 34
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Comcast Center (Comcast HQ)",
+    "zh": "Comcast Center (Comcast HQ)"
+   },
+   "desc": {
+    "en": "Comcast's global headquarters, a 58-story glass tower on JFK Boulevard with a public lobby and concourse dining.",
+    "zh": "康卡斯特全球总部，肯尼迪大道上58层的玻璃大楼，设有对外开放的大堂和地下美食街。"
+   },
+   "lat": 39.95472,
+   "lng": -75.1685,
+   "address": "1701 John F Kennedy Blvd, Philadelphia, PA 19103",
+   "area": {
+    "en": "Market Street West",
+    "zh": "西市场街"
+   },
+   "logo": "/assets/company-logos/comcast.png",
+   "images": [
+    "/assets/poi/phl-comcast-1.jpg",
+    "/assets/poi/phl-comcast-2.jpg",
+    "/assets/poi/phl-comcast-3.jpg"
+   ],
+   "extra": {
+    "icon": "media",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Center_City_East,_Philadelphia,_PA,_USA_-_panoramio_(17).jpg",
+      "author": "Андрей Бобровский",
+      "license": "CC BY 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Comcast_Tower_Philadelphia.jpg",
+      "author": "Seth Goldstein",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Philadelphia_downtown.JPG",
+      "author": "Gccwang",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 35
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Comcast Technology Center",
+    "zh": "Comcast Technology Center"
+   },
+   "desc": {
+    "en": "Philadelphia's tallest building, home to Comcast's technology and media teams with a Four Seasons hotel on top.",
+    "zh": "费城最高建筑，康卡斯特技术与媒体团队的办公地，顶层是四季酒店。"
+   },
+   "lat": 39.95498,
+   "lng": -75.1704,
+   "address": "1800 Arch St, Philadelphia, PA 19103",
+   "area": {
+    "en": "Market Street West",
+    "zh": "西市场街"
+   },
+   "logo": "/assets/company-logos/comcast.png",
+   "images": [
+    "/assets/poi/phl-comcast-tech-center-1.jpg",
+    "/assets/poi/phl-comcast-tech-center-2.jpg",
+    "/assets/poi/phl-comcast-tech-center-3.jpg"
+   ],
+   "extra": {
+    "icon": "tech",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2025-08-04_13_09_54_The_southeast_entrance_of_the_Comcast_Technology_Center_in_Philadelphia,_Pennsylvania.jpg",
+      "author": "Famartin",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:View_of_Center_City.jpg",
+      "author": "dconvertini",
+      "license": "CC BY-SA 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:CTC_Tower_April_2018.jpg",
+      "author": "StuntPilot22",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 36
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Children's Hospital of Philadelphia",
+    "zh": "Children's Hospital of Philadelphia"
+   },
+   "desc": {
+    "en": "Children's Hospital of Philadelphia, a leading pediatric hospital and research center on the University City medical campus.",
+    "zh": "费城儿童医院，全美领先的儿科医院和研究中心，位于大学城医疗园区。"
+   },
+   "lat": 39.9477,
+   "lng": -75.19498,
+   "address": "3401 Civic Center Blvd, Philadelphia, PA 19104",
+   "area": {
+    "en": "University City",
+    "zh": "大学城"
+   },
+   "logo": "/assets/company-logos/chop.png",
+   "images": [
+    "/assets/poi/phl-chop-1.jpg",
+    "/assets/poi/phl-chop-2.jpg",
+    "/assets/poi/phl-chop-3.jpg"
+   ],
+   "extra": {
+    "icon": "health",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Children%27s_Hospital_of_Philadelphia.jpg",
+      "author": "Jeffrey M. Vinocur",
+      "license": "CC BY 2.5"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:PennMed%26CHOPQuadSpring2013.jpg",
+      "author": "Ajaxean",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Seashore-House.JPG",
+      "author": "Austin Murphy",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 37
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Cigna (Two Liberty Place)",
+    "zh": "Cigna (Two Liberty Place)"
+   },
+   "desc": {
+    "en": "Two Liberty Place, the 58-story Center City tower that has long housed health insurer Cigna's main Philadelphia offices.",
+    "zh": "中城58层的二号自由广场大楼，长期是医疗保险公司信诺（Cigna）在费城的主要办公地。"
+   },
+   "lat": 39.9517,
+   "lng": -75.16745,
+   "address": "1601 Chestnut St, Philadelphia, PA 19192",
+   "area": {
+    "en": "Center City (Market Street West)",
+    "zh": "中城（西市场街）"
+   },
+   "logo": "/assets/company-logos/cigna.png",
+   "images": [
+    "/assets/poi/phl-cigna-1.jpg",
+    "/assets/poi/phl-cigna-2.jpg",
+    "/assets/poi/phl-cigna-3.jpg"
+   ],
+   "extra": {
+    "icon": "health",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Brookfield_Place_New_York_August_2017_003.jpg",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Skyline_in_Philadelphia_-_IMG_6643.JPG",
+      "author": "Daderot",
+      "license": "Public domain"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:2025-08-04_12_46_43_View_south-southeast_from_the_Jean-Georges_SkyHigh_Restaurant_at_Comcast_Technology_Center_in_Philadelphia,_Pennsylvania.jpg",
+      "author": "Famartin",
+      "license": "CC BY-SA 4.0"
+     }
+    ]
+   },
+   "sort": 38
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Penn Medicine – Pennsylvania Hospital",
+    "zh": "Penn Medicine – Pennsylvania Hospital"
+   },
+   "desc": {
+    "en": "Founded in 1751 as the nation's first hospital, Pennsylvania Hospital is part of Penn Medicine, one of the city's largest employers.",
+    "zh": "宾夕法尼亚医院建于1751年，是美国第一家医院，现属费城最大雇主之一的宾大医疗体系。"
+   },
+   "lat": 39.94536,
+   "lng": -75.15565,
+   "address": "800 Spruce St, Philadelphia, PA 19107",
+   "area": {
+    "en": "Washington Square West",
+    "zh": "华盛顿广场西"
+   },
+   "logo": "/assets/company-logos/penn-medicine.png",
+   "images": [
+    "/assets/poi/phl-penn-medicine-1.jpg",
+    "/assets/poi/phl-penn-medicine-2.jpg",
+    "/assets/poi/phl-penn-medicine-3.jpg"
+   ],
+   "extra": {
+    "icon": "health",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Hospital_(53590616710).jpg",
+      "author": "ajay_suresh",
+      "license": "CC BY 2.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Hospital,_Philadelphia.jpg",
+      "author": "Luca Borghi",
+      "license": "CC BY-SA 3.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Hospital_Original2_2013.jpg",
+      "author": "Rytyho usa",
+      "license": "CC BY-SA 3.0"
+     }
+    ]
+   },
+   "sort": 39
+  },
+  {
+   "kind": "company",
+   "name": {
+    "en": "Jefferson Health – Thomas Jefferson University",
+    "zh": "Jefferson Health – Thomas Jefferson University"
+   },
+   "desc": {
+    "en": "Center City campus of Thomas Jefferson University and its flagship Jefferson Health hospital, one of Philadelphia's largest employers.",
+    "zh": "托马斯·杰斐逊大学及其旗下杰斐逊医疗旗舰医院的中城园区，是费城最大的雇主之一。"
+   },
+   "lat": 39.94928,
+   "lng": -75.15803,
+   "address": "111 S 11th St, Philadelphia, PA 19107",
+   "area": {
+    "en": "Market East / Washington Square West",
+    "zh": "东市场街 / 华盛顿广场西"
+   },
+   "logo": "/assets/company-logos/jefferson.png",
+   "images": [
+    "/assets/poi/phl-jefferson-1.jpg",
+    "/assets/poi/phl-jefferson-2.jpg",
+    "/assets/poi/phl-jefferson-3.jpg"
+   ],
+   "extra": {
+    "icon": "health",
+    "credits": [
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Jefferson_University_Scott_Memorial_LIbrary.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Phila_U_2021_(15)_jeh.jpg",
+      "author": "Jim.henderson",
+      "license": "CC BY 4.0"
+     },
+     {
+      "file": "https://commons.wikimedia.org/wiki/File:Phila_U_2021_(14)_uncut_jeh.jpg",
+      "author": "Jim.henderson",
+      "license": "CC BY 4.0"
+     }
+    ]
+   },
+   "sort": 40
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "30th Street Station (Amtrak+Regional Rail+local transit)",
+    "zh": "30th Street Station (Amtrak+Regional Rail+local transit)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 39.9566,
+   "lng": -75.1819,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 41
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Suburban Station",
+    "zh": "Suburban Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 39.9538,
+   "lng": -75.1657,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 42
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Jefferson Station",
+    "zh": "Jefferson Station"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 39.9526,
+   "lng": -75.1583,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 43
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "City Hall / 15th Street",
+    "zh": "City Hall / 15th Street"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 39.9526,
+   "lng": -75.1636,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 44
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "69th Street Transportation Center",
+    "zh": "69th Street Transportation Center"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 39.9673,
+   "lng": -75.2578,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 45
+  },
+  {
+   "kind": "commute",
+   "name": {
+    "en": "Philadelphia International Airport (PHL)",
+    "zh": "Philadelphia International Airport (PHL)"
+   },
+   "desc": {
+    "en": "",
+    "zh": ""
+   },
+   "lat": 39.8744,
+   "lng": -75.2424,
+   "address": "",
+   "area": {
+    "en": "",
+    "zh": ""
+   },
+   "logo": null,
+   "images": [],
+   "extra": {},
+   "sort": 46
+  }
+ ]
+}

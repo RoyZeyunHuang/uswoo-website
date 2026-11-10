@@ -1,0 +1,51 @@
+/* Press & Stories 在设计稿之外补充的样式（手工维护；press.css 由提取脚本生成，会被覆盖）。 */
+
+/* 「Latest Press」原先固定三条，现在条数由 CMS 决定：给第四条起补上同节奏的出场延迟 */
+@media (min-width: 861px) {
+  html.motion .pg-press #featured-press .press-side-item:nth-child(n + 4).in .press-side-text > :nth-child(1) {
+    transition-delay: 2.15s;
+  }
+  html.motion .pg-press #featured-press .press-side-item:nth-child(n + 4).in .press-side-text > :nth-child(2),
+  html.motion .pg-press #featured-press .press-side-item:nth-child(n + 4).in .press-side-media {
+    transition-delay: 2.3s;
+  }
+}
+
+/* 只有一篇报道时没有右侧列表，主卡片不必再占 1.3fr */
+.pg-press .press-grid.solo {
+  grid-template-columns: minmax(0, 860px);
+}
+
+/* 没有封面图的卡片：留一块浅色底，版式不塌 */
+.pg-press .press-feature-media,
+.pg-press .press-side-media,
+.pg-press .media-card-media {
+  background: var(--paper-raised);
+}
+
+/* Brand Moments 没有外链的卡片不是链接：不要悬停上浮，手机上也不显示右侧箭头 */
+.pg-press div.moment-item:hover {
+  transform: none;
+}
+
+@media (max-width: 560px) {
+  .pg-press #brand-moments div.moment-item::after {
+    background: none;
+  }
+}
+
+/* 三个板块都没有内容时的占位 */
+.pg-press .press-empty {
+  text-align: center;
+}
+
+.pg-press .press-empty .eyebrow {
+  justify-content: center;
+}
+
+.pg-press .press-empty p.lede {
+  margin: 16px auto 0;
+  max-width: 46ch;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}

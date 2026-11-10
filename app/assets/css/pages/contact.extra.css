@@ -1,0 +1,33 @@
+/* Contact 页在设计稿之外补充的样式（手工维护；contact.css 由提取脚本生成，会被覆盖）。 */
+
+/* 蜜罐输入框：视觉上隐藏，也不占表单网格的位置（不用 display:none，部分自动填表程序会跳过） */
+.pg-contact .contact-form {
+  position: relative;
+}
+
+.pg-contact .contact-form .cf-website {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 提交中：按钮变淡、不可点 */
+.pg-contact .contact-form .btn[disabled] {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+
+/* 提交结果：沿用设计稿 .form-msg 的字号与居中，成功用正文色，出错用偏深的红色（粉色在白底上对比度不够） */
+.pg-contact .form-msg.is-success {
+  color: var(--ink);
+}
+
+.pg-contact .form-msg.is-error {
+  color: #c2414b;
+}

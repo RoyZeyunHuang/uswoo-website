@@ -2,11 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "uswoo-static",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-c", "import os,http.server,socketserver; socketserver.TCPServer.allow_reuse_address=True; http.server.test(HandlerClass=http.server.SimpleHTTPRequestHandler, port=int(os.environ.get('PORT','4173')))"],
-      "port": 4173,
-      "autoPort": true
+      "name": "uswoo-nuxt",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dev", "--port", "3210"],
+      "port": 3210
     }
   ]
 }
