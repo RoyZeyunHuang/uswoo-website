@@ -23,13 +23,20 @@ export default defineEventHandler(async (event): Promise<Guide> => {
   if (!import.meta.dev) throw createError({ statusCode: 404 });
   const region = getRouterParam(event, "region") ?? "";
   if (!/^[a-z0-9-]+$/.test(region)) throw createError({ statusCode: 404 });
-  // 波士顿没有自己的数据：与 CMS 里的做法一样，复制纽约的内容并标记为占位
-  const placeholder = region === "boston";
+  const load = async (name: string) => JSON.parse(await readFile(resolve(process.cwd(), "seed/guides", `${name}.json`), "utf8")) as SeedGuide;
   let seed: SeedGuide;
+  let placeholder = false;
   try {
-    seed = JSON.parse(await readFile(resolve(process.cwd(), "seed/guides", `${placeholder ? "new-york" : region}.json`), "utf8")) as SeedGuide;
+    seed = await load(region);
   } catch {
-    throw createError({ statusCode: 404 });
+    // 波士顿还没有自己的 seed 文件时：与 CMS 里的做法一样，复制纽约的内容并标记为占位
+    if (region !== "boston") throw createError({ statusCode: 404 });
+    try {
+      seed = await load("new-york");
+      placeholder = true;
+    } catch {
+      throw createError({ statusCode: 404 });
+    }
   }
   return {
     region,

@@ -1,0 +1,22 @@
+{
+  "key": "contact",
+  "payload": {
+    "hero": {
+      "image": {
+        "url": "/assets/contact-nyc-street.jpg"
+      },
+      "text": {
+        "en": "Questions about renting, partnering with USWOO, or press? Send us a note and our team will get back to you within two business days.",
+        "zh": "无论是寻找理想的家、了解合作机会，还是媒体采访咨询，都欢迎与我们联系。"
+      },
+      "titleAccent": {
+        "en": "us",
+        "zh": "我们"
+      },
+      "titleLead": {
+        "en": "Contact",
+        "zh": "联系"
+      }
+    }
+  }
+}

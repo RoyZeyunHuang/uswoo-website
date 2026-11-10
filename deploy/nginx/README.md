@@ -7,12 +7,13 @@ uswoo.com 所在机器上与新官网有关的 Nginx 配置。这里是变更记
 |---|---|---|
 | `uswoo.com.public-api.conf` | uswoo.com 站点文件中新增的片段 | 2026-11-10 已上线 |
 | `new.uswoo.cn.conf` | 测试站站点文件 | 2026-11-10 已上线（HTTP 自动跳转 HTTPS，转发到应用容器） |
+| `new.uswoo.com.conf` | 测试站的第二个域名，站点文件 | 2026-11-10 已上线，与 `new.uswoo.cn` 指向同一个应用容器 |
 
 改动规程见 `docs/refactor-plan.md` 第 8.3 节：先备份、先做语法检查、只平滑重载、改完立即验证、失败即还原。
 服务器上的备份放在 Nginx 配置目录下的 `backup/`，文件名带时间戳。
 
 ## 证书
 
-- `new.uswoo.cn` 使用 Let's Encrypt 证书，2026-11-10 签发，未登记联系邮箱。
+- `new.uswoo.cn`、`new.uswoo.com` 各用一张 Let's Encrypt 证书，2026-11-10 签发，未登记联系邮箱。两个域名都已加入接口反代的跨域白名单。
 - 机器自带的 certbot 已损坏，签发与续期都用容器版 certbot，验证方式为网站目录验证。
 - 续期脚本在测试站目录的 `bin/renew-cert.sh`，由 root 的计划任务每周一凌晨执行；到期前 30 天内才会真正续期，续期后平滑重载 Nginx。续期试运行已通过。

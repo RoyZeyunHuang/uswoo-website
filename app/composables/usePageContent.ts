@@ -12,6 +12,18 @@ function dig(source: unknown, path: string): unknown {
 }
 
 /**
+ * 【仅本地开发】记下页面渲染时用到的每个字段和它的默认值，tools/seed-pages.mjs 据此生成导入 CMS 的初始内容
+ * （server/routes/_dev/page-defaults.get.ts 读取）。正式构建里 import.meta.dev 为 false，这段不存在。
+ */
+type DefaultsStore = Record<string, Record<string, unknown>>;
+function recordDefault(pageKey: string, path: string, value: unknown) {
+  if (!import.meta.dev || !import.meta.server) return;
+  const holder = globalThis as { __uswooPageDefaults?: DefaultsStore };
+  const store = (holder.__uswooPageDefaults ??= {});
+  (store[pageKey] ??= {})[path] = value;
+}
+
+/**
  * 页面内容：CMS 里配置了就用 CMS 的，没配置的字段用代码里的默认文案。
  *
  *   const { c, ch } = await usePageContent("home");
@@ -35,6 +47,7 @@ export async function usePageContent(pageKey: string, region?: string) {
 
   function text(path: string, english: string, chinese?: string): string {
     const leaf = dig(payload.value, path) as Leaf | undefined;
+    recordDefault(pageKey, path, { en: english, zh: chinese || lookupZh(english) || "" });
     const custom = typeof leaf === "string" ? { en: leaf, zh: "" } : leaf && typeof leaf === "object" ? leaf : null;
     if (isZh.value) return custom?.zh || chinese || lookupZh(english) || custom?.en || english;
     return custom?.en || english;
@@ -47,11 +60,13 @@ export async function usePageContent(pageKey: string, region?: string) {
   /** 图片：CMS 里用 {"mediaId": n} 配置后接口会带出 url；没配置就用默认图 */
   function img(path: string, fallback: string): string {
     const leaf = dig(payload.value, path) as { url?: string | null } | undefined;
+    recordDefault(pageKey, path, { url: fallback });
     return leaf?.url || fallback;
   }
   /** 数字等原始值 */
   function raw<T>(path: string, fallback: T): T {
     const leaf = dig(payload.value, path);
+    recordDefault(pageKey, path, fallback);
     return leaf === undefined || leaf === null || leaf === "" ? fallback : (leaf as T);
   }
 

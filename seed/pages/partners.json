@@ -1,0 +1,196 @@
+{
+  "key": "partners",
+  "payload": {
+    "cta": {
+      "button": {
+        "en": "Talk to Our Team",
+        "zh": "联系我们团队"
+      },
+      "lede": {
+        "en": "Every building has a different renter, market, and leasing story. We'd love to learn more about yours and see where USWOO can help.",
+        "zh": "无论是新楼盘预租，还是现有物业的日常招租，我们都期待了解您的需求，一起探索更适合您物业的租赁与推广方案。"
+      },
+      "title": {
+        "en": "Let's Talk About Your Building.",
+        "zh": "让我们聊聊您的物业"
+      }
+    },
+    "editorial": {
+      "hey": {
+        "en": "To our developer and property management partners:",
+        "zh": "致开发商及物业管理合作伙伴："
+      },
+      "imageLeft": {
+        "url": "https://images.unsplash.com/photo-1772797583328-f83bc3f94f80?auto=format&fit=crop&w=900&q=80"
+      },
+      "imageRight": {
+        "url": "/assets/partners-editorial-right.jpg?v=2"
+      },
+      "lede": {
+        "en": "Higher occupancy and more stable rental income, driving long-term growth in your property’s value.",
+        "zh": "以更高的出租率、更稳健的租金收入，推动物业资产长期增值。"
+      },
+      "title": {
+        "en": "Your Asset, <br class=m-br>Our Shared Goal",
+        "zh": "您的资产价值<br class=m-br>我们的共同目标"
+      }
+    },
+    "hero": {
+      "image": {
+        "url": "/assets/partners-hero.jpg"
+      },
+      "slogan": {
+        "en": "We care not only about how many units we lease, but also how quickly each unit is leased, helping properties shorten vacancy periods and maintain stable rental income.",
+        "zh": "我们不仅关注出租数量，也重视每套房源的出租速度，帮助物业缩短空置时间，保持稳定的租金收入。"
+      },
+      "title": {
+        "en": "Fewer vacancies, more efficient leasing.",
+        "zh": "减少空置<br class=m-br>让出租更高效"
+      }
+    },
+    "offers": [
+      {
+        "text": {
+          "en": "Reach high-intent renters through local communities, targeted marketing and diverse promotion channels, so every impression counts.",
+          "zh": "依托本地社群、精准营销与多元推广渠道，触达高意向租客，让每一次曝光更有价值。"
+        },
+        "title": {
+          "en": "Find the right renters",
+          "zh": "找到对的租客"
+        }
+      },
+      {
+        "text": {
+          "en": "From first inquiry to signed lease, we connect every step of the rental process to reduce drop-off and speed up leasing.",
+          "zh": "从首次咨询到最终签约，紧密衔接每个租赁环节，减少客户流失，加快出租进度。"
+        },
+        "title": {
+          "en": "Turn interest into signed leases",
+          "zh": "让意向变成签约"
+        }
+      },
+      {
+        "text": {
+          "en": "Beyond short-term promotion, we keep growing your property’s presence among target renters, building steady demand for future leasing.",
+          "zh": "不止于短期推广，持续扩大物业在目标客群中的影响力，为未来租赁积累稳定需求。"
+        },
+        "title": {
+          "en": "Keep rental momentum going",
+          "zh": "让租赁热度持续"
+        }
+      }
+    ],
+    "performance": {
+      "cards": [
+        {
+          "desc": {
+            "en": "Higher-intent traffic helps shorten the path from interest to lease.",
+            "zh": "我们不只带来看房和咨询，更关注最终的签约结果。通过有效沟通与及时跟进，让更多租房意向转化为实际租约。"
+          },
+          "image": {
+            "url": "/assets/partners-lease-agreement.webp"
+          },
+          "label": {
+            "en": "Faster Lease Conversion",
+            "zh": "租赁转化率"
+          },
+          "num": "25%"
+        },
+        {
+          "desc": {
+            "en": "Over 60% of our inquiries come from organic search, social media, and word of mouth. Steady organic traffic keeps us connected to renters who are truly looking for a home.",
+            "zh": "超过六成的咨询来自自然搜索、社交媒体及口碑推荐。稳定的自然流量，让我们能够持续接触真正有租房需求的客户。"
+          },
+          "image": {
+            "url": "/assets/loc-chicago.jpg"
+          },
+          "label": {
+            "en": "Organic Inbound",
+            "zh": "自然流量咨询"
+          },
+          "num": "65–75%"
+        },
+        {
+          "desc": {
+            "en": "A broad distribution network across renter communities and platforms.",
+            "zh": "广泛的社交媒体与社群推广网络，让我们能够针对不同物业和租客群体，扩大房源曝光，吸引更多关注。"
+          },
+          "label": {
+            "en": "Social Accounts",
+            "zh": "社媒推广账号"
+          },
+          "num": "1,000+"
+        },
+        {
+          "desc": {
+            "en": "A significant share of renter demand comes through non-paid channels, so every lead arrives already interested in your building.",
+            "zh": "多年来积累的客户信任与市场口碑，让不少租客在开始找房时就主动联系 USWOO，为合作物业带来持续的租赁机会。"
+          },
+          "image": {
+            "url": "/assets/partners-renter-bedroom.webp"
+          },
+          "label": {
+            "en": "Demand that comes to you",
+            "zh": "租客主动找上门"
+          }
+        }
+      ],
+      "title": {
+        "en": "What that looks like <em>in practice</em>.",
+        "zh": "租赁成果用数据说话"
+      }
+    },
+    "why": {
+      "cards": [
+        {
+          "text": {
+            "en": "On-the-ground knowledge of the markets and buildings we work with.",
+            "zh": "长期深耕纽约租赁市场，熟悉不同社区的租赁趋势、租客偏好及物业特点，能够结合市场变化与实际需求，提供更有针对性的建议。"
+          },
+          "title": {
+            "en": "Local teams",
+            "zh": "本地市场经验"
+          }
+        },
+        {
+          "text": {
+            "en": "A closer understanding of how international renters search, compare, and decide.",
+            "zh": "了解国际租客在语言、文化及租房习惯上的差异，帮助他们更清楚地理解房源信息、申请要求和租赁流程，减少沟通中的误解。"
+          },
+          "title": {
+            "en": "Cultural understanding",
+            "zh": "跨文化沟通"
+          }
+        },
+        {
+          "text": {
+            "en": "Real people supporting the leasing journey, not just sending traffic.",
+            "zh": "从初次咨询、预约看房到申请及入住协调，我们重视每一个服务细节，及时回应租客需求，也积极配合物业团队的日常工作。"
+          },
+          "title": {
+            "en": "Hands-on support",
+            "zh": "细致周到的服务"
+          }
+        },
+        {
+          "text": {
+            "en": "We value lasting partnerships over one-off campaigns.",
+            "zh": "我们重视每一次合作，也珍惜长期建立的信任。通过持续沟通、市场反馈与灵活配合，与物业团队共同应对不断变化的租赁需求。"
+          },
+          "title": {
+            "en": "Long-term relationships",
+            "zh": "稳定长久的合作"
+          }
+        }
+      ],
+      "lede": {
+        "en": "International renters often make housing decisions differently. Timing, communication, cultural context, and trust all play a role. Our team understands those details and helps turn that understanding into a smoother leasing experience for both renters and properties.",
+        "zh": "好的租赁合作，不只是把房子租出去。我们熟悉纽约不同社区的租赁市场，也了解国际租客的生活习惯、沟通方式和实际需求。从日常沟通到租赁协调，我们希望让物业管理更省心，也让租客的整个租房过程更顺畅。"
+      },
+      "title": {
+        "en": "We understand the renter behind the lead.",
+        "zh": "熟悉纽约市场<br class=m-br>更了解租客的需求"
+      }
+    }
+  }
+}
