@@ -20,9 +20,11 @@ function dig(source: unknown, path: string): unknown {
  *   img("hero.poster")                  // 图片地址
  *   raw<number>("about.stats.0.value")  // 数字、链接等原始值
  *   list("help.cards")                  // 列表的下标，配合 v-for 使用
+ *   on("help")                          // 区块是否展示（help.show 不为 false）
  *
  * 字段在 CMS 里没有填时返回空字符串（列表为空数组），页面上对应位置留空。
- * About、Partners 可以按地区单独配置：传入地区后，该地区没有单独内容时接口返回全站默认（page.resolvedFrom = "global"）。
+ * 首页、Services、About、Partners 可以按地区配置：传入地区后，接口把该地区的内容盖在全站默认之上返回；
+ * 该地区没有单独内容时就是全站默认（page.resolvedFrom = "global"）。
  */
 export async function usePageContent(pageKey: string, region?: string) {
   const api = useApi();
@@ -57,5 +59,11 @@ export async function usePageContent(pageKey: string, region?: string) {
     return Array.isArray(leaf) ? leaf.map((_, index) => index) : [];
   }
 
-  return { c, ch, img, raw, list, page: data as Ref<PageContent> };
+  /**
+   * 区块是否展示：CMS 里把某个区块的 show 设为 false 就隐藏它（`<section v-if="on('help')">`）。
+   * 没写 show 视为展示。地区可以只写 {"help": {"show": false}} 来隐藏全站默认里的某个区块。
+   */
+  const on = (path: string) => raw<boolean>(`${path}.show`) !== false;
+
+  return { c, ch, img, raw, list, on, page: data as Ref<PageContent> };
 }

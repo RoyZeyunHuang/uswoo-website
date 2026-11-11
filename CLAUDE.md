@@ -20,7 +20,10 @@ ch("hero.title")              // 给 v-html 用，只保留少量内联标记
 img("hero.poster")            // 图片地址
 raw<number>("stats.0.value")  // 数字、链接等
 list("help.cards")            // 列表下标，配合 v-for
+on("help")                    // 区块是否展示（CMS 里 help.show 不为 false）
 ```
+
+- **每个区块都要能在 CMS 里隐藏**：页面上的每个 `<section>` 写成 `<section v-if="on('区块键')">`，区块键就是它在 CMS 内容里的顶层字段名。新增区块时照此处理，并保证区块不存在时页面脚本不报错。
 
 - 全站通用内容（站点名称、logo、favicon、导航、页脚）用 `await useSite()`，用法相同。
 - 需要新的文字或图片时：**先**在 CMS 对应页面里加字段并填好中英文，**再**发布读取它的代码。字段没填时页面上是空的，不会有兜底。
@@ -29,15 +32,15 @@ list("help.cards")            // 列表下标，配合 v-for
 
 | CMS 页面键 | 内容 |
 |---|---|
-| `home`、`services`、`contact` | 首页、Services、Contact |
-| `about`、`partners` | About、Partners（可按地区单独配置：`usePageContent("about", region)`） |
+| `home`、`services`、`about`、`partners` | 首页、Services、About、Partners。可按地区配置：`usePageContent("home", region)`，接口把该地区的内容盖在全站默认之上返回 |
+| `contact` | Contact（全站一份） |
 | `listings`、`press`、`city-guides` | 这三类页面上的固定文案（列表条目来自各自的内容表） |
 | `site` | 全站通用：站点名称、logo、favicon、导航、页脚、默认分享图 |
 
 ## 其他约定
 
 - **数据只读公开接口** `https://uswoo.com/api/uswoo/public/*`，用 `useApi()`；返回类型在 `shared/types/api.ts`，跟着后端的实际返回走，不要单方面修改。需要接口变化时让用户把需求提给后端同事。
-- **路由**：英文无前缀，中文在 `/zh`。分地区的页面在 `app/pages/[region]/`，与不带地区的汇总页共用 `app/components/views/` 里的同一个组件。地区列表来自 `useRegions()`，不要在代码里写死地区。
+- **路由**：英文无前缀，中文在 `/zh`。分地区的页面在 `app/pages/[region]/`（地区首页是 `/{region}`），与不带地区的页面共用 `app/components/views/` 里的同一个组件。地区列表来自 `useRegions()`，不要在代码里写死地区。
 - **样式**：`app/assets/css/pages/<页面>.css` 由设计稿生成（`pnpm extract`），不要手改；补充样式写在同名的 `.extra.css`。所有选择器限定在 `.pg-<页面>` 之下。
 - **SEO**：每个页面调用一次 `usePageSeo()`，标题、描述、关键词取自该页面在 CMS 里的 `seo` 字段。
 - **服务端渲染**：内容必须在服务端输出；`window`、`document` 只在 `onMounted` 里用。页面输出不能包含访客相关的内容（整页会被缓存）。

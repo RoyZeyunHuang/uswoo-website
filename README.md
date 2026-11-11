@@ -42,9 +42,9 @@ pnpm typecheck
 ## 网址
 
 - 英文无前缀，中文在 `/zh`。
-- 全站一份：`/`、`/services`、`/contact`。
-- 分地区：`/{region}/city-guide`、`/{region}/listings`、`/{region}/press`、`/{region}/partners`、`/{region}/about`；
-  不带地区的 `/city-guides`、`/listings`、`/press`、`/partners`、`/about` 是汇总页。
+- 全站一份：`/contact`。
+- 分地区：`/{region}`（地区首页）、`/{region}/services`、`/{region}/city-guide`、`/{region}/listings`、`/{region}/press`、`/{region}/partners`、`/{region}/about`；
+  不带地区的 `/`、`/services`、`/city-guides`、`/listings`、`/press`、`/partners`、`/about` 是全站页或汇总页。
 - 详情：`/press/{slug}`、`/listings/{id}`。
 - 地区：`new-york`（含新泽西）、`boston`、`chicago`、`los-angeles`、`washington-dc`、`philadelphia`。
 
@@ -53,7 +53,7 @@ pnpm typecheck
 代码里不保留任何默认内容，访客看到的一切都来自 CMS：
 
 - **文章、房源、City Guide**：各自的内容表。
-- **各页面的文案、图片、数字、SEO 标题与描述**：CMS「新官网页面」里的九个页面——首页、Services、Contact、About、Partners（后两个可按地区单独配置），以及房源页文案、文章页文案、城市指南页文案、全站通用。
+- **各页面的文案、图片、数字、SEO 标题与描述**：CMS「新官网页面」里的九个页面——首页、Services、About、Partners（这四个可按地区配置：地区只需写与全站默认不同的部分，每个区块可单独隐藏）、Contact，以及房源页文案、文章页文案、城市指南页文案、全站通用。
 - **站点名称、favicon、logo、导航、页脚（订阅、社交链接、办公室、旗下平台、留学生网、二维码，各带展示开关）**：「全站通用」。
 - **地区卡片的配图与顺序**：「新官网地区」。
 - **SEO 标题、描述、关键词**：各页面自己的 `seo` 字段；文章与房源用各自的 SEO 字段。不读取旧官网的「SEO 设置」。
