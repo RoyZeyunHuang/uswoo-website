@@ -1,7 +1,7 @@
 <template>
   <header id="siteNav" ref="el" class="nav" :class="{ scrolled, 'menu-open': open, 'uswoo-solid': solid }">
     <div class="nav-inner">
-      <NuxtLink class="wordmark" :to="localePath('/')">
+      <NuxtLink class="wordmark" :to="localePath(regionPath('home', lastRegion))">
         <!-- CMS 里配置了 logo 图片就显示图片，否则显示文字标识 -->
         <img v-if="img('brand.logo')" class="wordmark-logo" :src="img('brand.logo')" :alt="c('brand.siteName')" />
         <template v-else>{{ c("brand.wordmark") }}</template>
@@ -78,7 +78,7 @@ const REGION_KEY = "uswoo_region";
 const lastRegion = ref<string | null>(null);
 
 const items = computed(() => [
-  { key: "services", label: "nav.services", path: "/services" },
+  { key: "services", label: "nav.services", path: regionPath("services", lastRegion.value) },
   { key: "city-guides", label: "nav.cityGuides", path: regionPath("city-guide", lastRegion.value) },
   { key: "listings", label: "nav.listings", path: regionPath("listings", lastRegion.value) },
   { key: "press", label: "nav.press", path: regionPath("press", lastRegion.value) },
@@ -95,8 +95,12 @@ const routeRegion = computed(() => (typeof route.params.region === "string" ? ro
 /** 当前地区：分地区的页面以网址为准，其他页面用访客上次的选择（挂载后才知道） */
 const activeRegion = computed(() => regions.value.find(region => region.slug === (routeRegion.value ?? lastRegion.value)) ?? null);
 
-/** 路由名（去掉语言后缀）→ 分地区的页面类型；不在表里的页面（首页、Services、详情页等）没有地区版本 */
+/** 路由名（去掉语言后缀）→ 分地区的页面类型；不在表里的页面（Contact、详情页等）没有地区版本 */
 const REGIONAL_ROUTES: Record<string, RegionalPage> = {
+  index: "home",
+  region: "home",
+  services: "services",
+  "region-services": "services",
   "city-guides": "city-guide",
   "region-city-guide": "city-guide",
   listings: "listings",

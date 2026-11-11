@@ -36,7 +36,9 @@ export default defineEventHandler(async event => {
   for (const region of data.regions) {
     if (region.guide) entries.push({ path: `/${region.slug}/city-guide`, lastmod: region.guide.updatedAt });
     entries.push({ path: `/${region.slug}/listings` }, { path: `/${region.slug}/press` });
-    for (const key of ["about", "partners"]) {
+    // 只有单独配置过内容的地区页才列入（没配置的与全站页面内容相同，canonical 指向全站页面）
+    if ("home" in region.pages) entries.push({ path: `/${region.slug}`, lastmod: region.pages.home });
+    for (const key of ["services", "about", "partners"]) {
       if (key in region.pages) entries.push({ path: `/${region.slug}/${key}`, lastmod: region.pages[key] });
     }
   }
