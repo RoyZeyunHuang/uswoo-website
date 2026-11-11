@@ -14,3 +14,143 @@
 html.m-reveal .pg-home #locations .location-card.m-in:nth-child(6) {
   transition-delay: 0.6s;
 }
+
+/* ---- 「我们如何帮你」的另外两种版式（CMS 里 help.layout，各地区自选；默认的大图卡片样式在 home.css） ---- */
+
+/* 两种版式共用的步骤序号：细体大数字，与标题旁粉色的区块序号区分开 */
+.pg-home .flow-no {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.pg-home .flow--text .media-card-body,
+.pg-home .flow--compact .media-card-body {
+  padding: 0;
+}
+
+.pg-home .flow--text .media-card-body h3,
+.pg-home .flow--compact .media-card-body h3 {
+  font-size: 1.32rem;
+  line-height: 1.3;
+}
+
+.pg-home .flow--text .media-card-body p,
+.pg-home .flow--compact .media-card-body p {
+  margin: 10px 0 0;
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+/* 无图：不要卡片外框，三栏各用一条顶线起头，靠序号和文字本身撑起版面 */
+.pg-home .flow--text {
+  gap: 56px;
+}
+
+.pg-home .flow--text .flow-step {
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--ink);
+  border-radius: 0;
+  padding: 28px 0 0;
+  gap: 20px;
+  overflow: visible;
+}
+
+.pg-home .flow--text .flow-no {
+  font-size: 3.5rem;
+  color: var(--ink);
+}
+
+.pg-home .flow--text .media-card-body p {
+  max-width: 34em;
+}
+
+/* 小图：图片缩成左上角的方形缩略图，序号放右上角，下面是标题和正文 */
+.pg-home .flow--compact .flow-step {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 24px 16px;
+  align-content: start;
+  padding: 28px;
+}
+
+.pg-home .flow--compact .media-card-media {
+  width: 84px;
+  aspect-ratio: 1;
+  border-radius: 14px;
+}
+
+.pg-home .flow--compact .media-card-media .image-slot {
+  border-radius: 14px !important;
+}
+
+.pg-home .flow--compact .flow-no {
+  justify-self: end;
+  font-size: 2rem;
+  color: var(--ink-faint);
+}
+
+.pg-home .flow--compact .media-card-body {
+  grid-column: 1 / -1;
+}
+
+/* 窄屏：序号（或缩略图）在左、文字在右，一行一条，比上下堆叠省高度 */
+@media (max-width: 860px) {
+  .pg-home .flow--text,
+  .pg-home .flow--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .pg-home .flow--text {
+    gap: 28px;
+  }
+
+  .pg-home .flow--text .flow-step {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 0 8px;
+    padding-top: 18px;
+  }
+
+  .pg-home .flow--text .flow-no {
+    font-size: 2.25rem;
+  }
+
+  .pg-home .flow--compact {
+    gap: 12px;
+  }
+
+  .pg-home .flow--compact .flow-step {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 0 14px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .pg-home .flow--compact .media-card-media {
+    width: 64px;
+    border-radius: 12px;
+  }
+
+  .pg-home .flow--compact .flow-no {
+    display: none;
+  }
+
+  .pg-home .flow--compact .media-card-body {
+    grid-column: 2;
+  }
+
+  .pg-home .flow--text .media-card-body h3,
+  .pg-home .flow--compact .media-card-body h3 {
+    font-size: 1.1rem;
+  }
+
+  .pg-home .flow--text .media-card-body p,
+  .pg-home .flow--compact .media-card-body p {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+}
