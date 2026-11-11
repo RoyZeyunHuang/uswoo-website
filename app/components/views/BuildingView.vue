@@ -52,13 +52,15 @@ const regionName = computed(() => {
 const { data } = await useAsyncData(`building:${props.building.slug}`, () =>
   api<Paged<Listing>>("/listings", { query: { region: props.building.region, pageSize: 100 } }).catch(() => ({ list: [] as Listing[] }))
 );
-const units = computed(() => {
+const matched = computed(() => {
   const terms = (props.building.match ?? [props.building.name]).map(term => term.toLowerCase());
   return (data.value?.list ?? []).filter((item) => {
     const text = [bi(item.title), item.address, bi(item.neighborhood)].join(" ").toLowerCase();
     return terms.some(term => text.includes(term));
   });
 });
+// 还没有真正属于这栋楼的房源时，先用 CMS 里的示例房源把卡片版式撑起来，等真实房源录入后会自动被替换
+const units = computed(() => (matched.value.length ? matched.value : (data.value?.list ?? []).filter(item => item.isSample)));
 
 // 楼盘内容是临时写在代码里的，先不让搜索引擎收录
 usePageSeo(() => ({ title: `${props.building.name} | ${site.c("brand.wordmark")}`, noindex: true }));
