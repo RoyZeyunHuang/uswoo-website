@@ -22,7 +22,7 @@
             <div class="cg-intro">
               <!-- intro 只隐藏这几行介绍文字：同一栏里的筛选按钮和面板是地图的操作入口，必须保留 -->
               <template v-if="on('intro')">
-                <p class="eyebrow"><span class="idx">{{ c("intro.index") }}</span></p>
+                <p class="eyebrow"><span class="idx">{{ no("intro") }}</span></p>
                 <h1>{{ c("intro.title") }}</h1>
                 <p class="sub">{{ c("intro.sub") }}</p>
                 <p class="desc">{{ c("intro.desc") }}</p>
@@ -143,7 +143,7 @@
         <section id="areas" class="cg-areas">
           <div class="wrap">
             <div class="cg-areas-head">
-              <p class="eyebrow"><span class="idx">{{ c("areas.index") }}</span>{{ c("areas.eyebrow") }}</p>
+              <p class="eyebrow"><span class="idx">{{ no("areas") }}</span>{{ c("areas.eyebrow") }}</p>
               <h2>{{ cityEmoji }} {{ cityName }}</h2>
               <p v-if="areas.length">{{ bi(payload.intro) }}</p>
               <p v-else style="text-align: center">{{ c("areas.empty") }}</p>
@@ -240,6 +240,8 @@ const slug = props.region ?? "new-york";
 // 各城市通用的文案（标题、筛选项、图例、按钮等）：CMS 页面内容 city-guides。
 // 地区页用该地区的版本；汇总页虽然显示纽约的数据，文案仍用全站默认
 const { c, ch, img, raw, on } = await usePageContent("city-guides", props.region);
+/** 区块序号：按实际展示的区块从 01 起编号 */
+const no = useBlockNumbers(["intro", "areas"] as const, on);
 const { c: site } = await useSite();
 
 // ---- 数据 ----

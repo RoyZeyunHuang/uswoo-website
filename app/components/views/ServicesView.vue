@@ -7,7 +7,7 @@
       <section v-if="on('hero')" id="heroSection" ref="hero" class="split-hero band-paper">
         <div class="split-hero-grid">
           <div class="split-hero-text">
-            <p class="eyebrow"><span class="idx">{{ c("hero.index") }}</span>{{ c("hero.eyebrow") }}</p>
+            <p class="eyebrow"><span class="idx">{{ no("hero") }}</span>{{ c("hero.eyebrow") }}</p>
             <h1 v-html="ch('hero.title')" />
             <p class="sub">{{ c("hero.sub") }}</p>
             <div class="btn-row">
@@ -23,7 +23,7 @@
       <section v-if="on('process')" id="our-process" ref="processSection" class="band-paper" style="padding-top: clamp(101px, 16.2vw, 180px)">
         <div class="wrap">
           <div class="section-head centered" data-rv>
-            <p class="eyebrow"><span class="idx">{{ c("process.index") }}</span>{{ c("process.eyebrow") }}</p>
+            <p class="eyebrow"><span class="idx">{{ no("process") }}</span>{{ c("process.eyebrow") }}</p>
             <h2 v-html="ch('process.title')" />
           </div>
 
@@ -46,7 +46,7 @@
       <section v-if="on('beyond')" id="move-in-essentials" class="band-raised">
         <div class="wrap">
           <div class="section-head centered beyond-head" data-rv>
-            <p class="eyebrow"><span class="idx">{{ c("beyond.index") }}</span> {{ c("beyond.eyebrow") }}</p>
+            <p class="eyebrow"><span class="idx">{{ no("beyond") }}</span> {{ c("beyond.eyebrow") }}</p>
             <h2>{{ c("beyond.title") }}</h2>
             <p class="lede m-full" style="margin-top: 16px">
               {{ c("beyond.lede") }}
@@ -114,6 +114,8 @@ const localePath = useLocalePath();
 const props = defineProps<{ region?: string }>();
 await useRegion(props.region);
 const { c, ch, img, list, on, page } = await usePageContent("services", props.region);
+/** 区块序号：按实际展示的区块从 01 起编号 */
+const no = useBlockNumbers(["hero", "process", "beyond"] as const, on);
 
 // ---- 内容 ----
 

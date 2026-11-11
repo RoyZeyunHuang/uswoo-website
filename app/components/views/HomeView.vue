@@ -154,16 +154,8 @@ const { c: site } = await useSite();
 
 // ---- 内容 ----
 
-/**
- * 区块序号：按页面上实际展示的区块从 01 起自动编号，不在 CMS 里填写。
- * 某个地区隐藏了区块，或精选房源为空时，后面的序号自动前移，不会出现跳号。
- */
-const NUMBERED = ["help", "locations", "listings", "about", "cta"] as const;
-const numbered = computed(() => NUMBERED.filter(key => on(key) && (key !== "listings" || featured.value.length > 0)));
-const no = (key: (typeof NUMBERED)[number]) => {
-  const position = numbered.value.indexOf(key);
-  return position < 0 ? "" : String(position + 1).padStart(2, "0");
-};
+/** 区块序号：按实际展示的区块从 01 起编号；精选房源为空时该区块不展示，也不占号 */
+const no = useBlockNumbers(["help", "locations", "listings", "about", "cta"] as const, key => on(key) && (key !== "listings" || featured.value.length > 0));
 
 /** 统计数字的数值，顺序与 CMS 里 about.stats 列表一致 */
 const statValues = computed(() => list("about.stats").map(index => Number(raw(`about.stats.${index}.value`)) || 0));
