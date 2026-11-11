@@ -10,26 +10,29 @@
         <NuxtLink v-for="item in items" :key="item.key" :to="localePath(item.path)" :class="{ active: active === item.key }">{{ c(item.label) }}</NuxtLink>
       </nav>
       <NuxtLink class="nav-cta" :to="localePath('/contact')">{{ c("nav.contact") }}</NuxtLink>
-      <NuxtLink
-        ref="toggle"
-        class="lang-toggle"
-        :to="switchLocalePath(isZh ? 'en' : 'zh')"
-        :aria-label="isZh ? 'Switch to English' : '切换为中文'"
-        :style="{ color: toggleColor }"
-      >
-        <span data-l="en">EN</span><span class="sep">/</span><span data-l="zh">中文</span>
-      </NuxtLink>
-      <!-- 地区切换：在分地区的页面上换到所选地区的同一类页面；其他页面只记住选择，之后导航里的链接都指向这个地区 -->
-      <div class="region-switch" :class="{ open: regionOpen }">
-        <button type="button" class="region-toggle" :style="{ color: toggleColor }" :aria-expanded="regionOpen" :aria-label="c('nav.regionLabel')" @click.stop="regionOpen = !regionOpen">
-          <span>{{ activeRegion ? activeRegion.shortCode || bi(activeRegion.name) : c("nav.regionLabel") }}</span>
-          <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" /></svg>
-        </button>
-        <div class="region-menu">
-          <NuxtLink :to="regionTarget(null)" :class="{ active: !activeRegion }" @click="pickRegion(null)">{{ c("nav.allRegions") }}</NuxtLink>
-          <NuxtLink v-for="region in regions" :key="region.slug" :to="regionTarget(region.slug)" :class="{ active: activeRegion?.slug === region.slug }" @click="pickRegion(region.slug)">
-            <span class="region-emoji" aria-hidden="true">{{ region.emoji }}</span>{{ bi(region.name) }}
-          </NuxtLink>
+      <!-- 语言与地区两个切换放在一组里，尺寸一致、间距固定 -->
+      <div class="nav-tools">
+        <NuxtLink
+          ref="toggle"
+          class="lang-toggle"
+          :to="switchLocalePath(isZh ? 'en' : 'zh')"
+          :aria-label="isZh ? 'Switch to English' : '切换为中文'"
+          :style="{ color: toggleColor }"
+        >
+          <span data-l="en">EN</span><span class="sep">/</span><span data-l="zh">中文</span>
+        </NuxtLink>
+        <!-- 地区切换：在分地区的页面上换到所选地区的同一类页面；其他页面只记住选择，之后导航里的链接都指向这个地区 -->
+        <div class="region-switch" :class="{ open: regionOpen }">
+          <button type="button" class="region-toggle" :style="{ color: toggleColor }" :aria-expanded="regionOpen" :aria-label="c('nav.regionLabel')" @click.stop="regionOpen = !regionOpen">
+            <span>{{ activeRegion ? activeRegion.shortCode || bi(activeRegion.name) : c("nav.regionLabel") }}</span>
+            <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" /></svg>
+          </button>
+          <div class="region-menu">
+            <NuxtLink :to="regionTarget(null)" :class="{ active: !activeRegion }" @click="pickRegion(null)">{{ c("nav.allRegions") }}</NuxtLink>
+            <NuxtLink v-for="region in regions" :key="region.slug" :to="regionTarget(region.slug)" :class="{ active: activeRegion?.slug === region.slug }" @click="pickRegion(region.slug)">
+              <span class="region-emoji" aria-hidden="true">{{ region.emoji }}</span>{{ bi(region.name) }}
+            </NuxtLink>
+          </div>
         </div>
       </div>
       <button type="button" class="uswoo-burger" aria-label="Menu" :aria-expanded="open" @click.stop="open = !open"><span /></button>

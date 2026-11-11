@@ -97,21 +97,35 @@ footer .footer-qr img {
   }
 }
 
-/* 导航里的地区切换（设计稿没有）：外观与旁边的语言切换一致，下拉菜单沿用移动端菜单的配色 */
+/* 导航里的地区切换（设计稿没有）：与旁边的语言切换同样的字号、内边距与高度，两者并排成一组 */
+.nav-tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+.nav-tools .lang-toggle {
+  margin-left: 0;
+}
 .region-switch {
   position: relative;
   flex: none;
 }
-.region-toggle {
+/* 选择器写得比较重：各页面样式里对 button 的通用规则会盖掉字号与字重 */
+header.nav .region-switch .region-toggle {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  margin: 0;
   padding: 7px 10px 7px 12px;
   border: 1px solid currentColor;
   border-radius: 2px;
   background: transparent;
   color: var(--ink-soft, #656260);
-  font: 600 0.78rem/1 "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
   letter-spacing: 0.02em;
   cursor: pointer;
   white-space: nowrap;
@@ -120,12 +134,15 @@ footer .footer-qr img {
     color 0.3s ease,
     opacity 0.15s ease;
 }
-.region-toggle:hover {
+header.nav .region-switch .region-toggle:hover {
   opacity: 1;
 }
-.region-toggle:focus-visible {
+header.nav .region-switch .region-toggle:focus-visible {
   outline: 2px solid var(--focus, #fc8d94);
   outline-offset: 3px;
+}
+header.nav.menu-open .region-toggle {
+  color: var(--ink, #0f0f0f) !important;
 }
 .region-toggle svg {
   transition: transform 0.2s ease;
