@@ -140,7 +140,8 @@
       "title": {
         "en": "A Better Way to Find Home.",
         "zh": "<span class=zh-d>找家这件事原来可以更从容</span><span class=zh-m>落地新城市，原来可以更从容</span>"
-      }
+      },
+      "layout": "image"
     },
     "hero": {
       "cityLayer": {

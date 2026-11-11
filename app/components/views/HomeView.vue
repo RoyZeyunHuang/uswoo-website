@@ -38,11 +38,12 @@
             </p>
           </div>
 
-          <div class="flow">
+          <div class="flow" :class="`flow--${helpLayout}`">
             <div v-for="index in list('help.cards')" :key="index" class="media-card flow-step">
-              <div class="media-card-media">
+              <div v-if="helpLayout !== 'text'" class="media-card-media">
                 <SlotImage :src="img(`help.cards.${index}.image`)" :radius="8" :alt="c(`help.cards.${index}.title`)" />
               </div>
+              <span v-if="helpLayout !== 'image'" class="flow-no" aria-hidden="true">{{ String(index + 1).padStart(2, "0") }}</span>
               <div class="media-card-body">
                 <h3>{{ c(`help.cards.${index}.title`) }}</h3>
                 <p>{{ c(`help.cards.${index}.text`) }}</p>
@@ -156,6 +157,13 @@ const { c: site } = await useSite();
 
 /** 区块序号：按实际展示的区块从 01 起编号；精选房源为空时该区块不展示，也不占号 */
 const no = useBlockNumbers(["help", "locations", "listings", "about", "cta"] as const, key => on(key) && (key !== "listings" || featured.value.length > 0));
+
+/**
+ * 「我们如何帮你」的版式，各地区在 CMS 里选（help.layout）：
+ * image 大图卡片（默认）、text 无图、compact 小图加文字。没填或填了别的值按大图处理。
+ */
+const HELP_LAYOUTS = ["image", "text", "compact"] as const;
+const helpLayout = computed(() => HELP_LAYOUTS.find(layout => layout === raw<string>("help.layout")) ?? "image");
 
 /** 统计数字的数值，顺序与 CMS 里 about.stats 列表一致 */
 const statValues = computed(() => list("about.stats").map(index => Number(raw(`about.stats.${index}.value`)) || 0));
