@@ -3,47 +3,46 @@
     <SiteHeader active="listings" scrolled />
 
     <main id="top">
-      <!-- 城市筛选排在首屏这一段里面，但在 CMS 里是单独的区块（filters）：隐藏首屏文字时筛选仍然保留 -->
-      <section v-if="on('hero') || on('filters')" class="ls-hero">
+      <!-- 首屏只保留大标题：不放小标题、说明文字和城市筛选 -->
+      <section v-if="on('hero')" class="ls-hero">
         <div class="wrap">
-          <template v-if="on('hero')">
-            <p class="eyebrow"><span class="idx">01</span> {{ c("hero.eyebrow") }}</p>
-            <h1>
-              {{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template
-              ><span class="pink">{{ c("hero.titleAccent") }}</span>
-            </h1>
-            <p class="lede">{{ c("hero.lede") }}</p>
-          </template>
-          <nav v-if="on('filters')" id="lsFilters" class="ls-filters" :aria-label="tx('Filter by city')">
-            <NuxtLink class="ls-chip" :class="{ on: !region }" :to="localePath(regionPath('listings'))" :aria-current="!region ? 'page' : undefined">
-              {{ c("filters.all") }}
-            </NuxtLink>
-            <NuxtLink
-              v-for="item in regions"
-              :key="item.slug"
-              class="ls-chip"
-              :class="{ on: item.slug === region?.slug }"
-              :to="localePath(regionPath('listings', item.slug))"
-              :aria-current="item.slug === region?.slug ? 'page' : undefined"
-            >
-              {{ bi(item.name) }}
-            </NuxtLink>
-          </nav>
+          <h1>
+            {{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template
+            ><span class="pink">{{ c("hero.titleAccent") }}</span>
+          </h1>
         </div>
       </section>
 
       <section class="ls-grid-sec">
         <div class="wrap">
-          <div v-if="listings.length" id="lsGrid" class="ls-grid">
-            <ListingCard v-for="listing in listings" :key="listing.id" :listing="listing" :region="props.region" />
+          <!-- 独家楼盘：只在「全部」和对应地区出现。内容是临时写在代码里的，见 app/data/buildings.ts -->
+          <div v-if="buildings.length" class="ls-dev">
+            <p class="eyebrow">{{ isZh ? BUILDINGS_HEADING.zh : BUILDINGS_HEADING.en }}</p>
+            <div class="ls-dev-grid">
+              <NuxtLink
+                v-for="item in buildings"
+                :key="item.slug"
+                class="ls-dev-card"
+                :to="localePath(`/listings/building/${item.slug}`)"
+              >
+                <div class="ls-dev-media">
+                  <img v-if="item.image" :src="item.image" :alt="item.name" :style="item.imagePosition ? { objectPosition: item.imagePosition } : undefined" loading="lazy" />
+                  <span v-else class="ls-dev-ph" aria-hidden="true">{{ item.name }}</span>
+                  <span class="ls-tag">{{ tx(item.tag) }}</span>
+                </div>
+                <div class="ls-dev-body">
+                  <div>
+                    <h3>{{ item.name }}</h3>
+                    <p>{{ item.state ? (isZh ? item.state.zh : item.state.en) : regionLabel(item.region) }}</p>
+                  </div>
+                  <span class="ls-dev-cta">{{ tx("View listings") }} <span aria-hidden="true">→</span></span>
+                </div>
+              </NuxtLink>
+            </div>
           </div>
-          <!-- 原样式表里这一段默认隐藏、由脚本显示；这里按数据决定是否输出 -->
-          <p v-else id="lsEmpty" class="ls-empty" style="display: block">{{ c("empty") }}</p>
-          <div v-if="hasMore" class="ls-more">
-            <button type="button" class="btn btn-outline on-paper" :disabled="loadingMore" @click="loadMore">
-              {{ loadingMore ? tx("Loading…") : tx("Load more") }}
-            </button>
-          </div>
+
+          <!-- 列表页只展示合作的大楼 / 开发商；具体房源在点进楼盘之后 -->
+          <p v-if="!buildings.length" id="lsEmpty" class="ls-empty" style="display: block">{{ c("empty") }}</p>
           <p class="ls-note">{{ c("disclaimer") }}</p>
         </div>
       </section>
@@ -69,7 +68,7 @@
 <script setup lang="ts">
 import "~/assets/css/pages/listings.css";
 import "~/assets/css/pages/listings.extra.css";
-import type { Listing, Paged } from "~~/shared/types/api";
+import { BUILDINGS, BUILDINGS_HEADING } from "~/data/buildings";
 
 /** 房源列表：/listings（全部地区）与 /{region}/listings（单个地区）共用。 */
 const props = defineProps<{ region?: string }>();
@@ -77,41 +76,16 @@ const props = defineProps<{ region?: string }>();
 const { region, regions } = await useRegion(props.region);
 const { tx, bi, isZh } = useTx();
 const localePath = useLocalePath();
-const api = useApi();
 const absoluteUrl = useAbsoluteUrl();
 // 页面上的固定文案：地区页用该地区的版本（没有单独配置的部分沿用全站默认）
 const { c, on } = await usePageContent("listings", props.region);
 
-const PAGE_SIZE = 60;
-const fetchPage = (page: number) => api<Paged<Listing>>("/listings", { query: { region: props.region, pageSize: PAGE_SIZE, page } });
-
-const empty: Paged<Listing> = { list: [], total: 0, page: 1, pageSize: PAGE_SIZE };
-const { data: firstPage } = await useAsyncData(`listings:${props.region ?? ""}`, () => fetchPage(1).catch(() => empty));
-
-// 第一页随服务端渲染输出；后面的页由「加载更多」在浏览器里追加
-const more = ref<Listing[]>([]);
-const page = ref(1);
-const loadingMore = ref(false);
-const listings = computed(() => [...(firstPage.value?.list ?? []), ...more.value]);
-const hasMore = computed(() => (firstPage.value?.total ?? 0) > listings.value.length);
-
-async function loadMore() {
-  if (loadingMore.value) return;
-  loadingMore.value = true;
-  try {
-    const next = await fetchPage(page.value + 1);
-    page.value += 1;
-    // 翻页期间有新房源发布时，同一条可能出现在两页里
-    const seen = new Set(listings.value.map(listing => listing.id));
-    more.value.push(...next.list.filter(listing => !seen.has(listing.id)));
-    // 接口没再给出新内容就不再显示按钮，避免空转
-    if (!next.list.length && firstPage.value) firstPage.value = { ...firstPage.value, total: listings.value.length };
-  } catch {
-    // 加载失败：保留按钮，用户可以再点一次
-  } finally {
-    loadingMore.value = false;
-  }
-}
+// 独家楼盘：「全部」页显示所有，地区页只显示该地区的
+const buildings = computed(() => BUILDINGS.filter(item => !props.region || item.region === props.region));
+const regionLabel = (slug: string) => {
+  const item = regions.value.find(entry => entry.slug === slug);
+  return item ? bi(item.name) : "";
+};
 
 usePageSeo(() => {
   const name = region.value ? bi(region.value.name) : "";
@@ -123,25 +97,13 @@ usePageSeo(() => {
   if (region.value) crumbs.push({ "@type": "ListItem", position: 3, name, item: absoluteUrl(localePath(path)) });
 
   const jsonLd: Record<string, unknown>[] = [{ "@type": "BreadcrumbList", itemListElement: crumbs }];
-  if (region.value && listings.value.length) {
-    jsonLd.push({
-      "@type": "ItemList",
-      name: c("seo.regionListName").replace("{region}", name),
-      itemListElement: listings.value.map((listing, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name: bi(listing.title),
-        url: absoluteUrl(localePath(`/listings/${listing.id}`))
-      }))
-    });
-  }
 
   return {
     title: region.value ? c("seo.regionTitle").replace("{region}", name) : c("seo.title"),
     description: region.value ? c("seo.regionDescription").replace("{region}", name) : c("seo.description"),
     keywords: c("seo.keywords"),
     // 还没有房源的地区页只有一句占位说明，不让搜索引擎收录
-    noindex: Boolean(region.value) && !listings.value.length,
+    noindex: Boolean(region.value) && !buildings.value.length,
     jsonLd
   };
 });

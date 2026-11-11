@@ -7,82 +7,60 @@
         <div class="wrap">
           <NuxtLink class="ld-back" :to="backPath"><span aria-hidden="true">←</span> {{ backLabel }}</NuxtLink>
 
-          <div class="ld-layout">
-            <div class="ld-gallery">
-              <div
-                class="ld-stage"
-                :tabindex="photos.length > 1 ? 0 : undefined"
-                role="group"
-                :aria-label="c('detail.photos')"
-                @keydown.left.prevent="step(-1)"
-                @keydown.right.prevent="step(1)"
-              >
-                <!-- 所有大图都在服务端输出（搜索引擎能看到），只显示当前一张；首张立即加载，其余切到时才加载 -->
-                <img
-                  v-for="(photo, index) in photos"
-                  v-show="index === active"
-                  :key="photo.url"
-                  :src="photo.url"
-                  :alt="bi(photo.alt) || `${title} ${index + 1}`"
-                  :width="photo.width || undefined"
-                  :height="photo.height || undefined"
-                  :loading="index === 0 ? 'eager' : 'lazy'"
-                  :fetchpriority="index === 0 ? 'high' : undefined"
-                  decoding="async"
-                />
-                <span v-if="listing.tag" class="ls-tag">{{ tx(listing.tag) }}</span>
-                <span v-if="leased" class="ld-leased">{{ tx("Leased") }}</span>
-                <template v-if="photos.length > 1">
-                  <button type="button" class="ld-arrow prev" :aria-label="tx('Previous photo')" @click="step(-1)">‹</button>
-                  <button type="button" class="ld-arrow next" :aria-label="tx('Next photo')" @click="step(1)">›</button>
-                  <span class="ld-count" aria-live="polite">{{ active + 1 }} / {{ photos.length }}</span>
-                </template>
-              </div>
-              <div v-if="photos.length > 1" class="ld-thumbs">
-                <button
-                  v-for="(photo, index) in photos"
-                  :key="photo.url"
-                  type="button"
-                  class="ld-thumb"
-                  :class="{ on: index === active }"
-                  :aria-label="tx('Show photo {n}').replace('{n}', String(index + 1))"
-                  :aria-current="index === active ? 'true' : undefined"
-                  @click="active = index"
-                >
-                  <img :src="photo.url" alt="" loading="lazy" decoding="async" />
-                </button>
-              </div>
-            </div>
+          <!-- 相册：一张大图加最多四张小图，点任意一张打开全屏查看 -->
+          <div class="ld-mosaic" :class="{ single: photos.length === 1 }" :data-count="Math.min(photos.length, 5)" role="group" :aria-label="c('detail.photos')">
+            <button v-for="(photo, index) in shown" :key="photo.url" type="button" class="ld-tile" :class="{ main: index === 0 }" :aria-label="tx('Show photo {n}').replace('{n}', String(index + 1))" @click="openViewer(index)">
+              <img
+                :src="photo.url"
+                :alt="bi(photo.alt) || `${title} ${index + 1}`"
+                :width="photo.width || undefined"
+                :height="photo.height || undefined"
+                :loading="index === 0 ? 'eager' : 'lazy'"
+                :fetchpriority="index === 0 ? 'high' : undefined"
+                decoding="async"
+              />
+              <span v-if="index === 0 && listing.tag" class="ls-tag">{{ tx(listing.tag) }}</span>
+              <span v-if="index === 0 && leased" class="ld-leased">{{ tx("Leased") }}</span>
+              <span v-if="index === shown.length - 1 && photos.length > 1" class="ld-allphotos">{{ tx("View All Photos") }} <span aria-hidden="true">›</span></span>
+            </button>
+          </div>
 
-            <div class="ld-info">
+          <div class="ld-head">
+            <div class="ld-head-main">
               <p class="eyebrow">
                 <span class="idx">{{ regionName || c("hero.eyebrow") }}</span>
                 {{ c(listing.kind === "sale" ? "detail.forSale" : "detail.forRent") }}
               </p>
               <h1>{{ title }}</h1>
               <p v-if="location" class="ld-loc">{{ location }}</p>
-
-              <div class="ld-price-row">
-                <div v-if="listing.price !== null" class="ld-price">${{ listing.price.toLocaleString("en-US") }}<small v-if="listing.priceUnit === 'month'">{{ c("detail.perMonth") }}</small></div>
-                <div v-else class="ld-price ask">{{ c("detail.priceOnRequest") }}</div>
-              </div>
-
-              <dl v-if="facts.length" class="ld-facts">
-                <div v-for="fact in facts" :key="fact.label">
-                  <dt>{{ fact.label }}</dt>
-                  <dd>{{ fact.value }}</dd>
-                </div>
-              </dl>
-
-              <div class="ld-cta">
-                <NuxtLink class="btn btn-pink" :to="enquiryLink">
-                  {{ c(leased ? "detail.cta.leased" : "detail.cta.enquire") }}
-                </NuxtLink>
-                <p class="ld-cta-note">
-                  {{ c(leased ? "detail.cta.leasedNote" : "detail.cta.enquireNote") }}
-                </p>
+              <div v-if="listing.price !== null" class="ld-price">${{ listing.price.toLocaleString("en-US") }}<small v-if="listing.priceUnit === 'month'">{{ c("detail.perMonth") }}</small></div>
+              <div v-else class="ld-price ask">{{ c("detail.priceOnRequest") }}</div>
+              <div class="ld-summary">
+                <span v-for="part in summary" :key="part">{{ part }}</span>
+                <button type="button" class="ld-share" @click="share">
+                  {{ shared ? tx("Link copied") : tx("Share") }}
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v14" /></svg>
+                </button>
               </div>
             </div>
+            <div class="ld-cta">
+              <NuxtLink class="btn btn-pink" :to="enquiryLink">
+                {{ c(leased ? "detail.cta.leased" : "detail.cta.enquire") }}
+              </NuxtLink>
+              <p class="ld-cta-note">
+                {{ c(leased ? "detail.cta.leasedNote" : "detail.cta.enquireNote") }}
+              </p>
+            </div>
+          </div>
+
+          <div v-if="overview.length" class="ld-overview">
+            <h2>{{ tx("Overview") }}</h2>
+            <dl>
+              <div v-for="row in overview" :key="row.label">
+                <dt>{{ row.label }}</dt>
+                <dd>{{ row.value }}</dd>
+              </div>
+            </dl>
           </div>
 
           <div v-if="description" class="ld-desc">
@@ -95,6 +73,15 @@
         </div>
       </section>
     </main>
+
+    <!-- 全屏查看：键盘 ← → 切换，Esc 关闭 -->
+    <div v-if="viewer !== null" class="ld-viewer" role="dialog" aria-modal="true" :aria-label="c('detail.photos')" @click.self="closeViewer">
+      <button type="button" class="ld-viewer-close" :aria-label="tx('Close')" @click="closeViewer">×</button>
+      <button v-if="photos.length > 1" type="button" class="ld-arrow prev" :aria-label="tx('Previous photo')" @click="step(-1)">‹</button>
+      <img :src="photos[viewer]?.url" :alt="bi(photos[viewer]?.alt) || title" />
+      <button v-if="photos.length > 1" type="button" class="ld-arrow next" :aria-label="tx('Next photo')" @click="step(1)">›</button>
+      <span class="ld-count" aria-live="polite">{{ viewer + 1 }} / {{ photos.length }}</span>
+    </div>
 
     <SiteFooter />
   </div>
@@ -137,10 +124,50 @@ const photos = computed(() => {
   const all = [listing.value.cover, ...listing.value.images].filter((media): media is NonNullable<typeof media> => Boolean(media?.url));
   return all.filter((media, index) => all.findIndex(other => other.url === media.url) === index);
 });
-const active = ref(0);
+/** 页面上直接展示的前五张（一大四小），其余在全屏查看里 */
+const shown = computed(() => photos.value.slice(0, 5));
+
+// 全屏查看：null 表示关闭。开着的时候锁住页面滚动，并监听键盘。
+const viewer = ref<number | null>(null);
+function openViewer(index: number) {
+  viewer.value = index;
+}
+function closeViewer() {
+  viewer.value = null;
+}
 function step(delta: number) {
   const count = photos.value.length;
-  if (count > 1) active.value = (active.value + delta + count) % count;
+  if (count > 1 && viewer.value !== null) viewer.value = (viewer.value + delta + count) % count;
+}
+function onKey(event: KeyboardEvent) {
+  if (viewer.value === null) return;
+  if (event.key === "Escape") closeViewer();
+  else if (event.key === "ArrowLeft") step(-1);
+  else if (event.key === "ArrowRight") step(1);
+}
+watch(viewer, (value) => {
+  if (import.meta.client) document.body.style.overflow = value === null ? "" : "hidden";
+});
+onMounted(() => window.addEventListener("keydown", onKey));
+onBeforeUnmount(() => {
+  window.removeEventListener("keydown", onKey);
+  document.body.style.overflow = "";
+});
+
+// 分享：手机上走系统分享面板，其余复制链接
+const shared = ref(false);
+async function share() {
+  const url = window.location.href;
+  try {
+    if (navigator.share) await navigator.share({ title: title.value, url });
+    else {
+      await navigator.clipboard.writeText(url);
+      shared.value = true;
+      setTimeout(() => (shared.value = false), 2000);
+    }
+  } catch {
+    // 用户取消分享，不处理
+  }
 }
 
 // ---- 房源参数 ----
@@ -167,6 +194,24 @@ const facts = computed(() => {
   if (availableFrom) rows.push({ label: c("detail.facts.availableFrom"), value: formatDate(availableFrom) });
   rows.push({ label: c("detail.facts.type"), value: c(kind === "sale" ? "detail.forSale" : "detail.facts.rental") });
   return rows;
+});
+
+/** 标题下面那一行：卧室、卫生间、面积 */
+const summary = computed(() => {
+  const { bedrooms, bathrooms, sqft } = listing.value;
+  const parts: string[] = [];
+  if (bedrooms !== null) parts.push(bedrooms === 0 ? tx("Studio") : tx(bedrooms === 1 ? "{n} bed" : "{n} beds").replace("{n}", String(bedrooms)));
+  if (bathrooms !== null) parts.push(tx(bathrooms === 1 ? "{n} bath" : "{n} baths").replace("{n}", String(bathrooms)));
+  if (sqft !== null) parts.push(tx("{n} sqft").replace("{n}", sqft.toLocaleString("en-US")));
+  return parts;
+});
+
+/** 概览表：类型、位置，再接上面的房源参数 */
+const overview = computed(() => {
+  const byLabel = (label: string) => facts.value.find(fact => fact.label === label);
+  const rows = [byLabel(c("detail.facts.type")), location.value ? { label: tx("Location"), value: location.value } : undefined];
+  const rest = facts.value.filter(fact => fact.label !== c("detail.facts.type"));
+  return [...rows, ...rest].filter((row): row is { label: string; value: string } => Boolean(row));
 });
 
 // ---- SEO ----
