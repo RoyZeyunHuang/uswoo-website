@@ -11,6 +11,8 @@ export interface Building {
   region: string;
   tag: string;
   image?: string;
+  /** 房源的标题、地址或街区里出现这些词，就算这栋楼的房源（默认用楼盘名） */
+  match?: string[];
 }
 
 export const BUILDINGS_HEADING = { en: "Exclusive Buildings", zh: "独家楼盘" };

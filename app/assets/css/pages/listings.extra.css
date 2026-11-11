@@ -141,3 +141,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- 楼盘页 ---- */
+.pg-building .ld-back {
+  display: inline-flex;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.pg-building .ld-back:hover {
+  color: var(--ink);
+}
+
+.pg-building .ls-hero h1 {
+  margin-top: 14px;
+}
+
+.pg-building .bd-eyebrow {
+  margin-top: 28px;
+}
