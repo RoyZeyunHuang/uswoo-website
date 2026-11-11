@@ -154,3 +154,27 @@ html.m-reveal .pg-home #locations .location-card.m-in:nth-child(6) {
     line-height: 1.65;
   }
 }
+
+/* 手机版首页精选房源卡片：压低高度（图片改成更扁的比例，价格和户型并成一行，去掉街区一行），桌面不受影响 */
+@media (max-width: 600px) {
+  .pg-home .ls-card .ls-media {
+    aspect-ratio: 2 / 1;
+  }
+  .pg-home .ls-card .ls-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 10px;
+    padding: 12px 6px 6px;
+  }
+  .pg-home .ls-card .ls-meta {
+    margin-top: 0;
+  }
+  .pg-home .ls-card .ls-body h3 {
+    flex-basis: 100%;
+    margin-top: 6px;
+  }
+  .pg-home .ls-card .ls-body p {
+    display: none;
+  }
+}
