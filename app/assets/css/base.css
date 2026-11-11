@@ -96,3 +96,107 @@ footer .footer-qr img {
     gap: 28px;
   }
 }
+
+/* 导航里的地区切换（设计稿没有）：外观与旁边的语言切换一致，下拉菜单沿用移动端菜单的配色 */
+.region-switch {
+  position: relative;
+  flex: none;
+}
+.region-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px 7px 12px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink-soft, #656260);
+  font: 600 0.78rem/1 "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  white-space: nowrap;
+  opacity: 0.92;
+  transition:
+    color 0.3s ease,
+    opacity 0.15s ease;
+}
+.region-toggle:hover {
+  opacity: 1;
+}
+.region-toggle:focus-visible {
+  outline: 2px solid var(--focus, #fc8d94);
+  outline-offset: 3px;
+}
+.region-toggle svg {
+  transition: transform 0.2s ease;
+}
+.region-switch.open .region-toggle svg {
+  transform: rotate(180deg);
+}
+.region-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 60;
+  display: none;
+  min-width: 220px;
+  padding: 6px;
+  border: 1px solid var(--line, #e5e5e5);
+  border-radius: 6px;
+  background: var(--paper, #fff);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+.region-switch.open .region-menu {
+  display: grid;
+}
+.region-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  color: var(--ink, #0f0f0f);
+  font: 500 0.9rem/1.2 "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.region-menu a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.region-menu a.active {
+  color: #fc8d94;
+}
+.region-emoji {
+  width: 1.3em;
+  text-align: center;
+}
+/* 手机：顶部放不下，地区切换收进菜单 */
+.uswoo-menu-regions {
+  padding: 16px 0 4px;
+}
+.uswoo-menu-label {
+  margin-bottom: 10px;
+  color: var(--ink-soft, #656260);
+  font: 600 0.72rem/1 "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.uswoo-menu-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.uswoo-menu .uswoo-menu-chips a {
+  padding: 8px 12px;
+  border: 1px solid var(--line, #e5e5e5);
+  border-radius: 999px;
+  font-size: 0.86rem;
+}
+.uswoo-menu .uswoo-menu-chips a.active {
+  border-color: #fc8d94;
+}
+@media (max-width: 760px) {
+  .region-switch {
+    display: none;
+  }
+}
