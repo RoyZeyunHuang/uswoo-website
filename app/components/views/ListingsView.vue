@@ -3,32 +3,13 @@
     <SiteHeader active="listings" scrolled />
 
     <main id="top">
-      <!-- 城市筛选排在首屏这一段里面，但在 CMS 里是单独的区块（filters）：隐藏首屏文字时筛选仍然保留 -->
-      <section v-if="on('hero') || on('filters')" class="ls-hero">
+      <!-- 首屏只保留大标题：不放小标题、说明文字和城市筛选 -->
+      <section v-if="on('hero')" class="ls-hero">
         <div class="wrap">
-          <template v-if="on('hero')">
-            <p class="eyebrow"><span class="idx">01</span> {{ c("hero.eyebrow") }}</p>
-            <h1>
-              {{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template
-              ><span class="pink">{{ c("hero.titleAccent") }}</span>
-            </h1>
-            <p class="lede">{{ c("hero.lede") }}</p>
-          </template>
-          <nav v-if="on('filters')" id="lsFilters" class="ls-filters" :aria-label="tx('Filter by city')">
-            <NuxtLink class="ls-chip" :class="{ on: !region }" :to="localePath(regionPath('listings'))" :aria-current="!region ? 'page' : undefined">
-              {{ c("filters.all") }}
-            </NuxtLink>
-            <NuxtLink
-              v-for="item in regions"
-              :key="item.slug"
-              class="ls-chip"
-              :class="{ on: item.slug === region?.slug }"
-              :to="localePath(regionPath('listings', item.slug))"
-              :aria-current="item.slug === region?.slug ? 'page' : undefined"
-            >
-              {{ bi(item.name) }}
-            </NuxtLink>
-          </nav>
+          <h1>
+            {{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template
+            ><span class="pink">{{ c("hero.titleAccent") }}</span>
+          </h1>
         </div>
       </section>
 
@@ -45,14 +26,14 @@
                 :to="localePath(`/listings/building/${item.slug}`)"
               >
                 <div class="ls-dev-media">
-                  <img v-if="item.image" :src="item.image" :alt="item.name" loading="lazy" />
+                  <img v-if="item.image" :src="item.image" :alt="item.name" :style="item.imagePosition ? { objectPosition: item.imagePosition } : undefined" loading="lazy" />
                   <span v-else class="ls-dev-ph" aria-hidden="true">{{ item.name }}</span>
                   <span class="ls-tag">{{ tx(item.tag) }}</span>
                 </div>
                 <div class="ls-dev-body">
                   <div>
                     <h3>{{ item.name }}</h3>
-                    <p>{{ regionLabel(item.region) }}</p>
+                    <p>{{ item.state ? (isZh ? item.state.zh : item.state.en) : regionLabel(item.region) }}</p>
                   </div>
                   <span class="ls-dev-cta">{{ tx("View listings") }} <span aria-hidden="true">→</span></span>
                 </div>

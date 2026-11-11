@@ -163,3 +163,68 @@
 .pg-building .bd-eyebrow {
   margin-top: 28px;
 }
+
+/* 楼盘页相册：四张图排成两列，统一裁成 3:2 */
+.pg-building .bd-gallery-sec {
+  padding-bottom: 8px;
+}
+.pg-building .bd-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.pg-building .bd-gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  background: #f2f0ee;
+}
+@media (max-width: 600px) {
+  .pg-building .bd-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 楼盘页：概览表之后的房源区，沿用详情页的区块标题 */
+.pg-building .bd-units {
+  margin-top: clamp(32px, 4vw, 56px);
+}
+.pg-building .bd-units h2 {
+  font-size: 1.4rem;
+  margin: 0 0 20px;
+}
+
+.pg-building .bd-from {
+  display: inline;
+  margin-right: 6px;
+  font-size: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.pg-building .ld-summary {
+  text-transform: uppercase;
+}
+
+/* 楼盘页标题区：名称与价格并排，下面一行小字 */
+.pg-building .bd-titlerow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 24px;
+}
+.pg-building .bd-titlerow .ld-price {
+  margin: 0;
+}
+.pg-building .bd-meta {
+  margin-top: 12px;
+}
+
+.pg-building .bd-titlerow .ld-price {
+  color: var(--pink);
+}
+.pg-building .bd-titlerow .ld-price .bd-from {
+  color: var(--ink-soft);
+}
