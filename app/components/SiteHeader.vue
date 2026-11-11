@@ -19,12 +19,35 @@
       >
         <span data-l="en">EN</span><span class="sep">/</span><span data-l="zh">中文</span>
       </NuxtLink>
+      <!-- 地区切换：在分地区的页面上换到所选地区的同一类页面；其他页面只记住选择，之后导航里的链接都指向这个地区 -->
+      <div class="region-switch" :class="{ open: regionOpen }">
+        <button type="button" class="region-toggle" :style="{ color: toggleColor }" :aria-expanded="regionOpen" :aria-label="c('nav.regionLabel')" @click.stop="regionOpen = !regionOpen">
+          <span>{{ activeRegion ? activeRegion.shortCode || bi(activeRegion.name) : c("nav.regionLabel") }}</span>
+          <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" /></svg>
+        </button>
+        <div class="region-menu">
+          <NuxtLink :to="regionTarget(null)" :class="{ active: !activeRegion }" @click="pickRegion(null)">{{ c("nav.allRegions") }}</NuxtLink>
+          <NuxtLink v-for="region in regions" :key="region.slug" :to="regionTarget(region.slug)" :class="{ active: activeRegion?.slug === region.slug }" @click="pickRegion(region.slug)">
+            <span class="region-emoji" aria-hidden="true">{{ region.emoji }}</span>{{ bi(region.name) }}
+          </NuxtLink>
+        </div>
+      </div>
       <button type="button" class="uswoo-burger" aria-label="Menu" :aria-expanded="open" @click.stop="open = !open"><span /></button>
     </div>
     <div class="uswoo-menu">
       <NuxtLink v-for="item in items" :key="item.key" :to="localePath(item.path)" :class="{ active: active === item.key }" @click="open = false">
         {{ c(item.label) }}
       </NuxtLink>
+      <!-- 手机上地区切换放在菜单里 -->
+      <div class="uswoo-menu-regions">
+        <div class="uswoo-menu-label">{{ c("nav.regionLabel") }}</div>
+        <div class="uswoo-menu-chips">
+          <NuxtLink :to="regionTarget(null)" :class="{ active: !activeRegion }" @click="pickRegion(null)">{{ c("nav.allRegions") }}</NuxtLink>
+          <NuxtLink v-for="region in regions" :key="region.slug" :to="regionTarget(region.slug)" :class="{ active: activeRegion?.slug === region.slug }" @click="pickRegion(region.slug)">
+            {{ region.emoji }} {{ bi(region.name) }}
+          </NuxtLink>
+        </div>
+      </div>
       <NuxtLink class="uswoo-menu-cta" :to="localePath('/contact')" @click="open = false">{{ c("nav.contact") }}</NuxtLink>
     </div>
   </header>
@@ -37,7 +60,7 @@
  */
 const props = defineProps<{ active?: string; scrolled?: boolean }>();
 
-const { tx, isZh } = useTx();
+const { tx, isZh, bi } = useTx();
 // 导航文字来自 CMS「新官网页面 → 全站通用」
 const { c, img } = await useSite();
 const localePath = useLocalePath();
@@ -59,6 +82,45 @@ const items = computed(() => [
   { key: "partners", label: "nav.partners", path: regionPath("partners", lastRegion.value) },
   { key: "about", label: "nav.about", path: regionPath("about", lastRegion.value) }
 ]);
+
+// ---- 地区切换 ----
+
+const regions = await useRegions();
+const regionOpen = ref(false);
+/** 网址里的地区（分地区的页面上，服务端就能确定） */
+const routeRegion = computed(() => (typeof route.params.region === "string" ? route.params.region : null));
+/** 当前地区：分地区的页面以网址为准，其他页面用访客上次的选择（挂载后才知道） */
+const activeRegion = computed(() => regions.value.find(region => region.slug === (routeRegion.value ?? lastRegion.value)) ?? null);
+
+/** 路由名（去掉语言后缀）→ 分地区的页面类型；不在表里的页面（首页、Services、详情页等）没有地区版本 */
+const REGIONAL_ROUTES: Record<string, RegionalPage> = {
+  "city-guides": "city-guide",
+  "region-city-guide": "city-guide",
+  listings: "listings",
+  "region-listings": "listings",
+  press: "press",
+  "region-press": "press",
+  partners: "partners",
+  "region-partners": "partners",
+  about: "about",
+  "region-about": "about"
+};
+/** 选了某个地区后要去的地址：当前是分地区的页面就换到那个地区的同一类页面，否则留在原地 */
+function regionTarget(slug: string | null) {
+  const page = REGIONAL_ROUTES[String(route.name ?? "").replace(/___[a-z]+$/, "")];
+  return page ? localePath(regionPath(page, slug)) : route.fullPath;
+}
+function pickRegion(slug: string | null) {
+  regionOpen.value = false;
+  open.value = false;
+  lastRegion.value = slug;
+  try {
+    if (slug) localStorage.setItem(REGION_KEY, slug);
+    else localStorage.removeItem(REGION_KEY);
+  } catch {
+    // 浏览器禁用了本地存储：这次的选择只在当前页面有效
+  }
+}
 
 onMounted(() => {
   try {
@@ -92,10 +154,15 @@ function detectSolid() {
 }
 
 function onKey(event: KeyboardEvent) {
-  if (event.key === "Escape") open.value = false;
+  if (event.key === "Escape") {
+    open.value = false;
+    regionOpen.value = false;
+  }
 }
 function onDocClick(event: MouseEvent) {
-  if (el.value && !el.value.contains(event.target as Node)) open.value = false;
+  const target = event.target as Node;
+  if (el.value && !el.value.contains(target)) open.value = false;
+  if (!(target instanceof Element) || !target.closest(".region-switch")) regionOpen.value = false;
 }
 function onResize() {
   if (window.innerWidth > 760) open.value = false;

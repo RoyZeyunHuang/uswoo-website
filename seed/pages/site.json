@@ -45,6 +45,14 @@
       "contact": {
         "en": "Contact",
         "zh": "联系我们"
+      },
+      "regionLabel": {
+        "en": "Region",
+        "zh": "地区"
+      },
+      "allRegions": {
+        "en": "All Regions",
+        "zh": "全部地区"
       }
     },
     "footer": {
