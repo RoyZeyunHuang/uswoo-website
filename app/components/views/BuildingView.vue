@@ -12,6 +12,11 @@
             <button v-for="(photo, index) in shown" :key="photo" type="button" class="ld-tile" :class="{ main: index === 0 }" :aria-label="tx('Show photo {n}').replace('{n}', String(index + 1))" @click="openViewer(index)">
               <img :src="photo" :alt="`${building.name} ${index + 1}`" :loading="index === 0 ? 'eager' : 'lazy'" decoding="async" />
               <span v-if="index === 0" class="ls-tag">{{ tx(building.tag) }}</span>
+              <!-- 手机上只显示一张大图，用这个按钮提示可以点开看全部照片（桌面上隐藏） -->
+              <span v-if="index === 0 && photos.length > 1" class="bd-photos-btn">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>
+                {{ tx("View All Photos") }} ({{ photos.length }})
+              </span>
               <span v-if="index === shown.length - 1 && photos.length > 1" class="ld-allphotos">{{ tx("View All Photos") }} <span aria-hidden="true">›</span></span>
             </button>
           </div>
@@ -27,7 +32,7 @@
                 </div>
               </div>
               <div class="ld-summary bd-meta">
-                <span>{{ building.address || regionName }}</span>
+                <span class="bd-addr">{{ building.address || regionName }}</span>
                 <span v-for="part in building.summary" :key="part">{{ part }}</span>
               </div>
             </div>

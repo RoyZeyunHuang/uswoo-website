@@ -228,3 +228,88 @@
 .pg-building .bd-titlerow .ld-price .bd-from {
   color: var(--ink-soft);
 }
+
+/* ---- 楼盘页手机版（只在 600px 以下生效，桌面版不受影响） ---- */
+.pg-building .bd-photos-btn {
+  display: none;
+}
+@media (max-width: 600px) {
+  /* 大图右下角的“查看全部照片”按钮：手机上只有一张大图，需要明确提示可以点开 */
+  .pg-building .bd-photos-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(15, 15, 15, 0.62);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* 地址与户型精简：地址一行，户型、卫浴、面积合成一行，用小号正常大小写 */
+  .pg-building .ld-summary.bd-meta {
+    gap: 4px 8px;
+    margin-top: 10px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .pg-building .bd-meta .bd-addr {
+    flex-basis: 100%;
+  }
+  .pg-building .bd-meta .bd-addr + span::before {
+    display: none;
+  }
+  .pg-building .bd-meta > span + span::before {
+    margin-right: 8px;
+  }
+
+  /* Enquire 按钮：与照片、卡片一致的圆角 */
+  .pg-building .ld-cta .btn {
+    border-radius: 12px;
+    padding: 15px 26px;
+  }
+
+  /* 概览表：做成一张圆角卡片，每行左边是名称、右边是内容 */
+  .pg-building.pg-listing-detail .ld-overview {
+    margin-top: 32px;
+  }
+  .pg-building.pg-listing-detail .ld-overview h2 {
+    font-size: 1.5rem;
+  }
+  .pg-building.pg-listing-detail .ld-overview dl {
+    margin-top: 14px;
+    padding: 0 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+  }
+  .pg-building.pg-listing-detail .ld-overview dl > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+  }
+  .pg-building.pg-listing-detail .ld-overview dl > div:last-child {
+    border-bottom: 0;
+  }
+  .pg-building.pg-listing-detail .ld-overview dt {
+    flex: none;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+  .pg-building.pg-listing-detail .ld-overview dd {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: right;
+  }
+}
