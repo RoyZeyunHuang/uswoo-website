@@ -31,7 +31,7 @@
       <section v-if="on('help')" id="help" class="band-paper">
         <div class="wrap">
           <div class="section-head centered">
-            <p class="eyebrow"><span class="idx">{{ c("help.index") }}</span> {{ c("help.eyebrow") }}</p>
+            <p class="eyebrow"><span class="idx">{{ no("help") }}</span> {{ c("help.eyebrow") }}</p>
             <h2 v-html="ch('help.title')" />
             <p class="lede">
               {{ c("help.lede") }}
@@ -55,7 +55,7 @@
       <section v-if="on('locations')" id="locations" class="band-paper">
         <div class="wrap">
           <div class="section-head centered">
-            <p class="eyebrow"><span class="idx">{{ c("locations.index") }}</span> {{ c("locations.eyebrow") }}</p>
+            <p class="eyebrow"><span class="idx">{{ no("locations") }}</span> {{ c("locations.eyebrow") }}</p>
             <h2>{{ c("locations.title") }}</h2>
             <p class="lede">
               {{ c("locations.lede") }}
@@ -81,7 +81,7 @@
       <section v-if="on('listings') && featured.length" id="listings" class="band-paper">
         <div class="wrap">
           <div class="section-head centered">
-            <p class="eyebrow"><span class="idx">{{ c("listings.index") }}</span> {{ c("listings.eyebrow") }}</p>
+            <p class="eyebrow"><span class="idx">{{ no("listings") }}</span> {{ c("listings.eyebrow") }}</p>
             <h2 v-html="ch('listings.title')" />
             <p class="lede">{{ c("listings.lede") }}</p>
           </div>
@@ -99,7 +99,7 @@
           <div class="about-split">
             <div class="about-copy">
               <div class="section-head">
-                <p class="eyebrow"><span class="idx">{{ c("about.index") }}</span> {{ c("about.eyebrow") }}</p>
+                <p class="eyebrow"><span class="idx">{{ no("about") }}</span> {{ c("about.eyebrow") }}</p>
                 <h2 v-html="ch('about.title')" />
                 <p class="lede">{{ c("about.lede") }}</p>
               </div>
@@ -120,7 +120,7 @@
 
       <section v-if="on('cta')" id="cta" class="band-paper cta-band">
         <div class="wrap">
-          <p class="eyebrow"><span class="idx">{{ c("cta.index") }}</span> {{ c("cta.eyebrow") }}</p>
+          <p class="eyebrow"><span class="idx">{{ no("cta") }}</span> {{ c("cta.eyebrow") }}</p>
           <h2 v-html="ch('cta.title')" />
           <p class="lede">{{ c("cta.lede") }}</p>
           <div class="btn-row">
@@ -153,6 +153,17 @@ const { c, ch, img, raw, list, on, page } = await usePageContent("home", props.r
 const { c: site } = await useSite();
 
 // ---- 内容 ----
+
+/**
+ * 区块序号：按页面上实际展示的区块从 01 起自动编号，不在 CMS 里填写。
+ * 某个地区隐藏了区块，或精选房源为空时，后面的序号自动前移，不会出现跳号。
+ */
+const NUMBERED = ["help", "locations", "listings", "about", "cta"] as const;
+const numbered = computed(() => NUMBERED.filter(key => on(key) && (key !== "listings" || featured.value.length > 0)));
+const no = (key: (typeof NUMBERED)[number]) => {
+  const position = numbered.value.indexOf(key);
+  return position < 0 ? "" : String(position + 1).padStart(2, "0");
+};
 
 /** 统计数字的数值，顺序与 CMS 里 about.stats 列表一致 */
 const statValues = computed(() => list("about.stats").map(index => Number(raw(`about.stats.${index}.value`)) || 0));
