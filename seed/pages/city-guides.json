@@ -44,10 +44,6 @@
       }
     },
     "intro": {
-      "index": {
-        "en": "01",
-        "zh": "01"
-      },
       "title": {
         "en": "City Guides",
         "zh": "城市指南"
@@ -254,10 +250,6 @@
       }
     },
     "areas": {
-      "index": {
-        "en": "02",
-        "zh": "02"
-      },
       "eyebrow": {
         "en": "NEIGHBORHOODS",
         "zh": "社区"
