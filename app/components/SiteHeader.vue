@@ -9,7 +9,7 @@
       <nav class="links">
         <NuxtLink v-for="item in items" :key="item.key" :to="localePath(item.path)" :class="{ active: active === item.key }">{{ c(item.label) }}</NuxtLink>
       </nav>
-      <NuxtLink class="nav-cta" :to="localePath('/contact')">{{ c("nav.contact") }}</NuxtLink>
+      <NuxtLink class="nav-cta" :to="localePath(regionPath('contact', lastRegion))">{{ c("nav.contact") }}</NuxtLink>
       <!-- 语言与地区两个切换放在一组里，尺寸一致、间距固定 -->
       <div class="nav-tools">
         <NuxtLink
@@ -51,7 +51,7 @@
           </NuxtLink>
         </div>
       </div>
-      <NuxtLink class="uswoo-menu-cta" :to="localePath('/contact')" @click="open = false">{{ c("nav.contact") }}</NuxtLink>
+      <NuxtLink class="uswoo-menu-cta" :to="localePath(regionPath('contact', lastRegion))" @click="open = false">{{ c("nav.contact") }}</NuxtLink>
     </div>
   </header>
 </template>
@@ -95,7 +95,7 @@ const routeRegion = computed(() => (typeof route.params.region === "string" ? ro
 /** 当前地区：分地区的页面以网址为准，其他页面用访客上次的选择（挂载后才知道） */
 const activeRegion = computed(() => regions.value.find(region => region.slug === (routeRegion.value ?? lastRegion.value)) ?? null);
 
-/** 路由名（去掉语言后缀）→ 分地区的页面类型；不在表里的页面（Contact、详情页等）没有地区版本 */
+/** 路由名（去掉语言后缀）→ 分地区的页面类型；不在表里的页面（文章、房源详情页等）没有地区版本 */
 const REGIONAL_ROUTES: Record<string, RegionalPage> = {
   index: "home",
   region: "home",
@@ -110,7 +110,9 @@ const REGIONAL_ROUTES: Record<string, RegionalPage> = {
   partners: "partners",
   "region-partners": "partners",
   about: "about",
-  "region-about": "about"
+  "region-about": "about",
+  contact: "contact",
+  "region-contact": "contact"
 };
 /** 选了某个地区后要去的地址：当前是分地区的页面就换到那个地区的同一类页面，否则留在原地 */
 function regionTarget(slug: string | null) {

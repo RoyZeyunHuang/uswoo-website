@@ -29,24 +29,29 @@ function dig(source: unknown, path: string): unknown {
 export async function usePageContent(pageKey: string, region?: string) {
   const api = useApi();
   const { isZh } = useTx();
+  // CMS 的页面编辑器内嵌预览时，用编辑器送来的（尚未保存的）内容代替已发布内容，见 useCmsEdit。
+  // 必须在下面的 await 之前取：之后就拿不到 Nuxt 的上下文了
+  const edit = useCmsEdit();
   const { data, error } = await useAsyncData(`page:${pageKey}:${region ?? ""}`, () => api<PageContent>(`/pages/${pageKey}`, { query: region ? { region } : {} }));
   // 内容取不到（接口故障，或这个页面还没在 CMS 里发布）时不渲染空壳页面
   if (error.value || !data.value) throw createError({ statusCode: 503, statusMessage: "Content unavailable", fatal: true });
-  const payload = computed<Record<string, unknown>>(() => data.value?.payload ?? {});
+  const payload = computed<Record<string, unknown>>(() => (edit.active.value && edit.overrides.value[pageKey]) || data.value?.payload || {});
+  const ref = (path: string) => `${pageKey}:${path}`;
 
   /** 纯文字 */
   function c(path: string): string {
     const leaf = dig(payload.value, path) as Leaf | undefined;
-    if (typeof leaf === "string") return leaf;
-    if (!leaf || typeof leaf !== "object") return "";
-    return (isZh.value ? leaf.zh || leaf.en : leaf.en || leaf.zh) || "";
+    const text = typeof leaf === "string" ? leaf : !leaf || typeof leaf !== "object" ? "" : (isZh.value ? leaf.zh || leaf.en : leaf.en || leaf.zh) || "";
+    // 编辑预览时在文字末尾带上看不见的标记，点页面上的文字就能定位到这个字段
+    return text && edit.active.value ? text + cmsMark(ref(path)) : text;
   }
   /** 给 v-html 用：已转义，只保留白名单里的内联标记 */
   const ch = (path: string) => richHtml(c(path));
   /** 图片地址：CMS 里用媒体库图片（{"mediaId": n}）或直接写地址（{"url": "…"}） */
   function img(path: string): string {
     const leaf = dig(payload.value, path) as { url?: string | null } | undefined;
-    return leaf?.url || "";
+    const url = leaf?.url || "";
+    return url && edit.active.value ? url + cmsImageMark(ref(path)) : url;
   }
   /** 数字、链接等原始值；没有填时是 undefined */
   function raw<T>(path: string): T | undefined {

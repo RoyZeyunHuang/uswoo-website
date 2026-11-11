@@ -26,16 +26,19 @@ on("help")                    // 区块是否展示（CMS 里 help.show 不为 f
 - **每个区块都要能在 CMS 里隐藏**：页面上的每个 `<section>` 写成 `<section v-if="on('区块键')">`，区块键就是它在 CMS 内容里的顶层字段名。新增区块时照此处理，并保证区块不存在时页面脚本不报错。
 
 - 全站通用内容（站点名称、logo、favicon、导航、页脚）用 `await useSite()`，用法相同。
+- **CMS 里的实时预览依赖这些函数**：编辑器把官网内嵌进去预览时，`c()` / `ch()` 返回的文字末尾带一段看不见的标记、`img()` 的地址带 `#cms=` 片段，点页面上的内容才能定位到字段（见 `app/composables/useCmsEdit.ts`）。所以页面上的文字和图片一定要经过这几个函数直接输出；不要拿它们的返回值做相等比较、当 `key` 或拼进别的地址里——需要原始值时用 `raw()`。
+- 不是内容、而是页面行为的开关放在 `settings` 下，例如首页的 `settings.fullpageSnap`（整屏吸附 + 平滑滚动，可按地区开关，实现在 `app/composables/useFullpageSnap.ts`）。
 - 需要新的文字或图片时：**先**在 CMS 对应页面里加字段并填好中英文，**再**发布读取它的代码。字段没填时页面上是空的，不会有兜底。
 - 只有功能性的界面文字留在代码里：表单校验与提交状态、加载状态、无障碍标签、单位与日期格式。写法是 `tx("English")`，中文加到 `app/locales/ui/*.zh.ts`。拿不准算内容还是界面文字时，按内容处理，放进 CMS。
 - `seed/` 是最初导入 CMS 的那份内容，仅作记录，改它不会改变网站。
 
 | CMS 页面键 | 内容 |
 |---|---|
-| `home`、`services`、`about`、`partners` | 首页、Services、About、Partners。可按地区配置：`usePageContent("home", region)`，接口把该地区的内容盖在全站默认之上返回 |
-| `contact` | Contact（全站一份） |
+| `home`、`services`、`about`、`partners`、`contact` | 首页、Services、About、Partners、Contact（`/{region}/contact` 与 `/contact`） |
 | `listings`、`press`、`city-guides` | 这三类页面上的固定文案（列表条目来自各自的内容表） |
 | `site` | 全站通用：站点名称、logo、favicon、导航、页脚、默认分享图 |
+
+九个页面都有一份全站默认，并且**都可以按地区配置**：`usePageContent("home", region)`，接口把该地区的内容盖在全站默认之上返回（`page.resolvedFrom` 为 `"region"` 或 `"global"`）。地区页一律把地区传进去，不带地区的页面和详情页用全站默认。`useSite()` 在带地区的网址上自动取该地区的版本；站点名称、favicon、默认分享图固定用全站默认（`useSite({ global: true })`）。
 
 ## 其他约定
 

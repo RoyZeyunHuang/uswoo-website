@@ -11,7 +11,7 @@
             <h1 v-html="ch('hero.title')" />
             <p class="sub">{{ c("hero.sub") }}</p>
             <div class="btn-row">
-              <NuxtLink class="btn btn-primary" :to="localePath('/contact')">{{ c("hero.cta") }}</NuxtLink>
+              <NuxtLink class="btn btn-primary" :to="localePath(regionPath('contact', props.region))">{{ c("hero.cta") }}</NuxtLink>
             </div>
           </div>
           <div class="split-hero-media">

@@ -4,9 +4,10 @@
     <SiteHeader active="partners" scrolled />
 
     <main id="top">
-      <section id="what-we-do" class="band-raised">
+      <!-- 这一段装着 editorial 和 offers 两块内容：两块都没有时整段不输出，免得留一条空白色带 -->
+      <section v-if="on('editorial') || list('offers').length" id="what-we-do" class="band-raised">
         <div class="wrap">
-          <div class="editorial">
+          <div v-if="on('editorial')" class="editorial">
             <div class="editorial-media editorial-media-l">
               <SlotImage :src="img('editorial.imageLeft')" alt="" eager />
             </div>
@@ -38,7 +39,7 @@
         </div>
       </section>
 
-      <section id="heroSection" class="partners-hero">
+      <section v-if="on('hero')" id="heroSection" class="partners-hero">
         <div class="partners-hero-photo">
           <div class="partners-hero-bg" aria-hidden="true">
             <SlotImage :src="img('hero.image')" alt="" />
@@ -56,7 +57,7 @@
         </div>
       </section>
 
-      <section id="why-uswoo" class="band-paper">
+      <section v-if="on('why')" id="why-uswoo" class="band-paper">
         <div class="wrap">
           <div class="why-bento-wrap">
             <div class="why-copy">
@@ -82,7 +83,7 @@
         </div>
       </section>
 
-      <section id="performance" class="band-raised">
+      <section v-if="on('performance')" id="performance" class="band-raised">
         <div class="wrap">
           <div class="section-head centered perf-head">
             <p class="eyebrow"><span class="idx">04</span> {{ c("performance.eyebrow") }}</p>
@@ -127,7 +128,7 @@
         </div>
       </section>
 
-      <section id="cta" class="band-paper cta-band">
+      <section v-if="on('cta')" id="cta" class="band-paper cta-band">
         <div class="wrap">
           <p class="eyebrow"><span class="idx">05</span> {{ c("cta.eyebrow") }}</p>
           <h2 v-html="ch('cta.title')" />
@@ -154,7 +155,7 @@ const props = defineProps<{ region?: string }>();
 const { region } = await useRegion(props.region);
 const { tx, bi } = useTx();
 const localePath = useLocalePath();
-const { c, ch, img, raw, list, page } = await usePageContent("partners", props.region);
+const { c, ch, img, raw, list, on, page } = await usePageContent("partners", props.region);
 const { c: site } = await useSite();
 
 // ---- 内容 ----

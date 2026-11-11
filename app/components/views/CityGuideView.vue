@@ -4,7 +4,7 @@
 
     <!-- 原站把这两个动效开关加在 <html> 上；样式已限定在页面根元素之内，所以改加在 main 上 -->
     <main id="top" :class="{ 'cg-lead-motion': leadMotion, 'cg-motion': cardMotion }">
-      <section ref="lead" class="band-raised cg-lead" :class="{ in: leadIn }">
+      <section v-if="on('lead')" ref="lead" class="band-raised cg-lead" :class="{ in: leadIn }">
         <div class="wrap">
           <div class="section-head centered">
             <h2 v-html="ch('lead.title')" />
@@ -20,10 +20,13 @@
         <div class="wrap">
           <div class="cg-top">
             <div class="cg-intro">
-              <p class="eyebrow"><span class="idx">{{ c("intro.index") }}</span></p>
-              <h1>{{ c("intro.title") }}</h1>
-              <p class="sub">{{ c("intro.sub") }}</p>
-              <p class="desc">{{ c("intro.desc") }}</p>
+              <!-- intro 只隐藏这几行介绍文字：同一栏里的筛选按钮和面板是地图的操作入口，必须保留 -->
+              <template v-if="on('intro')">
+                <p class="eyebrow"><span class="idx">{{ c("intro.index") }}</span></p>
+                <h1>{{ c("intro.title") }}</h1>
+                <p class="sub">{{ c("intro.sub") }}</p>
+                <p class="desc">{{ c("intro.desc") }}</p>
+              </template>
 
               <button type="button" class="cg-filter-open" @click="openSheet(false)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
@@ -136,7 +139,7 @@
         </div>
       </section>
 
-      <div>
+      <div v-if="on('areas')">
         <section id="areas" class="cg-areas">
           <div class="wrap">
             <div class="cg-areas-head">
@@ -174,7 +177,7 @@
                 </div>
               </article>
               <article
-                v-if="closing"
+                v-if="closing && on('closing')"
                 class="cg-area cg-area-note"
                 :class="{ 'cg-note-mobile-hide': closing.hideOnMobile, wide: areas.length % 3 === 0, in: cardsIn[areas.length] }"
                 :style="{ '--i': areas.length % 3 }"
@@ -188,7 +191,7 @@
                   </h3>
                   <p class="cg-full">{{ bi(closing.text) }}</p>
                   <p class="cg-short">{{ bi(closing.short) || c("closing.short") }}</p>
-                  <NuxtLink class="btn" :to="localePath('/contact')">{{ c("closing.cta") }}</NuxtLink>
+                  <NuxtLink class="btn" :to="localePath(regionPath('contact', props.region))">{{ c("closing.cta") }}</NuxtLink>
                 </div>
               </article>
             </div>
@@ -196,7 +199,7 @@
         </section>
       </div>
 
-      <section id="cta" class="band-paper" style="padding-top: 0">
+      <section v-if="on('switch')" id="cta" class="band-paper" style="padding-top: 0">
         <div class="wrap">
           <div class="cg-switch">
             <div class="cg-switch-icon">
@@ -234,8 +237,9 @@ const localePath = useLocalePath();
 const api = useApi();
 const { region, regions } = await useRegion(props.region);
 const slug = props.region ?? "new-york";
-// 各城市通用的文案（标题、筛选项、图例、按钮等）：CMS 页面内容 city-guides，不分地区
-const { c, ch, img, raw } = await usePageContent("city-guides");
+// 各城市通用的文案（标题、筛选项、图例、按钮等）：CMS 页面内容 city-guides。
+// 地区页用该地区的版本；汇总页虽然显示纽约的数据，文案仍用全站默认
+const { c, ch, img, raw, on } = await usePageContent("city-guides", props.region);
 const { c: site } = await useSite();
 
 // ---- 数据 ----
@@ -309,16 +313,21 @@ usePageSeo(() => {
         image: absoluteUrl(img("seo.brandImage")),
         areaServed: { "@type": "City", name }
       },
-      {
-        "@type": "ItemList",
-        name: withCity("seo.areasListName"),
-        itemListElement: areas.value.map((area, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name: bi(area.name),
-          description: bi(area.short) || bi(area.text)
-        }))
-      }
+      // 区域卡片被隐藏时不输出对应的结构化数据（结构化数据要与页面上看得到的内容一致）
+      ...(on("areas")
+        ? [
+            {
+              "@type": "ItemList",
+              name: withCity("seo.areasListName"),
+              itemListElement: areas.value.map((area, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                name: bi(area.name),
+                description: bi(area.short) || bi(area.text)
+              }))
+            }
+          ]
+        : [])
     ]
   };
 });

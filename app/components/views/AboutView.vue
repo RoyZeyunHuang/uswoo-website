@@ -1,9 +1,10 @@
 <template>
   <div ref="root" class="pg pg-about">
-    <SiteHeader active="about" :scrolled="navScrolled" />
+    <!-- 首屏被隐藏时没有深色背景可以衬托透明导航，导航直接用实底 -->
+    <SiteHeader active="about" :scrolled="navScrolled || !on('hero')" />
 
     <main id="top">
-      <section id="heroSection" ref="hero" class="about-hero">
+      <section v-if="on('hero')" id="heroSection" ref="hero" class="about-hero">
         <div class="about-hero-bg" aria-hidden="true">
           <div ref="heroSlides" class="hero-slides">
             <div class="hero-slide"><img :src="img('hero.images.0')" alt="" decoding="async" /></div>
@@ -32,7 +33,7 @@
         </div>
       </section>
 
-      <section id="mission" class="band-raised">
+      <section v-if="on('mission')" id="mission" class="band-raised">
         <div class="wrap">
           <div class="mission-head">
             <p class="eyebrow"><span class="idx">01</span> {{ c("mission.eyebrow") }}</p>
@@ -56,7 +57,7 @@
         </div>
       </section>
 
-      <section id="our-story" class="band-raised">
+      <section v-if="on('story')" id="our-story" class="band-raised">
         <div class="wrap">
           <div class="section-head">
             <p class="eyebrow"><span class="idx">02</span> {{ c("story.eyebrow") }}</p>
@@ -87,7 +88,7 @@
         </div>
       </section>
 
-      <section id="how-we-got-here" class="band-paper">
+      <section v-if="on('timeline')" id="how-we-got-here" class="band-paper">
         <div class="wrap">
           <div class="section-head">
             <p class="eyebrow"><span class="idx">03</span> {{ c("timeline.eyebrow") }}</p>
@@ -108,7 +109,7 @@
         </div>
       </section>
 
-      <section id="grow-with-uswoo" class="cta-band band-paper">
+      <section v-if="on('careers')" id="grow-with-uswoo" class="cta-band band-paper">
         <div class="wrap">
           <p class="eyebrow"><span class="idx">04</span> {{ c("careers.eyebrow") }}</p>
           <h2 style="--i: 1" v-html="ch('careers.title')" />
@@ -143,7 +144,7 @@ const props = defineProps<{ region?: string }>();
 const { region } = await useRegion(props.region);
 const { tx, bi, isZh } = useTx();
 const localePath = useLocalePath();
-const { c, img, ch, raw, list, page } = await usePageContent("about", props.region);
+const { c, img, ch, raw, list, on, page } = await usePageContent("about", props.region);
 const { c: site } = await useSite();
 
 // ---- 内容 ----

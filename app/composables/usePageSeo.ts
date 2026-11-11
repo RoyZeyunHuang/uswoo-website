@@ -41,7 +41,7 @@ export function usePageSeo(input: PageSeo | (() => PageSeo)) {
   const title = computed(() => seo.value.title);
   const description = computed(() => seo.value.description || undefined);
 
-  // 站点名称与默认分享图来自 CMS「全站通用」（app.vue 已经取好）
+  // 站点名称与默认分享图来自 CMS「全站通用」的全站默认版本（app.vue 已经取好；地区页上也用这一份，不随地区变化）
   const site = useNuxtData<PageContent>("page:site:");
   const brand = computed(() => (site.data.value?.payload ?? {}) as { brand?: { siteName?: { en?: string; zh?: string } }; seo?: { defaultImage?: { url?: string | null } } });
   const siteName = computed(() => {

@@ -3,15 +3,18 @@
     <SiteHeader active="listings" scrolled />
 
     <main id="top">
-      <section class="ls-hero">
+      <!-- 城市筛选排在首屏这一段里面，但在 CMS 里是单独的区块（filters）：隐藏首屏文字时筛选仍然保留 -->
+      <section v-if="on('hero') || on('filters')" class="ls-hero">
         <div class="wrap">
-          <p class="eyebrow"><span class="idx">01</span> {{ c("hero.eyebrow") }}</p>
-          <h1>
-            {{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template
-            ><span class="pink">{{ c("hero.titleAccent") }}</span>
-          </h1>
-          <p class="lede">{{ c("hero.lede") }}</p>
-          <nav id="lsFilters" class="ls-filters" :aria-label="tx('Filter by city')">
+          <template v-if="on('hero')">
+            <p class="eyebrow"><span class="idx">01</span> {{ c("hero.eyebrow") }}</p>
+            <h1>
+              {{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template
+              ><span class="pink">{{ c("hero.titleAccent") }}</span>
+            </h1>
+            <p class="lede">{{ c("hero.lede") }}</p>
+          </template>
+          <nav v-if="on('filters')" id="lsFilters" class="ls-filters" :aria-label="tx('Filter by city')">
             <NuxtLink class="ls-chip" :class="{ on: !region }" :to="localePath(regionPath('listings'))" :aria-current="!region ? 'page' : undefined">
               {{ c("filters.all") }}
             </NuxtLink>
@@ -32,7 +35,7 @@
       <section class="ls-grid-sec">
         <div class="wrap">
           <div v-if="listings.length" id="lsGrid" class="ls-grid">
-            <ListingCard v-for="listing in listings" :key="listing.id" :listing="listing" />
+            <ListingCard v-for="listing in listings" :key="listing.id" :listing="listing" :region="props.region" />
           </div>
           <!-- 原样式表里这一段默认隐藏、由脚本显示；这里按数据决定是否输出 -->
           <p v-else id="lsEmpty" class="ls-empty" style="display: block">{{ c("empty") }}</p>
@@ -45,7 +48,7 @@
         </div>
       </section>
 
-      <section class="band-raised cta-band">
+      <section v-if="on('cta')" class="band-raised cta-band">
         <div class="wrap">
           <p class="eyebrow"><span class="idx">02</span> {{ c("cta.eyebrow") }}</p>
           <h2>{{ c("cta.title") }}</h2>
@@ -53,7 +56,7 @@
             {{ c("cta.lede") }}
           </p>
           <div class="btn-row">
-            <NuxtLink class="btn btn-pink" :to="localePath('/contact')">{{ c("cta.button") }}</NuxtLink>
+            <NuxtLink class="btn btn-pink" :to="localePath(regionPath('contact', props.region))">{{ c("cta.button") }}</NuxtLink>
           </div>
         </div>
       </section>
@@ -76,7 +79,8 @@ const { tx, bi, isZh } = useTx();
 const localePath = useLocalePath();
 const api = useApi();
 const absoluteUrl = useAbsoluteUrl();
-const { c } = await usePageContent("listings");
+// 页面上的固定文案：地区页用该地区的版本（没有单独配置的部分沿用全站默认）
+const { c, on } = await usePageContent("listings", props.region);
 
 const PAGE_SIZE = 60;
 const fetchPage = (page: number) => api<Paged<Listing>>("/listings", { query: { region: props.region, pageSize: PAGE_SIZE, page } });

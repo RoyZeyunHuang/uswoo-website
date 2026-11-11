@@ -3,7 +3,7 @@
     <SiteHeader active="press" />
 
     <main id="top">
-      <section v-if="lead" id="featured-press" class="band-paper">
+      <section v-if="on('featured') && lead" id="featured-press" class="band-paper">
         <div class="wrap">
           <div class="section-head">
             <p class="eyebrow"><span class="idx">{{ sectionIndex("press") }}</span> {{ c("featured.eyebrow") }}</p>
@@ -43,7 +43,7 @@
         </div>
       </section>
 
-      <section v-if="stories.length" id="renter-stories" class="band-raised">
+      <section v-if="on('stories') && stories.length" id="renter-stories" class="band-raised">
         <div class="wrap">
           <div class="section-head-row">
             <div class="section-head">
@@ -72,7 +72,7 @@
         </div>
       </section>
 
-      <section v-if="moments.length" id="brand-moments" class="band-paper">
+      <section v-if="on('moments') && moments.length" id="brand-moments" class="band-paper">
         <div class="wrap">
           <div class="section-head">
             <p class="eyebrow"><span class="idx">{{ sectionIndex("moment") }}</span> {{ c("moments.eyebrow") }}</p>
@@ -96,7 +96,7 @@
         </div>
       </section>
 
-      <section v-if="isEmpty" class="band-paper press-empty">
+      <section v-if="on('empty') && isEmpty" class="band-paper press-empty">
         <div class="wrap">
           <p class="eyebrow">{{ c("empty.eyebrow") }}</p>
           <p class="lede">{{ c("empty.text") }}</p>
@@ -119,9 +119,10 @@ const props = defineProps<{ region?: string }>();
 const { tx, bi } = useTx();
 const localePath = useLocalePath();
 const api = useApi();
-const { c } = await usePageContent("press");
 // 先校验地区：不存在的地区是真实的 404
 const { region } = await useRegion(props.region);
+// 页面上的固定文案：地区页用该地区的版本（没有单独配置的部分沿用全站默认）
+const { c, on } = await usePageContent("press", props.region);
 
 // ---- 内容：三个板块的卡片全部来自 CMS ----
 
@@ -137,9 +138,10 @@ const { data } = await useAsyncData(`press:${props.region ?? ""}`, async () => {
   return { press, story, moment };
 });
 
-const press = computed(() => data.value?.press ?? []);
-const stories = computed(() => data.value?.story ?? []);
-const moments = computed(() => data.value?.moment ?? []);
+// 在 CMS 里隐藏的板块按“没有内容”处理：序号顺延，三个板块都不出时显示空状态（页面也不收录）
+const press = computed(() => (on("featured") ? (data.value?.press ?? []) : []));
+const stories = computed(() => (on("stories") ? (data.value?.story ?? []) : []));
+const moments = computed(() => (on("moments") ? (data.value?.moment ?? []) : []));
 /** 主推卡片：优先用标了「精选」的，没有就用最新的一篇 */
 const lead = computed(() => press.value.find(post => post.isFeatured) ?? press.value[0] ?? null);
 const latest = computed(() => press.value.filter(post => post.id !== lead.value?.id));
@@ -147,7 +149,8 @@ const isEmpty = computed(() => !press.value.length && !stories.value.length && !
 
 /** 板块序号：没有内容的板块不渲染，序号顺延 */
 function sectionIndex(type: PostType): string {
-  const shown = (["press", "story", "moment"] as const).filter(key => (data.value?.[key] ?? []).length);
+  const byType = { press, story: stories, moment: moments };
+  const shown = (["press", "story", "moment"] as const).filter(key => byType[key].value.length);
   return String(shown.indexOf(type) + 1).padStart(2, "0");
 }
 

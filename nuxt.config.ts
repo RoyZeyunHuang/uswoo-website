@@ -13,7 +13,9 @@ export default defineNuxtConfig({
     public: {
       siteUrl: "https://uswoo.com",
       apiBase: "https://uswoo.com/api/uswoo/public",
-      deployEnv: "staging"
+      deployEnv: "staging",
+      // 允许内嵌本站做可视化编辑预览的 CMS 网址（逗号分隔，环境变量 NUXT_PUBLIC_CMS_ORIGINS）。留空则不开放。
+      cmsOrigins: ""
     }
   },
 

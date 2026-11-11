@@ -20,11 +20,14 @@
 import "~/assets/css/listing-card.extra.css";
 import type { Listing } from "~~/shared/types/api";
 
-/** 房源卡片（首页精选与房源列表共用），点击进入房源详情页。 */
-const props = defineProps<{ listing: Listing }>();
+/**
+ * 房源卡片（首页精选与房源列表共用），点击进入房源详情页。
+ * region：卡片所在页面的地区（不是房源自己的地区），传了就用该地区的卡片文案，不传用全站默认。
+ */
+const props = defineProps<{ listing: Listing; region?: string }>();
 const { tx, bi } = useTx();
 const localePath = useLocalePath();
-const { c } = await usePageContent("listings");
+const { c } = await usePageContent("listings", props.region);
 
 const leased = computed(() => props.listing.status === "leased");
 
