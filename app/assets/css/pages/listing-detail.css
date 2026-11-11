@@ -20,139 +20,112 @@
   color: var(--ink);
 }
 
-.pg-listing-detail .ld-layout {
+/* ---- 相册：左边一张大图，右边 2×2 小图 ---- */
+
+.pg-listing-detail .ld-mosaic {
   margin-top: clamp(20px, 2.4vw, 32px);
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-  gap: clamp(24px, 4vw, 64px);
-  align-items: start;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  aspect-ratio: 2.4 / 1;
 }
 
-/* ---- 图片 ---- */
-
-.pg-listing-detail .ld-gallery {
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 10px;
-  background: var(--paper);
-}
-
-.pg-listing-detail .ld-stage {
+.pg-listing-detail .ld-tile {
   position: relative;
-  aspect-ratio: 4/3;
-  border-radius: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
   overflow: hidden;
   background: var(--line);
+  cursor: pointer;
 }
 
-.pg-listing-detail .ld-stage > img {
+.pg-listing-detail .ld-tile.main {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.pg-listing-detail .ld-tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pg-listing-detail .ld-tile:hover img {
+  transform: scale(1.03);
+}
+
+/* 小图不足四张时让它们撑满右侧 */
+.pg-listing-detail .ld-mosaic[data-count="1"] .ld-tile.main {
+  grid-column: 1 / -1;
+}
+
+.pg-listing-detail .ld-mosaic[data-count="2"] .ld-tile:nth-child(2) {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.pg-listing-detail .ld-mosaic[data-count="3"] .ld-tile:nth-child(n + 2) {
+  grid-column: 3 / span 2;
+}
+
+.pg-listing-detail .ld-mosaic[data-count="4"] .ld-tile:nth-child(2) {
+  grid-column: 3 / span 2;
+}
+
+.pg-listing-detail .ld-allphotos {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(15, 15, 15, 0.45);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.84rem;
+  font-weight: 600;
 }
 
 .pg-listing-detail .ld-leased {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--black);
-  color: #fff;
-  font-size: 0.68rem;
+  top: 14px;
+  right: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 5px 10px;
-  border-radius: 2px;
+  padding: 6px 12px;
+  border-radius: 4px;
 }
 
-.pg-listing-detail .ld-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  color: var(--ink);
-  font-size: 1.3rem;
-  line-height: 1;
-  cursor: pointer;
+.pg-listing-detail .ls-tag {
+  top: 14px;
+  left: 14px;
+}
+
+/* ---- 标题与价格 ---- */
+
+.pg-listing-detail .ld-head {
+  margin-top: clamp(24px, 3vw, 40px);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 3px;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 64px);
 }
 
-.pg-listing-detail .ld-arrow:hover {
-  background: var(--paper);
-  border-color: var(--ink-soft);
+.pg-listing-detail .ld-head-main {
+  min-width: 0;
 }
 
-.pg-listing-detail .ld-arrow.prev {
-  left: 12px;
-}
-
-.pg-listing-detail .ld-arrow.next {
-  right: 12px;
-}
-
-.pg-listing-detail .ld-count {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  background: rgba(15, 15, 15, 0.72);
-  color: #fff;
-  font-size: 0.74rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 999px;
-}
-
-.pg-listing-detail .ld-thumbs {
-  margin-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
-  gap: 10px;
-}
-
-.pg-listing-detail .ld-thumb {
-  aspect-ratio: 4/3;
-  padding: 0;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--line);
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.15s ease, border-color 0.15s ease;
-}
-
-.pg-listing-detail .ld-thumb:hover,
-.pg-listing-detail .ld-thumb.on {
-  opacity: 1;
-}
-
-.pg-listing-detail .ld-thumb.on {
-  border-color: var(--pink);
-}
-
-.pg-listing-detail .ld-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ---- 信息 ---- */
-
-.pg-listing-detail .ld-info {
-  position: sticky;
-  top: 96px;
-}
-
-.pg-listing-detail .ld-info h1 {
-  margin-top: 14px;
+.pg-listing-detail .ld-head h1 {
+  margin-top: 12px;
   font-size: clamp(1.9rem, 3.4vw, 2.8rem);
   letter-spacing: -0.01em;
 }
@@ -160,66 +133,77 @@
 .pg-listing-detail .ld-loc {
   margin: 10px 0 0;
   color: var(--ink-soft);
-  font-size: 1.02rem;
-}
-
-.pg-listing-detail .ld-price-row {
-  margin-top: 24px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
+  font-size: 0.95rem;
 }
 
 .pg-listing-detail .ld-price {
+  margin-top: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-size: clamp(1.6rem, 2.6vw, 2rem);
   line-height: 1.1;
+  color: var(--ink-soft);
 }
 
 .pg-listing-detail .ld-price.ask {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .pg-listing-detail .ld-price small {
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--ink-soft);
   margin-left: 3px;
 }
 
-.pg-listing-detail .ld-facts {
-  margin: 28px 0 0;
-  padding: 20px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 18px 20px;
+.pg-listing-detail .ld-summary {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
 }
 
-.pg-listing-detail .ld-facts dt {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.pg-listing-detail .ld-summary > span + span::before {
+  content: "•";
+  margin-right: 14px;
   color: var(--ink-faint);
 }
 
-.pg-listing-detail .ld-facts dd {
-  margin: 4px 0 0;
-  font-family: "Poppins", sans-serif;
+.pg-listing-detail .ld-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.84rem;
   font-weight: 600;
-  font-size: 1.05rem;
+  letter-spacing: 0;
+  text-transform: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.pg-listing-detail .ld-share:hover {
+  border-color: var(--ink-soft);
 }
 
 .pg-listing-detail .ld-cta {
-  margin-top: 28px;
+  flex: none;
+  width: min(100%, 300px);
 }
 
 .pg-listing-detail .ld-cta .btn {
+  width: 100%;
   justify-content: center;
 }
 
@@ -227,7 +211,111 @@
   margin: 12px 0 0;
   font-size: 0.86rem;
   color: var(--ink-faint);
-  max-width: 44ch;
+}
+
+/* ---- 概览表 ---- */
+
+.pg-listing-detail .ld-overview {
+  margin-top: clamp(40px, 6vw, 72px);
+}
+
+.pg-listing-detail .ld-overview h2 {
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+}
+
+.pg-listing-detail .ld-overview dl {
+  margin: 24px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.pg-listing-detail .ld-overview dl > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.4fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 24px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pg-listing-detail .ld-overview dt {
+  font-weight: 700;
+}
+
+.pg-listing-detail .ld-overview dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ---- 全屏查看 ---- */
+
+.pg-listing-detail .ld-viewer,
+.ld-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 72px;
+  background: rgba(15, 15, 15, 0.92);
+}
+
+.ld-viewer > img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.ld-viewer-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ld-viewer .ld-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0 0 4px;
+  cursor: pointer;
+}
+
+.ld-viewer .ld-arrow:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.ld-viewer .ld-arrow.prev {
+  left: 16px;
+}
+
+.ld-viewer .ld-arrow.next {
+  right: 16px;
+}
+
+.ld-viewer .ld-count {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 /* ---- 介绍 ---- */
@@ -255,28 +343,40 @@
   text-align: left;
 }
 
+
 @media (max-width: 900px) {
-  .pg-listing-detail .ld-layout {
-    grid-template-columns: 1fr;
+  .pg-listing-detail .ld-head {
+    flex-direction: column;
   }
 
-  .pg-listing-detail .ld-info {
-    position: static;
-  }
-
-  .pg-listing-detail .ld-cta .btn {
+  .pg-listing-detail .ld-cta {
     width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-  .pg-listing-detail .ld-thumbs {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 8px;
+  /* 手机上只留一张大图，其余在全屏查看里 */
+  .pg-listing-detail .ld-mosaic {
+    display: block;
+    aspect-ratio: 4 / 3;
   }
 
-  .pg-listing-detail .ld-arrow {
-    width: 36px;
-    height: 36px;
+  .pg-listing-detail .ld-tile:not(.main) {
+    display: none;
+  }
+
+  .pg-listing-detail .ld-tile.main {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pg-listing-detail .ld-overview dl > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 18px 4px;
+  }
+
+  .ld-viewer {
+    padding: 56px 12px;
   }
 }

@@ -34,6 +34,32 @@
 
       <section class="ls-grid-sec">
         <div class="wrap">
+          <!-- 独家楼盘：只在「全部」和对应地区出现。内容是临时写在代码里的，见 app/data/buildings.ts -->
+          <div v-if="buildings.length" class="ls-dev">
+            <p class="eyebrow">{{ isZh ? BUILDINGS_HEADING.zh : BUILDINGS_HEADING.en }}</p>
+            <div class="ls-dev-grid">
+              <NuxtLink
+                v-for="item in buildings"
+                :key="item.slug"
+                class="ls-dev-card"
+                :to="{ path: localePath(regionPath('contact', item.region)), query: { building: item.slug } }"
+              >
+                <div class="ls-dev-media">
+                  <img v-if="item.image" :src="item.image" :alt="item.name" loading="lazy" />
+                  <span v-else class="ls-dev-ph" aria-hidden="true">{{ item.name }}</span>
+                  <span class="ls-tag">{{ tx(item.tag) }}</span>
+                </div>
+                <div class="ls-dev-body">
+                  <div>
+                    <h3>{{ item.name }}</h3>
+                    <p>{{ regionLabel(item.region) }}</p>
+                  </div>
+                  <span class="ls-dev-cta">{{ tx("Enquire") }} <span aria-hidden="true">→</span></span>
+                </div>
+              </NuxtLink>
+            </div>
+          </div>
+
           <div v-if="listings.length" id="lsGrid" class="ls-grid">
             <ListingCard v-for="listing in listings" :key="listing.id" :listing="listing" :region="props.region" />
           </div>
@@ -70,6 +96,7 @@
 import "~/assets/css/pages/listings.css";
 import "~/assets/css/pages/listings.extra.css";
 import type { Listing, Paged } from "~~/shared/types/api";
+import { BUILDINGS, BUILDINGS_HEADING } from "~/data/buildings";
 
 /** 房源列表：/listings（全部地区）与 /{region}/listings（单个地区）共用。 */
 const props = defineProps<{ region?: string }>();
@@ -81,6 +108,13 @@ const api = useApi();
 const absoluteUrl = useAbsoluteUrl();
 // 页面上的固定文案：地区页用该地区的版本（没有单独配置的部分沿用全站默认）
 const { c, on } = await usePageContent("listings", props.region);
+
+// 独家楼盘：「全部」页显示所有，地区页只显示该地区的
+const buildings = computed(() => BUILDINGS.filter(item => !props.region || item.region === props.region));
+const regionLabel = (slug: string) => {
+  const item = regions.value.find(entry => entry.slug === slug);
+  return item ? bi(item.name) : "";
+};
 
 const PAGE_SIZE = 60;
 const fetchPage = (page: number) => api<Paged<Listing>>("/listings", { query: { region: props.region, pageSize: PAGE_SIZE, page } });
