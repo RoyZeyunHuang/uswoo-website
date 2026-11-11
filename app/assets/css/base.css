@@ -49,6 +49,7 @@ body {
 footer .footer-more {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 32px 56px;
   padding: 36px 0 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
@@ -56,20 +57,20 @@ footer .footer-more {
 footer .footer-more .footer-col {
   min-width: 180px;
 }
-footer .footer-offices {
-  display: grid;
-  gap: 18px;
-  align-content: start;
-}
-footer .footer-offices .ft-label {
-  margin-bottom: -6px;
-}
+/* 办公室：每个城市一栏，与订阅框、Follow 同在一行；整行两端对齐，各栏之间的间距相同 */
 footer .footer-office {
   display: grid;
   gap: 4px;
+  align-content: start;
   font-size: 0.9rem;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.82);
+}
+footer .footer-office-addr {
+  white-space: nowrap;
+}
+footer .footer-office-addr span {
+  display: block;
 }
 footer .footer-office-name {
   font-weight: 600;
@@ -91,6 +92,12 @@ footer .footer-qr img {
   background: #fff;
 }
 @media (max-width: 720px) {
+  footer .footer-office-addr {
+    white-space: normal;
+  }
+  footer .footer-office .ft-label.blank {
+    display: none;
+  }
   footer .footer-more {
     flex-direction: column;
     gap: 28px;
