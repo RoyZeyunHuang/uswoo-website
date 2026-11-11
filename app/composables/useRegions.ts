@@ -1,8 +1,8 @@
 import type { Region } from "~~/shared/types/api";
 
 /** 带地区的页面类型 → 网址里的那一段。不带地区的路径在 AGGREGATE 里（首页的地区版本是 /{region}）。 */
-const REGIONAL = { home: "", services: "services", "city-guide": "city-guide", listings: "listings", press: "press", partners: "partners", about: "about" } as const;
-const AGGREGATE = { home: "/", services: "/services", "city-guide": "/city-guides", listings: "/listings", press: "/press", partners: "/partners", about: "/about" } as const;
+const REGIONAL = { home: "", services: "services", "city-guide": "city-guide", listings: "listings", press: "press", partners: "partners", about: "about", contact: "contact" } as const;
+const AGGREGATE = { home: "/", services: "/services", "city-guide": "/city-guides", listings: "/listings", press: "/press", partners: "/partners", about: "/about", contact: "/contact" } as const;
 export type RegionalPage = keyof typeof REGIONAL;
 
 /** 不含语言前缀的路径：给了地区就是 /{region}/xxx，没给就是汇总页 */

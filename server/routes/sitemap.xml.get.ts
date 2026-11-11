@@ -17,7 +17,7 @@ const xml = (text: string) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;").
 /**
  * 站点地图：静态页、各地区的列表页与 City Guide、全部已发布的文章与房源，带中英文对应关系。
  * 哪些内容可收录由后端 /sitemap 接口决定（占位 City Guide、示例房源、外部报道等不在其中）；
- * 回退到全站默认内容的地区 About / Partners 与汇总页内容相同，也不列入。
+ * 回退到全站默认内容的地区首页、Services、About、Partners、Contact 与全站页面内容相同，也不列入。
  */
 export default defineEventHandler(async event => {
   const config = useRuntimeConfig(event);
@@ -38,7 +38,7 @@ export default defineEventHandler(async event => {
     entries.push({ path: `/${region.slug}/listings` }, { path: `/${region.slug}/press` });
     // 只有单独配置过内容的地区页才列入（没配置的与全站页面内容相同，canonical 指向全站页面）
     if ("home" in region.pages) entries.push({ path: `/${region.slug}`, lastmod: region.pages.home });
-    for (const key of ["services", "about", "partners"]) {
+    for (const key of ["services", "about", "partners", "contact"]) {
       if (key in region.pages) entries.push({ path: `/${region.slug}/${key}`, lastmod: region.pages[key] });
     }
   }

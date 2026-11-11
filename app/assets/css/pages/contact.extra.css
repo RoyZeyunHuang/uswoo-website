@@ -31,3 +31,8 @@
 .pg-contact .form-msg.is-error {
   color: #c2414b;
 }
+
+/* CMS 里隐藏了 hero（左侧照片和标题）时只剩表单一栏：取消两栏网格，表单居中 */
+.pg-contact .contact.contact-solo {
+  grid-template-columns: 1fr;
+}

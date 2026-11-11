@@ -1,6 +1,6 @@
 <template>
-  <div class="pg pg-home">
-    <SiteHeader ref="header" :scrolled="navScrolled" />
+  <div ref="root" class="pg pg-home">
+    <SiteHeader ref="header" :scrolled="navScrolled || !on('hero')" />
 
     <main id="top">
       <section v-if="on('hero')" id="heroSection" ref="hero" class="hero on-hero">
@@ -86,7 +86,7 @@
             <p class="lede">{{ c("listings.lede") }}</p>
           </div>
           <div class="ls-grid">
-            <ListingCard v-for="listing in featured" :key="listing.id" :listing="listing" />
+            <ListingCard v-for="listing in featured" :key="listing.id" :listing="listing" :region="props.region" />
           </div>
           <div class="ls-more">
             <NuxtLink class="btn btn-outline on-paper" :to="localePath(regionPath('listings', props.region))">{{ c("listings.cta") }}</NuxtLink>
@@ -124,8 +124,8 @@
           <h2 v-html="ch('cta.title')" />
           <p class="lede">{{ c("cta.lede") }}</p>
           <div class="btn-row">
-            <NuxtLink class="btn btn-pink" :to="localePath('/contact')">{{ c("cta.primary") }}</NuxtLink>
-            <NuxtLink class="btn btn-outline on-paper" :to="localePath('/contact')">{{ c("cta.secondary") }}</NuxtLink>
+            <NuxtLink class="btn btn-pink" :to="localePath(regionPath('contact', props.region))">{{ c("cta.primary") }}</NuxtLink>
+            <NuxtLink class="btn btn-outline on-paper" :to="localePath(regionPath('contact', props.region))">{{ c("cta.secondary") }}</NuxtLink>
           </div>
         </div>
       </section>
@@ -355,5 +355,21 @@ onMounted(() => {
   }
 });
 
-onBeforeUnmount(() => cleanups.splice(0).forEach(cleanup => cleanup()));
+// 整屏吸附 + 平滑滚动：CMS 里按地区开关（home → settings.fullpageSnap）。编辑预览时不启用，免得妨碍点选
+const root = ref<HTMLElement | null>(null);
+const { active: editing } = useCmsEdit();
+let unmounted = false;
+onMounted(() => {
+  if (raw<boolean>("settings.fullpageSnap") !== true || editing.value || !root.value) return;
+  void startFullpageSnap(root.value).then(stop => {
+    // 库是按需加载的：加载完成时页面可能已经离开了
+    if (unmounted) stop();
+    else cleanups.push(stop);
+  });
+});
+
+onBeforeUnmount(() => {
+  unmounted = true;
+  cleanups.splice(0).forEach(cleanup => cleanup());
+});
 </script>
