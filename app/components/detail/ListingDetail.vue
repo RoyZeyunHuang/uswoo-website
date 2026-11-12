@@ -21,7 +21,7 @@
               />
               <span v-if="index === 0 && listing.tag" class="ls-tag">{{ tx(listing.tag) }}</span>
               <span v-if="index === 0 && leased" class="ld-leased">{{ tx("Leased") }}</span>
-              <span v-if="index === shown.length - 1 && photos.length > 1" class="ld-allphotos">{{ tx("View All Photos") }} <span aria-hidden="true">›</span></span>
+              <span v-if="index === shown.length - 1 && photos.length > 1" class="ld-allphotos">{{ c("detail.allPhotos") }} <span aria-hidden="true">›</span></span>
             </button>
           </div>
 
@@ -38,7 +38,7 @@
               <div class="ld-summary">
                 <span v-for="part in summary" :key="part">{{ part }}</span>
                 <button type="button" class="ld-share" @click="share">
-                  {{ shared ? tx("Link copied") : tx("Share") }}
+                  {{ shared ? tx("Link copied") : c("detail.share") }}
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v14" /></svg>
                 </button>
               </div>
@@ -54,7 +54,7 @@
           </div>
 
           <div v-if="overview.length" class="ld-overview">
-            <h2>{{ tx("Overview") }}</h2>
+            <h2>{{ c("detail.overview") }}</h2>
             <dl>
               <div v-for="row in overview" :key="row.label">
                 <dt>{{ row.label }}</dt>
@@ -209,7 +209,7 @@ const summary = computed(() => {
 /** 概览表：类型、位置，再接上面的房源参数 */
 const overview = computed(() => {
   const byLabel = (label: string) => facts.value.find(fact => fact.label === label);
-  const rows = [byLabel(c("detail.facts.type")), location.value ? { label: tx("Location"), value: location.value } : undefined];
+  const rows = [byLabel(c("detail.facts.type")), location.value ? { label: c("detail.location"), value: location.value } : undefined];
   const rest = facts.value.filter(fact => fact.label !== c("detail.facts.type"));
   return [...rows, ...rest].filter((row): row is { label: string; value: string } => Boolean(row));
 });

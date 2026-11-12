@@ -27,6 +27,9 @@ on("help")                    // 区块是否展示（CMS 里 help.show 不为 f
 
 - **区块序号不放进 CMS**：标题旁的 01、02…… 用 `useBlockNumbers(区块键列表, on)` 按实际展示的区块自动编号，隐藏区块后不跳号。新增带序号的区块时把它的键加进列表。
 
+- **首页区块底色自动交替**：首屏之后的区块按实际展示的顺序白底（`band-paper`）、浅灰底（`band-raised`）交替，用 `HomeView.vue` 里的 `band(区块键)`，不要给区块写死底色类名。新增区块时把它的键加进 `BLOCKS`。
+- **独家楼盘**在 CMS「房源页」（`listings`）的 `buildings.items` 列表里，每一项是一栋楼（网址 `slug`、所属地区 `region`、封面、相册、起租价等）；用 `useBuildings()` 取。楼盘资料和图片不写在代码里，新增或修改楼盘在 CMS 里做。
+
 - 全站通用内容（站点名称、logo、favicon、导航、页脚）用 `await useSite()`，用法相同。
 - **CMS 里的实时预览依赖这些函数**：编辑器把官网内嵌进去预览时，`c()` / `ch()` 返回的文字末尾带一段看不见的标记、`img()` 的地址带 `#cms=` 片段，点页面上的内容才能定位到字段（见 `app/composables/useCmsEdit.ts`）。所以页面上的文字和图片一定要经过这几个函数直接输出；不要拿它们的返回值做相等比较、当 `key` 或拼进别的地址里——需要原始值时用 `raw()`。
 - 不是内容、而是页面行为的开关放在 `settings` 下，例如首页的 `settings.fullpageSnap`（整屏吸附 + 平滑滚动，可按地区开关，实现在 `app/composables/useFullpageSnap.ts`）。

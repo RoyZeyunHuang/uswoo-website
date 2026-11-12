@@ -178,3 +178,12 @@ html.m-reveal .pg-home #locations .location-card.m-in:nth-child(6) {
     display: none;
   }
 }
+
+/* 区块底色按展示顺序交替后，卡片可能落在浅灰底上：这时卡片改用白底，免得和底色混在一起 */
+.pg-home .band-raised .flow-step {
+  --card-bg: var(--paper);
+}
+
+.pg-home .band-raised .location-card:nth-child(even) {
+  background: var(--paper);
+}
