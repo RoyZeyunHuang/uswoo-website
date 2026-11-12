@@ -79,15 +79,28 @@
         </div>
       </section>
 
-      <section v-if="on('listings') && featured.length" id="listings" :class="band('listings')">
+      <section v-if="on('listings') && buildings.length" id="listings" :class="band('listings')">
         <div class="wrap">
           <div class="section-head centered">
             <p class="eyebrow"><span class="idx">{{ no("listings") }}</span> {{ c("listings.eyebrow") }}</p>
             <h2 v-html="ch('listings.title')" />
             <p class="lede">{{ c("listings.lede") }}</p>
           </div>
-          <div class="ls-grid">
-            <ListingCard v-for="listing in featured" :key="listing.id" :listing="listing" :region="props.region" />
+          <!-- 独家楼盘：内容在 CMS「房源页」的 buildings.items 里 -->
+          <div class="ls-grid ls-grid-bd">
+            <NuxtLink v-for="item in buildings" :key="item.slug" class="ls-card" :to="localePath(`/listings/building/${item.slug}`)">
+              <div class="ls-media">
+                <img :src="lImg(`${item.path}.image`)" :alt="lc(`${item.path}.name`)" :style="item.position ? { objectPosition: item.position } : undefined" loading="lazy" />
+                <span v-if="lc(`${item.path}.tag`)" class="ls-tag">{{ lc(`${item.path}.tag`) }}</span>
+              </div>
+              <div class="ls-body">
+                <div v-if="Number(lRaw(`${item.path}.startingPrice`))" class="ls-price">
+                  <small class="ls-from">{{ lc("building.startingAt") }}</small> ${{ Number(lRaw(`${item.path}.startingPrice`)).toLocaleString("en-US") }}<small>{{ lc("detail.perMonth") }}</small>
+                </div>
+                <h3>{{ lc(`${item.path}.address`) || lc(`${item.path}.name`) }}</h3>
+                <div class="ls-meta">{{ lList(`${item.path}.summary`).map(i => lc(`${item.path}.summary.${i}`)).join(" · ") }}</div>
+              </div>
+            </NuxtLink>
           </div>
           <div class="ls-more">
             <NuxtLink class="btn btn-outline on-paper" :to="localePath(regionPath('listings', props.region))">{{ c("listings.cta") }}</NuxtLink>
@@ -139,11 +152,10 @@
 <script setup lang="ts">
 import "~/assets/css/pages/home.css";
 import "~/assets/css/pages/home.extra.css";
-import type { Listing, Paged, Region } from "~~/shared/types/api";
+import type { Region } from "~~/shared/types/api";
 
 const { bi } = useTx();
 const localePath = useLocalePath();
-const api = useApi();
 /**
  * 首页。不带地区是全站首页（/），带地区是该地区的首页（/{region}）。
  * 内容来自 CMS 的 home 页面：地区可以只改其中几个区块或隐藏某个区块，其余沿用全站默认。
@@ -155,10 +167,10 @@ const { c: site } = await useSite();
 
 // ---- 内容 ----
 
-/** 首屏之后的区块，按页面上的先后顺序；精选房源为空时该区块不展示 */
+/** 首屏之后的区块，按页面上的先后顺序；没有楼盘时该区块不展示 */
 const BLOCKS = ["help", "locations", "listings", "about", "cta"] as const;
 type Block = (typeof BLOCKS)[number];
-const blockShown = (key: Block) => on(key) && (key !== "listings" || featured.value.length > 0);
+const blockShown = (key: Block) => on(key) && (key !== "listings" || buildings.value.length > 0);
 /** 区块序号：按实际展示的区块从 01 起编号，隐藏的不占号 */
 const no = useBlockNumbers(BLOCKS, blockShown);
 /** 区块底色：按实际展示的区块白底、浅灰底交替，隐藏某个区块后不会出现两个同色的区块挨在一起 */
@@ -176,15 +188,10 @@ const helpLayout = computed(() => HELP_LAYOUTS.find(layout => layout === raw<str
 const statValues = computed(() => list("about.stats").map(index => Number(raw(`about.stats.${index}.value`)) || 0));
 
 const regions = await useRegions();
-// 地区首页只展示本地区的房源
-const { data: featuredData } = await useAsyncData(`home:listings:${props.region ?? ""}`, async () => {
-  const scope = props.region ? { region: props.region } : {};
-  const featuredOnly = await api<Paged<Listing>>("/listings", { query: { ...scope, featured: 1, pageSize: 3 } }).catch(() => null);
-  if (featuredOnly?.list.length) return featuredOnly.list;
-  // 没有标记“首页精选”的房源时，用最新的三条
-  return (await api<Paged<Listing>>("/listings", { query: { ...scope, pageSize: 3 } }).catch(() => null))?.list ?? [];
-});
-const featured = computed(() => featuredData.value ?? []);
+// 精选区展示独家楼盘（CMS「房源页」的 buildings）；地区首页只展示本地区的，最多三栋
+const { c: lc, img: lImg, raw: lRaw, list: lList, on: lOn } = await usePageContent("listings", props.region);
+const allBuildings = await useBuildings(props.region);
+const buildings = computed(() => (lOn("buildings") ? allBuildings.value.filter(item => !props.region || item.region === props.region).slice(0, 3) : []));
 
 /** 地区卡片：顺序和卡片图都以 CMS 的地区设置为准，没配卡片图的地区不出卡片 */
 const locationCards = computed(() =>

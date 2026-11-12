@@ -187,3 +187,20 @@ html.m-reveal .pg-home #locations .location-card.m-in:nth-child(6) {
 .pg-home .band-raised .location-card:nth-child(even) {
   background: var(--paper);
 }
+
+/* 首页精选区的楼盘卡片：起租价粉色，「Starting at」保持灰色小字，户型单独一行放在地址下面 */
+.pg-home .ls-grid-bd .ls-price {
+  color: var(--pink);
+}
+.pg-home .ls-grid-bd .ls-price .ls-from {
+  margin-right: 6px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-soft, #656260);
+}
+@media (max-width: 600px) {
+  .pg-home .ls-card .ls-meta {
+    flex-basis: 100%;
+    margin-top: 4px;
+  }
+}
