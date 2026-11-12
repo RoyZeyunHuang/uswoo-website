@@ -15,27 +15,22 @@
 
       <section class="ls-grid-sec">
         <div class="wrap">
-          <!-- 独家楼盘：只在「全部」和对应地区出现。内容是临时写在代码里的，见 app/data/buildings.ts -->
+          <!-- 独家楼盘：内容在 CMS 的 buildings 里；「全部」页显示所有，地区页只显示该地区的 -->
           <div v-if="buildings.length" class="ls-dev">
-            <p class="eyebrow">{{ isZh ? BUILDINGS_HEADING.zh : BUILDINGS_HEADING.en }}</p>
+            <p class="eyebrow">{{ c("buildings.eyebrow") }}</p>
             <div class="ls-dev-grid">
-              <NuxtLink
-                v-for="item in buildings"
-                :key="item.slug"
-                class="ls-dev-card"
-                :to="localePath(`/listings/building/${item.slug}`)"
-              >
+              <NuxtLink v-for="item in buildings" :key="item.slug" class="ls-dev-card" :to="localePath(`/listings/building/${item.slug}`)">
                 <div class="ls-dev-media">
-                  <img v-if="item.image" :src="item.image" :alt="item.name" :style="item.imagePosition ? { objectPosition: item.imagePosition } : undefined" loading="lazy" />
-                  <span v-else class="ls-dev-ph" aria-hidden="true">{{ item.name }}</span>
-                  <span class="ls-tag">{{ tx(item.tag) }}</span>
+                  <img v-if="img(`${item.path}.image`)" :src="img(`${item.path}.image`)" :alt="c(`${item.path}.name`)" :style="item.position ? { objectPosition: item.position } : undefined" loading="lazy" />
+                  <span v-else class="ls-dev-ph" aria-hidden="true">{{ c(`${item.path}.name`) }}</span>
+                  <span v-if="c(`${item.path}.tag`)" class="ls-tag">{{ c(`${item.path}.tag`) }}</span>
                 </div>
                 <div class="ls-dev-body">
                   <div>
-                    <h3>{{ item.name }}</h3>
-                    <p>{{ item.state ? (isZh ? item.state.zh : item.state.en) : regionLabel(item.region) }}</p>
+                    <h3>{{ c(`${item.path}.name`) }}</h3>
+                    <p>{{ c(`${item.path}.state`) || regionLabel(item.region) }}</p>
                   </div>
-                  <span class="ls-dev-cta">{{ tx("View listings") }} <span aria-hidden="true">→</span></span>
+                  <span class="ls-dev-cta">{{ c("buildings.cardCta") }} <span aria-hidden="true">→</span></span>
                 </div>
               </NuxtLink>
             </div>
@@ -49,7 +44,7 @@
 
       <section v-if="on('cta')" class="band-raised cta-band">
         <div class="wrap">
-          <p class="eyebrow"><span class="idx">02</span> {{ c("cta.eyebrow") }}</p>
+          <p class="eyebrow"><span class="idx">{{ no("cta") }}</span> {{ c("cta.eyebrow") }}</p>
           <h2>{{ c("cta.title") }}</h2>
           <p class="lede">
             {{ c("cta.lede") }}
@@ -68,7 +63,6 @@
 <script setup lang="ts">
 import "~/assets/css/pages/listings.css";
 import "~/assets/css/pages/listings.extra.css";
-import { BUILDINGS, BUILDINGS_HEADING } from "~/data/buildings";
 
 /** 房源列表：/listings（全部地区）与 /{region}/listings（单个地区）共用。 */
 const props = defineProps<{ region?: string }>();
@@ -78,10 +72,12 @@ const { tx, bi, isZh } = useTx();
 const localePath = useLocalePath();
 const absoluteUrl = useAbsoluteUrl();
 // 页面上的固定文案：地区页用该地区的版本（没有单独配置的部分沿用全站默认）
-const { c, on } = await usePageContent("listings", props.region);
+const { c, img, on } = await usePageContent("listings", props.region);
+const no = useBlockNumbers(["cta"] as const, on);
 
-// 独家楼盘：「全部」页显示所有，地区页只显示该地区的
-const buildings = computed(() => BUILDINGS.filter(item => !props.region || item.region === props.region));
+// 独家楼盘：可以在 CMS 里整体隐藏（buildings.show）；「全部」页显示所有，地区页只显示该地区的
+const allBuildings = await useBuildings(props.region);
+const buildings = computed(() => (on("buildings") ? allBuildings.value.filter(item => !props.region || item.region === props.region) : []));
 const regionLabel = (slug: string) => {
   const item = regions.value.find(entry => entry.slug === slug);
   return item ? bi(item.name) : "";

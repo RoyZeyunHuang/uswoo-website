@@ -179,6 +179,288 @@
       "aboutTitle": {
         "en": "About This Home",
         "zh": "房源介绍"
+      },
+      "overview": {
+        "en": "Overview",
+        "zh": "概览"
+      },
+      "location": {
+        "en": "Location",
+        "zh": "位置"
+      },
+      "allPhotos": {
+        "en": "View All Photos",
+        "zh": "查看全部照片"
+      },
+      "share": {
+        "en": "Share",
+        "zh": "分享"
+      }
+    },
+    "buildings": {
+      "eyebrow": {
+        "en": "Exclusive Buildings",
+        "zh": "独家楼盘"
+      },
+      "cardCta": {
+        "en": "View listings",
+        "zh": "查看房源"
+      },
+      "items": [
+        {
+          "slug": "43-cottage",
+          "name": "43 Cottage",
+          "region": "new-york",
+          "tag": {
+            "en": "Exclusive",
+            "zh": "独家"
+          },
+          "state": {
+            "en": "New Jersey",
+            "zh": "新泽西"
+          },
+          "address": "43 Cottage, Jersey City",
+          "yearBuilt": 2024,
+          "startingPrice": 2850,
+          "image": {
+            "url": "/assets/buildings/43-cottage/cover.jpg"
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 2 beds",
+              "zh": "开间 – 2 居室"
+            },
+            {
+              "en": "1 – 2 baths",
+              "zh": "1 – 2 卫"
+            },
+            {
+              "en": "480 – 1,200 sq.ft.",
+              "zh": "480 – 1,200 平方英尺"
+            }
+          ],
+          "gallery": [
+            {
+              "url": "/assets/buildings/43-cottage/01.webp"
+            },
+            {
+              "url": "/assets/buildings/43-cottage/02.webp"
+            },
+            {
+              "url": "/assets/buildings/43-cottage/03.webp"
+            },
+            {
+              "url": "/assets/buildings/43-cottage/04.webp"
+            }
+          ]
+        },
+        {
+          "slug": "505-summit",
+          "name": "505 Summit",
+          "region": "new-york",
+          "tag": {
+            "en": "Exclusive",
+            "zh": "独家"
+          },
+          "state": {
+            "en": "New Jersey",
+            "zh": "新泽西"
+          },
+          "address": "505 Summit Avenue, Jersey City, NJ 07306",
+          "yearBuilt": 2023,
+          "startingPrice": 2650,
+          "image": {
+            "url": "/assets/buildings/505-summit/cover.jpg"
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 3 beds",
+              "zh": "开间 – 3 居室"
+            },
+            {
+              "en": "1 – 2 baths",
+              "zh": "1 – 2 卫"
+            },
+            {
+              "en": "450 – 1,400 sq.ft.",
+              "zh": "450 – 1,400 平方英尺"
+            }
+          ],
+          "gallery": [
+            {
+              "url": "/assets/buildings/505-summit/01.webp"
+            },
+            {
+              "url": "/assets/buildings/505-summit/02.webp"
+            },
+            {
+              "url": "/assets/buildings/505-summit/03.webp"
+            },
+            {
+              "url": "/assets/buildings/505-summit/04.webp"
+            },
+            {
+              "url": "/assets/buildings/505-summit/05.webp"
+            },
+            {
+              "url": "/assets/buildings/505-summit/06.webp"
+            },
+            {
+              "url": "/assets/buildings/505-summit/07.jpg"
+            },
+            {
+              "url": "/assets/buildings/505-summit/08.jpg"
+            }
+          ]
+        },
+        {
+          "slug": "forten-at-columbia",
+          "name": "Forten at Columbia",
+          "region": "new-york",
+          "tag": {
+            "en": "Exclusive",
+            "zh": "独家"
+          },
+          "state": {
+            "en": "New York",
+            "zh": "纽约"
+          },
+          "address": "410 West 126th Street, New York, NY",
+          "yearBuilt": 2025,
+          "startingPrice": 3900,
+          "image": {
+            "url": "/assets/buildings/forten-at-columbia/cover.webp"
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 3 beds",
+              "zh": "开间 – 3 居室"
+            },
+            {
+              "en": "1 – 2 baths",
+              "zh": "1 – 2 卫"
+            },
+            {
+              "en": "420 – 1,300 sq.ft.",
+              "zh": "420 – 1,300 平方英尺"
+            }
+          ],
+          "gallery": [
+            {
+              "url": "/assets/buildings/forten-at-columbia/01.webp"
+            },
+            {
+              "url": "/assets/buildings/forten-at-columbia/02.webp"
+            },
+            {
+              "url": "/assets/buildings/forten-at-columbia/03.webp"
+            },
+            {
+              "url": "/assets/buildings/forten-at-columbia/04.jpg"
+            },
+            {
+              "url": "/assets/buildings/forten-at-columbia/05.jpg"
+            }
+          ]
+        },
+        {
+          "slug": "1440-amsterdam-ave",
+          "name": "1440 Amsterdam Ave",
+          "region": "new-york",
+          "tag": {
+            "en": "Exclusive",
+            "zh": "独家"
+          },
+          "state": {
+            "en": "New York",
+            "zh": "纽约"
+          },
+          "address": "1440 Amsterdam Ave, New York, NY",
+          "yearBuilt": 2025,
+          "startingPrice": 4695,
+          "image": {
+            "url": "/assets/buildings/1440-amsterdam-ave/cover.jpg"
+          },
+          "imagePosition": "70% center",
+          "summary": [
+            {
+              "en": "Studio – 2 beds",
+              "zh": "开间 – 2 居室"
+            },
+            {
+              "en": "1 – 2 baths",
+              "zh": "1 – 2 卫"
+            },
+            {
+              "en": "400 – 1,100 sq.ft.",
+              "zh": "400 – 1,100 平方英尺"
+            }
+          ],
+          "gallery": [
+            {
+              "url": "/assets/buildings/1440-amsterdam-ave/01.jpg"
+            },
+            {
+              "url": "/assets/buildings/1440-amsterdam-ave/02.jpg"
+            },
+            {
+              "url": "/assets/buildings/1440-amsterdam-ave/03.jpg"
+            },
+            {
+              "url": "/assets/buildings/1440-amsterdam-ave/04.jpg"
+            },
+            {
+              "url": "/assets/buildings/1440-amsterdam-ave/05.jpg"
+            },
+            {
+              "url": "/assets/buildings/1440-amsterdam-ave/06.jpg"
+            },
+            {
+              "url": "/assets/buildings/1440-amsterdam-ave/07.jpg"
+            },
+            {
+              "url": "/assets/buildings/1440-amsterdam-ave/08.jpg"
+            },
+            {
+              "url": "/assets/buildings/1440-amsterdam-ave/09.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    "building": {
+      "back": {
+        "en": "All buildings",
+        "zh": "全部楼盘"
+      },
+      "startingAt": {
+        "en": "Starting at",
+        "zh": "起租价"
+      },
+      "enquire": {
+        "en": "Enquire",
+        "zh": "咨询"
+      },
+      "facts": {
+        "building": {
+          "en": "Building",
+          "zh": "楼盘"
+        },
+        "location": {
+          "en": "Location",
+          "zh": "位置"
+        },
+        "yearBuilt": {
+          "en": "Year built",
+          "zh": "建成年份"
+        },
+        "partnership": {
+          "en": "Partnership",
+          "zh": "合作方式"
+        }
       }
     }
   }

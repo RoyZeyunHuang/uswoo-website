@@ -28,7 +28,7 @@
         </div>
       </section>
 
-      <section v-if="on('help')" id="help" class="band-paper">
+      <section v-if="on('help')" id="help" :class="band('help')">
         <div class="wrap">
           <div class="section-head centered">
             <p class="eyebrow"><span class="idx">{{ no("help") }}</span> {{ c("help.eyebrow") }}</p>
@@ -53,7 +53,7 @@
         </div>
       </section>
 
-      <section v-if="on('locations')" id="locations" class="band-paper">
+      <section v-if="on('locations')" id="locations" :class="band('locations')">
         <div class="wrap">
           <div class="section-head centered">
             <p class="eyebrow"><span class="idx">{{ no("locations") }}</span> {{ c("locations.eyebrow") }}</p>
@@ -79,7 +79,7 @@
         </div>
       </section>
 
-      <section v-if="on('listings') && featured.length" id="listings" class="band-paper">
+      <section v-if="on('listings') && featured.length" id="listings" :class="band('listings')">
         <div class="wrap">
           <div class="section-head centered">
             <p class="eyebrow"><span class="idx">{{ no("listings") }}</span> {{ c("listings.eyebrow") }}</p>
@@ -95,7 +95,7 @@
         </div>
       </section>
 
-      <section v-if="on('about')" id="about" class="band-raised">
+      <section v-if="on('about')" id="about" :class="band('about')">
         <div class="wrap">
           <div class="about-split">
             <div class="about-copy">
@@ -119,7 +119,7 @@
         </div>
       </section>
 
-      <section v-if="on('cta')" id="cta" class="band-paper cta-band">
+      <section v-if="on('cta')" id="cta" class="cta-band" :class="band('cta')">
         <div class="wrap">
           <p class="eyebrow"><span class="idx">{{ no("cta") }}</span> {{ c("cta.eyebrow") }}</p>
           <h2 v-html="ch('cta.title')" />
@@ -155,8 +155,15 @@ const { c: site } = await useSite();
 
 // ---- 内容 ----
 
-/** 区块序号：按实际展示的区块从 01 起编号；精选房源为空时该区块不展示，也不占号 */
-const no = useBlockNumbers(["help", "locations", "listings", "about", "cta"] as const, key => on(key) && (key !== "listings" || featured.value.length > 0));
+/** 首屏之后的区块，按页面上的先后顺序；精选房源为空时该区块不展示 */
+const BLOCKS = ["help", "locations", "listings", "about", "cta"] as const;
+type Block = (typeof BLOCKS)[number];
+const blockShown = (key: Block) => on(key) && (key !== "listings" || featured.value.length > 0);
+/** 区块序号：按实际展示的区块从 01 起编号，隐藏的不占号 */
+const no = useBlockNumbers(BLOCKS, blockShown);
+/** 区块底色：按实际展示的区块白底、浅灰底交替，隐藏某个区块后不会出现两个同色的区块挨在一起 */
+const shownBlocks = computed(() => BLOCKS.filter(blockShown));
+const band = (key: Block) => (shownBlocks.value.indexOf(key) % 2 === 1 ? "band-raised" : "band-paper");
 
 /**
  * 「我们如何帮你」的版式，各地区在 CMS 里选（help.layout）：
