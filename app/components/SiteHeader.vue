@@ -78,9 +78,9 @@ const REGION_KEY = "uswoo_region";
 const lastRegion = ref<string | null>(null);
 
 const items = computed(() => [
+  { key: "listings", label: "nav.listings", path: regionPath("listings", lastRegion.value) },
   { key: "services", label: "nav.services", path: regionPath("services", lastRegion.value) },
   { key: "city-guides", label: "nav.cityGuides", path: regionPath("city-guide", lastRegion.value) },
-  { key: "listings", label: "nav.listings", path: regionPath("listings", lastRegion.value) },
   { key: "press", label: "nav.press", path: regionPath("press", lastRegion.value) },
   { key: "partners", label: "nav.partners", path: regionPath("partners", lastRegion.value) },
   { key: "about", label: "nav.about", path: regionPath("about", lastRegion.value) }

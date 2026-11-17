@@ -9,6 +9,7 @@ export default {
   "Load more": "加载更多",
   "Loading…": "加载中…",
   "Filter by city": "按城市筛选",
+  All: "全部",
   "Previous photo": "上一张",
   "Next photo": "下一张",
   "Show photo {n}": "查看第 {n} 张照片",
