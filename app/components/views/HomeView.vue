@@ -97,7 +97,7 @@
                 <div v-if="Number(lRaw(`${item.path}.startingPrice`))" class="ls-price">
                   <small class="ls-from">{{ lc("building.startingAt") }}</small> ${{ Number(lRaw(`${item.path}.startingPrice`)).toLocaleString("en-US") }}<small>{{ lc("detail.perMonth") }}</small>
                 </div>
-                <h3>{{ lc(`${item.path}.address`) || lc(`${item.path}.name`) }}</h3>
+                <h3><template v-for="(part, i) in addrParts(lc(`${item.path}.address`) || lc(`${item.path}.name`))" :key="i"><span v-if="part.zip" class="ls-zip">{{ part.t }}</span><template v-else>{{ part.t }}</template></template></h3>
                 <div class="ls-meta">{{ lList(`${item.path}.summary`).map(i => lc(`${item.path}.summary.${i}`)).join(" · ") }}</div>
               </div>
             </NuxtLink>
@@ -191,6 +191,12 @@ const regions = await useRegions();
 // 精选区展示独家楼盘（CMS「房源页」的 buildings）；地区首页只展示本地区的，最多三栋
 const { c: lc, img: lImg, raw: lRaw, list: lList, on: lOn } = await usePageContent("listings", props.region);
 const allBuildings = await useBuildings(props.region);
+// 把地址末尾的邮编单独包出来，手机版用样式隐藏（邮编前的逗号、空格一起隐藏）；CMS 文字末尾的隐藏标记留在最后一段里
+const addrParts = (text: string) => {
+  const m = text.match(/^(.*?)(,?\s*\d{5}(?:-\d{4})?)(.*)$/s);
+  if (!m) return [{ t: text, zip: false }];
+  return [{ t: m[1] ?? "", zip: false }, { t: m[2] ?? "", zip: true }, { t: m[3] ?? "", zip: false }];
+};
 const buildings = computed(() => (lOn("buildings") ? allBuildings.value.filter(item => !props.region || item.region === props.region).slice(0, 3) : []));
 
 /** 地区卡片：顺序和卡片图都以 CMS 的地区设置为准，没配卡片图的地区不出卡片 */

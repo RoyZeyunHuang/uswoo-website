@@ -204,3 +204,18 @@ html.m-reveal .pg-home #locations .location-card.m-in:nth-child(6) {
     margin-top: 4px;
   }
 }
+
+/* 手机版首页精选房源卡片再精简：只留价格和地址，去掉「Starting at」和户型一行；桌面不受影响 */
+@media (max-width: 600px) {
+  .pg-home .ls-grid-bd .ls-price .ls-from,
+  .pg-home .ls-grid-bd .ls-meta {
+    display: none;
+  }
+}
+
+/* 手机版首页房源卡片的地址不显示邮编；桌面不受影响 */
+@media (max-width: 600px) {
+  .pg-home .ls-grid-bd .ls-zip {
+    display: none;
+  }
+}
