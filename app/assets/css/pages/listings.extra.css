@@ -1,30 +1,31 @@
 /* 房源页在设计稿之外补充的样式（手工维护；listings.css 由提取脚本生成，会被覆盖）。 */
+/* 选择器统一写成 .pg.pg-xxx（比生成的样式多一级权重）：线上构建时 listing-detail 等生成样式会被再打包一份排在这里之后，同权重会盖掉下面手机版的覆盖规则 */
 
 /* 城市筛选从按钮改成了真实链接：去掉链接自带的下划线 */
-.pg-listings a.ls-chip {
+.pg.pg-listings a.ls-chip {
   display: inline-block;
   text-decoration: none;
 }
 
 /* 「加载更多」 */
-.pg-listings .ls-more {
+.pg.pg-listings .ls-more {
   margin-top: 40px;
   display: flex;
   justify-content: center;
 }
 
-.pg-listings .ls-more .btn[disabled] {
+.pg.pg-listings .ls-more .btn[disabled] {
   opacity: 0.6;
   cursor: default;
   transform: none;
 }
 
 /* ---- 列表页排版：卡片去掉外框内边距，图片通栏，留白更松 ---- */
-.pg-listings .ls-grid {
+.pg.pg-listings .ls-grid {
   gap: clamp(20px, 2.4vw, 36px);
 }
 
-.pg-listings .ls-card {
+.pg.pg-listings .ls-card {
   padding: 0;
   border: 0;
   border-radius: 14px;
@@ -32,20 +33,20 @@
   box-shadow: 0 1px 2px rgba(15, 15, 15, 0.06), 0 6px 20px rgba(15, 15, 15, 0.05);
 }
 
-.pg-listings .ls-card:hover {
+.pg.pg-listings .ls-card:hover {
   box-shadow: 0 2px 4px rgba(15, 15, 15, 0.06), 0 18px 38px rgba(15, 15, 15, 0.1);
 }
 
-.pg-listings .ls-media {
+.pg.pg-listings .ls-media {
   border-radius: 0;
   aspect-ratio: 3 / 2;
 }
 
-.pg-listings .ls-body {
+.pg.pg-listings .ls-body {
   padding: 18px 22px 22px;
 }
 
-.pg-listings .ls-tag {
+.pg.pg-listings .ls-tag {
   top: 14px;
   left: 14px;
   /* 图片角标（Exclusive 等）用黑底，在照片上比粉色更稳 */
@@ -53,18 +54,18 @@
 }
 
 /* ---- 独家楼盘：两列大卡片，放在列表最前面 ---- */
-.pg-listings .ls-dev {
+.pg.pg-listings .ls-dev {
   margin-bottom: clamp(40px, 5vw, 64px);
 }
 
-.pg-listings .ls-dev-grid {
+.pg.pg-listings .ls-dev-grid {
   margin-top: 18px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(20px, 2.4vw, 36px);
 }
 
-.pg-listings .ls-dev-card {
+.pg.pg-listings .ls-dev-card {
   display: block;
   position: relative;
   border-radius: 14px;
@@ -76,31 +77,31 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.pg-listings .ls-dev-card:hover {
+.pg.pg-listings .ls-dev-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 2px 4px rgba(15, 15, 15, 0.06), 0 18px 38px rgba(15, 15, 15, 0.1);
 }
 
-.pg-listings .ls-dev-media {
+.pg.pg-listings .ls-dev-media {
   position: relative;
   aspect-ratio: 16 / 10;
   background: var(--paper-raised);
   overflow: hidden;
 }
 
-.pg-listings .ls-dev-media img {
+.pg.pg-listings .ls-dev-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.pg-listings .ls-dev-card:hover .ls-dev-media img {
+.pg.pg-listings .ls-dev-card:hover .ls-dev-media img {
   transform: scale(1.04);
 }
 
 /* 还没有照片时：用楼盘名占位，不借用别的图 */
-.pg-listings .ls-dev-ph {
+.pg.pg-listings .ls-dev-ph {
   position: absolute;
   inset: 0;
   display: flex;
@@ -113,7 +114,7 @@
   color: var(--ink-faint);
 }
 
-.pg-listings .ls-dev-body {
+.pg.pg-listings .ls-dev-body {
   padding: 20px 24px 24px;
   display: flex;
   align-items: flex-end;
@@ -121,17 +122,17 @@
   gap: 16px;
 }
 
-.pg-listings .ls-dev-body h3 {
+.pg.pg-listings .ls-dev-body h3 {
   font-size: clamp(1.3rem, 2vw, 1.7rem);
 }
 
-.pg-listings .ls-dev-body p {
+.pg.pg-listings .ls-dev-body p {
   margin: 6px 0 0;
   color: var(--ink-soft);
   font-size: 0.92rem;
 }
 
-.pg-listings .ls-dev-cta {
+.pg.pg-listings .ls-dev-cta {
   white-space: nowrap;
   font-size: 0.86rem;
   font-weight: 600;
@@ -139,13 +140,13 @@
 }
 
 @media (max-width: 700px) {
-  .pg-listings .ls-dev-grid {
+  .pg.pg-listings .ls-dev-grid {
     grid-template-columns: 1fr;
   }
 }
 
 /* ---- 楼盘页 ---- */
-.pg-building .ld-back {
+.pg.pg-building .ld-back {
   display: inline-flex;
   gap: 8px;
   font-size: 0.86rem;
@@ -154,28 +155,28 @@
   text-decoration: none;
 }
 
-.pg-building .ld-back:hover {
+.pg.pg-building .ld-back:hover {
   color: var(--ink);
 }
 
-.pg-building .ls-hero h1 {
+.pg.pg-building .ls-hero h1 {
   margin-top: 14px;
 }
 
-.pg-building .bd-eyebrow {
+.pg.pg-building .bd-eyebrow {
   margin-top: 28px;
 }
 
 /* 楼盘页相册：四张图排成两列，统一裁成 3:2 */
-.pg-building .bd-gallery-sec {
+.pg.pg-building .bd-gallery-sec {
   padding-bottom: 8px;
 }
-.pg-building .bd-gallery {
+.pg.pg-building .bd-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
-.pg-building .bd-gallery img {
+.pg.pg-building .bd-gallery img {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
@@ -184,21 +185,21 @@
   background: #f2f0ee;
 }
 @media (max-width: 600px) {
-  .pg-building .bd-gallery {
+  .pg.pg-building .bd-gallery {
     grid-template-columns: 1fr;
   }
 }
 
 /* 楼盘页：概览表之后的房源区，沿用详情页的区块标题 */
-.pg-building .bd-units {
+.pg.pg-building .bd-units {
   margin-top: clamp(32px, 4vw, 56px);
 }
-.pg-building .bd-units h2 {
+.pg.pg-building .bd-units h2 {
   font-size: 1.4rem;
   margin: 0 0 20px;
 }
 
-.pg-building .bd-from {
+.pg.pg-building .bd-from {
   display: inline;
   margin-right: 6px;
   font-size: 0.5em;
@@ -206,38 +207,38 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.pg-building .ld-summary {
+.pg.pg-building .ld-summary {
   text-transform: uppercase;
 }
 
 /* 楼盘页标题区：名称与价格并排，下面一行小字 */
-.pg-building .bd-titlerow {
+.pg.pg-building .bd-titlerow {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 6px 24px;
 }
-.pg-building .bd-titlerow .ld-price {
+.pg.pg-building .bd-titlerow .ld-price {
   margin: 0;
 }
-.pg-building .bd-meta {
+.pg.pg-building .bd-meta {
   margin-top: 12px;
 }
 
-.pg-building .bd-titlerow .ld-price {
+.pg.pg-building .bd-titlerow .ld-price {
   color: var(--pink);
 }
-.pg-building .bd-titlerow .ld-price .bd-from {
+.pg.pg-building .bd-titlerow .ld-price .bd-from {
   color: var(--ink-soft);
 }
 
 /* ---- 楼盘页手机版（只在 600px 以下生效，桌面版不受影响） ---- */
-.pg-building .bd-photos-btn {
+.pg.pg-building .bd-photos-btn {
   display: none;
 }
 @media (max-width: 600px) {
   /* 大图右下角的“查看全部照片”按钮：手机上只有一张大图，需要明确提示可以点开 */
-  .pg-building .bd-photos-btn {
+  .pg.pg-building .bd-photos-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -255,7 +256,7 @@
   }
 
   /* 地址与户型精简：地址一行，户型、卫浴、面积合成一行，用小号正常大小写 */
-  .pg-building .ld-summary.bd-meta {
+  .pg.pg-building .ld-summary.bd-meta {
     gap: 4px 8px;
     margin-top: 10px;
     font-size: 0.84rem;
@@ -263,53 +264,53 @@
     letter-spacing: 0;
     text-transform: none;
   }
-  .pg-building .bd-meta .bd-addr {
+  .pg.pg-building .bd-meta .bd-addr {
     flex-basis: 100%;
   }
-  .pg-building .bd-meta .bd-addr + span::before {
+  .pg.pg-building .bd-meta .bd-addr + span::before {
     display: none;
   }
-  .pg-building .bd-meta > span + span::before {
+  .pg.pg-building .bd-meta > span + span::before {
     margin-right: 8px;
   }
 
   /* Enquire 按钮：与照片、卡片一致的圆角 */
-  .pg-building .ld-cta .btn {
+  .pg.pg-building .ld-cta .btn {
     border-radius: 12px;
     padding: 15px 26px;
   }
 
   /* 概览表：做成一张圆角卡片，每行左边是名称、右边是内容 */
-  .pg-building.pg-listing-detail .ld-overview {
+  .pg.pg-building.pg-listing-detail .ld-overview {
     margin-top: 32px;
   }
-  .pg-building.pg-listing-detail .ld-overview h2 {
+  .pg.pg-building.pg-listing-detail .ld-overview h2 {
     font-size: 1.5rem;
   }
-  .pg-building.pg-listing-detail .ld-overview dl {
+  .pg.pg-building.pg-listing-detail .ld-overview dl {
     margin-top: 14px;
     padding: 0 16px;
     border: 1px solid var(--line);
     border-radius: 12px;
     background: #fff;
   }
-  .pg-building.pg-listing-detail .ld-overview dl > div {
+  .pg.pg-building.pg-listing-detail .ld-overview dl > div {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 16px;
     padding: 14px 0;
   }
-  .pg-building.pg-listing-detail .ld-overview dl > div:last-child {
+  .pg.pg-building.pg-listing-detail .ld-overview dl > div:last-child {
     border-bottom: 0;
   }
-  .pg-building.pg-listing-detail .ld-overview dt {
+  .pg.pg-building.pg-listing-detail .ld-overview dt {
     flex: none;
     font-size: 0.86rem;
     font-weight: 500;
     color: var(--ink-soft);
   }
-  .pg-building.pg-listing-detail .ld-overview dd {
+  .pg.pg-building.pg-listing-detail .ld-overview dd {
     font-size: 0.95rem;
     font-weight: 600;
     text-align: right;
@@ -317,13 +318,13 @@
 }
 
 /* 还没有楼盘的城市：占位卡片不可点击，略淡 */
-.pg-listings .ls-dev-soon {
+.pg.pg-listings .ls-dev-soon {
   cursor: default;
   opacity: 0.7;
 }
 
 /* ---------- 楼盘页：参考房产详情页的版式（面包屑、吸顶分区导航、介绍、设施、更多楼盘） ---------- */
-.pg-building .bd-crumbs {
+.pg.pg-building .bd-crumbs {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -332,19 +333,19 @@
   font-size: 0.86rem;
   color: var(--ink-soft);
 }
-.pg-building .bd-crumbs a {
+.pg.pg-building .bd-crumbs a {
   color: inherit;
   text-decoration: none;
 }
-.pg-building .bd-crumbs a:hover {
+.pg.pg-building .bd-crumbs a:hover {
   color: var(--ink);
 }
-.pg-building .bd-crumbs [aria-current] {
+.pg.pg-building .bd-crumbs [aria-current] {
   color: var(--ink);
 }
 
 /* 吸顶条贴在站点顶栏下面：一条 60px 高的标签栏，左边是分区标签（当前分区有下划线），右边是两个同高的圆角按钮 */
-.pg-building .bd-subnav {
+.pg.pg-building .bd-subnav {
   position: sticky;
   top: var(--bd-nav-h, 79px);
   z-index: 30;
@@ -357,13 +358,13 @@
   background: var(--paper);
   border-bottom: 1px solid var(--line);
 }
-.pg-building .bd-subnav-links {
+.pg.pg-building .bd-subnav-links {
   display: flex;
   align-items: stretch;
   gap: 32px;
   white-space: nowrap;
 }
-.pg-building .bd-subnav-links a {
+.pg.pg-building .bd-subnav-links a {
   display: flex;
   align-items: center;
   margin-bottom: -1px;
@@ -374,20 +375,20 @@
   text-decoration: none;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
-.pg-building .bd-subnav-links a:hover {
+.pg.pg-building .bd-subnav-links a:hover {
   color: var(--ink);
 }
-.pg-building .bd-subnav-links a.on {
+.pg.pg-building .bd-subnav-links a.on {
   color: var(--ink);
   border-bottom-color: var(--ink);
 }
-.pg-building .bd-subnav-cta {
+.pg.pg-building .bd-subnav-cta {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
 }
-.pg-building .bd-subnav-cta .btn {
+.pg.pg-building .bd-subnav-cta .btn {
   justify-content: center;
   height: 40px;
   padding: 0 22px;
@@ -395,27 +396,27 @@
   font-size: 0.86rem;
   white-space: nowrap;
 }
-.pg-building .bd-section {
+.pg.pg-building .bd-section {
   padding-top: 88px;
   scroll-margin-top: calc(var(--bd-nav-h, 79px) + 70px);
 }
-.pg-building .bd-section > h2 {
+.pg.pg-building .bd-section > h2 {
   font-size: clamp(1.5rem, 3vw, 2rem);
   margin-bottom: 20px;
 }
-.pg-building .bd-prose p {
+.pg.pg-building .bd-prose p {
   max-width: 72ch;
   color: var(--ink-soft);
   line-height: 1.75;
   margin-bottom: 14px;
 }
-.pg-building .bd-prose.clamped {
+.pg.pg-building .bd-prose.clamped {
   max-height: 11.5em;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(#000 70%, transparent);
   mask-image: linear-gradient(#000 70%, transparent);
 }
-.pg-building .bd-more-btn {
+.pg.pg-building .bd-more-btn {
   margin-top: 6px;
   padding: 0;
   border: 0;
@@ -427,15 +428,15 @@
   cursor: pointer;
 }
 /* 设施：每组一个小标题，下面是带矢量插画的卡片 */
-.pg-building .bd-amenity-grid {
+.pg.pg-building .bd-amenity-grid {
   display: grid;
   gap: 32px;
 }
-.pg-building .bd-amenity-grid h3 {
+.pg.pg-building .bd-amenity-grid h3 {
   font-size: 1rem;
   margin-bottom: 14px;
 }
-.pg-building .bd-amenity-grid ul {
+.pg.pg-building .bd-amenity-grid ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -443,7 +444,7 @@
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   gap: 16px;
 }
-.pg-building .bd-amenity-grid li {
+.pg.pg-building .bd-amenity-grid li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -458,26 +459,26 @@
   line-height: 1.3;
 }
 /* 图标：单色粉色线稿，不加底色圆 */
-.pg-building .bd-amenity-ico {
+.pg.pg-building .bd-amenity-ico {
   display: block;
   line-height: 0;
   color: var(--pink);
 }
-.pg-building .bd-amenity-ico svg {
+.pg.pg-building .bd-amenity-ico svg {
   width: 44px;
   height: 44px;
 }
-.pg-building .bd-others {
+.pg.pg-building .bd-others {
   padding-bottom: 64px;
 }
 @media (max-width: 720px) {
-  .pg-building .bd-subnav-links {
+  .pg.pg-building .bd-subnav-links {
     display: none;
   }
-  .pg-building .bd-subnav-cta {
+  .pg.pg-building .bd-subnav-cta {
     width: 100%;
   }
-  .pg-building .bd-subnav-cta .btn {
+  .pg.pg-building .bd-subnav-cta .btn {
     flex: 1;
     text-align: center;
   }
@@ -485,14 +486,14 @@
 
 /* 楼盘页概览（桌面与平板）：要点卡片网格；手机版沿用上面 600px 以下的圆角列表 */
 @media (min-width: 601px) {
-  .pg-building.pg-listing-detail .ld-overview dl {
+  .pg.pg-building.pg-listing-detail .ld-overview dl {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 16px;
     margin-top: 24px;
     border-top: 0;
   }
-  .pg-building.pg-listing-detail .ld-overview dl > div {
+  .pg.pg-building.pg-listing-detail .ld-overview dl > div {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -502,18 +503,18 @@
     background: #fff;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
   }
-  .pg-building.pg-listing-detail .ld-overview dl > div:hover {
+  .pg.pg-building.pg-listing-detail .ld-overview dl > div:hover {
     border-color: var(--ink-soft);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   }
-  .pg-building.pg-listing-detail .ld-overview dt {
+  .pg.pg-building.pg-listing-detail .ld-overview dt {
     font-size: 0.74rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink-soft);
   }
-  .pg-building.pg-listing-detail .ld-overview dd {
+  .pg.pg-building.pg-listing-detail .ld-overview dd {
     font-size: clamp(1.2rem, 2.2vw, 1.6rem);
     font-weight: 700;
     line-height: 1.2;
@@ -521,23 +522,23 @@
 }
 
 /* 概览里的楼盘介绍：和上面的要点卡片隔开一段，小标题比分区标题小一号 */
-.pg-building .bd-about {
+.pg.pg-building .bd-about {
   margin-top: 40px;
 }
-.pg-building .bd-about h3 {
+.pg.pg-building .bd-about h3 {
   font-size: clamp(1.15rem, 2vw, 1.4rem);
   margin-bottom: 16px;
 }
 
 /* 吸顶条紧接着的第一个分区（概览）不要再留一大段空白 */
-.pg-building .bd-subnav + .bd-section {
+.pg.pg-building .bd-subnav + .bd-section {
   margin-top: 0;
   padding-top: 28px;
 }
 
 /* ---------- 楼盘页分区标题（桌面与平板）：加粗、放大，用标题本身拉开层级；手机版沿用原来的 ---------- */
 @media (min-width: 601px) {
-  .pg-building .bd-section > h2 {
+  .pg.pg-building .bd-section > h2 {
     margin-bottom: 28px;
     font-size: clamp(1.4rem, 2.2vw, 1.7rem);
     font-weight: 800;
@@ -546,8 +547,8 @@
     color: var(--ink);
   }
   /* 概览里的「楼盘介绍」、设施的分组名是二级标题：深色、中等大小 */
-  .pg-building .bd-about h3,
-  .pg-building .bd-amenity-grid h3 {
+  .pg.pg-building .bd-about h3,
+  .pg.pg-building .bd-amenity-grid h3 {
     font-size: 1.25rem;
     font-weight: 700;
   }
@@ -555,46 +556,46 @@
 
 /* 楼盘页「更多楼盘」：卡片缩小，一行放 3–4 张（手机版仍是一列，沿用原来的） */
 @media (min-width: 701px) {
-  .pg-building .bd-others .ls-dev-grid {
+  .pg.pg-building .bd-others .ls-dev-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
   }
-  .pg-building .bd-others .ls-dev-body {
+  .pg.pg-building .bd-others .ls-dev-body {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
     padding: 14px 16px 16px;
   }
-  .pg-building .bd-others .ls-dev-body h3 {
+  .pg.pg-building .bd-others .ls-dev-body h3 {
     font-size: 1.05rem;
   }
-  .pg-building .bd-others .ls-dev-body p {
+  .pg.pg-building .bd-others .ls-dev-body p {
     margin-top: 4px;
     font-size: 0.84rem;
   }
-  .pg-building .bd-others .ls-dev-cta {
+  .pg.pg-building .bd-others .ls-dev-cta {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 1100px) {
-  .pg-building .bd-others .ls-dev-grid {
+  .pg.pg-building .bd-others .ls-dev-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
 /* 筛选：桌面是城市标签，手机（≤600px）改成一个按钮，点开在原位展开面板（城市、价格区间、房间、设施，参考 Airbnb）；下面的规则只在手机宽度生效 */
-.pg-listings .ls-mfilter {
+.pg.pg-listings .ls-mfilter {
   display: none;
 }
 @media (max-width: 600px) {
-  .pg-listings .ls-filters {
+  .pg.pg-listings .ls-filters {
     display: none;
   }
-  .pg-listings .ls-mfilter {
+  .pg.pg-listings .ls-mfilter {
     display: block;
     margin-top: 22px;
   }
-  .pg-listings .ls-filter-open {
+  .pg.pg-listings .ls-filter-open {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -606,11 +607,11 @@
     font: 600 0.9rem "Inter", sans-serif;
     cursor: pointer;
   }
-  .pg-listings .ls-filter-open svg {
+  .pg.pg-listings .ls-filter-open svg {
     width: 18px;
     height: 18px;
   }
-  .pg-listings .ls-filter-count {
+  .pg.pg-listings .ls-filter-count {
     min-width: 20px;
     height: 20px;
     padding: 0 6px;
@@ -622,7 +623,7 @@
     text-align: center;
   }
   /* 筛选弹窗：居中的卡片，背后半透明遮罩 */
-  .pg-listings .ls-modal {
+  .pg.pg-listings .ls-modal {
     position: fixed;
     inset: 0;
     z-index: 2000;
@@ -635,11 +636,11 @@
     visibility: hidden;
     transition: opacity 0.2s ease, visibility 0.2s;
   }
-  .pg-listings .ls-modal.open {
+  .pg.pg-listings .ls-modal.open {
     opacity: 1;
     visibility: visible;
   }
-  .pg-listings .ls-fpanel {
+  .pg.pg-listings .ls-fpanel {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -652,10 +653,10 @@
     transform: scale(0.97);
     transition: transform 0.2s ease;
   }
-  .pg-listings .ls-modal.open .ls-fpanel {
+  .pg.pg-listings .ls-modal.open .ls-fpanel {
     transform: none;
   }
-  .pg-listings .ls-fhead {
+  .pg.pg-listings .ls-fhead {
     position: relative;
     display: flex;
     align-items: center;
@@ -665,7 +666,7 @@
     font: 600 1rem "Poppins", sans-serif;
     flex: none;
   }
-  .pg-listings .ls-fx {
+  .pg.pg-listings .ls-fx {
     position: absolute;
     left: 12px;
     top: 50%;
@@ -681,43 +682,43 @@
     color: var(--ink);
     cursor: pointer;
   }
-  .pg-listings .ls-fx svg {
+  .pg.pg-listings .ls-fx svg {
     width: 20px;
     height: 20px;
   }
-  .pg-listings .ls-fbody {
+  .pg.pg-listings .ls-fbody {
     overflow-y: auto;
     padding: 0 20px;
     flex: 1;
   }
   /* 每一块之间一条细线，小标题加粗（Airbnb 的做法） */
-  .pg-listings .ls-fsec {
+  .pg.pg-listings .ls-fsec {
     padding: 22px 0;
   }
-  .pg-listings .ls-fsec {
+  .pg.pg-listings .ls-fsec {
     border-top: 1px solid var(--line);
   }
-  .pg-listings .ls-flabel {
+  .pg.pg-listings .ls-flabel {
     margin: 0 0 12px;
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--ink);
   }
-  .pg-listings .ls-fbody > .ls-flabel {
+  .pg.pg-listings .ls-fbody > .ls-flabel {
     padding: 20px 0 0;
   }
-  .pg-listings .ls-fhint {
+  .pg.pg-listings .ls-fhint {
     margin: -6px 0 18px;
     font-size: 0.84rem;
     color: var(--ink-soft);
   }
-  .pg-listings .ls-fgrid {
+  .pg.pg-listings .ls-fgrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     padding-bottom: 22px;
   }
-  .pg-listings .ls-fopt {
+  .pg.pg-listings .ls-fopt {
     padding: 11px 8px;
     border: 1px solid var(--line);
     border-radius: 12px;
@@ -734,38 +735,38 @@
     align-items: center;
     justify-content: center;
   }
-  .pg-listings .ls-fopt.on {
+  .pg.pg-listings .ls-fopt.on {
     background: var(--ink);
     border-color: var(--ink);
     color: #fff;
     font-weight: 600;
   }
-  .pg-listings .ls-fgrid > :last-child:nth-child(odd) {
+  .pg.pg-listings .ls-fgrid > :last-child:nth-child(odd) {
     grid-column: 1 / -1;
   }
 
   /* 价格柱状图 + 双滑块 */
-  .pg-listings .ls-hist {
+  .pg.pg-listings .ls-hist {
     display: flex;
     align-items: flex-end;
     gap: 2px;
     height: 72px;
     padding: 0 14px;
   }
-  .pg-listings .ls-hist span {
+  .pg.pg-listings .ls-hist span {
     flex: 1;
     border-radius: 2px 2px 0 0;
     background: var(--ink);
   }
-  .pg-listings .ls-hist span.out {
+  .pg.pg-listings .ls-hist span.out {
     background: var(--line);
   }
-  .pg-listings .ls-slider {
+  .pg.pg-listings .ls-slider {
     position: relative;
     height: 28px;
     margin-top: -1px;
   }
-  .pg-listings .ls-slider::before {
+  .pg.pg-listings .ls-slider::before {
     content: "";
     position: absolute;
     left: 14px;
@@ -774,14 +775,14 @@
     height: 2px;
     background: var(--line);
   }
-  .pg-listings .ls-slider-fill {
+  .pg.pg-listings .ls-slider-fill {
     position: absolute;
     top: 13px;
     height: 2px;
     background: var(--ink);
     margin: 0 14px;
   }
-  .pg-listings .ls-slider input[type="range"] {
+  .pg.pg-listings .ls-slider input[type="range"] {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -792,15 +793,15 @@
     -webkit-appearance: none;
     appearance: none;
   }
-  .pg-listings .ls-slider input[type="range"]::-webkit-slider-runnable-track {
+  .pg.pg-listings .ls-slider input[type="range"]::-webkit-slider-runnable-track {
     height: 28px;
     background: none;
   }
-  .pg-listings .ls-slider input[type="range"]::-moz-range-track {
+  .pg.pg-listings .ls-slider input[type="range"]::-moz-range-track {
     height: 28px;
     background: none;
   }
-  .pg-listings .ls-slider input[type="range"]::-webkit-slider-thumb {
+  .pg.pg-listings .ls-slider input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 28px;
     height: 28px;
@@ -811,7 +812,7 @@
     pointer-events: auto;
     cursor: grab;
   }
-  .pg-listings .ls-slider input[type="range"]::-moz-range-thumb {
+  .pg.pg-listings .ls-slider input[type="range"]::-moz-range-thumb {
     width: 26px;
     height: 26px;
     border: 1px solid var(--line);
@@ -821,23 +822,23 @@
     pointer-events: auto;
     cursor: grab;
   }
-  .pg-listings .ls-pricebox {
+  .pg.pg-listings .ls-pricebox {
     display: flex;
     justify-content: space-between;
     gap: 12px;
     margin-top: 16px;
   }
-  .pg-listings .ls-pricebox label {
+  .pg.pg-listings .ls-pricebox label {
     display: flex;
     flex-direction: column;
     gap: 6px;
     font-size: 0.82rem;
     color: var(--ink-soft);
   }
-  .pg-listings .ls-pricebox label:last-child {
+  .pg.pg-listings .ls-pricebox label:last-child {
     align-items: flex-end;
   }
-  .pg-listings .ls-pricebox input {
+  .pg.pg-listings .ls-pricebox input {
     width: 104px;
     height: 46px;
     padding: 0 12px;
@@ -850,7 +851,7 @@
   }
 
   /* 房间步进器 */
-  .pg-listings .ls-step {
+  .pg.pg-listings .ls-step {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -858,17 +859,17 @@
     font-size: 0.95rem;
     color: var(--ink);
   }
-  .pg-listings .ls-step-ctl {
+  .pg.pg-listings .ls-step-ctl {
     display: flex;
     align-items: center;
     gap: 14px;
   }
-  .pg-listings .ls-step-ctl b {
+  .pg.pg-listings .ls-step-ctl b {
     min-width: 36px;
     font-weight: 500;
     text-align: center;
   }
-  .pg-listings .ls-step-ctl button {
+  .pg.pg-listings .ls-step-ctl button {
     width: 36px;
     height: 36px;
     border: 0;
@@ -879,18 +880,18 @@
     line-height: 1;
     cursor: pointer;
   }
-  .pg-listings .ls-step-ctl button:disabled {
+  .pg.pg-listings .ls-step-ctl button:disabled {
     color: #b5b5b5;
     cursor: default;
   }
 
   /* 设施胶囊 */
-  .pg-listings .ls-chips {
+  .pg.pg-listings .ls-chips {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
   }
-  .pg-listings .ls-fchip {
+  .pg.pg-listings .ls-fchip {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -902,11 +903,11 @@
     font: 500 0.88rem "Inter", sans-serif;
     cursor: pointer;
   }
-  .pg-listings .ls-fchip .amenity-icon {
+  .pg.pg-listings .ls-fchip .amenity-icon {
     width: 22px;
     height: 22px;
   }
-  .pg-listings .ls-fchip.on {
+  .pg.pg-listings .ls-fchip.on {
     border-color: var(--ink);
     box-shadow: inset 0 0 0 1px var(--ink);
     background: #f7f7f7;
@@ -914,7 +915,7 @@
   }
 
   /* 底部：清除 + 显示结果数 */
-  .pg-listings .ls-ffoot {
+  .pg.pg-listings .ls-ffoot {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -923,7 +924,7 @@
     border-top: 1px solid var(--line);
     flex: none;
   }
-  .pg-listings .ls-freset {
+  .pg.pg-listings .ls-freset {
     padding: 0;
     border: 0;
     background: none;
@@ -932,11 +933,11 @@
     text-decoration: underline;
     cursor: pointer;
   }
-  .pg-listings .ls-freset:disabled {
+  .pg.pg-listings .ls-freset:disabled {
     color: #b5b5b5;
     cursor: default;
   }
-  .pg-listings .ls-fshow {
+  .pg.pg-listings .ls-fshow {
     padding: 13px 22px;
     border: 0;
     border-radius: 12px;
@@ -949,11 +950,11 @@
 
 /* 手机版设施：一行 3 个，卡片缩小（只在手机宽度生效） */
 @media (max-width: 600px) {
-  .pg-building .bd-amenity-grid ul {
+  .pg.pg-building .bd-amenity-grid ul {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
-  .pg-building .bd-amenity-grid li {
+  .pg.pg-building .bd-amenity-grid li {
     gap: 10px;
     padding: 14px 10px;
     border-radius: 12px;
@@ -961,7 +962,7 @@
     line-height: 1.25;
     overflow-wrap: anywhere;
   }
-  .pg-building .bd-amenity-ico svg {
+  .pg.pg-building .bd-amenity-ico svg {
     width: 30px;
     height: 30px;
   }
@@ -969,26 +970,26 @@
 
 /* 手机版楼盘标题区拉开层级：名称 → 价格（小标签在上、大价格在下）→ 空白 → 地址（深色）→ 户型等规格（浅色小字）。只在手机宽度生效 */
 @media (max-width: 600px) {
-  .pg-building .bd-titlerow {
+  .pg.pg-building .bd-titlerow {
     display: block;
   }
-  .pg-building .bd-titlerow .ld-price {
+  .pg.pg-building .bd-titlerow .ld-price {
     margin-top: 18px;
     font-size: 2rem;
   }
-  .pg-building .bd-titlerow .ld-price .bd-from {
+  .pg.pg-building .bd-titlerow .ld-price .bd-from {
     display: block;
     margin: 0 0 6px;
     font-size: 0.72rem;
     letter-spacing: 0.08em;
     color: var(--ink-faint);
   }
-  .pg-building .ld-summary.bd-meta {
+  .pg.pg-building .ld-summary.bd-meta {
     margin-top: 28px;
     gap: 8px 8px;
     color: var(--ink-faint);
   }
-  .pg-building .bd-meta .bd-addr {
+  .pg.pg-building .bd-meta .bd-addr {
     font-size: 1rem;
     font-weight: 600;
     color: var(--ink);
@@ -997,46 +998,46 @@
 
 /* 手机版：吸顶条（Get in touch / Schedule a tour）下面不要分割线，只在手机宽度生效 */
 @media (max-width: 600px) {
-  .pg-building .bd-subnav {
+  .pg.pg-building .bd-subnav {
     border-bottom: 0;
   }
 }
 
 /* 手机版「更多楼盘」卡片：高度减少约 30%（图片压扁、文字区内边距收紧），只在手机宽度生效 */
 @media (max-width: 600px) {
-  .pg-building .bd-others .ls-dev-media {
+  .pg.pg-building .bd-others .ls-dev-media {
     aspect-ratio: 5 / 2;
   }
-  .pg-building .bd-others .ls-dev-body {
+  .pg.pg-building .bd-others .ls-dev-body {
     padding: 14px 18px 16px;
   }
 }
 
 /* 手机版相册：横向滑动切换（只在手机宽度生效，桌面仍是原来的拼图） */
-.pg-building .bd-swipe-wrap {
+.pg.pg-building .bd-swipe-wrap {
   display: none;
 }
 @media (max-width: 600px) {
-  .pg-building .ld-mosaic {
+  .pg.pg-building .ld-mosaic {
     display: none;
   }
-  .pg-building .bd-swipe-wrap {
+  .pg.pg-building .bd-swipe-wrap {
     display: block;
     position: relative;
     border-radius: 14px;
     overflow: hidden;
   }
-  .pg-building .bd-swipe {
+  .pg.pg-building .bd-swipe {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
-  .pg-building .bd-swipe::-webkit-scrollbar {
+  .pg.pg-building .bd-swipe::-webkit-scrollbar {
     display: none;
   }
-  .pg-building .bd-swipe-slide {
+  .pg.pg-building .bd-swipe-slide {
     flex: 0 0 100%;
     aspect-ratio: 4 / 3;
     padding: 0;
@@ -1046,13 +1047,13 @@
     scroll-snap-stop: always;
     cursor: pointer;
   }
-  .pg-building .bd-swipe-slide img {
+  .pg.pg-building .bd-swipe-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .pg-building .bd-swipe-count {
+  .pg.pg-building .bd-swipe-count {
     position: absolute;
     right: 12px;
     bottom: 12px;
@@ -1069,7 +1070,7 @@
 
 /* 手机版吸顶条只留「Schedule a tour」一个按钮（Get in touch 隐藏，剩下的按钮占满整行）；只在手机宽度生效 */
 @media (max-width: 600px) {
-  .pg-building .bd-subnav-cta .btn-outline {
+  .pg.pg-building .bd-subnav-cta .btn-outline {
     display: none;
   }
 }
