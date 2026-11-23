@@ -7,9 +7,8 @@
       <section v-if="on('hero')" class="ls-hero">
         <div class="wrap">
           <h1>
-            <!-- 只有纽约是「独家房源」，其他城市的房源不是独家，标题用「重点推荐」（按需求写在代码里，不走 CMS） -->
-            <template v-if="isFeatured">{{ tx("Featured") }}<template v-if="!isZh">{{ " " }}</template><span class="pink">{{ tx("listings") }}</span></template>
-            <template v-else>{{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template><span class="pink">{{ c("hero.titleAccent") }}</span></template>
+            <!-- 标题各地区可以不同（例如纽约是「独家房源」，其他城市是「重点推荐」）：在 CMS 里给该地区单独设置 hero 的标题即可 -->
+            {{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template><span class="pink">{{ c("hero.titleAccent") }}</span>
           </h1>
           <!-- 城市筛选：每个城市是自己的地区页（有独立网址，可收录）；高亮当前所在地区 -->
           <nav v-if="regions.length" class="ls-filters" :aria-label="tx('Filter by city')">
@@ -115,13 +114,13 @@
             <p v-if="!shownBuildings.length" class="ls-empty" style="display: block">{{ tx("No buildings match these filters.") }}</p>
           </div>
 
-          <!-- 其他城市没有楼盘时的「即将上线」占位卡片（现在这些城市都有示例楼盘，一般不会出现） -->
+          <!-- 这个地区还没有楼盘时的「即将上线」占位卡片 -->
           <div v-if="placeholders" class="ls-dev">
             <div class="ls-dev-grid">
               <div v-for="n in 3" :key="n" class="ls-dev-card ls-dev-soon" aria-hidden="true">
                 <div class="ls-dev-media"><span class="ls-dev-ph">{{ regionLabel(props.region!) }}</span></div>
                 <div class="ls-dev-body">
-                  <div><h3>{{ tx("Coming soon") }}</h3><p>{{ regionLabel(props.region!) }}</p></div>
+                  <div><h3>{{ c("buildings.comingSoon") }}</h3><p>{{ regionLabel(props.region!) }}</p></div>
                 </div>
               </div>
             </div>
@@ -163,24 +162,21 @@ const { tx, bi, isZh } = useTx();
 const localePath = useLocalePath();
 const absoluteUrl = useAbsoluteUrl();
 // 页面上的固定文案：地区页用该地区的版本（没有单独配置的部分沿用全站默认）
-const { c, on } = await usePageContent("listings", props.region);
+const { c, raw, on } = await usePageContent("listings", props.region);
 const { text, cover, price: priceOf, maxBeds, maxBaths, amenityNames } = await useBuildingFields();
-const isFeatured = computed(() => Boolean(props.region) && props.region !== "new-york");
 const no = useBlockNumbers(["cta"] as const, on);
 
 // 独家楼盘：可以在 CMS 里整体隐藏（buildings.show）；「全部」页显示所有，地区页只显示该地区的
 const allBuildings = await useBuildings(props.region);
-const buildings = computed(() => (on("buildings") ? allBuildings.value.filter(item => (props.region ? item.region === props.region : !item.demo)) : []));
-const placeholders = computed(() => isFeatured.value && !buildings.value.length);
+const buildings = computed(() => (on("buildings") ? buildingsFor(allBuildings.value, props.region) : []));
+const placeholders = computed(() => Boolean(props.region) && on("buildings") && !buildings.value.length);
 // 手机上的筛选面板：价格区间、户型在当前列表里再筛一遍（城市是各自的网址）
 const filterOpen = ref(false);
-// 城市选项的顺序：洛杉矶排在芝加哥前面（其余按地区接口的顺序）
+// 城市选项的顺序：CMS 里 filters.cityOrder 列出的地区按那里的顺序排在前面，没列出的按地区接口的顺序接在后面
 const cityOptions = computed(() => {
-  const list = [...regions.value];
-  const a = list.findIndex(item => item.slug === "chicago");
-  const b = list.findIndex(item => item.slug === "los-angeles");
-  if (a >= 0 && b >= 0) [list[a], list[b]] = [list[b]!, list[a]!];
-  return list;
+  const order = raw<string[]>("filters.cityOrder") ?? [];
+  const rank = (slug: string) => (order.includes(slug) ? order.indexOf(slug) : order.length);
+  return regions.value.map((item, index) => ({ item, index })).sort((a, b) => rank(a.item.slug) - rank(b.item.slug) || a.index - b.index).map(entry => entry.item);
 });
 // 弹窗打开时锁住页面滚动
 watch(filterOpen, (open) => {
@@ -191,11 +187,15 @@ onBeforeUnmount(() => {
 });
 const fmt = (n: number) => `$${n.toLocaleString("en-US")}`;
 
-// 价格区间：范围取当前列表里楼盘起租价的最低到最高（取整到 100），滑块和柱状图都用它
-// 价格范围与柱状图先用一组固定的示意数据（$1,000 – $6,000，柱子高度是写死的、不是真实分布），好让滑块和柱状图有东西可看；
-// 楼盘多了以后再改回按真实起租价统计。用固定数据而不是随机数，是为了服务端和浏览器渲染一致。
-const priceBounds = computed<[number, number]>(() => [1000, 6000]);
-const HIST_SAMPLE = [6, 12, 20, 34, 52, 78, 100, 92, 85, 90, 74, 66, 58, 70, 54, 44, 38, 30, 26, 20, 16, 14, 10, 8];
+// 价格区间：范围取当前列表里楼盘起租价的最低到最高（向外取整到 500），滑块和柱状图都用它；没有楼盘标价时不显示柱子
+const HIST_BARS = 24;
+const prices = computed(() => buildings.value.map(priceOf).filter(value => value > 0));
+const priceBounds = computed<[number, number]>(() => {
+  if (!prices.value.length) return [0, 500];
+  const lo = Math.floor(Math.min(...prices.value) / 500) * 500;
+  const hi = Math.ceil(Math.max(...prices.value) / 500) * 500;
+  return [lo, hi > lo ? hi : lo + 500];
+});
 const priceMin = ref(priceBounds.value[0]);
 const priceMax = ref(priceBounds.value[1]);
 // 换城市时楼盘变了，价格范围跟着重置
@@ -207,11 +207,14 @@ const setMin = (value: number) => (priceMin.value = Math.min(Math.max(value || p
 const setMax = (value: number) => (priceMax.value = Math.max(Math.min(value || priceBounds.value[1], priceBounds.value[1]), priceMin.value));
 const parsePrice = (event: Event) => Number((event.target as HTMLInputElement).value.replace(/[^\d]/g, ""));
 const sliderPct = (value: number) => ((value - priceBounds.value[0]) / (priceBounds.value[1] - priceBounds.value[0])) * 100;
-// 柱状图：把价格范围分成 24 格，每格数有几栋楼；选中范围外的柱子变灰
+// 柱状图：把价格范围分成 24 格，每格数有几栋楼（最高的一格为满高）；选中范围外的柱子变灰
 const histogram = computed(() => {
   const [lo, hi] = priceBounds.value;
-  const step = (hi - lo) / HIST_SAMPLE.length;
-  return HIST_SAMPLE.map((height, index) => ({ height, inRange: lo + step * (index + 1) > priceMin.value && lo + step * index < priceMax.value }));
+  const step = (hi - lo) / HIST_BARS;
+  const counts = Array.from({ length: HIST_BARS }, () => 0);
+  for (const value of prices.value) counts[Math.min(HIST_BARS - 1, Math.floor((value - lo) / step))]!++;
+  const top = Math.max(1, ...counts);
+  return counts.map((count, index) => ({ height: (count / top) * 100, inRange: lo + step * (index + 1) > priceMin.value && lo + step * index < priceMax.value }));
 });
 
 // 房间：0 = 不限，N = 至少 N；上限取当前列表里最大的值

@@ -197,7 +197,7 @@ const addrParts = (text: string) => {
   if (!m) return [{ t: text, zip: false }];
   return [{ t: m[1] ?? "", zip: false }, { t: m[2] ?? "", zip: true }, { t: m[3] ?? "", zip: false }];
 };
-const buildings = computed(() => (lOn("buildings") ? allBuildings.value.filter(item => !props.region || item.region === props.region).slice(0, 3) : []));
+const buildings = computed(() => (lOn("buildings") ? buildingsFor(allBuildings.value, props.region).slice(0, 3) : []));
 
 /** 地区卡片：顺序和卡片图都以 CMS 的地区设置为准，没配卡片图的地区不出卡片 */
 const locationCards = computed(() =>

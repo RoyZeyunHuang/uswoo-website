@@ -53,7 +53,15 @@
       "all": {
         "en": "All",
         "zh": "全部"
-      }
+      },
+      "cityOrder": [
+        "new-york",
+        "los-angeles",
+        "chicago",
+        "washington-dc",
+        "philadelphia",
+        "boston"
+      ]
     },
     "empty": {
       "en": "New listings in this market are coming soon. Contact us to hear first.",
@@ -211,6 +219,7 @@
           "slug": "43-cottage",
           "name": "43 Cottage",
           "region": "new-york",
+          "regionOnly": false,
           "tag": {
             "en": "Exclusive",
             "zh": "独家"
@@ -222,6 +231,8 @@
           "address": "43 Cottage, Jersey City",
           "yearBuilt": 2024,
           "startingPrice": 2850,
+          "maxBeds": 2,
+          "maxBaths": 2,
           "image": {
             "url": "/assets/buildings/43-cottage/cover.jpg"
           },
@@ -238,6 +249,52 @@
             {
               "en": "480 – 1,200 sq.ft.",
               "zh": "480 – 1,200 平方英尺"
+            }
+          ],
+          "description": {
+            "en": "Discover modern luxury living at 43 Cottage, located in Jersey City's vibrant Journal Square neighborhood.\nFeaturing stylish residences, contemporary finishes, and amenities including a fitness center, coworking spaces, and a rooftop terrace, 43 Cottage offers comfort and convenience.\nJust steps from the Journal Square PATH station, residents enjoy easy access to Manhattan, dining, shopping, and more.",
+            "zh": "在泽西城充满活力的 Journal Square 社区，体验 43 Cottage 的现代奢华生活。\n这里有时尚的住宅、现代感十足的装修，以及健身房、联合办公空间和屋顶露台等配套，舒适又便利。\n步行即可到达 Journal Square PATH 车站，轻松前往曼哈顿，周边餐饮、购物一应俱全。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Coworking spaces",
+                  "zh": "联合办公空间"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Resident lounge",
+                  "zh": "住户休息室"
+                },
+                {
+                  "en": "Package room",
+                  "zh": "包裹间"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                },
+                {
+                  "en": "Laundry",
+                  "zh": "洗衣房"
+                },
+                {
+                  "en": "Doorman",
+                  "zh": "门卫服务"
+                }
+              ]
             }
           ],
           "gallery": [
@@ -259,6 +316,7 @@
           "slug": "505-summit",
           "name": "505 Summit",
           "region": "new-york",
+          "regionOnly": false,
           "tag": {
             "en": "Exclusive",
             "zh": "独家"
@@ -270,6 +328,8 @@
           "address": "505 Summit Avenue, Jersey City, NJ 07306",
           "yearBuilt": 2023,
           "startingPrice": 2650,
+          "maxBeds": 3,
+          "maxBaths": 2,
           "image": {
             "url": "/assets/buildings/505-summit/cover.jpg"
           },
@@ -286,6 +346,48 @@
             {
               "en": "450 – 1,400 sq.ft.",
               "zh": "450 – 1,400 平方英尺"
+            }
+          ],
+          "description": {
+            "en": "505 Summit is a 605-home rental tower in Jersey City's Journal Square neighborhood, with studio to three-bedroom residences.\nThe building pairs skyline views with a full amenity program, including a rooftop pool terrace, coworking space, a resident lounge and a game room.\nA 24-hour concierge and package room keep daily life easy, and the PATH station is close by for a quick trip into Manhattan.",
+            "zh": "505 Summit 位于泽西城 Journal Square 社区，是一栋拥有 605 套住宅的租赁大楼，户型从开间到三居室。\n大楼可以看到曼哈顿天际线，配套齐全，有屋顶泳池露台、联合办公空间、住户休息室和游戏室。\n24 小时礼宾和包裹间让日常生活更省心，附近就是 PATH 车站，去曼哈顿很方便。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Rooftop pool terrace",
+                  "zh": "屋顶泳池露台"
+                },
+                {
+                  "en": "Coworking spaces",
+                  "zh": "联合办公空间"
+                },
+                {
+                  "en": "Resident lounge",
+                  "zh": "住户休息室"
+                },
+                {
+                  "en": "Game room",
+                  "zh": "游戏室"
+                },
+                {
+                  "en": "24-hour concierge",
+                  "zh": "24 小时礼宾"
+                },
+                {
+                  "en": "Package room",
+                  "zh": "包裹间"
+                },
+                {
+                  "en": "Dog run",
+                  "zh": "宠物活动区"
+                }
+              ]
             }
           ],
           "gallery": [
@@ -319,6 +421,7 @@
           "slug": "forten-at-columbia",
           "name": "Forten at Columbia",
           "region": "new-york",
+          "regionOnly": false,
           "tag": {
             "en": "Exclusive",
             "zh": "独家"
@@ -330,6 +433,8 @@
           "address": "410 West 126th Street, New York, NY",
           "yearBuilt": 2025,
           "startingPrice": 3900,
+          "maxBeds": 3,
+          "maxBaths": 2,
           "image": {
             "url": "/assets/buildings/forten-at-columbia/cover.webp"
           },
@@ -346,6 +451,48 @@
             {
               "en": "420 – 1,300 sq.ft.",
               "zh": "420 – 1,300 平方英尺"
+            }
+          ],
+          "description": {
+            "en": "Forten at Columbia is a new rental tower at 410 West 126th Street, in the Manhattanville area of Harlem near Columbia University's Manhattanville campus.\nResidences offer floor-to-ceiling windows and quartz countertops, and the building adds a fitness center, a resident lounge and a rooftop terrace with an outdoor pool.\nAn attended lobby with a doorman makes arrivals easy, and the building is pet friendly.",
+            "zh": "Forten at Columbia 是一栋位于西 126 街 410 号的新建租赁大楼，在哈莱姆的 Manhattanville 一带，靠近哥伦比亚大学 Manhattanville 校区。\n住宅有落地窗和石英石台面，楼内配有健身房、住户休息室，以及带室外泳池的屋顶露台。\n大堂有门卫值守，进出方便，也欢迎养宠物。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Doorman",
+                  "zh": "门卫服务"
+                },
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Outdoor pool",
+                  "zh": "室外泳池"
+                },
+                {
+                  "en": "Resident lounge",
+                  "zh": "住户休息室"
+                },
+                {
+                  "en": "Mail room",
+                  "zh": "邮件间"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                }
+              ]
             }
           ],
           "gallery": [
@@ -370,6 +517,7 @@
           "slug": "1440-amsterdam-ave",
           "name": "1440 Amsterdam Ave",
           "region": "new-york",
+          "regionOnly": false,
           "tag": {
             "en": "Exclusive",
             "zh": "独家"
@@ -381,6 +529,8 @@
           "address": "1440 Amsterdam Ave, New York, NY",
           "yearBuilt": 2025,
           "startingPrice": 4695,
+          "maxBeds": 2,
+          "maxBaths": 2,
           "image": {
             "url": "/assets/buildings/1440-amsterdam-ave/cover.jpg"
           },
@@ -397,6 +547,52 @@
             {
               "en": "400 – 1,100 sq.ft.",
               "zh": "400 – 1,100 平方英尺"
+            }
+          ],
+          "description": {
+            "en": "1440 Amsterdam Ave is a large new rental building in West Harlem, close to Columbia University, with studio to two-bedroom homes.\nIts standout feature is more than 60,000 square feet of indoor and outdoor amenity space, including a fitness center, basketball court, golf simulator and rooftop terrace.\nResidents also get wellness and yoga space, a game room, a bike room and a 24-hour concierge.",
+            "zh": "1440 Amsterdam Ave 是西哈莱姆的大型新建租赁大楼，靠近哥伦比亚大学，户型从开间到两居室。\n大楼最大的特色是超过 6 万平方英尺的室内外公共空间，包括健身房、篮球场、高尔夫模拟器和屋顶露台。\n住户还能使用瑜伽与健康空间、游戏室、自行车房，并享有 24 小时礼宾服务。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Basketball court",
+                  "zh": "篮球场"
+                },
+                {
+                  "en": "Golf simulator",
+                  "zh": "高尔夫模拟器"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Yoga & wellness",
+                  "zh": "瑜伽与健康空间"
+                },
+                {
+                  "en": "Game room",
+                  "zh": "游戏室"
+                },
+                {
+                  "en": "Bike room",
+                  "zh": "自行车房"
+                },
+                {
+                  "en": "24-hour concierge",
+                  "zh": "24 小时礼宾"
+                }
+              ]
             }
           ],
           "gallery": [
@@ -428,8 +624,752 @@
               "url": "/assets/buildings/1440-amsterdam-ave/09.jpg"
             }
           ]
+        },
+        {
+          "slug": "chicago-loop-residences",
+          "name": {
+            "en": "Loop Residences",
+            "zh": "Loop 公寓"
+          },
+          "region": "chicago",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "The Loop, Chicago, IL",
+            "zh": "芝加哥 Loop 市中心"
+          },
+          "address": {
+            "en": "The Loop, Chicago, IL",
+            "zh": "芝加哥 Loop 市中心"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 2400,
+          "maxBeds": 2,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 2 BR",
+              "zh": "开间 – 两居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for Chicago's Loop, close to the L, the river and the city's main offices and campuses.\nThis page shows how a Chicago building will look once real listings are added.",
+            "zh": "这是芝加哥 Loop 市中心的示例楼盘，靠近 L 线地铁、芝加哥河以及主要的写字楼和校园。\n这一页用来展示芝加哥楼盘上线后的样子，真实楼盘录入后会替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Coworking spaces",
+                  "zh": "联合办公空间"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Resident lounge",
+                  "zh": "住户休息室"
+                },
+                {
+                  "en": "Package room",
+                  "zh": "包裹间"
+                },
+                {
+                  "en": "Doorman",
+                  "zh": "门卫服务"
+                }
+              ]
+            }
+          ],
+          "gallery": []
+        },
+        {
+          "slug": "chicago-river-north-lofts",
+          "name": {
+            "en": "River North Lofts",
+            "zh": "River North 阁楼公寓"
+          },
+          "region": "chicago",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "River North, Chicago, IL",
+            "zh": "芝加哥 River North"
+          },
+          "address": {
+            "en": "River North, Chicago, IL",
+            "zh": "芝加哥 River North"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 2650,
+          "maxBeds": 3,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 3 BR",
+              "zh": "开间 – 三居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for River North, with loft-style homes near galleries, restaurants and the Chicago Riverwalk.\nReplace this with a real building when it is ready.",
+            "zh": "这是 River North 的示例楼盘，阁楼风格的住宅，周边有画廊、餐厅和芝加哥河滨步道。\n真实楼盘准备好后在这里替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Outdoor pool",
+                  "zh": "室外泳池"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                },
+                {
+                  "en": "Game room",
+                  "zh": "游戏室"
+                },
+                {
+                  "en": "24-hour concierge",
+                  "zh": "24 小时礼宾"
+                }
+              ]
+            }
+          ],
+          "gallery": []
+        },
+        {
+          "slug": "la-downtown-tower",
+          "name": {
+            "en": "Downtown Tower",
+            "zh": "市中心大厦"
+          },
+          "region": "los-angeles",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "Downtown, Los Angeles, CA",
+            "zh": "洛杉矶市中心"
+          },
+          "address": {
+            "en": "Downtown, Los Angeles, CA",
+            "zh": "洛杉矶市中心"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 2900,
+          "maxBeds": 2,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 2 BR",
+              "zh": "开间 – 两居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for Downtown Los Angeles, near USC, the Arts District and Metro lines.\nThis page shows the layout of a Los Angeles building before real listings are added.",
+            "zh": "这是洛杉矶市中心的示例楼盘，靠近南加大、艺术区和地铁线路。\n这一页用来展示洛杉矶楼盘的版式，真实楼盘录入后会替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Outdoor pool",
+                  "zh": "室外泳池"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Coworking spaces",
+                  "zh": "联合办公空间"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                },
+                {
+                  "en": "Doorman",
+                  "zh": "门卫服务"
+                }
+              ]
+            }
+          ],
+          "gallery": []
+        },
+        {
+          "slug": "la-westwood-residences",
+          "name": {
+            "en": "Westwood Residences",
+            "zh": "Westwood 公寓"
+          },
+          "region": "los-angeles",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "Westwood, Los Angeles, CA",
+            "zh": "洛杉矶 Westwood"
+          },
+          "address": {
+            "en": "Westwood, Los Angeles, CA",
+            "zh": "洛杉矶 Westwood"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 3200,
+          "maxBeds": 2,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 2 BR",
+              "zh": "开间 – 两居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for Westwood, a short trip from the UCLA campus, shops and dining.\nReplace this with a real building when it is ready.",
+            "zh": "这是 Westwood 的示例楼盘，离加州大学洛杉矶分校校园、商店和餐饮都很近。\n真实楼盘准备好后在这里替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Resident lounge",
+                  "zh": "住户休息室"
+                },
+                {
+                  "en": "Coworking spaces",
+                  "zh": "联合办公空间"
+                },
+                {
+                  "en": "Package room",
+                  "zh": "包裹间"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                },
+                {
+                  "en": "24-hour concierge",
+                  "zh": "24 小时礼宾"
+                }
+              ]
+            }
+          ],
+          "gallery": []
+        },
+        {
+          "slug": "dc-dupont-residences",
+          "name": {
+            "en": "Dupont Residences",
+            "zh": "Dupont 公寓"
+          },
+          "region": "washington-dc",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "Dupont Circle, Washington, D.C.",
+            "zh": "华盛顿特区 Dupont Circle"
+          },
+          "address": {
+            "en": "Dupont Circle, Washington, D.C.",
+            "zh": "华盛顿特区 Dupont Circle"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 2600,
+          "maxBeds": 2,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 2 BR",
+              "zh": "开间 – 两居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for Dupont Circle, steps from the Metro, cafés and embassies.\nThis page shows how a Washington, D.C. building will look once real listings are added.",
+            "zh": "这是 Dupont Circle 的示例楼盘，步行即到地铁、咖啡馆和各国使馆。\n这一页用来展示华盛顿特区楼盘上线后的样子，真实楼盘录入后会替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Resident lounge",
+                  "zh": "住户休息室"
+                },
+                {
+                  "en": "Package room",
+                  "zh": "包裹间"
+                },
+                {
+                  "en": "Doorman",
+                  "zh": "门卫服务"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                }
+              ]
+            }
+          ],
+          "gallery": []
+        },
+        {
+          "slug": "dc-navy-yard-lofts",
+          "name": {
+            "en": "Navy Yard Lofts",
+            "zh": "Navy Yard 阁楼公寓"
+          },
+          "region": "washington-dc",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "Navy Yard, Washington, D.C.",
+            "zh": "华盛顿特区 Navy Yard"
+          },
+          "address": {
+            "en": "Navy Yard, Washington, D.C.",
+            "zh": "华盛顿特区 Navy Yard"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 2800,
+          "maxBeds": 2,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 2 BR",
+              "zh": "开间 – 两居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for Navy Yard, by the Anacostia waterfront, the ballpark and the Metro.\nReplace this with a real building when it is ready.",
+            "zh": "这是 Navy Yard 的示例楼盘，临近阿纳科斯蒂亚河滨、棒球场和地铁。\n真实楼盘准备好后在这里替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Outdoor pool",
+                  "zh": "室外泳池"
+                },
+                {
+                  "en": "Coworking spaces",
+                  "zh": "联合办公空间"
+                },
+                {
+                  "en": "Game room",
+                  "zh": "游戏室"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                },
+                {
+                  "en": "24-hour concierge",
+                  "zh": "24 小时礼宾"
+                }
+              ]
+            }
+          ],
+          "gallery": []
+        },
+        {
+          "slug": "philly-rittenhouse-residences",
+          "name": {
+            "en": "Rittenhouse Residences",
+            "zh": "Rittenhouse 公寓"
+          },
+          "region": "philadelphia",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "Rittenhouse Square, Philadelphia, PA",
+            "zh": "费城 Rittenhouse Square"
+          },
+          "address": {
+            "en": "Rittenhouse Square, Philadelphia, PA",
+            "zh": "费城 Rittenhouse Square"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 2100,
+          "maxBeds": 2,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 2 BR",
+              "zh": "开间 – 两居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for Rittenhouse Square, near the park, Center City dining and the city's universities.\nThis page shows how a Philadelphia building will look once real listings are added.",
+            "zh": "这是 Rittenhouse Square 的示例楼盘，靠近公园、市中心餐饮和费城的几所大学。\n这一页用来展示费城楼盘上线后的样子，真实楼盘录入后会替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Resident lounge",
+                  "zh": "住户休息室"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Package room",
+                  "zh": "包裹间"
+                },
+                {
+                  "en": "Doorman",
+                  "zh": "门卫服务"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                }
+              ]
+            }
+          ],
+          "gallery": []
+        },
+        {
+          "slug": "philly-university-city-lofts",
+          "name": {
+            "en": "University City Lofts",
+            "zh": "University City 阁楼公寓"
+          },
+          "region": "philadelphia",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "University City, Philadelphia, PA",
+            "zh": "费城 University City"
+          },
+          "address": {
+            "en": "University City, Philadelphia, PA",
+            "zh": "费城 University City"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 1900,
+          "maxBeds": 3,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 3 BR",
+              "zh": "开间 – 三居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for University City, close to Penn and Drexel, with quick transit into Center City.\nReplace this with a real building when it is ready.",
+            "zh": "这是 University City 的示例楼盘，靠近宾大和德雷塞尔大学，坐车很快到市中心。\n真实楼盘准备好后在这里替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Coworking spaces",
+                  "zh": "联合办公空间"
+                },
+                {
+                  "en": "Game room",
+                  "zh": "游戏室"
+                },
+                {
+                  "en": "Laundry",
+                  "zh": "洗衣房"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                },
+                {
+                  "en": "Package room",
+                  "zh": "包裹间"
+                }
+              ]
+            }
+          ],
+          "gallery": []
+        },
+        {
+          "slug": "boston-back-bay-residences",
+          "name": {
+            "en": "Back Bay Residences",
+            "zh": "Back Bay 公寓"
+          },
+          "region": "boston",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "Back Bay, Boston, MA",
+            "zh": "波士顿 Back Bay"
+          },
+          "address": {
+            "en": "Back Bay, Boston, MA",
+            "zh": "波士顿 Back Bay"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 3100,
+          "maxBeds": 2,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 2 BR",
+              "zh": "开间 – 两居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for Back Bay, near the Charles River, Newbury Street and the T.\nThis page shows how a Boston building will look once real listings are added.",
+            "zh": "这是 Back Bay 的示例楼盘，靠近查尔斯河、Newbury 街和地铁（T 线）。\n这一页用来展示波士顿楼盘上线后的样子，真实楼盘录入后会替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Resident lounge",
+                  "zh": "住户休息室"
+                },
+                {
+                  "en": "Package room",
+                  "zh": "包裹间"
+                },
+                {
+                  "en": "Doorman",
+                  "zh": "门卫服务"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                }
+              ]
+            }
+          ],
+          "gallery": []
+        },
+        {
+          "slug": "boston-fenway-lofts",
+          "name": {
+            "en": "Fenway Lofts",
+            "zh": "Fenway 阁楼公寓"
+          },
+          "region": "boston",
+          "regionOnly": true,
+          "tag": {
+            "en": "SAMPLE",
+            "zh": "示例"
+          },
+          "state": {
+            "en": "Fenway, Boston, MA",
+            "zh": "波士顿 Fenway"
+          },
+          "address": {
+            "en": "Fenway, Boston, MA",
+            "zh": "波士顿 Fenway"
+          },
+          "yearBuilt": 0,
+          "startingPrice": 2800,
+          "maxBeds": 2,
+          "maxBaths": 2,
+          "image": {
+            "url": ""
+          },
+          "imagePosition": "",
+          "summary": [
+            {
+              "en": "Studio – 2 BR",
+              "zh": "开间 – 两居室"
+            }
+          ],
+          "description": {
+            "en": "A sample listing for Fenway, close to Northeastern, Berklee and the Green Line.\nReplace this with a real building when it is ready.",
+            "zh": "这是 Fenway 的示例楼盘，靠近东北大学、伯克利音乐学院和绿线地铁。\n真实楼盘准备好后在这里替换。"
+          },
+          "amenities": [
+            {
+              "title": {
+                "en": "Building",
+                "zh": "楼内设施"
+              },
+              "items": [
+                {
+                  "en": "Fitness center",
+                  "zh": "健身房"
+                },
+                {
+                  "en": "Coworking spaces",
+                  "zh": "联合办公空间"
+                },
+                {
+                  "en": "Game room",
+                  "zh": "游戏室"
+                },
+                {
+                  "en": "Rooftop terrace",
+                  "zh": "屋顶露台"
+                },
+                {
+                  "en": "Pet friendly",
+                  "zh": "可养宠物"
+                },
+                {
+                  "en": "24-hour concierge",
+                  "zh": "24 小时礼宾"
+                }
+              ]
+            }
+          ],
+          "gallery": []
         }
-      ]
+      ],
+      "comingSoon": {
+        "en": "Coming soon",
+        "zh": "即将上线"
+      }
     },
     "building": {
       "back": {
@@ -461,6 +1401,26 @@
           "en": "Partnership",
           "zh": "合作方式"
         }
+      },
+      "descriptionTitle": {
+        "en": "Property Description",
+        "zh": "楼盘介绍"
+      },
+      "amenitiesTitle": {
+        "en": "Features & Amenities",
+        "zh": "设施与服务"
+      },
+      "moreTitle": {
+        "en": "More buildings",
+        "zh": "更多楼盘"
+      },
+      "contact": {
+        "en": "Get in touch",
+        "zh": "联系我们"
+      },
+      "tour": {
+        "en": "Schedule a tour",
+        "zh": "预约看房"
       }
     }
   }
