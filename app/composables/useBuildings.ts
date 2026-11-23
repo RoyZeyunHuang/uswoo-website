@@ -11,53 +11,53 @@ export interface BuildingRef {
   region: string;
   /** 卡片封面的裁切位置（object-position），没填就居中 */
   position: string;
-  /** 示例楼盘（见 utils/demoBuildings.ts）：内容在代码里，不在 CMS */
-  demo?: DemoBuilding;
+  /** 只在所属地区的页面上展示，不进「全部」房源页和全站首页（CMS 里的 regionOnly） */
+  regionOnly: boolean;
 }
 
 export async function useBuildings(region?: string) {
   const { raw, list } = await usePageContent("listings", region);
-  return computed<BuildingRef[]>(() => [
-    ...list("buildings.items")
+  return computed<BuildingRef[]>(() =>
+    list("buildings.items")
       .map(index => {
         const path = `buildings.items.${index}`;
         return {
           path,
           slug: String(raw<string>(`${path}.slug`) ?? "").trim(),
           region: String(raw<string>(`${path}.region`) ?? "").trim(),
-          position: String(raw<string>(`${path}.imagePosition`) ?? "").trim()
+          position: String(raw<string>(`${path}.imagePosition`) ?? "").trim(),
+          regionOnly: raw<boolean>(`${path}.regionOnly`) === true
         };
       })
-      .filter(item => item.slug),
-    // CMS 里还没有的城市，先用示例楼盘顶上（slug 与 CMS 里重复的以 CMS 为准）
-    ...DEMO_BUILDINGS.map(demo => ({ path: `demo.${demo.slug}`, slug: demo.slug, region: demo.region, position: "", demo }))
-  ].filter((item, index, all) => all.findIndex(other => other.slug === item.slug) === index));
+      // slug 重复时只认第一条：网址要唯一
+      .filter((item, index, all) => item.slug && all.findIndex(other => other.slug === item.slug) === index)
+  );
 }
 
+/** 某个页面该展示哪些楼盘：地区页只展示本地区的；不带地区的页面不展示标了「只在所属地区展示」的 */
+export const buildingsFor = (all: BuildingRef[], region?: string) => all.filter(item => (region ? item.region === region : !item.regionOnly));
+
 /**
- * 楼盘卡片与楼盘页上要显示的文字和封面：CMS 楼盘走 c()/img()，示例楼盘取代码里的资料（封面用所在城市的封面图）。
- * key 取 name / state / address / tag。
+ * 楼盘卡片与筛选要用到的值。文字和图片仍然经过 c() / img()，数字和用来判断的英文原文用 raw()。
  */
 export async function useBuildingFields() {
-  // useTx 要在第一个 await 之前调用（await 之后拿不到 Nuxt 上下文）
-  const { isZh } = useTx();
   // 两个都要用到 Nuxt 上下文，同时发起，不能一个 await 完再调下一个
-  const [{ c, img, raw }, regions] = await Promise.all([usePageContent("listings"), useRegions()]);
-  const text = (item: BuildingRef, key: "name" | "state" | "address" | "tag") => {
-    if (!item.demo) return c(`${item.path}.${key}`);
-    const value = key === "state" || key === "address" ? item.demo.address : item.demo[key];
-    return isZh.value ? value.zh : value.en;
-  };
-  // 起租价与最大卧室数（从「开间 – 3 居室」这类概要里取第一个数字；开间一定算）：给房源页的价格、户型筛选用
-  const price = (item: BuildingRef) => item.demo?.startingPrice ?? (Number(raw(`${item.path}.startingPrice`)) || 0);
-  const maxBeds = (item: BuildingRef) => {
-    const summary = item.demo ? item.demo.summary.en : c(`${item.path}.summary.0`);
-    return Number(/\d+/.exec(summary)?.[0] ?? 0);
-  };
-  const cover = (item: BuildingRef) => (item.demo ? (regions.value.find(entry => entry.slug === item.region)?.cover?.url ?? "") : img(`${item.path}.image`));
-  // 最多几个卫生间：取「1 – 2 baths」里最大的数字；示例楼盘按 2 个算
-  const maxBaths = (item: BuildingRef) => (item.demo ? 2 : Math.max(0, ...(c(`${item.path}.summary.1`).match(/\d+/g) ?? []).map(Number)));
-  // 设施筛选用：这栋楼的英文设施名（目前来自 buildingFallback；CMS 以后有了 amenities 再接）
-  const amenityNames = (item: BuildingRef) => (BUILDING_FALLBACK[item.slug]?.amenities ?? []).flatMap(group => group.items.en);
+  const [{ c, img, raw, list }, regions] = await Promise.all([usePageContent("listings"), useRegions()]);
+  const text = (item: BuildingRef, key: "name" | "state" | "address" | "tag") => c(`${item.path}.${key}`);
+  /** 封面：楼盘没有自己的封面时用所在城市的封面图 */
+  const cover = (item: BuildingRef) => img(`${item.path}.image`) || (regions.value.find(entry => entry.slug === item.region)?.cover?.url ?? "");
+  const number = (item: BuildingRef, key: string) => Number(raw(`${item.path}.${key}`)) || 0;
+  // 起租价、最多几间卧室、最多几个卫生间：给房源页的价格、户型筛选用
+  const price = (item: BuildingRef) => number(item, "startingPrice");
+  const maxBeds = (item: BuildingRef) => number(item, "maxBeds");
+  const maxBaths = (item: BuildingRef) => number(item, "maxBaths");
+  /** 设施筛选用：这栋楼各项设施的英文名（筛选按英文关键词匹配，与当前语言无关） */
+  const amenityNames = (item: BuildingRef) =>
+    list(`${item.path}.amenities`).flatMap(group =>
+      list(`${item.path}.amenities.${group}.items`).map(index => {
+        const leaf = raw<{ en?: string; zh?: string } | string>(`${item.path}.amenities.${group}.items.${index}`);
+        return typeof leaf === "string" ? leaf : (leaf?.en || leaf?.zh || "");
+      })
+    );
   return { text, cover, price, maxBeds, maxBaths, amenityNames };
 }

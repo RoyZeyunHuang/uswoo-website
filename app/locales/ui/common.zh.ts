@@ -12,14 +12,6 @@ export default {
   Leased: "已租出",
   Studio: "开间",
   Home: "首页",
-  "Ask AI": "问问 AI",
-  "USWOO AI assistant": "USWOO AI 助手",
-  "Ask about listings, areas and renting": "房源、区域、租房问题都可以问",
   "Type your question…": "输入你的问题…",
   Send: "发送",
-  "Hi! I'm the USWOO assistant. What are you looking for?": "你好！我是 USWOO 助手，想找什么样的房子？",
-  "Find a rental": "找房源",
-  "Rental process": "租房流程",
-  "Talk to an advisor": "联系顾问",
-  "Our AI assistant is still being set up. Please leave your details on the Contact page and an advisor will get back to you.": "AI 助手还在筹备中。请在联系页留下你的信息，顾问会尽快回复你。"
 } as Record<string, string>;
