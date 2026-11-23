@@ -6,10 +6,8 @@
       <!-- 首屏只保留大标题：不放小标题、说明文字和城市筛选 -->
       <section v-if="on('hero')" class="ls-hero">
         <div class="wrap">
-          <h1>
-            <!-- 标题各地区可以不同（例如纽约是「独家房源」，其他城市是「重点推荐」）：在 CMS 里给该地区单独设置 hero 的标题即可 -->
-            {{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template><span class="pink">{{ c("hero.titleAccent") }}</span>
-          </h1>
+          <!-- 大标题：按要求直接写成「Listings」，各地区一致（不再读 CMS 的 hero 标题） -->
+          <h1>{{ tx("Listings") }}</h1>
           <!-- 城市筛选：每个城市是自己的地区页（有独立网址，可收录）；高亮当前所在地区 -->
           <nav v-if="regions.length" class="ls-filters" :aria-label="tx('Filter by city')">
             <NuxtLink v-for="item in cityOptions" :key="item.slug" class="ls-chip" :class="{ on: props.region === item.slug }" :to="localePath(regionPath('listings', item.slug))">{{ bi(item.name) }}</NuxtLink>
@@ -93,14 +91,15 @@
       <section class="ls-grid-sec">
         <div class="wrap">
           <!-- 独家楼盘：内容在 CMS 的 buildings 里；「全部」页显示所有，地区页只显示该地区的 -->
-          <div v-if="buildings.length" class="ls-dev">
-            <p class="eyebrow">{{ c("buildings.eyebrow") }}</p>
+          <div v-for="group in groups" :key="group.key" class="ls-dev">
+            <p class="eyebrow">{{ group.title ?? c("buildings.eyebrow") }}</p>
             <div class="ls-dev-grid">
-              <NuxtLink v-for="item in shownBuildings" :key="item.slug" class="ls-dev-card" :to="localePath(`/listings/building/${item.slug}`)">
+              <NuxtLink v-for="item in group.items" :key="item.slug" class="ls-dev-card" :to="localePath(`/listings/building/${item.slug}`)">
                 <div class="ls-dev-media">
                   <img v-if="cover(item)" :src="cover(item)" :alt="text(item, 'name')" :style="item.position ? { objectPosition: item.position } : undefined" loading="lazy" />
                   <span v-else class="ls-dev-ph" aria-hidden="true">{{ text(item, "name") }}</span>
-                  <span v-if="text(item, 'tag')" class="ls-tag">{{ text(item, "tag") }}</span>
+                  <span v-if="group.key === 'featured'" class="ls-tag">{{ tx("Featured") }}</span>
+                  <span v-else-if="text(item, 'tag')" class="ls-tag">{{ text(item, "tag") }}</span>
                 </div>
                 <div class="ls-dev-body">
                   <div>
@@ -111,7 +110,7 @@
                 </div>
               </NuxtLink>
             </div>
-            <p v-if="!shownBuildings.length" class="ls-empty" style="display: block">{{ tx("No buildings match these filters.") }}</p>
+            <p v-if="!group.items.length && groups.length === 1" class="ls-empty" style="display: block">{{ tx("No buildings match these filters.") }}</p>
           </div>
 
           <!-- 这个地区还没有楼盘时的「即将上线」占位卡片 -->
@@ -256,6 +255,17 @@ const shownBuildings = computed(() =>
     return amenities.value.every(label => names.some(name => AMENITY_OPTIONS.find(option => option.label === label)?.re.test(name)));
   })
 );
+// 只有纽约 / 新泽西有「独家」：其他地区和「全部」页的楼盘区块一律叫「Featured listings」。纽约 / 新泽西页分成「Exclusive listings」和「Featured listings」两块：楼盘按在 CMS 列表里的顺序，前一半放独家，后一半放重点（按要求直接分组，不读 CMS 字段）
+const groups = computed(() => {
+  if (!buildings.value.length) return [];
+  if (props.region !== "new-york") return [{ key: "all", title: tx("Featured listings") as string | null, items: shownBuildings.value }];
+  const half = Math.ceil(buildings.value.length / 2);
+  const exclusive = new Set(buildings.value.slice(0, half).map(item => item.slug));
+  return [
+    { key: "exclusive", title: tx("Exclusive listings") as string | null, items: shownBuildings.value.filter(item => exclusive.has(item.slug)) },
+    { key: "featured", title: tx("Featured listings") as string | null, items: shownBuildings.value.filter(item => !exclusive.has(item.slug)) }
+  ].filter(group => group.items.length || shownBuildings.value.length === 0);
+});
 const regionLabel = (slug: string) => {
   const item = regions.value.find(entry => entry.slug === slug);
   return item ? bi(item.name) : "";
