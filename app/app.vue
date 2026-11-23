@@ -1,6 +1,7 @@
 <template>
   <NuxtPage :page-key="pageKey" />
   <BackToTop />
+  <AiChat />
 </template>
 
 <script setup lang="ts">

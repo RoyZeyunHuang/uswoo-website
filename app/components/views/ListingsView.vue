@@ -7,9 +7,87 @@
       <section v-if="on('hero')" class="ls-hero">
         <div class="wrap">
           <h1>
-            {{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template
-            ><span class="pink">{{ c("hero.titleAccent") }}</span>
+            <!-- 只有纽约是「独家房源」，其他城市的房源不是独家，标题用「重点推荐」（按需求写在代码里，不走 CMS） -->
+            <template v-if="isFeatured">{{ tx("Featured") }}<template v-if="!isZh">{{ " " }}</template><span class="pink">{{ tx("listings") }}</span></template>
+            <template v-else>{{ c("hero.titleLead") }}<template v-if="!isZh">{{ " " }}</template><span class="pink">{{ c("hero.titleAccent") }}</span></template>
           </h1>
+          <!-- 城市筛选：每个城市是自己的地区页（有独立网址，可收录）；高亮当前所在地区 -->
+          <nav v-if="regions.length" class="ls-filters" :aria-label="tx('Filter by city')">
+            <NuxtLink v-for="item in cityOptions" :key="item.slug" class="ls-chip" :class="{ on: props.region === item.slug }" :to="localePath(regionPath('listings', item.slug))">{{ bi(item.name) }}</NuxtLink>
+          </nav>
+          <!-- 手机上的筛选：一个按钮，点开在原位展开面板（城市、价格区间、户型）；桌面隐藏，见 listings.extra.css -->
+          <div v-if="regions.length" class="ls-mfilter">
+            <button type="button" class="ls-filter-open" :aria-expanded="filterOpen" @click="filterOpen = !filterOpen">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <path d="M4 7h10M18 7h2M4 17h2M10 17h10" />
+                <circle cx="16" cy="7" r="2" />
+                <circle cx="8" cy="17" r="2" />
+              </svg>
+              {{ tx("Cities & filters") }}<span v-if="activeCount" class="ls-filter-count">{{ activeCount }}</span>
+            </button>
+            <!-- 筛选弹窗：居中的卡片，背后是半透明遮罩，点遮罩或 × 关闭 -->
+            <div class="ls-modal" :class="{ open: filterOpen }" @click.self="filterOpen = false">
+            <div class="ls-fpanel" role="dialog" aria-modal="true" :aria-label="tx('Filters')">
+              <div class="ls-fhead">
+                <button type="button" class="ls-fx" :aria-label="tx('Close')" @click="filterOpen = false">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+                </button>
+                <span>{{ tx("Filters") }}</span>
+              </div>
+              <div class="ls-fbody">
+              <p class="ls-flabel">{{ tx("City") }}</p>
+              <div class="ls-fgrid">
+                <NuxtLink v-for="item in cityOptions" :key="item.slug" class="ls-fopt" :class="{ on: props.region === item.slug }" :to="localePath(regionPath('listings', item.slug))">{{ bi(item.name) }}</NuxtLink>
+              </div>
+              <!-- 价格区间：柱状图显示各价位的楼盘数，下面一根双滑块，再下面是可直接输入的最低 / 最高价 -->
+              <div class="ls-fsec">
+                <p class="ls-flabel">{{ tx("Price range") }}</p>
+                <p class="ls-fhint">{{ tx("Monthly rent, starting price") }}</p>
+                <div class="ls-hist" aria-hidden="true">
+                  <span v-for="(bar, index) in histogram" :key="index" :class="{ out: !bar.inRange }" :style="{ height: `${bar.height ? Math.max(bar.height, 14) : 0}%` }" />
+                </div>
+                <div class="ls-slider">
+                  <div class="ls-slider-fill" :style="{ left: `${sliderPct(priceMin)}%`, right: `${100 - sliderPct(priceMax)}%` }" />
+                  <input type="range" :min="priceBounds[0]" :max="priceBounds[1]" step="50" :value="priceMin" :aria-label="tx('Minimum')" @input="setMin(Number(($event.target as HTMLInputElement).value))" />
+                  <input type="range" :min="priceBounds[0]" :max="priceBounds[1]" step="50" :value="priceMax" :aria-label="tx('Maximum')" @input="setMax(Number(($event.target as HTMLInputElement).value))" />
+                </div>
+                <div class="ls-pricebox">
+                  <label><span>{{ tx("Minimum") }}</span><input type="text" inputmode="numeric" :value="fmt(priceMin)" @change="setMin(parsePrice($event))" /></label>
+                  <label><span>{{ tx("Maximum") }}</span><input type="text" inputmode="numeric" :value="fmt(priceMax) + (priceMax >= priceBounds[1] ? '+' : '')" @change="setMax(parsePrice($event))" /></label>
+                </div>
+              </div>
+
+              <!-- 房间：卧室、卫生间各一个 −/+ 步进器，0 是「不限」，选 N 表示至少 N -->
+              <div class="ls-fsec">
+                <p class="ls-flabel">{{ tx("Rooms") }}</p>
+                <div v-for="row in ROOM_ROWS" :key="row.key" class="ls-step">
+                  <span>{{ tx(row.label) }}</span>
+                  <div class="ls-step-ctl">
+                    <button type="button" :disabled="rooms[row.key] === 0" :aria-label="tx('Decrease')" @click="rooms[row.key]--">−</button>
+                    <b>{{ rooms[row.key] ? `${rooms[row.key]}+` : tx("Any") }}</b>
+                    <button type="button" :disabled="rooms[row.key] >= row.max" :aria-label="tx('Increase')" @click="rooms[row.key]++">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 设施：多选，选中的设施楼盘都要有 -->
+              <div class="ls-fsec">
+                <p class="ls-flabel">{{ tx("Amenities") }}</p>
+                <div class="ls-chips">
+                  <button v-for="item in AMENITY_OPTIONS" :key="item.label" type="button" class="ls-fchip" :class="{ on: amenities.includes(item.label) }" :aria-pressed="amenities.includes(item.label)" @click="toggleAmenity(item.label)">
+                    <AmenityIcon :label="item.label" />{{ tx(item.label) }}
+                  </button>
+                </div>
+              </div>
+
+              </div>
+              <div class="ls-ffoot">
+                <button type="button" class="ls-freset" :disabled="!activeCount" @click="resetFilters">{{ tx("Clear all") }}</button>
+                <button type="button" class="ls-fshow" @click="filterOpen = false">{{ tx("Show {n} buildings").replace("{n}", String(shownBuildings.length)) }}</button>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -19,25 +97,38 @@
           <div v-if="buildings.length" class="ls-dev">
             <p class="eyebrow">{{ c("buildings.eyebrow") }}</p>
             <div class="ls-dev-grid">
-              <NuxtLink v-for="item in buildings" :key="item.slug" class="ls-dev-card" :to="localePath(`/listings/building/${item.slug}`)">
+              <NuxtLink v-for="item in shownBuildings" :key="item.slug" class="ls-dev-card" :to="localePath(`/listings/building/${item.slug}`)">
                 <div class="ls-dev-media">
-                  <img v-if="img(`${item.path}.image`)" :src="img(`${item.path}.image`)" :alt="c(`${item.path}.name`)" :style="item.position ? { objectPosition: item.position } : undefined" loading="lazy" />
-                  <span v-else class="ls-dev-ph" aria-hidden="true">{{ c(`${item.path}.name`) }}</span>
-                  <span v-if="c(`${item.path}.tag`)" class="ls-tag">{{ c(`${item.path}.tag`) }}</span>
+                  <img v-if="cover(item)" :src="cover(item)" :alt="text(item, 'name')" :style="item.position ? { objectPosition: item.position } : undefined" loading="lazy" />
+                  <span v-else class="ls-dev-ph" aria-hidden="true">{{ text(item, "name") }}</span>
+                  <span v-if="text(item, 'tag')" class="ls-tag">{{ text(item, "tag") }}</span>
                 </div>
                 <div class="ls-dev-body">
                   <div>
-                    <h3>{{ c(`${item.path}.name`) }}</h3>
-                    <p>{{ c(`${item.path}.state`) || regionLabel(item.region) }}</p>
+                    <h3>{{ text(item, "name") }}</h3>
+                    <p>{{ text(item, "state") || regionLabel(item.region) }}</p>
                   </div>
                   <span class="ls-dev-cta">{{ c("buildings.cardCta") }} <span aria-hidden="true">→</span></span>
                 </div>
               </NuxtLink>
             </div>
+            <p v-if="!shownBuildings.length" class="ls-empty" style="display: block">{{ tx("No buildings match these filters.") }}</p>
+          </div>
+
+          <!-- 其他城市没有楼盘时的「即将上线」占位卡片（现在这些城市都有示例楼盘，一般不会出现） -->
+          <div v-if="placeholders" class="ls-dev">
+            <div class="ls-dev-grid">
+              <div v-for="n in 3" :key="n" class="ls-dev-card ls-dev-soon" aria-hidden="true">
+                <div class="ls-dev-media"><span class="ls-dev-ph">{{ regionLabel(props.region!) }}</span></div>
+                <div class="ls-dev-body">
+                  <div><h3>{{ tx("Coming soon") }}</h3><p>{{ regionLabel(props.region!) }}</p></div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- 列表页只展示合作的大楼 / 开发商；具体房源在点进楼盘之后 -->
-          <p v-if="!buildings.length" id="lsEmpty" class="ls-empty" style="display: block">{{ c("empty") }}</p>
+          <p v-if="!buildings.length && !placeholders" id="lsEmpty" class="ls-empty" style="display: block">{{ c("empty") }}</p>
           <p class="ls-note">{{ c("disclaimer") }}</p>
         </div>
       </section>
@@ -72,12 +163,96 @@ const { tx, bi, isZh } = useTx();
 const localePath = useLocalePath();
 const absoluteUrl = useAbsoluteUrl();
 // 页面上的固定文案：地区页用该地区的版本（没有单独配置的部分沿用全站默认）
-const { c, img, on } = await usePageContent("listings", props.region);
+const { c, on } = await usePageContent("listings", props.region);
+const { text, cover, price: priceOf, maxBeds, maxBaths, amenityNames } = await useBuildingFields();
+const isFeatured = computed(() => Boolean(props.region) && props.region !== "new-york");
 const no = useBlockNumbers(["cta"] as const, on);
 
 // 独家楼盘：可以在 CMS 里整体隐藏（buildings.show）；「全部」页显示所有，地区页只显示该地区的
 const allBuildings = await useBuildings(props.region);
-const buildings = computed(() => (on("buildings") ? allBuildings.value.filter(item => !props.region || item.region === props.region) : []));
+const buildings = computed(() => (on("buildings") ? allBuildings.value.filter(item => (props.region ? item.region === props.region : !item.demo)) : []));
+const placeholders = computed(() => isFeatured.value && !buildings.value.length);
+// 手机上的筛选面板：价格区间、户型在当前列表里再筛一遍（城市是各自的网址）
+const filterOpen = ref(false);
+// 城市选项的顺序：洛杉矶排在芝加哥前面（其余按地区接口的顺序）
+const cityOptions = computed(() => {
+  const list = [...regions.value];
+  const a = list.findIndex(item => item.slug === "chicago");
+  const b = list.findIndex(item => item.slug === "los-angeles");
+  if (a >= 0 && b >= 0) [list[a], list[b]] = [list[b]!, list[a]!];
+  return list;
+});
+// 弹窗打开时锁住页面滚动
+watch(filterOpen, (open) => {
+  if (import.meta.client) document.body.style.overflow = open ? "hidden" : "";
+});
+onBeforeUnmount(() => {
+  if (import.meta.client) document.body.style.overflow = "";
+});
+const fmt = (n: number) => `$${n.toLocaleString("en-US")}`;
+
+// 价格区间：范围取当前列表里楼盘起租价的最低到最高（取整到 100），滑块和柱状图都用它
+// 价格范围与柱状图先用一组固定的示意数据（$1,000 – $6,000，柱子高度是写死的、不是真实分布），好让滑块和柱状图有东西可看；
+// 楼盘多了以后再改回按真实起租价统计。用固定数据而不是随机数，是为了服务端和浏览器渲染一致。
+const priceBounds = computed<[number, number]>(() => [1000, 6000]);
+const HIST_SAMPLE = [6, 12, 20, 34, 52, 78, 100, 92, 85, 90, 74, 66, 58, 70, 54, 44, 38, 30, 26, 20, 16, 14, 10, 8];
+const priceMin = ref(priceBounds.value[0]);
+const priceMax = ref(priceBounds.value[1]);
+// 换城市时楼盘变了，价格范围跟着重置
+watch(priceBounds, ([lo, hi]) => {
+  priceMin.value = lo;
+  priceMax.value = hi;
+});
+const setMin = (value: number) => (priceMin.value = Math.min(Math.max(value || priceBounds.value[0], priceBounds.value[0]), priceMax.value));
+const setMax = (value: number) => (priceMax.value = Math.max(Math.min(value || priceBounds.value[1], priceBounds.value[1]), priceMin.value));
+const parsePrice = (event: Event) => Number((event.target as HTMLInputElement).value.replace(/[^\d]/g, ""));
+const sliderPct = (value: number) => ((value - priceBounds.value[0]) / (priceBounds.value[1] - priceBounds.value[0])) * 100;
+// 柱状图：把价格范围分成 24 格，每格数有几栋楼；选中范围外的柱子变灰
+const histogram = computed(() => {
+  const [lo, hi] = priceBounds.value;
+  const step = (hi - lo) / HIST_SAMPLE.length;
+  return HIST_SAMPLE.map((height, index) => ({ height, inRange: lo + step * (index + 1) > priceMin.value && lo + step * index < priceMax.value }));
+});
+
+// 房间：0 = 不限，N = 至少 N；上限取当前列表里最大的值
+const ROOM_ROWS = computed(() => [
+  { key: "beds" as const, label: "Bedrooms", max: Math.max(1, ...buildings.value.map(maxBeds)) },
+  { key: "baths" as const, label: "Bathrooms", max: Math.max(1, ...buildings.value.map(maxBaths)) }
+]);
+const rooms = reactive({ beds: 0, baths: 0 });
+
+// 设施：按设施名里的关键词匹配楼盘的设施
+const AMENITY_OPTIONS = [
+  { label: "Fitness center", re: /fitness|gym/i },
+  { label: "Rooftop terrace", re: /roof|terrace/i },
+  { label: "Coworking spaces", re: /cowork/i },
+  { label: "Outdoor pool", re: /pool/i },
+  { label: "Pet friendly", re: /pet|dog/i },
+  { label: "Doorman", re: /doorman|concierge/i },
+  { label: "Resident lounge", re: /lounge/i }
+];
+const amenities = ref<string[]>([]);
+const toggleAmenity = (label: string) => (amenities.value = amenities.value.includes(label) ? amenities.value.filter(item => item !== label) : [...amenities.value, label]);
+
+const activeCount = computed(
+  () => (priceMin.value > priceBounds.value[0] || priceMax.value < priceBounds.value[1] ? 1 : 0) + (rooms.beds ? 1 : 0) + (rooms.baths ? 1 : 0) + amenities.value.length
+);
+const resetFilters = () => {
+  priceMin.value = priceBounds.value[0];
+  priceMax.value = priceBounds.value[1];
+  rooms.beds = 0;
+  rooms.baths = 0;
+  amenities.value = [];
+};
+const shownBuildings = computed(() =>
+  buildings.value.filter((item) => {
+    const price = priceOf(item);
+    if (price && (price < priceMin.value || price > priceMax.value)) return false;
+    if (maxBeds(item) < rooms.beds || maxBaths(item) < rooms.baths) return false;
+    const names = amenityNames(item);
+    return amenities.value.every(label => names.some(name => AMENITY_OPTIONS.find(option => option.label === label)?.re.test(name)));
+  })
+);
 const regionLabel = (slug: string) => {
   const item = regions.value.find(entry => entry.slug === slug);
   return item ? bi(item.name) : "";
