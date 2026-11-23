@@ -58,6 +58,24 @@
   margin-bottom: clamp(40px, 5vw, 64px);
 }
 
+/* 区块小标题（Exclusive listings / Featured listings）：放大、加粗、用深色，一眼能看到 */
+.pg.pg-listings .ls-dev > .eyebrow {
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--ink);
+}
+
+/* 手机版再放大一档（桌面不受影响） */
+/* mobile-type.css 在手机上用 !important 把小标题压成 12px，这里用更高权重的选择器盖回来 */
+@media (max-width: 600px) {
+  html body main .ls-dev > p.eyebrow {
+    font-size: 22px !important; /* 手机上「Listings」大标题是 29px，区块标题要比它小 */
+    line-height: 1.15;
+  }
+}
+
 .pg.pg-listings .ls-dev-grid {
   margin-top: 18px;
   display: grid;

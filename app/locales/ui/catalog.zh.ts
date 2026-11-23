@@ -52,5 +52,9 @@ export default {
   "{month} {day}, {year}": "{year}年{monthNumber}月{day}日",
   "Draft preview — not published yet. This link expires in 30 minutes.": "草稿预览：这个页面还没有发布，链接 30 分钟内有效",
   // 房源角标是接口返回的数据，中文页显示对应的中文
-  Exclusive: "独家"
+  Exclusive: "独家",
+  Listings: "房源",
+  "Exclusive listings": "独家房源",
+  "Featured listings": "重点房源",
+  Featured: "重点"
 } as Record<string, string>;
