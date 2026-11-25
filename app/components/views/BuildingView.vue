@@ -161,6 +161,14 @@ const yearBuilt = computed(() => Number(raw(`${at.value}.yearBuilt`)) || 0);
 const localePath = useLocalePath();
 const regions = await useRegions();
 const site = await useSite();
+// 告诉右下角的 AI 浮窗当前在看哪栋楼（浮窗里显示"正在看：xxx"标签）；用原始值，不带 CMS 编辑预览的标记
+const viewing = useState<{ slug: string; name: string } | null>("ai-chat-viewing", () => null);
+const plainName = () => {
+  const leaf = raw<{ en?: string; zh?: string } | string>(`${at.value}.name`);
+  return typeof leaf === "string" ? leaf : bi(leaf);
+};
+viewing.value = { slug: props.building.slug, name: plainName() };
+onBeforeUnmount(() => (viewing.value = null));
 const contactTo = computed(() => ({ path: localePath(regionPath("contact", props.building.region)), query: { building: props.building.slug } }));
 
 // 楼盘介绍：description 按换行分段
