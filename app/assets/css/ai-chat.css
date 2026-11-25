@@ -194,3 +194,594 @@
     justify-content: center;
   }
 }
+
+/* 面板形态（规格 4.2）：桌面 ≥1024px 右侧停靠、整屏高、覆盖页面不挤压；手机与平板 <1024px 全屏。
+   面板打开时右下角的胶囊按钮会被盖住，所以隐藏；关闭靠面板顶部的 × */
+.ai-chat.open .ai-fab {
+  display: none;
+}
+.ai-panel {
+  position: fixed;
+  z-index: 71;
+}
+@media (min-width: 1024px) {
+  .ai-panel {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 420px;
+    height: auto;
+    border: 0;
+    border-left: 1px solid #e5e5e5;
+    border-radius: 0;
+    box-shadow: -12px 0 40px rgba(0, 0, 0, 0.14);
+  }
+}
+@media (max-width: 1023px) {
+  .ai-panel {
+    inset: 0;
+    width: 100%;
+    /* dvh 跟随手机浏览器地址栏与键盘变化，输入框不会被盖住；不支持的浏览器退回 vh */
+    height: 100vh;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .ai-head {
+    padding-top: max(14px, env(safe-area-inset-top));
+  }
+  .ai-form {
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+  /* 输入框字号小于 16px 时 iOS 会在聚焦时自动放大页面 */
+  .ai-form input {
+    font-size: 16px;
+  }
+  .ai-msg {
+    max-width: 92%;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ai-panel {
+    animation: ai-panel-in 0.22s ease-out;
+  }
+}
+@keyframes ai-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* ——— 三步引导对话：头像气泡、步骤提示、选项按钮、房源卡片 ——— */
+.ai-icon-btn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.ai-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+.ai-icon-btn svg {
+  width: 17px;
+  height: 17px;
+}
+.ai-applied {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #ececec;
+  background: #fff;
+}
+.ai-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 3px 3px 10px;
+  border-radius: 999px;
+  background: #fedfe1;
+  color: #0f0f0f;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+.ai-tag button {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.ai-tag button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.ai-body {
+  gap: 14px;
+  padding: 18px 16px;
+}
+.ai-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.ai-row.user {
+  justify-content: flex-end;
+}
+.ai-bot-dot {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fc8d94;
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+.ai-msg {
+  max-width: 82%;
+  white-space: pre-line;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.ai-row .ai-msg {
+  max-width: calc(100% - 34px);
+}
+.ai-row.user .ai-msg {
+  max-width: 86%;
+}
+.ai-step {
+  display: block;
+  margin-bottom: 4px;
+  color: #fc8d94;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.ai-options {
+  display: grid;
+  gap: 8px;
+  padding-left: 34px;
+}
+.ai-options button {
+  padding: 11px 14px;
+  border: 1px solid #fc8d94;
+  border-radius: 12px;
+  background: #fff;
+  color: #0f0f0f;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.ai-options button:hover {
+  background: #fff0f1;
+}
+.ai-options button.soft {
+  border-color: #e5e5e5;
+  color: #666;
+}
+.ai-options button.soft:hover {
+  background: #fff;
+  border-color: #cfcfcf;
+}
+/* 城市和房型选项较短：两列排，一屏看得全 */
+.ai-options.n-7,
+.ai-options.n-5 {
+  grid-template-columns: 1fr 1fr;
+}
+.ai-options.n-7 .soft,
+.ai-options.n-5 .soft {
+  grid-column: 1 / -1;
+}
+.ai-cards {
+  position: relative;
+  min-width: 0;
+  margin: 0 -16px;
+}
+.ai-rail {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0 16px 2px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 16px;
+  scrollbar-width: none;
+}
+.ai-rail::-webkit-scrollbar {
+  display: none;
+}
+.ai-rail li {
+  flex: none;
+  width: 208px;
+  scroll-snap-align: start;
+}
+.ai-card {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+}
+.ai-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+.ai-card-img {
+  display: block;
+  aspect-ratio: 4 / 3;
+  background: #ececec;
+}
+.ai-card-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ai-card-body {
+  display: grid;
+  gap: 2px;
+  padding: 12px 14px 14px;
+}
+.ai-card-body small {
+  color: #8a8a8a;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.ai-card-body strong {
+  font-size: 1rem;
+}
+.ai-card-name {
+  margin-top: 4px;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+.ai-card-sub {
+  overflow: hidden;
+  color: #666;
+  font-size: 0.76rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ai-arrow {
+  position: absolute;
+  top: 78px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #0f0f0f;
+  font-size: 1.3rem;
+  line-height: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.ai-arrow.prev {
+  left: 22px;
+}
+.ai-arrow.next {
+  right: 22px;
+}
+.ai-note {
+  margin: 0;
+  padding: 0 14px 10px;
+  background: #fff;
+  color: #888;
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+@media (max-width: 1023px) {
+  .ai-arrow {
+    display: none;
+  }
+  .ai-note {
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+  /* 免责声明已经带了底部安全距离，输入框那一行不再重复加 */
+  .ai-form {
+    padding-bottom: 6px;
+  }
+}
+.ai-chat button:focus-visible,
+.ai-chat input:focus-visible {
+  outline: 2px solid #0f0f0f;
+  outline-offset: 2px;
+}
+
+/* 桌面：面板改为悬浮的圆角卡片（四周留 16px），不再贴边；手机仍是全屏 */
+@media (min-width: 1024px) {
+  .ai-panel {
+    top: 16px;
+    right: 16px;
+    bottom: 16px;
+    width: 420px;
+    border: 1px solid #e5e5e5;
+    border-radius: 24px;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* 去掉面板外圈的浅色描边（深色顶栏周围会露出一圈白边），只留阴影 */
+.ai-panel {
+  border: 0 !important;
+}
+
+/* 桌面：面板不再占满整屏高度，固定约 600px，贴右下角；屏幕矮时自动缩到留出 32px 边距 */
+@media (min-width: 1024px) {
+  .ai-panel {
+    top: auto;
+    height: min(600px, calc(100vh - 32px));
+  }
+}
+
+/* ——— 灰色气泡 + 署名；城市等快捷回复放在输入框上方；输入框是带圆角的卡片 ——— */
+.ai-body {
+  gap: 6px;
+  padding: 20px 16px 12px;
+  background: #fff;
+}
+.ai-msg {
+  max-width: 88%;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.ai-msg.bot {
+  align-self: flex-start;
+  background: #f1f1f1;
+  color: #0f0f0f;
+}
+.ai-msg.user {
+  align-self: flex-end;
+  background: #fc8d94;
+  color: #fff;
+}
+.ai-msg + .ai-msg {
+  margin-top: 8px;
+}
+.ai-who {
+  margin: 0 0 8px 4px;
+  color: #6b6b6b;
+  font-size: 0.78rem;
+}
+.ai-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 14px 0;
+  background: #fff;
+}
+.ai-quick button {
+  padding: 8px 14px;
+  border: 1px solid #fc8d94;
+  border-radius: 999px;
+  background: #fff;
+  color: #0f0f0f;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.ai-quick button:hover {
+  background: #fff0f1;
+}
+.ai-quick button.soft {
+  border-color: #dcdcdc;
+  color: #666;
+}
+.ai-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 4px 8px;
+  margin: 10px 14px 6px;
+  padding: 10px 10px 10px 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 18px;
+  background: #fff;
+}
+.ai-form:focus-within {
+  border-color: #fc8d94;
+}
+.ai-form input {
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+}
+.ai-form input:focus {
+  border: 0;
+}
+.ai-note {
+  padding-top: 2px;
+}
+@media (max-width: 1023px) {
+  .ai-form {
+    padding-bottom: 10px;
+  }
+}
+
+/* 配色收敛：粉色只留给悬浮按钮、头像和访客的气泡；描边、标签、发送键改用中性的灰和黑，界面更干净 */
+.ai-quick button {
+  border-color: #d8d8d8;
+}
+.ai-quick button:hover {
+  border-color: #fc8d94;
+  background: #fff;
+}
+.ai-quick button.soft {
+  border-color: #e5e5e5;
+}
+.ai-tag {
+  background: #f1f1f1;
+}
+.ai-form,
+.ai-form:focus-within {
+  border-color: #d8d8d8;
+}
+.ai-form:focus-within {
+  border-color: #0f0f0f;
+}
+/* 输入框聚焦时外层卡片已经变色，里面的输入框不再画黑色方框 */
+.ai-chat .ai-form input:focus-visible {
+  outline: 0;
+}
+.ai-form button {
+  background: #0f0f0f;
+}
+.ai-form button:disabled {
+  background: #d8d8d8;
+  opacity: 1;
+}
+.ai-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+.ai-arrow:hover {
+  background: #f1f1f1;
+}
+
+/* ——— 参考 RentCafe Ren 的排版：助手的话和用户的话都是气泡（助手灰色靠左，用户粉色靠右）；
+   正文里有加粗、链接、列表；卡片上方是"N buildings available"加翻页箭头；卡片价格和名称加粗，下面一行用 • 连着设施 ——— */
+.ai-msg.bot {
+  /* 助手的回答也是灰色对话气泡（靠左），和用户的粉色气泡对应 */
+  max-width: 88%;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 20px;
+  background: #f1f1f1;
+}
+.ai-msg.bot + .ai-msg.bot {
+  margin-top: 6px;
+}
+.ai-msg p {
+  margin: 0;
+}
+.ai-msg p + p {
+  margin-top: 8px;
+}
+.ai-msg p.li {
+  position: relative;
+  margin-top: 4px;
+  padding-left: 16px;
+}
+.ai-msg p.li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+}
+.ai-msg strong {
+  font-weight: 700;
+}
+.ai-msg a {
+  color: #0f0f0f;
+  font-weight: 700;
+  text-decoration: none;
+}
+.ai-msg a:hover {
+  text-decoration: underline;
+}
+.ai-msg + .ai-msg {
+  margin-top: 10px;
+}
+.ai-cards-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 16px 10px;
+  font-size: 0.86rem;
+}
+.ai-cards-head .ai-arrow {
+  position: static;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  box-shadow: none;
+}
+.ai-cards {
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+.ai-card-body strong {
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+.ai-card-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* ——— 选项直接排在问题下面（在对话区里），浅紫胶囊加紫色描边，像 Ren ——— */
+.ai-body .ai-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+  padding: 0;
+  background: transparent;
+}
+.ai-body .ai-quick button {
+  padding: 9px 16px;
+  border: 1px solid #fc8d94;
+  border-radius: 999px;
+  background: #fff;
+  color: #0f0f0f;
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+.ai-body .ai-quick button:hover {
+  background: #f1f1f1;
+}
+.ai-body .ai-quick button.soft {
+  border-color: #e5e5e5;
+  background: #fff;
+  color: #666;
+}
+
+
+/* ——— 放大模式（仅桌面）：居中，宽约占画面 60%、高约 85%，周围压暗；手机不需要，隐藏按钮 ——— */
+.ai-expand {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .ai-expand {
+    display: inline-flex;
+  }
+  .ai-panel.expanded {
+    inset: 0;
+    margin: auto;
+    width: 60vw;
+    height: 85vh;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.35);
+  }
+}
